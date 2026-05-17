@@ -42,9 +42,6 @@ Download the installer / binary for your platform from Releases. The app is self
 | macOS 10.15+ | None — WebKit is built into the OS |
 | Linux (x86_64) | `webkit2gtk-4.1`, `libssl`, standard GTK runtime libraries |
 
-> [!NOTE]
-> The **Save File** feature needs access to the Hero Siege save folder. You pick the folder in the UI — the app does not read anything outside it.
-
 ---
 
 ## Development requirements
