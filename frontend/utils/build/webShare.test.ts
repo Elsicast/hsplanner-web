@@ -197,7 +197,7 @@ describe('buildSharePayload', () => {
 
     const payload = await buildSharePayload(saved)
 
-    expect(payload.incarnation?.countLabel).toMatch(/\/ \d+ nodes$/)
+    expect(payload.incarnation?.countLabel).toMatch(/\/ \d+ 个节点$/)
   })
 
   it('rainbow sockets flagged in gear', async () => {

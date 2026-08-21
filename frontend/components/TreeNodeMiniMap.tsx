@@ -8,6 +8,10 @@ import {
   findTreeNodeById,
   type TreeNodeEntry,
 } from '../utils/tree/treeNodes'
+import {
+  translateIncarnationKind,
+  translateIncarnationTitle,
+} from '../utils/tree/incarnationText'
 
 const ZOOM_VB_W = 600
 const ZOOM_VB_H = 340
@@ -70,13 +74,13 @@ export default function TreeNodeMiniMap({ node, width = 340 }: Props) {
         }}
       >
         <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
-          Tree node
+          化身节点
         </div>
         <div className="mt-0.5 text-[12px] font-semibold text-accent-hot leading-tight">
-          {node.name}
+          {translateIncarnationTitle(node.name)}
         </div>
         <div className="font-mono text-[9px] uppercase tracking-[0.12em] text-text/40 mt-0.5">
-          #{node.id} · {node.kind || 'normal'}
+          #{node.id} · {translateIncarnationKind(node.kind)}
         </div>
       </div>
       <div

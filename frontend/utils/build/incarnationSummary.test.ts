@@ -64,38 +64,38 @@ describe('buildIncarnation', () => {
   it('buckets allocated big nodes into keystones (classifyTier) and notables', () => {
     const r = buildIncarnation(new Set([1, 2, 3]), NO_SOCKETS)
 
-    expect(r.keystones).toEqual([{ name: 'Big Keystone', lines: ['+100 Life', '+50 Mana'] }])
+    expect(r.keystones).toEqual([{ name: '核心基石', lines: ['+100 生命', '+50 法力'] }])
     expect(r.notables).toEqual([
-      { name: 'First Notable', line: '+10% Fire Damage · +5% Cold Damage' },
-      { name: 'Second Notable', line: '+20% Lightning Damage' },
+      { name: '第一核心天赋', line: '+10% 火焰伤害 · +5% 冰冷伤害' },
+      { name: '第二核心天赋', line: '+20% 闪电伤害' },
     ])
   })
 
   it('keystone carries info.l lines; notable joins them with " · "', () => {
     const r = buildIncarnation(new Set([1, 2]), NO_SOCKETS)
 
-    expect(r.keystones[0]?.lines).toEqual(['+100 Life', '+50 Mana'])
-    expect(r.notables[0]?.line).toBe('+10% Fire Damage · +5% Cold Damage')
+    expect(r.keystones[0]?.lines).toEqual(['+100 生命', '+50 法力'])
+    expect(r.notables[0]?.line).toBe('+10% 火焰伤害 · +5% 冰冷伤害')
   })
 
   it('aggregates identical minor stat lines into {text, count} sorted by count desc', () => {
     const r = buildIncarnation(new Set([10, 11, 12, 13]), NO_SOCKETS)
 
     expect(r.minors).toEqual([
-      { text: '+8% Increased Physical Damage', count: 3 },
-      { text: '+3% Increased Movement Speed', count: 1 },
+      { text: '+8% 物理伤害', count: 3 },
+      { text: '+3% 移动速度', count: 1 },
     ])
   })
 
   it('excludes root and warp nodes from buckets but counts them in countLabel', () => {
     const r = buildIncarnation(new Set([1, 20, 21]), NO_SOCKETS)
 
-    expect(r.keystones).toEqual([{ name: 'Big Keystone', lines: ['+100 Life', '+50 Mana'] }])
+    expect(r.keystones).toEqual([{ name: '核心基石', lines: ['+100 生命', '+50 法力'] }])
     expect(r.notables).toEqual([])
     expect(r.minors).toEqual([])
     expect(r.jewelry).toEqual([])
-    expect(r.countLabel).toBe(`3 / ${TOTAL} nodes`)
-    expect(r.summaryLabel).toBe('3 nodes · 1 keystones · 0 notables · 0 minors · 0 jewelry')
+    expect(r.countLabel).toBe(`3 / ${TOTAL} 个节点`)
+    expect(r.summaryLabel).toBe('3 个节点 · 1 个基石 · 0 个核心天赋 · 0 个小天赋 · 0 个珠宝插槽')
   })
 
   it('maps jewelry sockets: gem/rune name + stats + socketIconPath; uncut → "Uncut Jewel"; empty → "Empty socket"/"—"', () => {
@@ -127,13 +127,13 @@ describe('buildIncarnation', () => {
     })
     expect(r.jewelry[0]?.line).toContain('Additive Arcane Damage')
 
-    expect(r.jewelry[1]).toEqual({ name: 'Empty socket', line: '—' })
+    expect(r.jewelry[1]).toEqual({ name: '空插槽', line: '—' })
 
     const expectedUncutLine = `${formatValue(
       [uncutAffix.valueMin!, uncutAffix.valueMax!],
       uncutAffix.statKey!,
     )} ${statName(uncutAffix.statKey!)}`
-    expect(r.jewelry[2]).toEqual({ name: 'Uncut Jewel', line: expectedUncutLine })
+    expect(r.jewelry[2]).toEqual({ name: '未切割珠宝', line: expectedUncutLine })
   })
 
   it('builds countLabel "N / TOTAL nodes", tabLabel "N nodes" and summaryLabel with bucket counts', () => {
@@ -142,10 +142,10 @@ describe('buildIncarnation', () => {
     }
     const r = buildIncarnation(new Set([1, 2, 3, 10, 11, 13, 30, 20]), treeSocketed)
 
-    expect(r.countLabel).toBe(`8 / ${TOTAL} nodes`)
-    expect(r.tabLabel).toBe('8 nodes')
+    expect(r.countLabel).toBe(`8 / ${TOTAL} 个节点`)
+    expect(r.tabLabel).toBe('8 个节点')
     expect(r.summaryLabel).toBe(
-      '8 nodes · 1 keystones · 2 notables · 3 minors · 1 jewelry',
+      '8 个节点 · 1 个基石 · 2 个核心天赋 · 3 个小天赋 · 1 个珠宝插槽',
     )
   })
 
@@ -157,13 +157,13 @@ describe('buildIncarnation', () => {
   it('empty allocation → zeroed labels and empty buckets', () => {
     const r = buildIncarnation(new Set(), NO_SOCKETS)
 
-    expect(r.countLabel).toBe(`0 / ${TOTAL} nodes`)
-    expect(r.tabLabel).toBe('0 nodes')
+    expect(r.countLabel).toBe(`0 / ${TOTAL} 个节点`)
+    expect(r.tabLabel).toBe('0 个节点')
     expect(r.keystones).toEqual([])
     expect(r.notables).toEqual([])
     expect(r.minors).toEqual([])
     expect(r.jewelry).toEqual([])
-    expect(r.summaryLabel).toBe('0 nodes · 0 keystones · 0 notables · 0 minors · 0 jewelry')
+    expect(r.summaryLabel).toBe('0 个节点 · 0 个基石 · 0 个核心天赋 · 0 个小天赋 · 0 个珠宝插槽')
     expect(r.branches).toBeUndefined()
   })
 })

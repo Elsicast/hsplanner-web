@@ -4,17 +4,21 @@ import { formatValue, socketableStatLines, statName } from '../item/stats'
 import type { TreeSocketContent } from '../../types'
 import { socketIconPath } from './assetPaths'
 import type { Incarnation, IncarnationJewelry } from './sharePayload'
+import {
+  translateIncarnationText,
+  translateIncarnationTitle,
+} from '../tree/incarnationText'
 
 const STAT_SEPARATOR = ' · '
 const EMPTY_SOCKET_LINE = '—'
 const KEYSTONE_TIER = 'keystone'
 
 function jewelryEntry(content: TreeSocketContent | null): IncarnationJewelry {
-  if (!content) return { name: 'Empty socket', line: EMPTY_SOCKET_LINE }
+  if (!content) return { name: '空插槽', line: EMPTY_SOCKET_LINE }
 
   if (content.kind === 'item') {
     const source = getGem(content.id) ?? getRune(content.id)
-    if (!source) return { name: 'Unknown socketable', line: content.id }
+    if (!source) return { name: '未知镶嵌物', line: content.id }
     const line = socketableStatLines(source.stats)
       .map((s) => s.text)
       .join(STAT_SEPARATOR)
@@ -29,7 +33,7 @@ function jewelryEntry(content: TreeSocketContent | null): IncarnationJewelry {
     })
     .filter((text): text is string => text !== null)
     .join(STAT_SEPARATOR)
-  return { name: 'Uncut Jewel', line }
+  return { name: '未切割珠宝', line }
 }
 
 export function buildIncarnation(
@@ -55,13 +59,19 @@ export function buildIncarnation(
         break
       case 'big':
         if (classifyTier(node.r) === KEYSTONE_TIER) {
-          keystones.push({ name: info.t, lines: [...info.l] })
+          keystones.push({
+            name: translateIncarnationTitle(info.t),
+            lines: info.l.map(translateIncarnationText),
+          })
         } else {
-          notables.push({ name: info.t, line: info.l.join(STAT_SEPARATOR) })
+          notables.push({
+            name: translateIncarnationTitle(info.t),
+            line: info.l.map(translateIncarnationText).join(STAT_SEPARATOR),
+          })
         }
         break
       default: {
-        const text = info.l.join(STAT_SEPARATOR)
+        const text = info.l.map(translateIncarnationText).join(STAT_SEPARATOR)
         if (text) minorCounts.set(text, (minorCounts.get(text) ?? 0) + 1)
       }
     }
@@ -74,12 +84,12 @@ export function buildIncarnation(
   const minorTotal = minors.reduce((sum, m) => sum + m.count, 0)
 
   return {
-    countLabel: `${allocated} / ${incarnationTree.nodes.length} nodes`,
-    tabLabel: `${allocated} nodes`,
+    countLabel: `${allocated} / ${incarnationTree.nodes.length} 个节点`,
+    tabLabel: `${allocated} 个节点`,
     keystones,
     notables,
     minors,
     jewelry,
-    summaryLabel: `${allocated} nodes · ${keystones.length} keystones · ${notables.length} notables · ${minorTotal} minors · ${jewelry.length} jewelry`,
+    summaryLabel: `${allocated} 个节点 · ${keystones.length} 个基石 · ${notables.length} 个核心天赋 · ${minorTotal} 个小天赋 · ${jewelry.length} 个珠宝插槽`,
   }
 }

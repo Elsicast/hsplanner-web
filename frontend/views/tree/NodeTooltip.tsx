@@ -17,6 +17,11 @@ import { TONE_BORDER, TONE_GLOW } from '../../components/tooltipTones'
 import type { TreeNodeInfo } from '../../utils/tree/treeStats'
 import { tierLabel, tierTone, type TreeNode } from './treeData'
 import { JewelrySocketSection } from './JewelrySocketSection'
+import {
+  translateIncarnationTag,
+  translateIncarnationText,
+  translateIncarnationTitle,
+} from '../../utils/tree/incarnationText'
 
 export function NodeTooltip({
   node,
@@ -153,7 +158,7 @@ export function NodeTooltip({
       }}
     >
       <TooltipHeader
-        title={info?.t ?? `节点 #${node.id}`}
+        title={info ? translateIncarnationTitle(info.t) : `节点 #${node.id}`}
         subtitle={tierName}
         tone={tone}
       />
@@ -168,20 +173,24 @@ export function NodeTooltip({
             <TooltipSection>
               <div className="space-y-0.5">
                 {lineGroups.parsed.map((line, i) => (
-                  <TooltipText key={i}>{line}</TooltipText>
+                  <TooltipText key={i}>
+                    {translateIncarnationText(line)}
+                  </TooltipText>
                 ))}
               </div>
             </TooltipSection>
           )}
           {lineGroups && lineGroups.unsupported.length > 0 && (
             <TooltipSection>
-              <UnsupportedModsList lines={lineGroups.unsupported} />
+              <UnsupportedModsList
+                lines={lineGroups.unsupported.map(translateIncarnationText)}
+              />
             </TooltipSection>
           )}
           {info?.note && (
             <TooltipSection>
               <div className="text-[12px] leading-[1.55] text-accent-hot italic">
-                {info.note}
+                {translateIncarnationText(info.note)}
               </div>
             </TooltipSection>
           )}
@@ -300,7 +309,7 @@ export function NodeTooltip({
                 key={i}
                 className="inline-block rounded-[2px] border border-border-2 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.08em] text-muted"
               >
-                {tag}
+                {translateIncarnationTag(tag)}
               </span>
             ))}
           </div>

@@ -1,6 +1,10 @@
 import { incarnationTree } from '@data'
 import { TREE_JEWELRY_IDS, TREE_NODE_INFO } from '../../utils/tree/treeStats'
 import type { TooltipTone } from '../../components/tooltipTones'
+import {
+  translateIncarnationText,
+  translateIncarnationTitle,
+} from '../../utils/tree/incarnationText'
 
 export interface TreeNode {
   id: number
@@ -56,7 +60,16 @@ export const SEARCH_INDEX: { id: number; haystack: string }[] = Object.entries(
   TREE_NODE_INFO,
 ).map(([id, info]) => ({
   id: Number(id),
-  haystack: [info.t, ...info.l, info.note ?? ''].join(' ').toLowerCase(),
+  haystack: [
+    info.t,
+    ...info.l,
+    info.note ?? '',
+    translateIncarnationTitle(info.t),
+    ...info.l.map(translateIncarnationText),
+    info.note ? translateIncarnationText(info.note) : '',
+  ]
+    .join(' ')
+    .toLowerCase(),
 }))
 
 const NODE_ICON_FILES = import.meta.glob<string>(

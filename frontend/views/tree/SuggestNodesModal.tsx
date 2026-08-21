@@ -4,6 +4,7 @@ import { suggestNodesNative } from '../../utils/tree/nativeSuggest'
 import { TREE_NODE_INFO } from '../../utils/tree/treeStats'
 import type { TreeNodeInfo } from '../../utils/tree/treeStats'
 import { Modal } from '../../components/ui/Modal'
+import { translateIncarnationTitle } from '../../utils/tree/incarnationText'
 
 interface SuggestStep {
   nodeId: number
@@ -58,7 +59,7 @@ function formatGainPct(base: number, final: number): string {
 
 function nodeName(nodes: Record<string, TreeNodeInfo>, id: number): string {
   const info = nodes[String(id)]
-  if (info?.t && info.t.trim()) return info.t
+  if (info?.t && info.t.trim()) return translateIncarnationTitle(info.t)
   return `节点 #${id}`
 }
 
