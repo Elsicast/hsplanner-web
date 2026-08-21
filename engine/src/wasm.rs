@@ -13,10 +13,11 @@ use wasm_bindgen::prelude::*;
 
 use crate::calc::commands::{
     calc_build_performance, calc_build_stats, calc_stat_breakdown, classify_tree_nodes,
-    compute_skill_damage, compute_weapon_damage, display_values, mana_cost_at_rank,
-    passive_stats_at_rank, parse_custom_stats, rank_slot_items, subskill_aggregation,
-    BuildPerformanceInput, DisplayValuesInput, PassiveSkillDto, RankSlotItemsInput,
-    SkillDamageInput, StatBreakdownInput, SubskillAggregationInput, WeaponDamageInput,
+    compute_attack_skill_damage, compute_skill_damage, compute_weapon_damage, display_values,
+    mana_cost_at_rank, passive_stats_at_rank, parse_custom_stats, rank_slot_items,
+    subskill_aggregation, AttackSkillDamageInput, BuildPerformanceInput, DisplayValuesInput,
+    PassiveSkillDto, RankSlotItemsInput, SkillDamageInput, StatBreakdownInput,
+    SubskillAggregationInput, WeaponDamageInput,
 };
 
 thread_local! {
@@ -131,6 +132,10 @@ fn dispatch(cmd: &str, args: &serde_json::Value) -> Result<serde_json::Value, St
         "compute_skill_damage" => {
             let input: SkillDamageInput = take(args, "input")?;
             serialize(compute_skill_damage(input))
+        }
+        "compute_attack_skill_damage" => {
+            let input: AttackSkillDamageInput = take(args, "input")?;
+            serialize(compute_attack_skill_damage(input))
         }
         "compute_weapon_damage" => {
             let input: WeaponDamageInput = take(args, "input")?;
