@@ -1,4 +1,5 @@
-import { isTauri } from "@tauri-apps/api/core";
+// 网页版更新逻辑：桌面端通过 Tauri updater 安装的能力不存在，
+// 退化为跳转发布页下载；保留 inTauriRuntime 导出以兼容现有 UI 分支。
 
 export type InstallPhase =
   | "idle"
@@ -18,58 +19,7 @@ export interface InstallProgress {
 export type ProgressCallback = (p: InstallProgress) => void;
 
 export function inTauriRuntime(): boolean {
-  return isTauri();
-}
-
-async function runInstall(
-  onProgress: ProgressCallback,
-  relaunchAfter: boolean,
-): Promise<void> {
-  const { check } = await import("@tauri-apps/plugin-updater");
-  const { relaunch } = await import("@tauri-apps/plugin-process");
-
-  onProgress({ phase: "checking" });
-  const update = await check();
-  if (!update) {
-    onProgress({ phase: "done" });
-    return;
-  }
-
-  let total = 0;
-  let downloaded = 0;
-
-  await update.downloadAndInstall((event) => {
-    switch (event.event) {
-      case "Started": {
-        total = event.data.contentLength ?? 0;
-        onProgress({
-          phase: "downloading",
-          bytesDownloaded: 0,
-          bytesTotal: total,
-        });
-        break;
-      }
-      case "Progress": {
-        downloaded += event.data.chunkLength;
-        onProgress({
-          phase: "downloading",
-          bytesDownloaded: downloaded,
-          bytesTotal: total,
-        });
-        break;
-      }
-      case "Finished": {
-        onProgress({ phase: "installing" });
-        break;
-      }
-    }
-  });
-
-  if (relaunchAfter) {
-    await relaunch();
-  } else {
-    onProgress({ phase: "done" });
-  }
+  return false;
 }
 
 function isSafeUpdateUrl(url: string): boolean {
@@ -85,23 +35,12 @@ export async function installUpdate(
   fallbackAssetUrl: string | undefined,
   onProgress: ProgressCallback,
 ): Promise<void> {
-  if (!inTauriRuntime()) {
-    if (fallbackAssetUrl && isSafeUpdateUrl(fallbackAssetUrl)) {
-      window.open(fallbackAssetUrl, "_blank", "noopener,noreferrer");
-    }
-    onProgress({ phase: "done" });
-    return;
+  if (fallbackAssetUrl && isSafeUpdateUrl(fallbackAssetUrl)) {
+    window.open(fallbackAssetUrl, "_blank", "noopener,noreferrer");
   }
-  try {
-    await runInstall(onProgress, true);
-  } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
-    onProgress({ phase: "error", error: message });
-    throw err;
-  }
+  onProgress({ phase: "done" });
 }
 
 export async function installUpdateOnQuit(): Promise<void> {
-  if (!inTauriRuntime()) return;
-  await runInstall(() => {}, false);
+  // 网页版没有关窗钩子，无需处理
 }

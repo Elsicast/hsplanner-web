@@ -3,7 +3,7 @@ use std::fs;
 use std::path::{Path, PathBuf};
 
 fn main() {
-    tauri_build::build();
+    // 仅生成数据 JSON 的编译期内嵌（tauri context 生成已随桌面构建移除）
     emit_data_includes();
 }
 

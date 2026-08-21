@@ -1,4 +1,3 @@
-import { invoke } from '@tauri-apps/api/core'
 import { BUILD_ID_RE } from './sharePayload'
 import { decodeShareToBuild, type DecodedShare } from './shareBuild'
 import { WebShareError } from './webShare'
@@ -6,6 +5,8 @@ import { WebShareError } from './webShare'
 export { WebShareError }
 
 const DEEP_LINK_RE = /^hsp:\/\/b\/([^/?#]+)$/
+// 网页内部伪 URL：?b=<完整分享code> 直接内嵌，无需访问分享服务器
+const WEB_CODE_PREFIX = 'web-code://'
 
 export function parseDeepLinkUrl(url: string): string | null {
   const match = DEEP_LINK_RE.exec(url.trim())
@@ -41,6 +42,19 @@ export async function handleDeepLinkUrls(
   onReady: (code: string, decoded: DecodedShare) => void,
   onError: (message: string) => void,
 ): Promise<void> {
+  // 网页版 ?b=<code>：code 直接内嵌在 URL 里，本地解码即可
+  const direct = urls.find((u) => u.startsWith(WEB_CODE_PREFIX))
+  if (direct) {
+    const code = decodeURIComponent(direct.slice(WEB_CODE_PREFIX.length))
+    const decoded = decodeShareToBuild(code)
+    if (!decoded) {
+      onError('That shared build could not be read.')
+      return
+    }
+    onReady(code, decoded)
+    return
+  }
+  // 桌面 hsp://b/<id> 或 ?b=<短id>：从分享服务器拉取 code
   const id = urls.map(parseDeepLinkUrl).find((parsed): parsed is string => parsed !== null)
   if (!id) return
   try {
@@ -57,9 +71,13 @@ export async function handleDeepLinkUrls(
 }
 
 export async function getInitialDeepLinkUrls(): Promise<string[]> {
+  // 网页版：?b=<完整code 或 短id> 承担桌面 hsp:// 深链接的职责
   try {
-    const urls = await invoke<string[] | null>('plugin:deep-link|get_current')
-    return urls ?? []
+    const raw = new URLSearchParams(window.location.search).get('b')
+    if (!raw) return []
+    const value = raw.trim()
+    if (BUILD_ID_RE.test(value)) return [`hsp://b/${value}`]
+    return [`${WEB_CODE_PREFIX}${encodeURIComponent(value)}`]
   } catch {
     return []
   }

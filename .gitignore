@@ -36,3 +36,6 @@ engine/target/
 
 # Build/tooling output kept local, never committed
 graphify-out/
+
+# Local tooling scratch (rustup installer etc.)
+.tools/

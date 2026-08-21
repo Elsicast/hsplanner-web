@@ -1,4 +1,4 @@
-import { invoke } from '@tauri-apps/api/core'
+import { invoke } from '../wasm/engineRpc'
 import { notifyBridgeError } from './calc/bridge'
 import type { RangedValue } from '../types/game'
 import type { BonusSource, DamageFormula, DamageRange, DamageType } from '../types/skill'

@@ -1,7 +1,6 @@
 use std::collections::{HashMap, HashSet, VecDeque};
 
 use serde::Serialize;
-use tauri::{AppHandle, Emitter};
 
 use super::engine::{compute_final_state, EngineInputs, FinalState};
 use super::types::{
@@ -12,10 +11,15 @@ use crate::calc::skills as calc;
 
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
+#[cfg_attr(target_family = "wasm", allow(dead_code))]
 pub struct ProgressPayload {
     pub current: u32,
     pub total: u32,
 }
+
+/// Progress sink: the Tauri command emits "suggest-progress" events, the wasm
+/// binding forwards to a registered JS callback. Same thread, synchronous.
+pub type ProgressSink<'a> = &'a dyn Fn(u32, u32);
 
 fn skill_ref_to_calc(skill: &SkillRef) -> calc::Skill {
     calc::Skill {
@@ -350,7 +354,7 @@ fn find_path_to(
     None
 }
 
-pub fn suggest(input: &PrecomputedInput, app: Option<&AppHandle>) -> SuggestResult {
+pub fn suggest(input: &PrecomputedInput, progress: Option<ProgressSink<'_>>) -> SuggestResult {
     let jewelry_set: HashSet<u32> = input.graph.jewelry_ids.iter().copied().collect();
     let valuable_set: HashSet<u32> = input.graph.valuable_ids.iter().copied().collect();
     let start_set: HashSet<u32> = input.graph.start_ids.iter().copied().collect();
@@ -408,16 +412,13 @@ pub fn suggest(input: &PrecomputedInput, app: Option<&AppHandle>) -> SuggestResu
     }
 
     let mut remaining_budget = input.budget;
-    loop {
-        if let Some(app) = app {
-            let _ = app.emit(
-                "suggest-progress",
-                ProgressPayload {
-                    current: sequence.len() as u32,
-                    total: input.budget,
-                },
-            );
+    let report = |current: u32, total: u32| {
+        if let Some(sink) = progress {
+            sink(current, total);
         }
+    };
+    loop {
+        report(sequence.len() as u32, input.budget);
         if remaining_budget == 0 {
             break;
         }
@@ -523,30 +524,17 @@ pub fn suggest(input: &PrecomputedInput, app: Option<&AppHandle>) -> SuggestResu
         valuable_with_impact.remove(&cand);
         remaining_budget -= 1;
         current_dps = dps;
-        if let Some(app) = app {
-            let _ = app.emit(
-                "suggest-progress",
-                ProgressPayload {
-                    current: sequence.len() as u32,
-                    total: input.budget,
-                },
-            );
-        }
+        report(sequence.len() as u32, input.budget);
     }
 
     // ====================== LOCAL SEARCH SWAP REFINEMENT ======================
     // 2-opt: swap any allocated node for a frontier neighbour while DPS improves.
     const SWAP_MAX_PASSES: u32 = 60;
     for pass in 0..SWAP_MAX_PASSES {
-        if let Some(app) = app {
-            let _ = app.emit(
-                "suggest-progress",
-                ProgressPayload {
-                    current: sequence.len() as u32 + pass,
-                    total: sequence.len() as u32 + SWAP_MAX_PASSES,
-                },
-            );
-        }
+        report(
+            sequence.len() as u32 + pass,
+            sequence.len() as u32 + SWAP_MAX_PASSES,
+        );
 
         let removable: Vec<u32> = allocated.difference(&initial).copied().collect();
         if removable.is_empty() {
@@ -620,15 +608,7 @@ pub fn suggest(input: &PrecomputedInput, app: Option<&AppHandle>) -> SuggestResu
         }
     }
 
-    if let Some(app) = app {
-        let _ = app.emit(
-            "suggest-progress",
-            ProgressPayload {
-                current: sequence.len() as u32,
-                total: input.budget,
-            },
-        );
-    }
+    report(sequence.len() as u32, input.budget);
     let added_nodes: Vec<u32> = allocated.difference(&initial).copied().collect();
     let budget_used = sequence.len() as u32;
     let used_starts: Vec<u32> = allocated.intersection(&start_set).copied().collect();

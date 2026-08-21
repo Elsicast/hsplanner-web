@@ -1,5 +1,3 @@
-import { inTauriRuntime } from './installUpdate'
-
 export const UI_ZOOM_STEPS = [1, 1.15, 1.25, 1.5, 1.75, 2] as const
 
 export type UiZoom = (typeof UI_ZOOM_STEPS)[number]
@@ -21,9 +19,8 @@ export function detectUiZoom(): UiZoom {
   return autoUiZoom(window.screen.width)
 }
 
+// 网页版用 CSS zoom（Chrome/Edge/Safari 原生支持，Firefox 126+ 支持）
 export function applyUiZoom(zoom: UiZoom): void {
-  if (!inTauriRuntime()) return
-  void import('@tauri-apps/api/webview')
-    .then(({ getCurrentWebview }) => getCurrentWebview().setZoom(zoom))
-    .catch((err) => console.error('setZoom failed', err))
+  if (typeof document === 'undefined') return
+  document.documentElement.style.setProperty('zoom', String(zoom))
 }

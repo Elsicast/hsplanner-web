@@ -6,6 +6,7 @@ version = 3
 name = "HSPlanner"
 version = "0.9.1"
 dependencies = [
+ "js-sys",
  "log",
  "once_cell",
  "regex",
@@ -14,7 +15,6 @@ dependencies = [
  "specta",
  "specta-typescript",
  "tauri",
- "tauri-build",
  "tauri-plugin-deep-link",
  "tauri-plugin-log",
  "tauri-plugin-opener",
@@ -22,6 +22,7 @@ dependencies = [
  "tauri-plugin-single-instance",
  "tauri-plugin-updater",
  "tauri-specta",
+ "wasm-bindgen",
 ]
 
 [[package]]

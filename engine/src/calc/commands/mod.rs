@@ -1,6 +1,11 @@
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
+#[cfg(not(target_family = "wasm"))]
 use tauri::Emitter;
+
+// 各命令的属性统一写成
+// `#[cfg_attr(not(target_family = "wasm"), tauri::command)]`：
+// 桌面端是 Tauri 命令；wasm 端是普通函数，由 wasm.rs 的分发器直接调用。
 
 use super::build::{BuildPerformance, BuildPerformanceDeps, compute_build_performance};
 use super::skills as calc;

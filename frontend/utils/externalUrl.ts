@@ -1,8 +1,7 @@
 import type { MouseEvent } from 'react'
-import { inTauriRuntime } from './installUpdate'
 
-export function openExternalLink(e: MouseEvent, href: string): void {
-  if (!inTauriRuntime()) return
-  e.preventDefault()
-  void import('@tauri-apps/plugin-opener').then(({ openUrl }) => openUrl(href))
+// 网页版直接走 <a target="_blank" rel="noopener"> 默认行为，无需拦截。
+export function openExternalLink(_e: MouseEvent, _href: string): void {
+  void _e
+  void _href
 }
