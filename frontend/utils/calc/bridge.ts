@@ -1,4 +1,4 @@
-import { invoke } from '@tauri-apps/api/core'
+import { invoke } from '../../wasm/engineRpc'
 
 import type { CustomStat, Inventory, RangedValue, Skill, TreeSocketContent } from '../../types'
 import type { AttackSkillDamageBreakdown, SkillDamageBreakdown } from '../../utils/item/stats'

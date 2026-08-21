@@ -1,5 +1,4 @@
-import { invoke } from '@tauri-apps/api/core'
-import { listen, type UnlistenFn } from '@tauri-apps/api/event'
+import { invoke, listen, type UnlistenFn } from '../../wasm/engineRpc'
 import { activeSeasonId, gameConfig, getSkillsByClass } from '@data'
 import { effectiveSkillTags } from '../skills/skillTags'
 import type { Skill } from '../../types'
@@ -192,7 +191,9 @@ export async function suggestNodesNative(
     })
   }
   try {
-    return await invoke<NativeSuggestResult>('suggest_tree_nodes', { input })
+    return await invoke<NativeSuggestResult>('suggest_tree_nodes', { input }, {
+      progressEvent: 'suggest-progress',
+    })
   } finally {
     if (unlisten) unlisten()
   }

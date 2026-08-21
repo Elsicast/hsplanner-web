@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { invoke } from '@tauri-apps/api/core'
+import { invoke } from '../wasm/engineRpc'
 import { setBridgeErrorListener } from './calc/bridge'
 import type {
   NativeSkillDamageInput,
@@ -7,7 +7,7 @@ import type {
 } from './nativeDamage'
 import { computeSkillDamageNative, computeWeaponDamageNative } from './nativeDamage'
 
-vi.mock('@tauri-apps/api/core', () => ({
+vi.mock('../wasm/engineRpc', () => ({
   invoke: vi.fn(),
 }))
 

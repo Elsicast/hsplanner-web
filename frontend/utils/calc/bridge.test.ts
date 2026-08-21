@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { invoke } from '@tauri-apps/api/core'
+import { invoke } from '../../wasm/engineRpc'
 import type { Skill } from '../../types'
 import {
   __depsToInputForTest,
@@ -11,7 +11,7 @@ import {
 } from './bridge'
 import { activeSeasonId } from '@data'
 
-vi.mock('@tauri-apps/api/core', () => ({
+vi.mock('../../wasm/engineRpc', () => ({
   invoke: vi.fn(),
 }))
 

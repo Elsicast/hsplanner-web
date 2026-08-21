@@ -63,7 +63,7 @@ impl From<PassiveSkillDto> for crate::calc::passive::PassiveSkill {
 }
 
 // rank arrives as a JS number; clamp like the former TS helpers (rank <= 0 -> empty / 1).
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn passive_stats_at_rank(skill: PassiveSkillDto, rank: f64) -> HashMap<String, f64> {
     if rank <= 0.0 {
         return HashMap::new();
@@ -71,7 +71,7 @@ pub fn passive_stats_at_rank(skill: PassiveSkillDto, rank: f64) -> HashMap<Strin
     crate::calc::passive::passive_stats_at_rank(&skill.into(), rank as u32)
 }
 
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn mana_cost_at_rank(skill: PassiveSkillDto, rank: f64) -> Option<f64> {
     let r = if rank <= 0.0 { 1 } else { rank as u32 };
     crate::calc::passive::mana_cost_at_rank(&skill.into(), r)
@@ -81,7 +81,7 @@ pub fn mana_cost_at_rank(skill: PassiveSkillDto, rank: f64) -> Option<f64> {
 // Batched custom-stat input validation so the config UI previews exactly what
 // calc/custom_stat.rs will apply.
 
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn parse_custom_stats(values: Vec<String>) -> Vec<Option<[f64; 2]>> {
     values
         .iter()
@@ -161,7 +161,7 @@ pub fn display_values_impl(input: &DisplayValuesInput) -> DisplayValuesOutput {
 }
 
 // Star scaling reads per-season config, so the season rides as a command param.
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn display_values(input: DisplayValuesInput, season: Option<String>) -> DisplayValuesOutput {
     let _scope = crate::calc::season::SeasonScope::enter(season);
     display_values_impl(&input)
@@ -198,7 +198,7 @@ pub fn classify_tree_nodes_impl() -> HashMap<String, NodeLineClassification> {
         .collect()
 }
 
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn classify_tree_nodes(season: Option<String>) -> HashMap<String, NodeLineClassification> {
     let _scope = crate::calc::season::SeasonScope::enter(season);
     classify_tree_nodes_impl()
@@ -267,7 +267,7 @@ pub(crate) fn subskill_aggregation_impl(input: &SubskillAggregationInput) -> Sub
     }
 }
 
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn subskill_aggregation(input: SubskillAggregationInput) -> SubskillAggregationOutput {
     let _scope = crate::calc::season::SeasonScope::enter(input.season.clone());
     subskill_aggregation_impl(&input)

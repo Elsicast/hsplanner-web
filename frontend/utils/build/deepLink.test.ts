@@ -1,11 +1,5 @@
-import { describe, expect, it, vi, beforeEach } from 'vitest'
-import { invoke } from '@tauri-apps/api/core'
+import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest'
 import { parseDeepLinkUrl, getInitialDeepLinkUrls } from './deepLink'
-
-vi.mock('@tauri-apps/api/core', () => ({
-  invoke: vi.fn(),
-}))
-const mockedInvoke = vi.mocked(invoke)
 
 describe('parseDeepLinkUrl', () => {
   it('extracts the id from a well-formed hsp://b/<ID> url', () => {
@@ -55,22 +49,25 @@ describe('fetchSharedBuildCode', () => {
 
 describe('getInitialDeepLinkUrls', () => {
   beforeEach(() => {
-    mockedInvoke.mockReset()
+    window.history.replaceState({}, '', '/')
+  })
+  afterEach(() => {
+    window.history.replaceState({}, '', '/')
   })
 
-  it('returns the plugin-reported urls when present', async () => {
-    mockedInvoke.mockResolvedValue(['hsp://b/XK3FQ2'])
+  it('把 ?b=<短id> 转成等效的 hsp:// 深链接', async () => {
+    window.history.replaceState({}, '', '/?b=XK3FQ2')
     await expect(getInitialDeepLinkUrls()).resolves.toEqual(['hsp://b/XK3FQ2'])
-    expect(mockedInvoke).toHaveBeenCalledWith('plugin:deep-link|get_current')
   })
 
-  it('returns an empty array when the plugin reports no url', async () => {
-    mockedInvoke.mockResolvedValue(null)
-    await expect(getInitialDeepLinkUrls()).resolves.toEqual([])
+  it('把 ?b=<完整code> 转成 web-code:// 伪 URL', async () => {
+    window.history.replaceState({}, '', '/?b=someLzStringCode123')
+    await expect(getInitialDeepLinkUrls()).resolves.toEqual([
+      'web-code://someLzStringCode123',
+    ])
   })
 
-  it('returns an empty array instead of throwing when invoke rejects', async () => {
-    mockedInvoke.mockRejectedValue(new Error('no tauri runtime'))
+  it('无参数时返回空数组', async () => {
     await expect(getInitialDeepLinkUrls()).resolves.toEqual([])
   })
 })

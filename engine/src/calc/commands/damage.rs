@@ -200,7 +200,7 @@ impl From<calc::WeaponDamageBreakdown> for WeaponDamageOutput {
     }
 }
 
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn compute_skill_damage(input: SkillDamageInput) -> Option<SkillDamageOutput> {
     let skill: calc::Skill = input.skill.into();
     let attributes = ranged_map(normalized_keys(input.attributes));
@@ -235,7 +235,7 @@ pub fn compute_skill_damage(input: SkillDamageInput) -> Option<SkillDamageOutput
     calc::compute_skill_damage(&inp).map(Into::into)
 }
 
-#[tauri::command]
+#[cfg_attr(not(target_family = "wasm"), tauri::command)]
 pub fn compute_weapon_damage(input: WeaponDamageInput) -> WeaponDamageOutput {
     let weapon: Option<calc::Weapon> = input.weapon.map(Into::into);
     let stats = ranged_map(normalized_keys(input.stats));

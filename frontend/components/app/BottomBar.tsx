@@ -2,12 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import changelogMd from '../../../CHANGELOG.md?raw'
 import { useBuild } from '../../store/build'
 import { useSettings } from '../../store/settings'
-import {
-  inTauriRuntime,
-  installUpdateOnQuit,
-} from '../../utils/installUpdate'
 import { openExternalLink } from '../../utils/externalUrl'
-import { readStorage } from '../../utils/storage'
 import {
   APP_VERSION,
   BUILD_CHANNEL,
@@ -18,8 +13,6 @@ import {
   type UpdateInfo,
 } from '../../utils/version'
 import UpdateModal from './UpdateModal'
-
-const AUTO_INSTALL_KEY = 'hsplanner.update.auto_install'
 
 type CheckState =
   | { kind: 'idle' }
@@ -58,49 +51,6 @@ export default function BottomBar() {
     },
     [],
   )
-
-  useEffect(() => {
-    if (!inTauriRuntime()) return
-    let unlisten: (() => void) | undefined
-    let cancelled = false
-    let quitting = false
-    const QUIT_INSTALL_TIMEOUT_MS = 20000
-    ;(async () => {
-      const { getCurrentWindow } = await import('@tauri-apps/api/window')
-      if (cancelled) return
-      const win = getCurrentWindow()
-      unlisten = await win.onCloseRequested(async (event) => {
-        if (quitting) return
-        quitting = true
-        event.preventDefault()
-
-        const auto = readStorage(AUTO_INSTALL_KEY) === '1'
-        const cur = checkRef.current
-        if (auto && cur.kind === 'available') {
-          try {
-            await Promise.race([
-              installUpdateOnQuit(),
-              new Promise((_, reject) =>
-                window.setTimeout(
-                  () => reject(new Error('install-on-quit timeout')),
-                  QUIT_INSTALL_TIMEOUT_MS,
-                ),
-              ),
-            ])
-          } catch {
-            void 0
-          }
-        }
-
-        const { exit } = await import('@tauri-apps/plugin-process')
-        await exit(0)
-      })
-    })()
-    return () => {
-      cancelled = true
-      unlisten?.()
-    }
-  }, [])
 
   const scheduleRevert = (delayMs: number) => {
     if (transientTimer.current !== null)

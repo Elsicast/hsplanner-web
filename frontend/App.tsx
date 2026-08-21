@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { invoke } from "@tauri-apps/api/core";
-import { listen } from "@tauri-apps/api/event";
+import { invoke, listen } from "./wasm/engineRpc";
 import { AnimatePresence, motion } from "motion/react";
 import { EASE_OUT, hoverTap, viewVariants } from "./utils/motion";
 import BottomBar from "./components/app/BottomBar";
@@ -142,7 +141,11 @@ function App() {
             },
           );
           try {
-            await invoke<boolean>("calc_warmup", { season: activeSeasonId });
+            await invoke<boolean>(
+              "calc_warmup",
+              { season: activeSeasonId },
+              { progressEvent: "warmup-progress" },
+            );
           } finally {
             unlisten();
           }

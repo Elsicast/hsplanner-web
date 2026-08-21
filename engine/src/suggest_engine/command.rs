@@ -1,5 +1,6 @@
-use super::algo::suggest;
+use super::algo::{suggest, ProgressPayload};
 use super::types::{PrecomputedInput, SuggestResult};
+use tauri::Emitter;
 
 // A panic inside suggest() must degrade to "no suggestions" instead of
 // re-panicking on the IPC runtime thread.
@@ -22,7 +23,13 @@ pub async fn suggest_tree_nodes(
     let season = input.season.clone();
     join_or_default(tauri::async_runtime::spawn_blocking(move || {
         let _scope = crate::calc::season::SeasonScope::enter(season);
-        suggest(&input, Some(&app))
+        let emit = |current: u32, total: u32| {
+            let _ = app.emit(
+                "suggest-progress",
+                ProgressPayload { current, total },
+            );
+        };
+        suggest(&input, Some(&emit))
     }))
     .await
 }

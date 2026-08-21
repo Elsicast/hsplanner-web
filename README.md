@@ -1,12 +1,11 @@
-<img width="1600" height="360" alt="wordmark-1600" src="https://github.com/user-attachments/assets/fe4fd4b3-a475-438a-a87e-53fd8080632d" />
+# HSPlanner Web
 
+> **Derived from** [HeroSiegePlanner/HSPlanner](https://github.com/HeroSiegePlanner/HSPlanner) (desktop/Tauri version, by zium1337 & contributors, MIT License).
+> This fork ports the desktop app to a **pure web app**: the Rust calc engine is compiled to WebAssembly and runs in a Web Worker. All credit for the original planner, data, and engine goes to the upstream project — see the [original README](https://github.com/HeroSiegePlanner/HSPlanner#readme) and [CHANGELOG](./CHANGELOG.md).
 
-A desktop build planner for **Hero Siege** - a calculator for the talent tree, gear, stats, and skills.
+A **web build planner** for **Hero Siege** — a calculator for the talent tree, gear, stats, and skills, running fully in the browser.
 
-![Python](https://img.shields.io/github/v/release/zium1337/HSPlanner)
-[![Download](https://img.shields.io/github/v/release/zium1337/HSPlanner?label=Download)](https://github.com/zium1337/HSPlanner/releases/latest)
-
----
+This is a web-first port of the desktop [HSPlanner](https://github.com/HeroSiegePlanner/HSPlanner): the original Rust calc engine (`engine/`) is compiled to **WebAssembly** and driven by a **Web Worker**, so every DPS / stats / talent-suggestion number is identical to the desktop app, with no server required.
 
 ## Features
 
@@ -14,73 +13,67 @@ A desktop build planner for **Hero Siege** - a calculator for the talent tree, g
 - [x] **Skills** — point allocation that respects skill prerequisites and per-level caps
 - [x] **Gear** — slots for weapons, armor, charms, jewelry with sockets (gems/runes) and runeword detection
 - [x] **Affixes** — add affixes with tier and adjustable roll
-- [x] **Stats** — aggregated bonuses from tree, gear, attributes, and runewords
+- [x] **Stats** — aggregated bonuses from tree, gear, attributes, and runewords (computed by the Rust→WASM engine)
 - [x] **Custom stats** — free-text user-entered stats for things outside the data model
 - [x] **Notes** — sanitized WYSIWYG editor (per build), preserved across share links
-- [x] **Builds menu** — multiple saved builds, each with multiple profiles
-- [x] **Share** — export the entire build to a compressed URL (lz-string)
-- [x] **Update check** — opt-in update check via GitHub Releases
+- [x] **Builds menu** — multiple saved builds, each with multiple profiles (stored in `localStorage`)
+- [x] **Share** — export the entire build to a compressed URL (`?b=<code>`, lz-string)
+- [x] **Seasons** — Season 9 / Season 10 data patches
 
-<img width="1710" height="1041" alt="image" src="https://github.com/user-attachments/assets/1bed9cf0-fbff-4231-b7bd-42ae25968938" />
+## Quick start (development)
 
----
+Prerequisites:
 
-## How to install
-
-1. Go to [latest release](https://github.com/zium1337/HSPlanner/releases/latest)
-2. Scroll down and in **assets** section, pick the installer for your OS for example Windows installer is named HSPlanner_x.x.x_x64-setup.exe where "x" it is a version number
-
----
-
-## Runtime requirements (prebuilt app)
-
-Download the installer / binary for your platform from Releases. The app is self-contained — end users do not need Node or Rust installed.
-
-| Platform | Required component |
+| Tool | Purpose |
 |---|---|
-| Windows 10/11 | WebView2 Runtime (preinstalled on Win11; the installer pulls it on Win10) |
-| macOS 10.15+ | None — WebKit is built into the OS |
-| Linux (x86_64) | `webkit2gtk-4.1`, `libssl`, standard GTK runtime libraries |
-
----
-
-## Development requirements
-
-| Tool | Minimum version | Purpose |
-|---|---|---|
-| **Node.js** | 20.x LTS or newer | Frontend (Vite + React) |
-| **npm** | 10.x (ships with Node 20+) | Package manager |
-| **Rust toolchain** | `rustup` with `stable` (≥ 1.77) | Tauri engine |
-| **Tauri prerequisites** | see below per OS | Linker, system libraries |
-
-### Build
+| Node.js ≥ 20 | Frontend (Vite + React) |
+| Rust toolchain (`rustup`, stable) + `wasm32-unknown-unknown` target | Compiling the calc engine to WASM |
+| `wasm-bindgen-cli` 0.2.118 | Generating the JS↔WASM glue |
 
 ```bash
-git clone https://github.com/zium1337/HSPlanner.git
-cd HSPlanner
+# 1. install JS deps
 npm install
-npm run tauri:dev
+
+# 2. build the wasm engine (run again whenever engine/ or data/ changes)
+npm run build:wasm
+
+# 3. dev server
+npm run dev
 ```
 
-### Tauri — system prerequisites
+Production build: `npm run build` (runs the wasm step automatically, then Vite → `dist/`).
 
-**Windows**
-- Microsoft Visual Studio C++ Build Tools (workload "Desktop development with C++")
-- WebView2 Runtime (only needed on Win10; Win11 has it preinstalled)
+### Windows notes
 
-**macOS (only for development purpose because game doesn't support macos)**
-- Xcode Command Line Tools: `xcode-select --install`
+- The default `stable-x86_64-pc-windows-msvc` host toolchain requires MSVC linkers for host-side build scripts. On machines without VS Build Tools, switch to the self-contained GNU toolchain:
 
-**Linux (Debian/Ubuntu)**
-```bash
-sudo apt install libwebkit2gtk-4.1-dev build-essential curl wget file libxdo-dev \
-  libssl-dev libayatana-appindicator3-dev librsvg2-dev
+  ```bash
+  rustup toolchain install stable-x86_64-pc-windows-gnu --profile minimal --target wasm32-unknown-unknown
+  rustup default stable-x86_64-pc-windows-gnu
+  ```
+
+- Install `wasm-bindgen-cli` by downloading the release binary that matches the crate version (see `engine/Cargo.lock`) and placing it on `PATH` (e.g. `~/.cargo/bin`).
+- Add `~/.cargo/bin` to your shell `PATH` so `cargo` / `wasm-bindgen` resolve in npm scripts.
+
+## Architecture (what changed vs. the desktop app)
+
+```
+browser
+├── main thread  ── React UI (unchanged)
+│                  frontend/wasm/engineRpc.ts   invoke()/listen() shim, same shapes as Tauri IPC
+└── web worker   ── frontend/wasm/engine.worker.ts
+                   frontend/wasm/engine/        wasm-bindgen output (app_lib.js + 6.7MB wasm incl. all game data)
+                     └── engine/src/wasm.rs     JSON dispatcher over the same 14 commands the Tauri app exposes
 ```
 
-For more information about tauri see [official Tauri guide](https://tauri.app/start/prerequisites/)
+- `engine/` (Rust) keeps its calc core untouched; Tauri-only code is behind `#[cfg(not(target_family = "wasm"))]` and `tauri-build` was dropped from `build.rs`, so the wasm build carries no Tauri dependency.
+- Suggest/warmup progress, formerly Tauri events, now flow as worker `postMessage` events through the same `listen()` shim.
+- Deep links: `hsp://b/<id>` desktop links are replaced by `?b=<code>` / `?b=<id>` URL parameters.
+- UI zoom uses CSS `zoom` instead of the webview API.
+- The desktop (Tauri) build path was removed in this fork: no updater, no `tauri.conf.json` flow. All persistence stays in `localStorage`, exactly like before.
 
 ## FAQ
 
-**Q:** *Can i import my save file from game to planner?*
+**Q:** *Can I import my save file from the game into the planner?*
 
-**A:** *No you can't. It is against the EULA/TOS.*
+**A:** *No. It is against the EULA/TOS.*

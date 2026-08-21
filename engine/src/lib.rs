@@ -1,11 +1,16 @@
 pub mod calc;
 mod suggest_engine;
 
-#[cfg(any(windows, target_os = "linux"))]
+// WebAssembly entry points (Web Worker driven); mirrors the Tauri commands.
+#[cfg(target_family = "wasm")]
+mod wasm;
+
+#[cfg(all(not(target_family = "wasm"), any(windows, target_os = "linux")))]
 use tauri::Manager;
-#[cfg(any(windows, target_os = "linux"))]
+#[cfg(all(not(target_family = "wasm"), any(windows, target_os = "linux")))]
 use tauri_plugin_deep_link::DeepLinkExt;
 
+#[cfg(not(target_family = "wasm"))]
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
   let builder = tauri::Builder::default();
