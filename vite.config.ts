@@ -12,6 +12,8 @@ const pkg = JSON.parse(
 const host = process.env.TAURI_DEV_HOST
 
 export default defineConfig({
+  // 使用相对路径，让产物同时兼容 GitHub Pages 的仓库子路径和本地预览。
+  base: './',
   plugins: [
     react(),
     tailwindcss(),
