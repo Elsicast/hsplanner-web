@@ -10,6 +10,7 @@ import type {
   Runeword,
   ItemSet,
   AngelicAugment,
+  EtherNodeStat,
   EtherTree,
   IncarnationTree,
   MercClass,
@@ -23,6 +24,7 @@ import itemGrantedSkillsJson from './item-granted-skills.json'
 import runewordsJson from './runewords.json'
 import setsJson from './sets.json'
 import etherTreeJson from './ether-tree.json'
+import etherTreeZhCnJson from './ether-tree.zh-CN.json'
 import incarnationNodesJson from './incarnation-nodes.json'
 import incarnationTreeJson from './incarnation-tree.json'
 import mercenariesJson from './mercenaries.json'
@@ -203,10 +205,23 @@ export function conditionalItemGrantedSkills(): ItemGrantedSkill[] {
 }
 export const augments: AngelicAugment[] = patchedList(augmentsJson as AngelicAugment[], seasonPatches.augments, 'augments')
 const etherTreeBase = etherTreeJson as unknown as EtherTree
-export const etherTree: EtherTree = patched(
+const etherTreePatched = patched(
   etherTreeBase,
   applyEtherTreePatch(etherTreeBase, seasonPatches.etherTree, 'ether-tree'),
 )
+const etherTreeZhCn = etherTreeZhCnJson as Record<
+  string,
+  Pick<EtherNodeStat, 'label' | 'desc'>
+>
+export const etherTree: EtherTree = {
+  ...etherTreePatched,
+  stats: Object.fromEntries(
+    Object.entries(etherTreePatched.stats).map(([key, stat]) => [
+      key,
+      { ...stat, ...etherTreeZhCn[key] },
+    ]),
+  ),
+}
 
 const incarnationTreeBase = incarnationTreeJson as unknown as IncarnationTree
 export const incarnationTree: IncarnationTree = patched(

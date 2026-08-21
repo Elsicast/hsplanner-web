@@ -87,21 +87,21 @@ describe('formatEtherTotal', () => {
 
 describe('etherRegionLabel', () => {
   it('maps key prefixes to mechanic labels', () => {
-    expect(etherRegionLabel('etherUnSmall01')).toBe('Universal')
-    expect(etherRegionLabel('etherCtBig03')).toBe('Chaos Tower')
-    expect(etherRegionLabel('etherUSSmall02')).toBe('Unholy Siege')
-    expect(etherRegionLabel('etherSRBig05')).toBe('Shadow Realm')
-    expect(etherRegionLabel('etherDngSmall04')).toBe('Dungeons')
+    expect(etherRegionLabel('etherUnSmall01')).toBe('通用')
+    expect(etherRegionLabel('etherCtBig03')).toBe('混沌之塔')
+    expect(etherRegionLabel('etherUSSmall02')).toBe('邪秽围城')
+    expect(etherRegionLabel('etherSRBig05')).toBe('暗影领域')
+    expect(etherRegionLabel('etherDngSmall04')).toBe('地牢')
   })
 
   it('falls back to Other for unknown keys', () => {
-    expect(etherRegionLabel('somethingElse')).toBe('Other')
+    expect(etherRegionLabel('somethingElse')).toBe('其他')
   })
 
   it('maps every key used by tree nodes to a known region', () => {
     for (const n of etherTree.nodes) {
       if (n.key.endsWith('Indicator')) continue
-      expect(etherRegionLabel(n.key), n.key).not.toBe('Other')
+      expect(etherRegionLabel(n.key), n.key).not.toBe('其他')
     }
   })
 })
@@ -114,10 +114,10 @@ describe('groupEtherSummary', () => {
       ...nodesWithKey('etherSRSmall01').slice(0, 1),
     ]
     const groups = groupEtherSummary(summarizeEtherNodes(ids))
-    expect(groups[0]!.region).toBe('Universal')
+    expect(groups[0]!.region).toBe('通用')
     const regions = groups.map((g) => g.region)
-    expect(regions).toContain('Chaos Tower')
-    expect(regions).toContain('Shadow Realm')
+    expect(regions).toContain('混沌之塔')
+    expect(regions).toContain('暗影领域')
     expect(regions.slice(1)).toEqual([...regions.slice(1)].sort())
   })
 

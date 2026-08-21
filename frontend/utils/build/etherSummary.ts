@@ -72,20 +72,20 @@ export function formatEtherTotal(entry: {
 }
 
 const ETHER_REGIONS: Record<string, { label: string; color: string }> = {
-  Un: { label: 'Universal', color: '#a574c9' },
-  Ow: { label: 'Overworld', color: '#7fd966' },
-  Ct: { label: 'Chaos Tower', color: '#e05c5c' },
-  Cp: { label: 'Chaos Pillars', color: '#e0985c' },
-  SR: { label: 'Shadow Realm', color: '#7a8ce0' },
-  Pe: { label: 'Prime Evil', color: '#c94f6d' },
-  Ur: { label: 'Unstable Rift', color: '#5cd8d0' },
-  Min: { label: 'Mining', color: '#c98a3a' },
-  EB: { label: 'Eternal Battlefield', color: '#b8b04a' },
-  CS: { label: 'Cursed Spirit', color: '#66d9a8' },
-  US: { label: 'Unholy Siege', color: '#e07adb' },
-  Dng: { label: 'Dungeons', color: '#8f9bb0' },
-  Rg: { label: 'Ruby Gardens', color: '#f27a9d' },
-  Cc: { label: 'Colossal Creatures', color: '#e8d84a' },
+  Un: { label: '通用', color: '#a574c9' },
+  Ow: { label: '大世界', color: '#7fd966' },
+  Ct: { label: '混沌之塔', color: '#e05c5c' },
+  Cp: { label: '混沌之柱', color: '#e0985c' },
+  SR: { label: '暗影领域', color: '#7a8ce0' },
+  Pe: { label: '大魔神', color: '#c94f6d' },
+  Ur: { label: '不稳定裂隙', color: '#5cd8d0' },
+  Min: { label: '采矿', color: '#c98a3a' },
+  EB: { label: '永恒战场', color: '#b8b04a' },
+  CS: { label: '诅咒之魂', color: '#66d9a8' },
+  US: { label: '邪秽围城', color: '#e07adb' },
+  Dng: { label: '地牢', color: '#8f9bb0' },
+  Rg: { label: '红宝石花园', color: '#f27a9d' },
+  Cc: { label: '巨型生物', color: '#e8d84a' },
 }
 
 export const ETHER_REGION_FALLBACK_COLOR = '#9aa0ab'
@@ -95,7 +95,7 @@ function etherRegionMeta(key: string): { label: string; color: string } {
   const code = m?.[1]
   return (
     (code && ETHER_REGIONS[code]) || {
-      label: 'Other',
+      label: '其他',
       color: ETHER_REGION_FALLBACK_COLOR,
     }
   )
@@ -126,8 +126,8 @@ export function groupEtherSummary(
     else byRegion.set(label, { region: label, color, entries: [entry] })
   }
   return [...byRegion.values()].sort((a, b) => {
-    if (a.region === 'Universal') return -1
-    if (b.region === 'Universal') return 1
+    if (a.region === '通用') return -1
+    if (b.region === '通用') return 1
     return a.region.localeCompare(b.region)
   })
 }
