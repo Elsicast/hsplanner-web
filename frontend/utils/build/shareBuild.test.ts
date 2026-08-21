@@ -6,6 +6,7 @@ import { describe, expect, it } from 'vitest'
 import { makeSnapshot as makeBaseSnapshot } from './buildSnapshot.fixture'
 import {
   type BuildSnapshot,
+  createBuildShareUrl,
   decodeShareToBuild,
   encodeBuildToShare,
   parseBuildCodeFromInput,
@@ -300,5 +301,22 @@ describe('parseBuildCodeFromInput', () => {
 
   it('returns trimmed input on empty match', () => {
     expect(parseBuildCodeFromInput('  hello  ')).toBe('hello')
+  })
+})
+
+describe('createBuildShareUrl', () => {
+  it('把构建代码写入当前网页的 b 参数', () => {
+    expect(createBuildShareUrl('ABC+123', 'https://example.com/HSPlanner/')).toBe(
+      'https://example.com/HSPlanner/?b=ABC%2B123',
+    )
+  })
+
+  it('移除旧参数和片段，避免把无关页面状态带进分享链接', () => {
+    expect(
+      createBuildShareUrl(
+        'NEW_CODE',
+        'https://example.com/HSPlanner/?b=OLD&token=secret#section',
+      ),
+    ).toBe('https://example.com/HSPlanner/?b=NEW_CODE')
   })
 })

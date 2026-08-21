@@ -11,7 +11,6 @@ import {
   fetchBuildCodeFromGist,
   isGistReference,
 } from '../../utils/build/gistShare'
-import { buildSharePayload, postWebShare } from '../../utils/build/webShare'
 import { ShareDialog } from '../app/ShareDialog'
 import { readStorage, writeStorage } from '../../utils/storage'
 import { approxKB } from './buildDisplay'
@@ -711,13 +710,6 @@ export default function BuildSelect({
       {shareBuild && shareProfile && (
         <ShareDialog
           code={shareProfile.code}
-          meta={{
-            className: lib.meta[shareBuild.id]?.className,
-            level: lib.meta[shareBuild.id]?.level,
-          }}
-          createWebShare={async () =>
-            postWebShare(await buildSharePayload(shareBuild))
-          }
           onClose={() => setShareBuildId(null)}
         />
       )}

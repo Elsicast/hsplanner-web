@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { useBuild } from "../../store/build";
-import { activeSeasonId, getClass } from "@data";
 import { encodeBuildToShare } from "../../utils/build/shareBuild";
-import { getSavedBuild, type SavedBuild } from "../../utils/build/savedBuilds";
-import { buildSharePayload, postWebShare } from "../../utils/build/webShare";
 import { ShareDialog, type ShareDialogProps } from "./ShareDialog";
 
 type ShareState = Omit<ShareDialogProps, "onClose">;
@@ -17,32 +14,10 @@ export default function ShareButton() {
       setShare(null);
       return;
     }
-    const { notes, activeBuildId } = useBuild.getState();
+    const { notes } = useBuild.getState();
     const snap = exportSnapshot();
     const code = encodeBuildToShare(snap, notes);
-    const saved = activeBuildId ? getSavedBuild(activeBuildId) : null;
-    const now = new Date().toISOString();
-    const clsName = snap.classId ? getClass(snap.classId)?.name : undefined;
-    const liveBuild: SavedBuild = {
-      id: saved?.id ?? "live",
-      name: saved?.name ?? `${clsName ?? "英雄"} Lv ${snap.level}`,
-      classId: snap.classId,
-      notes,
-      createdAt: saved?.createdAt ?? now,
-      updatedAt: now,
-      profiles: [{ id: "live", name: "当前", code, updatedAt: now }],
-      activeProfileId: "live",
-      folderId: null,
-      favorite: false,
-      tags: saved?.tags ?? [],
-      season: activeSeasonId,
-      stash: [],
-    };
-    setShare({
-      code,
-      meta: { className: snap.classId ?? undefined, level: snap.level },
-      createWebShare: async () => postWebShare(await buildSharePayload(liveBuild)),
-    });
+    setShare({ code });
   };
 
   return (

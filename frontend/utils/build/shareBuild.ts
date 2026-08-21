@@ -445,3 +445,11 @@ export function parseBuildCodeFromInput(input: string): string {
   return m && m[1] ? decodeURIComponent(m[1]) : trimmed
 }
 
+export function createBuildShareUrl(code: string, currentUrl = window.location.href): string {
+  const url = new URL(currentUrl)
+  url.search = ''
+  url.hash = ''
+  url.searchParams.set(URL_PARAM, code)
+  return url.toString()
+}
+
