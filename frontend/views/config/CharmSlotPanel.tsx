@@ -7,8 +7,8 @@ export default function CharmSlotPanel() {
 
   return (
     <Panel
-      title="Charm Inventory"
-      subtitle="Whether your character has unlocked the extra charm cell in-game."
+      title="Charm 背包"
+      subtitle="你的角色是否已在游戏内解锁额外的 Charm 格子。"
     >
       <label className="flex cursor-pointer flex-col gap-1">
         <span className="flex items-center gap-2.5">
@@ -19,12 +19,12 @@ export default function CharmSlotPanel() {
             className="shrink-0"
           />
           <span className="text-[13px] font-semibold text-text">
-            Extra charm slot unlocked
+            已解锁额外 Charm 格
           </span>
         </span>
         <span className="pl-6 text-[12px] leading-snug text-muted">
-          Adds the unlockable 30th cell to the charm grid in the Gear tab.
-          Stored on this device, shared by all builds.
+          在「装备」页签的 Charm 网格中添加可解锁的第 30
+          格。存储于本设备，所有构建共享。
         </span>
       </label>
     </Panel>

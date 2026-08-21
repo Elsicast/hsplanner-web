@@ -117,10 +117,10 @@ export function Modal({
               type="button"
               onClick={onClose}
               disabled={closeDisabled}
-              aria-label="Close"
+              aria-label="关闭"
               className="rounded-md border border-border px-3 py-1.5 text-[12px] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot disabled:cursor-not-allowed disabled:opacity-40"
             >
-              Close
+              关闭
             </button>
           </div>
         </header>

@@ -19,15 +19,15 @@ type LinkState =
 type CopyStatus = "idle" | "copied" | "error";
 
 const METHOD_OPTIONS: { id: ShareMethod; label: string }[] = [
-  { id: "code", label: "Build code" },
-  { id: "gist", label: "Gist link" },
-  { id: "web", label: "hsplanner.app link" },
+  { id: "code", label: "构建代码" },
+  { id: "gist", label: "Gist 链接" },
+  { id: "web", label: "hsplanner.app 链接" },
 ];
 
 const METHOD_HINT: Record<ShareMethod, string> = {
-  code: "Paste into Builds → Import to load on another device.",
-  gist: "Uploads the build code to a private GitHub Gist and copies a link.",
-  web: "Publishes a read-only build page at hsplanner.app and copies the link.",
+  code: "粘贴到 构建 → 导入，即可在其他设备上加载。",
+  gist: "将构建代码上传到私有 GitHub Gist 并复制链接。",
+  web: "在 hsplanner.app 发布一个只读构建页面并复制链接。",
 };
 
 const BTN_PRIMARY_CLASS =
@@ -102,7 +102,7 @@ export function ShareDialog({
       const message =
         e instanceof GistShareError || e instanceof WebShareError
           ? e.message
-          : "Sharing failed.";
+          : "分享失败。";
       setLink({ kind: "error", message });
     }
   };
@@ -115,21 +115,21 @@ export function ShareDialog({
   const statusText =
     method === "code"
       ? copyStatus === "copied"
-        ? "Code copied to clipboard"
+        ? "代码已复制到剪贴板"
         : copyStatus === "error"
-          ? "Clipboard write failed"
-          : `${code.length} characters`
+          ? "写入剪贴板失败"
+          : `${code.length} 个字符`
       : link?.kind === "busy"
-        ? "Creating link…"
+        ? "正在创建链接…"
         : link?.kind === "done"
           ? link.copied
-            ? "Link copied to clipboard"
-            : "Link ready"
+            ? "链接已复制到剪贴板"
+            : "链接已就绪"
           : link?.kind === "error"
             ? link.message
             : configured
-              ? "Creates a shareable link"
-              : "Not configured in this build.";
+              ? "创建可分享的链接"
+              : "此构建中未配置。";
 
   const isError =
     (method === "code" && copyStatus === "error") || link?.kind === "error";
@@ -145,13 +145,13 @@ export function ShareDialog({
   return (
     <Modal
       onClose={onClose}
-      eyebrow="Share"
-      title="Share Build"
+      eyebrow="分享"
+      title="分享构建"
       panelClassName="max-h-[88vh] w-[34rem] max-w-[94vw]"
     >
       <div className="flex flex-col gap-3 p-5">
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-          Share as
+          分享方式
         </span>
         <Dropdown
           value={method}
@@ -217,10 +217,10 @@ export function ShareDialog({
               style={BTN_BG}
             >
               {copyStatus === "copied"
-                ? "Copied"
+                ? "已复制"
                 : copyStatus === "error"
-                  ? "Copy failed"
-                  : "Copy code"}
+                  ? "复制失败"
+                  : "复制代码"}
             </button>
           ) : link?.kind === "done" ? (
             <button
@@ -228,19 +228,19 @@ export function ShareDialog({
               className={BTN_PRIMARY_CLASS}
               style={BTN_BG}
             >
-              Copy link
+              复制链接
             </button>
           ) : (
             <button
               onClick={onCreateLink}
               disabled={!configured || link?.kind === "busy"}
               title={
-                configured ? METHOD_HINT[method] : "Not configured in this build"
+                configured ? METHOD_HINT[method] : "此构建中未配置"
               }
               className={BTN_PRIMARY_CLASS}
               style={BTN_BG}
             >
-              {link?.kind === "busy" ? "Creating…" : "Create link"}
+              {link?.kind === "busy" ? "创建中…" : "创建链接"}
             </button>
           )}
         </div>

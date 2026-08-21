@@ -17,7 +17,7 @@ const AUGMENT_PICKER_ROWS: PickerRow[] = augments
     id: a.id,
     iconUrl: augmentIconForId(a.id),
     name: a.name,
-    kindLabel: 'AUGMENT',
+    kindLabel: '强化石',
     meta: a.triggerNote,
     rarity: 'angelic' as const,
     tooltip: buildAugmentTooltip(a),
@@ -100,9 +100,9 @@ export function AugmentSection({
           <button
             onClick={() => onSetAugment(null)}
             className="rounded-xs border border-border-2 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint transition-colors hover:border-stat-red hover:text-stat-red"
-            aria-label="Remove augment"
+            aria-label="移除强化石"
           >
-            Remove
+            移除
           </button>
         ) : undefined
       }
@@ -132,22 +132,22 @@ export function AugmentSection({
               aug ? 'text-yellow-200' : 'text-faint italic'
             }`}
           >
-            {aug ? aug.name : 'Choose augment…'}
+            {aug ? aug.name : '选择强化石…'}
           </span>
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint group-hover:text-yellow-200">
-          Browse →
+          浏览 →
         </span>
       </button>
 
       {pickerOpen && (
         <PickerModal
-          title="Pick Angelic Augment"
-          sectionLabel="Augment"
+          title="选择 Angelic Augment"
+          sectionLabel="强化石"
           rows={AUGMENT_PICKER_ROWS}
           selectedId={equipped.augment?.id ?? null}
-          searchPlaceholder="Search augments…"
-          emptyMessage="No augments match"
+          searchPlaceholder="搜索强化石…"
+          emptyMessage="没有匹配的强化石"
           width={680}
           allowClear={!!equipped.augment}
           onClear={() => onSetAugment(null)}
@@ -163,7 +163,7 @@ export function AugmentSection({
             className="flex items-center gap-2.5 rounded-[3px] border border-yellow-200/15 bg-bg/40 px-2.5 py-1.5"
           >
             <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-yellow-200/70">
-              Level
+              等级
             </span>
             <input
               type="range"
@@ -196,7 +196,7 @@ export function AugmentSection({
             </span>
             {tier.procChance !== undefined && tier.procChance !== null && (
               <span className="rounded-xs border border-yellow-200/25 bg-bg/40 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-yellow-200/80">
-                proc {tier.procChance}%
+                触发 {tier.procChance}%
               </span>
             )}
             {tier.procDurationSec !== undefined &&
@@ -207,7 +207,7 @@ export function AugmentSection({
               )}
             {tier.cost !== undefined && (
               <span className="rounded-xs border border-yellow-200/25 bg-bg/40 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-yellow-200/80">
-                cost {tier.cost} keys
+                消耗 {tier.cost} 把钥匙
               </span>
             )}
           </div>
@@ -215,7 +215,7 @@ export function AugmentSection({
           {Object.keys(tier.stats).length > 0 && (
             <div className="rounded-[3px] border border-yellow-200/15 bg-bg/40 p-2">
               <div className="mb-1 font-mono text-[9px] uppercase tracking-[0.18em] text-yellow-200/70">
-                Stats
+                属性
               </div>
               <ul className="space-y-0.5 text-[11px]">
                 {Object.entries(tier.stats).map(([key, val]) => {
@@ -251,7 +251,7 @@ export function AugmentSection({
 
           {aug.rangedOnly && (
             <div className="rounded-xs border border-orange-300/40 bg-orange-300/5 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-orange-300/85">
-              Ranged weapon required
+              需要远程武器
             </div>
           )}
         </div>

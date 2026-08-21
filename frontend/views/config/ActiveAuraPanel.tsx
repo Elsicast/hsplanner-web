@@ -38,8 +38,8 @@ export default function ActiveAuraPanel() {
 
   return (
     <Panel
-      title="Active Aura"
-      subtitle="Select the single aura you are running."
+      title="生效光环"
+      subtitle="选择你当前启用的唯一光环。"
       trailing={
         <CountBadge
           value={(activeAuraId ? 1 : 0) + enabledMercAuras.length}
@@ -48,10 +48,10 @@ export default function ActiveAuraPanel() {
         />
       }
     >
-      {mercAuras.length > 0 && <SectionLabel>Hero Skills</SectionLabel>}
+      {mercAuras.length > 0 && <SectionLabel>英雄技能</SectionLabel>}
       {auraSkills.length === 0 ? (
         <p className="font-mono text-[12px] tracking-[0.04em] text-muted italic">
-          No auras available for this class.
+          该职业没有可用光环。
         </p>
       ) : (
         <ul className="space-y-2">
@@ -76,7 +76,7 @@ export default function ActiveAuraPanel() {
                 checked={activeAuraId === null}
                 onChange={() => setActiveAura(null)}
               />
-              <span className="text-sm font-medium text-muted">None</span>
+              <span className="text-sm font-medium text-muted">无</span>
             </label>
           </li>
           {auraSkills.map((s) => {
@@ -123,7 +123,7 @@ export default function ActiveAuraPanel() {
                   </span>
                   {!ready && (
                     <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-                      not learned
+                      未学习
                     </span>
                   )}
                 </label>
@@ -134,7 +134,7 @@ export default function ActiveAuraPanel() {
       )}
       {mercAuras.length > 0 && (
         <>
-          <SectionLabel>Mercenary</SectionLabel>
+          <SectionLabel>佣兵</SectionLabel>
           <ul className="space-y-2">
             {mercAuras.map((aura) => {
               const key = mercAuraKey(aura.name)
@@ -142,8 +142,8 @@ export default function ActiveAuraPanel() {
               const sprite = getItemImage(aura.baseId)
               const level =
                 aura.levelMin === aura.levelMax
-                  ? `Level ${aura.levelMin}`
-                  : `Level [${aura.levelMin}-${aura.levelMax}]`
+                  ? `等级 ${aura.levelMin}`
+                  : `等级 [${aura.levelMin}-${aura.levelMax}]`
               return (
                 <li key={`${key}-${aura.baseId}`}>
                   <label
@@ -200,7 +200,7 @@ export default function ActiveAuraPanel() {
                     </span>
                     {!enabled && (
                       <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-                        not counted
+                        未计入
                       </span>
                     )}
                   </label>

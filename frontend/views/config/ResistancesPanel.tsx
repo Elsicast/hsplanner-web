@@ -12,8 +12,8 @@ export default function ResistancesPanel() {
 
   return (
     <Panel
-      title="Enemy Resistances"
-      subtitle="Per-element resistance % the target has. Damage modifier = 1 − (Enemy Res × (1 − Ignore)). 100% Ignore fully bypasses resistance; lower values help proportionally even against immune targets."
+      title="敌人抗性"
+      subtitle="目标拥有的各元素抗性 %。伤害修正 = 1 − (敌人抗性 × (1 − 无视抗性))。100% 无视抗性可完全绕过抗性；较低数值也会按比例生效，即使面对免疫目标。"
       trailing={
         <CountBadge
           value={activeResistanceCount}

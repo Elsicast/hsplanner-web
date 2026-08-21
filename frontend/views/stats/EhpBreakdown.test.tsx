@@ -10,12 +10,12 @@ function renderWith(stats: Record<string, number>) {
 describe('<EhpBreakdown>', () => {
   it('shows an empty state without life', () => {
     renderWith({})
-    expect(screen.getByText(/Add life and defenses/)).toBeInTheDocument()
+    expect(screen.getByText(/添加生命与防御属性/)).toBeInTheDocument()
   })
 
   it('lists life and per-type eHP with mitigation layers', () => {
     renderWith({ life: 1000, fire_resistance: 75 })
-    expect(screen.getByText('Life')).toBeInTheDocument()
+    expect(screen.getByText('生命')).toBeInTheDocument()
     expect(screen.getByText('Fire resistance')).toBeInTheDocument()
     expect(screen.getByText('75%')).toBeInTheDocument()
     expect(screen.getByText('4,000')).toBeInTheDocument()
@@ -23,7 +23,7 @@ describe('<EhpBreakdown>', () => {
 
   it('flags the weakest type', () => {
     renderWith({ life: 1000, fire_resistance: 75 })
-    expect(screen.getByText('Physical · weakest')).toBeInTheDocument()
+    expect(screen.getByText('Physical · 最弱')).toBeInTheDocument()
   })
 
   it('colors each type header with its resistance palette color', () => {

@@ -164,7 +164,7 @@ export default function SubskillTooltip({
         subtitle={
           isKeystone ? undefined : (
             <>
-              Rank <span className="tabular-nums text-accent-hot">{rank}</span>
+              等级 <span className="tabular-nums text-accent-hot">{rank}</span>
               <span className="text-faint"> / {sub.maxRank}</span>
             </>
           )
@@ -178,7 +178,7 @@ export default function SubskillTooltip({
       {tagChange && (
         <TooltipSection>
           <div className="flex flex-wrap items-center gap-1 font-mono text-[9px] uppercase tracking-[0.14em]">
-            <span className="mr-0.5 text-faint">Tags</span>
+            <span className="mr-0.5 text-faint">标签</span>
             {tagChange.add?.map((t) => (
               <span
                 key={t}
@@ -230,7 +230,7 @@ export default function SubskillTooltip({
                     const name = typeof s === 'string' ? s : s.state
                     return (
                       <span key={`s-${name}-${i}`}>
-                        applies {name.replace(/_/g, ' ')}
+                        施加 {name.replace(/_/g, ' ')}
                       </span>
                     )
                   })}
@@ -241,11 +241,11 @@ export default function SubskillTooltip({
               ) : undefined
             }
           >
-            {proc.trigger.replace('_', ' ')} proc
+            {proc.trigger.replace('_', ' ')} 触发
           </TooltipSectionHeader>
           <div className="space-y-0.5">
             <TooltipStat
-              label="Proc Chance"
+              label="触发几率"
               value={
                 <RankValue
                   current={`${procChanceCurrent}%`}
@@ -274,7 +274,7 @@ export default function SubskillTooltip({
                       trailing={
                         avg > 0 ? (
                           <span className="ml-1 text-[10px] text-faint">
-                            (avg {formatValue(avg, key, false)})
+                            (均值 {formatValue(avg, key, false)})
                           </span>
                         ) : undefined
                       }
@@ -310,16 +310,16 @@ export default function SubskillTooltip({
       {netChangeVisible && (
         <TooltipSection>
           <div className="mb-2 flex items-center gap-2.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
-            <span>Net Change</span>
+            <span>净变化</span>
             <span className="h-px flex-1 bg-border" />
             <span className="font-normal tracking-[0.14em] text-faint">
-              +1 rank
+              +1 级
             </span>
           </div>
           {dpsDiffs.length > 0 && (
             <div className={statDiffs.length > 0 ? 'mb-1.5' : ''}>
               <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-                Active Skill
+                主动技能
                 {currentPerformance.activeSkillName ? (
                   <span className="ml-1 text-faint">
                     · {currentPerformance.activeSkillName}
@@ -337,7 +337,7 @@ export default function SubskillTooltip({
             <div>
               {dpsDiffs.length > 0 && (
                 <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-                  Stats
+                  属性
                 </div>
               )}
               <div className="space-y-0.5">

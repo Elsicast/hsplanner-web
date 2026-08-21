@@ -104,7 +104,7 @@ export function SkillTree({
           </h3>
         </div>
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint tabular-nums">
-          {pts} pts
+          {pts} 点
         </span>
       </div>
       <motion.div
@@ -266,7 +266,7 @@ function SkillIcon({
       }}
       className="group relative flex items-center justify-center rounded-[3px] transition-all"
       style={{ ...style, boxShadow: ringShadow }}
-      title={locked ? `Requires ${skill.requiresSkill}` : undefined}
+      title={locked ? `需要前置技能 ${skill.requiresSkill}` : undefined}
     >
       <button
         onClick={onSelect}
@@ -308,7 +308,7 @@ function SkillIcon({
             background: 'linear-gradient(180deg, #3a2f1a, #2a2418)',
             boxShadow: '0 0 8px rgba(224,184,100,0.35)',
           }}
-          aria-label={`Add point to ${skill.name}`}
+          aria-label={`为 ${skill.name} 加点`}
         >
           +
         </button>
@@ -326,8 +326,8 @@ function SkillIcon({
           className="absolute -bottom-1.5 -right-1.5 flex h-5 w-5 items-center justify-center rounded-xs border border-border-2 bg-panel text-[10px] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
           style={{ boxShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
           data-tour="subtree-button"
-          aria-label={`Open ${skill.name} subtree`}
-          title="Open subtree"
+          aria-label={`打开 ${skill.name} 子树`}
+          title="打开子树"
         >
           <GearIcon className="h-3 w-3" />
         </button>

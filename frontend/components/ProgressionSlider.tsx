@@ -33,7 +33,7 @@ export default function ProgressionSlider({
         max={total}
         step={1}
         value={current}
-        aria-label="Progression step"
+        aria-label="进度步骤"
         onChange={(e) => {
           const v = Number(e.target.value)
           onChange(v >= total ? null : v)

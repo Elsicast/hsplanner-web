@@ -47,9 +47,9 @@ export default function Dropdown({
   value,
   options,
   onChange,
-  placeholder = 'Select…',
-  searchPlaceholder = 'Search…',
-  emptyLabel = 'No results',
+  placeholder = '请选择…',
+  searchPlaceholder = '搜索…',
+  emptyLabel = '无结果',
   clearLabel,
   onHoverChange,
   onOpenChange,
@@ -282,10 +282,10 @@ export default function Dropdown({
               <div className="hs-dd-foot">
                 <span>
                   <kbd>↑</kbd>
-                  <kbd>↓</kbd> navigate <kbd>↵</kbd> select
+                  <kbd>↓</kbd> 移动 <kbd>↵</kbd> 选择
                 </span>
                 <span>
-                  <kbd>esc</kbd> close
+                  <kbd>esc</kbd> 关闭
                 </span>
               </div>
             )}

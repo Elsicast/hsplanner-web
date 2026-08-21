@@ -24,14 +24,14 @@ export default function CharacterBasics() {
   return (
     <>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <Panel title="Class" subtitle="The class this build is based on.">
+        <Panel title="职业" subtitle="此构建所基于的职业。">
           {classes.length === 0 ? (
             <p className="font-mono text-[12px] tracking-[0.04em] text-muted italic">
-              No classes found. Add a file in{' '}
+              未找到职业数据。请在{' '}
               <code className="rounded-[3px] bg-panel-2 px-1 font-mono text-accent-hot">
                 src/data/classes/*.json
               </code>
-              .
+              中添加文件。
             </p>
           ) : (
             <Dropdown
@@ -40,8 +40,8 @@ export default function CharacterBasics() {
                 if (id) setClass(id)
               }}
               options={classes.map((c) => ({ id: c.id, label: c.name }))}
-              placeholder="Select a class…"
-              searchPlaceholder="Search class…"
+              placeholder="请选择职业…"
+              searchPlaceholder="搜索职业…"
             />
           )}
           {cls?.description && (
@@ -52,8 +52,8 @@ export default function CharacterBasics() {
         </Panel>
 
         <Panel
-          title="Level"
-          subtitle="Sets how many attribute and skill points you have."
+          title="等级"
+          subtitle="决定你拥有的属性点与技能点数量。"
         >
           <div className="flex items-center gap-3">
             <input
@@ -86,8 +86,8 @@ export default function CharacterBasics() {
       </div>
 
       <Panel
-        title="Attributes"
-        subtitle="Allocate attribute points. Shift = ×5 · Ctrl/Cmd+Shift = all."
+        title="属性"
+        subtitle="分配属性点。Shift = ×5 · Ctrl/Cmd+Shift = 全部。"
         trailing={
           <span className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em]">
             <span
@@ -100,13 +100,13 @@ export default function CharacterBasics() {
             >
               {remaining}
             </span>
-            <span className="text-faint">/ {total} free</span>
+            <span className="text-faint">/ {total} 可用</span>
             <button
               onClick={resetAttrs}
               disabled={spent === 0}
               className="ml-1 rounded-[3px] border border-border-2 bg-transparent px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:border-stat-red hover:text-stat-red disabled:cursor-not-allowed disabled:opacity-40"
             >
-              Reset
+              重置
             </button>
           </span>
         }
@@ -140,9 +140,9 @@ export default function CharacterBasics() {
                       {attr.name}
                     </span>
                     <span className="block font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-                      Base {base}
+                      基础 {base}
                       {isPrimary && (
-                        <span className="text-accent-deep"> · Primary</span>
+                        <span className="text-accent-deep"> · 主属性</span>
                       )}
                     </span>
                   </span>
@@ -158,7 +158,7 @@ export default function CharacterBasics() {
                       onClick={(e) => decAttr(attr.key, allocationStep(e, added))}
                       disabled={added === 0}
                       label="−"
-                      title="−1 · Shift −5 · Ctrl+Shift remove all"
+                      title="−1 · Shift −5 · Ctrl+Shift 全部移除"
                     />
                     <span className="w-9 text-center font-mono text-[13px] font-semibold tabular-nums text-accent-hot">
                       {final}
@@ -167,7 +167,7 @@ export default function CharacterBasics() {
                       onClick={(e) => incAttr(attr.key, allocationStep(e, remaining))}
                       disabled={remaining === 0}
                       label="+"
-                      title="+1 · Shift +5 · Ctrl+Shift add all"
+                      title="+1 · Shift +5 · Ctrl+Shift 全部添加"
                     />
                   </div>
                 </div>

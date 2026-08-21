@@ -74,14 +74,14 @@ import type { EquippedItem, Inventory, ItemBase, RangedValue, Skill } from '../.
 const DPS_SCALE = 'billions'
 
 const OFFENSE_KEY_LABELS: Record<string, string> = {
-  enhanced_damage: 'Enhanced damage',
-  attack_damage: 'Attack damage',
-  increased_attack_speed: 'Attack speed',
-  faster_cast_rate: 'Cast rate',
-  crit_chance: 'Crit chance',
-  crit_damage: 'Crit damage',
-  life_steal: 'Life steal',
-  mana_steal: 'Mana steal',
+  enhanced_damage: '增伤',
+  attack_damage: '攻击伤害',
+  increased_attack_speed: '攻击速度',
+  faster_cast_rate: '施法速度',
+  crit_chance: '暴击几率',
+  crit_damage: '暴击伤害',
+  life_steal: '生命偷取',
+  mana_steal: '法力偷取',
 }
 
 function statRow(
@@ -103,7 +103,7 @@ function buildOffenseSection(
   const rows = OFFENSE_KEYS.map((key) =>
     statRow(statDef(key)?.name ?? OFFENSE_KEY_LABELS[key] ?? key, key, stats, statsCombined, offenseRowTone(key)),
   ).filter((r): r is StatRow => r !== null)
-  return { title: 'Offense', rows }
+  return { title: '进攻', rows }
 }
 
 function buildDefenseSection(
@@ -118,7 +118,7 @@ function buildDefenseSection(
     value: formatEhp(r.ehp),
     tone: 'gold' as const,
   }))
-  return { title: 'Defense', rows: [...rows, ...ehpRows] }
+  return { title: '防御', rows: [...rows, ...ehpRows] }
 }
 
 function buildResistancesSection(stats: Record<string, RangedValue>): StatSection {
@@ -131,7 +131,7 @@ function buildResistancesSection(stats: Record<string, RangedValue>): StatSectio
     const value = capped ? `${cap}% (${Math.round(numeric)}%)` : formatValue(v, r.key)
     return { label: `${r.label} res`, value, tone: resistanceRowTone(r.className) }
   }).filter((r): r is StatRow => r !== null)
-  return { title: 'Resistances', rows }
+  return { title: '抗性', rows }
 }
 
 function buildAttributesSection(attributes: Record<string, RangedValue>): StatSection {
@@ -141,7 +141,7 @@ function buildAttributesSection(attributes: Record<string, RangedValue>): StatSe
     const label = gameConfig.attributes.find((a) => a.key === key)?.name ?? statDef(key)?.name ?? key
     return { label, value: formatValue(value, key), tone: attributeRowTone(key) }
   }).filter((r): r is StatRow => r !== null)
-  return { title: 'Attributes', rows }
+  return { title: '属性', rows }
 }
 
 function formatNumRange(min: number, max: number): string {
@@ -174,13 +174,13 @@ async function buildSustainSection(
 
   rows.push(
     sustain.effManaMin === undefined || sustain.effManaMax === undefined
-      ? { label: 'Mana / cast', value: '—', tone: 'muted' }
-      : { label: 'Mana / cast', value: formatNumRange(sustain.effManaMin, sustain.effManaMax), tone: 'blue' },
+      ? { label: '法力 / 次', value: '—', tone: 'muted' }
+      : { label: '法力 / 次', value: formatNumRange(sustain.effManaMin, sustain.effManaMax), tone: 'blue' },
   )
 
   if (sustain.lifePerCastMax !== undefined && sustain.lifePerCastMax > 0) {
     rows.push({
-      label: 'Life / cast',
+      label: '生命 / 次',
       value: formatNumRange(sustain.lifePerCastMin ?? 0, sustain.lifePerCastMax),
       tone: 'red',
     })
@@ -215,23 +215,23 @@ async function buildSustainSection(
 
   rows.push(
     sustain.manaPerSecMin === undefined || sustain.manaPerSecMax === undefined
-      ? { label: 'Mana / sec', value: '—', tone: 'muted' }
+      ? { label: '法力 / 秒', value: '—', tone: 'muted' }
       : {
-          label: 'Mana / sec',
+          label: '法力 / 秒',
           value: formatNumRange(sustain.manaPerSecMin, sustain.manaPerSecMax),
           tone: sustain.sustainable ? 'green' : sustain.unsustainable ? 'red' : 'orange',
         },
   )
 
   rows.push({
-    label: 'Mana regen',
+    label: '法力回复',
     value: formatNumRange(sustain.manaRegenMin, sustain.manaRegenMax),
     tone: 'blue',
   })
 
   if (sustain.netMin !== undefined && sustain.netMax !== undefined) {
     rows.push({
-      label: 'Net mana / sec',
+      label: '净法力 / 秒',
       value: `${sustain.netMin >= 0 ? '+' : ''}${formatNumRange(sustain.netMin, sustain.netMax)}`,
       tone: sustain.netMin >= 0 ? 'green' : sustain.netMax < 0 ? 'red' : 'orange',
     })
@@ -239,13 +239,13 @@ async function buildSustainSection(
 
   if (sustain.uptimeMin !== undefined && sustain.uptimeMax !== undefined) {
     rows.push({
-      label: 'Uptime',
+      label: '覆盖率',
       value: `${formatNumRange(Math.round(sustain.uptimeMin), Math.round(sustain.uptimeMax))}%`,
       tone: sustain.uptimeMin >= 100 ? 'green' : sustain.uptimeMax < 75 ? 'red' : 'orange',
     })
   }
 
-  return { title: 'Sustain', rows }
+  return { title: '续航', rows }
 }
 
 function capitalize(value: string): string {
@@ -267,7 +267,7 @@ function buildSkillRows(
   const rows: StatRow[] = []
   if (perSkill?.hitDpsMin !== undefined && perSkill?.hitDpsMax !== undefined) {
     rows.push({
-      label: 'Hit DPS',
+      label: '命中 DPS',
       value: compactRange(perSkill.hitDpsMin, perSkill.hitDpsMax, DPS_SCALE),
       tone: 'gold',
       ...(isMain ? { glow: true } : {}),
@@ -277,13 +277,13 @@ function buildSkillRows(
   const manaMax = manaCostAtRank(skill, Math.max(1, effRankMax))
   if (manaMin !== undefined && manaMax !== undefined) {
     rows.push({
-      label: 'Mana / cast',
+      label: '法力 / 次',
       value: manaMin === manaMax ? String(manaMax) : `${manaMin}–${manaMax}`,
       tone: 'blue',
     })
   }
   if (skill.baseCooldown !== undefined) {
-    rows.push({ label: 'Cooldown', value: `${skill.baseCooldown}s` })
+    rows.push({ label: '冷却', value: `${skill.baseCooldown}s` })
   }
   return rows
 }
@@ -518,9 +518,9 @@ export function isWebShareConfigured(): boolean {
 }
 
 function errorFromStatus(status: number): WebShareError {
-  if (status === 400) return new WebShareError('validation', 'This build could not be validated for web share.')
-  if (status === 413) return new WebShareError('too-large', 'This build is too large to share to the web.')
-  if (status >= 500) return new WebShareError('server', 'The share server had a problem. Try again shortly.')
+  if (status === 400) return new WebShareError('validation', '此构建未能通过网页分享校验。')
+  if (status === 413) return new WebShareError('too-large', '此构建过大，无法分享到网页。')
+  if (status >= 500) return new WebShareError('server', '分享服务器出现问题，请稍后再试。')
   return new WebShareError('unknown', `Web share failed (${status}).`)
 }
 
@@ -528,7 +528,7 @@ export async function postWebShare(payload: SharePayload): Promise<{ id: string;
   const url = getCreateUrl()
   if (!url) throw new WebShareError('not-configured', 'Web sharing is not configured in this build.')
   if (snapshotByteSize(payload) > MAX_SNAPSHOT_BYTES) {
-    throw new WebShareError('too-large', 'This build is too large to share to the web.')
+    throw new WebShareError('too-large', '此构建过大，无法分享到网页。')
   }
 
   let res: Response

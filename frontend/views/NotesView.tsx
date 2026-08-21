@@ -123,61 +123,61 @@ export default function NotesView() {
             className="inline-block h-1.5 w-1.5 rotate-45 bg-accent-hot"
             style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
           />
-          Journal
+          日志
         </div>
         <h2
           className="m-0 text-[22px] font-semibold tracking-[0.02em] text-accent-hot"
           style={{ textShadow: '0 0 16px rgba(224,184,100,0.18)' }}
         >
-          Notes
+          备注
         </h2>
       </header>
       <div className="flex flex-wrap items-center gap-1 rounded-md border border-border bg-panel p-2">
         <ToolbarBtn
           onClick={() => exec('bold')}
-          title="Bold (Ctrl+B)"
+          title="加粗 (Ctrl+B)"
           label={<b>B</b>}
         />
         <ToolbarBtn
           onClick={() => exec('italic')}
-          title="Italic (Ctrl+I)"
+          title="斜体 (Ctrl+I)"
           label={<i>I</i>}
         />
         <ToolbarBtn
           onClick={() => exec('underline')}
-          title="Underline (Ctrl+U)"
+          title="下划线 (Ctrl+U)"
           label={<u>U</u>}
         />
         <ToolbarBtn
           onClick={() => exec('strikeThrough')}
-          title="Strikethrough"
+          title="删除线"
           label={<s>S</s>}
         />
         <Divider />
         <ToolbarBtn
           onClick={() => exec('formatBlock', 'H2')}
-          title="Heading"
+          title="标题"
           label="H2"
         />
         <ToolbarBtn
           onClick={() => exec('formatBlock', 'H3')}
-          title="Subheading"
+          title="子标题"
           label="H3"
         />
         <ToolbarBtn
           onClick={() => exec('formatBlock', 'P')}
-          title="Paragraph"
+          title="段落"
           label="¶"
         />
         <Divider />
         <ToolbarBtn
           onClick={() => exec('insertUnorderedList')}
-          title="Bullet list"
+          title="无序列表"
           label="•⁝"
         />
         <ToolbarBtn
           onClick={() => exec('insertOrderedList')}
-          title="Numbered list"
+          title="有序列表"
           label="1."
         />
         <Divider />
@@ -185,7 +185,7 @@ export default function NotesView() {
         <Divider />
         <ToolbarBtn
           onClick={openLinkPrompt}
-          title="Insert link"
+          title="插入链接"
           label={
             <svg
               viewBox="0 0 24 24"
@@ -202,7 +202,7 @@ export default function NotesView() {
             </svg>
           }
         />
-        <ToolbarBtn onClick={clearFormat} title="Clear formatting" label="⌫" />
+        <ToolbarBtn onClick={clearFormat} title="清除格式" label="⌫" />
       </div>
 
       {linkOpen && (
@@ -218,7 +218,7 @@ export default function NotesView() {
               if (e.key === 'Enter') insertLink()
               if (e.key === 'Escape') setLinkOpen(false)
             }}
-            placeholder="https://..."
+            placeholder="https://…（链接地址）"
             className="flex-1 rounded-[3px] border border-border-2 px-2 py-1 text-xs text-text placeholder:text-faint focus:border-accent-deep focus:outline-none focus:ring-2 focus:ring-accent-hot/15"
             style={{
               background:
@@ -231,13 +231,13 @@ export default function NotesView() {
             className="rounded-[3px] border border-accent-deep px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-accent-hot transition-colors hover:border-accent-hot hover:text-[#fff0c4]"
             style={{ background: 'linear-gradient(180deg, #3a2f1a, #2a2418)' }}
           >
-            Insert
+            插入
           </button>
           <button
             onClick={() => setLinkOpen(false)}
             className="rounded-[3px] border border-border-2 bg-panel-2 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
           >
-            Cancel
+            取消
           </button>
         </div>
       )}
@@ -256,8 +256,7 @@ export default function NotesView() {
       />
 
       <div className="text-[10px] text-muted">
-        Auto-saves on change · committed to disk on focus loss. Notes are
-        shared across all profiles in this build.
+        更改时自动保存 · 失焦时写入磁盘。备注在此构建的所有档案间共享。
       </div>
     </div>
   )
@@ -300,7 +299,7 @@ function ColorPalette({ onPick }: { onPick: (color: string) => void }) {
           e.preventDefault()
           setPickerOpen((o) => !o)
         }}
-        title="Text color"
+        title="文字颜色"
         className="inline-flex h-7 items-center gap-1 rounded-[3px] border border-border-2 bg-panel-2 px-1.5 text-xs text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
       >
         <span>A</span>
@@ -338,7 +337,7 @@ function ColorPalette({ onPick }: { onPick: (color: string) => void }) {
             ))}
           </div>
           <label className="flex items-center gap-1.5 text-[10px] text-muted">
-            Custom
+            自定义
             <input
               type="color"
               value={customColor}

@@ -30,8 +30,8 @@ export default function ItemBlessingsPanel() {
 
   return (
     <Panel
-      title="Item Blessings"
-      subtitle="Conditional item-granted effects"
+      title="物品祝福"
+      subtitle="有条件的物品赋予效果"
       trailing={
         <CountBadge
           value={activeCount}

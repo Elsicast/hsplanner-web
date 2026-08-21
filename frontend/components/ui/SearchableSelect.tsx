@@ -23,10 +23,10 @@ interface Props {
 export default function SearchableSelect({
   value,
   options,
-  placeholder = 'Select…',
+  placeholder = '请选择…',
   onChange,
-  emptyLabel = 'No results',
-  clearLabel = '— none —',
+  emptyLabel = '无结果',
+  clearLabel = '— 无 —',
   sidePanel,
 }: Props) {
   const [hoveredId, setHoveredId] = useState<string | null>(null)

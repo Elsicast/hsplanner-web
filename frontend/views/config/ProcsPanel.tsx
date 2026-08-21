@@ -80,8 +80,8 @@ export default function ProcsPanel() {
 
   return (
     <Panel
-      title="Procs"
-      subtitle="Skills (and subtree nodes) that trigger another skill on hit / kill / cast."
+      title="触发效果"
+      subtitle="在命中 / 击杀 / 施法时触发另一技能的技能（及天赋子树节点）。"
       trailing={
         <CountBadge
           value={activeProcCount}
@@ -93,14 +93,14 @@ export default function ProcsPanel() {
       {totalProcCount === 0 ? (
         <p className="font-mono text-[12px] tracking-[0.04em] text-muted italic">
           {classId
-            ? 'No proc skills, subtree nodes or item procs available.'
-            : 'Pick a class first.'}
+            ? '没有可用的触发技能、天赋子树节点或物品触发。'
+            : '请先选择职业。'}
         </p>
       ) : (
         <>
           <div className="mb-3 flex items-center justify-between gap-2">
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-              Kills / sec
+              每秒击杀
             </span>
             <div
               className="inline-flex w-20 shrink-0 items-center rounded-[3px] border border-border-2 px-2 py-1 transition-colors focus-within:border-accent-hot"
@@ -175,7 +175,7 @@ export default function ProcsPanel() {
                         </div>
                         <div className="truncate font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
                           → {p.proc!.target}
-                          {!ready && ' · target not allocated'}
+                          {!ready && ' · 目标技能未加点'}
                         </div>
                       </span>
                     </span>
@@ -192,7 +192,7 @@ export default function ProcsPanel() {
           {subskillProcs.length > 0 && (
             <>
               <div className="mt-4 mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-                From Subtree Nodes
+                来自天赋子树节点
               </div>
               <ul className="space-y-2">
                 {subskillProcs.map((entry) => {
@@ -248,7 +248,7 @@ export default function ProcsPanel() {
                             </div>
                             <div className="truncate font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
                               → {entry.target}
-                              {!ready && ' · target not allocated'}
+                              {!ready && ' · 目标技能未加点'}
                             </div>
                           </span>
                         </span>
@@ -267,7 +267,7 @@ export default function ProcsPanel() {
           {itemProcs.length > 0 && (
             <>
               <div className="mt-4 mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-                From Items
+                来自物品
               </div>
               <ul className="space-y-2">
                 {itemProcs.map((row) => {
@@ -302,7 +302,7 @@ export default function ProcsPanel() {
                               {row.name}
                             </div>
                             <div className="truncate font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-                              rank {row.rankMin}
+                              等级 {row.rankMin}
                               {row.rankMax !== row.rankMin && `–${row.rankMax}`}
                               {' · '}
                               {row.types.join(' + ')}
@@ -310,7 +310,7 @@ export default function ProcsPanel() {
                           </span>
                         </span>
                         <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-faint tabular-nums">
-                          every {row.intervalSecs}s
+                          每 {row.intervalSecs} 秒
                         </span>
                       </label>
                     </li>

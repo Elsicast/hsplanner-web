@@ -149,11 +149,11 @@ describe('buildSharePayload', () => {
     expect(payload.meta.tags).toEqual(['HC'])
     expect(payload.profiles).toHaveLength(1)
     expect(payload.profiles[0]!.statSections.map((s) => s.title)).toEqual([
-      'Offense',
-      'Defense',
-      'Resistances',
-      'Attributes',
-      'Sustain',
+      '进攻',
+      '防御',
+      '抗性',
+      '属性',
+      '续航',
     ])
     expect(payload.notes).toBe('Test notes')
   })
@@ -170,7 +170,7 @@ describe('buildSharePayload', () => {
 
     const payload = await buildSharePayload(saved)
 
-    const attributes = payload.profiles[0]!.statSections.find((s) => s.title === 'Attributes')
+    const attributes = payload.profiles[0]!.statSections.find((s) => s.title === '属性')
     expect(attributes?.rows.map((r) => r.label)).toEqual(['Strength', 'Energy'])
   })
 
@@ -354,22 +354,22 @@ describe('buildSharePayload', () => {
     const rowsOf = (name: string) => itemByName(payload, name)?.rows ?? []
     const rowByLabel = (name: string, label: string) => rowsOf(name).find((r) => r.label === label)
 
-    const mainDps = rowByLabel(manaActive.name, 'Hit DPS')
+    const mainDps = rowByLabel(manaActive.name, '命中 DPS')
     expect(mainDps?.tone).toBe('gold')
     expect(mainDps?.glow).toBe(true)
-    expect(rowByLabel(manaActive.name, 'Mana / cast')).toMatchObject({
+    expect(rowByLabel(manaActive.name, '法力 / 次')).toMatchObject({
       value: String(manaCostAtRank(manaActive, 8)),
       tone: 'blue',
     })
 
-    const otherDps = rowByLabel(otherActive.name, 'Hit DPS')
+    const otherDps = rowByLabel(otherActive.name, '命中 DPS')
     expect(otherDps?.tone).toBe('gold')
     expect(otherDps?.glow).toBeUndefined()
 
-    expect(rowByLabel(cdSkill.name, 'Cooldown')).toMatchObject({
+    expect(rowByLabel(cdSkill.name, '冷却')).toMatchObject({
       value: `${cdSkill.baseCooldown}s`,
     })
-    expect(rowByLabel(cdSkill.name, 'Hit DPS')).toBeUndefined()
+    expect(rowByLabel(cdSkill.name, '命中 DPS')).toBeUndefined()
 
     expect(itemByName(payload, passive.name)?.rows).toBeUndefined()
   })

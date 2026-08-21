@@ -22,20 +22,20 @@ export default function ConfigView() {
             className="inline-block h-1.5 w-1.5 rotate-45 bg-accent-hot"
             style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
           />
-          Setup · character & encounter
+          设定 · 角色与遭遇
         </div>
         <h2
           className="m-0 text-[22px] font-semibold tracking-[0.02em] text-accent-hot"
           style={{ textShadow: '0 0 16px rgba(224,184,100,0.18)' }}
         >
-          Configuration
+          配置
         </h2>
       </header>
 
       <section className="space-y-4">
         <GroupHeading
-          title="Character"
-          subtitle="Class, level and attribute allocation."
+          title="角色"
+          subtitle="职业、等级与属性点分配。"
         />
         <CharacterBasics />
         <CharmSlotPanel />
@@ -43,8 +43,8 @@ export default function ConfigView() {
 
       <section className="space-y-4">
         <GroupHeading
-          title="Encounter & Combat"
-          subtitle="Buffs, procs, enemy and player state, and manual overrides the calculator reads."
+          title="遭遇与战斗"
+          subtitle="增益、触发效果、敌人与玩家状态，以及计算器读取的手动覆盖项。"
         />
 
         <div className="grid items-start gap-4 xl:grid-cols-2">

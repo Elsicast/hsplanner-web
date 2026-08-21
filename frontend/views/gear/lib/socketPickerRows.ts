@@ -11,17 +11,17 @@ export function getSocketPickerRows(): PickerRow[] {
   const out: PickerRow[] = []
   for (const g of gems) {
     const isJewel = g.name.toLowerCase().includes('jewel')
-    const kind = isJewel ? 'JEWEL' : 'GEM'
+    const kind = isJewel ? '珠宝' : '宝石'
     out.push({
       id: g.id,
       name: g.name,
       tier: g.tier,
       kindLabel: kind,
-      group: isJewel ? 'Jewels' : 'Gems',
+      group: isJewel ? '珠宝' : '宝石',
       meta: fmtStats(g.stats) || '—',
       iconColor: gemColorForName(g.name),
       iconUrl: socketableIconForName(g.name),
-      tooltip: buildSocketableTooltip(g, kind),
+      tooltip: buildSocketableTooltip(g, isJewel ? 'JEWEL' : 'GEM'),
     })
   }
   for (const r of runes) {
@@ -29,8 +29,8 @@ export function getSocketPickerRows(): PickerRow[] {
       id: r.id,
       name: r.name,
       tier: r.tier,
-      kindLabel: 'RUNE',
-      group: 'Runes',
+      kindLabel: '符文',
+      group: '符文',
       meta: fmtStats(r.stats) || '—',
       iconColor: 'var(--color-accent)',
       iconUrl: socketableIconForName(r.name),

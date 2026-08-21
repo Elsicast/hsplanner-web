@@ -362,7 +362,7 @@ export function UnsupportedModsList({ lines }: { lines: ReactNode[] }) {
   return (
     <>
       <div className="mb-1 text-[10px] uppercase tracking-[0.12em] text-muted">
-        Not Yet Supported
+        暂不支持
       </div>
       <ul className="space-y-0.5 opacity-60">
         {lines.map((line, i) => (
@@ -372,7 +372,7 @@ export function UnsupportedModsList({ lines }: { lines: ReactNode[] }) {
         ))}
       </ul>
       <p className="mt-1 text-[10px] italic text-muted/70">
-        These mods are not yet calculated by the planner.
+        规划器尚未计算这些词缀。
       </p>
     </>
   )

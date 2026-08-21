@@ -47,7 +47,7 @@ export function GenerateFromBuildModal({
     })
 
   const [hideRest, setHideRest] = useState(false)
-  const [name, setName] = useState(`${buildName ?? 'Build'} · auto`)
+  const [name, setName] = useState(`${buildName ?? '构建'} · 自动`)
   const [error, setError] = useState<string | null>(null)
 
   const unmatched = stats.length - statIds.length
@@ -57,10 +57,10 @@ export function GenerateFromBuildModal({
     try {
       const filter = buildFilterForStats([...selected], { hideRest })
       onDone(
-        createFilter(buildId, name.trim() || 'Build filter', encodeLootFilter(filter)),
+        createFilter(buildId, name.trim() || '构建过滤规则', encodeLootFilter(filter)),
       )
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Could not create the filter.')
+      setError(e instanceof Error ? e.message : '无法创建过滤规则。')
     }
   }
 
@@ -68,20 +68,19 @@ export function GenerateFromBuildModal({
     <Modal
       onClose={onClose}
       panelClassName="w-[min(560px,92vw)]"
-      eyebrow="Loot filter"
-      title="Generate from build"
+      eyebrow="拾取过滤规则"
+      title="从构建生成"
     >
       <div className="flex flex-col gap-3 px-6 py-4">
         {statIds.length === 0 ? (
           <p className="text-[12px] leading-relaxed text-muted">
-            This build has no affixes on its gear yet, so there is nothing to
-            highlight. Equip a few items in the Gear tab first.
+            该构建的装备上还没有词缀，暂无可高亮的内容。请先在装备页签装备一些物品。
           </p>
         ) : (
           <>
             <label className="flex flex-col gap-1">
               <span className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-faint">
-                Name
+                名称
               </span>
               <input
                 value={name}
@@ -98,8 +97,7 @@ export function GenerateFromBuildModal({
             <div className="flex flex-col gap-1.5">
               <div className="flex items-center justify-between gap-2">
                 <span className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-faint">
-                  Highlights {selected.size} of {affixes.length} affixes from your
-                  gear
+                  将高亮你装备词缀中的 {selected.size}/{affixes.length} 项
                 </span>
                 <div className="flex items-center gap-1">
                   <button
@@ -107,7 +105,7 @@ export function GenerateFromBuildModal({
                     onClick={() => setSelected(new Set(statIds))}
                     className="font-mono text-[9.5px] uppercase tracking-[0.12em] text-faint transition-colors hover:text-accent-hot"
                   >
-                    All
+                    全部
                   </button>
                   <span className="text-[9.5px] text-faint">·</span>
                   <button
@@ -115,7 +113,7 @@ export function GenerateFromBuildModal({
                     onClick={() => setSelected(new Set())}
                     className="font-mono text-[9.5px] uppercase tracking-[0.12em] text-faint transition-colors hover:text-accent-hot"
                   >
-                    None
+                    全不选
                   </button>
                 </div>
               </div>
@@ -141,9 +139,7 @@ export function GenerateFromBuildModal({
               </div>
               {unmatched > 0 && (
                 <span className="text-[11px] text-faint">
-                  {unmatched} stat{unmatched === 1 ? '' : 's'} on your gear{' '}
-                  {unmatched === 1 ? 'has' : 'have'} no counterpart in the game's
-                  filter and {unmatched === 1 ? 'was' : 'were'} skipped.
+                  装备上有 {unmatched} 项属性在游戏过滤规则中没有对应项，已跳过。
                 </span>
               )}
             </div>
@@ -156,9 +152,9 @@ export function GenerateFromBuildModal({
                 className="mt-[3px] accent-[var(--color-accent-deep)]"
               />
               <span className="text-[12px] leading-relaxed text-muted">
-                Hide every other affix
+                隐藏所有其他词缀
                 <span className="block text-[11px] text-faint">
-                  Aggressive — drops with affixes you don't use yet stop showing up.
+                  激进模式 — 含有你尚未使用词缀的掉落将不再显示。
                 </span>
               </span>
             </label>
@@ -173,7 +169,7 @@ export function GenerateFromBuildModal({
           disabled={selected.size === 0}
           className={`${MODAL_BTN_PRIMARY_CLASS} disabled:cursor-not-allowed disabled:opacity-40`}
         >
-          Create filter
+          创建过滤规则
         </button>
       </div>
     </Modal>

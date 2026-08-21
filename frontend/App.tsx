@@ -51,16 +51,16 @@ declare global {
 }
 
 const SECTIONS = [
-  { id: "character", label: "Character", view: CharacterView },
-  { id: "tree", label: "Tree", view: TreeView },
-  { id: "ether", label: "Ether", view: EtherView },
-  { id: "skills", label: "Skills", view: SkillsView },
-  { id: "gear", label: "Gear", view: GearView },
-  { id: "merc", label: "Merc", view: MercView },
-  { id: "stats", label: "Stats", view: StatsView },
-  { id: "config", label: "Config", view: ConfigView },
-  { id: "notes", label: "Notes", view: NotesView },
-  { id: "filters", label: "Filters", view: FiltersView },
+  { id: "character", label: "角色", view: CharacterView },
+  { id: "tree", label: "天赋树", view: TreeView },
+  { id: "ether", label: "以太", view: EtherView },
+  { id: "skills", label: "技能", view: SkillsView },
+  { id: "gear", label: "装备", view: GearView },
+  { id: "merc", label: "佣兵", view: MercView },
+  { id: "stats", label: "属性", view: StatsView },
+  { id: "config", label: "配置", view: ConfigView },
+  { id: "notes", label: "备注", view: NotesView },
+  { id: "filters", label: "过滤", view: FiltersView },
 ] as const;
 
 export type Section = (typeof SECTIONS)[number]["id"];
@@ -94,7 +94,7 @@ function App() {
       const cls = decoded.snapshot.classId ? getClass(decoded.snapshot.classId) : undefined;
       setDeepLinkPrompt({
         kind: "confirm",
-        title: cls?.name ?? "Shared build",
+        title: cls?.name ?? "分享的构建",
         onConfirm: () => {
           const record = useBuild.getState().importCodeToLibrary(code);
           if (record) setScreen("library");
@@ -126,7 +126,7 @@ function App() {
     };
 
     (async () => {
-      report(0, "Loading game data");
+      report(0, "正在加载游戏数据");
       const warmupTask = (async () => {
         try {
           const unlisten = await listen<{ current: number; total: number }>(
@@ -166,7 +166,7 @@ function App() {
         await new Promise((r) => window.setTimeout(r, remaining));
       }
       if (cancelled) return;
-      report(100, "Ready");
+      report(100, "就绪");
       window.__bootFinish?.();
 
       const pendingBuild = readStorage(PENDING_BUILD_KEY);
@@ -369,8 +369,8 @@ function App() {
             <button
               type="button"
               onClick={() => setTutorialOpen(true)}
-              title="Tutorial"
-              aria-label="Open tutorial"
+              title="教程"
+              aria-label="打开教程"
               className="rounded-[3px] border border-border-2 px-2.5 py-1 font-mono text-[12px] leading-[1.35] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
             >
               ?
@@ -378,8 +378,8 @@ function App() {
             <button
               type="button"
               onClick={() => setSettingsOpen(true)}
-              title="Settings"
-              aria-label="Settings"
+              title="设置"
+              aria-label="设置"
               data-tour="settings"
               className="rounded-[3px] border border-border-2 p-1.5 text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
             >

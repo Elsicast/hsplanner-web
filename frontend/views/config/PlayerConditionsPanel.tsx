@@ -12,8 +12,8 @@ export default function PlayerConditionsPanel() {
 
   return (
     <Panel
-      title="Player Conditions"
-      subtitle='Self-state flags'
+      title="玩家条件"
+      subtitle="自身状态标记"
       trailing={
         <CountBadge
           value={activePlayerConditionCount}

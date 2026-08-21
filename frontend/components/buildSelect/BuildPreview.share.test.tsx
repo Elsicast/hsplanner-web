@@ -41,7 +41,7 @@ describe('BuildPreview share', () => {
         onRemoveProfile={noop}
       />,
     )
-    await user.click(screen.getByRole('button', { name: /^share$/i }))
+    await user.click(screen.getByRole('button', { name: /^分享$/ }))
     expect(onShare).toHaveBeenCalledWith('b1')
   })
 })

@@ -110,10 +110,10 @@ export function BuildPreview({
           className="flex flex-1 flex-col items-center justify-center gap-2 px-5 text-center"
         >
           <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-            No build selected
+            未选择构建
           </div>
           <div className="text-[11px] text-muted">
-            Pick a build from the list to preview it.
+            从列表中选择构建以预览。
           </div>
         </motion.div>
       </aside>
@@ -123,7 +123,7 @@ export function BuildPreview({
   const cls = build.classId ? getClass(build.classId) : undefined
   const icon = build.classId ? getClassIcon(build.classId) : undefined
   const color = classColor(build.classId)
-  const className = meta?.className ?? cls?.name ?? 'Unknown'
+  const className = meta?.className ?? cls?.name ?? '未知'
   const level = preview.snapshot?.level ?? meta?.level ?? 1
   const nodes = preview.snapshot
     ? heroLevelFor(preview.snapshot)
@@ -219,7 +219,7 @@ export function BuildPreview({
               {build.name}
             </div>
             <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-              <span style={{ color }}>{className}</span> · Lv {level} · Hero Lv{' '}
+              <span style={{ color }}>{className}</span> · 等级 {level} · 英雄等级{' '}
               {nodes} · {build.profiles.length}P ·{' '}
               <span
                 title={seasonName}
@@ -258,7 +258,7 @@ export function BuildPreview({
                   'color-mix(in srgb, var(--color-accent-hot) 60%, transparent)',
               }}
             >
-              Combined DPS
+              综合 DPS
             </span>
             <div
               className="mt-1 font-mono text-[23px] font-semibold leading-tight tracking-[-0.01em] text-accent-hot tabular-nums"
@@ -269,34 +269,34 @@ export function BuildPreview({
           </div>
           <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[6px] border border-border bg-border">
             <StatTile
-              label="Life"
+              label="生命"
               value={rangeText(stats.life, (n) => compact(n, numberScale))}
               tone="text-stat-red"
             />
             <StatTile
-              label="Mana"
+              label="法力"
               value={rangeText(stats.mana, (n) => compact(n, numberScale))}
               tone="text-stat-blue"
             />
             <StatTile
-              label="Crit"
+              label="暴击"
               value={rangeText(stats.crit_chance, (n) => `${Math.round(n)}%`)}
             />
             <StatTile
-              label="Crit Dmg"
+              label="暴击伤害"
               value={rangeText(stats.crit_damage, (n) => `+${Math.round(n)}%`)}
             />
-            <StatTile label="Resists" value={resists} />
-            <StatTile label="Nodes · Skills" value={`${nodes} · ${skillCount}`} />
+            <StatTile label="抗性" value={resists} />
+            <StatTile label="节点 · 技能" value={`${nodes} · ${skillCount}`} />
             <StatTile
-              label="Ether"
+              label="以太"
               value={
                 preview.snapshot
                   ? String(preview.snapshot.allocatedEtherNodes.size)
                   : '—'
               }
             />
-            <StatTile label="Merc" value={mercName ?? '—'} />
+            <StatTile label="佣兵" value={mercName ?? '—'} />
             {ehpTiles.map((r) => (
               <StatTile
                 key={r.key}
@@ -313,21 +313,21 @@ export function BuildPreview({
 
         {preview.loading && (
           <div className="pt-2 font-mono text-[9.5px] uppercase tracking-[0.16em] text-faint">
-            Computing…
+            计算中…
           </div>
         )}
         {!preview.loading && !preview.available && !undecodable && (
           <div className="pt-2 font-mono text-[9.5px] uppercase tracking-[0.16em] text-faint">
-            Stats unavailable — calc engine offline
+            属性不可用 — 计算引擎离线
           </div>
         )}
         {undecodable && (
           <div className="pt-2 font-mono text-[9.5px] uppercase tracking-[0.16em] text-stat-red">
-            Build data could not be read
+            无法读取构建数据
           </div>
         )}
 
-        <Section title="Profiles" count={build.profiles.length}>
+        <Section title="配置档" count={build.profiles.length}>
           <div className="flex flex-col gap-[5px]">
             {build.profiles.map((p) => {
               const active = p.id === build.activeProfileId
@@ -346,7 +346,7 @@ export function BuildPreview({
                       if (!active) onSwitchProfile(build.id, p.id)
                     }}
                     title={
-                      active ? 'Active profile' : 'Switch to this profile'
+                      active ? '当前配置档' : '切换到此配置档'
                     }
                     className="flex min-w-0 flex-1 items-center gap-2 text-left"
                   >
@@ -370,25 +370,25 @@ export function BuildPreview({
                     </span>
                     {active && (
                       <span className="shrink-0 font-mono text-[9px] uppercase tracking-[0.14em] text-accent-deep">
-                        Active
+                        当前
                       </span>
                     )}
                   </button>
                   <div className="flex shrink-0 items-center gap-0.5">
                     <IconAction
-                      label="Rename profile"
+                      label="重命名配置档"
                       onClick={() => onRenameProfile(build.id, p.id, p.name)}
                     >
                       <RenameIcon className="h-3 w-3" />
                     </IconAction>
                     <IconAction
-                      label="Duplicate profile"
+                      label="创建配置档副本"
                       onClick={() => onDuplicateProfile(build.id, p.id)}
                     >
                       <CopyIcon className="h-3 w-3" />
                     </IconAction>
                     <IconAction
-                      label="Remove profile"
+                      label="移除配置档"
                       danger
                       disabled={build.profiles.length <= 1}
                       onClick={() => onRemoveProfile(build.id, p.id, p.name)}
@@ -405,14 +405,14 @@ export function BuildPreview({
               className="mt-[3px] flex items-center justify-center gap-1.5 rounded-[3px] border border-dashed border-border-2 px-2.5 py-[7px] text-[11px] tracking-[0.04em] text-faint transition-colors hover:border-accent-deep hover:text-accent-hot"
             >
               <PlusIcon className="h-3 w-3" />
-              Add profile
+              添加配置档
             </button>
           </div>
         </Section>
 
         {mainSkills.length > 0 && (
           <Section
-            title={mainSkills.length > 1 ? 'Main Skills' : 'Main Skill'}
+            title={mainSkills.length > 1 ? '主要技能' : '主要技能'}
             count={mainSkills.length > 1 ? mainSkills.length : undefined}
           >
             <div className="flex flex-col gap-[5px]">
@@ -432,7 +432,7 @@ export function BuildPreview({
         )}
 
         {hasNotes && (
-          <Section title="Notes">
+          <Section title="备注">
             <div
               className="notes-editor rounded-[3px] border border-border bg-panel-2 px-2.5 py-2 font-mono text-[12px] leading-relaxed text-muted"
               dangerouslySetInnerHTML={{ __html: notesHtml }}
@@ -445,10 +445,10 @@ export function BuildPreview({
         <button
           type="button"
           onClick={() => onShare(build.id)}
-          title="Share this build as a code, Gist link or hsplanner.app link"
+          title="以代码、Gist 链接或 hsplanner.app 链接分享此构建"
           className="flex h-[36px] items-center justify-center gap-1.5 rounded-[3px] border border-border bg-panel-2 font-mono text-[11px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
         >
-          Share
+          分享
         </button>
         <button
           type="button"
@@ -466,7 +466,7 @@ export function BuildPreview({
           }}
         >
           <PlayIcon className="h-3 w-3" />
-          Open Build
+          打开构建
         </button>
       </div>
     </aside>
@@ -478,7 +478,7 @@ function PaneHeader() {
     <div className="flex shrink-0 items-center px-4 pb-2 pt-3">
       <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-accent-hot">
         <span className="text-[10px] text-accent">◆</span>
-        Preview
+        预览
       </span>
     </div>
   )

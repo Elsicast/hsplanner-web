@@ -65,11 +65,11 @@ export function EtherNodeTooltip({
   const { num, isPercent } = parseEtherValue(stat.value)
   const clickHint = isAllocated
     ? previewRemovedCount > 1
-      ? `Click to remove — ${previewRemovedCount} nodes lost`
-      : 'Click to remove'
+      ? `点击移除 — 将失去 ${previewRemovedCount} 个节点`
+      : '点击移除'
     : previewAddedCount > 1
-      ? `Click to allocate — ${previewAddedCount} nodes`
-      : 'Click to allocate'
+      ? `点击分配 — 分配 ${previewAddedCount} 个节点`
+      : '点击分配'
 
   return (
     <div
@@ -98,11 +98,11 @@ export function EtherNodeTooltip({
       {allocatedSameKey > 0 && (
         <TooltipSection>
           <TooltipStat
-            label="Allocated of this notable"
+            label="该核心天赋已分配数"
             value={`${allocatedSameKey}x`}
           />
           <TooltipStat
-            label="Current total"
+            label="当前总计"
             value={formatEtherTotal({
               total: Math.round(num * allocatedSameKey * 100) / 100,
               isPercent,

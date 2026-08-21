@@ -136,7 +136,7 @@ export async function checkForUpdate(
       },
     );
   } catch (err) {
-    throw new UpdateCheckError("Network error", err);
+    throw new UpdateCheckError("网络错误", err);
   }
   if (!res.ok) {
     throw new UpdateCheckError(`GitHub API ${res.status}`);
@@ -145,12 +145,12 @@ export async function checkForUpdate(
   try {
     const raw: unknown = await res.json();
     if (!isGithubRelease(raw)) {
-      throw new UpdateCheckError("Invalid response shape");
+      throw new UpdateCheckError("响应格式无效");
     }
     payload = raw;
   } catch (err) {
     if (err instanceof UpdateCheckError) throw err;
-    throw new UpdateCheckError("Invalid response", err);
+    throw new UpdateCheckError("响应无效", err);
   }
   return mapReleaseToUpdateInfo(payload);
 }
@@ -174,7 +174,7 @@ interface GithubRelease {
 export function mapReleaseToUpdateInfo(payload: GithubRelease): UpdateInfo {
   const rawTag = payload.tag_name?.trim() ?? "";
   if (!rawTag) {
-    throw new UpdateCheckError("No tag in latest release");
+    throw new UpdateCheckError("最新发布缺少版本号");
   }
   const latest = rawTag.replace(/^v/, "");
   const asset = pickAsset(payload.assets);

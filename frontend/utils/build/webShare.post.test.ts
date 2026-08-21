@@ -1,5 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { SHARE_PAYLOAD_FIXTURE } from './sharePayload.fixture'
+import { postWebShare, WebShareError } from './webShare'
 
 const fetchMock = vi.fn()
 vi.stubGlobal('fetch', fetchMock)
@@ -17,7 +18,6 @@ describe('postWebShare', () => {
         status: 201,
         json: async () => ({ id: 'XK3FQ2', url: 'https://hsplanner.app/b/XK3FQ2' }),
       })
-      const { postWebShare } = await import('./webShare')
       const result = await postWebShare(SHARE_PAYLOAD_FIXTURE)
       expect(result).toEqual({ id: 'XK3FQ2', url: 'https://hsplanner.app/b/XK3FQ2' })
       expect(fetchMock).toHaveBeenCalledWith(
@@ -30,13 +30,11 @@ describe('postWebShare', () => {
 
   it('throws a validation WebShareError on 400', async () => {
     fetchMock.mockResolvedValue({ status: 400, json: async () => ({ error: 'invalid_payload' }) })
-    const { postWebShare, WebShareError } = await import('./webShare')
     await expect(postWebShare(SHARE_PAYLOAD_FIXTURE)).rejects.toThrow(WebShareError)
   })
 
   it('throws a too-large WebShareError on 413', async () => {
     fetchMock.mockResolvedValue({ status: 413, json: async () => ({ error: 'snapshot_too_large' }) })
-    const { postWebShare, WebShareError } = await import('./webShare')
     try {
       await postWebShare(SHARE_PAYLOAD_FIXTURE)
       expect.unreachable()
@@ -48,7 +46,6 @@ describe('postWebShare', () => {
 
   it('throws a server WebShareError on 500', async () => {
     fetchMock.mockResolvedValue({ status: 500, json: async () => ({ error: 'create_failed' }) })
-    const { postWebShare, WebShareError } = await import('./webShare')
     try {
       await postWebShare(SHARE_PAYLOAD_FIXTURE)
       expect.unreachable()
@@ -60,7 +57,6 @@ describe('postWebShare', () => {
 
   it('throws a network WebShareError when fetch rejects', async () => {
     fetchMock.mockRejectedValue(new Error('offline'))
-    const { postWebShare, WebShareError } = await import('./webShare')
     await expect(postWebShare(SHARE_PAYLOAD_FIXTURE)).rejects.toThrow(WebShareError)
   })
 })

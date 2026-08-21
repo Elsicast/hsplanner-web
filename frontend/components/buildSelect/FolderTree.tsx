@@ -205,7 +205,7 @@ export function FolderTree({
         <button
           type="button"
           onClick={onNewFolder}
-          title="New folder"
+          title="新建文件夹"
           className="flex h-[18px] w-[18px] items-center justify-center rounded-[2px] text-faint transition-colors hover:bg-panel-2 hover:text-accent-hot"
         >
           <PlusIcon className="h-3 w-3" />
@@ -213,40 +213,40 @@ export function FolderTree({
       </div>
 
       <div className="min-h-0 flex-1 overflow-y-auto pb-2">
-        <GroupLabel>Smart</GroupLabel>
+        <GroupLabel>智能</GroupLabel>
         <Row
           icon={<SmartIcon kind="clock" />}
-          label="Recent"
+          label="最近"
           count={smartCounts.recent}
           active={scope.kind === 'recent'}
           onClick={() => onScopeChange({ kind: 'recent' })}
         />
         <Row
           icon={<SmartIcon kind="list" />}
-          label="All Builds"
+          label="全部构建"
           count={smartCounts.all}
           active={scope.kind === 'all'}
           onClick={() => onScopeChange({ kind: 'all' })}
         />
         <Row
           icon={<SmartIcon kind="star" />}
-          label="Favorites"
+          label="收藏"
           count={smartCounts.favorites}
           active={scope.kind === 'favorites'}
           onClick={() => onScopeChange({ kind: 'favorites' })}
         />
         <Row
           icon={<SmartIcon kind="box" />}
-          label="Unfiled"
+          label="未分组"
           count={smartCounts.unfiled}
           active={scope.kind === 'unfiled'}
           onClick={() => onScopeChange({ kind: 'unfiled' })}
         />
 
-        <GroupLabel>Folders</GroupLabel>
+        <GroupLabel>文件夹</GroupLabel>
         {topLevelFolders.length === 0 ? (
           <div className="px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-            No folders
+            暂无文件夹
           </div>
         ) : (
           renderFolders('', 0)

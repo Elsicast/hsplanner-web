@@ -261,8 +261,8 @@ export function ImportOverlay({
 
   return (
     <OverlayShell
-      section="Import"
-      title="Import build"
+      section="导入"
+      title="导入构建"
       onClose={onClose}
       width={520}
       footer={
@@ -287,7 +287,7 @@ export function ImportOverlay({
           setText(e.target.value)
           setError(null)
         }}
-        placeholder="Paste shared build code…"
+        placeholder="粘贴分享代码…"
         rows={6}
         className={`${INPUT_CLASS} resize-none font-mono text-[11px]`}
         style={INPUT_STYLE}
@@ -344,14 +344,14 @@ export function MoveToFolderOverlay({
   const sorted = [...folders].sort((a, b) => a.name.localeCompare(b.name))
   return (
     <OverlayShell
-      section="Organise"
-      title="Move to folder"
+      section="整理"
+      title="移动到文件夹"
       onClose={onClose}
     >
-      <FieldLabel>Destination</FieldLabel>
+      <FieldLabel>目标位置</FieldLabel>
       <div className="flex max-h-72 flex-col gap-1 overflow-y-auto">
         <FolderChoice
-          label="Unfiled"
+          label="未分组"
           active={currentFolderId === null}
           onClick={() => onMove(null)}
         />
@@ -433,8 +433,8 @@ export function TagsOverlay({
   }
   return (
     <OverlayShell
-      section="Organise"
-      title="Edit tags"
+      section="整理"
+      title="编辑标签"
       onClose={onClose}
       footer={
         <>
@@ -449,7 +449,7 @@ export function TagsOverlay({
         </>
       }
     >
-      <FieldLabel>Tags</FieldLabel>
+      <FieldLabel>标签</FieldLabel>
       <div className="flex flex-wrap gap-1.5">
         {tags.map((t) => (
           <span
@@ -477,7 +477,7 @@ export function TagsOverlay({
         autoFocus
         value={draft}
         onChange={(e) => setDraft(e.target.value)}
-        placeholder="Type a tag, press Enter…"
+        placeholder="输入标签后按回车添加…"
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ',') {
             e.preventDefault()

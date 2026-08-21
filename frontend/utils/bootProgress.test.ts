@@ -21,7 +21,7 @@ describe('warmupBootProgress', () => {
     const { pct, status } = warmupBootProgress(0, 100)
 
     expect(pct).toBeCloseTo(0)
-    expect(status).toBe('Loading game data')
+    expect(status).toBe('正在加载游戏数据')
   })
 
   it('scales the bar across the warmup weight at the halfway mark', () => {
@@ -54,14 +54,14 @@ describe('spriteBootProgress', () => {
     const { pct, status } = spriteBootProgress(0, 670)
 
     expect(pct).toBeCloseTo(WARMUP_WEIGHT * 100)
-    expect(status).toBe('Loading sprites · 0/670')
+    expect(status).toBe('正在加载贴图 · 0/670')
   })
 
   it('reaches 100% with a full count when all sprites load', () => {
     const { pct, status } = spriteBootProgress(670, 670)
 
     expect(pct).toBeCloseTo(100)
-    expect(status).toBe('Loading sprites · 670/670')
+    expect(status).toBe('正在加载贴图 · 670/670')
   })
 
   it('scales the bar across the sprite weight at the halfway mark', () => {
@@ -74,6 +74,6 @@ describe('spriteBootProgress', () => {
     const { pct, status } = spriteBootProgress(0, 0)
 
     expect(pct).toBeCloseTo(100)
-    expect(status).toBe('Loading sprites')
+    expect(status).toBe('正在加载贴图')
   })
 })

@@ -56,11 +56,11 @@ const ATTR_BAR: Record<string, string> = {
 }
 
 const RESISTANCES: { key: string; label: string; cls: string }[] = [
-  { key: 'fire_resistance', label: 'Fire', cls: 'text-stat-red' },
-  { key: 'cold_resistance', label: 'Cold', cls: 'text-stat-blue' },
-  { key: 'lightning_resistance', label: 'Lightning', cls: 'text-stat-orange' },
-  { key: 'poison_resistance', label: 'Poison', cls: 'text-stat-green' },
-  { key: 'arcane_resistance', label: 'Arcane', cls: 'text-stat-purple' },
+  { key: 'fire_resistance', label: '火', cls: 'text-stat-red' },
+  { key: 'cold_resistance', label: '冰', cls: 'text-stat-blue' },
+  { key: 'lightning_resistance', label: '闪电', cls: 'text-stat-orange' },
+  { key: 'poison_resistance', label: '毒', cls: 'text-stat-green' },
+  { key: 'arcane_resistance', label: '奥术', cls: 'text-stat-purple' },
 ]
 
 function fmtInt(n: number): string {
@@ -160,7 +160,7 @@ export default function CharacterView() {
           key: `granted-${skill.id}`,
           icon: undefined,
           name: skill.name,
-          sub: 'Granted',
+          sub: '赋予',
           detail: '',
         })
       }
@@ -173,8 +173,8 @@ export default function CharacterView() {
       key: `main-${s.id}`,
       icon: resolveSkillIcon(s),
       name: s.name,
-      sub: i === 0 ? 'Main' : 'Active',
-      detail: `Lv ${skillRanks[s.id] ?? 0}`,
+      sub: i === 0 ? '主技能' : '主动',
+      detail: `等级 ${skillRanks[s.id] ?? 0}`,
     })),
     ...(aura
       ? [
@@ -182,8 +182,8 @@ export default function CharacterView() {
             key: `aura-${aura.id}`,
             icon: resolveSkillIcon(aura),
             name: aura.name,
-            sub: 'Aura',
-            detail: `Lv ${skillRanks[aura.id] ?? 0}`,
+            sub: '光环',
+            detail: `等级 ${skillRanks[aura.id] ?? 0}`,
           },
         ]
       : []),
@@ -194,7 +194,7 @@ export default function CharacterView() {
     key: `buff-${s.id}`,
     icon: resolveSkillIcon(s),
     name: s.name,
-    sub: 'Buff',
+    sub: '增益',
     detail: s.effectDuration !== undefined ? `${s.effectDuration}s` : '',
   }))
 
@@ -241,7 +241,7 @@ export default function CharacterView() {
     attackDamage?.attacksPerSecondMax ??
     (avgHitDpsMax != null && avgHit ? avgHitDpsMax / avgHit : undefined)
   const rateLabel =
-    attackDamage || mainSkills[0]?.usesAttackSpeed ? 'Attack rate' : 'Cast rate'
+    attackDamage || mainSkills[0]?.usesAttackSpeed ? '攻击频率' : '施法频率'
   const hitDmg = damage
     ? intRange(damage.finalMin, damage.finalMax)
     : attackDamage
@@ -265,13 +265,13 @@ export default function CharacterView() {
             className="inline-block h-1.5 w-1.5 rotate-45 bg-accent-hot"
             style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
           />
-          Summary
+          总览
         </div>
         <h2
           className="m-0 text-[22px] font-semibold tracking-[0.02em] text-accent-hot"
           style={{ textShadow: '0 0 16px rgba(224,184,100,0.18)' }}
         >
-          Character
+          角色
         </h2>
       </header>
 
@@ -304,14 +304,14 @@ export default function CharacterView() {
               className="text-[22px] font-semibold leading-tight tracking-[0.01em] text-accent-hot"
               style={{ textShadow: '0 0 14px rgba(224,184,100,0.18)' }}
             >
-              {buildName ?? 'Unsaved build'}
+              {buildName ?? '未保存的构建'}
             </div>
             <div className="mt-1 flex flex-wrap items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-              <span>{cls?.name ?? 'No class'}</span>
+              <span>{cls?.name ?? '未选择职业'}</span>
               <span className="text-faint">·</span>
-              <span>Lv {level}</span>
+              <span>等级 {level}</span>
               <span className="text-faint">·</span>
-              <span>Hero Lv {heroLevel}</span>
+              <span>英雄等级 {heroLevel}</span>
               {cls?.primaryAttribute && (
                 <span
                   className="inline-flex items-center gap-1.5 rounded-[3px] border border-accent-deep/40 px-2 py-0.5 text-[10px] text-accent-hot"
@@ -332,9 +332,9 @@ export default function CharacterView() {
         </div>
 
         <div className="flex items-stretch gap-2">
-          <PointStat label="Attr used" value={attrSpent} total={attrTotal} />
-          <PointStat label="Skill used" value={skillSpent} total={skillTotal} />
-          <PointStat label="Tree nodes" value={treeNodes} />
+          <PointStat label="已用属性点" value={attrSpent} total={attrTotal} />
+          <PointStat label="已用技能点" value={skillSpent} total={skillTotal} />
+          <PointStat label="天赋点" value={treeNodes} />
         </div>
       </Card>
 
@@ -373,7 +373,7 @@ export default function CharacterView() {
                 {formatValue(attributes[key] ?? 0, key)}
               </div>
               <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-                {delta > 0 ? `+${delta} added` : 'base'}
+                {delta > 0 ? `+${delta} 已加` : '基础'}
               </div>
               <span
                 aria-hidden
@@ -389,7 +389,7 @@ export default function CharacterView() {
 
       <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
         <Card>
-          <SectionHead title={`Total DPS${skillName ? ` · ${skillName}` : ''}`} />
+          <SectionHead title={`总 DPS${skillName ? ` · ${skillName}` : ''}`} />
           <div
             className="font-mono text-[44px] font-semibold leading-none tracking-[0.01em] text-accent-hot tabular-nums"
             style={{ textShadow: '0 0 18px rgba(224,184,100,0.22)' }}
@@ -399,38 +399,38 @@ export default function CharacterView() {
           <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
             {avgHit != null && rate != null ? (
               <>
-                <span className="text-muted">{fmtInt(avgHit)}</span> avg hit ×{' '}
-                <span className="text-muted">{fmtRate(rate)}</span> / sec
+                <span className="text-muted">{fmtInt(avgHit)}</span> 平均单次 ×{' '}
+                <span className="text-muted">{fmtRate(rate)}</span> /秒
               </>
             ) : (
-              'select a main skill to see the breakdown'
+              '选择一个主技能以查看明细'
             )}
           </div>
 
           <div className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
             <Metric
-              label={isSpellSkill ? 'Spell crit chance' : 'Crit chance'}
+              label={isSpellSkill ? '法术暴击率' : '暴击率'}
               value={formatValue(stat(critChanceKey), critChanceKey)}
               valueClass="text-accent-hot"
             />
             <Metric
-              label={isSpellSkill ? 'Spell crit damage' : 'Crit damage'}
+              label={isSpellSkill ? '法术暴击伤害' : '暴击伤害'}
               value={formatValue(stat(critDamageKey), critDamageKey)}
             />
             <Metric
               label={rateLabel}
               value={rate != null ? `${fmtRate(rate)}/s` : '—'}
             />
-            <Metric label="Hit damage" value={hitDmg} />
+            <Metric label="单击伤害" value={hitDmg} />
             <Metric
-              label="Attack speed"
+              label="攻击速度"
               value={formatValue(
                 stat('increased_attack_speed'),
                 'increased_attack_speed',
               )}
             />
             <Metric
-              label="Enhanced dmg"
+              label="强化伤害"
               value={formatValue(stat('enhanced_damage'), 'enhanced_damage')}
             />
           </div>
@@ -438,10 +438,10 @@ export default function CharacterView() {
 
         <Card>
           <SectionHead
-            title="Resistances & Defense"
+            title="抗性与防御"
             trailing={
               <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-                Capped <span className="text-text">{resistCap}</span>
+                上限 <span className="text-text">{resistCap}</span>
               </span>
             }
           />
@@ -500,35 +500,35 @@ export default function CharacterView() {
 
           <div className="space-y-px">
             <DefRow
-              label="Life"
+              label="生命"
               value={stat('life')}
               statKey="life"
               accent="text-stat-red"
             />
             <DefRow
-              label="Mana"
+              label="法力"
               value={stat('mana')}
               statKey="mana"
               accent="text-stat-blue"
             />
             <EhpRows stats={stats} statsCombined={statsCombined} />
             <DefRow
-              label="Block chance"
+              label="格挡率"
               value={stat('block_chance')}
               statKey="block_chance"
             />
             <DefRow
-              label="Phys reduction"
+              label="物理减伤"
               value={stat('physical_damage_reduction')}
               statKey="physical_damage_reduction"
               hint={
                 !isZero(stat('defense'))
-                  ? `armor ${formatValue(stat('defense'), 'defense')}`
+                  ? `护甲 ${formatValue(stat('defense'), 'defense')}`
                   : undefined
               }
             />
             <DefRow
-              label="Movement speed"
+              label="移动速度"
               value={stat('movement_speed')}
               statKey="movement_speed"
             />
@@ -538,12 +538,12 @@ export default function CharacterView() {
 
       <div className="grid gap-4 lg:grid-cols-3">
         <LoadoutCard
-          title="Active Skills"
+          title="主动技能"
           entries={activeSkills}
-          empty="No active skill selected."
+          empty="未选择主动技能。"
         />
-        <LoadoutCard title="Buffs" entries={buffs} empty="No buffs active." />
-        <LoadoutCard title="Procs" entries={procs} empty="No procs active." />
+        <LoadoutCard title="增益" entries={buffs} empty="无生效增益。" />
+        <LoadoutCard title="触发效果" entries={procs} empty="无生效触发效果。" />
       </div>
     </div>
   )
@@ -564,7 +564,7 @@ function LoadoutCard({
         title={title}
         trailing={
           <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-            {entries.length} active
+            {entries.length} 生效中
           </span>
         }
       />

@@ -60,23 +60,23 @@ function classifyDiff(before: number, after: number): DiffKind {
 }
 
 export const ITEM_AFFIX_KEYS: ReadonlyArray<{ key: string; label: string; unit?: 'pct' }> = [
-  { key: 'defense', label: 'Defense' },
-  { key: 'enhanced_defense', label: 'Enhanced Defense', unit: 'pct' },
-  { key: 'all_skills', label: '+ All Skills' },
-  { key: 'enhanced_damage', label: 'Enhanced Damage', unit: 'pct' },
+  { key: 'defense', label: '防御' },
+  { key: 'enhanced_defense', label: '强化防御', unit: 'pct' },
+  { key: 'all_skills', label: '+ 全技能' },
+  { key: 'enhanced_damage', label: '强化伤害', unit: 'pct' },
 ]
 
 export const BUILD_STAT_KEYS: ReadonlyArray<{ key: string; label: string; unit?: 'pct' }> = [
-  { key: 'life', label: 'Life' },
-  { key: 'mana', label: 'Mana' },
-  { key: 'crit_chance', label: 'Crit Chance', unit: 'pct' },
-  { key: 'crit_damage', label: 'Crit Damage', unit: 'pct' },
-  { key: 'fire_resist', label: 'Fire Resist', unit: 'pct' },
-  { key: 'cold_resist', label: 'Cold Resist', unit: 'pct' },
-  { key: 'lightning_resist', label: 'Lightning Resist', unit: 'pct' },
-  { key: 'poison_resist', label: 'Poison Resist', unit: 'pct' },
-  { key: 'magic_find', label: 'Magic Find', unit: 'pct' },
-  { key: 'gold_find', label: 'Gold Find', unit: 'pct' },
+  { key: 'life', label: '生命' },
+  { key: 'mana', label: '法力' },
+  { key: 'crit_chance', label: '暴击几率', unit: 'pct' },
+  { key: 'crit_damage', label: '暴击伤害', unit: 'pct' },
+  { key: 'fire_resist', label: '火焰抗性', unit: 'pct' },
+  { key: 'cold_resist', label: '冰霜抗性', unit: 'pct' },
+  { key: 'lightning_resist', label: '闪电抗性', unit: 'pct' },
+  { key: 'poison_resist', label: '毒素抗性', unit: 'pct' },
+  { key: 'magic_find', label: '魔法发现', unit: 'pct' },
+  { key: 'gold_find', label: '金币发现', unit: 'pct' },
 ]
 
 export function pickStatDiffsByKeys(
@@ -135,7 +135,7 @@ export function socketDiff(before: BuildSummary, after: BuildSummary): StatDiff 
   if (kind === 'same') return null
   return {
     key: 'sockets',
-    label: 'Sockets',
+    label: '插槽数',
     beforeMin: before.itemSockets,
     beforeMax: before.itemSockets,
     afterMin: after.itemSockets,
@@ -162,7 +162,7 @@ export function hitDpsDiff(before: BuildSummary, after: BuildSummary): StatDiff 
   }
   return {
     key: 'hit_dps',
-    label: 'Hit DPS',
+    label: '单击 DPS',
     beforeMin,
     beforeMax,
     afterMin,
@@ -193,7 +193,7 @@ export function combinedDpsDiff(
   }
   return {
     key: 'combined_dps',
-    label: 'Combined DPS',
+    label: '合计 DPS',
     beforeMin,
     beforeMax,
     afterMin,
@@ -217,7 +217,7 @@ export function avgHitDiff(before: BuildSummary, after: BuildSummary): StatDiff 
   }
   return {
     key: 'avg_hit',
-    label: 'Average Hit',
+    label: '平均单击',
     beforeMin,
     beforeMax,
     afterMin,
@@ -283,8 +283,8 @@ export function formatStatNum(min: number, max: number, unit?: 'pct'): string {
 }
 
 export function formatDeltaNum(n: number, unit?: 'pct', kind?: DiffKind): string {
-  if (kind === 'new') return 'new'
-  if (kind === 'lost') return 'lost'
+  if (kind === 'new') return '新增'
+  if (kind === 'lost') return '失去'
   if (kind === 'same') return '='
   const sign = n > 0 ? '+' : ''
   const abs = Math.abs(n)

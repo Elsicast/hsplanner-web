@@ -50,13 +50,13 @@ export function NetChangeBlock({
   return (
     <TooltipSection>
       <div className="mb-2 flex items-center gap-2.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
-        <span>Net Change</span>
+        <span>净变化</span>
         <span className="h-px flex-1 bg-border" />
       </div>
       {hasDps && (
         <div className={diffs.length > 0 ? 'mb-1.5' : undefined}>
           <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-            Active Skill
+            主动技能
             {activeSkillName ? (
               <span className="ml-1 text-faint">· {activeSkillName}</span>
             ) : null}
@@ -69,12 +69,12 @@ export function NetChangeBlock({
         </div>
       )}
       {diffs.length === 0 ? (
-        !hasDps && <p className="text-[11px] text-faint italic">No stat changes</p>
+        !hasDps && <p className="text-[11px] text-faint italic">属性无变化</p>
       ) : (
         <div>
           {hasDps && (
             <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-              Stats
+              属性
             </div>
           )}
           <div className="space-y-0.5">
@@ -105,6 +105,12 @@ function isLegacyTierTag(s?: string): boolean {
   return /^\s*tier\s+[a-z]+\s*$/i.test(s)
 }
 
+const SOCKETABLE_KIND_LABEL: Record<'GEM' | 'JEWEL' | 'RUNE', string> = {
+  GEM: '宝石',
+  JEWEL: '珠宝',
+  RUNE: '符文',
+}
+
 export function buildSocketableTooltip(
   s: { id: string; name: string; tier: number; stats: Record<string, number>; description?: string },
   kind: 'GEM' | 'JEWEL' | 'RUNE',
@@ -119,7 +125,7 @@ export function buildSocketableTooltip(
     <>
       <TooltipHeader
         title={s.name}
-        subtitle={`${kind} · Tier ${s.tier}`}
+        subtitle={`${SOCKETABLE_KIND_LABEL[kind] ?? kind} · 阶级 ${s.tier}`}
         image={socketableIconForName(s.name)}
       />
       {lines.length > 0 && <TooltipSection>{lines}</TooltipSection>}
@@ -151,19 +157,19 @@ export function buildAffixTooltip(a: Affix): ReactNode {
     <>
       <TooltipHeader
         title={a.description}
-        subtitle={`Affix · ${a.name} · Tier ${a.tier}`}
+        subtitle={`词缀 · ${a.name} · 阶级 ${a.tier}`}
       />
       {range && (
         <TooltipSection>
-          <TooltipStat label="Range" value={range} />
+          <TooltipStat label="数值范围" value={range} />
           {a.statKey && (
-            <TooltipStat label="Stat" value={statName(a.statKey)} />
+            <TooltipStat label="属性" value={statName(a.statKey)} />
           )}
         </TooltipSection>
       )}
       {a.kind && (
         <TooltipFooter>
-          {a.kind === 'prefix' ? 'Prefix' : 'Suffix'} · group {a.groupId}
+          {a.kind === 'prefix' ? '前缀' : '后缀'} · 词缀组 {a.groupId}
         </TooltipFooter>
       )}
     </>
@@ -193,7 +199,7 @@ export function buildCrystalModTooltip(
     <>
       <TooltipHeader
         title={m.name}
-        subtitle={`Satanic Crystal · Tier ${m.tier}`}
+        subtitle={`Satanic Crystal · 阶级 ${m.tier}`}
         tone="satanic"
       />
       <TooltipSection>
@@ -201,9 +207,9 @@ export function buildCrystalModTooltip(
       </TooltipSection>
       {range && (
         <TooltipSection>
-          <TooltipStat label="Range" value={range} />
+          <TooltipStat label="数值范围" value={range} />
           {m.statKey && (
-            <TooltipStat label="Stat" value={statName(m.statKey)} />
+            <TooltipStat label="属性" value={statName(m.statKey)} />
           )}
         </TooltipSection>
       )}
@@ -232,7 +238,7 @@ export function buildRunewordTooltip(rw: {
     <>
       <TooltipHeader
         title={rw.name}
-        subtitle={`Runeword · ${rw.runes.length} runes`}
+        subtitle={`符文之语 · ${rw.runes.length} 个符文`}
         tone="rare"
       />
       <TooltipSection>
@@ -244,8 +250,8 @@ export function buildRunewordTooltip(rw: {
       </TooltipSection>
       {lines.length > 0 && <TooltipSection>{lines}</TooltipSection>}
       <TooltipFooter>
-        Bases · {rw.allowedBaseTypes.join(', ')}
-        {rw.requiresLevel ? ` · Lvl ${rw.requiresLevel}` : ''}
+        基底 · {rw.allowedBaseTypes.join(', ')}
+        {rw.requiresLevel ? ` · 等级 ${rw.requiresLevel}` : ''}
       </TooltipFooter>
       {rw.description && (
         <TooltipSection>
@@ -281,15 +287,15 @@ export function buildAugmentTooltip(aug: {
         <TooltipSection>
           <TooltipSectionHeader
             tone="gold"
-            trailing={`lv ${lvl.level} · ${lvl.cost} keys`}
+            trailing={`等级 ${lvl.level} · ${lvl.cost} 把钥匙`}
           >
-            Max Level Stats
+            最高等级属性
           </TooltipSectionHeader>
           {lines}
         </TooltipSection>
       )}
       {aug.rangedOnly && (
-        <TooltipFooter>Ranged weapon required</TooltipFooter>
+        <TooltipFooter>需要远程武器</TooltipFooter>
       )}
     </>
   )

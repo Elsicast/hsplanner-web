@@ -18,7 +18,7 @@ export default function BuildsMenu({ onOpenLibrary }: BuildsMenuProps) {
       onClick={onOpenLibrary}
       data-tour="builds"
       className={HEADER_BTN_CLASS}
-      title="Build library"
+      title="构建库"
     >
       <svg
         width="12"
@@ -33,7 +33,7 @@ export default function BuildsMenu({ onOpenLibrary }: BuildsMenuProps) {
       >
         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
       </svg>
-      Builds
+      构建
       {activeBuild && (
         <>
           <span aria-hidden className="text-faint">

@@ -40,9 +40,9 @@ export const ETHER_SEARCH_INDEX: { id: number; haystack: string }[] =
   })
 
 export function etherTypeLabel(t: EtherNodeType): string {
-  if (t === 'root') return 'Starting Node'
-  if (t === 'big') return 'Notable'
-  return 'Minor'
+  if (t === 'root') return '起始节点'
+  if (t === 'big') return '核心天赋'
+  return '小天赋'
 }
 
 export interface EtherNodePaint {

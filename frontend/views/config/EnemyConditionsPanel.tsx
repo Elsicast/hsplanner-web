@@ -12,8 +12,8 @@ export default function EnemyConditionsPanel() {
 
   return (
     <Panel
-      title="Enemy Conditions"
-      subtitle="Conditions on the target"
+      title="敌人条件"
+      subtitle="目标身上的条件"
       trailing={
         <CountBadge
           value={activeConditionCount}

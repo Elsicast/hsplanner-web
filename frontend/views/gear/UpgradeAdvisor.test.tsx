@@ -80,7 +80,7 @@ describe('<UpgradeAdvisor>', () => {
   it('starts idle with the scan button and no engine call', () => {
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     expect(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     ).toBeEnabled()
     expect(mockScan).not.toHaveBeenCalled()
   })
@@ -89,9 +89,9 @@ describe('<UpgradeAdvisor>', () => {
     mockUseDeps.mockReturnValue(makeDeps({ activeSkillIds: [] }))
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     expect(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     ).toBeDisabled()
-    expect(screen.getByText(/select a main skill first/i)).toBeInTheDocument()
+    expect(screen.getByText(/请先选择一个主动技能/)).toBeInTheDocument()
   })
 
   it('shows progress while scanning', async () => {
@@ -104,9 +104,9 @@ describe('<UpgradeAdvisor>', () => {
     })
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
-    expect(await screen.findByText(/scanning 3\/12/i)).toBeInTheDocument()
+    expect(await screen.findByText(/正在扫描 3\/12/)).toBeInTheDocument()
     resolveScan(SUGGESTIONS)
     await waitFor(() => expect(screen.getByText('Helm')).toBeInTheDocument())
   })
@@ -120,10 +120,10 @@ describe('<UpgradeAdvisor>', () => {
     })
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
-    expect(await screen.findByText(/^scanning…$/i)).toBeInTheDocument()
-    expect(screen.queryByText(/scanning 0\/0/i)).not.toBeInTheDocument()
+    expect(await screen.findByText(/^扫描中…$/)).toBeInTheDocument()
+    expect(screen.queryByText(/正在扫描 0\/0/)).not.toBeInTheDocument()
     resolveScan(EMPTY_RESULT)
   })
 
@@ -131,11 +131,11 @@ describe('<UpgradeAdvisor>', () => {
     mockScan.mockResolvedValue(SUGGESTIONS)
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
-    expect(await screen.findByText('Empty slots (1)')).toBeInTheDocument()
+    expect(await screen.findByText('空槽位 (1)')).toBeInTheDocument()
     expect(screen.getByText('Helm')).toBeInTheDocument()
-    expect(screen.getByText(/fill first/i)).toBeInTheDocument()
+    expect(screen.getByText(/优先填补/)).toBeInTheDocument()
     expect(screen.getByText('Short Sword → Grandfather')).toBeInTheDocument()
     expect(screen.getByText('Manald Heal → Nagelring')).toBeInTheDocument()
     expect(screen.getByText('+23%')).toBeInTheDocument()
@@ -147,9 +147,9 @@ describe('<UpgradeAdvisor>', () => {
     const onPick = vi.fn()
     render(<UpgradeAdvisor onPickSlot={onPick} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
-    expect(await screen.findByText('Empty slots (1)')).toBeInTheDocument()
+    expect(await screen.findByText('空槽位 (1)')).toBeInTheDocument()
     await userEvent.click(screen.getByText('Helm'))
     expect(onPick).toHaveBeenCalledWith('helm')
   })
@@ -159,7 +159,7 @@ describe('<UpgradeAdvisor>', () => {
     const onPick = vi.fn()
     render(<UpgradeAdvisor onPickSlot={onPick} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
     await userEvent.click(await screen.findByText('Weapon'))
     expect(onPick).toHaveBeenCalledWith('weapon')
@@ -177,11 +177,11 @@ describe('<UpgradeAdvisor>', () => {
     })
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
-    expect(await screen.findByText('Empty slots (4)')).toBeInTheDocument()
+    expect(await screen.findByText('空槽位 (4)')).toBeInTheDocument()
     expect(
-      screen.getByText('Helm, Boots, Gloves, +1 more'),
+      screen.getByText('Helm、Boots、Gloves，还有 1 个'),
     ).toBeInTheDocument()
   })
 
@@ -189,10 +189,10 @@ describe('<UpgradeAdvisor>', () => {
     mockScan.mockResolvedValue(EMPTY_RESULT)
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
     expect(
-      await screen.findByText(/no base upgrades found/i),
+      await screen.findByText(/未发现基底升级空间/),
     ).toBeInTheDocument()
   })
 
@@ -200,7 +200,7 @@ describe('<UpgradeAdvisor>', () => {
     mockScan.mockResolvedValue(SUGGESTIONS)
     const { rerender } = render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
     await screen.findByText('Helm')
     mockUseDeps.mockReturnValue(makeDeps({ level: 51 }))
@@ -220,13 +220,13 @@ describe('<UpgradeAdvisor>', () => {
     )
     const { rerender } = render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
     mockUseDeps.mockReturnValue(makeDeps({ level: 51 }))
     rerender(<UpgradeAdvisor onPickSlot={() => {}} />)
     resolveScan(SUGGESTIONS)
     await waitFor(() =>
-      expect(screen.getByRole('button', { name: /scan for upgrades/i })).toBeEnabled(),
+      expect(screen.getByRole('button', { name: /扫描升级机会/ })).toBeEnabled(),
     )
     expect(screen.queryByText('Helm')).not.toBeInTheDocument()
   })
@@ -235,11 +235,11 @@ describe('<UpgradeAdvisor>', () => {
     mockScan.mockRejectedValue(new Error('bridge down'))
     render(<UpgradeAdvisor onPickSlot={() => {}} />)
     await userEvent.click(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     )
-    expect(await screen.findByText(/scan failed/i)).toBeInTheDocument()
+    expect(await screen.findByText(/扫描失败/)).toBeInTheDocument()
     expect(
-      screen.getByRole('button', { name: /scan for upgrades/i }),
+      screen.getByRole('button', { name: /扫描升级机会/ }),
     ).toBeEnabled()
   })
 })

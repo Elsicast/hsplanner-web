@@ -72,7 +72,7 @@ export default function ItemTextEditorModal({
     <Modal
       onClose={onClose}
       panelClassName="h-[88vh] w-[1100px] max-w-[96vw]"
-      eyebrow={<>Edit Item · {slotName}</>}
+      eyebrow={<>编辑物品 · {slotName}</>}
       title={base.name}
     >
         <div className="flex min-h-0 flex-1 flex-row">
@@ -82,7 +82,7 @@ export default function ItemTextEditorModal({
                 className="inline-block h-1 w-1 rotate-45 bg-accent-deep"
                 aria-hidden="true"
               />
-              Text · edit affixes, stars, sockets, augment
+              文本 · 编辑词缀、星辰、插槽、强化石
             </div>
             <textarea
               ref={textareaRef}
@@ -106,25 +106,25 @@ export default function ItemTextEditorModal({
                 className="inline-block h-1 w-1 rotate-45 bg-accent-deep"
                 aria-hidden="true"
               />
-              Validation
+              校验
               {errorCount > 0 && (
                 <span className="ml-auto text-stat-red">
-                  {errorCount} error{errorCount !== 1 ? 's' : ''}
+                  {errorCount} 个错误
                 </span>
               )}
               {errorCount === 0 && warnCount > 0 && (
                 <span className="ml-auto text-stat-orange">
-                  {warnCount} warning{warnCount !== 1 ? 's' : ''}
+                  {warnCount} 个警告
                 </span>
               )}
               {errorCount === 0 && warnCount === 0 && (
-                <span className="ml-auto text-accent-hot">all clear</span>
+                <span className="ml-auto text-accent-hot">全部通过</span>
               )}
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto px-3 py-3 space-y-2">
               {result.errors.length === 0 ? (
                 <div className="rounded-[3px] border border-border-2 bg-panel-2/60 px-3 py-3 font-mono text-[11px] text-muted">
-                  All clear · save to apply changes to this slot.
+                  全部通过 · 保存后更改将应用到该槽位。
                 </div>
               ) : (
                 result.errors.map((err, i) => (
@@ -154,10 +154,10 @@ export default function ItemTextEditorModal({
             />
             <span className="truncate">
               {canSave
-                ? 'Ready to save'
+                ? '可以保存'
                 : errorCount > 0
-                  ? 'Fix errors before saving'
-                  : 'Parsing…'}
+                  ? '请先修正错误再保存'
+                  : '解析中…'}
             </span>
           </div>
           <div className="flex shrink-0 gap-2">
@@ -170,7 +170,7 @@ export default function ItemTextEditorModal({
                   : 'cursor-not-allowed border-border-2 bg-transparent text-faint opacity-60'
               }`}
             >
-              Save
+              保存
             </button>
           </div>
         </footer>
@@ -183,7 +183,7 @@ function ErrorRow({ err }: { err: ParseError }) {
   const cls = isError
     ? 'border-stat-red/40 bg-stat-red/10 text-stat-red'
     : 'border-stat-orange/40 bg-stat-orange/10 text-stat-orange'
-  const tag = isError ? 'ERR' : 'WARN'
+  const tag = isError ? '错误' : '警告'
   return (
     <div
       className={`rounded-[3px] border px-3 py-2 font-mono text-[11px] leading-[1.5] ${cls}`}
@@ -191,7 +191,7 @@ function ErrorRow({ err }: { err: ParseError }) {
       <div className="mb-0.5 flex items-center gap-2 text-[10px] uppercase tracking-[0.14em] opacity-80">
         <span>{tag}</span>
         <span>·</span>
-        <span>line {err.line}</span>
+        <span>第 {err.line} 行</span>
       </div>
       <div className="text-[11px]">{err.message}</div>
     </div>

@@ -219,7 +219,7 @@ export default function TutorialOverlay({
             }}
           >
             <div className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-black/60">
-              Tutorial · {index + 1} / {TUTORIAL_STEPS.length}
+              教程 · {index + 1} / {TUTORIAL_STEPS.length}
             </div>
             <h2
               id={headingId}
@@ -237,14 +237,14 @@ export default function TutorialOverlay({
                 disabled={index === 0}
                 className={COMIC_BTN_CLASS}
               >
-                Back
+                上一步
               </button>
               <button
                 type="button"
                 onClick={() => (isLast ? close() : setIndex(index + 1))}
                 className={COMIC_BTN_PRIMARY_CLASS}
               >
-                {isLast ? 'Finish' : 'Next'}
+                {isLast ? '完成' : '下一步'}
               </button>
             </div>
             <button
@@ -252,7 +252,7 @@ export default function TutorialOverlay({
               onClick={close}
               className="mt-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-black/60 transition-colors hover:text-black"
             >
-              Skip tour
+              跳过教程
             </button>
           </div>
           {/* tail overlaps the oval: white fill erases the outline at the joint, stroke draws only

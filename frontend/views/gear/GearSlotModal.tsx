@@ -133,20 +133,19 @@ export function GearSlotModal({
   const configuring = step === 'configure' && !isOffhandLocked
 
   const footerLabel = isOffhandLocked
-    ? 'Slot locked'
+    ? '槽位已锁定'
     : step === 'select'
-      ? `Choose an item for ${slotName}`
+      ? `为${slotName}选择一件物品`
       : draft && base
         ? `${base.name} · ${RARITY_LABEL[base.rarity]}`
-        : 'Empty slot'
+        : '空槽位'
 
   let body
   if (isOffhandLocked) {
     body = (
       <div className="flex min-h-0 flex-1 items-center justify-center p-8">
         <div className="max-w-sm rounded-lg border border-amber-500/30 bg-amber-500/5 px-4 py-3 text-center text-[12px] leading-relaxed text-amber-200">
-          This slot is locked while a Two-Handed weapon is equipped. Remove the
-          weapon to free the offhand.
+          已装备双手武器时该槽位被锁定。移除武器可释放副手。
         </div>
       </div>
     )
@@ -192,7 +191,7 @@ export function GearSlotModal({
                   onClick={() => setStep('select')}
                   className={`shrink-0 ${GHOST_BTN}`}
                 >
-                  ← Change item
+                  ← 更换物品
                 </button>
               </div>
 
@@ -266,10 +265,10 @@ export function GearSlotModal({
             <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-5 p-8 text-center">
               <div>
                 <div className="mb-1.5 text-[14px] font-semibold text-text">
-                  No item selected
+                  未选择物品
                 </div>
                 <div className="text-[12px] text-muted">
-                  This slot will be emptied when you Save.
+                  保存后该槽位将被清空。
                 </div>
               </div>
               <button
@@ -277,7 +276,7 @@ export function GearSlotModal({
                 onClick={() => setStep('select')}
                 className="rounded-md border border-accent-deep bg-accent-hot/10 px-4 py-2 text-[12px] font-medium text-accent-hot transition-colors hover:border-accent-hot hover:bg-accent-hot/15"
               >
-                Choose an item
+                选择物品
               </button>
             </div>
           )}
@@ -303,7 +302,7 @@ export function GearSlotModal({
         onClose={requestClose}
         onEscape={handleEscape}
         dataTour="gear-slot-modal"
-        eyebrow="Gear Slot"
+        eyebrow="装备槽位"
         title={slotName}
         panelClassName={`h-[88vh] max-w-[96vw] transition-[width] duration-300 ${
           configuring ? (hideCompare ? 'w-[900px]' : 'w-[1180px]') : 'w-[680px]'
@@ -317,7 +316,7 @@ export function GearSlotModal({
                   onClick={() => setTextEditorOpen(true)}
                   className={GHOST_BTN}
                 >
-                  Edit Text
+                  编辑文本
                 </button>
               )}
               <button
@@ -325,8 +324,8 @@ export function GearSlotModal({
                 onClick={() => d.clearDraft()}
                 className={GHOST_BTN_RED}
               >
-                Remove
-              </button>
+                  移除
+                </button>
             </>
           ) : null
         }
@@ -342,7 +341,7 @@ export function GearSlotModal({
         {confirmingClose && (
           <div className="flex items-center justify-between gap-3 border-t border-amber-500/30 bg-amber-500/8 px-5 py-3">
             <span className="text-[12px] text-amber-200">
-              You have unsaved changes
+              有未保存的修改
             </span>
             <div className="flex shrink-0 gap-2">
               <button
@@ -350,17 +349,17 @@ export function GearSlotModal({
                 onClick={() => setConfirmingClose(false)}
                 className={GHOST_BTN}
               >
-                Keep Editing
+                继续编辑
               </button>
               <button type="button" onClick={onClose} className={GHOST_BTN_RED}>
-                Discard
+                放弃
               </button>
               <button
                 type="button"
                 onClick={handleSave}
                 className="rounded-md border border-accent-deep bg-accent-hot/10 px-3 py-1.5 text-[12px] font-medium text-accent-hot transition-colors hover:border-accent-hot hover:bg-accent-hot/15"
               >
-                Save
+                保存
               </button>
             </div>
           </div>
@@ -381,7 +380,7 @@ export function GearSlotModal({
             <span className="truncate">{footerLabel}</span>
             {dirty && (
               <span className="ml-2 rounded border border-amber-400/40 px-1.5 py-0.5 text-[10px] text-amber-300">
-                Unsaved
+                未保存
               </span>
             )}
           </div>
@@ -392,7 +391,7 @@ export function GearSlotModal({
                 onClick={() => setStep('configure')}
                 className={GHOST_BTN}
               >
-                ← Back
+                ← 返回
               </button>
             )}
             {step === 'configure' && (
@@ -402,7 +401,7 @@ export function GearSlotModal({
                 disabled={!dirty}
                 className={PRIMARY_BTN}
               >
-                Save / Equip
+                保存 / 装备
               </button>
             )}
           </div>
@@ -436,7 +435,7 @@ function SetSummary({
       tone="set"
       rightSlot={
         <span className="font-mono text-[10px] tabular-nums text-green-300/80">
-          {count}/{set.items.length} pieces
+          {count}/{set.items.length} 件
         </span>
       }
       bodyClassName="px-3.5 py-2.5"
@@ -455,7 +454,7 @@ function SetSummary({
                     active ? 'text-green-300' : 'text-faint'
                   }`}
                 >
-                  {bonus.pieces}-Set
+                  {bonus.pieces}件套
                 </span>
                 {active && (
                   <span className="font-mono text-[10px] text-green-300">✓</span>
@@ -477,7 +476,7 @@ function SetSummary({
       </ul>
       <div className="mt-2.5 border-t border-white/5 pt-2">
         <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
-          Set items
+          套装物品
         </div>
         <ul className="ml-3 mt-1 space-y-0.5">
           {set.items.map((piece) => {

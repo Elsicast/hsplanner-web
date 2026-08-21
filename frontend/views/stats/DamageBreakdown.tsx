@@ -39,7 +39,7 @@ export function DamageBreakdown({
         : [0, 0]
       const [effMin, effMax] = [baseRank + bonusMin, baseRank + bonusMax]
       const rankLabel =
-        effMin === effMax ? `rank ${effMin}` : `rank ${effMin}-${effMax}`
+        effMin === effMax ? `等级 ${effMin}` : `等级 ${effMin}-${effMax}`
       synergyLines.push({
         label: `${b.source} (${rankLabel})`,
         pctMin: effMin * b.value,
@@ -71,9 +71,9 @@ export function DamageBreakdown({
 
   return (
     <div className="mt-2 border-t border-dashed border-border pt-2 text-[12px]">
-      <BDSection title="Base">
+      <BDSection title="基础">
         <BDLine
-          label="Effective rank"
+          label="有效等级"
           value={
             <>
               <span className="text-text">{effRankLabel}</span>
@@ -93,7 +93,7 @@ export function DamageBreakdown({
           }
         />
         <BDLine
-          label="Base damage"
+          label="基础伤害"
           value={
             <span className="text-text">
               {formatRange(breakdown.baseMin, breakdown.baseMax)}
@@ -102,7 +102,7 @@ export function DamageBreakdown({
         />
         {(breakdown.flatMin > 0 || breakdown.flatMax > 0) && (
           <BDLine
-            label="Flat added"
+            label="固定附加"
             value={
               <span className="text-text">
                 {formatRange(breakdown.flatMin, breakdown.flatMax)}
@@ -112,7 +112,7 @@ export function DamageBreakdown({
         )}
       </BDSection>
       {synergyLines.length > 0 && (
-        <BDSection title="Synergies">
+        <BDSection title="协同加成">
           {synergyLines.map((line, i) => (
             <BDLine
               key={i}
@@ -128,7 +128,7 @@ export function DamageBreakdown({
             />
           ))}
           <BDLine
-            label="Total synergy"
+            label="协同合计"
             value={
               <span className="text-yellow-300">
                 +
@@ -145,11 +145,11 @@ export function DamageBreakdown({
         breakdown.multicastChancePct > 0 ||
         breakdown.elementalBreakPct > 0 ||
         breakdown.projectileCount > 1) && (
-        <BDSection title="Multipliers">
+        <BDSection title="乘数">
           {(breakdown.skillDamageMinPct > 0 ||
             breakdown.skillDamageMaxPct > 0) && (
             <BDLine
-              label="Skill damage %"
+              label="技能伤害 %"
               value={
                 <span className="text-accent-hot">
                   +
@@ -161,7 +161,7 @@ export function DamageBreakdown({
           )}
           {breakdown.multicastChancePct > 0 && (
             <BDLine
-              label={`Multicast (${formatDecimal(breakdown.multicastChancePct)}%)`}
+              label={`多重施放 (${formatDecimal(breakdown.multicastChancePct)}%)`}
               value={
                 <span className="text-accent-hot">
                   ×{breakdown.multicastMultiplier.toFixed(2)}
@@ -171,7 +171,7 @@ export function DamageBreakdown({
           )}
           {breakdown.elementalBreakPct > 0 && (
             <BDLine
-              label={`Elemental Break (${formatDecimal(breakdown.elementalBreakPct)}%)`}
+              label={`元素穿透 (${formatDecimal(breakdown.elementalBreakPct)}%)`}
               value={
                 <span className="text-accent-hot">
                   ×{breakdown.elementalBreakMultiplier.toFixed(2)}
@@ -181,7 +181,7 @@ export function DamageBreakdown({
           )}
           {breakdown.projectileCount > 1 && (
             <BDLine
-              label={`Projectiles (${breakdown.projectileCount}×)`}
+              label={`投射物 (${breakdown.projectileCount}×)`}
               value={
                 <span className="text-accent-hot">
                   ×{breakdown.projectileCount.toFixed(2)}
@@ -192,7 +192,7 @@ export function DamageBreakdown({
           {(breakdown.enemyResistancePct !== 0 ||
             breakdown.resistanceIgnoredPct !== 0) && (
             <BDLine
-              label="Enemy resistance"
+              label="敌人抗性"
               value={
                 <span
                   className={
@@ -212,7 +212,7 @@ export function DamageBreakdown({
         </BDSection>
       )}
       {breakdown.extraDamageSources.length > 0 && (
-        <BDSection title="Extra damage">
+        <BDSection title="额外伤害">
           {breakdown.extraDamageSources.map((s, i) => (
             <BDLine
               key={i}
@@ -230,10 +230,10 @@ export function DamageBreakdown({
       <div className="mt-1.5 flex items-baseline justify-between gap-3 border-t border-border pt-1.5">
         <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-muted">
           {breakdown.multicastChancePct > 0 || breakdown.projectileCount > 1
-            ? 'Average per cast'
+            ? '每次施放平均'
             : breakdown.critChance > 0
-              ? 'Average hit'
-              : 'Hit damage'}
+              ? '平均单击'
+              : '单击伤害'}
         </span>
         <span className="font-mono text-[14px] font-semibold tabular-nums text-accent-hot">
           {breakdown.critChance > 0 ||

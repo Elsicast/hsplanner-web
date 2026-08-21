@@ -64,26 +64,26 @@ export default function GearView() {
             className="inline-block h-1.5 w-1.5 rotate-45 bg-accent-hot"
             style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
           />
-          Loadout
+          配装
         </div>
         <div className="flex items-end justify-between gap-3">
           <h2
             className="m-0 text-[22px] font-semibold tracking-[0.02em] text-accent-hot"
             style={{ textShadow: '0 0 16px rgba(224,184,100,0.18)' }}
           >
-            Gear
+            装备
           </h2>
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
             <span>
-              <span className="text-text">{items.length}</span> items
+              <span className="text-text">{items.length}</span> 件物品
             </span>
             <span aria-hidden className="h-3 w-px bg-border" />
             <span>
-              <span className="text-text">{gems.length}</span> gems
+              <span className="text-text">{gems.length}</span> 颗宝石
             </span>
             <span aria-hidden className="h-3 w-px bg-border" />
             <span>
-              <span className="text-text">{runes.length}</span> runes
+              <span className="text-text">{runes.length}</span> 个符文
             </span>
           </div>
         </div>
@@ -128,7 +128,7 @@ export default function GearView() {
               const base = getItem(item.baseId)
               const w = base?.width ?? 1
               const h = base?.height ?? 1
-              return `${base?.name ?? 'Item'} (${w}×${h}) won't fit — free up space first.`
+              return `${base?.name ?? 'Item'} (${w}×${h}) 无法放入 — 请先腾出空间。`
             }
             commitEquippedItem(activeSlot, item)
             if (item) useBuild.getState().addStashItem(item)

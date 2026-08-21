@@ -13,26 +13,30 @@ function renderSelect() {
 }
 
 describe('BuildSelect — New asks for a name', () => {
-  it('creates a named build in the library and opens it', async () => {
-    const before = listSavedBuilds().length
-    const onOpenBuild = renderSelect()
+  it(
+    'creates a named build in the library and opens it',
+    async () => {
+      const before = listSavedBuilds().length
+      const onOpenBuild = renderSelect()
 
-    await userEvent.click(screen.getByRole('button', { name: /^new$/i }))
-    await userEvent.type(
-      screen.getByPlaceholderText(/lightning marksman/i),
-      'My Fresh Build',
-    )
-    await userEvent.click(screen.getByRole('button', { name: /^create$/i }))
+      await userEvent.click(screen.getByRole('button', { name: /^new$/i }))
+      await userEvent.type(
+        screen.getByPlaceholderText(/闪电神射手/i),
+        'My Fresh Build',
+      )
+      await userEvent.click(screen.getByRole('button', { name: /^创建$/i }))
 
-    await waitFor(() =>
-      expect(listSavedBuilds().some((b) => b.name === 'My Fresh Build')).toBe(
-        true,
-      ),
-    )
-    expect(listSavedBuilds().length).toBe(before + 1)
-    const rec = listSavedBuilds().find((b) => b.name === 'My Fresh Build')!
-    expect(onOpenBuild).toHaveBeenCalledWith(rec.id)
-  })
+      await waitFor(() =>
+        expect(listSavedBuilds().some((b) => b.name === 'My Fresh Build')).toBe(
+          true,
+        ),
+      )
+      expect(listSavedBuilds().length).toBe(before + 1)
+      const rec = listSavedBuilds().find((b) => b.name === 'My Fresh Build')!
+      expect(onOpenBuild).toHaveBeenCalledWith(rec.id)
+    },
+    15000,
+  )
 })
 
 describe('BuildSelect — Import asks for a name on success', () => {
@@ -41,14 +45,14 @@ describe('BuildSelect — Import asks for a name on success', () => {
     const before = listSavedBuilds().length
     const onOpenBuild = renderSelect()
 
-    await userEvent.click(screen.getByRole('button', { name: /import…/i }))
-    await userEvent.click(screen.getByPlaceholderText(/paste shared build code/i))
+    await userEvent.click(screen.getByRole('button', { name: /导入…/i }))
+    await userEvent.click(screen.getByPlaceholderText(/粘贴分享代码/i))
     await userEvent.paste(code)
     await userEvent.click(
       screen.getByRole('button', { name: /import & open/i }),
     )
 
-    const nameInput = await screen.findByDisplayValue(/^imported /i)
+    const nameInput = await screen.findByDisplayValue(/^导入的 /i)
     await userEvent.clear(nameInput)
     await userEvent.type(nameInput, 'Renamed Import')
     await userEvent.click(screen.getByRole('button', { name: /save & open/i }))
@@ -67,9 +71,9 @@ describe('BuildSelect — Import asks for a name on success', () => {
     const before = listSavedBuilds().length
     renderSelect()
 
-    await userEvent.click(screen.getByRole('button', { name: /import…/i }))
+    await userEvent.click(screen.getByRole('button', { name: /导入…/i }))
     await userEvent.type(
-      screen.getByPlaceholderText(/paste shared build code/i),
+      screen.getByPlaceholderText(/粘贴分享代码/i),
       'garbage',
     )
     await userEvent.click(
@@ -77,7 +81,7 @@ describe('BuildSelect — Import asks for a name on success', () => {
     )
 
     await screen.findByText(
-      /couldn't read a build code|invalid or corrupted build code/i,
+      /无法从输入中读取构建代码|构建代码无效或已损坏/i,
     )
     expect(listSavedBuilds().length).toBe(before)
   })

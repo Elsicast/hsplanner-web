@@ -74,7 +74,7 @@ export function CharmSection({
 
   return (
     <GearPanel
-      title="Charm Inventory"
+      title="咒符背包"
       trailing={
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] whitespace-nowrap text-faint">
           <span
@@ -100,7 +100,7 @@ export function CharmSection({
             key={`blocked-${r}-${c}`}
             style={{ gridColumn: c + 1, gridRow: r + 1 }}
             className="rounded border border-dashed border-[#3a2a18] bg-[#070403] opacity-60"
-            aria-label="Blocked"
+            aria-label="封锁格"
           />
         ))}
 
@@ -182,7 +182,7 @@ export function CharmSection({
             disabled={!nextEmptySlotKey}
             style={{ gridColumn: col + 1, gridRow: row + 1 }}
             className="rounded-[3px] text-[10px] flex items-center justify-center border border-[#5a4528] bg-[#120c08] hover:border-accent-deep text-transparent hover:text-accent/40 cursor-pointer disabled:cursor-not-allowed"
-            aria-label="Empty charm slot"
+            aria-label="空的咒符槽位"
           >
             <span className="text-lg">+</span>
           </button>
@@ -197,8 +197,7 @@ export function CharmSection({
               'linear-gradient(180deg, rgba(60,30,28,0.4), rgba(44,22,20,0.25))',
           }}
         >
-          {overflow.length} charm{overflow.length === 1 ? '' : 's'} could not be
-          placed — remove some to free space.
+          {overflow.length} 个咒符无法放入 — 请移除部分以腾出空间。
         </div>
       )}
     </GearPanel>

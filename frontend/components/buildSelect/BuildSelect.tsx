@@ -223,20 +223,20 @@ export default function BuildSelect({
       try {
         raw = await fetchBuildCodeFromGist(text)
       } catch (e) {
-        return e instanceof GistShareError ? e.message : 'Could not fetch the Gist'
+        return e instanceof GistShareError ? e.message : '无法获取该 Gist'
       }
     }
     const code = parseBuildCodeFromInput(raw)
-    if (!code) return "Couldn't read a build code from input"
+    if (!code) return '无法从输入中读取构建代码'
     const decoded = decodeShareToBuild(code)
-    if (!decoded) return 'Invalid or corrupted build code'
+    if (!decoded) return '构建代码无效或已损坏'
     const cls = decoded.snapshot.classId
       ? getClass(decoded.snapshot.classId)
       : undefined
     setOverlay({
       kind: 'nameImport',
       code,
-      defaultName: `Imported ${cls?.name ?? 'build'}`,
+      defaultName: `导入的 ${cls?.name ?? '构建'}`,
     })
     return null
   }
@@ -245,7 +245,7 @@ export default function BuildSelect({
     const rec = importCodeToLibrary(code)
     setOverlay(null)
     if (!rec) {
-      flash('Invalid or corrupted build code')
+      flash('构建代码无效或已损坏')
       return
     }
     renameSavedBuild(rec.id, name)
@@ -260,21 +260,21 @@ export default function BuildSelect({
         raw = await fetchBuildCodeFromGist(text)
       } catch (e) {
         flash(
-          e instanceof GistShareError ? e.message : 'Could not fetch the Gist',
+          e instanceof GistShareError ? e.message : '无法获取该 Gist',
         )
         return
       }
     }
     const rec = importCodeToLibrary(parseBuildCodeFromInput(raw))
     if (!rec) {
-      if (isGist) flash('Invalid or corrupted build code')
+      if (isGist) flash('构建代码无效或已损坏')
       return
     }
     setSelectedId(rec.id)
     if (scope.kind === 'folder' || scope.kind === 'favorites') {
       setScope({ kind: 'unfiled' })
     }
-    flash(`Imported "${rec.name}" to Unfiled`)
+    flash(`已将“${rec.name}”导入到未分组`)
   }
 
   useEffect(() => {
@@ -294,7 +294,7 @@ export default function BuildSelect({
     const rec = duplicateSavedBuild(buildId)
     if (rec) {
       setSelectedId(rec.id)
-      flash(`Duplicated "${rec.name}"`)
+      flash(`已创建“${rec.name}”的副本`)
     }
   }
 
@@ -304,7 +304,7 @@ export default function BuildSelect({
     const build = lib.builds.find((b) => b.id === buildId)
     const profile = build ? getActiveProfile(build) : null
     if (!profile) {
-      flash('Nothing to share')
+      flash('没有可分享的内容')
       return
     }
     setShareBuildId(buildId)
@@ -398,10 +398,10 @@ export default function BuildSelect({
       const build = lib.builds.find((b) => b.id === ctx.id)
       if (!build) return []
       return [
-        { label: 'Open Build', kbd: '↵', onClick: () => onOpenBuild(build.id) },
-        { label: 'Duplicate', onClick: () => handleCopy(build.id) },
+        { label: '打开构建', kbd: '↵', onClick: () => onOpenBuild(build.id) },
+        { label: '创建副本', onClick: () => handleCopy(build.id) },
         {
-          label: 'Rename…',
+          label: '重命名…',
           kbd: 'F2',
           onClick: () =>
             setOverlay({
@@ -411,11 +411,11 @@ export default function BuildSelect({
             }),
         },
         {
-          label: build.favorite ? 'Unfavorite' : 'Favorite',
+          label: build.favorite ? '取消收藏' : '收藏',
           onClick: () => setSavedBuildFavorite(build.id, !build.favorite),
         },
         {
-          label: 'Move to folder…',
+          label: '移动到文件夹…',
           onClick: () =>
             setOverlay({
               kind: 'move',
@@ -424,7 +424,7 @@ export default function BuildSelect({
             }),
         },
         {
-          label: 'Edit tags…',
+          label: '编辑标签…',
           onClick: () =>
             setOverlay({
               kind: 'tags',
@@ -432,9 +432,9 @@ export default function BuildSelect({
               current: build.tags,
             }),
         },
-        { label: 'Share…', onClick: () => handleShare(build.id) },
+        { label: '分享…', onClick: () => handleShare(build.id) },
         {
-          label: 'Delete',
+          label: '删除',
           kbd: 'Del',
           danger: true,
           separatorBefore: true,
@@ -451,11 +451,11 @@ export default function BuildSelect({
     if (!folder) return []
     return [
       {
-        label: 'New subfolder…',
+        label: '新建子文件夹…',
         onClick: () => setOverlay({ kind: 'newFolder', parentId: folder.id }),
       },
       {
-        label: 'Rename folder…',
+        label: '重命名文件夹…',
         onClick: () =>
           setOverlay({
             kind: 'renameFolder',
@@ -464,7 +464,7 @@ export default function BuildSelect({
           }),
       },
       {
-        label: 'Delete folder',
+        label: '删除文件夹',
         danger: true,
         separatorBefore: true,
         onClick: () =>
@@ -481,7 +481,7 @@ export default function BuildSelect({
 
   const breadcrumb =
     scope.kind === 'folder'
-      ? (lib.folders.find((f) => f.id === scope.id)?.name ?? 'Folder')
+      ? (lib.folders.find((f) => f.id === scope.id)?.name ?? '文件夹')
       : SCOPE_LABEL[scope.kind]
 
   return (
@@ -511,7 +511,7 @@ export default function BuildSelect({
           </span>
         </div>
         <div className="ml-2.5 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-muted">
-          <span className="text-faint">Builds</span>
+          <span className="text-faint">构建库</span>
           <span className="text-faint">/</span>
           <span className="text-accent-hot">{breadcrumb}</span>
         </div>
@@ -519,7 +519,7 @@ export default function BuildSelect({
           {canClose && (
             <button type="button" onClick={onClose} className={HEADER_BTN_CLASS}>
               <span aria-hidden>←</span>
-              <span>Planner</span>
+              <span>规划器</span>
             </button>
           )}
         </div>
@@ -554,9 +554,9 @@ export default function BuildSelect({
           footer={
             <>
               <span className="mb-1 block text-[9px] font-semibold uppercase tracking-[0.18em] text-faint">
-                Local Library
+                本地资料库
               </span>
-              <span className="text-muted">{lib.builds.length}</span> builds ·{' '}
+              <span className="text-muted">{lib.builds.length}</span> 个构建 ·{' '}
               <span className="text-muted">
                 {approxKB({ builds: lib.builds, folders: lib.folders })}
               </span>
@@ -602,7 +602,7 @@ export default function BuildSelect({
           onShare={handleShare}
           onSwitchProfile={(buildId, profileId) => {
             if (switchSavedBuildProfile(buildId, profileId))
-              flash('Profile switched')
+              flash('已切换配置档')
           }}
           onAddProfile={(buildId) => setOverlay({ kind: 'addProfile', buildId })}
           onRenameProfile={(buildId, profileId, current) =>
@@ -610,7 +610,7 @@ export default function BuildSelect({
           }
           onDuplicateProfile={(buildId, profileId) => {
             if (duplicateSavedBuildProfile(buildId, profileId))
-              flash('Profile duplicated')
+              flash('配置档已复制')
           }}
           onRemoveProfile={(buildId, profileId, name) =>
             setOverlay({ kind: 'deleteProfile', buildId, profileId, name })
@@ -649,17 +649,17 @@ export default function BuildSelect({
         onRenameBuild={(buildId, name) => {
           renameSavedBuild(buildId, name)
           setOverlay(null)
-          flash('Build renamed')
+          flash('构建已重命名')
         }}
         onSaveTags={(buildId, tags) => {
           setSavedBuildTags(buildId, tags)
           setOverlay(null)
-          flash('Tags updated')
+          flash('标签已更新')
         }}
         onMove={(buildId, folderId) => {
           moveSavedBuildToFolder(buildId, folderId)
           setOverlay(null)
-          flash('Build moved')
+          flash('构建已移动')
         }}
         onCreateFolder={(name, parentId) => {
           const folder = createSavedFolder(name, parentId)
@@ -667,17 +667,17 @@ export default function BuildSelect({
             setExpanded((cur) => new Set(cur).add(parentId))
           }
           setOverlay(null)
-          flash('Folder created')
+          flash('文件夹已创建')
         }}
         onRenameFolder={(folderId, name) => {
           renameSavedFolder(folderId, name)
           setOverlay(null)
-          flash('Folder renamed')
+          flash('文件夹已重命名')
         }}
         onDeleteBuild={(buildId) => {
           deleteSavedBuild(buildId)
           setOverlay(null)
-          flash('Build deleted')
+          flash('构建已删除')
         }}
         onDeleteFolder={(folderId) => {
           deleteSavedFolder(folderId, false)
@@ -685,26 +685,26 @@ export default function BuildSelect({
             setScope({ kind: 'all' })
           }
           setOverlay(null)
-          flash('Folder deleted')
+          flash('文件夹已删除')
         }}
         onAddProfile={(buildId, name) => {
           const id = addSavedBuildProfile(buildId, name)
           setOverlay(null)
           flash(
             id
-              ? 'Profile added'
+              ? '配置档已添加'
               : 'Could not add profile — build code unreadable',
           )
         }}
         onRenameProfile={(buildId, profileId, name) => {
           renameSavedBuildProfile(buildId, profileId, name)
           setOverlay(null)
-          flash('Profile renamed')
+          flash('配置档已重命名')
         }}
         onDeleteProfile={(buildId, profileId) => {
           removeSavedBuildProfile(buildId, profileId)
           setOverlay(null)
-          flash('Profile deleted')
+          flash('配置档已删除')
         }}
       />
 

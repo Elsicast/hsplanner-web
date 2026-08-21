@@ -44,6 +44,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
+    maxWorkers: 4,
     setupFiles: ['./frontend/test/setup.ts'],
     include: ['{frontend,data}/**/*.{test,spec}.{ts,tsx}'],
     css: false,

@@ -86,7 +86,7 @@ export function RunewordPresets({
           id: rw.id,
           name: rw.name,
           tier: rw.runes.length,
-          kindLabel: 'RUNEWORD',
+          kindLabel: '符文之语',
           meta: `${runeSeq}${reqLabel}`,
           iconColor: 'var(--color-accent-hot)',
           searchTerms: [
@@ -126,10 +126,10 @@ export function RunewordPresets({
 
   return (
     <SectionCard
-      label="Runeword Presets"
+      label="符文之语预设"
       rightSlot={
         <span className="font-mono text-[10px] tabular-nums text-faint">
-          {compatible.length} compatible
+          {compatible.length} 个可用
         </span>
       }
     >
@@ -148,7 +148,7 @@ export function RunewordPresets({
               activeRw ? 'text-accent-hot' : 'italic text-faint'
             }`}
           >
-            {activeRw ? activeRw.name : 'Choose runeword…'}
+            {activeRw ? activeRw.name : '选择符文之语…'}
           </span>
           {activeRuneSeq && (
             <span className="truncate font-mono text-[10px] tabular-nums tracking-[0.04em] text-muted/80">
@@ -157,18 +157,18 @@ export function RunewordPresets({
           )}
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint group-hover:text-accent-hot">
-          Browse →
+          浏览 →
         </span>
       </button>
 
       {open && (
         <PickerModal
-          title="Pick Runeword"
-          sectionLabel="Runeword"
+          title="选择符文之语"
+          sectionLabel="符文之语"
           rows={pickerRows}
           selectedId={activeRunewordId ?? null}
-          searchPlaceholder="Search runewords…"
-          emptyMessage="No matching runewords"
+          searchPlaceholder="搜索符文之语…"
+          emptyMessage="没有匹配的符文之语"
           width={680}
           selectedPanel={renderSelectedPanel}
           onSelect={(id) => onApply(id)}

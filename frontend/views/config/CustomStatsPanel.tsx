@@ -57,13 +57,13 @@ function parseText(text: string, nameToKey: Map<string, string>): ParsedText {
       issues.push({
         line: idx + 1,
         message:
-          'Expected "<value> <stat name>", e.g. "100% Faster Cast Rate"',
+          '格式应为“<数值> <属性名>”，例如 “100% Faster Cast Rate”',
       })
       return
     }
     const statKey = nameToKey.get(m[2]!.trim().toLowerCase())
     if (statKey === undefined) {
-      issues.push({ line: idx + 1, message: `Unknown stat "${m[2]!.trim()}"` })
+      issues.push({ line: idx + 1, message: `未知属性 “${m[2]!.trim()}”` })
       return
     }
     stats.push({ statKey, value: m[1]!.replace(/\s+/g, '') })
@@ -116,8 +116,8 @@ export default function CustomStatsPanel() {
 
   return (
     <Panel
-      title="Custom Config"
-      subtitle="Add stats the engine doesn't compute yet — one per line: value, then stat name. They stack with regular sources and show up in tooltips. Per-profile."
+      title="自定义配置"
+      subtitle="添加引擎尚未计算的属性 — 每行一条：先数值，后属性名。它们与常规来源叠加并显示在提示中。按档案分别保存。"
       trailing={
         <CountBadge
           value={customStats.length}
@@ -146,7 +146,7 @@ export default function CustomStatsPanel() {
               key={issue.line}
               className="rounded-[3px] border border-stat-orange/40 bg-stat-orange/10 px-2.5 py-1.5 font-mono text-[10px] tracking-[0.04em] text-stat-orange"
             >
-              line {issue.line} · {issue.message}
+              第 {issue.line} 行 · {issue.message}
             </li>
           ))}
         </ul>
@@ -168,7 +168,7 @@ export default function CustomStatsPanel() {
               >
                 {applies
                   ? `→ ${formatValue(parsed, cs.statKey)} ${statDef(cs.statKey)?.name ?? cs.statKey}`
-                  : `→ ${statDef(cs.statKey)?.name ?? cs.statKey}: unparseable value "${cs.value}"`}
+                  : `→ ${statDef(cs.statKey)?.name ?? cs.statKey}: 无法解析的数值 “${cs.value}”`}
               </li>
             )
           })}

@@ -32,7 +32,7 @@ export default function StorageErrorBanner() {
       </svg>
       <div className="min-w-0 flex-1">
         <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-stat-red">
-          Save failed
+          保存失败
         </div>
         <p className="mt-0.5 text-[13px] leading-relaxed text-muted">
           {storageError}
@@ -41,10 +41,10 @@ export default function StorageErrorBanner() {
       <button
         type="button"
         onClick={dismissStorageError}
-        aria-label="Dismiss"
+        aria-label="关闭"
         className="shrink-0 rounded-[3px] border border-border-2 bg-panel-2 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
       >
-        Dismiss
+        关闭
       </button>
     </div>
   )

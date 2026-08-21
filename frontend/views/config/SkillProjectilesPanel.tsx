@@ -34,8 +34,8 @@ export default function SkillProjectilesPanel() {
 
   return (
     <Panel
-      title="Skill Projectile Counts"
-      subtitle="Manual override of how many projectiles a skill fires per cast (e.g. Multi Shot = 5, Fan of Knives = 7). Multiplies that skill's per-cast damage and DPS. Leave empty / set to 1 for skills that fire a single projectile."
+      title="技能投射物数量"
+      subtitle="手动覆盖技能每次施放发射的投射物数量（例如 Multi Shot = 5、Fan of Knives = 7）。该值会乘入技能的单次施放伤害与 DPS。只发射单个投射物的技能请留空 / 设为 1。"
       trailing={
         <CountBadge
           value={skillProjectileCount}

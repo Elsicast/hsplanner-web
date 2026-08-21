@@ -43,16 +43,16 @@ export function SlotRow({
   const badges: string[] = []
   if (base && equipped) {
     if (base.defenseMin !== undefined && base.defenseMax !== undefined)
-      badges.push(`Def ${base.defenseMin}–${base.defenseMax}`)
+      badges.push(`防 ${base.defenseMin}–${base.defenseMax}`)
     if (base.damageMin !== undefined && base.damageMax !== undefined)
-      badges.push(`Dmg ${base.damageMin}–${base.damageMax}`)
+      badges.push(`伤 ${base.damageMin}–${base.damageMax}`)
     if (equipped.socketCount > 0)
       badges.push(
         `${equipped.socketed.filter(Boolean).length}/${equipped.socketCount}◇`,
       )
     const stars = effectiveStars(slot.key, activeSeasonId, equipped.stars) ?? 0
     if (stars > 0) badges.push(`${'★'.repeat(stars)}`)
-    if (base.requiresLevel) badges.push(`L${base.requiresLevel}`)
+    if (base.requiresLevel) badges.push(`Lv${base.requiresLevel}`)
   }
 
   const button = (
@@ -103,15 +103,15 @@ export function SlotRow({
               {runeword ? runeword.name : base.name}
             </span>
             <span className="block truncate text-[10px] text-muted">
-              {runeword ? `Runeword · ${base.baseType}` : base.baseType}
+              {runeword ? `符文之语 · ${base.baseType}` : base.baseType}
             </span>
           </>
         ) : locked ? (
           <span className="block text-[11px] text-faint/60 italic">
-            locked · 2H weapon equipped
+            已锁定 · 已装备双手武器
           </span>
         ) : (
-          <span className="block text-[11px] text-faint italic">empty</span>
+          <span className="block text-[11px] text-faint italic">空</span>
         )}
       </span>
       {badges.length > 0 && (

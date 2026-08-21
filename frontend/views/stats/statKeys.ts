@@ -1,10 +1,10 @@
 export type FilterTab = 'all' | 'damage' | 'stats' | 'skills'
 
 export const FILTER_TABS: Array<{ id: FilterTab; label: string }> = [
-  { id: 'all', label: 'All' },
-  { id: 'damage', label: 'Damage' },
-  { id: 'stats', label: 'Stats' },
-  { id: 'skills', label: 'Skills' },
+  { id: 'all', label: '全部' },
+  { id: 'damage', label: '伤害' },
+  { id: 'stats', label: '属性' },
+  { id: 'skills', label: '技能' },
 ]
 
 const EHP_SEARCH_TERMS = [

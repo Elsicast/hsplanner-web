@@ -27,37 +27,37 @@ interface TagMeta {
 
 const TAG_META: Record<ChangelogTag, TagMeta> = {
   new: {
-    label: "NEW",
+    label: "新增",
     cls: "border-stat-green/50 text-stat-green",
     accent: "var(--color-stat-green)",
     bg: "linear-gradient(180deg, rgba(28,52,34,0.55), rgba(20,38,24,0.35))",
   },
   improved: {
-    label: "IMPROVED",
+    label: "改进",
     cls: "border-stat-blue/50 text-stat-blue",
     accent: "var(--color-stat-blue)",
     bg: "linear-gradient(180deg, rgba(26,40,60,0.55), rgba(18,28,44,0.35))",
   },
   balance: {
-    label: "BALANCE",
+    label: "平衡",
     cls: "border-stat-orange/50 text-stat-orange",
     accent: "var(--color-stat-orange)",
     bg: "linear-gradient(180deg, rgba(58,42,22,0.55), rgba(42,30,18,0.35))",
   },
   fixes: {
-    label: "FIXES",
+    label: "修复",
     cls: "border-stat-red/50 text-stat-red",
     accent: "var(--color-stat-red)",
     bg: "linear-gradient(180deg, rgba(60,30,28,0.55), rgba(44,22,20,0.35))",
   },
   contributors: {
-    label: "NEW CONTRIBUTORS",
+    label: "新贡献者",
     cls: "border-stat-purple/50 text-stat-purple",
     accent: "var(--color-stat-purple)",
     bg: "linear-gradient(180deg, rgba(46,32,60,0.55), rgba(34,24,44,0.35))",
   },
   other: {
-    label: "NOTES",
+    label: "备注",
     cls: "border-border-2 text-muted",
     accent: "var(--color-accent-deep)",
     bg: "var(--color-panel-2)",
@@ -128,7 +128,7 @@ export default function UpdateModal({
     ? formatReleaseDate(info.publishedAt)
     : null;
 
-  const channelLabel = BUILD_CHANNEL === "dev" ? "DEV" : "STABLE";
+  const channelLabel = BUILD_CHANNEL === "dev" ? "开发版" : "稳定版";
   const channelTone =
     BUILD_CHANNEL === "dev"
       ? {
@@ -150,13 +150,13 @@ export default function UpdateModal({
       titleClassName="truncate"
       eyebrow={
         <>
-          {isChangelog ? "Changelog" : "Update"}
+          {isChangelog ? "更新日志" : "更新"}
           {isChangelog && (
             <span
               title={
                 BUILD_CHANNEL === "dev"
-                  ? "Development build"
-                  : "Stable build"
+                  ? "开发版构建"
+                  : "稳定版构建"
               }
               className={`ml-1 rounded-[3px] border px-1.5 py-px font-mono text-[9px] uppercase tracking-[0.18em] ${channelTone.color}`}
               style={{ background: channelTone.bg }}
@@ -167,12 +167,12 @@ export default function UpdateModal({
         </>
       }
       title={
-        isChangelog ? `HSPlanner v${info.current}` : "Update Available"
+        isChangelog ? `HSPlanner v${info.current}` : "有可用更新"
       }
       subtitle={
         isChangelog
-          ? "What's new in this version"
-          : "A newer version of HSPlanner is ready"
+          ? "此版本的新内容"
+          : "HSPlanner 有新版本可用"
       }
     >
         {!isChangelog && (
@@ -180,7 +180,7 @@ export default function UpdateModal({
             className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 border-b border-border px-5 py-4"
             style={{ background: "rgba(0,0,0,0.2)" }}
           >
-            <VersionCell label="Installed" version={info.current} tone="muted" />
+            <VersionCell label="已安装" version={info.current} tone="muted" />
             <span
               aria-hidden
               className="font-mono text-[18px] tracking-[0.18em] text-accent-deep"
@@ -188,7 +188,7 @@ export default function UpdateModal({
               ▸
             </span>
             <VersionCell
-              label="Available"
+              label="可用"
               version={info.latest}
               tone="hot"
               align="right"
@@ -216,7 +216,7 @@ export default function UpdateModal({
                 className="inline-block h-1 w-1 rotate-45 bg-accent-deep"
               />
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent-hot/70">
-                Changelog
+                更新日志
               </span>
               {releaseDateText && (
                 <>
@@ -234,8 +234,8 @@ export default function UpdateModal({
           {sections.length === 0 ? (
             <p className="font-mono text-[12px] tracking-[0.04em] text-muted italic">
               {info.body
-                ? "No structured changelog detected."
-                : "No release notes available."}
+                ? "未检测到结构化的更新日志。"
+                : "暂无发行说明。"}
             </p>
           ) : (
             <div className="space-y-4">
@@ -252,7 +252,7 @@ export default function UpdateModal({
             style={{ background: "rgba(0,0,0,0.25)" }}
           >
             {info.assetSize !== undefined && (
-              <MetaCell label="Size" value={formatBytes(info.assetSize)} />
+              <MetaCell label="大小" value={formatBytes(info.assetSize)} />
             )}
             {info.assetSha && (
               <MetaCell
@@ -263,9 +263,9 @@ export default function UpdateModal({
             )}
             <span className="ml-auto inline-flex items-center gap-1.5">
               <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-faint">
-                Channel
+                渠道
               </span>
-              <span className="font-mono text-[11px] text-text">stable</span>
+              <span className="font-mono text-[11px] text-text">稳定版</span>
             </span>
           </section>
         )}
@@ -284,7 +284,7 @@ export default function UpdateModal({
                 onChange={(e) => onAutoInstallChange(e.target.checked)}
                 disabled={isBusy}
               />
-              Auto-install on quit
+              退出时自动安装
             </label>
             <div className="ml-auto flex items-center gap-2">
               <button
@@ -293,7 +293,7 @@ export default function UpdateModal({
                 disabled={isBusy}
                 className={MODAL_BTN_CLASS}
               >
-                Remind Me Later
+                稍后提醒
               </button>
               <button
                 type="button"
@@ -301,7 +301,7 @@ export default function UpdateModal({
                 disabled={isBusy}
                 className={MODAL_BTN_CLASS}
               >
-                Skip This Version
+                跳过此版本
               </button>
               <button
                 type="button"
@@ -447,25 +447,25 @@ function formatReleaseDate(iso: string): string {
 }
 
 function progressLabel(p: InstallProgress | null): string {
-  if (!p) return "↓ Download & Install";
+  if (!p) return "↓ 下载并安装";
   switch (p.phase) {
     case "checking":
-      return "Checking…";
+      return "检查中…";
     case "downloading": {
       if (p.bytesTotal && p.bytesTotal > 0 && p.bytesDownloaded !== undefined) {
         const pct = Math.floor((p.bytesDownloaded / p.bytesTotal) * 100);
-        return `Downloading ${pct}%`;
+        return `正在下载 ${pct}%`;
       }
-      return "Downloading…";
+      return "正在下载…";
     }
     case "installing":
-      return "Installing…";
+      return "正在安装…";
     case "done":
-      return "Done";
+      return "完成";
     case "error":
-      return "Retry";
+      return "重试";
     default:
-      return "↓ Download & Install";
+      return "↓ 下载并安装";
   }
 }
 
@@ -502,7 +502,7 @@ function ProgressBlock({ progress }: { progress: InstallProgress }) {
                 : { boxShadow: "0 0 6px rgba(224,184,100,0.6)" }
             }
           />
-          {isError ? "Error" : phaseLabel(progress.phase)}
+          {isError ? "错误" : phaseLabel(progress.phase)}
         </span>
         {bytes && (
           <span className="font-mono text-[11px] tabular-nums text-faint">
@@ -512,7 +512,7 @@ function ProgressBlock({ progress }: { progress: InstallProgress }) {
       </div>
       {isError ? (
         <p className="font-mono text-[11px] text-stat-red">
-          {progress.error ?? "Install failed"}
+          {progress.error ?? "安装失败"}
         </p>
       ) : (
         <div
@@ -541,13 +541,13 @@ function ProgressBlock({ progress }: { progress: InstallProgress }) {
 function phaseLabel(phase: InstallProgress["phase"]): string {
   switch (phase) {
     case "checking":
-      return "Checking for update";
+      return "正在检查更新";
     case "downloading":
-      return "Downloading";
+      return "正在下载";
     case "installing":
-      return "Installing";
+      return "正在安装";
     case "done":
-      return "Done";
+      return "完成";
     default:
       return "";
   }

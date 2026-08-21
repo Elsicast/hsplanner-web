@@ -25,12 +25,12 @@ export function tierLabel(
   nodeType: string | undefined,
   tier: TreeNode['tier'],
 ): string {
-  if (nodeType === 'jewelry') return 'Jewelry Socket'
-  if (nodeType === 'warp') return 'Warp Node'
-  if (nodeType === 'root') return 'Starting Node'
-  if (nodeType === 'big') return 'Notable'
-  if (tier === 'keystone') return 'Keystone'
-  return 'Minor'
+  if (nodeType === 'jewelry') return '珠宝插槽'
+  if (nodeType === 'warp') return '传送门节点'
+  if (nodeType === 'root') return '起始节点'
+  if (nodeType === 'big') return '核心天赋'
+  if (tier === 'keystone') return '基石'
+  return '小天赋'
 }
 
 export function classifyTier(r: number): TreeNode['tier'] {

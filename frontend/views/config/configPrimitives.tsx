@@ -51,7 +51,7 @@ export function CountBadge({
         {value}
       </span>
       {total !== undefined && <span className="text-faint"> / {total}</span>}{' '}
-      {total !== undefined ? 'active' : 'override' + (value === 1 ? '' : 's')}
+      {total !== undefined ? '生效' : '覆盖'}
     </span>
   )
 }

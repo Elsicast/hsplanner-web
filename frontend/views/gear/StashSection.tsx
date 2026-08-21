@@ -43,7 +43,7 @@ function StashRow({ entry }: { entry: StashEntry }) {
     badges.push(
       `${entry.item.socketed.filter(Boolean).length}/${entry.item.socketCount}◇`,
     )
-  if (entry.item.affixes.length > 0) badges.push(`${entry.item.affixes.length} aff`)
+  if (entry.item.affixes.length > 0) badges.push(`${entry.item.affixes.length} 词缀`)
 
   const targets = equipTargets(entry.item, inventory, allocatedTreeNodes)
   const equipTo = (slot: SlotKey) =>
@@ -89,7 +89,7 @@ function StashRow({ entry }: { entry: StashEntry }) {
           compact
           searchable={false}
           value={null}
-          placeholder="Equip"
+          placeholder="装备"
           options={targets.map((k) => ({ id: k, label: slotName(k) }))}
           onChange={(id) => id && equipTo(id as SlotKey)}
         />
@@ -99,19 +99,19 @@ function StashRow({ entry }: { entry: StashEntry }) {
           disabled={targets.length === 0}
           title={
             targets.length === 0
-              ? 'No slot can take this item right now'
+              ? '当前没有可装备此物品的槽位'
               : undefined
           }
           onClick={() => targets[0] && equipTo(targets[0])}
           className="shrink-0 rounded-[3px] border border-accent-deep px-2 py-1 font-mono text-[9px] font-semibold uppercase tracking-[0.14em] text-accent-hot transition-colors hover:bg-accent-hot/10 disabled:cursor-not-allowed disabled:border-border disabled:text-faint disabled:hover:bg-transparent"
         >
-          Equip
+          装备
         </button>
       )}
       <button
         type="button"
         onClick={() => removeEntry(entry.id)}
-        aria-label={`Remove ${base.name} from stash`}
+        aria-label={`从仓库移除 ${base.name}`}
         className="shrink-0 rounded-[3px] border border-border px-1.5 py-1 text-[11px] leading-none text-faint transition-colors hover:border-stat-red/60 hover:text-stat-red"
       >
         ×
@@ -138,7 +138,7 @@ export function StashSection() {
 
   const groupOptions = useMemo<DropdownOption[]>(
     () => [
-      { id: 'all', label: 'All slots' },
+      { id: 'all', label: '全部槽位' },
       ...groups.map((g) => ({
         id: g,
         label: g.charAt(0).toUpperCase() + g.slice(1),
@@ -149,7 +149,7 @@ export function StashSection() {
 
   return (
     <GearPanel
-      title="Stash"
+      title="仓库"
       trailing={
         <span className="flex items-center gap-2">
           {groups.length > 1 && (
@@ -165,15 +165,15 @@ export function StashSection() {
             <span className={entries.length > 0 ? 'text-accent-hot' : 'text-muted'}>
               {filtered.length}
             </span>{' '}
-            saved
+            已保存
           </span>
         </span>
       }
     >
       {filtered.length === 0 ? (
         <p className="m-0 text-[11px] text-faint italic">
-          Items you equip are snapshotted here — re-equip a saved configuration
-          anytime to compare setups without rebuilding them.
+          你装备的物品会快照保存到这里 —
+          可随时重新装备已保存的配置，无需重建即可对比不同搭配。
         </p>
       ) : (
         <ul

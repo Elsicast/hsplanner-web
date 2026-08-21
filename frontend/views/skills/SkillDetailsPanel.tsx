@@ -73,11 +73,10 @@ export function SkillDetailsPanel({
               className="inline-block h-1 w-1 rotate-45 bg-accent-hot"
               style={{ boxShadow: '0 0 6px rgba(224,184,100,0.5)' }}
             />
-            Details
+            详情
           </div>
           <p className="font-mono text-[11px] leading-relaxed tracking-[0.04em] text-muted">
-            Click a skill to inspect its damage, mana cost, synergies, and
-            subtree bonuses.
+            点击技能以查看其伤害、法力消耗、协同效果和子树加成。
           </p>
         </div>
 
@@ -87,15 +86,15 @@ export function SkillDetailsPanel({
               aria-hidden
               className="inline-block h-1 w-1 rotate-45 bg-accent-deep"
             />
-            Controls
+            操作
           </div>
           <ul className="space-y-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-            <ControlsRow keys="L-CLICK" label="Select skill" />
-            <ControlsRow keys="+" label="Add a point" />
-            <ControlsRow keys="R-CLICK" label="Remove a point" />
-            <ControlsRow keys="SHIFT" label="5 points at a time" />
-            <ControlsRow keys="CTRL/CMD+SHIFT" label="All the points" />
-            <ControlsRow keys={<GearIcon className="h-3 w-3" />} label="Open subtree" />
+            <ControlsRow keys="L-CLICK" label="选择技能" />
+            <ControlsRow keys="+" label="加 1 点" />
+            <ControlsRow keys="R-CLICK" label="减 1 点" />
+            <ControlsRow keys="SHIFT" label="一次加 5 点" />
+            <ControlsRow keys="CTRL/CMD+SHIFT" label="一次加全部点数" />
+            <ControlsRow keys={<GearIcon className="h-3 w-3" />} label="打开子树" />
           </ul>
         </div>
 
@@ -105,7 +104,7 @@ export function SkillDetailsPanel({
               aria-hidden
               className="inline-block h-1 w-1 rotate-45 bg-accent-deep"
             />
-            Damage Types
+            伤害类型
           </div>
           <ul className="grid grid-cols-2 gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
             <DamageLegend type="physical" />
@@ -188,13 +187,13 @@ export function SkillDetailsPanel({
                 : undefined
             }
           >
-            {isActive ? '✓ Active' : '+ Active'}
+            {isActive ? '✓ 启用' : '+ 启用'}
           </button>
         )}
       </div>
       <div className="mb-3 flex items-center gap-2 font-mono text-[12px] tabular-nums">
         <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-          Rank
+          等级
         </span>
         <span className="text-accent-hot">
           {hasBonus ? effLabel : currentRank}
@@ -217,7 +216,7 @@ export function SkillDetailsPanel({
           {tagView.tags.map((t) => (
             <span
               key={t}
-              title={tagView.added.has(t) ? 'Added by subskill' : undefined}
+              title={tagView.added.has(t) ? '由子技能添加' : undefined}
               className={`rounded-[3px] border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-accent-hot/80 ${
                 tagView.added.has(t)
                   ? 'border-accent-hot/80'
@@ -234,7 +233,7 @@ export function SkillDetailsPanel({
           {tagView.removed.map((t) => (
             <span
               key={t}
-              title="Removed by subskill"
+              title="由子技能移除"
               className="rounded-[3px] border border-border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] text-faint line-through opacity-60"
             >
               {t}
@@ -243,13 +242,13 @@ export function SkillDetailsPanel({
         </div>
       )}
       {(hasBonus || hasAuraBonus) && (
-        <DetailBlock title="Skill bonuses">
+        <DetailBlock title="技能加成">
           <div className="space-y-1 text-[12px] tabular-nums">
             {hasBonus && (
               <>
                 {(allSkillsBonus[0] !== 0 || allSkillsBonus[1] !== 0) && (
                   <div className="flex justify-between">
-                    <span className="text-muted">+ to All Skills</span>
+                    <span className="text-muted">+ 所有技能</span>
                     <span className="text-accent-hot">
                       +{formatPair(allSkillsBonus)}
                     </span>
@@ -259,8 +258,8 @@ export function SkillDetailsPanel({
                   skill.damageType && (
                     <div className="flex justify-between">
                       <span className="text-muted">
-                        + to {skill.damageType[0]!.toUpperCase()}
-                        {skill.damageType.slice(1)} Skills
+                        + {skill.damageType[0]!.toUpperCase()}
+                        {skill.damageType.slice(1)} 技能
                       </span>
                       <span className="text-accent-hot">
                         +{formatPair(elementSkillsBonus)}
@@ -269,7 +268,7 @@ export function SkillDetailsPanel({
                   )}
                 {tagSkillsBonuses.map((row) => (
                   <div key={row.key} className="flex justify-between">
-                    <span className="text-muted">+ to {row.label} Skills</span>
+                    <span className="text-muted">+ {row.label} 技能</span>
                     <span className="text-accent-hot">
                       +{formatPair(row.value)}
                     </span>
@@ -277,7 +276,7 @@ export function SkillDetailsPanel({
                 ))}
                 {(itemBonus[0] !== 0 || itemBonus[1] !== 0) && (
                   <div className="flex justify-between">
-                    <span className="text-muted">+ to {skill.name}</span>
+                    <span className="text-muted">+ {skill.name}</span>
                     <span className="text-accent-hot">
                       +{formatPair(itemBonus)}
                     </span>
@@ -287,7 +286,7 @@ export function SkillDetailsPanel({
             )}
             {hasAuraBonus && (
               <div className="flex justify-between">
-                <span className="text-muted">Buffing Aura Effectiveness</span>
+                <span className="text-muted">增益光环效果</span>
                 <span className="text-accent-hot">
                   {formatStatPair(
                     'buffing_aura_effectiveness',

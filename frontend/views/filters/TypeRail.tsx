@@ -23,10 +23,10 @@ export function TypeRail({ filter, activeId, onSelect }: TypeRailProps) {
 
   return (
     <Panel
-      title="Item types"
+      title="物品类型"
       trailing={
         <span
-          title={`${editedCount} of ${rows.length} types edited`}
+          title={`${editedCount}/${rows.length} 个类型已编辑`}
           className="shrink-0 font-mono text-[10px] tracking-[0.14em] text-faint"
         >
           <span className={editedCount > 0 ? 'text-accent-hot' : 'text-muted'}>
@@ -63,7 +63,7 @@ export function TypeRail({ filter, activeId, onSelect }: TypeRailProps) {
                     {summary.raritiesHidden > 0 && (
                       <span
                         className="text-stat-red/80"
-                        title={`${summary.raritiesHidden} rarity/tier cells hidden`}
+                        title={`${summary.raritiesHidden} 个稀有度/阶级单元格已隐藏`}
                       >
                         ◆
                       </span>
@@ -71,7 +71,7 @@ export function TypeRail({ filter, activeId, onSelect }: TypeRailProps) {
                     {summary.hidden.size > 0 && (
                       <span
                         className="text-faint"
-                        title={`${summary.hidden.size} affixes hidden`}
+                        title={`${summary.hidden.size} 个词缀已隐藏`}
                       >
                         ✕{summary.hidden.size}
                       </span>
@@ -79,7 +79,7 @@ export function TypeRail({ filter, activeId, onSelect }: TypeRailProps) {
                     {summary.highlighted.size > 0 && (
                       <span
                         className="text-accent-hot"
-                        title={`${summary.highlighted.size} affixes highlighted`}
+                        title={`${summary.highlighted.size} 个词缀已高亮`}
                       >
                         ★{summary.highlighted.size}
                       </span>
@@ -87,7 +87,7 @@ export function TypeRail({ filter, activeId, onSelect }: TypeRailProps) {
                   </span>
                 ) : (
                   <span className="shrink-0 font-mono text-[9px] uppercase tracking-[0.12em] text-faint/50">
-                    default
+                    默认
                   </span>
                 )}
               </button>

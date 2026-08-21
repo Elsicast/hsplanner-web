@@ -61,11 +61,9 @@ export default function JewelSocketModal({
 
   const statusText = pending
     ? pending.kind === 'uncut'
-      ? `Uncut Jewel · ${pending.affixes.length} affix${
-          pending.affixes.length === 1 ? '' : 'es'
-        }`
+      ? `未切割珠宝 · ${pending.affixes.length} 条词缀`
       : describeItem(pending.id)
-    : 'Empty socket'
+    : '空插槽'
 
   return (
     <Modal
@@ -73,16 +71,16 @@ export default function JewelSocketModal({
       panelClassName="h-[88vh] w-[640px] max-w-[94vw]"
       eyebrow={
         <>
-          Jewelry Socket <span className="text-accent-hot">#{nodeId}</span>
+          珠宝插槽 <span className="text-accent-hot">#{nodeId}</span>
         </>
       }
-      title="Insert Socketable"
+      title="镶嵌物品"
     >
         <div className="grid grid-cols-2 border-b border-border bg-bg">
           {(
             [
-              { id: 'items', label: 'Gems / Runes / Jewels' },
-              { id: 'uncut', label: 'Craft Uncut Jewel' },
+              { id: 'items', label: '宝石 / 符文 / 珠宝' },
+              { id: 'uncut', label: '制作未切割珠宝' },
             ] as const
           ).map((t) => (
             <button
@@ -147,7 +145,7 @@ export default function JewelSocketModal({
                 onClick={() => setPending(null)}
                 className="rounded-[3px] border border-border-2 bg-transparent px-3.5 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:border-stat-red hover:text-stat-red"
               >
-                Clear
+                清空
               </button>
             )}
             <button
@@ -166,7 +164,7 @@ export default function JewelSocketModal({
                     }
               }
             >
-              {pending == null && current != null ? 'Remove' : 'Insert'}
+              {pending == null && current != null ? '移除' : '镶嵌'}
             </button>
           </div>
         </footer>
@@ -223,7 +221,7 @@ function buildRows(): Row[] {
     out.push({
       id: g.id,
       kind: 'gem',
-      kindLabel: g.name.toLowerCase().includes('jewel') ? 'Jewel' : 'Gem',
+      kindLabel: g.name.toLowerCase().includes('jewel') ? '珠宝' : '宝石',
       name: g.name,
       tier: g.tier,
       stats: fmtStats(g.stats),
@@ -233,7 +231,7 @@ function buildRows(): Row[] {
     out.push({
       id: r.id,
       kind: 'rune',
-      kindLabel: 'Rune',
+      kindLabel: '符文',
       name: r.name,
       tier: r.tier,
       stats: fmtStats(r.stats),
@@ -284,7 +282,7 @@ function ItemsTab({
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search gems / runes / jewels…"
+            placeholder="搜索宝石 / 符文 / 珠宝…"
             className="w-full rounded-[3px] border border-border-2 px-3 py-2 pl-9 text-text placeholder:text-faint focus:border-accent-deep focus:outline-none focus:ring-2 focus:ring-accent-hot/15"
             style={{
               background:
@@ -297,7 +295,7 @@ function ItemsTab({
 
       <div className="js-list min-h-0 flex-1 overflow-y-auto py-1">
         {rows.length === 0 && (
-          <div className="p-8 text-center text-sm text-muted">No matches</div>
+          <div className="p-8 text-center text-sm text-muted">无匹配结果</div>
         )}
         {rows.map((r) => {
           const selected =
@@ -428,7 +426,7 @@ function UncutTab({
       <div className="flex items-center justify-between border-b border-border px-4 py-3">
         <div className="font-mono text-[11px] tracking-[0.06em] text-muted">
           <span className="font-semibold text-accent-hot">{affixes.length}</span>{' '}
-          / {UNCUT_JEWEL_MAX_AFFIXES} affixes
+          / {UNCUT_JEWEL_MAX_AFFIXES} 词缀
         </div>
         <button
           disabled={affixes.length >= UNCUT_JEWEL_MAX_AFFIXES}
@@ -439,7 +437,7 @@ function UncutTab({
           }}
         >
           <span className="text-[14px] leading-none text-[#fff0c4]">+</span>
-          Add affix
+          添加词缀
         </button>
       </div>
 
@@ -465,10 +463,10 @@ function UncutTab({
             </svg>
           </div>
           <div className="mb-1.5 text-[14px] font-semibold tracking-[0.08em] text-muted">
-            No affixes yet
+            暂无词缀
           </div>
           <div className="font-mono text-[10px] tracking-[0.1em] text-faint">
-            Click{' '}
+            点击{' '}
             <kbd
               className="rounded-[2px] border px-1.5 py-0.5 font-mono text-[10px] text-accent-hot"
               style={{
@@ -476,9 +474,9 @@ function UncutTab({
                 borderColor: 'rgba(224,184,100,0.25)',
               }}
             >
-              + Add affix
+              + 添加词缀
             </kbd>{' '}
-            to roll
+            开始随机
           </div>
         </div>
       ) : (
@@ -550,7 +548,7 @@ function UncutAffixCard({
         style={{ gridTemplateColumns: 'auto 1fr auto auto' }}
       >
         <span className="font-mono text-[10px] text-stat-red">!</span>
-        <span className="text-stat-red text-xs">unknown affix: {affix.affixId}</span>
+        <span className="text-stat-red text-xs">未知词缀：{affix.affixId}</span>
         <span />
         <button
           onClick={onRemove}
@@ -595,14 +593,14 @@ function UncutAffixCard({
         <button
           onClick={onRemove}
           className="flex h-5 w-5 items-center justify-center rounded-[2px] border border-border-2 text-[12px] leading-none text-faint transition-colors hover:border-stat-red hover:text-stat-red"
-          aria-label="Remove affix"
+          aria-label="移除词缀"
         >
           ×
         </button>
       </div>
       <div className="mt-2.5 flex flex-wrap items-center gap-3 pl-[34px] font-mono text-[10px] tracking-[0.06em] text-faint">
         <label className="flex items-center gap-2">
-          <span>tier</span>
+          <span>阶级</span>
           <Dropdown
             compact
             searchable={false}
@@ -622,7 +620,7 @@ function UncutAffixCard({
           />
         </label>
         <label className="flex items-center gap-2">
-          <span>roll</span>
+          <span>随机值</span>
           <input
             type="number"
             min={min}
@@ -701,8 +699,8 @@ function AffixGroupPicker({
   return (
     <Modal
       onClose={onClose}
-      eyebrow="Jewel Affix"
-      title="Pick an affix"
+      eyebrow="珠宝词缀"
+      title="选择词缀"
       panelClassName="h-[80vh] w-[560px] max-w-[92vw]"
     >
       <div className="border-b border-border px-3 py-2">
@@ -721,7 +719,7 @@ function AffixGroupPicker({
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search affixes…"
+            placeholder="搜索词缀…"
             className="w-full rounded-[3px] border border-border-2 px-3 py-2 pl-9 text-text placeholder:text-faint focus:border-accent-deep focus:outline-none focus:ring-2 focus:ring-accent-hot/15"
             style={{
               background:
@@ -745,14 +743,14 @@ function AffixGroupPicker({
             >
               <span className="text-[13px] text-text">{g.description}</span>
               <span className="font-mono text-[10px] tracking-[0.06em] text-faint">
-                {g.tiers} tier{g.tiers === 1 ? '' : 's'}
+                {g.tiers} 个阶级
               </span>
             </button>
           )
         })}
         {rows.length === 0 && (
           <div className="p-6 text-center text-sm text-muted">
-            No matches
+            无匹配结果
           </div>
         )}
       </div>

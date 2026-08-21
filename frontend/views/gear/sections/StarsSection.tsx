@@ -11,14 +11,14 @@ export function StarsSection({
   const bonusPct = stars * 8
   return (
     <SectionCard
-      label="Stars"
+      label="星辰"
       rightSlot={
         <span
           className={`font-mono text-[10px] tabular-nums tracking-[0.04em] ${
             stars > 0 ? 'text-accent-hot' : 'text-faint'
           }`}
         >
-          {stars > 0 ? `+${bonusPct}% to affixes` : 'no bonus'}
+          {stars > 0 ? `词缀 +${bonusPct}%` : '无加成'}
         </span>
       }
     >
@@ -31,7 +31,7 @@ export function StarsSection({
               key={i}
               type="button"
               onClick={() => onChange(stars === target ? target - 1 : target)}
-              aria-label={`${target} star${target === 1 ? '' : 's'}`}
+              aria-label={`${target} 星`}
               className={`text-[20px] leading-none transition-all ${
                 filled
                   ? 'text-accent-hot hover:text-[#fff0c4]'
@@ -56,13 +56,12 @@ export function StarsSection({
             onClick={() => onChange(0)}
             className="ml-2 rounded-xs border border-border-2 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint transition-colors hover:border-stat-red hover:text-stat-red"
           >
-            Clear
+            清空
           </button>
         )}
       </div>
       <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.14em] leading-snug text-faint">
-        +8% per star to user-added affixes — runeword & "+X to all skills" mods
-        excluded.
+        每颗星对用户添加的词缀 +8% — 不含符文之语与「+X 全技能」词缀。
       </p>
     </SectionCard>
   )

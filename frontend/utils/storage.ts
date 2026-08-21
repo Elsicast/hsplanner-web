@@ -34,7 +34,7 @@ export function removeStorage(key: string): void {
 }
 
 export class StorageWriteError extends Error {
-  constructor(message = 'Could not save to local storage — it may be full.') {
+  constructor(message = '无法保存到本地存储——可能已满。') {
     super(message)
     this.name = 'StorageWriteError'
   }

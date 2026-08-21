@@ -12,10 +12,10 @@ import { pickerItemsForSlot } from './pickerItems'
 import { GearItemRow } from './GearItemRow'
 
 const SORT_LABELS: Record<string, string> = {
-  defense: 'Defense',
-  weapon_damage: 'Weapon Damage',
-  block_chance: 'Block Chance',
-  sockets: 'Sockets',
+  defense: '防御',
+  weapon_damage: '武器伤害',
+  block_chance: '格挡几率',
+  sockets: '插槽数',
 }
 
 const PERCENT_STAT_KEYS = new Set(
@@ -75,7 +75,7 @@ export function ItemListRail({
         meta: `${count}`,
       }))
     return [
-      { id: 'default', label: 'Default' },
+      { id: 'default', label: '默认' },
       ...(dpsRankingEnabled ? [{ id: 'dps', label: 'DPS' }] : []),
       ...statOptions,
     ]
@@ -160,24 +160,24 @@ export function ItemListRail({
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Search by name, affix, or effect…"
+            placeholder="按名称、词缀或效果搜索…"
             className="w-full rounded-md border border-border bg-bg/60 px-3 py-2 pl-9 text-[13px] text-text placeholder:text-faint focus:border-accent-deep focus:outline-none focus:ring-2 focus:ring-accent-hot/15"
           />
         </div>
         <div className="mt-2 flex items-center gap-2">
           <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-faint">
-            Sort
+            排序
           </span>
           <Dropdown
             compact
             value={sortKey}
             options={sortOptions}
-            searchPlaceholder="Search stats…"
+            searchPlaceholder="搜索属性…"
             onChange={(id) => setSortKey(id ?? 'default')}
           />
           {wantDps && !dpsValues && (
             <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
-              computing…
+              计算中…
             </span>
           )}
         </div>
@@ -189,7 +189,7 @@ export function ItemListRail({
       >
         {sortedRows.length === 0 ? (
           <div className="p-10 text-center text-[13px] text-muted">
-            No items match
+            没有匹配的物品
           </div>
         ) : (
           groupedRows.map((g, gi) => (

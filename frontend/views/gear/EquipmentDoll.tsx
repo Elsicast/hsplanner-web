@@ -53,7 +53,7 @@ function SlotCell({
       type="button"
       data-tour={`slot-${slotKey}`}
       onClick={() => onSelect(slotKey)}
-      aria-label={`${name}: ${base ? (runeword?.name ?? base.name) : locked ? 'locked' : 'empty'}`}
+      aria-label={`${name}: ${base ? (runeword?.name ?? base.name) : locked ? '已锁定' : '空'}`}
       className={`relative flex items-center justify-center overflow-hidden rounded-[3px] border transition-colors ${sizeClass} ${border} ${
         active
           ? 'border-accent-hot bg-accent-hot/10 ring-1 ring-accent-hot/40'
@@ -135,13 +135,13 @@ export function EquipmentDoll({
   return (
     <GearPanel
       dataTour="gear-doll"
-      title="Equipment"
+      title="装备"
       trailing={
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
           <span className={equippedCount > 0 ? 'text-accent-hot' : 'text-muted'}>
             {equippedCount}
           </span>
-          <span className="text-faint"> / {dollSlots.length}</span> equipped
+          <span className="text-faint"> / {dollSlots.length}</span> 已装备
         </span>
       }
     >
@@ -169,7 +169,7 @@ export function EquipmentDoll({
           {cell('helmet', 'h-[88px] w-[88px]')}
         </div>
         <div style={{ gridArea: 'amulet' }} className="flex items-end justify-center">
-          {cell('amulet', 'h-[44px] w-[44px]', 'AMU')}
+          {cell('amulet', 'h-[44px] w-[44px]', '项链')}
         </div>
 
         <div style={{ gridArea: 'weapon' }} className="flex items-start justify-center">
@@ -183,9 +183,9 @@ export function EquipmentDoll({
         </div>
 
         <div style={{ gridArea: 'rings' }} className="flex items-center justify-center gap-2">
-          {cell('ring_1', 'h-[44px] w-[44px]', 'RING')}
+          {cell('ring_1', 'h-[44px] w-[44px]', '戒指')}
           {cell('belt', 'h-[44px] w-[68px]')}
-          {cell('ring_2', 'h-[44px] w-[44px]', 'RING')}
+          {cell('ring_2', 'h-[44px] w-[44px]', '戒指')}
         </div>
 
         <div style={{ gridArea: 'gloves' }} className="flex items-start justify-center">
@@ -202,8 +202,8 @@ export function EquipmentDoll({
                   <button
                     type="button"
                     onClick={() => setPotionDisabled(k, enabled)}
-                    aria-label={`${slotName(k)} effects ${enabled ? 'on' : 'off'}`}
-                    title={enabled ? 'Effects applied — click to disable' : 'Effects off — click to enable'}
+                    aria-label={`${slotName(k)} 效果 ${enabled ? '开启' : '关闭'}`}
+                    title={enabled ? '效果已生效 — 点击禁用' : '效果已关闭 — 点击启用'}
                     className={`h-[10px] w-[10px] rounded-full border transition-colors ${
                       enabled
                         ? 'border-accent-hot bg-accent-hot'

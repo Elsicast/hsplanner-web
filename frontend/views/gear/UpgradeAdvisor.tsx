@@ -7,7 +7,7 @@ import { useBuildPerformanceDeps } from '../../hooks/useBuildPerformanceDeps'
 import type { SlotKey } from '../../types'
 
 const ADVISOR_TITLE =
-  'Compares bare item bases via engine DPS: your current base vs the best base for the slot. Move affixes separately.'
+  '通过引擎 DPS 对比裸装备基底：当前基底 vs 该槽位最佳基底。词缀需单独迁移。'
 
 const GAIN_PCT_DECIMAL_THRESHOLD = 10
 
@@ -29,8 +29,8 @@ function formatEmptySlotNames(
     .map((s) => s.slotName)
   const remaining = emptySlots.length - EMPTY_SLOTS_PREVIEW_COUNT
   return remaining > 0
-    ? `${names.join(', ')}, +${remaining} more`
-    : names.join(', ')
+    ? `${names.join('、')}，还有 ${remaining} 个`
+    : names.join('、')
 }
 
 interface AdvisorRowProps {
@@ -132,7 +132,7 @@ export function UpgradeAdvisor({ onPickSlot }: UpgradeAdvisorProps) {
             aria-hidden
             className="inline-block h-1.5 w-1.5 rotate-45 bg-accent-hot"
           />
-          Upgrade advisor
+          升级建议
         </span>
         <button
           type="button"
@@ -146,33 +146,33 @@ export function UpgradeAdvisor({ onPickSlot }: UpgradeAdvisorProps) {
         >
           {state.phase === 'scanning'
             ? state.total === 0
-              ? 'Scanning…'
-              : `Scanning ${state.done}/${state.total}…`
-            : 'Scan for upgrades'}
+              ? '扫描中…'
+              : `正在扫描 ${state.done}/${state.total}…`
+            : '扫描升级机会'}
         </button>
       </div>
 
       {!hasSkill && (
         <p className="font-mono text-[12px] italic tracking-[0.04em] text-muted">
-          select a main skill first
+          请先选择一个主动技能
         </p>
       )}
 
       {hasSkill && state.phase === 'idle' && (
         <p className="font-mono text-[11px] tracking-[0.04em] text-faint">
-          scan compares your bare item bases against the best base per slot
+          扫描会将你的裸装备基底与每个槽位的最佳基底进行对比
         </p>
       )}
 
       {state.phase === 'error' && (
         <p className="font-mono text-[12px] italic tracking-[0.04em] text-muted">
-          scan failed — try again
+          扫描失败 — 请重试
         </p>
       )}
 
       {isEmpty && (
         <p className="font-mono text-[12px] italic tracking-[0.04em] text-muted">
-          no base upgrades found — your bases are optimal
+          未发现基底升级空间 — 你的基底已是最优
         </p>
       )}
 
@@ -181,9 +181,9 @@ export function UpgradeAdvisor({ onPickSlot }: UpgradeAdvisorProps) {
           {state.result.emptySlots.length > 0 && (
             <li>
               <AdvisorRow
-                label={`Empty slots (${state.result.emptySlots.length})`}
+                label={`空槽位 (${state.result.emptySlots.length})`}
                 detail={formatEmptySlotNames(state.result.emptySlots)}
-                value="fill first"
+                value="优先填补"
                 valueClassName="text-stat-red"
                 onClick={() => {
                   const firstEmpty = state.result.emptySlots[0]

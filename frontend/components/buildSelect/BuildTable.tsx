@@ -176,7 +176,7 @@ export function BuildTable({
         <span className="mr-0.5 shrink-0 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
           Filter
         </span>
-        <Chip label="All" on={!filtersActive} onClick={onClearFilters} />
+        <Chip label="全部" on={!filtersActive} onClick={onClearFilters} />
         {allTags.map((tag) => (
           <Chip
             key={tag}
@@ -201,7 +201,7 @@ export function BuildTable({
         <HeaderCell label="Name" col="name" sortCol={sortCol} sortDir={sortDir} onSort={onSort} />
         <HeaderCell label="Class" col="class" sortCol={sortCol} sortDir={sortDir} onSort={onSort} />
         <HeaderCell label="Lv" col="level" sortCol={sortCol} sortDir={sortDir} onSort={onSort} />
-        <span className="text-left text-faint">Season</span>
+        <span className="text-left text-faint">赛季</span>
         <HeaderCell label="Modified" col="date" sortCol={sortCol} sortDir={sortDir} onSort={onSort} />
       </div>
 
@@ -215,10 +215,10 @@ export function BuildTable({
         {builds.length === 0 ? (
           <div className="flex h-full flex-col items-center justify-center gap-1.5 px-6 text-center">
             <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
-              No builds here
+              此处暂无构建
             </div>
             <div className="text-[11px] text-muted">
-              Create a new build, import one, or pick another folder.
+              新建构建、导入构建，或选择其他文件夹。
             </div>
           </div>
         ) : (
@@ -373,7 +373,7 @@ export function BuildTable({
                   Ctrl V
                 </kbd>{' '}
                 anywhere — imported builds land in{' '}
-                <b className="font-semibold text-text">Unfiled</b>.
+                <b className="font-semibold text-text">未分组</b>。
               </p>
             </div>
           </div>

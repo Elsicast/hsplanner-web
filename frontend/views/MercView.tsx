@@ -82,9 +82,9 @@ function SkillRow({
           {skill.shared && (
             <span
               className="shrink-0 rounded-[2px] border border-stat-green/40 px-1 py-px font-mono text-[8.5px] uppercase tracking-[0.14em] text-stat-green"
-              title="This skill also benefits your hero"
+              title="此技能同时增益你的英雄"
             >
-              Hero
+              英雄
             </span>
           )}
         </span>
@@ -98,7 +98,7 @@ function SkillRow({
           onClick={() => onSetRank(rank - 1)}
           disabled={rank <= 0}
           className="h-6 w-6 rounded-[3px] border border-border-2 font-mono text-[12px] leading-none text-muted transition-colors hover:border-accent-deep hover:text-accent-hot disabled:cursor-not-allowed disabled:opacity-30"
-          aria-label={`Decrease ${skill.name} rank`}
+          aria-label={`降低 ${skill.name} 等级`}
         >
           −
         </button>
@@ -114,7 +114,7 @@ function SkillRow({
           onClick={() => onSetRank(rank + 1)}
           disabled={rank >= maxRank}
           className="h-6 w-6 rounded-[3px] border border-border-2 font-mono text-[12px] leading-none text-muted transition-colors hover:border-accent-deep hover:text-accent-hot disabled:cursor-not-allowed disabled:opacity-30"
-          aria-label={`Increase ${skill.name} rank`}
+          aria-label={`提升 ${skill.name} 等级`}
         >
           +
         </button>
@@ -156,7 +156,7 @@ export default function MercView() {
   const sharedEffects = useMemo(() => {
     const auras = mercGrantedAuras(mercInventory).map((a) => ({
       itemName: a.itemName,
-      effect: `Grants ${a.name} Level ${
+      effect: `赋予 ${a.name} 等级 ${
         a.levelMin === a.levelMax
           ? a.levelMin
           : `[${a.levelMin}-${a.levelMax}]`
@@ -188,24 +188,24 @@ export default function MercView() {
             className="inline-block h-1.5 w-1.5 rotate-45 bg-accent-hot"
             style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
           />
-          Loadout
+          配装
         </div>
         <div className="flex items-end justify-between gap-3">
           <h2
             className="m-0 text-[22px] font-semibold tracking-[0.02em] text-accent-hot"
             style={{ textShadow: '0 0 16px rgba(224,184,100,0.18)' }}
           >
-            Mercenary
+            佣兵
           </h2>
           <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
             {cls && (
               <>
                 <span>
-                  <span className="text-text">{usedSlots}</span> / {mercSlots.length} equipped
+                  <span className="text-text">{usedSlots}</span> / {mercSlots.length} 已装备
                 </span>
                 <span aria-hidden className="h-3 w-px bg-border" />
                 <span>
-                  <span className="text-text">{pointsSpent}</span> skill points
+                  <span className="text-text">{pointsSpent}</span> 技能点
                 </span>
                 <span aria-hidden className="h-3 w-px bg-border" />
                 <button
@@ -213,7 +213,7 @@ export default function MercView() {
                   onClick={resetMerc}
                   className="rounded-[3px] border border-border-2 bg-transparent px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-stat-red hover:text-stat-red"
                 >
-                  Dismiss
+                  解雇
                 </button>
               </>
             )}
@@ -293,24 +293,24 @@ export default function MercView() {
           }}
         >
           <p className="m-0 text-[13px] text-muted">
-            No mercenary hired — pick a class above.
+            未雇佣佣兵 — 请在上方选择一个职业。
           </p>
           <p className="mx-auto mb-0 mt-1.5 max-w-md text-[11px] leading-relaxed text-faint">
-            Mercenaries fight beside your hero. Their Magic Find counts for
-            your drops, and buffs from their items are shared with you.
+            佣兵与你的英雄并肩作战。他们的 Magic Find
+            计入你的掉落，其装备提供的增益会共享给你。
           </p>
         </div>
       ) : (
         <div className="grid items-start gap-4 lg:grid-cols-[2fr_1fr]">
           <div className="flex min-w-0 flex-col gap-4">
             <GearPanel
-              title="Loadout"
+              title="配装"
               trailing={
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
                   <span className={usedSlots > 0 ? 'text-accent-hot' : 'text-muted'}>
                     {usedSlots}
                   </span>
-                  <span className="text-faint"> / {mercSlots.length}</span> equipped
+                  <span className="text-faint"> / {mercSlots.length}</span> 已装备
                 </span>
               }
             >
@@ -330,13 +330,13 @@ export default function MercView() {
             </GearPanel>
 
             <GearPanel
-              title={`${cls.name} Skills`}
+              title={`${cls.name} 技能`}
               trailing={
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
                   <span className={pointsSpent > 0 ? 'text-accent-hot' : 'text-muted'}>
                     {pointsSpent}
                   </span>{' '}
-                  points
+                  点数
                 </span>
               }
             >
@@ -371,13 +371,13 @@ export default function MercView() {
                   className="inline-block h-1.5 w-1.5 rotate-45 bg-stat-green"
                   style={{ boxShadow: '0 0 8px rgba(116,201,138,0.5)' }}
                 />
-                Shared with Hero
+                与英雄共享
               </span>
             </div>
 
             <div
               className="flex items-baseline justify-between border-b border-border px-3 py-2"
-              title="Magic Find from the mercenary's gear counts toward your hero — see the Stats tab"
+              title="佣兵装备提供的 Magic Find 会计入你的英雄 — 见「属性」页签"
             >
               <span className="text-[12px] font-medium text-text">
                 Magic Find
@@ -391,12 +391,12 @@ export default function MercView() {
 
             <div className="px-3 py-2.5">
               <div className="mb-1.5 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
-                Item buffs
+                装备增益
               </div>
               {sharedEffects.length === 0 ? (
                 <p className="m-0 pb-1 text-[11px] italic text-muted">
-                  No shared item buffs — equip uniques with effects (e.g.
-                  Pearlescent Dream).
+                  暂无共享的装备增益 — 请装备带效果的 unique
+                  物品（例如 Pearlescent Dream）。
                 </p>
               ) : (
                 <ul className="m-0 flex list-none flex-col gap-1.5 p-0 pb-1">
@@ -414,11 +414,11 @@ export default function MercView() {
               )}
 
               <div className="mb-1.5 mt-2.5 border-t border-border pt-2 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
-                Skill effects
+                技能效果
               </div>
               {sharedSkills.length === 0 ? (
                 <p className="m-0 pb-1 text-[11px] italic text-muted">
-                  No hero-affecting skills leveled yet.
+                  尚未提升影响英雄的技能等级。
                 </p>
               ) : (
                 <ul className="m-0 flex list-none flex-col gap-1.5 p-0 pb-1">

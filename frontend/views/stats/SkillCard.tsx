@@ -161,7 +161,7 @@ export function SkillCard({
         <div className="font-medium text-text">
           {skill.name}{' '}
           <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-            rank{' '}
+            等级{' '}
             <span className={learned ? 'text-accent-hot' : 'text-faint'}>
               {effRankMin === effRankMax
                 ? effRankMin
@@ -186,12 +186,12 @@ export function SkillCard({
           >
             {formatRangeInt(damageBreakdown.finalMin, damageBreakdown.finalMax)}{' '}
             <span className="ml-0.5 font-mono text-[9px] font-normal uppercase tracking-[0.14em] text-faint">
-              {typeLabel} damage
+              {typeLabel} 伤害
             </span>
           </div>
         ) : hasDamage ? (
           <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint italic">
-            Not learned
+            未学习
           </div>
         ) : null}
       </div>
@@ -206,7 +206,7 @@ export function SkillCard({
         {tagView.tags.map((tag) => (
           <span
             key={tag}
-            title={tagView.added.has(tag) ? 'Added by subskill' : undefined}
+            title={tagView.added.has(tag) ? '由子技能添加' : undefined}
             className={`rounded-xs border px-1.5 py-0.5 font-semibold text-accent-hot ${
               tagView.added.has(tag)
                 ? 'border-accent-hot/80'
@@ -223,7 +223,7 @@ export function SkillCard({
         {tagView.removed.map((tag) => (
           <span
             key={tag}
-            title="Removed by subskill"
+            title="被子技能移除"
             className="rounded-xs border border-border px-1.5 py-0.5 font-semibold text-faint line-through opacity-60"
           >
             {tag}
@@ -239,13 +239,13 @@ export function SkillCard({
               <span className="font-mono font-medium text-text">
                 {formatRange(effectiveManaMin, effectiveManaMax)}
               </span>{' '}
-              mana
+              法力
               {baseManaMin !== undefined &&
                 baseManaMax !== undefined &&
                 mcrMax > 0 && (
                   <span className="text-faint">
                     {' '}
-                    (base {formatRange(baseManaMin, baseManaMax)})
+                    (基础 {formatRange(baseManaMin, baseManaMax)})
                   </span>
                 )}
             </span>
@@ -255,7 +255,7 @@ export function SkillCard({
               <span className="font-mono font-medium text-stat-red">
                 {formatRange(lifeCostMin ?? 0, lifeCostMax)}
               </span>{' '}
-              life
+              生命
             </span>
           )}
           {entitySwing && (
@@ -263,10 +263,10 @@ export function SkillCard({
               <span className="font-mono font-medium text-text">
                 {formatRange(entitySwing.min, entitySwing.max)}
               </span>{' '}
-              attacks/s
+              次攻击/秒
               <span className="text-faint">
                 {' '}
-                (base {formatDecimal(entitySwing.base)})
+                (基础 {formatDecimal(entitySwing.base)})
               </span>
             </span>
           )}
@@ -277,28 +277,28 @@ export function SkillCard({
                   {formatRange(effectiveCastRateMin, effectiveCastRateMax)}
                 </span>{' '}
                 {entityKind
-                  ? 'spawns/s'
+                  ? '次召唤/秒'
                   : skill.usesAttackSpeed
-                    ? 'throws/s'
-                    : 'casts/s'}
+                    ? '次投掷/秒'
+                    : '次施放/秒'}
                 {fcrMax > 0 && skill.baseCastRate !== undefined && (
                   <span className="text-faint">
                     {' '}
-                    (base {formatDecimal(skill.baseCastRate)})
+                    (基础 {formatDecimal(skill.baseCastRate)})
                   </span>
                 )}
               </span>
             )}
           {skill.movementDuringUse !== undefined && (
             <span>
-              Move{' '}
+              移动{' '}
               <span className="font-mono font-medium text-text">
                 {skill.movementDuringUse}%
               </span>
             </span>
           )}
           <span>
-            max rank{' '}
+            最大等级{' '}
             <span className="font-mono font-medium text-text">
               {skill.maxRank}
             </span>

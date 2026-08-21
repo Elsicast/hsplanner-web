@@ -101,7 +101,7 @@ describe('TutorialOverlay', () => {
     expect(screen.getByRole('dialog')).toBeInTheDocument()
     expect(screen.getByText(TUTORIAL_STEPS[0].title)).toBeInTheDocument()
     expect(
-      screen.getByText(`Tutorial · 1 / ${TUTORIAL_STEPS.length}`),
+      screen.getByText(`教程 · 1 / ${TUTORIAL_STEPS.length}`),
     ).toBeInTheDocument()
   })
 
@@ -115,15 +115,15 @@ describe('TutorialOverlay', () => {
 
   test('Next and Back move between steps', () => {
     renderOverlay()
-    fireEvent.click(screen.getByRole('button', { name: 'Next' }))
+    fireEvent.click(screen.getByRole('button', { name: '下一步' }))
     expect(screen.getByText(TUTORIAL_STEPS[1].title)).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: 'Back' }))
+    fireEvent.click(screen.getByRole('button', { name: '上一步' }))
     expect(screen.getByText(TUTORIAL_STEPS[0].title)).toBeInTheDocument()
   })
 
   test('Back is disabled on the first step', () => {
     renderOverlay()
-    expect(screen.getByRole('button', { name: 'Back' })).toBeDisabled()
+    expect(screen.getByRole('button', { name: '上一步' })).toBeDisabled()
   })
 
   test('arrow keys move between steps', () => {
@@ -138,14 +138,14 @@ describe('TutorialOverlay', () => {
     const { setSection } = renderOverlay()
     const treeIndex = TUTORIAL_STEPS.findIndex((s) => s.section === 'tree')
     expect(treeIndex).toBeGreaterThan(0)
-    const next = screen.getByRole('button', { name: 'Next' })
+    const next = screen.getByRole('button', { name: '下一步' })
     for (let i = 0; i < treeIndex; i++) fireEvent.click(next)
     expect(setSection).toHaveBeenCalledWith('tree')
   })
 
   test('Skip closes, marks the tour done and restores the section', () => {
     const { onClose, setSection } = renderOverlay()
-    fireEvent.click(screen.getByRole('button', { name: 'Skip tour' }))
+    fireEvent.click(screen.getByRole('button', { name: '跳过教程' }))
     expect(onClose).toHaveBeenCalledOnce()
     expect(window.localStorage.getItem(TUTORIAL_DONE_KEY)).toBe('1')
     expect(setSection).toHaveBeenLastCalledWith('gear')
@@ -168,7 +168,7 @@ describe('TutorialOverlay', () => {
     const modal = document.createElement('div')
     modal.setAttribute('data-tour', 'suggest-modal')
     const closeBtn = document.createElement('button')
-    closeBtn.setAttribute('aria-label', 'Close')
+    closeBtn.setAttribute('aria-label', '关闭')
     closeBtn.addEventListener('click', undoSpy)
     modal.appendChild(closeBtn)
     document.body.appendChild(modal)
@@ -179,7 +179,7 @@ describe('TutorialOverlay', () => {
         (s) => s.act === '[data-tour="tree-suggest"]',
       )
       expect(suggestIndex).toBeGreaterThan(0)
-      const next = screen.getByRole('button', { name: 'Next' })
+      const next = screen.getByRole('button', { name: '下一步' })
       for (let i = 0; i < suggestIndex; i++) fireEvent.click(next)
       await waitFor(() => expect(actSpy).toHaveBeenCalledOnce())
       expect(undoSpy).not.toHaveBeenCalled()
@@ -193,9 +193,9 @@ describe('TutorialOverlay', () => {
 
   test('Finish on the last step closes the tour', () => {
     const { onClose } = renderOverlay()
-    const next = screen.getByRole('button', { name: 'Next' })
+    const next = screen.getByRole('button', { name: '下一步' })
     for (let i = 0; i < TUTORIAL_STEPS.length - 1; i++) fireEvent.click(next)
-    fireEvent.click(screen.getByRole('button', { name: 'Finish' }))
+    fireEvent.click(screen.getByRole('button', { name: '完成' }))
     expect(onClose).toHaveBeenCalledOnce()
     expect(window.localStorage.getItem(TUTORIAL_DONE_KEY)).toBe('1')
   })

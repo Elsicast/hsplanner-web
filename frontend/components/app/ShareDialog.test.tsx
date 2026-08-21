@@ -70,7 +70,7 @@ async function pickMethod(
   label: string | RegExp,
 ) {
   await user.click(
-    screen.getByRole('button', { name: /build code|gist link|hsplanner\.app/i }),
+    screen.getByRole('button', { name: /构建代码|Gist 链接|hsplanner\.app/ }),
   )
   await user.click(screen.getByRole('option', { name: label }))
 }
@@ -81,9 +81,9 @@ describe('ShareDialog — build code', () => {
     vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
     renderDialog()
     expect(screen.getByDisplayValue('CODE')).toBeTruthy()
-    await user.click(screen.getByRole('button', { name: /copy code/i }))
+    await user.click(screen.getByRole('button', { name: /复制代码/ }))
     expect(navigator.clipboard.writeText).toHaveBeenCalledWith('CODE')
-    expect(await screen.findByText(/code copied/i)).toBeTruthy()
+    expect(await screen.findByText(/代码已复制/)).toBeTruthy()
   })
 })
 
@@ -92,8 +92,8 @@ describe('ShareDialog — gist link', () => {
     const user = userEvent.setup()
     vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
     renderDialog()
-    await pickMethod(user, 'Gist link')
-    await user.click(screen.getByRole('button', { name: /create link/i }))
+    await pickMethod(user, 'Gist 链接')
+    await user.click(screen.getByRole('button', { name: /创建链接/ }))
     await waitFor(() =>
       expect(
         screen.getByDisplayValue('https://gist.github.com/u/abc123'),
@@ -112,9 +112,9 @@ describe('ShareDialog — gist link', () => {
     vi.mocked(isGistSharingConfigured).mockReturnValue(false)
     const user = userEvent.setup()
     renderDialog()
-    await pickMethod(user, 'Gist link')
-    expect(screen.getByRole('button', { name: /create link/i })).toBeDisabled()
-    expect(screen.getByText(/not configured in this build/i)).toBeTruthy()
+    await pickMethod(user, 'Gist 链接')
+    expect(screen.getByRole('button', { name: /创建链接/ })).toBeDisabled()
+    expect(screen.getByText(/此构建中未配置/)).toBeTruthy()
   })
 })
 
@@ -126,8 +126,8 @@ describe('ShareDialog — hsplanner.app link', () => {
     const user = userEvent.setup()
     vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
     renderDialog({ createWebShare })
-    await pickMethod(user, /hsplanner\.app/i)
-    await user.click(screen.getByRole('button', { name: /create link/i }))
+    await pickMethod(user, /hsplanner\.app 链接/)
+    await user.click(screen.getByRole('button', { name: /创建链接/ }))
     await waitFor(() =>
       expect(
         screen.getByDisplayValue('https://hsplanner.app/b/XK3FQ2'),
@@ -145,8 +145,8 @@ describe('ShareDialog — hsplanner.app link', () => {
     })
     const user = userEvent.setup()
     renderDialog({ createWebShare })
-    await pickMethod(user, /hsplanner\.app/i)
-    await user.click(screen.getByRole('button', { name: /create link/i }))
+    await pickMethod(user, /hsplanner\.app 链接/)
+    await user.click(screen.getByRole('button', { name: /创建链接/ }))
     expect(
       await screen.findByText(/too large to share/i),
     ).toBeTruthy()
@@ -156,8 +156,8 @@ describe('ShareDialog — hsplanner.app link', () => {
     vi.mocked(isWebShareConfigured).mockReturnValue(false)
     const user = userEvent.setup()
     renderDialog()
-    await pickMethod(user, /hsplanner\.app/i)
-    expect(screen.getByRole('button', { name: /create link/i })).toBeDisabled()
-    expect(screen.getByText(/not configured in this build/i)).toBeTruthy()
+    await pickMethod(user, /hsplanner\.app 链接/)
+    expect(screen.getByRole('button', { name: /创建链接/ })).toBeDisabled()
+    expect(screen.getByText(/此构建中未配置/)).toBeTruthy()
   })
 })

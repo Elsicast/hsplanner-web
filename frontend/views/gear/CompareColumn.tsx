@@ -16,17 +16,17 @@ function VerdictBadge({ verdict }: { verdict: Verdict }) {
     { label: string; arrow: string; cls: string }
   > = {
     upgrade: {
-      label: 'Upgrade',
+      label: '升级',
       arrow: '▲',
       cls: 'border-stat-green text-stat-green bg-stat-green/8 shadow-[0_0_18px_rgba(116,201,138,0.12)]',
     },
     downgrade: {
-      label: 'Downgrade',
+      label: '降级',
       arrow: '▼',
       cls: 'border-stat-red text-stat-red bg-stat-red/8 shadow-[0_0_18px_rgba(232,144,122,0.12)]',
     },
     sidegrade: {
-      label: 'Sidegrade',
+      label: '平级替换',
       arrow: '≈',
       cls: 'border-border-2 text-muted bg-panel-2/60',
     },
@@ -45,7 +45,7 @@ function VerdictBadge({ verdict }: { verdict: Verdict }) {
 function DiffRow({ diff }: { diff: StatDiff }) {
   const beforeText =
     diff.kind === 'new'
-      ? 'none'
+      ? '无'
       : formatStatNum(diff.beforeMin, diff.beforeMax, diff.unit)
   const afterText =
     diff.kind === 'lost'
@@ -113,7 +113,7 @@ function DiffSection({
         <span className="h-px flex-1 bg-border" />
         {diffs.length > 0 && (
           <span className="font-normal tracking-[0.14em] text-faint">
-            {diffs.length} change{diffs.length === 1 ? '' : 's'}
+            {diffs.length} 项变动
           </span>
         )}
       </div>
@@ -143,18 +143,18 @@ function CompareSummary({
     <div className="mt-3 grid grid-cols-2 gap-px overflow-hidden rounded-[3px] border border-border bg-border">
       <div className="bg-panel-2/80 px-3 py-2">
         <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">
-          Currently Equipped
+          当前已装备
         </div>
         <div className={`mt-1 truncate text-[13px] font-medium ${beforeColor}`}>
-          {before.itemName ?? <span className="italic text-faint">Empty slot</span>}
+          {before.itemName ?? <span className="italic text-faint">空槽位</span>}
         </div>
       </div>
       <div className="bg-panel-2/80 px-3 py-2">
         <div className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">
-          Selected
+          已选中
         </div>
         <div className={`mt-1 truncate text-[13px] font-medium ${afterColor}`}>
-          {after.itemName ?? <span className="italic text-faint">Empty slot</span>}
+          {after.itemName ?? <span className="italic text-faint">空槽位</span>}
         </div>
       </div>
     </div>
@@ -181,9 +181,9 @@ function CompareItemCards({
     return (
       <div className="mb-4">
         <div className="mb-2 flex items-center gap-2.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
-          <span>Item</span>
+          <span>物品</span>
           <span className="h-px flex-1 bg-border" />
-          <span className="font-normal tracking-[0.14em] text-faint">unchanged</span>
+          <span className="font-normal tracking-[0.14em] text-faint">未变化</span>
         </div>
         <ItemCard
           equipped={currentEquipped}
@@ -197,7 +197,7 @@ function CompareItemCards({
   return (
     <div className="mb-4">
       <div className="mb-3 flex items-center gap-2.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
-        <span>Items</span>
+        <span>物品</span>
         <span className="h-px flex-1 bg-border" />
       </div>
       <div className="flex items-start gap-3">
@@ -248,7 +248,7 @@ export function CompareColumn({
     return (
       <div className="flex w-150 min-w-0 shrink-0 flex-col items-center justify-center border-l border-border bg-black/15">
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-          Calculating compare…
+          正在计算对比…
         </span>
       </div>
     )
@@ -294,10 +294,10 @@ export function CompareColumn({
         <div className="flex items-center justify-between gap-3">
           <div>
             <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
-              Comparison
+              对比
             </div>
             <h3 className="m-0 text-[16px] font-semibold tracking-[0.02em] text-text/85">
-              Net change
+              净变化
             </h3>
           </div>
           <VerdictBadge verdict={verdict} />
@@ -313,25 +313,25 @@ export function CompareColumn({
           <DiffSection
             title={
               afterSummary.activeSkillName
-                ? `Active Skill · ${afterSummary.activeSkillName}`
-                : 'Active Skill'
+                ? `主动技能 · ${afterSummary.activeSkillName}`
+                : '主动技能'
             }
             diffs={damageRows}
           />
         )}
         <DiffSection
-          title="Item Affixes"
+          title="物品词缀"
           diffs={itemAffixDiffs}
           emptyHint={
             beforeSummary.itemBaseId === afterSummary.itemBaseId
-              ? 'No item-level changes'
+              ? '物品属性无变化'
               : undefined
           }
         />
         <DiffSection
-          title="Build Stats"
+          title="构建属性"
           diffs={buildStatDiffs}
-          emptyHint="No build-stat changes"
+          emptyHint="构建属性无变化"
         />
       </div>
     </div>

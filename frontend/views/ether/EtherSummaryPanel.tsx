@@ -38,16 +38,16 @@ export function EtherSummaryPanel({ allocated }: Props) {
             className="inline-block h-1.5 w-1.5 rotate-45 bg-stat-purple"
             style={{ boxShadow: '0 0 8px rgba(165,116,201,0.6)' }}
           />
-          Stat Summary
+          属性摘要
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-          {allocated.size} <span className="text-faint/70">nodes</span>
+          {allocated.size} <span className="text-faint/70">个节点</span>
         </span>
       </div>
 
       <div
         className="flex items-baseline justify-between border-b border-border px-3 py-2"
-        title="Unconditional Magic Find from the Ether tree — also shown in the Stats tab"
+        title="来自以太树的无条件 Magic Find — 也会显示在「属性」页签"
       >
         <span className="text-[12px] font-medium text-text">Magic Find</span>
         <span className="font-mono text-[12px] text-accent-hot">
@@ -58,7 +58,7 @@ export function EtherSummaryPanel({ allocated }: Props) {
       <div className="min-h-0 flex-1 overflow-y-auto px-3 py-2">
         {groups.length === 0 ? (
           <p className="m-0 py-2 text-center text-[11px] italic text-muted">
-            Allocate nodes to see totals.
+            分配节点以查看总计。
           </p>
         ) : (
           groups.map((group, gi) => (

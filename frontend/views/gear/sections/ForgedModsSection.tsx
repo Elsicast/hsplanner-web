@@ -55,7 +55,7 @@ export function ForgedModsSection({
           id: m.id,
           name: m.name,
           tier: m.tier,
-          kindLabel: 'CRYSTAL',
+          kindLabel: '水晶',
           meta: m.description,
           iconColor: 'var(--color-stat-red)',
           tooltip: buildCrystalModTooltip(m, { previousStats }),
@@ -68,7 +68,7 @@ export function ForgedModsSection({
 
   return (
     <SectionCard
-      label={`${sourceLabel} · Forged`}
+      label={`${sourceLabel} · 已锻造`}
       tone="satanic"
       rightSlot={
         canAdd ? (
@@ -79,7 +79,7 @@ export function ForgedModsSection({
               background: 'linear-gradient(180deg, #3a1a1a, #2a1818)',
             }}
           >
-            + Add
+            + 添加
           </button>
         ) : undefined
       }
@@ -87,7 +87,7 @@ export function ForgedModsSection({
     >
       {mods.length === 0 ? (
         <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint italic">
-          No crystal forged
+          未锻造水晶
         </div>
       ) : (
         mods.map((eq, idx) => {
@@ -114,16 +114,16 @@ export function ForgedModsSection({
                 {eq.customValue !== undefined && (
                   <span
                     className="rounded-xs border border-accent-hot/60 px-1 py-px font-mono text-[9px] tabular-nums text-accent-hot"
-                    title="Custom value override"
+                    title="自定义数值覆盖"
                   >
-                    custom
+                    自定义
                   </span>
                 )}
               </span>
               <button
                 onClick={() => onRemove(idx)}
                 className="flex h-5 w-5 shrink-0 items-center justify-center rounded-xs border border-border-2 font-mono text-[12px] leading-none text-faint transition-colors hover:border-stat-red hover:text-stat-red"
-                aria-label="Remove forged mod"
+                aria-label="移除锻造词缀"
               >
                 ×
               </button>
@@ -134,11 +134,11 @@ export function ForgedModsSection({
 
       {open && (
         <PickerModal
-          title={`Forge ${sourceLabel}`}
+          title={`锻造 ${sourceLabel}`}
           sectionLabel={sourceLabel}
           rows={pickerRows}
-          searchPlaceholder={`Search ${sourceLabel} mods…`}
-          emptyMessage={`No matching ${sourceLabel} mods`}
+          searchPlaceholder={`搜索 ${sourceLabel} 词缀…`}
+          emptyMessage={`没有匹配的 ${sourceLabel} 词缀`}
           width={680}
           onSelect={(id) => {
             const m = crystalMods.find((x) => x.id === id)

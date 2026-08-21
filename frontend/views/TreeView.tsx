@@ -608,7 +608,7 @@ export default function TreeView() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search nodes or #id…"
+            placeholder="搜索节点或 #id…"
             data-search-input
             data-tour="tree-search"
             className="w-64 rounded-[3px] border border-border-2 px-3 py-1.5 pl-9 pr-14 font-mono text-[11px] text-text placeholder:text-faint transition-colors focus:border-accent-deep focus:outline-none focus:ring-2 focus:ring-accent-hot/15"
@@ -627,7 +627,7 @@ export default function TreeView() {
               <button
                 onClick={() => setSearchQuery('')}
                 className="absolute right-2 top-1/2 -translate-y-1/2 rounded-[2px] px-1 font-mono text-[12px] text-faint transition-colors hover:text-accent-hot"
-                aria-label="Clear search"
+                  aria-label="清空搜索"
               >
                 ×
               </button>
@@ -640,19 +640,19 @@ export default function TreeView() {
           className="pointer-events-auto rounded-[3px] border border-accent-deep bg-panel-2 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-accent-hot transition-all hover:border-accent-hot hover:shadow-[0_0_12px_rgba(224,184,100,0.25)]"
           style={{ background: 'linear-gradient(180deg, #2a2418, #1a1410)' }}
         >
-          Suggest
+          推荐
         </button>
         <button
           onClick={fitView}
           className="pointer-events-auto rounded-[3px] border border-border-2 bg-panel-2 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
         >
-          Fit
+          适配
         </button>
         <button
           onClick={resetTree}
           className="pointer-events-auto rounded-[3px] border border-border-2 bg-transparent px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-stat-red hover:text-stat-red"
         >
-          Reset
+          重置
         </button>
       </div>
 
@@ -671,7 +671,7 @@ export default function TreeView() {
             aria-hidden
             className="inline-block h-1 w-1 rotate-45 bg-accent-deep"
           />
-          Nodes
+          节点
           <span className="text-text">{NODES.length}</span>
         </span>
         <span aria-hidden className="h-3 w-px bg-border" />
@@ -681,12 +681,12 @@ export default function TreeView() {
             className="inline-block h-1 w-1 rotate-45 bg-accent-hot"
             style={{ boxShadow: '0 0 6px rgba(224,184,100,0.6)' }}
           />
-          Allocated
+          已分配
           <span className="text-accent-hot">{allocated.size}</span>
         </span>
         <span aria-hidden className="h-3 w-px bg-border" />
         <span className="inline-flex items-center gap-1.5">
-          Zoom
+          缩放
           <span className="text-accent-hot">
             {(scale * 100).toFixed(0)}%
           </span>
@@ -695,7 +695,7 @@ export default function TreeView() {
           <>
             <span aria-hidden className="h-3 w-px bg-border" />
             <span className="inline-flex items-center gap-1.5">
-              Hover
+              悬停
               <span className="text-text">#{hoverNode.id}</span>
               <span className="text-faint">· {hoverNode.tier}</span>
             </span>

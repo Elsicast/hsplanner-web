@@ -23,8 +23,8 @@ export default function ActiveBuffsPanel() {
 
   return (
     <Panel
-      title="Active Buffs"
-      subtitle="Enable buffs you have cast and are currently active."
+      title="生效增益"
+      subtitle="勾选你已施放且当前生效的增益。"
       trailing={
         <CountBadge
           value={activeBuffCount}
@@ -35,7 +35,7 @@ export default function ActiveBuffsPanel() {
     >
       {buffSkills.length === 0 ? (
         <p className="font-mono text-[12px] tracking-[0.04em] text-muted italic">
-          No buffs available for this class.
+          该职业没有可用增益。
         </p>
       ) : (
         <ul className="space-y-2">
@@ -85,7 +85,7 @@ export default function ActiveBuffsPanel() {
                   {s.effectDuration !== undefined && (
                     <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-faint tabular-nums">
                       <span className="text-text">{s.effectDuration}</span>
-                      s duration
+                      秒持续
                     </span>
                   )}
                 </label>

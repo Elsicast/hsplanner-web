@@ -71,12 +71,12 @@ function LegendSwatch({ state, label }: { state: CellState; label: string }) {
 export function CellLegend() {
   return (
     <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-[9.5px] uppercase tracking-[0.14em] text-faint">
-      <LegendSwatch state="visible" label="Shown" />
-      <LegendSwatch state="hidden" label="Hidden" />
-      <LegendSwatch state="highlighted" label="Highlighted" />
+      <LegendSwatch state="visible" label="显示" />
+      <LegendSwatch state="hidden" label="隐藏" />
+      <LegendSwatch state="highlighted" label="高亮" />
       <span aria-hidden className="h-[12px] w-px bg-border" />
       <span className="normal-case tracking-[0.08em]">
-        Left-click toggles · right-click highlights
+        左键切换显示 · 右键设为高亮
       </span>
     </div>
   )

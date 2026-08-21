@@ -83,14 +83,14 @@ export function AffixPanel({ filter, typeId, apply }: AffixPanelProps) {
 
   return (
     <Panel
-      title={`${label} · affixes`}
+      title={`${label} · 词缀`}
       trailing={
         <span className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
           <span>
             <span className={summary.hidden.size > 0 ? 'text-text' : 'text-muted'}>
               {summary.hidden.size}
             </span>{' '}
-            hidden
+            已隐藏
           </span>
           <span aria-hidden className="h-[12px] w-px bg-border" />
           <span>
@@ -101,7 +101,7 @@ export function AffixPanel({ filter, typeId, apply }: AffixPanelProps) {
             >
               {summary.highlighted.size}
             </span>{' '}
-            highlighted
+            已高亮
           </span>
         </span>
       }
@@ -111,8 +111,8 @@ export function AffixPanel({ filter, typeId, apply }: AffixPanelProps) {
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search affixes…"
-            aria-label="Search affixes"
+            placeholder="搜索词缀…"
+            aria-label="搜索词缀"
             spellCheck={false}
             className="h-[28px] w-[200px] rounded-[3px] border border-border-2 bg-panel-2 pl-2 pr-6 text-[12px] text-text outline-none transition-colors placeholder:text-faint focus:border-accent-deep"
           />
@@ -120,7 +120,7 @@ export function AffixPanel({ filter, typeId, apply }: AffixPanelProps) {
             <button
               type="button"
               onClick={() => setQuery('')}
-              aria-label="Clear search"
+              aria-label="清空搜索"
               className="absolute right-1.5 top-1/2 -translate-y-1/2 text-[11px] text-faint transition-colors hover:text-accent-hot"
             >
               ✕
@@ -131,27 +131,27 @@ export function AffixPanel({ filter, typeId, apply }: AffixPanelProps) {
         <button
           type="button"
           onClick={() => setEditedOnly((v) => !v)}
-          title="Show only affixes with a hidden or highlighted tier"
+          title="仅显示含有隐藏或高亮阶级的词缀"
           className={`${FILTER_CHIP_CLASS} h-[28px] ${
             editedOnly
               ? 'border-accent-deep text-accent-hot'
               : 'border-border-2 text-faint hover:text-muted'
           }`}
         >
-          Edited only
+          仅看已编辑
         </button>
 
         <span aria-hidden className="mx-1 h-[20px] w-px bg-border" />
 
         <span className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-faint">
-          Tier
+          阶级
         </span>
         <div className="flex items-center gap-1">
           {TIER_LABELS.map((t, tier) => (
             <button
               key={t}
               type="button"
-              title={`Toggle tier ${t} for the ${listed.length} affixes listed`}
+              title={`为列出的 ${listed.length} 个词缀切换阶级 ${t}`}
               disabled={listed.length === 0}
               onClick={() =>
                 apply((prev) => toggleTierColumn(prev, typeId, tier, listedIds))
@@ -171,7 +171,7 @@ export function AffixPanel({ filter, typeId, apply }: AffixPanelProps) {
           disabled={listed.length === 0}
           className={FILTER_BTN_CLASS}
         >
-          {filtered ? `Show ${listed.length}` : 'Show all'}
+          {filtered ? `显示 ${listed.length} 项` : '全部显示'}
         </button>
         <button
           type="button"
@@ -179,19 +179,19 @@ export function AffixPanel({ filter, typeId, apply }: AffixPanelProps) {
           disabled={listed.length === 0}
           className={FILTER_BTN_CLASS}
         >
-          {filtered ? `Hide ${listed.length}` : 'Hide all'}
+          {filtered ? `隐藏 ${listed.length} 项` : '全部隐藏'}
         </button>
 
         <span className="ml-auto font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
           <span className="text-muted">{listed.length}</span> / {FILTER_STATS.length}{' '}
-          affixes
+          个词缀
         </span>
       </div>
 
       {listed.length === 0 ? (
         <p className="py-8 text-center text-[12px] text-faint">
-          {query.trim() ? `No affixes match “${query.trim()}”` : 'No affixes to show'}
-          {editedOnly && ' · edited only'}.
+          {query.trim() ? `没有匹配“${query.trim()}”的词缀` : '没有可显示的词缀'}
+          {editedOnly && ' · 仅看已编辑'}。
         </p>
       ) : (
         <div className="[column-gap:2rem] [column-width:290px]">
@@ -226,7 +226,7 @@ const AffixRow = memo(function AffixRow({
     <div className="flex break-inside-avoid items-center justify-between gap-2 py-[2px]">
       <button
         type="button"
-        title="Toggle every tier of this affix"
+        title="切换该词缀的所有阶级"
         onClick={() => onToggleRow(stat.id)}
         className={`min-w-0 truncate text-left text-[12px] transition-colors hover:text-accent-hot ${
           edited ? 'text-text' : 'text-muted'
@@ -239,7 +239,7 @@ const AffixRow = memo(function AffixRow({
           <FilterCell
             key={t}
             state={CELL_STATES[states[tier]!] ?? 'visible'}
-            title={`${stat.name} · tier ${t}`}
+            title={`${stat.name} · 阶级 ${t}`}
             onToggle={() => onCell(stat.id, tier, false)}
             onHighlight={() => onCell(stat.id, tier, true)}
           />

@@ -153,7 +153,7 @@ export function NodeTooltip({
       }}
     >
       <TooltipHeader
-        title={info?.t ?? `Node #${node.id}`}
+        title={info?.t ?? `节点 #${node.id}`}
         subtitle={tierName}
         tone={tone}
       />
@@ -188,31 +188,31 @@ export function NodeTooltip({
           {netChangeVisible && (
             <TooltipSection>
               <div className="mb-2 flex items-center gap-2.5 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
-                <span>Net Change</span>
+                <span>净变化</span>
                 <span className="h-px flex-1 bg-border" />
                 {isAllocated && previewRemovedCount > 1 && (
                   <span className="font-normal tracking-[0.14em] text-faint">
-                    −{previewRemovedCount} on click
+                    点击时 −{previewRemovedCount}
                   </span>
                 )}
                 {!isAllocated && previewAddedCount > 1 && (
                   <span className="font-normal tracking-[0.14em] text-faint">
-                    +{previewAddedCount} on click
+                    点击时 +{previewAddedCount}
                   </span>
                 )}
               </div>
               {singleHasContent && (
                 <div className={pathDiffersFromSingle ? 'mb-3' : undefined}>
                   <div className="mb-1 flex items-baseline gap-2 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
-                    <span className="text-accent-deep">This Node</span>
+                    <span className="text-accent-deep">当前节点</span>
                     {pathDiffersFromSingle && (
-                      <span className="text-faint/70 normal-case">— hovered alone</span>
+                      <span className="text-faint/70 normal-case">— 仅悬停此节点</span>
                     )}
                   </div>
                   {singleDpsDiffs.length > 0 && (
                     <div className="mb-1.5">
                       <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-                        Active Skill
+                        主动技能
                         {currentPerformance.activeSkillName ? (
                           <span className="ml-1 text-faint">
                             · {currentPerformance.activeSkillName}
@@ -230,7 +230,7 @@ export function NodeTooltip({
                     <div>
                       {singleDpsDiffs.length > 0 && (
                         <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-                          Stats
+                          属性
                         </div>
                       )}
                       <div className="space-y-0.5">
@@ -246,19 +246,19 @@ export function NodeTooltip({
                 <div>
                   <div className="mb-1 flex items-baseline gap-2 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
                     <span className="text-accent-deep">
-                      {isAllocated ? 'With Cleanup' : 'Full Path'}
+                      {isAllocated ? '清理后' : '完整路径'}
                     </span>
                     <span className="text-faint/70 normal-case">
                       —{' '}
                       {isAllocated
-                        ? `${previewRemovedCount} nodes lost`
-                        : `${previewAddedCount} nodes allocated`}
+                        ? `移除 ${previewRemovedCount} 个节点`
+                        : `分配 ${previewAddedCount} 个节点`}
                     </span>
                   </div>
                   {pathDpsDiffs.length > 0 && (
                     <div className="mb-1.5">
                       <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-                        Active Skill
+                        主动技能
                         {currentPerformance.activeSkillName ? (
                           <span className="ml-1 text-faint">
                             · {currentPerformance.activeSkillName}
@@ -276,7 +276,7 @@ export function NodeTooltip({
                     <div>
                       {pathDpsDiffs.length > 0 && (
                         <div className="mb-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-muted/70">
-                          Stats
+                          属性
                         </div>
                       )}
                       <div className="space-y-0.5">
@@ -309,7 +309,7 @@ export function NodeTooltip({
       {!info && (
         <TooltipSection>
           <TooltipText>
-            <span className="text-faint">No data available</span>
+            <span className="text-faint">暂无数据</span>
           </TooltipText>
         </TooltipSection>
       )}

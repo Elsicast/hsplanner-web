@@ -22,18 +22,18 @@ function getBuildUrl(): string | null {
 
 export async function fetchSharedBuildCode(id: string): Promise<string> {
   const base = getBuildUrl()
-  if (!base) throw new WebShareError('not-configured', 'Web sharing is not configured in this build.')
+  if (!base) throw new WebShareError('not-configured', '此版本未配置网页分享服务。')
 
   let res: Response
   try {
     res = await fetch(`${base}?id=${id}`)
   } catch {
-    throw new WebShareError('network', 'Network error. Check your connection.')
+    throw new WebShareError('network', '网络错误，请检查网络连接。')
   }
-  if (res.status === 404) throw new WebShareError('unknown', 'That build link does not exist or was removed.')
-  if (res.status !== 200) throw new WebShareError('server', `Fetching the shared build failed (${res.status}).`)
+  if (res.status === 404) throw new WebShareError('unknown', '该构建链接不存在或已被删除。')
+  if (res.status !== 200) throw new WebShareError('server', `拉取分享构建失败（${res.status}）。`)
   const data = (await res.json()) as { code?: string }
-  if (!data.code) throw new WebShareError('unknown', 'Unexpected response from the share server.')
+  if (!data.code) throw new WebShareError('unknown', '分享服务器返回了异常响应。')
   return data.code
 }
 

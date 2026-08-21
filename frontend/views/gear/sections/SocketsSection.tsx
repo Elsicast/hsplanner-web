@@ -194,7 +194,7 @@ function SocketPickerTrigger({
               : 'italic text-faint'
           }`}
         >
-          {current ? current.name : 'Empty socket'}
+          {current ? current.name : '空插槽'}
         </span>
         {current?.tier !== undefined && (
           <span className="ml-1 rounded-xs border border-accent-deep/40 px-1 py-px font-mono text-[9px] tabular-nums text-accent-hot/75">
@@ -203,7 +203,7 @@ function SocketPickerTrigger({
         )}
       </span>
       <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-faint group-hover:text-accent-hot">
-        Browse →
+        浏览 →
       </span>
     </button>
   )
@@ -219,13 +219,13 @@ function SocketPickerTrigger({
       )}
       {open && (
         <PickerModal
-          title="Insert Socketable"
-          sectionLabel="Socket"
+          title="插入镶嵌物"
+          sectionLabel="插槽"
           sectionAccent={`#${socketIndex + 1}`}
           rows={enrichedRows}
           selectedId={socketed}
-          searchPlaceholder="Search gems / runes…"
-          emptyMessage="No matches"
+          searchPlaceholder="搜索宝石 / 符文…"
+          emptyMessage="无匹配项"
           width={680}
           allowClear={!!socketed}
           onClear={() => onChange(null)}
@@ -256,7 +256,7 @@ function SocketTypeToggle({
   if (locked) {
     return (
       <span
-        title="Built-in rainbow socket: +50% effect"
+        title="内置彩虹插槽：效果 +50%"
         className={`shrink-0 rounded-xs ${rainbowRing}`}
       >
         <span className="flex rounded-[3px] bg-bg/95 px-2 py-0.5 font-mono text-[10px] font-semibold tracking-[0.06em]">
@@ -287,7 +287,7 @@ function SocketTypeToggle({
         <button
           type="button"
           onClick={() => onChange('rainbow')}
-          title="Rainbow socket: +50% effect"
+          title="彩虹插槽：效果 +50%"
           className={`px-2 py-0.5 transition-colors ${
             rainbowActive ? 'bg-bg/95' : 'bg-bg/40'
           }`}
@@ -329,14 +329,14 @@ export function SocketsSection({
   if (maxSockets === 0) return null
   return (
     <SectionCard
-      label="Sockets"
+      label="插槽"
       rightSlot={
         <>
           <button
             onClick={() => onSocketCount(equipped.socketCount - 1)}
             disabled={equipped.socketCount === 0}
             className="flex h-5 w-5 items-center justify-center rounded-xs border border-accent-deep/40 bg-bg/60 font-mono text-[12px] leading-none text-muted transition-colors hover:border-accent-hot hover:text-accent-hot disabled:cursor-not-allowed disabled:opacity-30"
-            aria-label="Decrease sockets"
+            aria-label="减少插槽数"
           >
             −
           </button>
@@ -347,7 +347,7 @@ export function SocketsSection({
             onClick={() => onSocketCount(equipped.socketCount + 1)}
             disabled={equipped.socketCount >= maxSockets}
             className="flex h-5 w-5 items-center justify-center rounded-xs border border-accent-deep/40 bg-bg/60 font-mono text-[12px] leading-none text-muted transition-colors hover:border-accent-hot hover:text-accent-hot disabled:cursor-not-allowed disabled:opacity-30"
-            aria-label="Increase sockets"
+            aria-label="增加插槽数"
           >
             +
           </button>
@@ -398,13 +398,13 @@ export function SocketsSection({
           {base.sockets !== undefined &&
             base.sockets !== equipped.socketCount && (
               <div className="col-span-2 pt-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
-                base · {base.sockets}
+                基底 · {base.sockets}
               </div>
             )}
         </>
       ) : (
         <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint italic">
-          No sockets allocated
+          未分配插槽
         </div>
       )}
     </SectionCard>

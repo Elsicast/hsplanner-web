@@ -168,7 +168,7 @@ export default function StatsView() {
     const next = { ...statSources }
     if (!isZero(mercMagicFind)) {
       const contribution: SourceContribution = {
-        label: 'Mercenary',
+        label: '佣兵',
         sourceType: 'item',
         value: mercMagicFind,
       }
@@ -176,7 +176,7 @@ export default function StatsView() {
     }
     if (etherMagicFind !== 0) {
       const contribution: SourceContribution = {
-        label: 'Ether Tree',
+        label: 'Ether 树',
         sourceType: 'tree',
         value: etherMagicFind,
       }
@@ -406,13 +406,13 @@ export default function StatsView() {
               textShadow: '0 0 16px rgba(224,184,100,0.18)',
             }}
           >
-            Stats
+            属性
           </h2>
         </div>
         <div className="flex items-center gap-1.5">
           {classes.length === 0 ? (
             <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-              Add a class JSON to begin
+              添加职业 JSON 以开始
             </span>
           ) : (
             FILTER_TABS.map((tab) => (
@@ -449,7 +449,7 @@ export default function StatsView() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search stats, attributes, or skills…"
+          placeholder="搜索属性或技能…"
           data-search-input
           data-tour="stats-search"
           className="w-full rounded-[3px] border border-border-2 px-3 py-2 pl-9 pr-9 text-text placeholder:text-faint focus:border-accent-deep focus:outline-none focus:ring-2 focus:ring-accent-hot/15"
@@ -463,7 +463,7 @@ export default function StatsView() {
           <button
             onClick={() => setQuery('')}
             className="absolute right-2 top-1/2 -translate-y-1/2 rounded-xs px-1.5 py-0.5 font-mono text-[12px] text-faint transition-colors hover:text-accent-hot"
-            aria-label="Clear search"
+            aria-label="清空搜索"
           >
             ×
           </button>
@@ -478,7 +478,7 @@ export default function StatsView() {
           if (visibleAttrs.length === 0) return null
           return (
             <Panel
-              title="Attributes"
+              title="属性"
             >
               <AttributesStrip
                 attrs={visibleAttrs}
@@ -510,18 +510,19 @@ export default function StatsView() {
 
       {showSkills && (
         <>
-          <SectionHeading>Per-Skill Damage</SectionHeading>
+          <SectionHeading>逐技能伤害</SectionHeading>
           <Panel padded>
             {skillsForClass.length === 0 ? (
               <div className="py-2 text-center text-sm text-muted italic">
-                No skills defined for this class yet.
+                该职业尚未定义技能。
                 <br />
-                Add JSON files in{' '}
-                <code className="text-accent">src/data/skills/</code>.
+                在{' '}
+                <code className="text-accent">src/data/skills/</code>
+                添加 JSON 文件。
               </div>
             ) : visibleSkills.length === 0 ? (
               <div className="py-2 text-center text-sm text-muted italic">
-                No skills match “{query}”.
+                没有匹配“{query}”的技能。
               </div>
             ) : (
               <ul className="m-0 flex list-none flex-col gap-2 p-0">
@@ -554,7 +555,7 @@ export default function StatsView() {
       )}
 
       {showEhp && (
-        <Panel title="Effective HP">
+        <Panel title="有效生命">
           <EhpBreakdown stats={stats} statsCombined={statsCombined} />
         </Panel>
       )}
@@ -588,48 +589,48 @@ export default function StatsView() {
           type SectionId = keyof typeof sectionVisible
           type SectionDef = { id: SectionId; label: string; keys: string[] }
           const rawSections: SectionDef[] = [
-            { id: 'offense', label: 'Offense', keys: filterKeys(offenseKeys) },
+            { id: 'offense', label: '进攻', keys: filterKeys(offenseKeys) },
             {
               id: 'mitigation',
-              label: 'Mitigation',
+              label: '伤害减免',
               keys: filterKeys(mitigationKeys),
             },
             {
               id: 'resistances',
-              label: 'Resistances',
+              label: '抗性',
               keys: filterKeys(resistanceKeys),
             },
             {
               id: 'resources',
-              label: 'Resources',
+              label: '资源',
               keys: filterKeys(resourceKeys),
             },
             {
               id: 'skillBonus',
-              label: 'Skill Bonuses',
+              label: '技能加成',
               keys: filterKeys(skillBonusKeys),
             },
             {
               id: 'worldLoot',
-              label: 'World & Loot',
+              label: '世界与掉落',
               keys: filterKeys(worldLootKeys),
             },
-            { id: 'other', label: 'Other', keys: filterKeys(otherKeys) },
+            { id: 'other', label: '其他', keys: filterKeys(otherKeys) },
           ]
           const allSections = rawSections.filter(
             (s) => sectionVisible[s.id] && s.keys.length > 0,
           )
           if (allSections.length === 0) {
             return (
-              <Panel title="All Stats">
+              <Panel title="全部属性">
                 <div className="py-2 text-center text-xs text-muted italic">
-                  No matches.
+                  无匹配项。
                 </div>
               </Panel>
             )
           }
           return (
-            <Panel title="All Stats">
+            <Panel title="全部属性">
               <div
                 className="md:columns-2"
                 style={{ columnGap: '2rem', columnFill: 'balance' }}

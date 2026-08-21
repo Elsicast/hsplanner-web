@@ -124,7 +124,7 @@ export function SubtreeBonusBlock({
   if (statEntries.length === 0 && activeProcs.length === 0) return null
 
   return (
-    <DetailBlock title="Subtree bonuses">
+    <DetailBlock title="子树加成">
       {statEntries.length > 0 && (
         <div className="space-y-1 text-[12px] tabular-nums">
           {statEntries.map(([k, v]) => (
@@ -160,14 +160,14 @@ export function SubtreeBonusBlock({
             }
             for (const s of proc.appliesStates ?? []) {
               if (typeof s === 'string') {
-                effectParts.push(`applies ${s.replace(/_/g, ' ')}`)
+                effectParts.push(`施加 ${s.replace(/_/g, ' ')}`)
               } else {
                 const amt =
                   (s.amount?.base ?? 0) + (s.amount?.perRank ?? 0) * rank
                 effectParts.push(
                   amt
-                    ? `applies ${s.state.replace(/_/g, ' ')} (${amt}%)`
-                    : `applies ${s.state.replace(/_/g, ' ')}`,
+                    ? `施加 ${s.state.replace(/_/g, ' ')} (${amt}%)`
+                    : `施加 ${s.state.replace(/_/g, ' ')}`,
                 )
               }
             }
@@ -405,10 +405,10 @@ export function SkillEffectsBlock({
     <>
     {hasOwnEffects && (
     <DetailBlock
-      title={allocated ? 'Stats' : 'Preview (not learned)'}
+      title={allocated ? '属性' : '预览（未学习）'}
       trailing={
         <span className="font-mono text-[11px] tabular-nums tracking-[0.06em] text-muted">
-          rank {rankLabel}
+          等级 {rankLabel}
           {nextRankLabel && (
             <>
               {' '}
@@ -423,8 +423,8 @@ export function SkillEffectsBlock({
           <EffRow
             label={
               skill.attackKind === 'attack' && skill.damageType
-                ? `${skill.damageType[0]!.toUpperCase()}${skill.damageType.slice(1)} damage`
-                : 'Base damage'
+                ? `${skill.damageType[0]!.toUpperCase()}${skill.damageType.slice(1)} 伤害`
+                : '基础伤害'
             }
             cur={formatDmgRange(baseDmgCurMin, baseDmgCurMax)}
             next={
@@ -438,7 +438,7 @@ export function SkillEffectsBlock({
         {(['weaponDamagePct', 'attackRatingPct'] as const).map((key) => {
           const f = skill.attackScaling?.[key]
           if (!f) return null
-          const label = key === 'weaponDamagePct' ? 'Attack damage' : 'Attack rating'
+          const label = key === 'weaponDamagePct' ? '攻击伤害' : '命中率'
           return (
             <EffRow
               key={key}
@@ -458,7 +458,7 @@ export function SkillEffectsBlock({
         })}
         {manaCurMin !== undefined && manaCurMax !== undefined && (
           <EffRow
-            label="Mana cost"
+            label="法力消耗"
             cur={formatPair([manaCurMin, manaCurMax])}
             next={
               manaNextMin !== undefined && manaNextMax !== undefined
@@ -491,7 +491,7 @@ export function SkillEffectsBlock({
         })}
         {skill.baseCastRate !== undefined && (
           <EffRow
-            label="Base cast rate"
+            label="基础施法速度"
             cur={String(skill.baseCastRate)}
             suffix="/s"
             color="text-text"
@@ -499,18 +499,18 @@ export function SkillEffectsBlock({
         )}
         {skill.movementDuringUse !== undefined && (
           <EffRow
-            label="Movement during use"
+            label="使用时可移动"
             cur={String(skill.movementDuringUse)}
             suffix="%"
             color="text-text"
           />
         )}
         {skill.range !== undefined && (
-          <EffRow label="Range" cur={String(skill.range)} color="text-text" />
+          <EffRow label="范围" cur={String(skill.range)} color="text-text" />
         )}
         {skill.baseCooldown !== undefined && (
           <EffRow
-            label="Cooldown"
+            label="冷却"
             cur={String(skill.baseCooldown)}
             suffix="s"
             color="text-text"
@@ -518,7 +518,7 @@ export function SkillEffectsBlock({
         )}
         {skill.effectDuration !== undefined && (
           <EffRow
-            label="Effect duration"
+            label="效果持续"
             cur={String(skill.effectDuration)}
             suffix="s"
             color="text-text"
@@ -526,14 +526,14 @@ export function SkillEffectsBlock({
         )}
         {skill.requiresLevel && (
           <EffRow
-            label="Requires level"
+            label="需求等级"
             cur={String(skill.requiresLevel)}
             color="text-text"
           />
         )}
         {skill.requiresSkill && (
           <div className="flex items-baseline justify-between gap-2">
-            <span className="text-text/80">Requires skill</span>
+            <span className="text-text/80">前置技能</span>
             <span className="font-mono text-muted">
               «{skill.requiresSkill}»
             </span>
@@ -544,7 +544,7 @@ export function SkillEffectsBlock({
     )}
     {synergiesProvided.length > 0 && (
       <DetailBlock
-        title="Provides synergy to"
+        title="为以下技能提供协同"
         accentRgb={PROVIDES_RGB}
         onMouseLeave={() => onSynergyHover(null)}
       >
@@ -574,7 +574,7 @@ export function SkillEffectsBlock({
                 </span>
               </div>
               <div className="pl-3 text-[10px] text-faint">
-                {s.perRank}% per rank
+                每级 {s.perRank}%
               </div>
             </div>
           ))}
@@ -583,7 +583,7 @@ export function SkillEffectsBlock({
     )}
     {(skill.bonusSources?.length ?? 0) > 0 && (
       <DetailBlock
-        title="Receives synergy from"
+        title="协同加成来源"
         accentRgb={SYNERGY_RGB}
         onMouseLeave={() => onSynergyHover(null)}
       >

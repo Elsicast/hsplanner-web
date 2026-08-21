@@ -68,8 +68,8 @@ export default function PickerModal({
   sectionAccent,
   rows,
   selectedId = null,
-  searchPlaceholder = 'Search…',
-  emptyMessage = 'No matches',
+  searchPlaceholder = '搜索…',
+  emptyMessage = '无匹配项',
   onSelect,
   onClose,
   selectedPanel,
@@ -199,7 +199,7 @@ export default function PickerModal({
               onClick={onClose}
               className="rounded-md border border-border px-3 py-1.5 text-[12px] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
             >
-              Close
+              关闭
             </button>
           </header>
 
@@ -381,10 +381,10 @@ export default function PickerModal({
               />
               <span className="truncate">
                 {selectedId
-                  ? `Selected: ${
+                  ? `已选择：${
                       rows.find((r) => r.id === selectedId)?.name ?? selectedId
                     }`
-                  : 'Nothing selected'}
+                  : '未选择任何项'}
               </span>
             </div>
             <div className="flex shrink-0 gap-2">
@@ -397,7 +397,7 @@ export default function PickerModal({
                   }}
                   className="rounded-md border border-border bg-transparent px-3 py-1.5 text-[12px] text-muted transition-colors hover:border-stat-red hover:text-stat-red"
                 >
-                  Clear
+                  清空
                 </button>
               )}
             </div>

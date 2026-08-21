@@ -26,7 +26,7 @@ export default function SeasonSwitcher() {
     <>
       <label data-tour="season" className="flex items-center gap-2">
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-          Season
+          赛季
         </span>
         <Dropdown
           compact
@@ -42,20 +42,20 @@ export default function SeasonSwitcher() {
         <Modal
           onClose={() => setPending(null)}
           panelClassName="w-[440px] max-w-[92vw]"
-          eyebrow="Season"
-          title="Switch season?"
+          eyebrow="赛季"
+          title="切换赛季？"
           titleId="season-switch-title"
         >
           <section className="px-6 py-4">
             <p className="m-0 font-mono text-[12px] leading-relaxed tracking-[0.04em] text-muted">
-              {activeBuildId ? "This build will switch to " : "A new build will start in "}
-              <span className="text-accent-hot">{pendingSeason.name}</span>{" "}
-              and the app will reload.
+              {activeBuildId ? "此构建将切换到 " : "新构建将开始于 "}
+              <span className="text-accent-hot">{pendingSeason.name}</span>
+              ，应用将重新加载。
             </p>
             <p className="m-0 mt-2 font-mono text-[12px] leading-relaxed tracking-[0.04em] text-muted">
-              Tree and Ether allocations are{" "}
-              <span className="text-accent-hot">reset</span> — gear and skills
-              carry over where they still exist in the target season.
+              天赋树与以太的点数分配将被
+              <span className="text-accent-hot">重置</span> — 装备和技能
+              在目标赛季中仍然存在的部分会保留。
             </p>
           </section>
           <footer
@@ -72,7 +72,7 @@ export default function SeasonSwitcher() {
                   "linear-gradient(180deg, rgba(58,46,24,0.6), rgba(42,36,24,0.4))",
               }}
             >
-              Switch &amp; reload
+              切换并重新加载
             </motion.button>
           </footer>
         </Modal>

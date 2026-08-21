@@ -72,19 +72,19 @@ export function pickerItemsForSlot(
     })
   return matching.map((i) => {
     const parts: string[] = [i.baseType]
-    if (i.grade) parts.push(`Grade ${i.grade}`)
+    if (i.grade) parts.push(`阶级 ${i.grade}`)
     if (i.baseType === 'Charm') parts.push(`${i.width ?? 1}×${i.height ?? 1}`)
     if (i.defenseMin !== undefined && i.defenseMax !== undefined)
-      parts.push(`Def ${i.defenseMin}–${i.defenseMax}`)
+      parts.push(`防 ${i.defenseMin}–${i.defenseMax}`)
     if (i.damageMin !== undefined && i.damageMax !== undefined)
-      parts.push(`Dmg ${i.damageMin}–${i.damageMax}`)
-    if (i.blockChance !== undefined) parts.push(`Block ${i.blockChance}%`)
+      parts.push(`伤 ${i.damageMin}–${i.damageMax}`)
+    if (i.blockChance !== undefined) parts.push(`格挡 ${i.blockChance}%`)
     if (i.sockets !== undefined) {
       const max = i.maxSockets ?? i.sockets
       parts.push(
         max > i.sockets
-          ? `${i.sockets}/${max} sockets`
-          : `${i.sockets} sockets`,
+          ? `插槽数 ${i.sockets}/${max}`
+          : `插槽数 ${i.sockets}`,
       )
     }
     return {

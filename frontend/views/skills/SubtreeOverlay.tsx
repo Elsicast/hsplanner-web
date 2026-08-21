@@ -127,14 +127,14 @@ export default function SubtreeOverlay({ skill, onClose }: Props) {
         onClose={onClose}
         dataTour="subtree-overlay"
         titleId="subtree-overlay-title"
-        eyebrow="Skill Subtree"
+        eyebrow="技能子树"
         title={skill.name}
-        subtitle="Specialize · Boost · Change how this skill works"
+        subtitle="专精 · 强化 · 改变技能运作方式"
         panelClassName="w-[min(680px,calc(100vw-3rem))] max-h-[calc(100vh-3rem)]"
         headerActions={
           <>
             <div className="flex items-baseline gap-1.5 font-mono text-[11px] tracking-[0.08em] text-faint tabular-nums">
-              <span>Points</span>
+              <span>点数</span>
               <span className="text-[13px] font-semibold text-accent-hot">
                 {spent}
                 <span className="text-faint">/</span>
@@ -142,11 +142,11 @@ export default function SubtreeOverlay({ skill, onClose }: Props) {
               </span>
               {remaining > 0 ? (
                 <span className="text-[10px] uppercase tracking-[0.14em] text-accent-deep">
-                  {remaining} LEFT
+                  剩余 {remaining}
                 </span>
               ) : (
                 <span className="text-[10px] uppercase tracking-[0.14em] text-faint">
-                  ALL SPENT
+                  已用完
                 </span>
               )}
             </div>
@@ -154,7 +154,7 @@ export default function SubtreeOverlay({ skill, onClose }: Props) {
               onClick={() => resetSubskillsFor(skill.id)}
               className={MODAL_BTN_CLASS}
             >
-              Reset
+              重置
             </button>
           </>
         }
@@ -323,7 +323,7 @@ export default function SubtreeOverlay({ skill, onClose }: Props) {
                           type="button"
                           className={`${tileClass} cursor-pointer hover:scale-105`}
                           style={tileStyle}
-                          aria-label={`${sub.name} — rank ${rank} of ${sub.maxRank}`}
+                          aria-label={`${sub.name} — 等级 ${rank} / ${sub.maxRank}`}
                           onMouseEnter={onEnter}
                           onMouseLeave={() => setHover(null)}
                           onClick={(e) => {
@@ -384,7 +384,7 @@ export default function SubtreeOverlay({ skill, onClose }: Props) {
             </section>
             {(skill.subskills?.length ?? 0) === 0 && (
               <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
-                No subskills defined for {skill.name} yet.
+                {skill.name} 尚未定义子技能。
               </p>
             )}
           </div>
@@ -395,8 +395,8 @@ export default function SubtreeOverlay({ skill, onClose }: Props) {
           />
         </div>
         <div className="flex items-center justify-between gap-3 border-t border-border px-6 py-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-          <span>L-Click add · R-Click remove</span>
-          <span>Shift ×5 · Ctrl/Cmd+Shift all</span>
+          <span>左键加点 · 右键减点</span>
+          <span>Shift ×5 · Ctrl/Cmd+Shift 全部</span>
         </div>
       </Modal>
       {hover &&

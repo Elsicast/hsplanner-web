@@ -173,37 +173,37 @@ export default function LeftStatsPanel() {
                 className="inline-block h-1.5 w-1.5 shrink-0 rotate-45 bg-accent-hot"
                 style={{ boxShadow: "0 0 8px rgba(224,184,100,0.6)" }}
               />
-              <span>Character</span>
+              <span>角色</span>
             </div>
             <div
               className="text-[15px] font-semibold tracking-[0.02em] text-accent-hot"
               style={{ textShadow: "0 0 14px rgba(224,184,100,0.18)" }}
             >
-              {cls?.name ?? "No class"}
+              {cls?.name ?? "未选择职业"}
             </div>
             {cls?.primaryAttribute && (
               <div className="mt-0.5 font-mono text-[9px] uppercase tracking-[0.18em] text-accent-deep">
-                Primary · {cls.primaryAttribute}
+                主属性 · {cls.primaryAttribute}
               </div>
             )}
           </div>
           <span className="flex shrink-0 flex-col items-end font-mono text-[10px] uppercase leading-tight tracking-[0.18em] text-accent-hot">
-            <span>Lv {level}</span>
-            <span>Hero Lv {heroLevel}</span>
+            <span>等级 {level}</span>
+            <span>英雄等级 {heroLevel}</span>
           </span>
         </div>
       </div>
 
-      <Section title="Active Skills">
+      <Section title="主动技能">
         {classSkills.length === 0 ? (
           <div className="font-mono text-[11px] tracking-[0.04em] text-muted italic">
-            No skills for this class
+            该职业没有技能
           </div>
         ) : (
           <>
             {activeSkillIds.length === 0 ? (
               <div className="mb-2 font-mono text-[11px] tracking-[0.04em] text-muted italic">
-                Pick active skills in the Skills tab
+                在技能标签页中选择主动技能
               </div>
             ) : (
               <div className="mb-2 flex flex-col gap-1">
@@ -218,7 +218,7 @@ export default function LeftStatsPanel() {
                     <button
                       key={id}
                       onClick={() => toggleActiveSkill(id)}
-                      title={`Remove ${sk?.name ?? id} from active skills`}
+                      title={`将 ${sk?.name ?? id} 从主动技能中移除`}
                       className="flex items-center justify-between gap-2 rounded-[3px] border border-border-2 px-2 py-1 text-left transition-colors hover:border-stat-red/60"
                       style={{ background: "var(--color-panel-2)" }}
                     >
@@ -236,7 +236,7 @@ export default function LeftStatsPanel() {
             {activeSkill && (
               <>
                 <Row
-                  label="Rank"
+                  label="等级"
                   value={
                     <>
                       <span className="text-text">
@@ -261,7 +261,7 @@ export default function LeftStatsPanel() {
                   }
                 />
                 <Row
-                  label="Mana / cast"
+                  label="施法法力消耗"
                   value={
                     effManaMin === undefined || effManaMax === undefined ? (
                       <span className="text-muted">—</span>
@@ -274,7 +274,7 @@ export default function LeftStatsPanel() {
                 />
                 {lifePerCastMax !== undefined && lifePerCastMax > 0 && (
                   <Row
-                    label="Life / cast"
+                    label="施法生命消耗"
                     value={
                       <span className="text-stat-red">
                         {formatNumRange(lifePerCastMin ?? 0, lifePerCastMax)}
@@ -284,7 +284,7 @@ export default function LeftStatsPanel() {
                 )}
                 {entitySwing && (
                   <Row
-                    label="Attack rate"
+                    label="攻击速率"
                     value={
                       <span className="text-text">
                         {formatNumRange(entitySwing.min, entitySwing.max)}/s
@@ -295,10 +295,10 @@ export default function LeftStatsPanel() {
                 <Row
                   label={
                     entityKind
-                      ? 'Spawn rate'
+                      ? '生成频率'
                       : activeSkill?.usesAttackSpeed
-                        ? 'Attack rate'
-                        : 'Cast rate'
+                        ? '攻击速率'
+                        : '施法速率'
                   }
                   value={
                     effCastMin !== undefined && effCastMax !== undefined ? (
@@ -311,7 +311,7 @@ export default function LeftStatsPanel() {
                   }
                 />
                 <Row
-                  label="Mana / sec"
+                  label="每秒法力"
                   value={
                     manaPerSecMin !== undefined &&
                     manaPerSecMax !== undefined ? (
@@ -332,7 +332,7 @@ export default function LeftStatsPanel() {
                   }
                 />
                 <Row
-                  label="Mana regen"
+                  label="法力回复"
                   value={
                     <span className="text-stat-blue">
                       {formatNumRange(manaRegenMin, manaRegenMax)}
@@ -341,7 +341,7 @@ export default function LeftStatsPanel() {
                 />
                 {netMin !== undefined && netMax !== undefined && (
                   <Row
-                    label="Net mana / sec"
+                    label="每秒净法力"
                     value={
                       <span
                         className={
@@ -360,7 +360,7 @@ export default function LeftStatsPanel() {
                 )}
                 {uptimeMin !== undefined && uptimeMax !== undefined && (
                   <Row
-                    label="Uptime"
+                    label="覆盖率"
                     value={
                       <span
                         className={
@@ -382,7 +382,7 @@ export default function LeftStatsPanel() {
                 )}
                 <div className="my-2 border-t border-dashed border-accent-deep/30" />
                 <Row
-                  label="Hit damage"
+                  label="单次命中伤害"
                   value={
                     damage ? (
                       <span className="text-text">
@@ -403,7 +403,7 @@ export default function LeftStatsPanel() {
                 />
                 {entityCount && entityLabel && (
                   <Row
-                    label={`${entityLabel} count`}
+                    label={`${entityLabel} 数量`}
                     value={
                       <span className="text-accent-hot">
                         ×{formatNumRange(entityCount[0], entityCount[1])}
@@ -412,7 +412,7 @@ export default function LeftStatsPanel() {
                   />
                 )}
                 <Row
-                  label="Hit DPS"
+                  label="命中 DPS"
                   value={
                     hitDpsMin !== undefined && hitDpsMax !== undefined ? (
                       <span className="text-accent-hot">
@@ -426,7 +426,7 @@ export default function LeftStatsPanel() {
                 {ailmentDpsMin !== undefined &&
                   ailmentDpsMax !== undefined && (
                     <Row
-                      label="Ailment DPS"
+                      label="异常状态 DPS"
                       value={
                         <span className="text-accent-hot">
                           {compactRange(
@@ -439,7 +439,7 @@ export default function LeftStatsPanel() {
                     />
                   )}
                 <Row
-                  label="Combined DPS"
+                  label="综合 DPS"
                   value={
                     combinedDpsMin !== undefined &&
                     combinedDpsMax !== undefined ? (
@@ -463,9 +463,9 @@ export default function LeftStatsPanel() {
         )}
       </Section>
 
-      <Section title="Points">
+      <Section title="点数">
         <Row
-          label="Attr used"
+          label="已用属性点"
           value={
             <>
               <span className="text-text">{attrSpent}</span>
@@ -474,7 +474,7 @@ export default function LeftStatsPanel() {
           }
         />
         <Row
-          label="Skill used"
+          label="已用技能点"
           value={
             <>
               <span className="text-text">{skillSpent}</span>
@@ -483,7 +483,7 @@ export default function LeftStatsPanel() {
           }
         />
         <Row
-          label="Tree nodes"
+          label="天赋点"
           value={
             <span className="text-text">
               {heroLevel}
@@ -492,7 +492,7 @@ export default function LeftStatsPanel() {
         />
       </Section>
 
-      <Section title="Attributes">
+      <Section title="基础属性">
         {ATTRIBUTE_ORDER.map((key) => {
           const attr = gameConfig.attributes.find((a) => a.key === key);
           if (!attr) return null;
@@ -516,7 +516,7 @@ export default function LeftStatsPanel() {
         })}
       </Section>
 
-      <Section title="Offense">
+      <Section title="进攻">
         {OFFENSE_KEYS.map((key) => (
           <StatLine
             key={key}
@@ -528,7 +528,7 @@ export default function LeftStatsPanel() {
         ))}
       </Section>
 
-      <Section title="Defense">
+      <Section title="防御">
         {DEFENSE_KEYS.map((key) => (
           <Fragment key={key}>
             <StatLine
@@ -550,7 +550,7 @@ export default function LeftStatsPanel() {
         ))}
       </Section>
 
-      <Section title="Resistances">
+      <Section title="抗性">
         {RESISTANCES.map((r) => {
           const v = stats[r.key] ?? 0;
           const cap = effectiveCap(r.key, stats);

@@ -11,9 +11,9 @@ import {
 import { Panel } from './configPrimitives'
 
 const KIND_LABEL: Record<EntityKind, string> = {
-  sentry: 'Sentry',
-  summon: 'Summon',
-  guardian: 'Guardian',
+  sentry: '哨兵',
+  summon: '召唤物',
+  guardian: '守卫',
 }
 
 export default function EntityRatePanel() {
@@ -37,8 +37,8 @@ export default function EntityRatePanel() {
 
   return (
     <Panel
-      title="Entity Attack Rate"
-      subtitle="Base attacks/casts per second of the entities a skill fields. Sentries, summons and guardians are separate kinds with separate rates because the game exposes none of them, so tune each by hand."
+      title="实体攻击频率"
+      subtitle="技能召唤实体的基础每秒攻击/施法次数。哨兵、召唤物与守卫是不同种类、各自拥有独立频率，因为游戏不提供任何相关数据，需手动逐项调整。"
     >
       <div className="space-y-2">
         {kindsInBuild.map((kind) => (
@@ -66,7 +66,7 @@ function RateRow({
   return (
     <div className="flex items-center justify-between gap-2">
       <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-        {label} / sec
+        {label} /秒
       </span>
       <div
         className="inline-flex w-20 shrink-0 items-center rounded-[3px] border border-border-2 px-2 py-1 transition-colors focus-within:border-accent-hot"

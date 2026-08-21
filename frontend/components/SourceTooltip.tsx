@@ -141,7 +141,7 @@ function SourceItem({
       <div className="flex items-baseline justify-between gap-2 leading-[1.5] pl-3 -mx-1 px-1 rounded-[2px] hover:bg-accent-hot/8 transition-colors">
         <span className="flex items-baseline gap-1 min-w-0">
           <span className="text-text/40 shrink-0">⤷</span>
-          <span className={`shrink-0 italic ${color}`}>Forged modifier</span>
+          <span className={`shrink-0 italic ${color}`}>锻造词条</span>
           <span className="text-text/60 truncate">
             ({FORGE_KIND_LABEL[s.forge.kind]})
           </span>
@@ -534,7 +534,7 @@ function SourcesBody({
         {sectionLabel('Additive (+)', fmtSubtotal(addSubtotal))}
         <ul className="space-y-1 px-3 py-2">
           {orderedAdd.length === 0 ? (
-            <li className="italic text-text/40">No additive sources</li>
+            <li className="italic text-text/40">暂无加算来源</li>
           ) : (
             orderedAdd.map((s, i) => (
               <SourceItem key={i} s={s} statKey={statKey} index={i} itemByName={itemByName} />
@@ -773,8 +773,8 @@ export default function SourceTooltip({
                   type="button"
                   onClick={() => setPinned(false)}
                   className="flex h-6 w-6 items-center justify-center rounded-[2px] text-[14px] leading-none text-faint transition-colors hover:bg-accent-hot/10 hover:text-accent-hot"
-                  aria-label="Close source breakdown"
-                  title="Close (Esc)"
+                  aria-label="关闭来源明细"
+                  title="关闭（Esc）"
                 >
                   ×
                 </button>

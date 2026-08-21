@@ -38,15 +38,15 @@ describe('<UpdateModal>', () => {
     render(<UpdateModal info={mockInfo} onClose={() => {}} />)
 
     expect(
-      screen.getByRole('dialog', { name: /update available/i }),
+      screen.getByRole('dialog', { name: /有可用更新/ }),
     ).toBeInTheDocument()
     expect(screen.getByText('v0.4.2')).toBeInTheDocument()
     expect(screen.getByText('v0.5.0')).toBeInTheDocument()
 
-    expect(screen.getByText('NEW')).toBeInTheDocument()
-    expect(screen.getByText('IMPROVED')).toBeInTheDocument()
-    expect(screen.getByText('BALANCE')).toBeInTheDocument()
-    expect(screen.getByText('FIXES')).toBeInTheDocument()
+    expect(screen.getByText('新增')).toBeInTheDocument()
+    expect(screen.getByText('改进')).toBeInTheDocument()
+    expect(screen.getByText('平衡')).toBeInTheDocument()
+    expect(screen.getByText('修复')).toBeInTheDocument()
 
     expect(
       screen.getByText(/Ascendancy trees for all 6 classes/),
@@ -65,7 +65,7 @@ describe('<UpdateModal>', () => {
     const onClose = vi.fn()
     render(<UpdateModal info={mockInfo} onClose={onClose} />)
 
-    await userEvent.click(screen.getByRole('button', { name: /close/i }))
+    await userEvent.click(screen.getByRole('button', { name: /关闭/ }))
     expect(onClose).toHaveBeenCalledTimes(1)
 
     fireEvent.keyDown(window, { key: 'Escape' })
@@ -84,7 +84,7 @@ describe('<UpdateModal>', () => {
     )
 
     await userEvent.click(
-      screen.getByRole('button', { name: /skip this version/i }),
+      screen.getByRole('button', { name: /跳过此版本/ }),
     )
     expect(window.localStorage.getItem('hsplanner.update.skipped_version')).toBe(
       '0.5.0',
@@ -101,7 +101,7 @@ describe('<UpdateModal>', () => {
     render(<UpdateModal info={mockInfo} onClose={onClose} />)
 
     await userEvent.click(
-      screen.getByRole('button', { name: /download & install/i }),
+      screen.getByRole('button', { name: /下载并安装/ }),
     )
     expect(openSpy).toHaveBeenCalledWith(
       'https://example.test/dl/HSPlanner.dmg',
@@ -114,7 +114,7 @@ describe('<UpdateModal>', () => {
   it('Auto-install toggle persists', async () => {
     render(<UpdateModal info={mockInfo} onClose={() => {}} />)
     const checkbox = screen.getByRole('checkbox', {
-      name: /auto-install on quit/i,
+      name: /退出时自动安装/,
     })
     expect(checkbox).not.toBeChecked()
 
@@ -133,7 +133,7 @@ describe('<UpdateModal>', () => {
       />,
     )
     expect(
-      screen.getByText(/no release notes available/i),
+      screen.getByText(/暂无发行说明/),
     ).toBeInTheDocument()
   })
 

@@ -44,7 +44,7 @@ export default function SeasonToast() {
             style={{ boxShadow: "0 0 8px rgba(224,184,100,0.6)" }}
           />
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-            This build is on
+            当前构建处于
           </span>
           <span
             className="font-mono text-[12px] uppercase tracking-[0.16em] text-accent-hot"

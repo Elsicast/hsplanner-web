@@ -33,10 +33,10 @@ export function JewelrySocketSection({
   if (!content) {
     return (
       <TooltipSection>
-        <TooltipSectionHeader tone="gold">Socketed</TooltipSectionHeader>
+        <TooltipSectionHeader tone="gold">已镶嵌</TooltipSectionHeader>
         <TooltipText>
           <span className="text-faint italic">
-            Empty socket{isAllocated ? ' — right-click to insert' : ''}
+            空插槽{isAllocated ? ' — 右键镶嵌' : ''}
           </span>
         </TooltipText>
       </TooltipSection>
@@ -52,10 +52,10 @@ export function JewelrySocketSection({
     if (!source) {
       return (
         <TooltipSection>
-          <TooltipSectionHeader tone="gold">Socketed</TooltipSectionHeader>
+          <TooltipSectionHeader tone="gold">已镶嵌</TooltipSectionHeader>
           <TooltipText>
             <span className="text-stat-red">
-              unknown socketable: {content.id}
+              未知可镶嵌物：{content.id}
             </span>
           </TooltipText>
         </TooltipSection>
@@ -65,10 +65,8 @@ export function JewelrySocketSection({
     socketedSubtitle = `T${source.tier}`
     statLines = socketableStatLines(source.stats)
   } else {
-    socketedTitle = 'Uncut Jewel'
-    socketedSubtitle = `${content.affixes.length} affix${
-      content.affixes.length === 1 ? '' : 'es'
-    }`
+    socketedTitle = '未切割珠宝'
+    socketedSubtitle = `${content.affixes.length} 条词缀`
     statLines = craftedAffixes
       .map((eq, idx) => {
         const def = getAffix(eq.affixId)
@@ -87,7 +85,7 @@ export function JewelrySocketSection({
     <>
       <TooltipSection>
         <TooltipSectionHeader tone="gold" trailing={socketedSubtitle}>
-          Socketed
+          已镶嵌
         </TooltipSectionHeader>
         <div className="text-[12px] font-medium text-accent-hot">
           {socketedTitle}
@@ -95,7 +93,7 @@ export function JewelrySocketSection({
       </TooltipSection>
       {statLines.length > 0 && (
         <TooltipSection>
-          <TooltipSectionHeader tone="gold">From Sockets</TooltipSectionHeader>
+          <TooltipSectionHeader tone="gold">来自插槽的属性</TooltipSectionHeader>
           <ul className="space-y-0.5 text-[12px]">
             {statLines.map(({ key, text }) => (
               <li key={key} className="text-accent">

@@ -87,7 +87,7 @@ export default function BottomBar() {
           ? err.message
           : err instanceof Error
             ? err.message
-            : 'Check failed'
+            : '检查失败'
       setCheck({ kind: 'error', message })
       scheduleRevert(5000)
     }
@@ -122,7 +122,7 @@ export default function BottomBar() {
       <button
         type="button"
         onClick={() => setChangelogOpen(true)}
-        title="View changelog"
+        title="查看更新日志"
         className="cursor-pointer font-mono text-[10px] uppercase tracking-[0.14em] text-faint transition-colors hover:text-accent-hot"
       >
         v{APP_VERSION}
@@ -158,7 +158,7 @@ export default function BottomBar() {
         href="https://ko-fi.com/zium1337"
         target="_blank"
         rel="noopener noreferrer"
-        title="Support HSPlanner on Ko-fi"
+        title="在 Ko-fi 上支持 HSPlanner"
         onClick={(e) => openExternalLink(e, 'https://ko-fi.com/zium1337')}
         className="ml-auto inline-flex items-center gap-1.5 rounded-[3px] border border-accent-deep px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-accent-hot transition-colors hover:border-accent-hot hover:text-[#fff0c4]"
         style={{
@@ -167,7 +167,7 @@ export default function BottomBar() {
         }}
       >
         <KofiIcon className="h-3 w-3" />
-        Support on Ko-fi
+        在 Ko-fi 上支持
       </a>
       <span aria-hidden className="h-4 w-px bg-border" />
       <SaveBadge />
@@ -202,7 +202,7 @@ function SaveBadge() {
           className="h-1.5 w-1.5 rounded-full bg-stat-green"
           style={{ boxShadow: '0 0 8px rgba(116,201,138,0.65)' }}
         />
-        Auto-saved
+        已自动保存
       </span>
     )
   }
@@ -215,14 +215,14 @@ function SaveBadge() {
           className="h-1.5 w-1.5 rounded-full bg-stat-green"
           style={{ boxShadow: '0 0 8px rgba(116,201,138,0.65)' }}
         />
-        Saved
+        已保存
       </span>
     )
   }
 
   return (
     <span
-      title={`Auto-save is off — press ${SAVE_SHORTCUT} to save`}
+      title={`自动保存已关闭 — 按 ${SAVE_SHORTCUT} 保存`}
       className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-accent-hot"
     >
       <span
@@ -230,7 +230,7 @@ function SaveBadge() {
         className="h-1.5 w-1.5 rounded-full bg-accent-hot"
         style={{ boxShadow: '0 0 8px rgba(224,184,100,0.65)' }}
       />
-      Manual · {SAVE_SHORTCUT}
+      手动 · {SAVE_SHORTCUT}
     </span>
   )
 }
@@ -251,10 +251,10 @@ function UpdateBadge({
       <button
         type="button"
         disabled
-        title="Set GITHUB_REPO in src/utils/version.ts to enable update checks"
+        title="在 src/utils/version.ts 中设置 GITHUB_REPO 以启用更新检查"
         className="cursor-not-allowed rounded-[3px] border border-border bg-panel-2/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-faint"
       >
-        Check for updates
+        检查更新
       </button>
     )
   }
@@ -266,7 +266,7 @@ function UpdateBadge({
           aria-hidden
           className="inline-block h-1 w-1 animate-pulse rotate-45 bg-faint"
         />
-        Checking…
+        检查中…
       </span>
     )
   }
@@ -279,13 +279,13 @@ function UpdateBadge({
           className="h-1.5 w-1.5 rounded-full bg-stat-green"
           style={{ boxShadow: '0 0 6px rgba(116,201,138,0.6)' }}
         />
-        Up to date
+        已是最新
       </span>
     )
   }
 
   if (state.kind === 'available') {
-    const label = `v${state.info.latest} available`
+    const label = `新版本 v${state.info.latest} 可用`
     return (
       <button
         type="button"
@@ -315,7 +315,7 @@ function UpdateBadge({
           className="h-1.5 w-1.5 rounded-full bg-stat-red"
           style={{ boxShadow: '0 0 6px rgba(217,107,90,0.6)' }}
         />
-        Check failed
+        检查失败
       </span>
     )
   }
@@ -326,7 +326,7 @@ function UpdateBadge({
       onClick={onCheck}
       className="rounded-[3px] border border-border-2 bg-panel-2 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
     >
-      Check
+      检查
     </button>
   )
 }
@@ -354,7 +354,7 @@ function KofiIcon({ className }: { className?: string }) {
 
 function BuildChannelBadge({ channel }: { channel: 'dev' | 'stable' }) {
   const isDev = channel === 'dev'
-  const label = isDev ? 'DEV' : 'STABLE'
+  const label = isDev ? '开发版' : '稳定版'
   const className = isDev
     ? 'border-accent-deep/50 text-accent-hot'
     : 'border-stat-green/50 text-stat-green'
@@ -363,7 +363,7 @@ function BuildChannelBadge({ channel }: { channel: 'dev' | 'stable' }) {
     : 'linear-gradient(180deg, rgba(28,52,34,0.6), rgba(20,38,24,0.4))'
   return (
     <span
-      title={isDev ? 'Development build' : 'Stable build'}
+      title={isDev ? '开发版构建' : '稳定版构建'}
       className={`rounded-[3px] border px-1.5 py-px font-mono text-[9px] uppercase tracking-[0.18em] ${className}`}
       style={{ background: bg }}
     >

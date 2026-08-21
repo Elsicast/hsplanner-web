@@ -118,7 +118,7 @@ export default function SkillsView() {
   const trees = useMemo(() => {
     const byTree = new Map<string, Skill[]>()
     for (const s of skillsForClass) {
-      const key = s.tree ?? 'Ungrouped'
+      const key = s.tree ?? '未分组'
       const list = byTree.get(key) ?? []
       list.push(s)
       byTree.set(key, list)
@@ -135,13 +135,13 @@ export default function SkillsView() {
 
   if (classes.length === 0) {
     return (
-      <EmptyState message="No classes loaded. Add a file in src/data/classes/." />
+      <EmptyState message="未加载任何职业。请在 src/data/classes/ 中添加文件。" />
     )
   }
   if (skillsForClass.length === 0) {
     return (
       <EmptyState
-        message={`No skills defined for ${cls?.name ?? 'this class'}. Add JSON in src/data/skills/.`}
+        message={`未为 ${cls?.name ?? '该职业'} 定义技能。请在 src/data/skills/ 中添加 JSON。`}
       />
     )
   }
@@ -162,7 +162,7 @@ export default function SkillsView() {
             style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
           />
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-            Skills
+            技能
           </span>
           <span
             className="text-[15px] font-semibold tracking-[0.02em] text-accent-hot"
@@ -172,7 +172,7 @@ export default function SkillsView() {
           </span>
         </div>
         <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.14em]">
-          <span className="text-faint">Points</span>
+          <span className="text-faint">点数</span>
           <span
             className={`tabular-nums ${remaining > 0 ? 'text-accent-hot' : 'text-muted'}`}
             style={
@@ -186,16 +186,16 @@ export default function SkillsView() {
           <span className="text-faint">/ {totalPoints}</span>
           <span aria-hidden className="h-3 w-px bg-border" />
           <span className={remaining > 0 ? 'text-accent-hot' : 'text-faint'}>
-            {remaining} available
+            可用 {remaining}
           </span>
           <span aria-hidden className="h-3 w-px bg-border" />
-          <span className="text-faint">Shift ×5 · Ctrl/Cmd+Shift all</span>
+          <span className="text-faint">Shift ×5 · Ctrl/Cmd+Shift 全部</span>
           <button
             onClick={resetSkillRanks}
             disabled={spent === 0}
             className="rounded-[3px] border border-border-2 bg-transparent px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:border-stat-red hover:text-stat-red disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Reset
+            重置
           </button>
         </div>
       </header>

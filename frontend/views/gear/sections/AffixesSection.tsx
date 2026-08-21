@@ -93,7 +93,7 @@ function affixToPickerRow(a: Affix, opts?: { useDescriptionAsName?: boolean }): 
     id: a.id,
     name: primary,
     tier: a.tier,
-    kindLabel: a.kind?.toUpperCase() ?? 'AFFIX',
+    kindLabel: a.kind?.toUpperCase() ?? '词缀',
     meta,
     iconColor: isUnholy ? '#cf6db0' : 'var(--color-accent)',
     iconNode: isUnholy ? <InvertedCrossIcon color="#cf6db0" /> : undefined,
@@ -146,8 +146,8 @@ export function AffixesSection({
       .map((a) => affixToPickerRow(a, { useDescriptionAsName: isUnholy }))
   }, [randomGroupId, isUnholy])
 
-  const sectionTitle = isUnholy ? 'Unholy Affixes' : 'Affixes'
-  const modalTitle = isUnholy ? 'Pick Unholy Affix' : 'Add Affix'
+  const sectionTitle = isUnholy ? 'Unholy 词缀' : '词缀'
+  const modalTitle = isUnholy ? '选择 Unholy 词缀' : '添加词缀'
 
   return (
     <SectionCard
@@ -168,7 +168,7 @@ export function AffixesSection({
                 : 'linear-gradient(180deg, #3a2f1a, #2a2418)',
             }}
           >
-            + Add
+            + 添加
           </button>
         </>
       }
@@ -178,7 +178,7 @@ export function AffixesSection({
     >
       {equipped.affixes.length === 0 ? (
         <div className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint italic">
-          No affixes rolled
+          未随机到词缀
         </div>
       ) : (
         equipped.affixes.map((eq, idx) => {
@@ -208,16 +208,16 @@ export function AffixesSection({
                 {eq.customValue !== undefined && (
                   <span
                     className="rounded-xs border border-accent-hot/60 px-1 py-px font-mono text-[9px] tabular-nums text-accent-hot"
-                    title="Custom value override"
+                    title="自定义数值覆盖"
                   >
-                    custom
+                    自定义
                   </span>
                 )}
               </span>
               <button
                 onClick={() => onRemove(idx)}
                 className="flex h-5 w-5 shrink-0 items-center justify-center rounded-xs border border-border-2 font-mono text-[12px] leading-none text-faint transition-colors hover:border-stat-red hover:text-stat-red"
-                aria-label="Remove affix"
+                aria-label="移除词缀"
               >
                 ×
               </button>
@@ -229,10 +229,10 @@ export function AffixesSection({
       {modalOpen && (
         <PickerModal
           title={modalTitle}
-          sectionLabel="Affix"
+          sectionLabel="词缀"
           rows={pickerRows}
-          searchPlaceholder="Search affixes…"
-          emptyMessage="No matching affixes"
+          searchPlaceholder="搜索词缀…"
+          emptyMessage="没有匹配的词缀"
           width={680}
           onSelect={(id) => {
             const a = affixes.find((x) => x.id === id)

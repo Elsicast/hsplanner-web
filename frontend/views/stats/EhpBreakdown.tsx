@@ -28,7 +28,7 @@ export function EhpBreakdown({ stats, statsCombined }: EhpBreakdownProps) {
   if (entries.length === 0) {
     return (
       <div className="py-2 text-center text-xs text-muted italic">
-        Add life and defenses to see effective HP.
+        添加生命与防御属性后可查看有效生命。
       </div>
     )
   }
@@ -38,7 +38,7 @@ export function EhpBreakdown({ stats, statsCombined }: EhpBreakdownProps) {
   return (
     <>
       <BDLine
-        label="Life"
+        label="生命"
         value={
           <span className="text-stat-red">{life.toLocaleString('en-US')}</span>
         }
@@ -56,7 +56,7 @@ export function EhpBreakdown({ stats, statsCombined }: EhpBreakdownProps) {
                 titleClass={TYPE_COLOR[entry.type]}
                 title={
                   weakest
-                    ? `${capitalize(entry.type)} · weakest`
+                    ? `${capitalize(entry.type)} · 最弱`
                     : capitalize(entry.type)
                 }
               >
@@ -71,7 +71,7 @@ export function EhpBreakdown({ stats, statsCombined }: EhpBreakdownProps) {
                   }
                 />
                 {entry.layers.length === 0 ? (
-                  <BDLine indent label="No mitigation" value="—" />
+                  <BDLine indent label="无减伤" value="—" />
                 ) : (
                   entry.layers.map((layer) => (
                     <BDLine

@@ -51,12 +51,12 @@ export function TypePanel({ filter, typeId, apply }: TypePanelProps) {
 
   return (
     <Panel
-      title={`${label} · visibility`}
+      title={`${label} · 可见性`}
       trailing={<CopyControls filter={filter} typeId={typeId} apply={apply} />}
     >
       <div className="flex flex-wrap items-start gap-x-10 gap-y-5">
         <div>
-          <div className={SUBLABEL_CLASS}>Rarity × tier</div>
+          <div className={SUBLABEL_CLASS}>稀有度 × 阶级</div>
           <table className="border-separate border-spacing-[3px]">
             <thead>
               <tr>
@@ -65,7 +65,7 @@ export function TypePanel({ filter, typeId, apply }: TypePanelProps) {
                   <th key={t} className="pb-0.5">
                     <button
                       type="button"
-                      title={`Toggle tier ${t} for every rarity`}
+                      title={`为所有稀有度切换阶级 ${t}`}
                       onClick={() => apply(toggleRarityTier(filter, typeId, tier))}
                       className={HEADER_BTN_CLASS}
                     >
@@ -81,7 +81,7 @@ export function TypePanel({ filter, typeId, apply }: TypePanelProps) {
                   <td className="pr-2">
                     <button
                       type="button"
-                      title={`Toggle ${RARITY_LABEL[rarity]} on every tier`}
+                      title={`在所有阶级上切换 ${RARITY_LABEL[rarity]}`}
                       onClick={() => apply(toggleRarityRow(filter, typeId, r))}
                       className={`font-mono text-[11px] transition-opacity hover:opacity-70 ${RARITY_TEXT[rarity]}`}
                     >
@@ -92,7 +92,7 @@ export function TypePanel({ filter, typeId, apply }: TypePanelProps) {
                     <td key={t}>
                       <FilterCell
                         state={rarityCellState(type.tiers[tier]!.rs, r)}
-                        title={`${label} · ${RARITY_LABEL[rarity]} · tier ${t}`}
+                        title={`${label} · ${RARITY_LABEL[rarity]} · 阶级 ${t}`}
                         onToggle={() =>
                           apply(toggleRarityVisible(filter, typeId, tier, r))
                         }
@@ -109,7 +109,7 @@ export function TypePanel({ filter, typeId, apply }: TypePanelProps) {
         </div>
 
         <div>
-          <div className={SUBLABEL_CLASS}>Socket count</div>
+          <div className={SUBLABEL_CLASS}>插槽数</div>
           <table className="border-separate border-spacing-[3px]">
             <thead>
               <tr>
@@ -128,7 +128,7 @@ export function TypePanel({ filter, typeId, apply }: TypePanelProps) {
                   <td key={s}>
                     <FilterCell
                       state={socketCellState(type, s)}
-                      title={`${label} · ${s + 1} socket${s > 0 ? 's' : ''}`}
+                      title={`${label} · ${s + 1} 插槽`}
                       onToggle={() => apply(toggleSocketVisible(filter, typeId, s))}
                       onHighlight={() =>
                         apply(toggleSocketHighlight(filter, typeId, s))
@@ -143,7 +143,7 @@ export function TypePanel({ filter, typeId, apply }: TypePanelProps) {
 
         {isWeapon && (
           <div className="min-w-0 flex-1">
-            <div className={SUBLABEL_CLASS}>Weapon types</div>
+            <div className={SUBLABEL_CLASS}>武器类型</div>
             <div className="grid grid-cols-4 gap-1.5">
               {WEAPON_TYPES.map((w, bit) => {
                 if (!w) return null
@@ -180,7 +180,7 @@ function CopyControls({ filter, typeId, apply }: TypePanelProps) {
     <div className="flex items-center gap-2">
       <button
         type="button"
-        title="Copy this type's whole configuration to every other type"
+        title="将该类型的完整配置复制到所有其他类型"
         onClick={() =>
           apply(
             copyTypeConfig(
@@ -192,7 +192,7 @@ function CopyControls({ filter, typeId, apply }: TypePanelProps) {
         }
         className={FILTER_BTN_CLASS}
       >
-        Copy to all
+        复制到全部
       </button>
       <select
         value=""
@@ -202,10 +202,10 @@ function CopyControls({ filter, typeId, apply }: TypePanelProps) {
             apply(copyTypeConfig(filter, typeId, [next]))
           }
         }}
-        aria-label="Copy configuration to a specific type"
+        aria-label="复制配置到指定类型"
         className="h-[28px] rounded-[3px] border border-border-2 bg-panel-2 px-2 text-[12px] text-muted outline-none transition-colors hover:border-accent-deep focus:border-accent-deep"
       >
-        <option value="">Copy to…</option>
+        <option value="">复制到…</option>
         {ITEM_TYPES.filter((t) => t.id !== typeId).map((t) => (
           <option key={t.id} value={t.id}>
             {t.label}

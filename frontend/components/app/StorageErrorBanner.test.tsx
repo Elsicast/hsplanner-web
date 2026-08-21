@@ -30,7 +30,7 @@ describe('StorageErrorBanner', () => {
     useBuild.setState({ storageError: 'Could not save — disk is full.' })
     render(<StorageErrorBanner />)
 
-    fireEvent.click(screen.getByRole('button', { name: /dismiss/i }))
+    fireEvent.click(screen.getByRole('button', { name: /关闭/ }))
 
     expect(useBuild.getState().storageError).toBeNull()
   })

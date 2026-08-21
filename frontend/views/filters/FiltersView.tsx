@@ -81,31 +81,31 @@ function BuildFilters({ activeBuildId }: { activeBuildId: string | null }) {
             className="inline-block h-[6px] w-[6px] rotate-45 bg-accent-hot"
             style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
           />
-          Build · {buildName ?? 'unsaved build'}
+          构建 · {buildName ?? '未保存的构建'}
         </div>
         <h2
           className="m-0 text-[22px] font-semibold tracking-[0.02em] text-accent-hot"
           style={{ textShadow: '0 0 16px rgba(224,184,100,0.18)' }}
         >
-          Loot Filters
+          拾取过滤规则
         </h2>
       </div>
       {activeBuildId && (
         <div className="flex items-center gap-2">
           <button
             type="button"
-            title="Create a filter that highlights the affixes this build already wears"
+            title="创建一条过滤规则，高亮该构建已穿戴的词缀"
             onClick={() => setGenerateOpen(true)}
             className={FILTER_BTN_CLASS}
           >
-            From build
+            从构建生成
           </button>
           <button
             type="button"
             onClick={() => setNewFilterCode('')}
             className={FILTER_BTN_PRIMARY_CLASS}
           >
-            + New filter
+            + 新建过滤规则
           </button>
         </div>
       )}
@@ -124,11 +124,10 @@ function BuildFilters({ activeBuildId }: { activeBuildId: string | null }) {
           }}
         >
           <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
-            Loot filters are stored per build
+            拾取过滤规则按构建分别保存
           </div>
           <p className="mx-auto mt-2 max-w-[440px] text-[12px] leading-relaxed text-faint">
-            This build isn't saved yet. Save it first (Builds → Save…), then
-            create or import loot filters for it.
+            该构建尚未保存。请先保存（构建 → 保存…），然后再为其创建或导入拾取过滤规则。
           </p>
         </div>
       </div>
@@ -154,18 +153,18 @@ function BuildFilters({ activeBuildId }: { activeBuildId: string | null }) {
           style={{ background: 'rgba(255,255,255,0.008)' }}
         >
           <span>★</span>
-          <span>Name</span>
-          <span>Modified</span>
+          <span>名称</span>
+          <span>修改时间</span>
           <span aria-hidden />
         </div>
 
         {filters.length === 0 ? (
           <div className="flex flex-col items-center gap-1.5 px-6 py-12 text-center">
             <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
-              No loot filters yet
+              还没有拾取过滤规则
             </div>
             <div className="text-[11px] text-muted">
-              Create a new filter or import an export string from the game.
+              新建一条过滤规则，或从游戏导入导出字符串。
             </div>
           </div>
         ) : (
@@ -204,11 +203,10 @@ function BuildFilters({ activeBuildId }: { activeBuildId: string | null }) {
           </span>
           <span>
             <span className="mb-1 block text-[13px] font-semibold text-text">
-              Import a filter from the game
+              从游戏导入过滤规则
             </span>
             <span className="block text-[12px] leading-normal text-muted">
-              Click here or drop an export string — you'll find it in the in-game
-              loot filter window.
+              点击此处或拖入导出字符串 — 可在游戏内的拾取过滤窗口中找到。
             </span>
           </span>
         </button>
@@ -241,15 +239,14 @@ function BuildFilters({ activeBuildId }: { activeBuildId: string | null }) {
 
       {pendingDelete && (
         <ConfirmOverlay
-          section="Delete"
-          title="Delete loot filter"
+          section="删除"
+          title="删除拾取过滤规则"
           danger
-          confirmLabel="Delete filter"
+          confirmLabel="删除过滤规则"
           message={
             <>
-              Permanently delete{' '}
-              <span className="text-accent-hot">{pendingDelete.name}</span>? This
-              cannot be undone.
+              永久删除{' '}
+              <span className="text-accent-hot">{pendingDelete.name}</span>？此操作无法撤销。
             </>
           }
           onConfirm={() => {
@@ -319,29 +316,28 @@ function CheckIcon({ className }: { className?: string }) {
 
 function MetaChips({ meta }: { meta: FilterSummary | null }) {
   if (!meta) {
-    return <span className="text-[10px] text-stat-red/80">unreadable</span>
+    return <span className="text-[10px] text-stat-red/80">无法解析</span>
   }
   if (meta.editedTypes === 0) {
     return (
       <span className="rounded-[2px] border border-border bg-panel-2 px-1.5 py-[1px] font-mono text-[9px] uppercase tracking-[0.12em] text-faint">
-        Default
+        默认
       </span>
     )
   }
   return (
     <>
       <span className="rounded-[2px] border border-border bg-panel-2 px-1.5 py-[1px] font-mono text-[9px] uppercase tracking-[0.12em] text-muted">
-        {meta.editedTypes} {meta.editedTypes === 1 ? 'type' : 'types'}
+        {meta.editedTypes} 个类型
       </span>
       {meta.hiddenStats > 0 && (
         <span className="rounded-[2px] border border-border bg-panel-2 px-1.5 py-[1px] font-mono text-[9px] uppercase tracking-[0.12em] text-muted">
-          {meta.hiddenStats} hidden
+          {meta.hiddenStats} 项隐藏
         </span>
       )}
       {meta.highlightedStats > 0 && (
         <span className="rounded-[2px] border border-accent-deep bg-accent-hot/10 px-1.5 py-[1px] font-mono text-[9px] uppercase tracking-[0.12em] text-accent-hot">
-          {meta.highlightedStats}{' '}
-          {meta.highlightedStats === 1 ? 'highlight' : 'highlights'}
+          {meta.highlightedStats} 项高亮
         </span>
       )}
     </>
@@ -402,7 +398,7 @@ function FilterRow({
         className={`flex h-[18px] w-[18px] items-center justify-center transition-colors ${
           filter.favorite ? 'text-accent-hot' : 'text-faint hover:text-muted'
         }`}
-        title={filter.favorite ? 'Unfavorite' : 'Favorite'}
+        title={filter.favorite ? '取消收藏' : '收藏'}
       >
         <StarIcon filled={filter.favorite} />
       </button>
@@ -431,7 +427,7 @@ function FilterRow({
                 if (e.key === 'Enter') commitRename()
                 if (e.key === 'Escape') setRenaming(false)
               }}
-              aria-label="Filter name"
+              aria-label="过滤规则名称"
               className="w-full max-w-[320px] rounded-[3px] border border-accent-deep bg-panel-2 px-1.5 py-[3px] text-[13.5px] font-semibold text-text outline-none"
             />
           ) : (
@@ -458,17 +454,17 @@ function FilterRow({
         onClick={(e) => e.stopPropagation()}
       >
         <IconAction
-          label={copied ? 'Copied!' : 'Copy game code'}
+          label={copied ? '已复制！' : '复制游戏代码'}
           active={copied}
           onClick={() => void copyCode(filter.code)}
         >
           {copied ? <CheckIcon className="h-[14px] w-[14px]" /> : <CodeIcon className="h-[14px] w-[14px]" />}
         </IconAction>
-        <IconAction label="Rename" onClick={startRename}>
+        <IconAction label="重命名" onClick={startRename}>
           <RenameIcon className="h-[14px] w-[14px]" />
         </IconAction>
         <IconAction
-          label="Duplicate"
+          label="创建副本"
           onClick={() => {
             duplicateFilter(filter.id)
             onChanged()
@@ -476,7 +472,7 @@ function FilterRow({
         >
           <CopyIcon className="h-[14px] w-[14px]" />
         </IconAction>
-        <IconAction label="Delete" danger onClick={onRequestDelete}>
+        <IconAction label="删除" danger onClick={onRequestDelete}>
           <DeleteIcon className="h-[14px] w-[14px]" />
         </IconAction>
       </div>
@@ -495,19 +491,19 @@ function NewFilterModal({
   onClose: () => void
   onDone: (record: SavedLootFilter) => void
 }) {
-  const [name, setName] = useState('New filter')
+  const [name, setName] = useState('新过滤规则')
   const [code, setCode] = useState(initialCode)
   const [error, setError] = useState<string | null>(null)
 
   const hasCode = code.trim().length > 0
 
   const submit = () => {
-    const filterName = name.trim() || 'New filter'
+    const filterName = name.trim() || '新过滤规则'
     const record = hasCode
       ? importFilter(buildId, filterName, code)
       : createFilter(buildId, filterName)
     if (!record) {
-      setError('Invalid filter string — paste the exact export from the game.')
+      setError('无效的过滤规则字符串 — 请粘贴游戏导出的原始内容。')
       return
     }
     onDone(record)
@@ -517,13 +513,13 @@ function NewFilterModal({
     <Modal
       onClose={onClose}
       panelClassName="w-[min(560px,92vw)]"
-      eyebrow="Loot filter"
-      title="New loot filter"
+      eyebrow="拾取过滤规则"
+      title="新建拾取过滤规则"
     >
       <div className="flex flex-col gap-3 px-6 py-4">
         <label className="flex flex-col gap-1">
           <span className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-faint">
-            Name
+            名称
           </span>
           <input
             value={name}
@@ -538,7 +534,7 @@ function NewFilterModal({
         </label>
         <label className="flex flex-col gap-1">
           <span className="font-mono text-[9.5px] uppercase tracking-[0.14em] text-faint">
-            Export string · optional
+            导出字符串 · 可选
           </span>
           <textarea
             value={code}
@@ -548,7 +544,7 @@ function NewFilterModal({
             }}
             spellCheck={false}
             rows={5}
-            placeholder="Leave empty to start from scratch, or paste an export from the game (eyJ2ZXJzaW9uIjoy…)"
+            placeholder="留空则从零开始，或粘贴游戏导出内容 (eyJ2ZXJzaW9uIjoy…)"
             className="resize-y rounded-[3px] border border-border-2 bg-panel-2 p-2 font-mono text-[10px] leading-relaxed text-muted outline-none transition-colors focus:border-accent-deep"
           />
         </label>
@@ -556,7 +552,7 @@ function NewFilterModal({
       </div>
       <div className="flex items-center justify-end gap-2 border-t border-border px-6 py-3">
         <button type="button" onClick={submit} className={MODAL_BTN_PRIMARY_CLASS}>
-          {hasCode ? 'Import from game' : 'Create'}
+          {hasCode ? '从游戏导入' : '创建'}
         </button>
       </div>
     </Modal>

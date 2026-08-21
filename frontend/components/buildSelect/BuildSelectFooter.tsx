@@ -28,8 +28,8 @@ export function BuildSelectFooter({
           <span className="text-accent-hot">{notice}</span>
         ) : (
           <>
-            <b className="font-medium text-text">{buildCount}</b> Builds ·{' '}
-            <b className="font-medium text-text">{folderCount}</b> Folders
+            <b className="font-medium text-text">{buildCount}</b> 个构建 ·{' '}
+            <b className="font-medium text-text">{folderCount}</b> 个文件夹
           </>
         )}
       </span>
@@ -40,7 +40,7 @@ export function BuildSelectFooter({
           checked={autoOpen}
           onChange={(e) => onToggleAutoOpen(e.target.checked)}
         />
-        <span>Auto-open last build</span>
+        <span>自动打开上次构建</span>
       </label>
       <div className="flex-1" />
       <span className="inline-flex items-center gap-1.5 text-faint">

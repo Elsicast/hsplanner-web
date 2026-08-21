@@ -59,19 +59,19 @@ export function BuildSelectToolbar({
         New
       </button>
       <ToolButton
-        label="Import…"
+        label="导入…"
         icon={<ImportIcon className="h-3.5 w-3.5" />}
         onClick={() => onOverlay({ kind: 'import' })}
       />
       <ToolSep />
       <ToolButton
-        label="Copy"
+        label="复制"
         icon={<CopyIcon className="h-3.5 w-3.5" />}
         disabled={!selectedBuild}
         onClick={() => selectedBuild && onCopy(selectedBuild.id)}
       />
       <ToolButton
-        label="Rename"
+        label="重命名"
         icon={<RenameIcon className="h-3.5 w-3.5" />}
         disabled={!selectedBuild}
         onClick={() =>
@@ -84,7 +84,7 @@ export function BuildSelectToolbar({
         }
       />
       <ToolButton
-        label="Delete"
+        label="删除"
         icon={<DeleteIcon className="h-3.5 w-3.5" />}
         danger
         disabled={!selectedBuild}
@@ -99,7 +99,7 @@ export function BuildSelectToolbar({
       />
       <ToolSep />
       <ToolButton
-        label="New Folder"
+        label="新建文件夹"
         icon={<NewFolderIcon className="h-3.5 w-3.5" />}
         onClick={() =>
           onOverlay({
@@ -115,7 +115,7 @@ export function BuildSelectToolbar({
           ref={searchRef}
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          placeholder="Search builds, classes, tags…"
+          placeholder="搜索构建、职业、标签…"
           className="min-w-0 flex-1 bg-transparent text-[12px] text-text outline-none placeholder:text-faint"
         />
         <kbd className="shrink-0 rounded-[2px] border border-border-2 bg-panel-3 px-[5px] py-[1px] font-mono text-[9px] tracking-[0.1em] text-faint">

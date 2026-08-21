@@ -59,7 +59,7 @@ function formatGainPct(base: number, final: number): string {
 function nodeName(nodes: Record<string, TreeNodeInfo>, id: number): string {
   const info = nodes[String(id)]
   if (info?.t && info.t.trim()) return info.t
-  return `Node #${id}`
+  return `节点 #${id}`
 }
 
 function nodeKind(
@@ -182,8 +182,8 @@ export default function SuggestNodesModal({
       onClose={handleClose}
       dataTour="suggest-modal"
       panelClassName="max-h-[88vh] w-[540px] max-w-[94vw]"
-      eyebrow="Talent Tree Optimizer"
-      title="Suggest Nodes"
+      eyebrow="天赋树优化器"
+      title="推荐节点"
     >
         <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
           <section className="border-b border-border bg-black/20 px-5 py-4">
@@ -192,7 +192,7 @@ export default function SuggestNodesModal({
                 htmlFor="suggest-budget"
                 className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint"
               >
-                Nodes to Allocate
+                要分配的节点数
               </label>
               <div className="flex items-center gap-2">
                 <button
@@ -202,7 +202,7 @@ export default function SuggestNodesModal({
                   }
                   disabled={isComputing || budget <= MIN_BUDGET}
                   className="h-7 w-7 rounded-[3px] border border-border-2 bg-panel-2 font-mono text-[14px] text-muted transition-colors enabled:hover:border-accent-deep enabled:hover:text-accent-hot disabled:opacity-40"
-                  aria-label="Decrease"
+                  aria-label="减少"
                 >
                   −
                 </button>
@@ -236,7 +236,7 @@ export default function SuggestNodesModal({
                   }
                   disabled={isComputing || budget >= MAX_BUDGET}
                   className="h-7 w-7 rounded-[3px] border border-border-2 bg-panel-2 font-mono text-[14px] text-muted transition-colors enabled:hover:border-accent-deep enabled:hover:text-accent-hot disabled:opacity-40"
-                  aria-label="Increase"
+                  aria-label="增加"
                 >
                   +
                 </button>
@@ -257,12 +257,12 @@ export default function SuggestNodesModal({
                     ((budget - MIN_BUDGET) / (MAX_BUDGET - MIN_BUDGET)) * 100
                   }%`,
                 }}
-                aria-label="Nodes to allocate"
+                aria-label="要分配的节点数"
               />
               <div className="mt-1 flex justify-between font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
                 <span>{MIN_BUDGET}</span>
                 <span className="text-muted">
-                  Optimizer evaluates each candidate against current allocation
+                  优化器将对照当前分配逐个评估候选节点
                 </span>
                 <span>{MAX_BUDGET}</span>
               </div>
@@ -271,12 +271,12 @@ export default function SuggestNodesModal({
             <div className="mt-4 flex items-center justify-between gap-3">
               <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
                 {phase === 'done' && result
-                  ? `Used ${result.budgetUsed} of ${result.budgetRequested}`
+                  ? `已用 ${result.budgetUsed} / ${result.budgetRequested}`
                   : phase === 'idle'
-                    ? 'Greedy DPS optimizer'
+                    ? '贪心 DPS 优化器'
                     : phase === 'error'
-                      ? 'Last run errored'
-                      : 'Iterating…'}
+                      ? '上次运行出错'
+                      : '迭代中…'}
               </p>
               <div className="flex gap-2">
                 {phase === 'done' && (
@@ -285,7 +285,7 @@ export default function SuggestNodesModal({
                     onClick={handleReset}
                     className="rounded-[3px] border border-border-2 bg-transparent px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
                   >
-                    Reset
+                    重置
                   </button>
                 )}
                 <button
@@ -305,7 +305,7 @@ export default function SuggestNodesModal({
                         }
                   }
                 >
-                  {isComputing ? 'Cancel' : phase === 'done' ? 'Recalculate' : 'Calculate'}
+                  {isComputing ? '取消' : phase === 'done' ? '重新计算' : '计算'}
                 </button>
               </div>
             </div>
@@ -331,7 +331,7 @@ export default function SuggestNodesModal({
                 </div>
                 <div className="mt-1 flex justify-between font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
                   <span>
-                    Step{' '}
+                    步骤{' '}
                     <span className="text-accent-hot">{progress.current}</span>{' '}
                     / {progress.total}
                   </span>
@@ -360,10 +360,8 @@ export default function SuggestNodesModal({
                 />
               </div>
               <p className="mx-auto max-w-[380px] text-[12px] leading-relaxed text-muted">
-                Choose how many nodes to add. The optimizer walks the frontier
-                of your allocation and greedily picks the highest-DPS neighbor
-                each step, falling back to the shortest path toward a notable
-                or jewelry socket when no immediate gain is available.
+                选择要添加的节点数量。优化器会沿当前分配的边界推进，每一步贪心选取
+                DPS 提升最高的相邻节点；当没有即时收益时，会退而寻找通往核心天赋或珠宝插槽的最短路径。
               </p>
             </section>
           )}
@@ -399,12 +397,12 @@ export default function SuggestNodesModal({
               }
             >
               {phase === 'done' && result
-                ? `${result.addedNodes.size} nodes ready`
+                ? `${result.addedNodes.size} 个节点就绪`
                 : phase === 'computing'
-                  ? 'Optimizing'
+                  ? '优化中'
                   : phase === 'error'
-                    ? 'Error'
-                    : 'Configure budget'}
+                    ? '错误'
+                    : '设置预算点数'}
             </span>
           </div>
           <div className="flex gap-2">
@@ -418,7 +416,7 @@ export default function SuggestNodesModal({
                   : undefined
               }
             >
-              Apply
+              应用
             </button>
           </div>
         </footer>
@@ -443,10 +441,10 @@ function ResultsSection({
         className="grid grid-cols-3 border-b border-border bg-black/30 px-5 py-3"
         style={{ gridTemplateColumns: '1fr 1fr 1fr' }}
       >
-        <DpsStat label="Base DPS" value={result.baseDps} tone="neutral" />
-        <DpsStat label="Final DPS" value={result.finalDps} tone="accent" />
+        <DpsStat label="基础 DPS" value={result.baseDps} tone="neutral" />
+        <DpsStat label="最终 DPS" value={result.finalDps} tone="accent" />
         <DpsStat
-          label="Gain"
+          label="提升"
           value={gainAbs}
           subLabel={gainPct}
           tone={isPositive ? 'good' : 'neutral'}
@@ -456,17 +454,17 @@ function ResultsSection({
 
       <div className="flex items-center justify-between border-b border-border bg-black/10 px-5 py-2">
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
-          Sequence
+          推荐序列
         </span>
         <span className="font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
-          {result.sequence.length} step{result.sequence.length === 1 ? '' : 's'}
+          {result.sequence.length} 步
         </span>
       </div>
 
       <div className="min-h-0 flex-1 overflow-y-auto">
         {result.sequence.length === 0 && (
           <div className="p-8 text-center font-mono text-[11px] text-muted">
-            No improvements found within budget
+            预算内未找到可提升项
           </div>
         )}
         {result.sequence.map((step, idx) => (
@@ -498,7 +496,7 @@ function UnsupportedWarning({ lines }: { lines: string[] }) {
       >
         <span>
           <span className="text-stat-orange">▲</span>{' '}
-          {lines.length} unsupported mod line{lines.length === 1 ? '' : 's'} (treated as 0 DPS)
+          {lines.length} 条不支持的天赋行（按 0 DPS 计）
         </span>
         <span>{expanded ? '−' : '+'}</span>
       </button>
@@ -578,7 +576,7 @@ function SequenceRow({
 }) {
   const name = nodeName(nodes, step.nodeId)
   const kind = nodeKind(nodes, step.nodeId)
-  const gainText = step.isFiller ? 'Path' : `+${formatDps(step.gain)} DPS`
+  const gainText = step.isFiller ? '过渡' : `+${formatDps(step.gain)} DPS`
   const gainColor = step.isFiller
     ? 'text-faint'
     : step.gain > 0
@@ -586,12 +584,12 @@ function SequenceRow({
       : 'text-muted'
   const kindBadge =
     kind === 'jewelry'
-      ? { label: 'Socket', cls: 'border-stat-blue/50 text-stat-blue' }
+      ? { label: '插槽', cls: 'border-stat-blue/50 text-stat-blue' }
       : kind === 'big'
-        ? { label: 'Notable', cls: 'border-accent-deep text-accent-hot' }
+        ? { label: '核心天赋', cls: 'border-accent-deep text-accent-hot' }
         : kind === 'minor'
-          ? { label: 'Minor', cls: 'border-border-2 text-muted' }
-          : { label: 'Node', cls: 'border-border-2 text-faint' }
+          ? { label: '小天赋', cls: 'border-border-2 text-muted' }
+          : { label: '节点', cls: 'border-border-2 text-faint' }
 
   return (
     <div

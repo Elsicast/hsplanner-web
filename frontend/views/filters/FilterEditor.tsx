@@ -53,7 +53,7 @@ export function FilterEditor({ saved, onBack }: FilterEditorProps) {
   useEffect(() => () => flush(), [flush])
 
   const commitName = () => {
-    const trimmed = name.trim() || 'Loot filter'
+    const trimmed = name.trim() || '拾取过滤规则'
     setName(trimmed)
     renameFilter(saved.id, trimmed)
   }
@@ -77,7 +77,7 @@ export function FilterEditor({ saved, onBack }: FilterEditorProps) {
               className="inline-block h-[6px] w-[6px] rotate-45 bg-accent-hot"
               style={{ boxShadow: '0 0 8px rgba(224,184,100,0.6)' }}
             />
-            Loot filter · changes save automatically
+            拾取过滤规则 · 修改会自动保存
           </div>
           <input
             value={name}
@@ -86,28 +86,28 @@ export function FilterEditor({ saved, onBack }: FilterEditorProps) {
             onKeyDown={(e) => {
               if (e.key === 'Enter') (e.target as HTMLInputElement).blur()
             }}
-            aria-label="Filter name"
+            aria-label="过滤规则名称"
             className="w-full min-w-0 border-b border-transparent bg-transparent text-[22px] font-semibold tracking-[0.02em] text-accent-hot outline-none transition-colors focus:border-accent-deep"
             style={{ textShadow: '0 0 16px rgba(224,184,100,0.18)' }}
           />
         </div>
         <div className="flex items-center gap-2">
           <button type="button" onClick={back} className={FILTER_BTN_CLASS}>
-            ← Filters
+            ← 过滤规则列表
           </button>
           <button
             type="button"
             onClick={() => setShowCode((v) => !v)}
             className={FILTER_BTN_CLASS}
           >
-            {showCode ? 'Hide code' : 'Show code'}
+            {showCode ? '隐藏代码' : '显示代码'}
           </button>
           <button
             type="button"
             onClick={() => void copyCode()}
             className={FILTER_BTN_PRIMARY_CLASS}
           >
-            {copied ? 'Copied!' : 'Copy game code'}
+            {copied ? '已复制！' : '复制游戏代码'}
           </button>
         </div>
       </header>

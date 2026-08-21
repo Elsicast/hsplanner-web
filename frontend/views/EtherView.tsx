@@ -440,7 +440,7 @@ export default function EtherView() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search ether nodes…"
+              placeholder="搜索以太节点…"
               data-search-input
               className="w-64 rounded-[3px] border border-border-2 px-3 py-1.5 pl-9 pr-14 font-mono text-[11px] text-text placeholder:text-faint transition-colors focus:border-accent-deep focus:outline-none focus:ring-2 focus:ring-accent-hot/15"
               style={{
@@ -458,7 +458,7 @@ export default function EtherView() {
                 <button
                   onClick={() => setSearchQuery('')}
                   className="absolute right-2 top-1/2 -translate-y-1/2 rounded-[2px] px-1 font-mono text-[12px] text-faint transition-colors hover:text-accent-hot"
-                  aria-label="Clear search"
+                  aria-label="清空搜索"
                 >
                   ×
                 </button>
@@ -474,19 +474,19 @@ export default function EtherView() {
             }`}
             style={{ background: 'linear-gradient(180deg, #221a2c, #16121c)' }}
           >
-            Summary
+            摘要
           </button>
           <button
             onClick={fitView}
             className="pointer-events-auto rounded-[3px] border border-border-2 bg-panel-2 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot"
           >
-            Fit
+            适配
           </button>
           <button
             onClick={resetEther}
             className="pointer-events-auto rounded-[3px] border border-border-2 bg-transparent px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-muted transition-colors hover:border-stat-red hover:text-stat-red"
           >
-            Reset
+            重置
           </button>
         </div>
         {summaryOpen && <EtherSummaryPanel allocated={allocated} />}
@@ -507,7 +507,7 @@ export default function EtherView() {
             aria-hidden
             className="inline-block h-1 w-1 rotate-45 bg-accent-deep"
           />
-          Nodes
+          节点
           <span className="text-text">{ETHER_NODES.length}</span>
         </span>
         <span aria-hidden className="h-3 w-px bg-border" />
@@ -517,12 +517,12 @@ export default function EtherView() {
             className="inline-block h-1 w-1 rotate-45 bg-stat-purple"
             style={{ boxShadow: '0 0 6px rgba(165,116,201,0.6)' }}
           />
-          Allocated
+          已分配
           <span className="text-stat-purple">{allocated.size}</span>
         </span>
         <span aria-hidden className="h-3 w-px bg-border" />
         <span className="inline-flex items-center gap-1.5">
-          Zoom
+          缩放
           <span className="text-stat-purple">{(scale * 100).toFixed(0)}%</span>
         </span>
       </div>

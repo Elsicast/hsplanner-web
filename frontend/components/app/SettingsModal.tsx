@@ -17,10 +17,10 @@ const IS_MAC =
 const SAVE_SHORTCUT = IS_MAC ? '⌘S' : 'Ctrl+S'
 
 const SCALE_LABEL: Record<NumberScale, string> = {
-  none: 'None',
-  thousands: 'Thousands',
-  millions: 'Millions',
-  billions: 'Billions',
+  none: '不缩写',
+  thousands: '千',
+  millions: '百万',
+  billions: '十亿',
 }
 
 const SCALE_SAMPLE: Record<NumberScale, string> = {
@@ -56,13 +56,13 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
     <Modal
       onClose={onClose}
       panelClassName="w-[560px] max-w-[92vw] max-h-[86vh]"
-      eyebrow="Preferences"
-      title="Settings"
+      eyebrow="偏好设置"
+      title="设置"
       titleId="settings-modal-title"
-      subtitle="Stored on this device"
+      subtitle="存储在此设备上"
     >
       <div className="flex flex-col gap-6 overflow-y-auto px-6 py-5">
-        <Section title="Saving">
+        <Section title="保存">
           <label className="flex cursor-pointer flex-col gap-1">
             <span className="flex items-center gap-2.5">
               <input
@@ -72,11 +72,11 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
                 className="shrink-0"
               />
               <span className="text-[13px] font-semibold text-text">
-                Auto-save
+                自动保存
               </span>
             </span>
             <span className="pl-6 text-[12px] leading-snug text-muted">
-              Saves changes to the active build as you make them.
+              对当前构建的更改会即时保存。
             </span>
           </label>
           <p
@@ -85,18 +85,18 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
             }`}
           >
             {autoSave
-              ? `${SAVE_SHORTCUT} still saves instantly`
-              : `Manual mode — press ${SAVE_SHORTCUT} to save the active build`}
+              ? `${SAVE_SHORTCUT} 仍可立即保存`
+              : `手动模式 — 按 ${SAVE_SHORTCUT} 保存当前构建`}
           </p>
         </Section>
 
-        <Section title="Numbers">
+        <Section title="数值">
           <div className="mb-2 text-[13px] font-semibold text-text">
-            Largest unit
+            最大单位
           </div>
           <div
             role="radiogroup"
-            aria-label="Largest number unit"
+            aria-label="最大数值单位"
             className="grid grid-cols-4 gap-1.5"
           >
             {NUMBER_SCALES.map((scale) => {
@@ -144,7 +144,7 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
             })}
           </div>
           <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-            Preview ·{' '}
+            预览 ·{' '}
             <span className="normal-case text-accent-hot/80">
               {PREVIEW_SAMPLES.map((n) => compact(n, numberScale)).join('  ·  ')}
             </span>
@@ -152,13 +152,13 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
         </Section>
 
         {inTauriRuntime() && (
-          <Section title="Display">
+          <Section title="显示">
             <div className="mb-2 text-[13px] font-semibold text-text">
-              UI scale
+              界面缩放
             </div>
             <div
               role="radiogroup"
-              aria-label="UI scale"
+              aria-label="界面缩放"
               className="grid grid-cols-6 gap-1.5"
             >
               {UI_ZOOM_STEPS.map((step) => {
@@ -190,12 +190,12 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
               })}
             </div>
             <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
-              Ctrl + / Ctrl - zooms too, this is the one that sticks
+              Ctrl + / Ctrl - 也能缩放，只有这里设置的会一直生效
             </p>
           </Section>
         )}
 
-        <Section title="Credits">
+        <Section title="制作信息">
           <div className="flex items-center gap-2.5">
             <Logo size={20} glow title="HSPlanner" />
             <span
@@ -209,13 +209,13 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
             </span>
           </div>
           <p className="mt-2 text-[12px] text-muted">
-            Built and maintained by{' '}
-            <span className="text-text">zium</span>.
+            由{' '}
+            <span className="text-text">zium</span> 构建和维护。
           </p>
           <div className="mt-2.5 flex items-center gap-2">
             <ExternalChip
               href="https://ko-fi.com/zium1337"
-              label="Support on Ko-fi"
+              label="在 Ko-fi 上支持"
             />
             <ExternalChip
               href={`https://github.com/${GITHUB_REPO}`}
@@ -223,7 +223,7 @@ export default function SettingsModal({ onClose }: SettingsModalProps) {
             />
           </div>
           <p className="mt-3 border-t border-border pt-2.5 font-mono text-[10px] uppercase tracking-[0.14em] leading-relaxed text-faint">
-            Fan-made planner. Hero Siege © Panic Art Studios — not affiliated.
+            粉丝制作的规划器。Hero Siege © Panic Art Studios — 与官方无关联。
           </p>
         </Section>
       </div>

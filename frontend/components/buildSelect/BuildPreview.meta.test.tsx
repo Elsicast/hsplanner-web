@@ -83,9 +83,9 @@ describe('<BuildPreview> metadata', () => {
 
   it('shows ether node count and merc class from the snapshot', () => {
     renderPreview('s10', SNAPSHOT_PREVIEW)
-    expect(screen.getByText('Ether')).toBeInTheDocument()
+    expect(screen.getByText('以太')).toBeInTheDocument()
     expect(screen.getByText('3')).toBeInTheDocument()
-    expect(screen.getByText('Merc')).toBeInTheDocument()
+    expect(screen.getByText('佣兵')).toBeInTheDocument()
     expect(screen.getByText('Knight')).toBeInTheDocument()
   })
 
@@ -96,8 +96,8 @@ describe('<BuildPreview> metadata', () => {
       loading: false,
       available: false,
     })
-    expect(screen.getByText('Ether')).toBeInTheDocument()
-    expect(screen.getByText('Merc')).toBeInTheDocument()
+    expect(screen.getByText('以太')).toBeInTheDocument()
+    expect(screen.getByText('佣兵')).toBeInTheDocument()
   })
 
   it('lists every active skill on its own row', () => {
@@ -116,13 +116,13 @@ describe('<BuildPreview> metadata', () => {
     expect(screen.getByText('Lightning Surge')).toBeInTheDocument()
     expect(screen.getByText('Storm Cloud')).toBeInTheDocument()
     expect(screen.getByText('Static Shield')).toBeInTheDocument()
-    expect(screen.getByText('Main Skills')).toBeInTheDocument()
+    expect(screen.getByText('主要技能')).toBeInTheDocument()
     expect(screen.queryByText(/\+/)).not.toBeInTheDocument()
   })
 
   it('hides the main skill section when no skills are active', () => {
     renderPreview('s10', SNAPSHOT_PREVIEW)
-    expect(screen.queryByText(/Main Skills?/)).not.toBeInTheDocument()
+    expect(screen.queryByText(/主要技能/)).not.toBeInTheDocument()
   })
 
   it('keeps the singular title for one active skill', () => {
@@ -138,7 +138,7 @@ describe('<BuildPreview> metadata', () => {
       loading: false,
       available: true,
     } as unknown as PreviewStats)
-    expect(screen.getByText('Main Skill')).toBeInTheDocument()
+    expect(screen.getByText('主要技能')).toBeInTheDocument()
     expect(screen.getByText('Lightning Surge')).toBeInTheDocument()
   })
 })

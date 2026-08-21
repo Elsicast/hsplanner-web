@@ -46,7 +46,7 @@ export function MainSkillSection({
   if (mainSkill && skillBreakdown) {
     return (
       <Panel
-        title="Main Skill"
+        title="主技能"
         meta={`${mainSkill.name}`}
       >
         <SkillDamageHero
@@ -72,11 +72,11 @@ export function MainSkillSection({
   if (weaponDamage && weaponDamage.hasWeapon) {
     return (
       <Panel
-        title="Main Skill"
+        title="主技能"
         meta={
           mainSkill
-            ? `${mainSkill.name} · no damage`
-            : 'No main skill selected · weapon damage shown'
+            ? `${mainSkill.name} · 无伤害`
+            : '未选择主技能 · 显示武器伤害'
         }
       >
         <DamageHero breakdown={weaponDamage} />
@@ -85,10 +85,9 @@ export function MainSkillSection({
     )
   }
   return (
-    <Panel title="Main Skill" meta="No main skill or weapon">
+    <Panel title="主技能" meta="无主技能或武器">
       <div className="py-6 text-center text-xs text-muted italic">
-        Pick a main skill in the Skills tab, or equip a weapon, to see your
-        headline damage breakdown here.
+        在技能页签选择主技能，或装备一件武器，即可在此查看核心伤害构成。
       </div>
     </Panel>
   )
@@ -136,7 +135,7 @@ function SkillDamageHero({
     >
       <div className="border-b border-border px-4 py-3.5 md:border-b-0 md:border-r">
         <div className="mb-1.5 flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-faint">
-          <span>{hasCrit ? 'Average Hit' : 'Hit Damage'}</span>
+          <span>{hasCrit ? '平均单击' : '单击伤害'}</span>
           {skill.damageType && (
             <span
               className={`rounded-xs border px-1.5 py-px text-[9px] font-semibold ${DAMAGE_COLORS[skill.damageType].pill}`}
@@ -160,16 +159,16 @@ function SkillDamageHero({
                 <span className="text-text/90">
                   {formatRange(effectiveManaMin, effectiveManaMax)}
                 </span>{' '}
-                mana
+                法力
               </span>
             )}
           {lifeCostMax !== undefined && lifeCostMax > 0 && (
             <span>
               <span className="text-stat-red">
                 {formatRange(lifeCostMin ?? 0, lifeCostMax)}
-              </span>{' '}
-              life
-            </span>
+                </span>{' '}
+                生命
+              </span>
           )}
           {effectiveCastRateMin !== undefined &&
             effectiveCastRateMax !== undefined && (
@@ -177,7 +176,7 @@ function SkillDamageHero({
                 <span className="text-text/90">
                   {formatRange(effectiveCastRateMin, effectiveCastRateMax)}
                 </span>{' '}
-                casts/s
+                次施放/秒
               </span>
             )}
           {(tagView.tags.length > 0 || tagView.removed.length > 0) && (
@@ -185,7 +184,7 @@ function SkillDamageHero({
               {tagView.tags.map((tag) => (
                 <span
                   key={tag}
-                  title={tagView.added.has(tag) ? 'Added by subskill' : undefined}
+                  title={tagView.added.has(tag) ? '由子技能添加' : undefined}
                   className={`rounded-xs border px-1.5 py-px text-[9px] font-semibold uppercase tracking-[0.14em] text-accent-hot ${
                     tagView.added.has(tag)
                       ? 'border-accent-hot/80'
@@ -202,7 +201,7 @@ function SkillDamageHero({
               {tagView.removed.map((tag) => (
                 <span
                   key={tag}
-                  title="Removed by subskill"
+                  title="被子技能移除"
                   className="rounded-xs border border-border px-1.5 py-px text-[9px] font-semibold uppercase tracking-[0.14em] text-faint line-through opacity-60"
                 >
                   {tag}
@@ -214,21 +213,21 @@ function SkillDamageHero({
       </div>
       <div className="grid grid-cols-2 gap-2.5 px-4 py-3.5">
         <HeroStat
-          k="Hit damage"
+          k="单击伤害"
           v={formatRangeInt(breakdown.hitMin, breakdown.hitMax)}
         />
         <HeroStat
-          k="Crit damage"
+          k="暴击伤害"
           v={
             hasCrit ? formatRangeInt(breakdown.critMin, breakdown.critMax) : '—'
           }
         />
         <HeroStat
-          k="Crit chance"
+          k="暴击几率"
           v={hasCrit ? `${formatDecimal(breakdown.critChance)}%` : '—'}
         />
         <HeroStat
-          k="Crit multi"
+          k="暴击倍率"
           v={
             hasCrit
               ? `+${formatDecimal(breakdown.critDamagePct)}%`
@@ -253,7 +252,7 @@ function DamageHero({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
     >
       <div className="border-b border-border px-4 py-3.5 md:border-b-0 md:border-r">
         <div className="mb-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-faint">
-          Average Hit
+          平均单击
         </div>
         <div
           className="font-mono text-[26px] font-semibold leading-none tabular-nums tracking-[0.01em] text-accent-hot"
@@ -270,16 +269,16 @@ function DamageHero({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
           <span className="text-text/90">
             {formatRange(b.attacksPerSecondMin, b.attacksPerSecondMax)}
           </span>{' '}
-          attacks/sec
+          次攻击/秒
         </div>
       </div>
       <div className="grid grid-cols-2 gap-2.5 px-4 py-3.5">
         <HeroStat
-          k="Hit damage"
+          k="单击伤害"
           v={formatRangeInt(b.hitMin, b.hitMax)}
         />
         <HeroStat
-          k="Crit damage"
+          k="暴击伤害"
           v={
             b.critChance > 0
               ? formatRangeInt(b.critMin, b.critMax)
@@ -287,11 +286,11 @@ function DamageHero({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
           }
         />
         <HeroStat
-          k="Crit chance"
+          k="暴击几率"
           v={`${formatDecimal(b.critChance)}%`}
         />
         <HeroStat
-          k="Crit multi"
+          k="暴击倍率"
           v={`×${b.critMultiplierAvg.toFixed(2)}`}
         />
       </div>
@@ -304,9 +303,9 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
   const b = breakdown
   return (
     <div className="mt-2 border-t border-dashed border-border pt-2.5">
-      <BDSection title="Build-up">
+      <BDSection title="伤害构成">
         <BDLine
-          label="Weapon damage"
+          label="武器伤害"
           value={
             <span className="text-text">
               {formatRangeInt(b.weaponDamageMin, b.weaponDamageMax)}
@@ -315,7 +314,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
         />
         {b.enhancedDamageMaxPct > 0 && (
           <BDLine
-            label="Enhanced damage"
+            label="强化伤害"
             value={
               <span className="text-accent-hot">
                 +{formatRange(b.enhancedDamageMinPct, b.enhancedDamageMaxPct)}%
@@ -325,7 +324,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
         )}
         {b.additivePhysicalMax > 0 && (
           <BDLine
-            label="Additive physical"
+            label="附加物理"
             value={
               <span className="text-text">
                 +{formatRangeInt(b.additivePhysicalMin, b.additivePhysicalMax)}
@@ -335,7 +334,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
         )}
         {b.attackDamageMaxPct > 0 && (
           <BDLine
-            label="Attack damage %"
+            label="攻击伤害 %"
             value={
               <span className="text-accent-hot">
                 +{formatRange(b.attackDamageMinPct, b.attackDamageMaxPct)}%
@@ -345,7 +344,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
         )}
       </BDSection>
       {b.additiveElementalBreakdown.length > 0 && (
-        <BDSection title="Additive elemental">
+        <BDSection title="附加元素">
           {b.additiveElementalBreakdown.map((s, i) => (
             <BDLine
               key={i}
@@ -359,7 +358,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
         </BDSection>
       )}
       {b.extraDamageSources.length > 0 && (
-        <BDSection title="Extra damage">
+        <BDSection title="额外伤害">
           {b.extraDamageSources.map((s, i) => (
             <BDLine
               key={i}
@@ -379,9 +378,9 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
         b.deadlyBlowChance > 0 ||
         b.hitChance !== 100 ||
         b.projectileCount > 1) && (
-        <BDSection title="Combat modifiers">
+        <BDSection title="战斗修正">
           <BDLine
-            label="Crushing blow"
+            label="压碎性打击"
             value={
               <span className="text-text">
                 ×{b.crushingBlowModifier.toFixed(2)}
@@ -390,7 +389,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
           />
           {b.armorBreakPct > 0 && (
             <BDLine
-              label="Armor break"
+              label="破甲"
               value={
                 <span className="text-accent-hot">
                   +{formatDecimal(b.armorBreakPct)}%
@@ -400,7 +399,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
           )}
           {b.deadlyBlowChance > 0 && (
             <BDLine
-              label="Deadly blow chance"
+              label="致命一击几率"
               value={
                 <span className="text-accent-hot">
                   {formatDecimal(b.deadlyBlowChance)}%
@@ -410,7 +409,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
           )}
           {b.hitChance !== 100 && (
             <BDLine
-              label="Hit chance"
+              label="命中几率"
               value={
                 <span className="text-text">{formatDecimal(b.hitChance)}%</span>
               }
@@ -418,16 +417,16 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
           )}
           {b.projectileCount > 1 && (
             <BDLine
-              label="Projectiles"
+              label="投射物"
               value={<span className="text-text">×{b.projectileCount}</span>}
             />
           )}
         </BDSection>
       )}
       {b.openWoundsMax > 0 && (
-        <BDSection title="Open wounds">
+        <BDSection title="撕裂伤口">
           <BDLine
-            label="Damage per hit"
+            label="每次击中伤害"
             value={
               <span className="text-red-400">
                 {formatRangeInt(b.openWoundsMin, b.openWoundsMax)}
@@ -437,9 +436,9 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
         </BDSection>
       )}
       {(b.enemyPhysResPct > 0 || b.physResistanceIgnoredPct > 0) && (
-        <BDSection title="Enemy resistance">
+        <BDSection title="敌人抗性">
           <BDLine
-            label="Physical resistance"
+            label="物理抗性"
             value={
               <span className="text-text">
                 {formatDecimal(b.enemyPhysResPct)}%
@@ -448,7 +447,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
           />
           {b.physResistanceIgnoredPct > 0 && (
             <BDLine
-              label="Ignored"
+              label="无视"
               value={
                 <span className="text-accent-hot">
                   {formatDecimal(b.physResistanceIgnoredPct)}%
@@ -460,7 +459,7 @@ function DamageBuildup({ breakdown }: { breakdown: WeaponDamageBreakdown }) {
       )}
       <div className="mt-1.5 flex items-baseline justify-between gap-3 border-t border-border pt-1.5">
         <span className="font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-muted">
-          Hit damage
+          单击伤害
         </span>
         <span className="font-mono text-[14px] font-semibold tabular-nums text-accent-hot">
           {formatRangeInt(b.hitMin, b.hitMax)}

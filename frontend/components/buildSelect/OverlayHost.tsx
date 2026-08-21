@@ -73,35 +73,35 @@ export function BuildSelectOverlays({
       )}
       {overlay?.kind === 'nameImport' && (
         <TextPromptOverlay
-          section="Import"
-          title="Name imported build"
-          label="Build name"
+          section="导入"
+          title="为导入构建命名"
+          label="构建名称"
           initial={overlay.defaultName}
           submitLabel="Save & open"
-          hint="Saved to your library, then opened."
+          hint="保存到构建库后自动打开。"
           onSubmit={(name) => onImportNamed(overlay.code, name)}
           onClose={onCloseOverlay}
         />
       )}
       {overlay?.kind === 'newBuild' && (
         <TextPromptOverlay
-          section="Create"
-          title="New build"
-          label="Build name"
-          placeholder="e.g. Lightning Marksman"
-          submitLabel="Create"
-          hint="Saved to your library, then opened."
+          section="创建"
+          title="新建构建"
+          label="构建名称"
+          placeholder="例如：闪电神射手"
+          submitLabel="创建"
+          hint="保存到构建库后自动打开。"
           onSubmit={onCreateBuild}
           onClose={onCloseOverlay}
         />
       )}
       {overlay?.kind === 'renameBuild' && (
         <TextPromptOverlay
-          section="Rename"
-          title="Rename build"
-          label="New name"
+          section="重命名"
+          title="重命名构建"
+          label="新名称"
           initial={overlay.current}
-          submitLabel="Save"
+          submitLabel="保存"
           onSubmit={(name) => onRenameBuild(overlay.buildId, name)}
           onClose={onCloseOverlay}
         />
@@ -123,32 +123,32 @@ export function BuildSelectOverlays({
       )}
       {overlay?.kind === 'newFolder' && (
         <TextPromptOverlay
-          section="Organise"
-          title="New folder"
-          label="Folder name"
-          placeholder="e.g. Season 7"
-          submitLabel="Create"
+          section="整理"
+          title="新建文件夹"
+          label="文件夹名称"
+          placeholder="例如：第 7 赛季构筑"
+          submitLabel="创建"
           onSubmit={(name) => onCreateFolder(name, overlay.parentId)}
           onClose={onCloseOverlay}
         />
       )}
       {overlay?.kind === 'renameFolder' && (
         <TextPromptOverlay
-          section="Organise"
-          title="Rename folder"
-          label="New name"
+          section="整理"
+          title="重命名文件夹"
+          label="新名称"
           initial={overlay.current}
-          submitLabel="Save"
+          submitLabel="保存"
           onSubmit={(name) => onRenameFolder(overlay.folderId, name)}
           onClose={onCloseOverlay}
         />
       )}
       {overlay?.kind === 'deleteBuild' && (
         <ConfirmOverlay
-          section="Delete"
-          title="Delete build"
+          section="删除"
+          title="删除构建"
           danger
-          confirmLabel="Delete build"
+          confirmLabel="删除构建"
           message={
             <>
               Permanently delete{' '}
@@ -162,10 +162,10 @@ export function BuildSelectOverlays({
       )}
       {overlay?.kind === 'deleteFolder' && (
         <ConfirmOverlay
-          section="Delete"
-          title="Delete folder"
+          section="删除"
+          title="删除文件夹"
           danger
-          confirmLabel="Delete folder"
+          confirmLabel="删除文件夹"
           message={
             <>
               Delete <span className="text-accent-hot">{overlay.name}</span>?
@@ -187,23 +187,23 @@ export function BuildSelectOverlays({
 
       {overlay?.kind === 'addProfile' && (
         <TextPromptOverlay
-          section="Profiles"
-          title="New profile"
-          label="Profile name"
-          placeholder="e.g. Boss setup"
-          submitLabel="Create"
-          hint="Seeded from this build's active profile."
+          section="配置档"
+          title="新建配置档"
+          label="配置档名称"
+          placeholder="例如：Boss 配装"
+          submitLabel="创建"
+          hint="以此构建的当前配置档为模板。"
           onSubmit={(name) => onAddProfile(overlay.buildId, name)}
           onClose={onCloseOverlay}
         />
       )}
       {overlay?.kind === 'renameProfile' && (
         <TextPromptOverlay
-          section="Profiles"
-          title="Rename profile"
-          label="New name"
+          section="配置档"
+          title="重命名配置档"
+          label="新名称"
           initial={overlay.current}
-          submitLabel="Save"
+          submitLabel="保存"
           onSubmit={(name) =>
             onRenameProfile(overlay.buildId, overlay.profileId, name)
           }
@@ -212,10 +212,10 @@ export function BuildSelectOverlays({
       )}
       {overlay?.kind === 'deleteProfile' && (
         <ConfirmOverlay
-          section="Delete"
-          title="Delete profile"
+          section="删除"
+          title="删除配置档"
           danger
-          confirmLabel="Delete profile"
+          confirmLabel="删除配置档"
           message={
             <>
               Permanently delete profile{' '}
