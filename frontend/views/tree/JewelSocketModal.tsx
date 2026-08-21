@@ -8,6 +8,12 @@ import type { Affix, EquippedAffix, Gem, Rune, TreeSocketContent } from '../../t
 import { UNCUT_JEWEL_MAX_AFFIXES } from '../../types'
 import { Modal } from '../../components/ui/Modal'
 import Dropdown from '../../components/ui/Dropdown'
+import { formatValue } from '../../utils/item/stats'
+import {
+  translateItemEffect,
+  translateItemName,
+} from '../../utils/item/itemText'
+import { displayStatName } from '../../utils/item/itemStatText'
 
 const SOCKETABLE_ICONS = import.meta.glob<string>(
   '../../assets/socketable/*.png',
@@ -194,16 +200,18 @@ function sameContent(
 
 function describeItem(id: string): string {
   const g = gems.find((x) => x.id === id)
-  if (g) return `${g.name} · T${g.tier}`
+  if (g) return `${translateItemName(g.name)} · T${g.tier}`
   const r = runes.find((x) => x.id === id)
-  if (r) return `${r.name} · T${r.tier}`
+  if (r) return `${translateItemName(r.name)} · T${r.tier}`
   return id
 }
 
 function fmtStats(stats: Record<string, number>): string {
   const entries = Object.entries(stats).filter(([, v]) => v !== 0)
   if (entries.length === 0) return '—'
-  return entries.map(([k, v]) => `${k}: ${v}`).join(', ')
+  return entries
+    .map(([k, v]) => `${formatValue(v, k)} ${displayStatName(k)}`)
+    .join('、')
 }
 
 interface Row {
@@ -211,6 +219,8 @@ interface Row {
   kind: 'gem' | 'rune'
   kindLabel: string
   name: string
+  rawName: string
+  searchTerms: string
   tier: number
   stats: string
 }
@@ -222,7 +232,13 @@ function buildRows(): Row[] {
       id: g.id,
       kind: 'gem',
       kindLabel: g.name.toLowerCase().includes('jewel') ? '珠宝' : '宝石',
-      name: g.name,
+      name: translateItemName(g.name),
+      rawName: g.name,
+      searchTerms: [
+        g.name,
+        translateItemName(g.name),
+        ...Object.keys(g.stats).flatMap((key) => [key, displayStatName(key)]),
+      ].join(' ').toLowerCase(),
       tier: g.tier,
       stats: fmtStats(g.stats),
     })
@@ -232,7 +248,13 @@ function buildRows(): Row[] {
       id: r.id,
       kind: 'rune',
       kindLabel: '符文',
-      name: r.name,
+      name: translateItemName(r.name),
+      rawName: r.name,
+      searchTerms: [
+        r.name,
+        translateItemName(r.name),
+        ...Object.keys(r.stats).flatMap((key) => [key, displayStatName(key)]),
+      ].join(' ').toLowerCase(),
       tier: r.tier,
       stats: fmtStats(r.stats),
     })
@@ -259,7 +281,7 @@ function ItemsTab({
   const rows = filter
     ? ALL_ROWS.filter(
         (r) =>
-          r.name.toLowerCase().includes(filter) ||
+          r.searchTerms.includes(filter) ||
           r.stats.toLowerCase().includes(filter),
       )
     : ALL_ROWS
@@ -300,7 +322,7 @@ function ItemsTab({
         {rows.map((r) => {
           const selected =
             pending?.kind === 'item' && pending.id === r.id
-          const url = iconForName(r.name)
+          const url = iconForName(r.rawName)
           const tierClass =
             r.tier >= 4
               ? 'text-stat-orange border-stat-orange'
@@ -340,7 +362,7 @@ function ItemsTab({
                     style={{ imageRendering: 'pixelated' }}
                   />
                 ) : (
-                  <GemBadge kind={r.kind} name={r.name} />
+                  <GemBadge kind={r.kind} name={r.rawName} />
                 )}
               </span>
               <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
@@ -586,7 +608,9 @@ function UncutAffixCard({
         >
           {index}
         </span>
-        <span className="text-[13px] text-text">{def.description}</span>
+        <span className="text-[13px] text-text">
+          {translateItemEffect(def.description)}
+        </span>
         <span className="font-mono text-[11px] text-accent-hot">
           {rangeLabel}
         </span>
@@ -677,15 +701,23 @@ function AffixGroupPicker({
   const [q, setQ] = useState('')
   const groups = useMemo(() => {
     const seen = new Set<string>()
-    const out: { groupId: string; description: string; tiers: number }[] = []
+    const out: {
+      groupId: string
+      description: string
+      searchTerms: string
+      tiers: number
+    }[] = []
     for (const a of JEWEL_AFFIX_POOL) {
       if (seen.has(a.groupId)) continue
       seen.add(a.groupId)
       const tiers = JEWEL_AFFIX_POOL_BY_GROUP.get(a.groupId) ?? []
       const top = tiers[tiers.length - 1]
+      const rawDescription = top?.description ?? a.description
+      const description = translateItemEffect(rawDescription)
       out.push({
         groupId: a.groupId,
-        description: top?.description ?? a.description,
+        description,
+        searchTerms: `${rawDescription} ${description}`.toLowerCase(),
         tiers: tiers.length,
       })
     }
@@ -693,7 +725,7 @@ function AffixGroupPicker({
   }, [])
   const filter = q.trim().toLowerCase()
   const rows = filter
-    ? groups.filter((g) => g.description.toLowerCase().includes(filter))
+    ? groups.filter((g) => g.searchTerms.includes(filter))
     : groups
 
   return (

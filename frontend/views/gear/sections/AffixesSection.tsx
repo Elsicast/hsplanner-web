@@ -12,6 +12,7 @@ import type { AffixValueOutput } from '../../../utils/calc/bridge'
 import type { Affix, EquippedItem, ItemBase } from '../../../types'
 import { buildAffixTooltip } from '../tooltips'
 import { SectionCard } from '../SectionCard'
+import { translateItemEffect } from '../../../utils/item/itemText'
 
 type AffixRangeDef = Parameters<typeof formatAffixRangeFromValues>[0] & {
   statKey: string | null
@@ -86,8 +87,10 @@ function InvertedCrossIcon({ color = '#cf6db0' }: { color?: string }) {
 }
 
 function affixToPickerRow(a: Affix, opts?: { useDescriptionAsName?: boolean }): PickerRow {
-  const primary = opts?.useDescriptionAsName ? a.description : a.name
-  const meta = opts?.useDescriptionAsName ? a.name : a.description
+  const rawPrimary = opts?.useDescriptionAsName ? a.description : a.name
+  const rawMeta = opts?.useDescriptionAsName ? a.name : a.description
+  const primary = translateItemEffect(rawPrimary)
+  const meta = translateItemEffect(rawMeta)
   const isUnholy = a.groupId === 'random_unholy'
   return {
     id: a.id,
@@ -95,6 +98,7 @@ function affixToPickerRow(a: Affix, opts?: { useDescriptionAsName?: boolean }): 
     tier: a.tier,
     kindLabel: a.kind?.toUpperCase() ?? '词缀',
     meta,
+    searchTerms: [rawPrimary, primary, rawMeta, meta].join(' ').toLowerCase(),
     iconColor: isUnholy ? '#cf6db0' : 'var(--color-accent)',
     iconNode: isUnholy ? <InvertedCrossIcon color="#cf6db0" /> : undefined,
     tooltip: buildAffixTooltip(a),
@@ -146,8 +150,8 @@ export function AffixesSection({
       .map((a) => affixToPickerRow(a, { useDescriptionAsName: isUnholy }))
   }, [randomGroupId, isUnholy])
 
-  const sectionTitle = isUnholy ? 'Unholy 词缀' : '词缀'
-  const modalTitle = isUnholy ? '选择 Unholy 词缀' : '添加词缀'
+  const sectionTitle = isUnholy ? '邪秽词缀' : '词缀'
+  const modalTitle = isUnholy ? '选择邪秽词缀' : '添加词缀'
 
   return (
     <SectionCard
@@ -201,7 +205,9 @@ export function AffixesSection({
                         affixRanges[idx] ?? null,
                       )}
                 </span>
-                <span className="truncate text-text/85">{affix.name}</span>
+                <span className="truncate text-text/85">
+                  {translateItemEffect(affix.name)}
+                </span>
                 <span className="rounded-xs border border-accent-deep/40 px-1 py-px font-mono text-[9px] tabular-nums text-accent-hot/75">
                   T{affix.tier}
                 </span>

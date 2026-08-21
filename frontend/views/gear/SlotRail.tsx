@@ -3,6 +3,7 @@ import { CornerMarks } from '../../components/ui/CornerMarks'
 import { activeSeasonId, detectRuneword, effectiveStars, getItem, getItemImage } from '@data'
 import type { EquippedItem, SlotKey } from '../../types'
 import { RARITY_BG, RARITY_BORDER, RARITY_TEXT } from './lib/rarity'
+import { translateItemName, translateItemType } from '../../utils/item/itemText'
 
 export function SlotRow({
   slot,
@@ -100,10 +101,12 @@ export function SlotRow({
             <span
               className={`block truncate text-[12px] font-semibold ${rarityText}`}
             >
-              {runeword ? runeword.name : base.name}
+              {translateItemName(runeword ? runeword.name : base.name)}
             </span>
             <span className="block truncate text-[10px] text-muted">
-              {runeword ? `符文之语 · ${base.baseType}` : base.baseType}
+              {runeword
+                ? `符文之语 · ${translateItemType(base.baseType)}`
+                : translateItemType(base.baseType)}
             </span>
           </>
         ) : locked ? (

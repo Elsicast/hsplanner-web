@@ -7,6 +7,7 @@ import type { SlotKey } from '../../types'
 import { charmBlockedCells, CHARM_GRID_COLS, CHARM_GRID_ROWS, packCharms } from './lib/charmPacking'
 import { RARITY_BG, RARITY_TEXT } from './lib/rarity'
 import { GearPanel } from './SlotRail'
+import { translateItemName } from '../../utils/item/itemText'
 
 export function CharmSection({
   charmSlots,
@@ -118,7 +119,7 @@ export function CharmSection({
             <button
               type="button"
               onClick={() => onSelect(p.slotKey)}
-              aria-label={base.name}
+              aria-label={translateItemName(base.name)}
               className={`relative w-full h-full rounded-[3px] text-[10px] flex flex-col items-center justify-center text-center transition-colors overflow-hidden ${
                 isActive
                   ? 'border-2 border-accent bg-accent/10 ring-1 ring-accent'
@@ -145,7 +146,7 @@ export function CharmSection({
                       overflow: 'hidden',
                     }}
                   >
-                    {base.name}
+                    {translateItemName(base.name)}
                   </div>
                 </>
               )}

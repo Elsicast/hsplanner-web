@@ -1,5 +1,11 @@
 import { getItemImage, items } from '@data'
 import { formatValue, statName } from '../../utils/item/stats'
+import {
+  translateItemEffect,
+  translateItemName,
+  translateItemType,
+} from '../../utils/item/itemText'
+import { displayStatName } from '../../utils/item/itemStatText'
 import type { PickerRow } from './PickerModal'
 import type { ItemBase, RangedValue, SlotKey } from '../../types'
 import { RARITY_LABEL, RARITY_ORDER } from './lib/rarity'
@@ -29,29 +35,36 @@ function slotGroup(slotKey: SlotKey): string {
 }
 
 function buildItemSearchTerms(i: ItemBase): string {
-  const parts: string[] = [i.name, i.baseType]
-  if (i.grade) parts.push(`Grade ${i.grade}`)
+  const parts: string[] = [
+    i.name,
+    translateItemName(i.name),
+    i.baseType,
+    translateItemType(i.baseType),
+  ]
+  if (i.grade) parts.push(`Grade ${i.grade}`, `阶级 ${i.grade}`)
   if (i.implicit) {
     for (const [k, v] of Object.entries(i.implicit)) {
-      parts.push(statName(k))
+      parts.push(statName(k), displayStatName(k))
       parts.push(formatValue(v, k))
     }
   }
-  if (i.uniqueEffects) parts.push(...i.uniqueEffects)
+  if (i.uniqueEffects) {
+    parts.push(...i.uniqueEffects, ...i.uniqueEffects.map(translateItemEffect))
+  }
   if (i.procs) {
     for (const p of i.procs) {
-      parts.push(p.description)
-      if (p.details) parts.push(p.details)
+      parts.push(p.description, translateItemEffect(p.description))
+      if (p.details) parts.push(p.details, translateItemEffect(p.details))
     }
   }
   if (i.skillBonuses) {
     for (const [skill, val] of Object.entries(i.skillBonuses)) {
-      parts.push(skill)
+      parts.push(skill, translateItemName(skill))
       parts.push(formatValue(val, skill))
     }
   }
-  if (i.description) parts.push(i.description)
-  if (i.flavor) parts.push(i.flavor)
+  if (i.description) parts.push(i.description, translateItemEffect(i.description))
+  if (i.flavor) parts.push(i.flavor, translateItemEffect(i.flavor))
   if (i.setId) parts.push(i.setId)
   return parts.join(' ').toLowerCase()
 }
@@ -71,7 +84,7 @@ export function pickerItemsForSlot(
       return a.name.localeCompare(b.name)
     })
   return matching.map((i) => {
-    const parts: string[] = [i.baseType]
+    const parts: string[] = [translateItemType(i.baseType)]
     if (i.grade) parts.push(`阶级 ${i.grade}`)
     if (i.baseType === 'Charm') parts.push(`${i.width ?? 1}×${i.height ?? 1}`)
     if (i.defenseMin !== undefined && i.defenseMax !== undefined)
@@ -89,9 +102,9 @@ export function pickerItemsForSlot(
     }
     return {
       id: i.id,
-      name: i.name,
+      name: translateItemName(i.name),
       rarity: i.rarity,
-      kindLabel: i.baseType,
+      kindLabel: translateItemType(i.baseType),
       group: RARITY_LABEL[i.rarity],
       meta: parts.join(' · '),
       searchTerms: buildItemSearchTerms(i),

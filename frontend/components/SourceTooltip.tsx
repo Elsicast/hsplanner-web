@@ -12,6 +12,7 @@ import Tooltip from './ui/Tooltip'
 import TreeNodeMiniMap from './TreeNodeMiniMap'
 import { CornerMarks } from './ui/CornerMarks'
 import { findTreeNodeById, findTreeNodeByName } from '../utils/tree/treeNodes'
+import { translateItemEffect, translateItemName } from '../utils/item/itemText'
 
 const SOURCE_COLOR: Record<SourceType, string> = {
   class: 'text-text/70',
@@ -27,16 +28,16 @@ const SOURCE_COLOR: Record<SourceType, string> = {
 }
 
 const SOURCE_LABEL: Record<SourceType, string> = {
-  class: 'Class',
-  allocated: 'Allocated',
-  level: 'Level',
-  attribute: 'Attribute',
-  item: 'Item',
-  socket: 'Socket',
-  skill: 'Skill',
-  subskill: 'Subtree',
-  custom: 'Config',
-  tree: 'Tree',
+  class: '职业',
+  allocated: '分配',
+  level: '等级',
+  attribute: '属性',
+  item: '物品',
+  socket: '镶嵌',
+  skill: '技能',
+  subskill: '子树',
+  custom: '配置',
+  tree: '天赋树',
 }
 
 const FORGE_COLOR: Record<ForgeKind, string> = {
@@ -143,7 +144,7 @@ function SourceItem({
           <span className="text-text/40 shrink-0">⤷</span>
           <span className={`shrink-0 italic ${color}`}>锻造词条</span>
           <span className="text-text/60 truncate">
-            ({FORGE_KIND_LABEL[s.forge.kind]})
+            （{translateItemName(FORGE_KIND_LABEL[s.forge.kind])}）
           </span>
         </span>
         <span className="font-mono tabular-nums shrink-0 text-accent-hot">
@@ -162,10 +163,20 @@ function SourceItem({
     }
     return <li key={index}>{forgedRow}</li>
   }
-  const displayLabel =
-    s.sourceType === 'tree'
-      ? s.label.replace(/^(?:Tree|Incarnation):\s*/, '').replace(/\s+#\d+/, '')
-      : s.label
+  const displayLabel = (() => {
+    if (s.sourceType === 'tree') {
+      return s.label.replace(/^(?:Tree|Incarnation):\s*/, '').replace(/\s+#\d+/, '')
+    }
+    if (s.sourceType === 'item') return translateItemName(s.label)
+    if (s.sourceType === 'socket') {
+      let translated = s.label
+      for (const itemName of itemByName?.keys() ?? []) {
+        translated = translated.replace(itemName, translateItemName(itemName))
+      }
+      return translateItemEffect(translated)
+    }
+    return s.label
+  })()
   const labelRow = (
     <div className="flex items-baseline justify-between gap-2 leading-[1.5] -mx-1 px-1 rounded-[2px] hover:bg-accent-hot/8 transition-colors">
       <span className="flex items-baseline gap-1.5 min-w-0">

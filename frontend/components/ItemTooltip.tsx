@@ -190,8 +190,8 @@ const LINE_STYLE_CLASS: Record<TooltipLineStyle, string> = {
 
 function badgeTitle(style: TooltipLineStyle): string {
   return style === 'implicit'
-    ? 'Custom value (overrides base implicit)'
-    : 'Custom value (overrides tier+roll)'
+    ? '自定义数值（覆盖基础固有属性）'
+    : '自定义数值（覆盖阶级与数值范围）'
 }
 
 function ItemTooltipView({ model }: { model: ItemTooltipModel }) {
@@ -453,7 +453,7 @@ export function ItemCard({
           </div>
         )}
         <div className="flex items-center justify-center text-center px-3 py-6">
-          <p className="text-[11px] text-faint italic">empty slot</p>
+          <p className="text-[11px] text-faint italic">空插槽</p>
         </div>
       </div>
     )

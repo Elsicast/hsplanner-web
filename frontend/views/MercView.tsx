@@ -24,6 +24,11 @@ import type { MercSkill, SlotKey } from '../types'
 import { GearPanel, SlotRow } from './gear/SlotRail'
 import { GearSlotModal } from './gear/GearSlotModal'
 import { getSocketPickerRows } from './gear/lib/socketPickerRows'
+import {
+  translateItemEffect,
+  translateItemName,
+  translateSlotName,
+} from '../utils/item/itemText'
 
 function SkillRow({
   skill,
@@ -140,7 +145,9 @@ export default function MercView() {
     () =>
       mercData.slots.map((key) => ({
         key,
-        name: gameConfig.slots.find((s) => s.key === key)?.name ?? key,
+        name: translateSlotName(
+          gameConfig.slots.find((s) => s.key === key)?.name ?? key,
+        ),
       })),
     [],
   )
@@ -155,14 +162,18 @@ export default function MercView() {
   const mercMagicFind = mercComputed?.stats.magic_find ?? 0
   const sharedEffects = useMemo(() => {
     const auras = mercGrantedAuras(mercInventory).map((a) => ({
-      itemName: a.itemName,
-      effect: `赋予 ${a.name} 等级 ${
+      itemName: translateItemName(a.itemName),
+      effect: `赋予 ${translateItemName(a.name)} 等级 ${
         a.levelMin === a.levelMax
           ? a.levelMin
           : `[${a.levelMin}-${a.levelMax}]`
       }`,
     }))
-    return [...auras, ...mercSharedEffects(mercInventory)]
+    const effects = mercSharedEffects(mercInventory).map((effect) => ({
+      itemName: translateItemName(effect.itemName),
+      effect: translateItemEffect(effect.effect),
+    }))
+    return [...auras, ...effects]
   }, [mercInventory])
   const sharedSkills = useMemo(
     () =>
@@ -395,8 +406,8 @@ export default function MercView() {
               </div>
               {sharedEffects.length === 0 ? (
                 <p className="m-0 pb-1 text-[11px] italic text-muted">
-                  暂无共享的装备增益 — 请装备带效果的 unique
-                  物品（例如 Pearlescent Dream）。
+                  暂无共享的装备增益 — 请装备带特殊效果的独特
+                  物品（例如珠光之梦）。
                 </p>
               ) : (
                 <ul className="m-0 flex list-none flex-col gap-1.5 p-0 pb-1">

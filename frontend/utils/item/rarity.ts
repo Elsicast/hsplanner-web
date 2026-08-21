@@ -53,14 +53,14 @@ export const RARITY_BORDER: Record<ItemRarity, string> = {
 }
 
 export const RARITY_LABEL: Record<ItemRarity, string> = {
-  common: 'Common',
-  uncommon: 'Superior',
-  rare: 'Rare',
-  mythic: 'Mythic',
-  satanic: 'Satanic',
-  heroic: 'Heroic',
-  angelic: 'Angelic',
-  satanic_set: 'Satanic Set',
-  unholy: 'Unholy',
-  relic: 'Relic',
+  common: '普通',
+  uncommon: '优良',
+  rare: '稀有',
+  mythic: '神话',
+  satanic: '撒旦',
+  heroic: '英雄',
+  angelic: '天使',
+  satanic_set: '撒旦套装',
+  unholy: '邪秽',
+  relic: '遗物',
 }

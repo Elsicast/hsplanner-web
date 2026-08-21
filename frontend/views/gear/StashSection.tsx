@@ -14,6 +14,7 @@ import type { SlotKey, StashEntry } from '../../types'
 import { RARITY_TEXT } from './lib/rarity'
 import { equipTargets } from './lib/stashEquip'
 import { GearPanel } from './SlotRail'
+import { translateItemName, translateItemType, translateSlotName } from '../../utils/item/itemText'
 
 function slotGroupOf(entry: StashEntry): string | null {
   const base = getItem(entry.item.baseId)
@@ -21,7 +22,7 @@ function slotGroupOf(entry: StashEntry): string | null {
 }
 
 function slotName(key: SlotKey): string {
-  return gameConfig.slots.find((s) => s.key === key)?.name ?? key
+  return translateSlotName(gameConfig.slots.find((s) => s.key === key)?.name ?? key)
 }
 
 function StashRow({ entry }: { entry: StashEntry }) {
@@ -72,10 +73,10 @@ function StashRow({ entry }: { entry: StashEntry }) {
         </span>
         <span className="min-w-0 flex-1">
           <span className={`block truncate text-[12px] font-semibold ${rarityText}`}>
-            {runeword ? runeword.name : base.name}
+            {translateItemName(runeword ? runeword.name : base.name)}
           </span>
           <span className="block truncate text-[10px] text-muted">
-            {base.baseType}
+            {translateItemType(base.baseType)}
             {badges.length > 0 && (
               <span className="ml-1.5 font-mono text-[9px] uppercase tracking-[0.1em] text-faint">
                 {badges.join(' · ')}
@@ -111,7 +112,7 @@ function StashRow({ entry }: { entry: StashEntry }) {
       <button
         type="button"
         onClick={() => removeEntry(entry.id)}
-        aria-label={`从仓库移除 ${base.name}`}
+        aria-label={`从仓库移除 ${translateItemName(base.name)}`}
         className="shrink-0 rounded-[3px] border border-border px-1.5 py-1 text-[11px] leading-none text-faint transition-colors hover:border-stat-red/60 hover:text-stat-red"
       >
         ×

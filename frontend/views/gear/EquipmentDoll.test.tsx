@@ -28,7 +28,7 @@ describe('EquipmentDoll', () => {
       <EquipmentDoll activeSlot={null} offhandLocked={false} onSelect={() => {}} />,
     )
 
-    const empty = screen.getAllByRole('button', { name: /: 空$/ })
+    const empty = screen.getAllByRole('button', { name: /：空$/ })
     expect(empty).toHaveLength(19)
   })
 
@@ -38,7 +38,7 @@ describe('EquipmentDoll', () => {
       <EquipmentDoll activeSlot={null} offhandLocked={false} onSelect={onSelect} />,
     )
 
-    await userEvent.click(screen.getByRole('button', { name: 'Helmet: 空' }))
+    await userEvent.click(screen.getByRole('button', { name: '头盔：空' }))
 
     expect(onSelect).toHaveBeenCalledWith('helmet')
   })
@@ -49,7 +49,7 @@ describe('EquipmentDoll', () => {
     )
 
     expect(
-      screen.getByRole('button', { name: 'Offhand: 已锁定' }),
+      screen.getByRole('button', { name: '副手：已锁定' }),
     ).toBeInTheDocument()
   })
 
@@ -60,12 +60,12 @@ describe('EquipmentDoll', () => {
     )
 
     await userEvent.click(
-      screen.getByRole('button', { name: 'Potion 1 效果 开启' }),
+      screen.getByRole('button', { name: '药水 1 效果 开启' }),
     )
 
     expect(useBuild.getState().disabledPotions.potion_1).toBe(true)
     expect(
-      screen.getByRole('button', { name: 'Potion 1 效果 关闭' }),
+      screen.getByRole('button', { name: '药水 1 效果 关闭' }),
     ).toBeInTheDocument()
   })
 })

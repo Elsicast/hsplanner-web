@@ -10,6 +10,7 @@ import type { EquippedItem } from '../../../types'
 import { affixAverageStats, buildCrystalModTooltip } from '../tooltips'
 import { SectionCard } from '../SectionCard'
 import { useAffixDisplayRanges } from './AffixesSection'
+import { translateItemEffect, translateItemName } from '../../../utils/item/itemText'
 
 export function ForgedModsSection({
   forgeKind,
@@ -27,7 +28,7 @@ export function ForgedModsSection({
     () => equipped.forgedMods ?? [],
     [equipped.forgedMods],
   )
-  const sourceLabel = FORGE_KIND_LABEL[forgeKind]
+  const sourceLabel = translateItemName(FORGE_KIND_LABEL[forgeKind])
 
   const modItems = useMemo(
     () => mods.map((eq) => ({ def: getCrystalMod(eq.affixId) })),
@@ -53,10 +54,16 @@ export function ForgedModsSection({
         )
         .map((m) => ({
           id: m.id,
-          name: m.name,
+          name: translateItemEffect(m.name),
           tier: m.tier,
           kindLabel: '水晶',
-          meta: m.description,
+          meta: translateItemEffect(m.description),
+          searchTerms: [
+            m.name,
+            translateItemEffect(m.name),
+            m.description,
+            translateItemEffect(m.description),
+          ].join(' ').toLowerCase(),
           iconColor: 'var(--color-stat-red)',
           tooltip: buildCrystalModTooltip(m, { previousStats }),
           tooltipTone: 'satanic' as const,
@@ -107,7 +114,9 @@ export function ForgedModsSection({
                     ? formatValue(eq.customValue, mod.statKey)
                     : formatAffixRangeFromValues(mod, modRanges[idx] ?? null)}
                 </span>
-                <span className="truncate text-text/85">{mod.name}</span>
+                <span className="truncate text-text/85">
+                  {translateItemEffect(mod.name)}
+                </span>
                 <span className="rounded-xs border border-accent-deep/40 px-1 py-px font-mono text-[9px] tabular-nums text-accent-hot/75">
                   T{mod.tier}
                 </span>

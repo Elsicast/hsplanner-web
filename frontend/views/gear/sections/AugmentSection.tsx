@@ -9,6 +9,11 @@ import { withAugment, withAugmentLevel } from '../lib/itemEdits'
 import { useHoverDpsDiff } from '../lib/useHoverDpsDiff'
 import { augmentIconForId } from '../lib/gearIcons'
 import { SectionCard } from '../SectionCard'
+import {
+  translateItemEffect,
+  translateItemName,
+} from '../../../utils/item/itemText'
+import { displayStatName } from '../../../utils/item/itemStatText'
 
 const AUGMENT_PICKER_ROWS: PickerRow[] = augments
   .slice()
@@ -16,9 +21,17 @@ const AUGMENT_PICKER_ROWS: PickerRow[] = augments
   .map((a) => ({
     id: a.id,
     iconUrl: augmentIconForId(a.id),
-    name: a.name,
+    name: translateItemName(a.name),
     kindLabel: '强化石',
-    meta: a.triggerNote,
+    meta: translateItemEffect(a.triggerNote),
+    searchTerms: [
+      a.name,
+      translateItemName(a.name),
+      a.description,
+      translateItemEffect(a.description),
+      a.triggerNote,
+      translateItemEffect(a.triggerNote),
+    ].join(' ').toLowerCase(),
     rarity: 'angelic' as const,
     tooltip: buildAugmentTooltip(a),
     tooltipTone: 'angelic' as const,
@@ -93,7 +106,7 @@ export function AugmentSection({
 
   return (
     <SectionCard
-      label="Angelic Augment"
+      label="天使增幅"
       tone="angelic"
       rightSlot={
         aug ? (
@@ -132,7 +145,7 @@ export function AugmentSection({
               aug ? 'text-yellow-200' : 'text-faint italic'
             }`}
           >
-            {aug ? aug.name : '选择强化石…'}
+            {aug ? translateItemName(aug.name) : '选择强化石…'}
           </span>
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-faint group-hover:text-yellow-200">
@@ -142,7 +155,7 @@ export function AugmentSection({
 
       {pickerOpen && (
         <PickerModal
-          title="选择 Angelic Augment"
+          title="选择天使增幅"
           sectionLabel="强化石"
           rows={AUGMENT_PICKER_ROWS}
           selectedId={equipped.augment?.id ?? null}
@@ -187,12 +200,12 @@ export function AugmentSection({
           </div>
 
           <p className="text-[11px] leading-snug text-text/85">
-            {aug.description}
+            {translateItemEffect(aug.description)}
           </p>
 
           <div className="flex flex-wrap gap-1.5">
             <span className="rounded-xs border border-yellow-200/25 bg-bg/40 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-yellow-200/80">
-              {aug.triggerNote}
+              {translateItemEffect(aug.triggerNote)}
             </span>
             {tier.procChance !== undefined && tier.procChance !== null && (
               <span className="rounded-xs border border-yellow-200/25 bg-bg/40 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-yellow-200/80">
@@ -220,7 +233,7 @@ export function AugmentSection({
               <ul className="space-y-0.5 text-[11px]">
                 {Object.entries(tier.stats).map(([key, val]) => {
                   const def = gameConfig.stats.find((s) => s.key === key)
-                  const label = def?.name ?? key
+                  const label = displayStatName(key)
                   const sign = (val as number) >= 0 ? '+' : ''
                   const suffix = def?.format === 'percent' ? '%' : ''
                   return (

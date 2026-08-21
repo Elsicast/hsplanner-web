@@ -231,7 +231,7 @@ describe('scanForUpgrades', () => {
       } as BuildPerformanceDeps['inventory'],
     })
     const out = await scanForUpgrades(deps)
-    expect(out.emptySlots).toEqual([{ slot: 'boots', slotName: 'Boots' }])
+    expect(out.emptySlots).toEqual([{ slot: 'boots', slotName: '靴子' }])
     expect(out.upgrades.map((s) => s.slot)).toEqual(['helm', 'weapon'])
     expect(out.upgrades[0]?.gainPct ?? 0).toBeGreaterThan(
       out.upgrades[1]?.gainPct ?? 0,

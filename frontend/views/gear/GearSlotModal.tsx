@@ -19,6 +19,11 @@ import { SocketsSection } from './sections/SocketsSection'
 import { StarsSection } from './sections/StarsSection'
 import { RARITY_LABEL, RARITY_TEXT } from './lib/rarity'
 import { useGearDraft } from './lib/useGearDraft'
+import {
+  translateItemEffect,
+  translateItemName,
+  translateSlotName,
+} from '../../utils/item/itemText'
 
 const GHOST_BTN =
   'rounded-md border border-border bg-transparent px-3 py-1.5 text-[12px] text-muted transition-colors hover:border-accent-deep hover:text-accent-hot'
@@ -137,7 +142,7 @@ export function GearSlotModal({
     : step === 'select'
       ? `为${slotName}选择一件物品`
       : draft && base
-        ? `${base.name} · ${RARITY_LABEL[base.rarity]}`
+        ? `${translateItemName(base.name)} · ${RARITY_LABEL[base.rarity]}`
         : '空槽位'
 
   let body
@@ -180,7 +185,7 @@ export function GearSlotModal({
                   <div
                     className={`truncate text-[14px] font-semibold ${RARITY_TEXT[base.rarity]}`}
                   >
-                    {base.name}
+                    {translateItemName(base.name)}
                   </div>
                   <div className="text-[11px] text-muted">
                     {RARITY_LABEL[base.rarity]}
@@ -431,7 +436,7 @@ function SetSummary({
 }) {
   return (
     <SectionCard
-      label={set.name}
+      label={translateItemName(set.name)}
       tone="set"
       rightSlot={
         <span className="font-mono text-[10px] tabular-nums text-green-300/80">
@@ -467,7 +472,7 @@ function SetSummary({
                     active ? 'text-green-200/90' : 'text-muted/55'
                   }`}
                 >
-                  {dsc}
+                  {translateItemEffect(dsc)}
                 </div>
               ))}
             </li>
@@ -486,7 +491,8 @@ function SetSummary({
                 key={piece.itemId}
                 className={`text-[10.5px] leading-snug ${worn ? 'text-green-200' : 'text-muted/60'}`}
               >
-                <span className="font-mono">{worn ? '✓' : '·'}</span> {piece.name} ({piece.slot})
+                <span className="font-mono">{worn ? '✓' : '·'}</span>{' '}
+                {translateItemName(piece.name)}（{translateSlotName(piece.slot)}）
               </li>
             )
           })}

@@ -7,6 +7,7 @@ import {
   type ParseResult,
 } from '../../utils/item/itemTextFormat'
 import { Modal } from '../../components/ui/Modal'
+import { translateItemName } from '../../utils/item/itemText'
 
 interface Props {
   slotName: string
@@ -73,7 +74,7 @@ export default function ItemTextEditorModal({
       onClose={onClose}
       panelClassName="h-[88vh] w-[1100px] max-w-[96vw]"
       eyebrow={<>编辑物品 · {slotName}</>}
-      title={base.name}
+      title={translateItemName(base.name)}
     >
         <div className="flex min-h-0 flex-1 flex-row">
           <div className="flex min-w-0 flex-[3] flex-col border-r border-border">

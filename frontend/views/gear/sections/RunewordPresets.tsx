@@ -7,6 +7,7 @@ import { buildRunewordTooltip, NetChangeBlock } from '../tooltips'
 import { withRuneword } from '../lib/itemEdits'
 import { useHoverDpsDiff } from '../lib/useHoverDpsDiff'
 import { SectionCard } from '../SectionCard'
+import { translateItemName, translateItemType } from '../../../utils/item/itemText'
 
 function RunewordSelectedPanel({
   state,
@@ -81,19 +82,21 @@ export function RunewordPresets({
         const runeSeq = rw.runes
           .map((r) => r.replace(/^rune_/, ''))
           .join(' → ')
-        const reqLabel = rw.requiresLevel ? ` · L${rw.requiresLevel}` : ''
+        const reqLabel = rw.requiresLevel ? ` · 等级 ${rw.requiresLevel}` : ''
         return {
           id: rw.id,
-          name: rw.name,
+          name: translateItemName(rw.name),
           tier: rw.runes.length,
           kindLabel: '符文之语',
           meta: `${runeSeq}${reqLabel}`,
           iconColor: 'var(--color-accent-hot)',
           searchTerms: [
             rw.name,
+            translateItemName(rw.name),
             runeSeq,
             ...rw.runes,
             ...rw.allowedBaseTypes,
+            ...rw.allowedBaseTypes.map(translateItemType),
           ]
             .join(' ')
             .toLowerCase(),
@@ -148,7 +151,7 @@ export function RunewordPresets({
               activeRw ? 'text-accent-hot' : 'italic text-faint'
             }`}
           >
-            {activeRw ? activeRw.name : '选择符文之语…'}
+            {activeRw ? translateItemName(activeRw.name) : '选择符文之语…'}
           </span>
           {activeRuneSeq && (
             <span className="truncate font-mono text-[10px] tabular-nums tracking-[0.04em] text-muted/80">

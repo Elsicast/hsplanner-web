@@ -4,12 +4,13 @@ import { useBuild } from '../../store/build'
 import type { EquippedItem, SlotKey } from '../../types'
 import { RARITY_BG, RARITY_BORDER, RARITY_TEXT } from './lib/rarity'
 import { GearPanel } from './SlotRail'
+import { translateItemName, translateSlotName } from '../../utils/item/itemText'
 
 const RELIC_SLOTS: SlotKey[] = ['relic_1', 'relic_2', 'relic_3', 'relic_4', 'relic_5']
 const POTION_SLOTS: SlotKey[] = ['potion_1', 'potion_2', 'potion_3', 'potion_4']
 
 function slotName(key: SlotKey): string {
-  return gameConfig.slots.find((s) => s.key === key)?.name ?? key
+  return translateSlotName(gameConfig.slots.find((s) => s.key === key)?.name ?? key)
 }
 
 function SlotCell({
@@ -53,7 +54,7 @@ function SlotCell({
       type="button"
       data-tour={`slot-${slotKey}`}
       onClick={() => onSelect(slotKey)}
-      aria-label={`${name}: ${base ? (runeword?.name ?? base.name) : locked ? '已锁定' : '空'}`}
+      aria-label={`${name}：${base ? translateItemName(runeword?.name ?? base.name) : locked ? '已锁定' : '空'}`}
       className={`relative flex items-center justify-center overflow-hidden rounded-[3px] border transition-colors ${sizeClass} ${border} ${
         active
           ? 'border-accent-hot bg-accent-hot/10 ring-1 ring-accent-hot/40'

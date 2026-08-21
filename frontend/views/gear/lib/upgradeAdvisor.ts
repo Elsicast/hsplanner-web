@@ -4,6 +4,7 @@ import { pickerItemsForSlot } from '../pickerItems'
 import type { BuildPerformanceDeps } from '../../../utils/build/buildPerformance'
 import type { PickerRow } from '../PickerModal'
 import type { SlotDef, SlotKey } from '../../../types'
+import { translateItemName, translateSlotName } from '../../../utils/item/itemText'
 
 export interface UpgradeSuggestion {
   slot: SlotKey
@@ -46,11 +47,11 @@ function evaluateSlot(
   if (gainPct <= UPGRADE_MIN_GAIN_PCT) return null
   const currentName =
     rows.find((r) => r.id === currentBaseId)?.name ??
-    getItem(currentBaseId)?.name ??
+    (getItem(currentBaseId) ? translateItemName(getItem(currentBaseId)!.name) : undefined) ??
     currentBaseId
   return {
     slot: slot.key,
-    slotName: slot.name,
+    slotName: translateSlotName(slot.name),
     currentBaseName: currentName,
     bestBaseId: bestId,
     bestBaseName: bestName,
@@ -89,7 +90,7 @@ export async function scanForUpgrades(
     onProgress?.(index + 1, slots.length)
 
     if (currentBaseId === undefined) {
-      emptySlots.push({ slot: slot.key, slotName: slot.name })
+      emptySlots.push({ slot: slot.key, slotName: translateSlotName(slot.name) })
       continue
     }
 

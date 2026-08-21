@@ -12,6 +12,7 @@ import { EquipmentDoll } from './EquipmentDoll'
 import { GearSlotModal } from './GearSlotModal'
 import { StashSection } from './StashSection'
 import { UpgradeAdvisor } from './UpgradeAdvisor'
+import { translateItemName, translateSlotName } from '../../utils/item/itemText'
 
 export default function GearView() {
   const inventory = useBuild((s) => s.inventory)
@@ -113,7 +114,9 @@ export default function GearView() {
         <GearSlotModal
           slot={activeSlot}
           slotName={
-            gameConfig.slots.find((s) => s.key === activeSlot)?.name ?? activeSlot
+            translateSlotName(
+              gameConfig.slots.find((s) => s.key === activeSlot)?.name ?? activeSlot,
+            )
           }
           equipped={inventory[activeSlot]}
           offhandLocked={offhandLocked}
@@ -128,7 +131,7 @@ export default function GearView() {
               const base = getItem(item.baseId)
               const w = base?.width ?? 1
               const h = base?.height ?? 1
-              return `${base?.name ?? 'Item'} (${w}×${h}) 无法放入 — 请先腾出空间。`
+              return `${base ? translateItemName(base.name) : '物品'}（${w}×${h}）无法放入 — 请先腾出空间。`
             }
             commitEquippedItem(activeSlot, item)
             if (item) useBuild.getState().addStashItem(item)

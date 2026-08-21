@@ -2,11 +2,17 @@
 import type { ReactNode } from 'react'
 import { TooltipFooter, TooltipHeader, TooltipSection, TooltipSectionHeader, TooltipStat, TooltipText } from '../../components/ui/Tooltip'
 import NetChangeRow from '../../components/NetChangeRow'
-import { formatValue, statName } from '../../utils/item/stats'
+import { formatValue } from '../../utils/item/stats'
 import { gameConfig } from '@data'
 import type { BuildStatDiff } from '../../utils/build/buildPerformance'
 import type { Affix } from '../../types'
 import { augmentIconForId, socketableIconForName } from './lib/gearIcons'
+import {
+  translateItemEffect,
+  translateItemName,
+  translateItemType,
+} from '../../utils/item/itemText'
+import { displayStatName } from '../../utils/item/itemStatText'
 
 const PERCENT_STAT_KEYS = new Set(
   gameConfig.stats.filter((s) => s.format === 'percent').map((s) => s.key),
@@ -35,7 +41,7 @@ export function NetChangeBlock({
     if (Math.abs(delta) < 0.01) continue
     diffs.push({
       key,
-      label: statName(key),
+      label: displayStatName(key),
       beforeMin: before,
       beforeMax: before,
       afterMin: after,
@@ -94,7 +100,7 @@ function formatStatLines(stats: Record<string, number>): ReactNode[] {
     .map(([key, val]) => (
       <TooltipStat
         key={key}
-        label={statName(key)}
+        label={displayStatName(key)}
         value={formatValue(val, key)}
       />
     ))
@@ -124,14 +130,14 @@ export function buildSocketableTooltip(
   return (
     <>
       <TooltipHeader
-        title={s.name}
+        title={translateItemName(s.name)}
         subtitle={`${SOCKETABLE_KIND_LABEL[kind] ?? kind} · 阶级 ${s.tier}`}
         image={socketableIconForName(s.name)}
       />
       {lines.length > 0 && <TooltipSection>{lines}</TooltipSection>}
       {hasDescription && (
         <TooltipSection>
-          <TooltipText>{s.description}</TooltipText>
+          <TooltipText>{translateItemEffect(s.description!)}</TooltipText>
         </TooltipSection>
       )}
       {opts?.previousStats && (
@@ -156,14 +162,14 @@ export function buildAffixTooltip(a: Affix): ReactNode {
   return (
     <>
       <TooltipHeader
-        title={a.description}
-        subtitle={`词缀 · ${a.name} · 阶级 ${a.tier}`}
+        title={translateItemEffect(a.description)}
+        subtitle={`词缀 · ${translateItemEffect(a.name)} · 阶级 ${a.tier}`}
       />
       {range && (
         <TooltipSection>
           <TooltipStat label="数值范围" value={range} />
           {a.statKey && (
-            <TooltipStat label="属性" value={statName(a.statKey)} />
+            <TooltipStat label="属性" value={displayStatName(a.statKey)} />
           )}
         </TooltipSection>
       )}
@@ -198,18 +204,18 @@ export function buildCrystalModTooltip(
   return (
     <>
       <TooltipHeader
-        title={m.name}
-        subtitle={`Satanic Crystal · 阶级 ${m.tier}`}
+        title={translateItemEffect(m.name)}
+        subtitle={`${translateItemName('Satanic Crystal')} · 阶级 ${m.tier}`}
         tone="satanic"
       />
       <TooltipSection>
-        <TooltipText>{m.description}</TooltipText>
+        <TooltipText>{translateItemEffect(m.description)}</TooltipText>
       </TooltipSection>
       {range && (
         <TooltipSection>
           <TooltipStat label="数值范围" value={range} />
           {m.statKey && (
-            <TooltipStat label="属性" value={statName(m.statKey)} />
+            <TooltipStat label="属性" value={displayStatName(m.statKey)} />
           )}
         </TooltipSection>
       )}
@@ -237,7 +243,7 @@ export function buildRunewordTooltip(rw: {
   return (
     <>
       <TooltipHeader
-        title={rw.name}
+        title={translateItemName(rw.name)}
         subtitle={`符文之语 · ${rw.runes.length} 个符文`}
         tone="rare"
       />
@@ -250,12 +256,12 @@ export function buildRunewordTooltip(rw: {
       </TooltipSection>
       {lines.length > 0 && <TooltipSection>{lines}</TooltipSection>}
       <TooltipFooter>
-        基底 · {rw.allowedBaseTypes.join(', ')}
+        基底 · {rw.allowedBaseTypes.map(translateItemType).join('、')}
         {rw.requiresLevel ? ` · 等级 ${rw.requiresLevel}` : ''}
       </TooltipFooter>
       {rw.description && (
         <TooltipSection>
-          <TooltipText>{rw.description}</TooltipText>
+          <TooltipText>{translateItemEffect(rw.description)}</TooltipText>
         </TooltipSection>
       )}
     </>
@@ -275,13 +281,13 @@ export function buildAugmentTooltip(aug: {
   return (
     <>
       <TooltipHeader
-        title={aug.name}
-        subtitle={`Angelic Augment · ${aug.triggerNote}`}
+        title={translateItemName(aug.name)}
+        subtitle={`天使增幅 · ${translateItemEffect(aug.triggerNote)}`}
         tone="angelic"
         image={augmentIconForId(aug.id)}
       />
       <TooltipSection>
-        <TooltipText>{aug.description}</TooltipText>
+        <TooltipText>{translateItemEffect(aug.description)}</TooltipText>
       </TooltipSection>
       {lvl && lines.length > 0 && (
         <TooltipSection>

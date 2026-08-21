@@ -11,6 +11,7 @@ import type {
   TooltipSectionModel,
 } from '../../components/itemTooltipModel'
 import type { GearTooltip, GearTooltipLine } from './sharePayload'
+import { translateItemName, translateItemType } from '../item/itemText'
 
 vi.mock('@data', async (importOriginal) => {
   const actual = await importOriginal<typeof DataModule>()
@@ -197,9 +198,9 @@ describe('buildGearTooltip', () => {
     }
     const tooltip = buildGearTooltip(base, equipped, deps)
 
-    expect(tooltip.name).toBe(base.name)
+    expect(tooltip.name).toBe(translateItemName(base.name))
     expect(tooltip.rarity).toBe(base.rarity)
-    expect(tooltip.typeLine).toContain(base.baseType)
+    expect(tooltip.typeLine).toContain(translateItemType(base.baseType))
     expect(Array.isArray(tooltip.sections)).toBe(true)
   })
 })

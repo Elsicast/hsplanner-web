@@ -34,6 +34,13 @@ import {
 import { collectSocketGroups } from '../utils/item/socketStats'
 import type { AffixValueOutput } from '../utils/calc/bridge'
 import type { TooltipTone } from './tooltipTones'
+import {
+  translateItemEffect,
+  translateItemName,
+  translateItemType,
+  translateSlotName,
+} from '../utils/item/itemText'
+import { displayStatName } from '../utils/item/itemStatText'
 
 export type TooltipHeaderTone = 'gold' | 'orange' | 'red' | 'pink' | 'green' | 'muted'
 
@@ -116,14 +123,14 @@ export const RARITY_TONE: Record<ItemRarity, TooltipTone> = {
 }
 
 const TRIGGER_LABEL: Record<string, string> = {
-  on_hit: 'on Hit',
-  on_attack: 'when Attacking',
-  when_struck: 'when Struck',
-  on_kill: 'on Kill',
-  on_cast: 'on Cast',
-  on_block: 'on Block',
-  on_death: 'on Death',
-  aura: 'Aura:',
+  on_hit: '命中时',
+  on_attack: '攻击时',
+  when_struck: '受到攻击时',
+  on_kill: '击杀时',
+  on_cast: '施法时',
+  on_block: '格挡时',
+  on_death: '死亡时',
+  aura: '光环：',
   passive: '',
 }
 
@@ -139,7 +146,7 @@ const RECOGNIZED_EFFECTS = new Set([
   'all skills class',
 ])
 
-const NOT_SUPPORTED_FOOTNOTE = 'These mods are not yet calculated by the planner.'
+const NOT_SUPPORTED_FOOTNOTE = '这些词缀尚未计入规划器计算。'
 
 type TextLineExtra = { italic?: boolean; small?: boolean; badge?: string }
 
@@ -211,28 +218,28 @@ export function buildItemTooltipModel(
   const implicitLines: TooltipLine[] = [
     ...implicitEntries.map(([key, value, isCustom]) =>
       textLine(
-        `${formatValue(value, key)} ${statName(key)}`,
+        `${formatValue(value, key)} ${displayStatName(key)}`,
         'implicit',
         isCustom ? { badge: 'custom' } : undefined,
       ),
     ),
     ...visibleSkillBonusEntries.map(([skill, val]) =>
-      textLine(`${formatValue(val, '')} to ${skill}`, 'implicit'),
+      textLine(`${formatValue(val, '')} ${translateItemName(skill)}`, 'implicit'),
     ),
   ]
   if (implicitLines.length > 0) {
-    sections.push({ header: { text: 'Implicit', tone: 'gold' }, lines: implicitLines })
+    sections.push({ header: { text: '固有属性', tone: 'gold' }, lines: implicitLines })
   }
 
   if (grantedSkillEntries.length > 0) {
     sections.push({
-      header: { text: 'Granted Skill Effects', tone: 'orange' },
+      header: { text: '授予技能效果', tone: 'orange' },
       lines: grantedSkillEntries.map((e): TooltipLine => ({
         kind: 'entry',
-        title: e.skill.name,
-        suffix: `rank ${e.displayRank}`,
-        ...(e.skill.description ? { desc: e.skill.description } : {}),
-        lines: e.lines,
+        title: translateItemName(e.skill.name),
+        suffix: `等级 ${e.displayRank}`,
+        ...(e.skill.description ? { desc: translateItemEffect(e.skill.description) } : {}),
+        lines: e.lines.map(translateItemEffect),
       })),
     })
   }
@@ -240,7 +247,7 @@ export function buildItemTooltipModel(
   if (runewordEntries.length > 0) {
     sections.push({
       lines: runewordEntries.map(([key, val]) =>
-        textLine(`${formatValue(val as number, key)} ${statName(key)}`, 'runeword'),
+        textLine(`${formatValue(val as number, key)} ${displayStatName(key)}`, 'runeword'),
       ),
     })
   }
@@ -248,17 +255,20 @@ export function buildItemTooltipModel(
   const { standard, unholy } = buildAffixLines(equipped?.affixes ?? [], display)
   if (standard.length > 0) sections.push({ lines: standard })
   if (unholy.length > 0) {
-    sections.push({ header: { text: 'Unholy Affixes', tone: 'pink' }, lines: unholy })
+    sections.push({ header: { text: '邪秽词缀', tone: 'pink' }, lines: unholy })
   }
 
   if (equippedForgedMods.length > 0 && forgeKind) {
     const forgedLines = equippedForgedMods
       .map((eq) => getCrystalMod(eq.affixId))
       .filter((mod): mod is Affix => !!mod)
-      .map((mod) => textLine(mod.description, 'forged'))
+      .map((mod) => textLine(translateItemEffect(mod.description), 'forged'))
     if (forgedLines.length > 0) {
       sections.push({
-        header: { text: `Forged · ${FORGE_KIND_LABEL[forgeKind]}`, tone: 'red' },
+        header: {
+          text: `锻造 · ${translateItemName(FORGE_KIND_LABEL[forgeKind])}`,
+          tone: 'red',
+        },
         lines: forgedLines,
       })
     }
@@ -266,13 +276,15 @@ export function buildItemTooltipModel(
 
   if (socketGroups.length > 0) {
     sections.push({
-      header: { text: 'From Sockets', tone: 'gold' },
+      header: { text: '镶嵌属性', tone: 'gold' },
       lines: socketGroups.map((group): TooltipLine => ({
         kind: 'entry',
         style: 'socket',
-        title: group.count > 1 ? `${group.name} ×${group.count}` : group.name,
+        title: group.count > 1
+          ? `${translateItemName(group.name)} ×${group.count}`
+          : translateItemName(group.name),
         icon: group.name,
-        lines: group.stats.map(([k, v]) => `${formatValue(v, k)} ${statName(k)}`),
+        lines: group.stats.map(([k, v]) => `${formatValue(v, k)} ${displayStatName(k)}`),
       })),
     })
   }
@@ -289,7 +301,7 @@ export function buildItemTooltipModel(
   if (augment && augmentTier) {
     const augmentLines = Object.entries(augmentTier.stats)
       .filter(([, v]) => v !== 0)
-      .map(([k, v]) => `${formatValue(v as number, k)} ${statName(k)}`)
+      .map(([k, v]) => `${formatValue(v as number, k)} ${displayStatName(k)}`)
     if (augmentTier.procChance !== undefined) {
       const duration = augmentTier.procDurationSec
       augmentLines.push(
@@ -299,15 +311,15 @@ export function buildItemTooltipModel(
       )
     }
     sections.push({
-      header: { text: 'Angelic Augment', tone: 'gold' },
+      header: { text: '天使增幅', tone: 'gold' },
       lines: [
         {
           kind: 'entry',
-          title: augment.name,
+          title: translateItemName(augment.name),
           icon: augment.id,
-          suffix: `level ${equipped?.augment?.level ?? 1}`,
-          desc: augment.description,
-          lines: augmentLines,
+          suffix: `等级 ${equipped?.augment?.level ?? 1}`,
+          desc: translateItemEffect(augment.description),
+          lines: augmentLines.map(translateItemEffect),
         },
       ],
     })
@@ -316,27 +328,27 @@ export function buildItemTooltipModel(
   if (set && set.bonuses.length > 0) {
     sections.push({
       header: {
-        text: set.name,
+        text: translateItemName(set.name),
         tone: 'green',
-        trailing: `${setEquippedCount}/${set.items.length} pieces`,
+        trailing: `${setEquippedCount}/${set.items.length} 件`,
       },
       lines: [
         ...set.bonuses.map((bonus): TooltipLine => {
           const active = setEquippedCount >= bonus.pieces
           return {
             kind: 'entry',
-            title: active ? `${bonus.pieces}-Set (active)` : `${bonus.pieces}-Set`,
+            title: active ? `${bonus.pieces} 件套（已激活）` : `${bonus.pieces} 件套`,
             style: active ? 'set-active' : 'set-inactive',
-            lines: bonus.descriptions ?? [],
+            lines: (bonus.descriptions ?? []).map(translateItemEffect),
           }
         }),
         {
           kind: 'entry',
-          title: 'Set items',
+          title: '套装物品',
           style: 'set-items',
           lines: set.items.map(
             (piece) =>
-              `${equippedPieceIds.has(piece.itemId) ? EQUIPPED_MARK : '·'} ${piece.name} (${piece.slot})`,
+              `${equippedPieceIds.has(piece.itemId) ? EQUIPPED_MARK : '·'} ${translateItemName(piece.name)}（${translateSlotName(piece.slot)}）`,
           ),
         },
       ],
@@ -352,9 +364,9 @@ export function buildItemTooltipModel(
           : ''
         return {
           kind: 'entry',
-          title: `${chancePart}${triggerPart}${p.description}`,
+          title: translateItemEffect(`${chancePart}${triggerPart}${p.description}`),
           style: 'proc',
-          ...(p.details ? { desc: p.details } : {}),
+          ...(p.details ? { desc: translateItemEffect(p.details) } : {}),
           lines: [],
         }
       }),
@@ -369,22 +381,22 @@ export function buildItemTooltipModel(
     )
     if (special.length > 0) {
       sections.push({
-        header: { text: 'Special Effects', tone: 'gold' },
-        lines: special.map((e) => textLine(e, 'special')),
+        header: { text: '特殊效果', tone: 'gold' },
+        lines: special.map((e) => textLine(translateItemEffect(e), 'special')),
       })
     }
     if (notSupported.length > 0) {
       sections.push({
-        header: { text: 'Not Yet Supported', tone: 'muted' },
-        lines: notSupported.map((e) => textLine(e, 'unsupported')),
+        header: { text: '暂未支持', tone: 'muted' },
+        lines: notSupported.map((e) => textLine(translateItemEffect(e), 'unsupported')),
         footnote: NOT_SUPPORTED_FOOTNOTE,
       })
     }
   }
 
   const descLines: TooltipLine[] = []
-  if (base.description) descLines.push(textLine(base.description, 'muted', { italic: true }))
-  if (base.flavor) descLines.push(textLine(base.flavor, 'muted', { italic: true }))
+  if (base.description) descLines.push(textLine(translateItemEffect(base.description), 'muted', { italic: true }))
+  if (base.flavor) descLines.push(textLine(translateItemEffect(base.flavor), 'muted', { italic: true }))
   if (descLines.length > 0) sections.push({ lines: descLines })
 
   const footer = buildFooter(base, runeword)
@@ -407,13 +419,13 @@ function buildTypeLine(
   const stars = effectiveStars(base.slot, activeSeasonId, equipped?.stars) ?? 0
   const starSuffix = stars > 0 ? ` · ${'★'.repeat(stars)}` : ''
   const handSuffix =
-    base.slot === 'weapon' ? (base.twoHanded ? ' · 2-Handed' : ' · 1-Handed') : ''
+    base.slot === 'weapon' ? (base.twoHanded ? ' · 双手' : ' · 单手') : ''
   const isTinkered = !!equipped?.forgedMods?.some(
     (m) => m.affixId === BONUS_SOCKET_MOD_ID,
   )
-  const tinkeredSuffix = isTinkered ? ' · Tinkered' : ''
-  const rarityLabel = runeword ? 'Runeword' : RARITY_LABEL[base.rarity]
-  return `${rarityLabel} · ${base.baseType}${handSuffix}${starSuffix}${tinkeredSuffix}`
+  const tinkeredSuffix = isTinkered ? ' · 已工艺改造' : ''
+  const rarityLabel = runeword ? '符文之语' : RARITY_LABEL[base.rarity]
+  return `${rarityLabel} · ${translateItemType(base.baseType)}${handSuffix}${starSuffix}${tinkeredSuffix}`
 }
 
 function buildDisplayName(
@@ -421,32 +433,33 @@ function buildDisplayName(
   equipped: EquippedItem | undefined,
   runeword: ReturnType<typeof detectRuneword>,
 ): string {
-  if (runeword) return runeword.name
+  if (runeword) return translateItemName(runeword.name)
   const gemNames: string[] = []
   if (equipped && base.socketTransforms) {
     for (const id of equipped.socketed) {
       if (id && base.socketTransforms[id]) {
         const gem = getGem(id)
-        if (gem) gemNames.push(gem.name)
+        if (gem) gemNames.push(translateItemName(gem.name))
       }
     }
   }
-  return gemNames.length > 0 ? `${base.name} (${gemNames.join(' + ')})` : base.name
+  const baseName = translateItemName(base.name)
+  return gemNames.length > 0 ? `${baseName}（${gemNames.join(' + ')}）` : baseName
 }
 
 function buildBaseStatRows(base: ItemBase): TooltipLine[] {
   const rows: TooltipLine[] = []
   if (base.defenseMin !== undefined && base.defenseMax !== undefined) {
-    rows.push({ kind: 'row', label: 'Defense', value: `${base.defenseMin}–${base.defenseMax}` })
+    rows.push({ kind: 'row', label: '防御', value: `${base.defenseMin}–${base.defenseMax}` })
   }
   if (base.damageMin !== undefined && base.damageMax !== undefined) {
-    rows.push({ kind: 'row', label: 'Damage', value: `${base.damageMin}–${base.damageMax}` })
+    rows.push({ kind: 'row', label: '伤害', value: `${base.damageMin}–${base.damageMax}` })
   }
   if (base.blockChance !== undefined) {
-    rows.push({ kind: 'row', label: 'Block', value: `${base.blockChance}%` })
+    rows.push({ kind: 'row', label: '格挡', value: `${base.blockChance}%` })
   }
   if (base.attackSpeed !== undefined) {
-    rows.push({ kind: 'row', label: 'Attacks / sec', value: `${base.attackSpeed}` })
+    rows.push({ kind: 'row', label: '每秒攻击次数', value: `${base.attackSpeed}` })
   }
   return rows
 }
@@ -547,9 +560,9 @@ function buildAffixLine(
   range: AffixValueOutput | null,
 ): TooltipLine {
   if (!affix.statKey) {
-    return textLine(affix.description, isUnholy ? 'unholy-missing' : 'affix-missing')
+    return textLine(translateItemEffect(affix.description), isUnholy ? 'unholy-missing' : 'affix-missing')
   }
-  const descNoValue = affix.description
+  const descNoValue = translateItemEffect(affix.description)
     .replace(/^[+-]?\[?[^\]]*]?%?\s*/, '')
     .replace(/\s+/g, ' ')
     .trim()
@@ -570,8 +583,8 @@ function buildFooter(
 ): string | undefined {
   const requiresLevel = runeword?.requiresLevel ?? base.requiresLevel
   const footerBits: string[] = []
-  if (requiresLevel !== undefined) footerBits.push(`Req Level ${requiresLevel}`)
-  if (base.itemLevel) footerBits.push(`iLvl ${base.itemLevel}`)
-  if (base.grade) footerBits.push(`Tier ${base.grade}`)
+  if (requiresLevel !== undefined) footerBits.push(`需求等级 ${requiresLevel}`)
+  if (base.itemLevel) footerBits.push(`物品等级 ${base.itemLevel}`)
+  if (base.grade) footerBits.push(`阶级 ${base.grade}`)
   return footerBits.length > 0 ? footerBits.join(' · ') : undefined
 }

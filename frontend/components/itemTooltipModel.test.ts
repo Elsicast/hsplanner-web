@@ -13,6 +13,12 @@ import {
 } from '@data'
 import { formatValue, statName } from '../utils/item/stats'
 import { collectSocketGroups } from '../utils/item/socketStats'
+import {
+  translateItemEffect,
+  translateItemName,
+  translateSlotName,
+} from '../utils/item/itemText'
+import { displayStatName } from '../utils/item/itemStatText'
 import type { EquippedItem } from '../types'
 
 function eq(baseId: string, over: Partial<EquippedItem> = {}): EquippedItem {
@@ -43,8 +49,8 @@ describe('buildItemTooltipModel', () => {
     const model = buildItemTooltipModel(base, eq(base.id), deps())
     expect(model.sections[0].header).toBeUndefined()
     expect(model.sections[0].lines).toEqual([
-      { kind: 'row', label: 'Damage', value: `${base.damageMin}–${base.damageMax}` },
-      { kind: 'row', label: 'Attacks / sec', value: `${base.attackSpeed}` },
+      { kind: 'row', label: '伤害', value: `${base.damageMin}–${base.damageMax}` },
+      { kind: 'row', label: '每秒攻击次数', value: `${base.attackSpeed}` },
     ])
   })
 
@@ -57,12 +63,12 @@ describe('buildItemTooltipModel', () => {
       eq(base.id, { implicitOverrides: { movement_speed: 77 } }),
       deps(),
     )
-    const impl = model.sections.find((s) => s.header?.text === 'Implicit')
+    const impl = model.sections.find((s) => s.header?.text === '固有属性')
     if (!impl) throw new Error('implicit section missing')
-    expect(impl.header).toEqual({ text: 'Implicit', tone: 'gold' })
+    expect(impl.header).toEqual({ text: '固有属性', tone: 'gold' })
     expect(impl.lines).toContainEqual({
       kind: 'text',
-      text: `${formatValue(77, 'movement_speed')} ${statName('movement_speed')}`,
+      text: `${formatValue(77, 'movement_speed')} ${displayStatName('movement_speed')}`,
       style: 'implicit',
       badge: 'custom',
     })
@@ -87,13 +93,13 @@ describe('buildItemTooltipModel', () => {
     if (!standard) throw new Error('standard affix section missing')
     const stdLine = standard.lines.find((l) => l.kind === 'text' && l.style === 'affix')
     expect(stdLine).toMatchObject({ kind: 'text', style: 'affix', badge: 'custom' })
-    expect(stdLine && stdLine.kind === 'text' && stdLine.text).toMatch(/^\+99 .*Life$/)
-    const unholy = model.sections.find((s) => s.header?.text === 'Unholy Affixes')
+    expect(stdLine && stdLine.kind === 'text' && stdLine.text).toMatch(/^\+99 .*生命$/)
+    const unholy = model.sections.find((s) => s.header?.text === '邪秽词缀')
     if (!unholy) throw new Error('unholy affix section missing')
-    expect(unholy.header).toEqual({ text: 'Unholy Affixes', tone: 'pink' })
+    expect(unholy.header).toEqual({ text: '邪秽词缀', tone: 'pink' })
     const unLine = unholy.lines.find((l) => l.kind === 'text' && l.style === 'unholy')
     expect(unLine).toMatchObject({ kind: 'text', style: 'unholy', badge: 'custom' })
-    expect(unLine && unLine.kind === 'text' && unLine.text).toMatch(/^\+50 .*Strength$/)
+    expect(unLine && unLine.kind === 'text' && unLine.text).toMatch(/^\+50 .*力量$/)
   })
 
   it('builds granted skill entries with rank suffix, desc and computed lines', () => {
@@ -112,21 +118,23 @@ describe('buildItemTooltipModel', () => {
         },
       }),
     )
-    const section = model.sections.find((s) => s.header?.text === 'Granted Skill Effects')
+    const section = model.sections.find((s) => s.header?.text === '授予技能效果')
     if (!section) throw new Error('granted skill section missing')
-    expect(section.header).toEqual({ text: 'Granted Skill Effects', tone: 'orange' })
-    const entry = section.lines.find((l) => l.kind === 'entry' && l.title === 'Holy Aura')
+    expect(section.header).toEqual({ text: '授予技能效果', tone: 'orange' })
+    const entry = section.lines.find(
+      (l) => l.kind === 'entry' && l.title === translateItemName('Holy Aura'),
+    )
     if (!entry || entry.kind !== 'entry') throw new Error('Holy Aura entry missing')
     expect(entry).toMatchObject({
       kind: 'entry',
-      title: 'Holy Aura',
-      suffix: 'rank 3',
-      desc: skill.description,
+      title: translateItemName('Holy Aura'),
+      suffix: '等级 3',
+      desc: translateItemEffect(skill.description),
     })
     expect(entry.lines).toEqual([
       `${formatValue(6, 'attack_damage')} ${statName('attack_damage')}`,
       `${formatValue(7.5, 'magic_skill_damage')} ${statName('magic_skill_damage')}`,
-    ])
+    ].map(translateItemEffect))
   })
 
   it('adds the flat base to conversion lines (Radiant Power on the Mantle)', () => {
@@ -143,13 +151,15 @@ describe('buildItemTooltipModel', () => {
         },
       }),
     )
-    const section = model.sections.find((s) => s.header?.text === 'Granted Skill Effects')
-    const entry = section?.lines.find((l) => l.kind === 'entry' && l.title === 'Radiant Power')
+    const section = model.sections.find((s) => s.header?.text === '授予技能效果')
+    const entry = section?.lines.find(
+      (l) => l.kind === 'entry' && l.title === translateItemName('Radiant Power'),
+    )
     if (!entry || entry.kind !== 'entry') throw new Error('Radiant Power entry missing')
-    expect(entry.suffix).toBe('rank 5-15')
+    expect(entry.suffix).toBe('等级 5-15')
     expect(entry.lines).toEqual([
       `0.95–1.45% of ${statName('mana')} added as ${statName('magic_skill_damage')}`,
-    ])
+    ].map(translateItemEffect))
   })
 
   it('uses runeword name, rare tone and runeword stat lines when detected', () => {
@@ -167,9 +177,9 @@ describe('buildItemTooltipModel', () => {
       }),
       deps(),
     )
-    expect(model.name).toBe(rw.name)
+    expect(model.name).toBe(translateItemName(rw.name))
     expect(model.tone).toBe('rare')
-    expect(model.typeLine.startsWith('Runeword · ')).toBe(true)
+    expect(model.typeLine.startsWith('符文之语 · ')).toBe(true)
     const section = model.sections.find((s) =>
       s.lines.some((l) => l.kind === 'text' && l.style === 'runeword'),
     )
@@ -177,7 +187,7 @@ describe('buildItemTooltipModel', () => {
     for (const [k, v] of Object.entries(rw.stats)) {
       expect(section.lines).toContainEqual({
         kind: 'text',
-        text: `${formatValue(v as number, k)} ${statName(k)}`,
+        text: `${formatValue(v as number, k)} ${displayStatName(k)}`,
         style: 'runeword',
       })
     }
@@ -193,15 +203,15 @@ describe('buildItemTooltipModel', () => {
       eq(base.id, { forgedMods: [{ affixId: mod.id, tier: 1, roll: 1 }] }),
       deps(),
     )
-    const section = model.sections.find((s) => s.header?.text?.startsWith('Forged · '))
+    const section = model.sections.find((s) => s.header?.text?.startsWith('锻造 · '))
     if (!section) throw new Error('forged section missing')
     expect(section.header).toEqual({
-      text: `Forged · ${FORGE_KIND_LABEL.satanic_crystal}`,
+      text: `锻造 · ${translateItemName(FORGE_KIND_LABEL.satanic_crystal)}`,
       tone: 'red',
     })
     expect(section.lines).toContainEqual({
       kind: 'text',
-      text: mod.description,
+      text: translateItemEffect(mod.description),
       style: 'forged',
     })
   })
@@ -226,40 +236,42 @@ describe('buildItemTooltipModel', () => {
       equipped,
       deps({ inventory: { a: member, b: member, c: member } }),
     )
-    const sockets = active.sections.find((s) => s.header?.text === 'From Sockets')
+    const sockets = active.sections.find((s) => s.header?.text === '镶嵌属性')
     if (!sockets) throw new Error('From Sockets section missing')
-    expect(sockets.header).toEqual({ text: 'From Sockets', tone: 'gold' })
+    expect(sockets.header).toEqual({ text: '镶嵌属性', tone: 'gold' })
     expect(sockets.lines).toEqual(
       collectSocketGroups(equipped, base).map((group) => ({
         kind: 'entry',
         style: 'socket',
-        title: group.name,
+        title: translateItemName(group.name),
         icon: group.name,
         lines: group.stats.map(
-          ([k, v]) => `${formatValue(v, k)} ${statName(k)}`,
+          ([k, v]) => `${formatValue(v, k)} ${displayStatName(k)}`,
         ),
       })),
     )
-    const setActive = active.sections.find((s) => s.header?.text === set.name)
+    const setActive = active.sections.find(
+      (s) => s.header?.text === translateItemName(set.name),
+    )
     if (!setActive) throw new Error('set section (active) missing')
     expect(setActive.header).toEqual({
-      text: set.name,
+      text: translateItemName(set.name),
       tone: 'green',
-      trailing: `3/${set.items.length} pieces`,
+      trailing: `3/${set.items.length} 件`,
     })
     expect(setActive.lines).toContainEqual({
       kind: 'entry',
-      title: `${bonus.pieces}-Set (active)`,
+      title: `${bonus.pieces} 件套（已激活）`,
       style: 'set-active',
-      lines: bonus.descriptions ?? [],
+      lines: (bonus.descriptions ?? []).map(translateItemEffect),
     })
     expect(setActive.lines.at(-1)).toEqual({
       kind: 'entry',
-      title: 'Set items',
+      title: '套装物品',
       style: 'set-items',
       lines: set.items.map(
         (piece) =>
-          `${piece.itemId === base.id ? '✓' : '·'} ${piece.name} (${piece.slot})`,
+          `${piece.itemId === base.id ? '✓' : '·'} ${translateItemName(piece.name)}（${translateSlotName(piece.slot)}）`,
       ),
     })
 
@@ -268,20 +280,22 @@ describe('buildItemTooltipModel', () => {
       equipped,
       deps({ inventory: { a: member, b: member } }),
     )
-    const setInactive = inactive.sections.find((s) => s.header?.text === set.name)
+    const setInactive = inactive.sections.find(
+      (s) => s.header?.text === translateItemName(set.name),
+    )
     if (!setInactive) throw new Error('set section (inactive) missing')
     expect(setInactive.header).toEqual({
-      text: set.name,
+      text: translateItemName(set.name),
       tone: 'green',
-      trailing: `2/${set.items.length} pieces`,
+      trailing: `2/${set.items.length} 件`,
     })
     const locked = set.bonuses.find((b) => b.pieces > 2)
     if (!locked) throw new Error('set has no bonus above 2 pieces')
     expect(setInactive.lines).toContainEqual({
       kind: 'entry',
-      title: `${locked.pieces}-Set`,
+      title: `${locked.pieces} 件套`,
       style: 'set-inactive',
-      lines: locked.descriptions ?? [],
+      lines: (locked.descriptions ?? []).map(translateItemEffect),
     })
   })
 
@@ -302,28 +316,30 @@ describe('buildItemTooltipModel', () => {
     if (!procSec) throw new Error('proc section missing')
     const procLine = procSec.lines.find((l) => l.kind === 'entry' && l.style === 'proc')
     if (!procLine || procLine.kind !== 'entry') throw new Error('proc entry missing')
-    expect(procLine.title).toContain(proc0.description)
+    expect(procLine.title).toContain(translateItemEffect(proc0.description))
     expect(procLine.title).toContain(`${proc0.chance}%`)
-    expect(procLine.desc).toBe(proc0.details)
+    expect(procLine.desc).toBe(
+      proc0.details ? translateItemEffect(proc0.details) : undefined,
+    )
 
-    const special = model.sections.find((s) => s.header?.text === 'Special Effects')
+    const special = model.sections.find((s) => s.header?.text === '特殊效果')
     if (!special) throw new Error('special effects section missing')
-    expect(special.header).toEqual({ text: 'Special Effects', tone: 'gold' })
+    expect(special.header).toEqual({ text: '特殊效果', tone: 'gold' })
     expect(special.lines).toContainEqual({
       kind: 'text',
-      text: 'Attacks can hit multiple enemies',
+      text: translateItemEffect('Attacks can hit multiple enemies'),
       style: 'special',
     })
 
-    const notSup = model.sections.find((s) => s.header?.text === 'Not Yet Supported')
+    const notSup = model.sections.find((s) => s.header?.text === '暂未支持')
     if (!notSup) throw new Error('not-yet-supported section missing')
-    expect(notSup.header).toEqual({ text: 'Not Yet Supported', tone: 'muted' })
+    expect(notSup.header).toEqual({ text: '暂未支持', tone: 'muted' })
     expect(notSup.lines).toContainEqual({
       kind: 'text',
-      text: 'Some Unsupported Mod',
+      text: translateItemEffect('Some Unsupported Mod'),
       style: 'unsupported',
     })
-    expect(notSup.footnote).toBe('These mods are not yet calculated by the planner.')
+    expect(notSup.footnote).toBe('这些词缀尚未计入规划器计算。')
   })
 
   it('renders the Angelic Augment section with the stats of the selected level', () => {
@@ -339,18 +355,18 @@ describe('buildItemTooltipModel', () => {
       deps(),
     )
     const section = model.sections.find(
-      (s) => s.header?.text === 'Angelic Augment',
+      (s) => s.header?.text === '天使增幅',
     )
     if (!section) throw new Error('augment section missing')
     expect(section.lines).toEqual([
       {
         kind: 'entry',
-        title: augment.name,
+        title: translateItemName(augment.name),
         icon: augment.id,
-        suffix: `level ${level}`,
-        desc: augment.description,
+        suffix: `等级 ${level}`,
+        desc: translateItemEffect(augment.description),
         lines: Object.entries(tier.stats).map(
-          ([k, v]) => `${formatValue(v as number, k)} ${statName(k)}`,
+          ([k, v]) => `${formatValue(v as number, k)} ${displayStatName(k)}`,
         ),
       },
     ])
@@ -364,7 +380,7 @@ describe('buildItemTooltipModel', () => {
     const base = { ...boots, itemLevel: 60 }
     const model = buildItemTooltipModel(base, eq(base.id), deps())
     expect(model.footer).toBe(
-      `Req Level ${boots.requiresLevel} · iLvl 60 · Tier ${boots.grade}`,
+      `需求等级 ${boots.requiresLevel} · 物品等级 60 · 阶级 ${boots.grade}`,
     )
   })
 })
