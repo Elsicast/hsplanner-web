@@ -25,6 +25,9 @@ const EXACT_TRANSLATIONS: Record<string, string> = {
 }
 
 const PHRASE_TRANSLATIONS: Array<[string, string]> = [
+  ['Random Skill (not rolled)', '随机技能（未随机）'],
+  ['Random Skill', '随机技能'],
+  ['added as', '新增为'],
   ['Critical Strike Chance', '暴击概率'],
   ['fire an additional projectile when performing a ranged attack', '进行远程攻击时发射一个额外投射物'],
   ['when performing a ranged attack', '进行远程攻击时'],
@@ -225,7 +228,7 @@ const WORD_TRANSLATIONS: Record<string, string> = {
   crowd: '群体', control: '控制', diminish: '衰减', cull: '斩杀', weak: '弱者', dagger: '匕首', defense: '防御', defensive: '防御型',
   battlemage: '战斗法师', fighter: '斗士', deflecting: '偏转', aegis: '神盾', delayed: '延迟', gratification: '满足', desert: '沙漠', ripple: '涟漪',
   divine: '神圣', essence: '精华', dodge: '闪避', master: '大师', double: '双重', cast: '施法', jump: '跳跃', duration: '持续时间',
-  echoing: '回响', failure: '失败', failior: '失败', effective: '有效', suppression: '压制', elemental: '元素', energetic: '能量充沛', enlarged: '增大',
+  echoing: '回响', emmit: '释放', failure: '失败', failior: '失败', effective: '有效', suppression: '压制', elemental: '元素', energetic: '能量充沛', enlarged: '增大',
   storm: '风暴', ether: '以太', pull: '牵引', evading: '闪避', force: '力量', evasion: '闪避', tactics: '战术', explosive: '爆炸', expertise: '专精',
   extra: '额外', projectile: '投射物', faster: '更快', wands: '魔杖', feast: '盛宴', elements: '元素', festering: '溃烂', fire: '火焰',
   first: '第一', aid: '援助', flask: '药剂', regeneration: '恢复', flying: '飞散', debris: '碎片', forking: '分叉', fragile: '脆弱', berserker: '狂战士',
@@ -286,7 +289,7 @@ const EXTRA_WORD_TRANSLATIONS: Record<string, string> = {
   damaging: '伤害型', dark: '黑暗', deal: '造成', death: '死亡', does: '会', duality: '双重性', enables: '启用', evade: '闪避',
   every: '每', far: '远处', fired: '发射', flasks: '药剂', fork: '分叉', fragment: '碎片', gain: '获得', handed: '手', healed: '治疗',
   hitting: '命中', ignored: '无视', immunity: '免疫', increases: '提高', inflicted: '施加', knock: '击退', leap: '跃击', leeching: '吸取',
-  level: '等级', low: '低', maces: '锤', manacost: '法力消耗', manafueled: '法力驱动', manafunnel: '法力灌注', manainfused: '法力灌注',
+  level: '等级', large: '大型', low: '低', maces: '锤', manacost: '法力消耗', manafueled: '法力驱动', manafunnel: '法力灌注', manainfused: '法力灌注',
   mitigated: '减免', monster: '怪物', negative: '负值', offense: '进攻', overflowing: '溢出', ranged: '远程', rate: '速率',
   reaching: '延伸', replenished: '恢复', return: '反伤', seconds: '秒', sentries: '哨戒', shattered: '击破', shatters: '击破',
   shockwave: '冲击波', short: '短距', skills: '技能', spellhit: '法术命中', spells: '法术', staff: '法杖', stolen: '偷取', stun: '眩晕',
@@ -302,7 +305,7 @@ const EXTRA_WORD_TRANSLATIONS: Record<string, string> = {
   inflict: '施加', inherited: '继承', instant: '立即', instead: '改为', into: '进入', jumping: '跳跃', knocking: '击退', leave: '留下',
   less: '较少', longer: '更久', lowered: '降低', mid: '半', missiles: '飞弹', multiple: '多个', nearby: '附近', non: '非',
   odin: '奥丁', one: '一次', only: '仅', other: '其他', outwards: '向外', perform: '执行', performed: '执行', performing: '进行',
-  point: '点', points: '点', poisonous: '剧毒', proc: '触发', provides: '提供', reaking: '肆虐', recover: '恢复', regenerated: '恢复',
+  point: '点', points: '点', portion: '一部分', poisonous: '剧毒', proc: '触发', provides: '提供', reaking: '肆虐', recover: '恢复', regenerated: '恢复',
   removed: '移除', replenish: '恢复', restrictions: '限制', same: '相同', scaling: '加成', single: '单次', slain: '被击杀', sources: '来源',
   spawn: '生成', spikes: '尖刺', splash: '溅射', stack: '层', stunning: '眩晕', summoning: '召唤时', summons: '召唤物', suppress: '压制',
   suppressing: '压制时', take: '承受', taken: '受到', taking: '承受', target: '目标', terrain: '地形', through: '穿过', tick: '每跳',
