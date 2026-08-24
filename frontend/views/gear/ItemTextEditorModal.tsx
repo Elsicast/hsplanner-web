@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import type { EquippedItem, ItemBase } from '../../types'
 import {
+  customImplicitLine,
+  insertImplicitLine,
   parseItemText,
   serializeEquippedItem,
   type ParseError,
@@ -8,6 +10,7 @@ import {
 } from '../../utils/item/itemTextFormat'
 import { Modal } from '../../components/ui/Modal'
 import { translateItemName } from '../../utils/item/itemText'
+import { CustomAffixList, type StatRow } from './CustomAffixList'
 
 interface Props {
   slotName: string
@@ -30,6 +33,7 @@ export default function ItemTextEditorModal({
     errors: [],
   })
   const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const pendingSelection = useRef<[number, number] | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -58,6 +62,21 @@ export default function ItemTextEditorModal({
   useEffect(() => {
     textareaRef.current?.focus()
   }, [])
+
+  useLayoutEffect(() => {
+    const sel = pendingSelection.current
+    if (!sel) return
+    pendingSelection.current = null
+    textareaRef.current?.focus()
+    textareaRef.current?.setSelectionRange(sel[0], sel[1])
+  }, [text])
+
+  function handlePickStat(stat: StatRow) {
+    const next = insertImplicitLine(text ?? '', customImplicitLine(stat))
+    // select the placeholder "1" so typing replaces it
+    pendingSelection.current = [next.offset + 1, next.offset + 2]
+    setText(next.text)
+  }
 
   const errorCount = result.errors.filter((e) => e.severity === 'error').length
   const warnCount = result.errors.filter((e) => e.severity === 'warning').length
@@ -122,7 +141,7 @@ export default function ItemTextEditorModal({
                 <span className="ml-auto text-accent-hot">全部通过</span>
               )}
             </div>
-            <div className="min-h-0 flex-1 overflow-y-auto px-3 py-3 space-y-2">
+            <div className="max-h-[40%] shrink-0 overflow-y-auto px-3 py-3 space-y-2">
               {result.errors.length === 0 ? (
                 <div className="rounded-[3px] border border-border-2 bg-panel-2/60 px-3 py-3 font-mono text-[11px] text-muted">
                   全部通过 · 保存后更改将应用到该槽位。
@@ -133,6 +152,7 @@ export default function ItemTextEditorModal({
                 ))
               )}
             </div>
+            <CustomAffixList onPick={handlePickStat} />
           </div>
         </div>
 
