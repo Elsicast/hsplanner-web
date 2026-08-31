@@ -5,6 +5,7 @@
     "name": "Sand Guardians",
     "kind": "active",
     "description": "Conjure a Sand Guardian that attacks nearby monsters dealing arcane damage.",
+    "zh": { "name": "流沙守卫", "description": "召唤一名攻击附近怪物的流沙守卫，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Guardian", "Summon"],
     "movementDuringUse": 65,
@@ -29,6 +30,7 @@
         "positionIndex": 0,
         "name": "Sand Guardians",
         "description": "Core of the Sand Guardians subtree.",
+        "zh": { "name": "流沙守卫", "description": "流沙守卫 子树核心。" },
         "maxRank": 1
       },
       {
@@ -36,6 +38,7 @@
         "positionIndex": 1,
         "name": "Hardened Sandstone",
         "description": "Increases the damage dealt by sand guardians.",
+        "zh": { "name": "Hardened Sandstone", "description": "提高造成的伤害流沙守卫。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -47,6 +50,7 @@
         "positionIndex": 2,
         "name": "Durable Sand",
         "description": "Increases the duration of sand guardians.",
+        "zh": { "name": "Durable 沙之", "description": "提高 流沙守卫 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -58,6 +62,7 @@
         "positionIndex": 3,
         "name": "Deserts Gladiators",
         "description": "Chance to unleash an additional attack.",
+        "zh": { "name": "沙漠 Gladiators", "description": "概率释放额外攻击。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -73,6 +78,7 @@
         "positionIndex": 4,
         "name": "Sand Frenzy",
         "description": "Increases the attack speed of sand guardians.",
+        "zh": { "name": "沙之狂乱", "description": "提高 流沙守卫 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -84,6 +90,7 @@
         "positionIndex": 5,
         "name": "Battle IQ",
         "description": "Sand guardians periodically dash a short distance towards the closest monster if not in combat.",
+        "zh": { "name": "战斗 IQ", "description": "流沙守卫 periodically 突进短距距离朝向最近的怪物 if 战斗。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -95,6 +102,7 @@
         "positionIndex": 6,
         "name": "Reserve Army",
         "description": "Chance to summon an additional sand guardian on cast.",
+        "zh": { "name": "Reserve Army", "description": "概率召唤物额外沙之守卫施法时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -110,6 +118,7 @@
         "positionIndex": 7,
         "name": "Lunge Attack",
         "description": "Increases the attack range of sand guardians.",
+        "zh": { "name": "Lunge 攻击", "description": "提高 流沙守卫 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -121,6 +130,7 @@
         "positionIndex": 8,
         "name": "Dashing Sandstrike",
         "description": "Chance on attack to dash through the target monster dealing area of effect damage.",
+        "zh": { "name": "突进 Sandstrike", "description": "攻击时有概率突进穿过目标怪物造成范围伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -136,6 +146,7 @@
         "positionIndex": 9,
         "name": "Sand´s Edge",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "沙之的锋刃", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -147,6 +158,7 @@
         "positionIndex": 10,
         "name": "Deadly Guardians",
         "description": "Increases the size and damage dealt by sand guardians, decreasing the duration.",
+        "zh": { "name": "致命守卫", "description": "提高size 与造成的伤害流沙守卫，decreasing 持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": {
@@ -166,6 +178,7 @@
         "positionIndex": 11,
         "name": "Guardian Nevermore",
         "description": "Sand guardians now move around with you dealing increased damage.",
+        "zh": { "name": "守卫 Nevermore", "description": "流沙守卫 move 周围使用你造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "movement_speed": 0 },
@@ -177,6 +190,7 @@
         "positionIndex": 12,
         "name": "Sand Mages",
         "description": "Summon sand mages zapping monsters from afar with arcane surges.",
+        "zh": { "name": "沙之法师", "description": "召唤物沙之法师 zapping 怪物从 afar 使用奥术涌动。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_range": 0 },
@@ -188,6 +202,7 @@
         "positionIndex": 13,
         "name": "Sacrifice for the Throne",
         "description": "Sand guardians immediately seek the nearest monster, charging towards it, exploding, and dealing increased damage, inflicting arcane break on hit.",
+        "zh": { "name": "Sacrifice Throne", "description": "流沙守卫 immediately 搜寻最近的怪物，冲锋朝向，exploding，与造成提高伤害，施加奥术击破命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "arcane_break": 0 },
@@ -206,6 +221,7 @@
         "positionIndex": 14,
         "name": "Guardians of the Orbital Sand",
         "description": "Sand guardians now orbit around you, striking nearby monsters. Sand guardians now have a cooldown.",
+        "zh": { "name": "守卫之环绕沙之", "description": "流沙守卫轨道周围你，打击附近怪物。流沙守卫有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -226,6 +242,7 @@
     "name": "Call For War",
     "kind": "active",
     "description": "Command all Sand Guardians to charge to target area. Passively increases Sand Guardian dash range.",
+    "zh": { "name": "号令开战", "description": "命令所有流沙守卫冲锋至目标区域。被动提高流沙守卫的冲锋范围。" },
     "tags": ["Cast", "Active", "Spell"],
     "range": 360,
     "maxRank": 20,
@@ -245,6 +262,7 @@
     "name": "Piercing Sand",
     "kind": "passive",
     "description": "Sand Guardians break monster arcane resistances on attack.",
+    "zh": { "name": "蚀沙穿甲", "description": "流沙守卫攻击时会击破怪物的奥术抗性。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -262,6 +280,7 @@
     "name": "Link of Sand",
     "kind": "active",
     "description": "Pull yourself into the closest Sand Guardian in the target location temporarily empowering all nearby Sand Guardians arcane damage.",
+    "zh": { "name": "流沙联结", "description": "将自己拉入目标位置最近的流沙守卫，临时强化附近所有流沙守卫的奥术伤害。" },
     "tags": ["Cast", "Active", "Spell"],
     "baseCastRate": 1,
     "effectDuration": 8,
@@ -282,6 +301,7 @@
     "name": "Circle of Guardians",
     "kind": "active",
     "description": "Conjure a circle of Sand Guardians around you increasing Sand Guardians' arcane damage.",
+    "zh": { "name": "守卫之环", "description": "在你周围召唤一圈流沙守卫，提高流沙守卫的奥术伤害。" },
     "tags": ["Cast", "Active", "Spell", "Guardian", "Summon"],
     "baseCastRate": 1,
     "effectDuration": 10,
@@ -301,6 +321,7 @@
         "positionIndex": 0,
         "name": "Circle of Guardians",
         "description": "Core of the Circle of Guardians subtree.",
+        "zh": { "name": "守卫之环", "description": "守卫之环 子树核心。" },
         "maxRank": 1
       },
       {
@@ -308,6 +329,7 @@
         "positionIndex": 1,
         "name": "Rapid Deployment",
         "description": "Decreases the cooldown of circle of guardians.",
+        "zh": { "name": "迅捷 Deployment", "description": "降低cooldown 之守卫之环。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -319,6 +341,7 @@
         "positionIndex": 2,
         "name": "Peer Pressure",
         "description": "Increases the damage dealt by circle of guardians.",
+        "zh": { "name": "Peer 压迫", "description": "提高 guardians 的造成的伤害圆环。" },
         "maxRank": 5,
         "effects": {
           "base": { "magic_skill_damage": 0 },
@@ -330,6 +353,7 @@
         "positionIndex": 3,
         "name": "Battalion of Guardians",
         "description": "Increases the amount of sand guardians summoned.",
+        "zh": { "name": "Battalion 之守卫", "description": "提高 流沙守卫 summoned 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_max_amount": 2 },
@@ -341,6 +365,7 @@
         "positionIndex": 4,
         "name": "Devastating Lunge",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "Devastating Lunge", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -353,6 +378,7 @@
         "positionIndex": 5,
         "name": "Lasting Sand Kingdom",
         "description": "Increases the duration of circle of guardians.",
+        "zh": { "name": "持续沙之 Kingdom", "description": "提高 守卫之环 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -364,6 +390,7 @@
         "positionIndex": 6,
         "name": "Well Trained Troops",
         "description": "Increases the attack speed of circle of guardians.",
+        "zh": { "name": "源泉 Trained Troops", "description": "提高 守卫之环 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -375,6 +402,7 @@
         "positionIndex": 7,
         "name": "Magic Infused Blade",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "魔法灌注利刃", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -393,6 +421,7 @@
         "positionIndex": 8,
         "name": "Far Reaching Spears",
         "description": "Increases the attack range of circle of guardians.",
+        "zh": { "name": "远处延伸长矛", "description": "提高 守卫之环 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -404,6 +433,7 @@
         "positionIndex": 9,
         "name": "Everflowing Sands",
         "description": "Sand guardians gain increased duration based on your energy.",
+        "zh": { "name": "Everflowing 沙之", "description": "流沙守卫获得提高持续时间基于你的能量。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -415,6 +445,7 @@
         "positionIndex": 10,
         "name": "Manipulation",
         "description": "Increases the damage dealt by circle of guardians but each active guardian drains your mana when attacking.",
+        "zh": { "name": "Manipulation", "description": "提高 guardians but each active guardian drains your mana when attacking 的造成的伤害圆环。" },
         "maxRank": 5,
         "effects": {
           "base": { "magic_skill_damage": 0, "mana_drain_pct": 0 },
@@ -426,6 +457,7 @@
         "positionIndex": 11,
         "name": "Desert´s Army",
         "description": "Summon a wall of guardians marching forward dealing increased damage, knocking monsters back on hit.",
+        "zh": { "name": "沙漠的 Army", "description": "召唤物墙之守卫 marching 前方造成提高伤害，击退怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -443,6 +475,7 @@
         "positionIndex": 12,
         "name": "Ancient Sand Goliath",
         "description": "Summon an ancient sand goliath with increased size and damage based on summon amount for a short duration.",
+        "zh": { "name": "远古沙之巨人", "description": "召唤物远古沙之巨人使用提高 size 与伤害基于召唤物数量短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_size": 0 },
@@ -454,6 +487,7 @@
         "positionIndex": 13,
         "name": "Arcanic Sand Tether",
         "description": "Create an arcanic sand tether between you and the circle of guardians dealing damage over time to monsters on hit.",
+        "zh": { "name": "Arcanic 沙之 Tether", "description": "Create arcanic 沙之 tether between 你与守卫之环造成伤害随时间至怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "magic_skill_damage": 0, "summon_attack_speed": 0 },
@@ -465,6 +499,7 @@
         "positionIndex": 14,
         "name": "Seven Nation Army",
         "description": "Increases the amount and damage of circle of guardians.",
+        "zh": { "name": "Seven Nation Army", "description": "提高 守卫之环 的数量与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -485,6 +520,7 @@
     "name": "Dissipation",
     "kind": "passive",
     "description": "Sand Guardians explode upon expiration dealing area of effect arcane damage.",
+    "zh": { "name": "消散爆裂", "description": "流沙守卫到期时会爆炸，造成范围奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Passive", "Explosion"],
     "maxRank": 20,
@@ -506,6 +542,7 @@
     "name": "Cheapshot",
     "kind": "passive",
     "description": "Sand Guardians gain a chance to deal a deadly attack with increased arcane damage and stunning their target.",
+    "zh": { "name": "卑鄙偷袭", "description": "流沙守卫有概率发动致命偷袭，造成提高的奥术伤害并眩晕目标。" },
     "tags": ["Passive", "Area of Effect"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -523,6 +560,7 @@
     "name": "Spirit Link",
     "kind": "passive",
     "description": "Link of Sand increases your magic skill damage and physical damage reduction for a short period.",
+    "zh": { "name": "灵魂联结", "description": "流沙联结会在短时间内提高你的魔法技能伤害和物理伤害减免。" },
     "tags": ["Passive"],
     "effectDuration": 8,
     "maxRank": 20,
@@ -541,6 +579,7 @@
     "name": "Combat Order",
     "kind": "passive",
     "description": "Sand Guardians gain a chance to perform an area of effect attack dealing arcane damage.",
+    "zh": { "name": "战斗号令", "description": "流沙守卫有概率进行范围攻击，造成奥术伤害。" },
     "tags": ["Passive", "Area of Effect"],
     "maxRank": 20,
     "requiresLevel": 30,
@@ -558,6 +597,7 @@
     "name": "Age Proliferation",
     "kind": "active",
     "description": "Channel waves of fractal energy on the target monster sending pulses out dealing arcane damage to nearby monsters.",
+    "zh": { "name": "岁月增殖", "description": "对目标怪物引导分形能量之波，向外发出脉冲，对附近怪物造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "baseCastRate": 1,
@@ -582,6 +622,7 @@
         "positionIndex": 0,
         "name": "Age Proliferation",
         "description": "Core of the Age Proliferation subtree.",
+        "zh": { "name": "岁月增殖", "description": "岁月增殖 子树核心。" },
         "maxRank": 1
       },
       {
@@ -589,6 +630,7 @@
         "positionIndex": 1,
         "name": "Ancient Magic",
         "description": "Increases the damage dealt by age proliferation.",
+        "zh": { "name": "远古魔法", "description": "提高造成的伤害岁月增殖。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -600,6 +642,7 @@
         "positionIndex": 2,
         "name": "Eons Ago",
         "description": "Increases the duration of age proliferation.",
+        "zh": { "name": "Eons Ago", "description": "提高 岁月增殖 的持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -611,6 +654,7 @@
         "positionIndex": 3,
         "name": "Bridge Between Reality",
         "description": "Increases the range of age proliferation.",
+        "zh": { "name": "Bridge Between Reality", "description": "提高 岁月增殖 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_range": 0 },
@@ -622,6 +666,7 @@
         "positionIndex": 4,
         "name": "Restoring Proliferation",
         "description": "Chance to restore a portion of your maximum mana on hit.",
+        "zh": { "name": "恢复增殖", "description": "命中时有概率restore 一部分你的最大法力。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -637,6 +682,7 @@
         "positionIndex": 5,
         "name": "Breaking The Cycle",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "击破 Cycle", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -655,6 +701,7 @@
         "positionIndex": 6,
         "name": "Effortless Path",
         "description": "Decreases movement diminish with age proliferation.",
+        "zh": { "name": "Effortless 路径", "description": "降低移动衰减使用岁月增殖。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -666,6 +713,7 @@
         "positionIndex": 7,
         "name": "Additional Faith",
         "description": "Chance on cast to unleash an additional beam on a nearby monster.",
+        "zh": { "name": "额外 Faith", "description": "施法时有概率释放额外光束附近怪物。" },
         "maxRank": 2,
         "proc": {
           "trigger": "on_cast",
@@ -677,6 +725,7 @@
         "positionIndex": 8,
         "name": "Rapid Aging",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "迅捷 Aging", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -688,6 +737,7 @@
         "positionIndex": 9,
         "name": "Burning Aging",
         "description": "Chance to inflict shadow burning on hit.",
+        "zh": { "name": "燃烧 Aging", "description": "命中时有概率施加暗影燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_shadow_burning_damage": 0 },
@@ -707,6 +757,7 @@
         "positionIndex": 10,
         "name": "Centuries Within Seconds",
         "description": "Increases the tick frequency of age proliferation.",
+        "zh": { "name": "Centuries 之内秒", "description": "提高 岁月增殖 的每跳 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0, "arcane_skill_damage": 0 },
@@ -718,6 +769,7 @@
         "positionIndex": 11,
         "name": "Growing Old",
         "description": "Age proliferation grows in size and deals increased damage with every pulse.",
+        "zh": { "name": "Growing Old", "description": "岁月增殖 grows size 与造成提高伤害使用每脉冲。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -729,6 +781,7 @@
         "positionIndex": 12,
         "name": "Age Multiliferation",
         "description": "Unleash age proliferation at multiple nearby monsters splitting the damage between beams.",
+        "zh": { "name": "岁月 Multiliferation", "description": "释放岁月增殖多个附近怪物分裂伤害 between 光束。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "max_targets": 0 },
@@ -740,6 +793,7 @@
         "positionIndex": 13,
         "name": "Arcane Echo",
         "description": "Summon an arcane echo of your self casting age proliferation at nearby targets. Age proliferation now has a cooldown.",
+        "zh": { "name": "奥术回响", "description": "召唤物奥术回响你的自我施法岁月增殖附近目标。岁月增殖有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "faster_cast_rate": 0 },
@@ -751,6 +805,7 @@
         "positionIndex": 14,
         "name": "Scorching Magic",
         "description": "Age proliferation now unleashes scorching fire balls towards monsters on hit inflicting burning and slowing them.",
+        "zh": { "name": "灼热魔法", "description": "岁月增殖释放灼热火焰球朝向怪物命中时施加燃烧与减速它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -777,6 +832,7 @@
     "name": "Gravitation Slam",
     "kind": "active",
     "description": "Raise monsters in target location into the air smashing them down with quantum force dealing arcane damage.",
+    "zh": { "name": "引力重砸", "description": "将目标位置的怪物举到空中，再以量子之力砸下，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "baseCastRate": 1,
@@ -800,6 +856,7 @@
         "positionIndex": 0,
         "name": "Gravitation Slam",
         "description": "Core of the Gravitation Slam subtree.",
+        "zh": { "name": "引力重砸", "description": "引力重砸 子树核心。" },
         "maxRank": 1
       },
       {
@@ -807,6 +864,7 @@
         "positionIndex": 1,
         "name": "Earth´s Pull",
         "description": "Increases the damage dealt by gravitation slam.",
+        "zh": { "name": "大地的牵引", "description": "提高造成的伤害引力重砸。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -818,6 +876,7 @@
         "positionIndex": 2,
         "name": "Astral Chaos",
         "description": "Gravitation slam executes monsters below a threshold.",
+        "zh": { "name": "星界混沌", "description": "引力重砸处决怪物低于阈值。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -829,6 +888,7 @@
         "positionIndex": 3,
         "name": "Shaken With Magic",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Shaken 使用魔法", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 2,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -847,6 +907,7 @@
         "positionIndex": 4,
         "name": "Gravity at Will",
         "description": "Increases cast rate when using gravitation slam.",
+        "zh": { "name": "Gravity Will", "description": "提高施法速度使用引力重砸。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -858,6 +919,7 @@
         "positionIndex": 5,
         "name": "Floating Range",
         "description": "Increases the area of effect radius of gravitation slam.",
+        "zh": { "name": "漂浮范围", "description": "提高 effect radius of 引力重砸 的范围。" },
         "maxRank": 8,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -869,6 +931,7 @@
         "positionIndex": 6,
         "name": "Self-help",
         "description": "Chance to knock monsters into air on hit dealing increased damage.",
+        "zh": { "name": "自我-help", "description": "概率击退怪物进入空中命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -884,6 +947,7 @@
         "positionIndex": 7,
         "name": "Stunned by Force",
         "description": "Chance to stun targets on hit.",
+        "zh": { "name": "眩晕力量", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 2,
         "proc": {
           "trigger": "on_hit",
@@ -896,6 +960,7 @@
         "positionIndex": 8,
         "name": "Gravitational Radius",
         "description": "Increases the maximum cast range of gravitation slam.",
+        "zh": { "name": "Gravitational 半径", "description": "提高 引力重砸 的最大施法范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_range": 0 },
@@ -907,6 +972,7 @@
         "positionIndex": 9,
         "name": "Deep Slam",
         "description": "Chance to critically hit dealing increased damage equal to your arcane skill damage.",
+        "zh": { "name": "Deep 猛击", "description": "概率打出暴击造成提高伤害 equal 至你的奥术技能伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -918,6 +984,7 @@
         "positionIndex": 10,
         "name": "Force of Gravity",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "力量之 Gravity", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -929,6 +996,7 @@
         "positionIndex": 11,
         "name": "Void Slam",
         "description": "Increases the area of effect radius pulling monsters towards the center of mass on hit inflicting shadow burning. Gravitation slam now has a cooldown.",
+        "zh": { "name": "虚空猛击", "description": "提高 effect radius pulling monsters towards the center of mass on hit inflicting shadow burning. 引力重砸 now has a cooldown 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_shadow_burning_damage": 0, "area_of_effect": 0 },
@@ -950,6 +1018,7 @@
         "positionIndex": 12,
         "name": "Gravitation Wave",
         "description": "Unleash a shockwave of gravitation slams towards target direction with increased radius.",
+        "zh": { "name": "Gravitation 波", "description": "释放震荡波之 gravitation 猛击朝向目标方向使用提高半径。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -969,6 +1038,7 @@
         "positionIndex": 13,
         "name": "Dimensional Slam",
         "description": "Smash monsters into a black hole causing them to re-appear from an additional white hole knocked up dealing increased area of effect damage when landing.",
+        "zh": { "name": "Dimensional 猛击", "description": "猛击怪物进入黑洞使其 re-appear 从额外 white 洞被击飞造成提高范围伤害落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -980,6 +1050,7 @@
         "positionIndex": 14,
         "name": "Antigravity Slam",
         "description": "Knock monsters back from the center of impact with force unleashing homing void souls seeking nearby monsters.",
+        "zh": { "name": "Antigravity 猛击", "description": "击退怪物从 center 之冲击使用力量释放追踪虚空灵魂搜寻附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_speed": 0 },
@@ -994,6 +1065,7 @@
     "name": "Split Reality",
     "kind": "active",
     "description": "Detach from your quantum self leaving your fractal self behind that explodes when coming in contact with a monster dealing arcane damage.",
+    "zh": { "name": "分裂现实", "description": "与你的量子之身分离，留下分形之身，接触怪物时爆炸并造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "baseCastRate": 1,
@@ -1021,6 +1093,7 @@
     "name": "Time Deceleration",
     "kind": "active",
     "description": "Break time and space causing all nearby monsters to take arcane damage and Slowing them.",
+    "zh": { "name": "时间减速", "description": "打破时空，使附近所有怪物受到奥术伤害并被减速。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "baseCastRate": 1,
@@ -1049,6 +1122,7 @@
     "name": "Dimensional Displacement",
     "kind": "active",
     "description": "Warp a short distance towards target location temporarily gaining increased movement speed.",
+    "zh": { "name": "维度位移", "description": "向目标位置短距传送，临时获得提高的移动速度。" },
     "tags": ["Cast", "Active", "Movement", "Blink"],
     "baseCastRate": 1,
     "effectDuration": 2,
@@ -1069,6 +1143,7 @@
     "name": "Sands of Time",
     "kind": "active",
     "description": "Temporarily increase your arcane skill damage and cast rate.",
+    "zh": { "name": "时间之沙", "description": "临时提高你的奥术技能伤害和施法速度。" },
     "tags": ["Cast", "Active", "Buff"],
     "baseCastRate": 1,
     "baseCooldown": 70,
@@ -1090,6 +1165,7 @@
     "name": "Expansive Mind",
     "kind": "passive",
     "description": "Increases your mana and mana replenish.",
+    "zh": { "name": "无垠心智", "description": "提高你的法力和法力恢复。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -1107,6 +1183,7 @@
     "name": "Precognition",
     "kind": "passive",
     "description": "Increases your arcane skill damage.",
+    "zh": { "name": "预知", "description": "提高你的奥术技能伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -1124,6 +1201,7 @@
     "name": "Temporal Heroes",
     "kind": "active",
     "description": "Summon a fractal Viking, Pyromancer and Marksman to fight on your side.",
+    "zh": { "name": "时空英豪", "description": "召唤分形的维京人、火焰术士和神射手为你而战。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Summon"],
     "movementDuringUse": 85,
@@ -1149,6 +1227,7 @@
         "positionIndex": 0,
         "name": "Temporal Heroes",
         "description": "Core of the Temporal Heroes subtree.",
+        "zh": { "name": "时空英豪", "description": "时空英豪 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1156,6 +1235,7 @@
         "positionIndex": 1,
         "name": "Mirror Image",
         "description": "Increases the damage dealt by temporal heroes.",
+        "zh": { "name": "镜像 Image", "description": "提高造成的伤害时空英豪。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1167,6 +1247,7 @@
         "positionIndex": 2,
         "name": "Summon Carnage",
         "description": "Increases the attack speed of temporal heroes.",
+        "zh": { "name": "召唤物杀戮", "description": "提高 时空英豪 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -1178,6 +1259,7 @@
         "positionIndex": 3,
         "name": "Larger Than Life",
         "description": "Increases the life of temporal heroes.",
+        "zh": { "name": "更大 Than 生命", "description": "提高 时空英豪 的生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_life": 0 },
@@ -1189,6 +1271,7 @@
         "positionIndex": 4,
         "name": "Quantum Immortality",
         "description": "Increases the duration of temporal heroes.",
+        "zh": { "name": "Quantum Immortality", "description": "提高 时空英豪 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1200,6 +1283,7 @@
         "positionIndex": 5,
         "name": "More Aid",
         "description": "Decreases the cooldown of temporal heroes.",
+        "zh": { "name": "更多援助", "description": "降低cooldown 之时空英豪。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1211,6 +1295,7 @@
         "positionIndex": 6,
         "name": "Accurate Clone",
         "description": "Increases the skill levels of temporal heroes.",
+        "zh": { "name": "精准 Clone", "description": "提高 时空英豪 的技能等级。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_skill_level": 0 },
@@ -1222,6 +1307,7 @@
         "positionIndex": 7,
         "name": "Tough Bones",
         "description": "Increases all resistances for temporal heroes.",
+        "zh": { "name": "Tough 骸骨", "description": "提高全抗性时空英豪。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_resistances": 0 },
@@ -1233,6 +1319,7 @@
         "positionIndex": 8,
         "name": "Heroes of the Ether",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "英豪之以太", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1244,6 +1331,7 @@
         "positionIndex": 9,
         "name": "Fractured Reality",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Fractured Reality", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1262,6 +1350,7 @@
         "positionIndex": 10,
         "name": "Evasive Strategy",
         "description": "Increases the dodge chance of temporal heroes.",
+        "zh": { "name": "Evasive Strategy", "description": "提高 时空英豪 的闪避概率。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_dodge_chance": 0 },
@@ -1273,6 +1362,7 @@
         "positionIndex": 11,
         "name": "Augmented Heroics",
         "description": "Temporal heroes gain augmented skills and increased damage.",
+        "zh": { "name": "Augmented Heroics", "description": "时空英豪获得 augmented 技能与提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "summon_skill_level": 0 },
@@ -1284,6 +1374,7 @@
         "positionIndex": 12,
         "name": "The Four Horsemen",
         "description": "Gain an additional temporal hero increasing the damage, life and movement speed of all temporal heroes.",
+        "zh": { "name": "Four Horsemen", "description": "获得额外时间 hero 提高伤害，生命与移动速度之全部时空英豪。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1303,6 +1394,7 @@
         "positionIndex": 13,
         "name": "The Singularity",
         "description": "Summon a temporal demonspawn with increased stats.",
+        "zh": { "name": "Singularity", "description": "召唤物时间 demonspawn 使用提高 stats。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "summon_life": 0 },
@@ -1314,6 +1406,7 @@
         "positionIndex": 14,
         "name": "Summon Support",
         "description": "Temporal heroes cast buffs when summoned. Viking casts combat orders, pyromancer casts fire shield and marksman casts agility.",
+        "zh": { "name": "召唤物 Support", "description": "时空英豪施法增益当召唤。维京次施法战斗号令，火焰术士次施法火焰之盾与射手次施法敏捷身手。" },
         "maxRank": 3,
         "effects": {
           "base": { "summon_skill_level": 0 },

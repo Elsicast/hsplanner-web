@@ -5,6 +5,7 @@
     "name": "Glorious Strike",
     "kind": "active",
     "description": "Perform a powerful attack dealing physical area of effect damage.",
+    "zh": { "name": "荣光一击", "description": "进行一次强力攻击，造成物理范围伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 85,
@@ -32,6 +33,7 @@
         "positionIndex": 0,
         "name": "Glorious Strike",
         "description": "Core of the Glorious Strike subtree.",
+        "zh": { "name": "荣光一击", "description": "荣光一击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -39,6 +41,7 @@
         "positionIndex": 1,
         "name": "Radiant Glory",
         "description": "Increases the damage dealt by glorious strike.",
+        "zh": { "name": "Radiant 荣耀", "description": "提高造成的伤害荣光一击。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -50,6 +53,7 @@
         "positionIndex": 2,
         "name": "Lance Training",
         "description": "Increases attack rating when using glorious strike.",
+        "zh": { "name": "长枪 Training", "description": "提高攻击命中使用荣光一击。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -61,6 +65,7 @@
         "positionIndex": 3,
         "name": "Jousting Master",
         "description": "Increases attack area of effect radius of glorious strike.",
+        "zh": { "name": "Jousting 大师", "description": "提高 effect radius of 荣光一击 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -72,6 +77,7 @@
         "positionIndex": 4,
         "name": "Piercing Thrust",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "穿透 Thrust", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -90,6 +96,7 @@
         "positionIndex": 5,
         "name": "Brutal Knight",
         "description": "Increases the critical strike damage of glorious strike.",
+        "zh": { "name": "Brutal 骑士", "description": "提高 荣光一击 的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -101,6 +108,7 @@
         "positionIndex": 6,
         "name": "Blood Satiable",
         "description": "Recover a portion of your maximum life when killing monsters.",
+        "zh": { "name": "鲜血 Satiable", "description": "恢复一部分你的最大生命当击杀怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -112,6 +120,7 @@
         "positionIndex": 7,
         "name": "Heroic Onslaught",
         "description": "Gain a stack of heroic onslaught after killing monsters increasing your damage and armor.",
+        "zh": { "name": "Heroic Onslaught", "description": "获得层之 heroic onslaught 之后击杀怪物提高你的伤害与护甲。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "increased_armor": 0 },
@@ -123,6 +132,7 @@
         "positionIndex": 8,
         "name": "Leave no Survivors",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "留下 Survivors", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -134,6 +144,7 @@
         "positionIndex": 9,
         "name": "Sparring Haste",
         "description": "Increases attack speed when using glorious strike.",
+        "zh": { "name": "Sparring Haste", "description": "提高攻击速度使用荣光一击。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -145,6 +156,7 @@
         "positionIndex": 10,
         "name": "High Reach",
         "description": "Increases glorious strike attack range when using polearms.",
+        "zh": { "name": "高延伸", "description": "提高荣光一击攻击范围使用长柄武器。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -156,6 +168,7 @@
         "positionIndex": 11,
         "name": "Punisher",
         "description": "Chance on attack to gain increased area of effect radius. Impale targets on hit dealing damage over time.",
+        "zh": { "name": "Punisher", "description": "攻击时有概率获得提高范围半径。穿刺尖刺目标命中时造成伤害随时间。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -171,6 +184,7 @@
         "positionIndex": 12,
         "name": "Unstoppable Piker",
         "description": "Strike with a long narrow hitbox pushing monsters towards the tip on hit. Monsters hit by the tip take increased damage.",
+        "zh": { "name": "Unstoppable Piker", "description": "Strike 使用长距 narrow hitbox pushing 怪物朝向 tip 命中时。怪物命中 tip 承受提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -182,6 +196,7 @@
         "positionIndex": 13,
         "name": "Javelin Harbinger",
         "description": "Increases the range of glorious strike significantly. Chance on attack to throw a piercing javelin inflicting bleeding on hit.",
+        "zh": { "name": "Javelin Harbinger", "description": "提高 荣光一击 significantly. Chance on attack to throw a piercing javelin inflicting bleeding on hit 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -200,6 +215,7 @@
         "positionIndex": 14,
         "name": "Valiant Combo",
         "description": "Glorious strike performs a burst of three attacks. The last strike sends a slashing wave knocking monsters back dealing increased damage.",
+        "zh": { "name": "Valiant Combo", "description": "荣光一击执行迸发之 three 攻击。最后 strike 发出斩击波击退怪物造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -214,6 +230,7 @@
     "name": "Battle Charge",
     "kind": "active",
     "description": "Charge towards target location knocking monsters up and dealing arcane damage on impact.",
+    "zh": { "name": "战斗冲锋", "description": "朝目标位置冲锋，击飞怪物并在命中时造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Movement"],
     "movementDuringUse": 0,
@@ -237,6 +254,7 @@
         "positionIndex": 0,
         "name": "Battle Charge",
         "description": "Core of the Battle Charge subtree.",
+        "zh": { "name": "战斗冲锋", "description": "战斗冲锋 子树核心。" },
         "maxRank": 1
       },
       {
@@ -244,6 +262,7 @@
         "positionIndex": 1,
         "name": "Battle Charged",
         "description": "Increases the damage dealt by battle charge.",
+        "zh": { "name": "战斗充能", "description": "提高造成的伤害战斗冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -255,6 +274,7 @@
         "positionIndex": 2,
         "name": "Arena Glider",
         "description": "Increases the range of battle charge.",
+        "zh": { "name": "Arena Glider", "description": "提高 战斗冲锋 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -266,6 +286,7 @@
         "positionIndex": 3,
         "name": "Concrete Wall",
         "description": "Increases the damage dealt by battle charge according to your armor.",
+        "zh": { "name": "Concrete 墙", "description": "提高造成的伤害战斗冲锋依照至你的护甲。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_armor": 0 },
@@ -277,6 +298,7 @@
         "positionIndex": 4,
         "name": "Rampaging Assault",
         "description": "Chance to knock monsters up dealing increased damage on hit.",
+        "zh": { "name": "Rampaging Assault", "description": "命中时有概率击飞怪物造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -292,6 +314,7 @@
         "positionIndex": 5,
         "name": "Turtle Armor",
         "description": "Increases damage reduction for a short duration when using battle charge.",
+        "zh": { "name": "Turtle 护甲", "description": "提高伤害减免短时间内使用战斗冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -303,6 +326,7 @@
         "positionIndex": 6,
         "name": "Rocket Boots",
         "description": "Increases the speed of battle charge.",
+        "zh": { "name": "火箭 Boots", "description": "提高 战斗冲锋 的速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -314,6 +338,7 @@
         "positionIndex": 7,
         "name": "Shoulder Slam",
         "description": "Chance to stun targets on hit.",
+        "zh": { "name": "Shoulder 猛击", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -326,6 +351,7 @@
         "positionIndex": 8,
         "name": "Spear Dasher",
         "description": "Throw lances around you as you charge.",
+        "zh": { "name": "Spear Dasher", "description": "投掷长枪周围你你冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -337,6 +363,7 @@
         "positionIndex": 9,
         "name": "Bluntforce Trauma",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Bluntforce 创伤", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -348,6 +375,7 @@
         "positionIndex": 10,
         "name": "Provoking Arrival",
         "description": "Taunt nearby monsters at the end of your charge.",
+        "zh": { "name": "Provoking Arrival", "description": "嘲讽附近怪物 end 你的冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -359,6 +387,7 @@
         "positionIndex": 11,
         "name": "Bulldozer",
         "description": "Pull monsters infront of you on hit while charging impaling them when hitting terrain.",
+        "zh": { "name": "Bulldozer", "description": "牵引怪物 infront 之你命中时当冲锋穿刺它们当命中地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -370,6 +399,7 @@
         "positionIndex": 12,
         "name": "Hyper Assault",
         "description": "Charge multiple times in high speed at the target area, dealing area of effect damage damage before falling from the sky smashing the ground, knocking monsters up with increased damage.",
+        "zh": { "name": "Hyper Assault", "description": "冲锋多个次高速度目标区域，造成范围伤害伤害 before 坠落从天空粉碎地面，击飞怪物使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -381,6 +411,7 @@
         "positionIndex": 13,
         "name": "Ground Slammer",
         "description": "As you charge through monsters, leave the ground quaking for a small duration inflicting elemental break.",
+        "zh": { "name": "地面 Slammer", "description": "你冲锋穿过怪物，留下地面 quaking 小型持续时间施加元素击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "elemental_break": 0 },
@@ -402,6 +433,7 @@
         "positionIndex": 14,
         "name": "Call of the Fallen Heroes",
         "description": "Call upon fallen heroes to charge by your side, dealing increased damage on a larger radius.",
+        "zh": { "name": "召唤之坠落的英豪", "description": "召唤 upon 坠落的英豪至冲锋你的 side，造成提高伤害更大半径。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -422,6 +454,7 @@
     "name": "Commending Banner",
     "kind": "buff",
     "description": "Place a commending banner on the target location increasing nearby players attack speed and attack rating.",
+    "zh": { "name": "嘉奖战旗", "description": "在目标位置插上一面嘉奖战旗，提高附近玩家的攻击速度和攻击命中。" },
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 65,
     "maxRank": 20,
@@ -441,6 +474,7 @@
     "name": "Parry",
     "kind": "passive",
     "description": "Gives you a chance to parry incoming attacks.",
+    "zh": { "name": "招架", "description": "使你有概率招架袭来的攻击。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -458,6 +492,7 @@
     "name": "Crushing Lance",
     "kind": "active",
     "description": "Call a crushing lance down from the sky smashing the target location dealing area of effect physical damage.",
+    "zh": { "name": "破碎长枪", "description": "从天而降召唤一杆破碎长枪砸向目标位置，造成范围物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Area of Effect", "Strike"],
     "movementDuringUse": 65,
@@ -486,6 +521,7 @@
         "positionIndex": 0,
         "name": "Crushing Lance",
         "description": "Core of the Crushing Lance subtree.",
+        "zh": { "name": "破碎长枪", "description": "破碎长枪 子树核心。" },
         "maxRank": 1
       },
       {
@@ -493,6 +529,7 @@
         "positionIndex": 1,
         "name": "Sharp Point",
         "description": "Increases the damage dealt by crushing lance.",
+        "zh": { "name": "尖锐点", "description": "提高造成的伤害破碎长枪。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -504,6 +541,7 @@
         "positionIndex": 2,
         "name": "Devastating Impact",
         "description": "Increases the area of effect radius of crushing lance.",
+        "zh": { "name": "Devastating 冲击", "description": "提高 effect radius of 破碎长枪 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -515,6 +553,7 @@
         "positionIndex": 3,
         "name": "Precision Blow",
         "description": "Increases attack rating when using crushing lance.",
+        "zh": { "name": "精准 Blow", "description": "提高攻击命中使用破碎长枪。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -526,6 +565,7 @@
         "positionIndex": 4,
         "name": "Dormant Javelin",
         "description": "Every third attack with crushing lance is empowered increasing area of effect radius and damage.",
+        "zh": { "name": "Dormant Javelin", "description": "每第三次攻击使用破碎长枪强化提高范围半径与伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -537,6 +577,7 @@
         "positionIndex": 5,
         "name": "Finishing Stagger",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Finishing Stagger", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -548,6 +589,7 @@
         "positionIndex": 6,
         "name": "Two for One",
         "description": "Chance to unleash an additional crushing lance from the target to a nearby monster on hit.",
+        "zh": { "name": "双一次", "description": "命中时有概率释放额外破碎长枪从目标至附近怪物。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -556,6 +598,7 @@
         "positionIndex": 7,
         "name": "Rapidcast Artillery",
         "description": "Increases attack speed when using crushing lance.",
+        "zh": { "name": "Rapidcast 炮击", "description": "提高攻击速度使用破碎长枪。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -567,6 +610,7 @@
         "positionIndex": 8,
         "name": "Landspike",
         "description": "Increases the critical strike damage dealt by crushing lance.",
+        "zh": { "name": "Landspike", "description": "提高暴击伤害 dealt 破碎长枪。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -578,6 +622,7 @@
         "positionIndex": 9,
         "name": "Pulverizing Shock",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "Pulverizing 冲击", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -596,6 +641,7 @@
         "positionIndex": 10,
         "name": "Scorching Quake",
         "description": "Chance on cast to empower crushing lance causing it to echo an additional time inflicting burning on hit.",
+        "zh": { "name": "灼热 Quake", "description": "施法时有概率empower 破碎长枪使其回响额外一次施加燃烧命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -614,6 +660,7 @@
         "positionIndex": 11,
         "name": "Annihilating Salvo",
         "description": "Unleash a shockwave of crushing lances towards target location.",
+        "zh": { "name": "Annihilating Salvo", "description": "释放震荡波之粉碎长枪朝向目标位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -625,6 +672,7 @@
         "positionIndex": 12,
         "name": "Magnetized Glaive",
         "description": "The lance remains on the ground for a short duration frequently pulsating and pulling monsters towards it on hit.",
+        "zh": { "name": "Magnetized Glaive", "description": "长枪残留地面短时间内频繁 pulsating 与牵引怪物朝向命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0, "faster_cast_rate": 0 },
@@ -636,6 +684,7 @@
         "positionIndex": 13,
         "name": "Seismic Perforation",
         "description": "Crushing lance hits the ground with force unleashing shockwaves into all directions.",
+        "zh": { "name": "Seismic Perforation", "description": "破碎长枪命中地面使用力量释放冲击波进入全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "trail_count": 0, "projectile_count": 0 },
@@ -647,6 +696,7 @@
         "positionIndex": 14,
         "name": "Marked for Javelinstrike",
         "description": "Throw piercing javelins at monsters hit by crushing lance for a portion of the damage.",
+        "zh": { "name": "Marked Javelinstrike", "description": "投掷穿透 javelins 怪物命中破碎长枪一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -661,6 +711,7 @@
     "name": "Lance Thrust",
     "kind": "active",
     "description": "Perform a long ranged lance attack piercing monsters in a line dealing physical damage. If the lance comes in contact with a commending banner you get dragged to the banner smashing the ground stunning monsters on impact.",
+    "zh": { "name": "长枪突刺", "description": "进行一次长距长枪攻击，穿刺直线上的怪物，造成物理伤害。如果长枪接触到嘉奖战旗，你会被拖拽到战旗处砸向地面，命中时眩晕怪物。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 85,
@@ -689,6 +740,7 @@
         "positionIndex": 0,
         "name": "Lance Thrust",
         "description": "Core of the Lance Thrust subtree.",
+        "zh": { "name": "长枪突刺", "description": "长枪突刺 子树核心。" },
         "maxRank": 1
       },
       {
@@ -696,6 +748,7 @@
         "positionIndex": 1,
         "name": "Battle Experienced",
         "description": "Increases the damage dealt by lance thrust.",
+        "zh": { "name": "战斗 Experienced", "description": "提高造成的伤害长枪突刺。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -707,6 +760,7 @@
         "positionIndex": 2,
         "name": "Pole Reach",
         "description": "Increases the range of lance thrust.",
+        "zh": { "name": "Pole 延伸", "description": "提高 长枪突刺 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -718,6 +772,7 @@
         "positionIndex": 3,
         "name": "Heroic Arrival",
         "description": "Increases stun duration and damage when colliding with commending banner.",
+        "zh": { "name": "Heroic Arrival", "description": "提高眩晕持续时间与伤害当碰撞使用嘉奖战旗。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "stun_duration_pct": 0 },
@@ -729,6 +784,7 @@
         "positionIndex": 4,
         "name": "Punctured Organs",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Punctured 器官", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -747,6 +803,7 @@
         "positionIndex": 5,
         "name": "Tactical Distancing",
         "description": "Knock monsters back on hit dealing increased damage.",
+        "zh": { "name": "Tactical Distancing", "description": "击退怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -758,6 +815,7 @@
         "positionIndex": 6,
         "name": "Swift Striking",
         "description": "Chance to gain a stack of swift strikes on hit increasing your attack speed and attack rating.",
+        "zh": { "name": "迅捷打击", "description": "概率获得层之迅捷打击命中时提高你的攻击速度与攻击命中。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -773,6 +831,7 @@
         "positionIndex": 7,
         "name": "Polearm Expertise",
         "description": "Increases the critical strike damage dealt by lance thrust when using polearms.",
+        "zh": { "name": "长柄武器专精", "description": "提高暴击伤害 dealt 长枪突刺使用长柄武器。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -784,6 +843,7 @@
         "positionIndex": 8,
         "name": "Blood Harvester",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "鲜血 Harvester", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -795,6 +855,7 @@
         "positionIndex": 9,
         "name": "Stab Sequence",
         "description": "Every third attack with lance thrust is empowered increasing range and damage slowing monsters on hit.",
+        "zh": { "name": "Stab Sequence", "description": "每第三次攻击使用长枪突刺强化提高范围与伤害减速怪物命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -806,6 +867,7 @@
         "positionIndex": 10,
         "name": "Volatile Irontip",
         "description": "Collision with commending banner causes it to explode dealing area of effect damage.",
+        "zh": { "name": "Volatile Irontip", "description": "天体冲撞使用嘉奖战旗使至爆炸造成范围伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -817,6 +879,7 @@
         "positionIndex": 11,
         "name": "Head Collector",
         "description": "Lance thrust pulls monsters towards you and stuns them on hit.",
+        "zh": { "name": "Head Collector", "description": "长枪突刺牵引怪物朝向你与眩晕它们命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -828,6 +891,7 @@
         "positionIndex": 12,
         "name": "Legion Exterminator",
         "description": "Unleash a whirl attack with increased area of effect radius. Lance thrust no longer collides with commending banner.",
+        "zh": { "name": "军团 Exterminator", "description": "释放 whirl 攻击使用提高范围半径。长枪突刺更久 collides 使用嘉奖战旗。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -839,6 +903,7 @@
         "positionIndex": 13,
         "name": "Trust in the Thrust",
         "description": "Unleash a circle of lances thrusting the first target on hit from all directions.",
+        "zh": { "name": "Trust Thrust", "description": "释放圆环之长枪突刺第一目标命中时从全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -850,6 +915,7 @@
         "positionIndex": 14,
         "name": "Commend to Onslaught",
         "description": "Unleash additional lance thrusts towards nearby monsters from commending banner on banner impact.",
+        "zh": { "name": "Commend 至 Onslaught", "description": "释放额外长枪突刺朝向附近怪物从嘉奖战旗 banner 冲击。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -864,6 +930,7 @@
     "name": "Lance Throw",
     "kind": "passive",
     "description": "When using any of the abilities, you have a chance to throw a piercing lance at a nearby monster dealing physical damage.",
+    "zh": { "name": "长枪投掷", "description": "使用任意技能时，有概率向附近怪物投出一支穿透长枪，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Passive", "Projectile", "Strike"],
     "movementDuringUse": 10,
@@ -891,6 +958,7 @@
     "name": "Armor Crush",
     "kind": "passive",
     "description": "Battle charge inflicts armor break and lowers monster attack rating on hit.",
+    "zh": { "name": "碎甲冲撞", "description": "战斗冲锋命中时会施加护甲击破并降低怪物攻击命中。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -908,6 +976,7 @@
     "name": "Glory",
     "kind": "buff",
     "description": "Gain increased attack damage and magic skill damage for a short period.",
+    "zh": { "name": "荣耀", "description": "短时间内获得提高的攻击伤害和魔法技能伤害。" },
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
     "baseCastRate": 1,
@@ -930,6 +999,7 @@
     "name": "Shield Slam",
     "kind": "active",
     "description": "Strike with your shield dealing physical damage based on the defense of your shield.",
+    "zh": { "name": "盾击", "description": "用盾牌猛击，根据盾牌防御造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Shield", "Strike"],
     "movementDuringUse": 85,
@@ -958,6 +1028,7 @@
         "positionIndex": 0,
         "name": "Shield Slam",
         "description": "Core of the Shield Slam subtree.",
+        "zh": { "name": "盾击", "description": "盾击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -965,6 +1036,7 @@
         "positionIndex": 1,
         "name": "Obsidian Shield",
         "description": "Increases the damage dealt by shield slam.",
+        "zh": { "name": "Obsidian 盾牌", "description": "提高造成的伤害盾击。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -976,6 +1048,7 @@
         "positionIndex": 2,
         "name": "Gradient Strikes",
         "description": "Increases the attack rating of shield slam.",
+        "zh": { "name": "Gradient 打击", "description": "提高 盾击 的攻击命中。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -987,6 +1060,7 @@
         "positionIndex": 3,
         "name": "Concussive Bash",
         "description": "Chance to stun enemies on hit.",
+        "zh": { "name": "Concussive Bash", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -999,6 +1073,7 @@
         "positionIndex": 4,
         "name": "Skull Fracture",
         "description": "Increases damage dealt to stunned enemies.",
+        "zh": { "name": "Skull Fracture", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1010,6 +1085,7 @@
         "positionIndex": 5,
         "name": "Offensive Safeguard",
         "description": "Deal increased damage based on the block rating of your shield.",
+        "zh": { "name": "Offensive Safeguard", "description": "造成提高伤害基于格挡命中你的盾牌。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_block_rating": 0 },
@@ -1021,6 +1097,7 @@
         "positionIndex": 6,
         "name": "Field Coverage",
         "description": "Increases the area of effect of shield slam.",
+        "zh": { "name": "野域 Coverage", "description": "提高 effect of 盾击 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1032,6 +1109,7 @@
         "positionIndex": 7,
         "name": "Violent Bash",
         "description": "Chance on attack to increase the damage and area of effect radius of shield slam.",
+        "zh": { "name": "Violent Bash", "description": "攻击时有概率提高伤害与范围半径之盾击。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1047,6 +1125,7 @@
         "positionIndex": 8,
         "name": "Hardening Stance",
         "description": "Chance to increase your damage return on hit for a short duration.",
+        "zh": { "name": "Hardening Stance", "description": "概率提高你的伤害反伤命中时短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1062,6 +1141,7 @@
         "positionIndex": 9,
         "name": "Vanguard",
         "description": "Gain a stack of vanguard on hit increasing your damage reduction for a short duration.",
+        "zh": { "name": "先锋", "description": "获得层之先锋命中时提高你的伤害减免短时间内。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -1073,6 +1153,7 @@
         "positionIndex": 10,
         "name": "Rogue Shield",
         "description": "Chance to summon an orbiting shield on hit for a short duration.",
+        "zh": { "name": "Rogue 盾牌", "description": "概率召唤物环绕盾牌命中时短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1088,6 +1169,7 @@
         "positionIndex": 11,
         "name": "Groundquake Bulwark",
         "description": "Smash your shield into the ground unleashing an earthquake pulling monsters towards you on hit. Earthquake damage and area of effect radius are increased based on your armor. Shield slam now has a cooldown.",
+        "zh": { "name": "Groundquake 壁垒", "description": "猛击你的盾牌进入地面释放 earthquake 牵引怪物朝向你命中时。Earthquake 伤害与范围半径提高基于你的护甲。盾击有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_armor": 0 },
@@ -1099,6 +1181,7 @@
         "positionIndex": 12,
         "name": "Knight´s Templar",
         "description": "Throw your shield with force causing it to bounce from the ground and terrain.",
+        "zh": { "name": "骑士的 Templar", "description": "投掷你的盾牌使用力量使其弹射从地面与地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_bounces": 0 },
@@ -1110,6 +1193,7 @@
         "positionIndex": 13,
         "name": "Thorned Aegis",
         "description": "Chance to gain a stack of thorned aegis on hit. Throw shields at monsters when taking damage while thorned aegis is active.",
+        "zh": { "name": "荆棘神盾", "description": "概率获得层之荆棘神盾命中时。投掷护盾怪物当承受伤害当荆棘神盾激活。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1125,6 +1209,7 @@
         "positionIndex": 14,
         "name": "Captain Tarethiel",
         "description": "Throw your shield with increased size and damage. The shield returns to you after a short duration dealing additional damage. Shield slam now has a cooldown.",
+        "zh": { "name": "Captain 塔瑞希尔", "description": "投掷你的盾牌使用提高 size 与伤害。盾牌反伤至你之后短距持续时间造成额外伤害。盾击有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -1139,6 +1224,7 @@
     "name": "Taunt",
     "kind": "active",
     "description": "Taunt monsters to attack you. Additional points increase the monster amount and duration.",
+    "zh": { "name": "嘲讽", "description": "嘲讽怪物攻击你。额外点数会提高怪物数量和持续时间。" },
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
     "baseCastRate": 1,
@@ -1159,6 +1245,7 @@
     "name": "Honed Defenses",
     "kind": "active",
     "description": "Every time you get hit by a monster attack gain stacks. At maximum stacks unleash a huge area of effect pulse dealing arcane damage to monsters around you. Can also be casted early to consume the stacks.",
+    "zh": { "name": "磨砺防御", "description": "每次被怪物攻击命中都会获得层数。达到最大层数时释放巨大的范围脉冲，对你周围的怪物造成奥术伤害。也可以提前施放以消耗层数。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 65,
@@ -1183,6 +1270,7 @@
         "positionIndex": 0,
         "name": "Honed Defenses",
         "description": "Core of the Honed Defenses subtree.",
+        "zh": { "name": "磨砺防御", "description": "磨砺防御 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1190,6 +1278,7 @@
         "positionIndex": 1,
         "name": "Fortified Bastion",
         "description": "Increases the damage dealt by honed defenses.",
+        "zh": { "name": "Fortified Bastion", "description": "提高造成的伤害磨砺防御。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1201,6 +1290,7 @@
         "positionIndex": 2,
         "name": "Lucky Defense",
         "description": "Chance to increase the amount of stacks gained when struck.",
+        "zh": { "name": "Lucky 防御", "description": "概率提高数量之层数获得受到攻击时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1216,6 +1306,7 @@
         "positionIndex": 3,
         "name": "Engulfing Wave",
         "description": "Increases the area of effect radius of honed defenses.",
+        "zh": { "name": "Engulfing 波", "description": "提高 effect radius of 磨砺防御 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1227,6 +1318,7 @@
         "positionIndex": 4,
         "name": "Thorn Surge",
         "description": "Increases damage return per stack of honed defenses.",
+        "zh": { "name": "Thorn 涌动", "description": "提高 磨砺防御 的伤害反伤每层。" },
         "maxRank": 5,
         "effects": {
           "base": { "damage_return": 0 },
@@ -1238,6 +1330,7 @@
         "positionIndex": 5,
         "name": "Deadly Resistance",
         "description": "Increases the damage dealt by honed defenses based on your armor.",
+        "zh": { "name": "致命抗性", "description": "提高造成的伤害磨砺防御基于你的护甲。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_armor": 0 },
@@ -1249,6 +1342,7 @@
         "positionIndex": 6,
         "name": "Hold!",
         "description": "Increases the duration of honed defenses.",
+        "zh": { "name": "Hold!", "description": "提高 磨砺防御 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1260,6 +1354,7 @@
         "positionIndex": 7,
         "name": "Optimized Safeguard",
         "description": "Increases the maximum amount of stacks for honed defenses.",
+        "zh": { "name": "Optimized Safeguard", "description": "提高 stacks for 磨砺防御 的最大数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "max_skill_stacks": 0 },
@@ -1271,6 +1366,7 @@
         "positionIndex": 8,
         "name": "Weakening Counter",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "虚弱反击", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1289,6 +1385,7 @@
         "positionIndex": 9,
         "name": "Oppresive Countermeasure",
         "description": "Chance to unleash a ground slam on the attacker when struck dealing damage based on honed defenses stacks.",
+        "zh": { "name": "Oppresive Countermeasure", "description": "概率释放地面猛击攻击者受到攻击时造成伤害基于磨砺防御层数。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1304,6 +1401,7 @@
         "positionIndex": 10,
         "name": "Deflective Fortification",
         "description": "Gain increased damage return per stack of honed defenses decreasing its damage dealt.",
+        "zh": { "name": "Deflective Fortification", "description": "获得提高伤害反伤每层之磨砺防御 decreasing 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "damage_return": 0 },
@@ -1315,6 +1413,7 @@
         "positionIndex": 11,
         "name": "Sky Bulwark",
         "description": "Giant bulwarks fall down from the sky on hit dealing increased area of effect damage inflicting elemental break.",
+        "zh": { "name": "天空壁垒", "description": "巨人壁垒 fall 倒地从天空命中时造成提高范围伤害施加元素击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "elemental_break": 0 },
@@ -1340,6 +1439,7 @@
         "positionIndex": 12,
         "name": "Hauling Surge",
         "description": "Pull monsters towards you dealing increased damage and stunning them when reaching maximum stacks of honed defenses.",
+        "zh": { "name": "Hauling 涌动", "description": "牵引怪物朝向你造成提高伤害与眩晕它们当延伸最大层数之磨砺防御。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1351,6 +1451,7 @@
         "positionIndex": 13,
         "name": "Risen Guards",
         "description": "Increases the amount of maximum stacks. At maximum stacks honed defenses calls forth a legion of skeleton warriors fighting on your side for a short duration dealing 10% of the damage of honed defenses.",
+        "zh": { "name": "Risen 守卫", "description": "提高 maximum stacks. At maximum stacks 磨砺防御 calls forth a legion of skeleton warriors fighting on your side for a short duration dealing 10% of the damage of 磨砺防御 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1368,6 +1469,7 @@
         "positionIndex": 14,
         "name": "Unstoppable Goliath",
         "description": "Honed defenses no longer causes ground slam at maximum stacks increasing your maximum life, damage return and life replenish for each stack.",
+        "zh": { "name": "Unstoppable 巨人", "description": "磨砺防御更久使地面猛击最大层数提高你的最大生命，伤害反伤与生命恢复每个层。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1390,6 +1492,7 @@
     "name": "Knight's Resilience",
     "kind": "passive",
     "description": "Increases your life and all resistances.",
+    "zh": { "name": "骑士的坚韧", "description": "提高你的生命和全抗性。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -1407,6 +1510,7 @@
     "name": "Shield Wall",
     "kind": "buff",
     "description": "Cast a wall of shields around you blocking monster projectiles dealing arcane and physical damage on hit. Hitting an enemy with Shield Wall generates a Honed Defenses stack.",
+    "zh": { "name": "盾墙", "description": "在你周围召唤一面盾墙，格挡怪物投射物，命中时造成奥术和物理伤害。用盾墙击中敌人会产生一层磨砺防御。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Shield", "Orbital"],
     "movementDuringUse": 65,
@@ -1442,6 +1546,7 @@
         "positionIndex": 0,
         "name": "Shield Wall",
         "description": "Core of the Shield Wall subtree.",
+        "zh": { "name": "盾墙", "description": "盾墙 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1449,6 +1554,7 @@
         "positionIndex": 1,
         "name": "Spiked Shields",
         "description": "Increases the damage dealt by shield wall.",
+        "zh": { "name": "Spiked 护盾", "description": "提高造成的伤害盾墙。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1460,6 +1566,7 @@
         "positionIndex": 2,
         "name": "Durable Wall",
         "description": "Increases the durability and duration of shield wall.",
+        "zh": { "name": "Durable 墙", "description": "提高 盾墙 的durability 与持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_life": 0, "skill_duration": 0 },
@@ -1471,6 +1578,7 @@
         "positionIndex": 3,
         "name": "More Shields!",
         "description": "Increases the amount of shields in shield wall.",
+        "zh": { "name": "更多护盾!", "description": "提高 shields in 盾墙 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1482,6 +1590,7 @@
         "positionIndex": 4,
         "name": "Split Reflection",
         "description": "Chance to unleash spikes dealing damage towards the attacker when blocking a projectile.",
+        "zh": { "name": "分裂 Reflection", "description": "概率释放尖刺造成伤害朝向攻击者当格挡投射物。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -1490,6 +1599,7 @@
         "positionIndex": 5,
         "name": "Defensive Radius",
         "description": "Increases the orbiting radius of shield wall.",
+        "zh": { "name": "防御型半径", "description": "提高 盾墙 的环绕半径。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1501,6 +1611,7 @@
         "positionIndex": 6,
         "name": "Shield Growth",
         "description": "Increases the size of shield wall.",
+        "zh": { "name": "盾牌生长", "description": "提高 盾墙 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1512,6 +1623,7 @@
         "positionIndex": 7,
         "name": "Critical Thorn",
         "description": "Chance to critically hit dealing increased critical strike damage with shield wall.",
+        "zh": { "name": "暴击 Thorn", "description": "概率打出暴击造成提高暴击伤害使用盾墙。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1523,6 +1635,7 @@
         "positionIndex": 8,
         "name": "Noxious Shields",
         "description": "Chance to inflict poisoned on hit.",
+        "zh": { "name": "剧毒护盾", "description": "命中时有概率施加中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1541,6 +1654,7 @@
         "positionIndex": 9,
         "name": "Breaking Spikes",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "击破尖刺", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1559,6 +1673,7 @@
         "positionIndex": 10,
         "name": "Dissolving Corrosion",
         "description": "Increases damage dealt to poisoned targets.",
+        "zh": { "name": "溶解腐蚀", "description": "提高对 中毒目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -1570,6 +1685,7 @@
         "positionIndex": 11,
         "name": "Gravitational Aegis",
         "description": "Shield wall orbits in an orbit around you with increased projectile speed and increased amount of shields.",
+        "zh": { "name": "Gravitational 神盾", "description": "盾墙环绕轨道周围你使用提高投射物速度与提高数量之护盾。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1589,6 +1705,7 @@
         "positionIndex": 12,
         "name": "Porkupine Carapace",
         "description": "Chance to inflict bleeding on hit with increased bleeding frequency.",
+        "zh": { "name": "Porkupine Carapace", "description": "概率施加流血命中时使用提高流血 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1613,6 +1730,7 @@
         "positionIndex": 13,
         "name": "Shield Vortex",
         "description": "Unleash a tornado of shields towards target location pulling nearby monsters towards it.",
+        "zh": { "name": "盾牌漩涡", "description": "释放龙卷风之护盾朝向目标位置牵引附近怪物朝向。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -1624,6 +1742,7 @@
         "positionIndex": 14,
         "name": "Insatiable Bulwark",
         "description": "Blocking projectiles and attacks buff the shields increasing damage and size.",
+        "zh": { "name": "Insatiable 壁垒", "description": "格挡投射物与攻击增益护盾提高伤害与 size。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1646,6 +1765,7 @@
     "name": "Damage Reflect",
     "kind": "passive",
     "description": "Increases your damage return.",
+    "zh": { "name": "伤害反弹", "description": "提高你的反伤。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -1663,6 +1783,7 @@
     "name": "Knight's Vigor",
     "kind": "passive",
     "description": "Gain increased maximum life and vitality.",
+    "zh": { "name": "骑士的活力", "description": "获得提高的最大生命和耐力。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -1680,6 +1801,7 @@
     "name": "Counter",
     "kind": "active",
     "description": "When active all monster attacks get countered with thrusting lances dealing arcane damage.",
+    "zh": { "name": "反击", "description": "激活时，所有怪物攻击都会被突刺长枪反击，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Shield", "Projectile"],
     "movementDuringUse": 100,
@@ -1707,6 +1829,7 @@
         "positionIndex": 0,
         "name": "Counter",
         "description": "Core of the Counter subtree.",
+        "zh": { "name": "反击", "description": "反击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1714,6 +1837,7 @@
         "positionIndex": 1,
         "name": "Sharp Vengeance",
         "description": "Increases the damage dealt by counter.",
+        "zh": { "name": "尖锐复仇", "description": "提高造成的伤害反击。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1725,6 +1849,7 @@
         "positionIndex": 2,
         "name": "Vengeful Hit",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "复仇命中", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1736,6 +1861,7 @@
         "positionIndex": 3,
         "name": "Double Edge",
         "description": "Chance to throw additional lances when struck.",
+        "zh": { "name": "双重锋刃", "description": "概率投掷额外长枪受到攻击时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1751,6 +1877,7 @@
         "positionIndex": 4,
         "name": "Rupturing Lance",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "破裂长枪", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1769,6 +1896,7 @@
         "positionIndex": 5,
         "name": "Spell Reflection",
         "description": "Counter also reflects non-physical projectiles and attacks dealing a portion of the damage.",
+        "zh": { "name": "法术 Reflection", "description": "反击同时 reflects 非-物理投射物与攻击造成一部分伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1780,6 +1908,7 @@
         "positionIndex": 6,
         "name": "Battle Magus",
         "description": "Increases the duration of counter.",
+        "zh": { "name": "战斗 Magus", "description": "提高 反击 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1791,6 +1920,7 @@
         "positionIndex": 7,
         "name": "Lusting Blood",
         "description": "Chance to replenish a portion of your maximum life on hit.",
+        "zh": { "name": "Lusting 鲜血", "description": "命中时有概率恢复一部分最大生命。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1806,6 +1936,7 @@
         "positionIndex": 8,
         "name": "Stunning Lance",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "眩晕长枪", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1818,6 +1949,7 @@
         "positionIndex": 9,
         "name": "Cheap Counter",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Cheap 反击", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1829,6 +1961,7 @@
         "positionIndex": 10,
         "name": "Bursting Lances",
         "description": "Chance to throw multiple piercing lances around you when struck.",
+        "zh": { "name": "Bursting 长枪", "description": "概率投掷多个穿透长枪周围你受到攻击时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1844,6 +1977,7 @@
         "positionIndex": 11,
         "name": "Insatiable Challenger",
         "description": "Casting counter taunts all nearby monsters inflicting armor break.",
+        "zh": { "name": "Insatiable Challenger", "description": "施法反击嘲讽附近所有怪物施加护甲击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "armor_break": 0, "skill_range": 0 },
@@ -1862,6 +1996,7 @@
         "positionIndex": 12,
         "name": "Volley Build-up",
         "description": "During its duration counter stores all damage taken. When expiring throw javelins at nearby monsters unleashing the stored damage taken.",
+        "zh": { "name": "Volley Build-上", "description": "During 持续时间反击 stores 全部所受伤害。当到期投掷 javelins 附近怪物释放 stored 所受伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "splash_of_total_damage": 0 },
@@ -1873,6 +2008,7 @@
         "positionIndex": 13,
         "name": "Give No Quarter",
         "description": "Counter no longer has a duration but instead frequently drains your life and mana. Counter can be activated and deactivated and no longer has a cooldown.",
+        "zh": { "name": "Give Quarter", "description": "反击更久有持续时间改为频繁汲取你的生命与法力。反击可以 activated 与 deactivated 与更久有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1892,6 +2028,7 @@
         "positionIndex": 14,
         "name": "Versus the World",
         "description": "Counter no longer throws lances at monsters but gives you a chance to block incoming damage reflecting it back to the attacker with intense power.",
+        "zh": { "name": "Versus World", "description": "反击更久投掷长枪怪物 gives 你概率格挡受到的伤害 reflecting 回至攻击者使用 intense 力量。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1910,6 +2047,7 @@
     "name": "Last Stand",
     "kind": "buff",
     "description": "Restore yourself to full life and temporarily gain increased magic skill damage and physical damage reduction.",
+    "zh": { "name": "背水一战", "description": "将你恢复至满生命，并临时获得提高的魔法技能伤害和物理伤害减免。" },
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
     "baseCastRate": 1,

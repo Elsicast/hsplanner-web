@@ -1,6 +1,7 @@
 {
   "id": "shield_lancer",
   "name": "Shield Lancer",
+  "zh": { "name": "盾枪卫士" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

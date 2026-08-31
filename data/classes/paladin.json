@@ -1,6 +1,7 @@
 {
   "id": "paladin",
   "name": "Paladin",
+  "zh": { "name": "圣骑士" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

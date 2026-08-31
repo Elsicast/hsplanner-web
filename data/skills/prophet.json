@@ -5,6 +5,7 @@
     "name": "Summon Raven",
     "kind": "active",
     "description": "Summon a raven circling around you attacking nearby monsters.",
+    "zh": { "name": "召唤渡鸦", "description": "召唤一只绕你盘旋并攻击附近怪物的渡鸦。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -68,6 +69,7 @@
         "positionIndex": 0,
         "name": "Summon Raven",
         "description": "Core of the Summon Raven subtree.",
+        "zh": { "name": "召唤渡鸦", "description": "召唤渡鸦 子树核心。" },
         "maxRank": 1
       },
       {
@@ -75,6 +77,7 @@
         "positionIndex": 1,
         "name": "Power of the Flock",
         "description": "Increases the maximum amount of ravens you can summon.",
+        "zh": { "name": "力量之 Flock", "description": "提高 ravens you can summon 的最大数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_max_amount": 0 },
@@ -86,6 +89,7 @@
         "positionIndex": 2,
         "name": "Cadaver Pecking",
         "description": "Increases the damage dealt by ravens.",
+        "zh": { "name": "Cadaver Pecking", "description": "提高造成的伤害渡鸦。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -97,6 +101,7 @@
         "positionIndex": 3,
         "name": "Frenzied Bird",
         "description": "Increases the attack speed of ravens.",
+        "zh": { "name": "Frenzied Bird", "description": "提高 ravens 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -108,6 +113,7 @@
         "positionIndex": 4,
         "name": "Raven Eye",
         "description": "Increases the detection range of ravens and its initial charge damage.",
+        "zh": { "name": "Raven 之眼", "description": "提高 ravens and its initial 冲锋 damage 的detection 范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "skill_range": 0 },
@@ -119,6 +125,7 @@
         "positionIndex": 5,
         "name": "Master of Ravens",
         "description": "Increases the maximum amount of ravens you can summon but decreases the damage dealt.",
+        "zh": { "name": "大师之渡鸦", "description": "提高 ravens you can summon but decreases the damage dealt 的最大数量。" },
         "maxRank": 5,
         "effects": {
           "base": {
@@ -136,6 +143,7 @@
         "positionIndex": 6,
         "name": "Ravens Flight",
         "description": "Increases the movement speed and damage dealt by ravens.",
+        "zh": { "name": "渡鸦 Flight", "description": "提高移动速度与造成的伤害渡鸦。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "summon_movement_speed": 0 },
@@ -147,6 +155,7 @@
         "positionIndex": 7,
         "name": "Battle Screech",
         "description": "Chance on attack to unleash a battle screech dealing area of effect damage in a cone in front of the raven.",
+        "zh": { "name": "战斗 Screech", "description": "攻击时有概率释放战斗 screech 造成范围伤害锥形 front 之 raven。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -162,6 +171,7 @@
         "positionIndex": 8,
         "name": "Wounding Advantage",
         "description": "Increases damage dealt to monsters inflicted by bleed.",
+        "zh": { "name": "致伤优势", "description": "提高对 怪物施加流血 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -173,6 +183,7 @@
         "positionIndex": 9,
         "name": "Wounds Ripped Open",
         "description": "Chance on hit to cause bleeding, converting all other damage over time ailments to bleeding.",
+        "zh": { "name": "创伤 Ripped Open", "description": "命中时有概率使流血，转化全部其他伤害随时间异常状态至流血。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -189,6 +200,7 @@
         "positionIndex": 10,
         "name": "Summon The Flock",
         "description": "Summons all ravens at once with increased movement speed and damage for a short duration. Summon Raven now has a cooldown.",
+        "zh": { "name": "召唤物 Flock", "description": "召唤物全部渡鸦 once 使用提高移动速度与伤害短时间内。召唤渡鸦有 cooldown。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "movement_speed": 0 },
@@ -200,6 +212,7 @@
         "positionIndex": 11,
         "name": "Honey Stinger",
         "description": "Ravens turn into wasps firing multiple projectiles per attack.",
+        "zh": { "name": "Honey Stinger", "description": "渡鸦 turn 进入 wasps firing 多个投射物每攻击。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 2, "poison_skill_damage": 0 },
@@ -211,6 +224,7 @@
         "positionIndex": 12,
         "name": "Flock of Feathers",
         "description": "Summon an increased amount of ravens.",
+        "zh": { "name": "Flock 之 Feathers", "description": "召唤物提高数量之渡鸦。" },
         "maxRank": 3,
         "effects": {
           "base": { "summon_max_amount": 0 },
@@ -222,6 +236,7 @@
         "positionIndex": 13,
         "name": "Rupturing Pull",
         "description": "Chance on attack to pull nearby monsters towards the raven inflicting bleeding.",
+        "zh": { "name": "破裂牵引", "description": "攻击时有概率牵引附近怪物朝向 raven 施加流血。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -240,6 +255,7 @@
         "positionIndex": 14,
         "name": "Tempest of Ravens",
         "description": "Ravens now orbit you dealing increased damage on hit. Summon Raven now has a cooldown.",
+        "zh": { "name": "Tempest 之渡鸦", "description": "渡鸦轨道你造成提高伤害命中时。召唤渡鸦有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -254,6 +270,7 @@
     "name": "Thorned Roots",
     "kind": "active",
     "description": "Unleash a swarm of roots dealing poison damage on hit.",
+    "zh": { "name": "荆棘之根", "description": "释放一大群荆棘之根，命中时造成毒素伤害。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -316,6 +333,7 @@
         "positionIndex": 0,
         "name": "Thorned Roots",
         "description": "Core of the Thorned Roots subtree.",
+        "zh": { "name": "荆棘之根", "description": "荆棘之根 子树核心。" },
         "maxRank": 1
       },
       {
@@ -323,6 +341,7 @@
         "positionIndex": 1,
         "name": "Strangulating Branches",
         "description": "Increases poisoned frequency by thorned roots.",
+        "zh": { "name": "Strangulating 分支", "description": "提高中毒频率荆棘之根。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_frequency": 0 },
@@ -334,6 +353,7 @@
         "positionIndex": 2,
         "name": "Painful Thorns",
         "description": "Increases damage dealt by thorned roots.",
+        "zh": { "name": "Painful 荆棘", "description": "提高 荆棘之根 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -345,6 +365,7 @@
         "positionIndex": 3,
         "name": "Toxic Amplification",
         "description": "Increases damage dealt to monsters inflicted by poisoned.",
+        "zh": { "name": "剧毒 Amplification", "description": "提高对 怪物施加中毒 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -356,6 +377,7 @@
         "positionIndex": 4,
         "name": "Thorned Wrath",
         "description": "Increases faster cast rate when using thorned roots.",
+        "zh": { "name": "荆棘愤怒", "description": "提高施法速度使用荆棘之根。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -367,6 +389,7 @@
         "positionIndex": 5,
         "name": "Poison Ivy",
         "description": "Chance on monster kill to summon a poison ivy which shoots pores at nearby monsters inflicting poisoned on hit.",
+        "zh": { "name": "毒素 Ivy", "description": "概率在怪物击杀至召唤物毒素 ivy 从而射出 pores 附近怪物施加中毒命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -385,6 +408,7 @@
         "positionIndex": 6,
         "name": "Magnitude of Roots",
         "description": "Increases the size and area of effect radius of thorned roots",
+        "zh": { "name": "Magnitude 之藤根", "description": "提高 effect radius of 荆棘之根 的size 与范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -396,6 +420,7 @@
         "positionIndex": 7,
         "name": "Venomous Strangulation",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "剧毒 Strangulation", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -415,6 +440,7 @@
         "positionIndex": 8,
         "name": "Extended Roots",
         "description": "Increases the duration of thorned roots.",
+        "zh": { "name": "延长藤根", "description": "提高 荆棘之根 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -426,6 +452,7 @@
         "positionIndex": 9,
         "name": "Asphyxiating Grasp",
         "description": "Chance on hit to deal double damage.",
+        "zh": { "name": "窒息 Grasp", "description": "命中时有概率造成双重伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -434,6 +461,7 @@
         "positionIndex": 10,
         "name": "Rooted Essence",
         "description": "Decreases mana cost and movement diminish when using thorned roots.",
+        "zh": { "name": "Rooted 精华", "description": "使用荆棘之根时降低法力消耗与移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0, "reduced_movement_diminish": 0 },
@@ -448,6 +476,7 @@
         "positionIndex": 11,
         "name": "Nature´s Path",
         "description": "Unleash an additional trail of roots.",
+        "zh": { "name": "自然的路径", "description": "释放额外轨迹之藤根。" },
         "maxRank": 3,
         "effects": {
           "base": { "trail_count": 0, "poison_skill_damage": 0 },
@@ -459,6 +488,7 @@
         "positionIndex": 12,
         "name": "Gigathorn",
         "description": "Unleash a massive thorn that sends roots in all directions on hit. Thorned Roots now has a cooldown.",
+        "zh": { "name": "Gigathorn", "description": "释放巨大 thorn 发出藤根全部方向命中时。荆棘之根有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_size": 80 },
@@ -470,6 +500,7 @@
         "positionIndex": 13,
         "name": "Poison Roots",
         "description": "Increases the stacks of poisoned thorned roots can apply on monsters.",
+        "zh": { "name": "毒素藤根", "description": "提高 poisoned 荆棘之根 can apply on monsters 的层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "max_skill_stacks": 0 },
@@ -481,6 +512,7 @@
         "positionIndex": 14,
         "name": "Hungering Hive Mind",
         "description": "Roots travel towards the next closest target after each hit unleashing an area of effect pulse.",
+        "zh": { "name": "Hungering Hive 心智", "description": "藤根飞行朝向 next 最近的目标之后每个命中释放范围脉冲。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_size": 0 },
@@ -495,6 +527,7 @@
     "name": "Carrion Worm",
     "kind": "active",
     "description": "Summons a carrion worm frequently attacking nearby monsters.",
+    "zh": { "name": "腐肉蠕虫", "description": "召唤一条频繁攻击附近怪物的腐肉蠕虫。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -559,6 +592,7 @@
         "positionIndex": 0,
         "name": "Carrion Worm",
         "description": "Core of the Carrion Worm subtree.",
+        "zh": { "name": "腐肉蠕虫", "description": "腐肉蠕虫 子树核心。" },
         "maxRank": 1
       },
       {
@@ -566,6 +600,7 @@
         "positionIndex": 1,
         "name": "Empowered Nervous System",
         "description": "Increases the carrion worm´s attack frequency.",
+        "zh": { "name": "强化 Nervous System", "description": "提高腐肉蠕虫's 攻击 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -577,6 +612,7 @@
         "positionIndex": 2,
         "name": "Lingering Mass",
         "description": "Increases damage dealt by carrion worm.",
+        "zh": { "name": "延续巨躯", "description": "提高 腐肉蠕虫 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -588,6 +624,7 @@
         "positionIndex": 3,
         "name": "Wormtoxins",
         "description": "Increases poisoned damage inflicted by carrion worm.",
+        "zh": { "name": "Wormtoxins", "description": "提高 腐肉蠕虫 施加的中毒伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -606,6 +643,7 @@
         "positionIndex": 4,
         "name": "Inflammatory Touch",
         "description": "Deal increased damage to poisoned targets.",
+        "zh": { "name": "Inflammatory 之触", "description": "造成提高伤害至中毒目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -617,6 +655,7 @@
         "positionIndex": 5,
         "name": "Worm Steroids",
         "description": "Increases the size of the carrion worm.",
+        "zh": { "name": "蠕虫 Steroids", "description": "提高 the 腐肉蠕虫 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -628,6 +667,7 @@
         "positionIndex": 6,
         "name": "Burrowing Monstrosity",
         "description": "Chance on hit to knock monsters up stunning and dealing additional damage.",
+        "zh": { "name": "钻地怪物", "description": "命中时有概率击飞怪物眩晕与造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -644,6 +684,7 @@
         "positionIndex": 7,
         "name": "Parasitic Aftershock",
         "description": "Monsters hit by the carrion worm have a chance to explode when killed dealing increased damage on a large radius.",
+        "zh": { "name": "Parasitic 余震", "description": "Monsters hit by the 腐肉蠕虫 有概率爆炸当被击杀造成提高伤害大型半径。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -659,6 +700,7 @@
         "positionIndex": 8,
         "name": "Linked Nervous Systems",
         "description": "Chance to unleash a toxic chain inflicting poisoned on hit.",
+        "zh": { "name": "Linked Nervous Systems", "description": "命中时有概率释放剧毒连锁施加中毒。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -675,6 +717,7 @@
         "positionIndex": 9,
         "name": "Pulsating Touch",
         "description": "Chance for carrion worm´s attacks to echo an additional time.",
+        "zh": { "name": "Pulsating 之触", "description": "概率使腐肉蠕虫's 攻击至回响额外一次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -690,6 +733,7 @@
         "positionIndex": 10,
         "name": "Lingering Worm",
         "description": "Increases the movement speed and attack radius of the carrion worm.",
+        "zh": { "name": "延续蠕虫", "description": "提高 the 腐肉蠕虫 的移动速度与攻击半径。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0, "area_of_effect": 0 },
@@ -701,6 +745,7 @@
         "positionIndex": 11,
         "name": "Parasitic Aura",
         "description": "Deal a portion of the damage to all nearby monsters slowing them.",
+        "zh": { "name": "Parasitic 光环", "description": "造成一部分伤害至附近所有怪物减速它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "splash_of_total_damage": 0, "summon_attack_speed": 0 },
@@ -712,6 +757,7 @@
         "positionIndex": 12,
         "name": "Earthworm",
         "description": "Increases the size and damage of the carrion worm.",
+        "zh": { "name": "Earthworm", "description": "提高 the 腐肉蠕虫 的size 与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_size": 75 },
@@ -723,6 +769,7 @@
         "positionIndex": 13,
         "name": "Conjured Branches",
         "description": "Thorned Branches orbit around the carrion worm dealing damage to monsters stunning them on hit.",
+        "zh": { "name": "召唤分支", "description": "荆棘分支轨道周围腐肉蠕虫造成伤害至怪物眩晕它们命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_count": 3 },
@@ -734,6 +781,7 @@
         "positionIndex": 14,
         "name": "Devouring Worm",
         "description": "Carrion worm devours nearby corpses unleashing a large explosion dealing damage and providing you with increased life and life replenish for a short duration stacking up to 10.",
+        "zh": { "name": "吞噬蠕虫", "description": "腐肉蠕虫吞噬附近尸体释放大型爆炸造成伤害与 providing 你使用提高生命与生命恢复短时间内叠加上至 10。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -752,6 +800,7 @@
     "name": "Blessed Nature",
     "kind": "passive",
     "description": "Increases poison skill damage.",
+    "zh": { "name": "自然祝福", "description": "提高毒素技能伤害。" },
     "damageType": "poison",
     "tags": [
       "Passive"
@@ -783,6 +832,7 @@
     "name": "Thorned Branch",
     "kind": "active",
     "description": "Throw a thorned branch dealing poison damage on hit.",
+    "zh": { "name": "荆棘枝", "description": "投掷一根带刺的枝条，命中时造成毒素伤害。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -846,6 +896,7 @@
         "positionIndex": 0,
         "name": "Thorned Branch",
         "description": "Core of the Thorned Branch subtree.",
+        "zh": { "name": "荆棘枝", "description": "荆棘枝 子树核心。" },
         "maxRank": 1
       },
       {
@@ -853,6 +904,7 @@
         "positionIndex": 1,
         "name": "Sharper Thorns",
         "description": "Increases the damage dealt by thorned branch",
+        "zh": { "name": "Sharper 荆棘", "description": "提高造成的伤害荆棘枝。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -864,6 +916,7 @@
         "positionIndex": 2,
         "name": "Conjurer of Branches",
         "description": "Increases faster cast rate when using thorned branch.",
+        "zh": { "name": "Conjurer 之分支", "description": "提高施法速度使用荆棘枝。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -875,6 +928,7 @@
         "positionIndex": 3,
         "name": "Critically Sharp Thorns",
         "description": "Chance to critically hit with thorned branch dealing increased critical spell damage.",
+        "zh": { "name": "暴击尖锐荆棘", "description": "概率打出暴击使用荆棘枝造成提高暴击法术伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -886,6 +940,7 @@
         "positionIndex": 4,
         "name": "Thorned Splinters",
         "description": "Chance for the branch to break when expiring unleashing splinters in all directions inflicting poisoned and dealing additional damage.",
+        "zh": { "name": "荆棘 Splinters", "description": "概率使分支至击破当到期释放 splinters 全部方向施加中毒与造成额外伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -908,6 +963,7 @@
         "positionIndex": 5,
         "name": "Bouncing Branch",
         "description": "Chance on hit to change trajectory and gaining increased damage.",
+        "zh": { "name": "弹跳分支", "description": "命中时有概率change trajectory 与获得提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -923,6 +979,7 @@
         "positionIndex": 6,
         "name": "Concussive Branchblow",
         "description": "Chance on hit to deal double damage and stun the target for a short duration.",
+        "zh": { "name": "Concussive Branchblow", "description": "命中时有概率造成双重伤害与眩晕目标短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -935,6 +992,7 @@
         "positionIndex": 7,
         "name": "Venom Infusion",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "Venom 灌注", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -954,6 +1012,7 @@
         "positionIndex": 8,
         "name": "Amplified Venoms",
         "description": "Increases the poisoned damage inflicted by thorned branch.",
+        "zh": { "name": "强化 Venoms", "description": "提高 荆棘枝 施加的中毒伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -972,6 +1031,7 @@
         "positionIndex": 9,
         "name": "Infecting the Wounds",
         "description": "Deal increased damage to targets inflicted by poisoned.",
+        "zh": { "name": "Infecting 创伤", "description": "造成提高伤害至目标施加中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -983,6 +1043,7 @@
         "positionIndex": 10,
         "name": "Wooden Equilibrium",
         "description": "Reduces mana cost and movement diminish when using thorned branch",
+        "zh": { "name": "Wooden Equilibrium", "description": "降低法力消耗与移动衰减使用荆棘枝" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0, "reduced_movement_diminish": 0 },
@@ -997,6 +1058,7 @@
         "positionIndex": 11,
         "name": "Branched Multitude",
         "description": "Throw multiple branches in an arc.",
+        "zh": { "name": "Branched Multitude", "description": "投掷多个分支呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_count": 2 },
@@ -1008,6 +1070,7 @@
         "positionIndex": 12,
         "name": "Forking Branches",
         "description": "Thorned branch forks each time it hits a monster.",
+        "zh": { "name": "分叉分支", "description": "荆棘枝分叉每个时间命中怪物。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1023,6 +1086,7 @@
         "positionIndex": 13,
         "name": "Growth of Death",
         "description": "Each time you hit a monster with thorned branch, there is a chance a tree is grown which then falls on the nearest monster.",
+        "zh": { "name": "生长之死亡", "description": "每个时间你命中怪物使用荆棘枝，there 概率 tree grown 从而 then 坠落最近的怪物。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1038,6 +1102,7 @@
         "positionIndex": 14,
         "name": "Falling Branches",
         "description": "While traveling summon falling branches on its path dealing area of effect damage upon landing.",
+        "zh": { "name": "坠落分支", "description": "当飞行召唤物坠落分支路径上的造成范围伤害落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "area_of_effect": 0 },
@@ -1052,6 +1117,7 @@
     "name": "Summon Ent Colossus",
     "kind": "active",
     "description": "Summons an ent colossus to fight by your side.",
+    "zh": { "name": "召唤树人巨像", "description": "召唤一名树人巨像与你并肩作战。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -1115,6 +1181,7 @@
         "positionIndex": 0,
         "name": "Summon Ent Colossus",
         "description": "Core of the Summon Ent Colossus subtree.",
+        "zh": { "name": "召唤树人巨像", "description": "召唤树人巨像 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1122,6 +1189,7 @@
         "positionIndex": 1,
         "name": "Carrying Weight",
         "description": "Increases the damage dealt by ent colossus.",
+        "zh": { "name": "Carrying 重量", "description": "提高造成的伤害树人巨像。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1133,6 +1201,7 @@
         "positionIndex": 2,
         "name": "Colossal Bark Smash",
         "description": "Chance for ent colossus to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "巨型树皮猛击", "description": "概率使树人巨像至打出暴击造成提高暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1144,6 +1213,7 @@
         "positionIndex": 3,
         "name": "Ancient Bark",
         "description": "Increases ent colossus damage reduction from all sources.",
+        "zh": { "name": "远古树皮", "description": "提高树人巨像伤害减免从全部来源。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -1155,6 +1225,7 @@
         "positionIndex": 4,
         "name": "Executing Branches",
         "description": "Execute targets below a threshold.",
+        "zh": { "name": "Executing 分支", "description": "处决目标低于阈值。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1166,6 +1237,7 @@
         "positionIndex": 5,
         "name": "Scorched Bark",
         "description": "Chance on attack for ent colossus to unleash a powerful fiery smash knocking monsters back on a large radius inflicting burning.",
+        "zh": { "name": "Scorched 树皮", "description": "概率攻击时树人巨像至释放 powerful 炽焰猛击击退怪物大型半径施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1184,6 +1256,7 @@
         "positionIndex": 6,
         "name": "Loaded Branch",
         "description": "Chance on attack to unleash a shockwave dealing damage and stunning monsters on hit.",
+        "zh": { "name": "Loaded 分支", "description": "攻击时有概率释放震荡波造成伤害与眩晕怪物命中时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1200,6 +1273,7 @@
         "positionIndex": 7,
         "name": "Ancient Vitality",
         "description": "Increases the maximum life of ent colossus.",
+        "zh": { "name": "远古耐力", "description": "提高 ent colossus 的最大生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_life": 0 },
@@ -1211,6 +1285,7 @@
         "positionIndex": 8,
         "name": "Unleash The Roots",
         "description": "Chance on attack for ent colossus to cast Thorned Roots (Prophet Skill).",
+        "zh": { "name": "释放藤根", "description": "概率攻击时树人巨像至施法荆棘之根 (先知技能)。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 1 } }
       },
@@ -1219,6 +1294,7 @@
         "positionIndex": 9,
         "name": "Aged Tree Bark",
         "description": "Chance for ent colossus to block all incoming damage.",
+        "zh": { "name": "Aged Tree 树皮", "description": "概率使树人巨像至格挡全部受到的伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1227,6 +1303,7 @@
         "positionIndex": 10,
         "name": "Center of the Forest",
         "description": "Rotating branches orbit the ent colossus dealing damage and rooting monsters in place on hit.",
+        "zh": { "name": "Center 之 Forest", "description": "旋转分支轨道树人巨像造成伤害与 rooting 怪物 place 命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1238,6 +1315,7 @@
         "positionIndex": 11,
         "name": "Scorched Branchsmash",
         "description": "Chance when attacking to smash the ground unleashing burning fissures knocking monsters in air and inflicting burning.",
+        "zh": { "name": "Scorched Branchsmash", "description": "概率当攻击时至猛击地面释放燃烧地裂击退怪物空中与施加燃烧。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1260,6 +1338,7 @@
         "positionIndex": 12,
         "name": "Colossal Canopy",
         "description": "Increases ent colossus damage based on its life. Ent colossus gains increased life.",
+        "zh": { "name": "巨型 Canopy", "description": "提高树人巨像伤害基于生命。树人巨像获得提高生命。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_summon_life": 0, "summon_life": 0 },
@@ -1271,6 +1350,7 @@
         "positionIndex": 13,
         "name": "Blood Hungry Roots",
         "description": "Ent colossus constantly sends roots towards nearby monsters dealing damage and rooting them for a short duration.",
+        "zh": { "name": "鲜血 Hungry 藤根", "description": "树人巨像 constantly 发出藤根朝向附近怪物造成伤害与 rooting 它们短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "summon_attack_speed": 0 },
@@ -1282,6 +1362,7 @@
         "positionIndex": 14,
         "name": "Trunk Crusher",
         "description": "Ent Colossus throws a huge tree trunk with each attack dealing increased damage and knocking monsters back on hit.",
+        "zh": { "name": "Trunk 粉碎者", "description": "树人巨像投掷巨大 tree trunk 使用每个攻击造成提高伤害与击退怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1296,6 +1377,7 @@
     "name": "Deep Rooted",
     "kind": "passive",
     "description": "Increases all resistances.",
+    "zh": { "name": "深根固本", "description": "提高全抗性。" },
     "tags": [
       "Passive"
     ],
@@ -1326,6 +1408,7 @@
     "name": "Summon Ent",
     "kind": "active",
     "description": "Summons an ent to fight by your side.",
+    "zh": { "name": "召唤树人", "description": "召唤一名树人与你并肩作战。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -1389,6 +1472,7 @@
         "positionIndex": 0,
         "name": "Summon Ent",
         "description": "Core of the Summon Ent subtree.",
+        "zh": { "name": "召唤树人", "description": "召唤树人 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1396,6 +1480,7 @@
         "positionIndex": 1,
         "name": "Power of the Forest",
         "description": "Increases the maximum amount of ents you can summon.",
+        "zh": { "name": "力量之 Forest", "description": "提高 ents you can summon 的最大数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "summon_max_amount": 0 },
@@ -1407,6 +1492,7 @@
         "positionIndex": 2,
         "name": "Shielding Bark",
         "description": "Increases the ent´s damage reduction from all sources.",
+        "zh": { "name": "护盾树皮", "description": "提高树人的伤害减免从全部来源。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -1418,6 +1504,7 @@
         "positionIndex": 3,
         "name": "Elder´s Branches",
         "description": "Increases the damage dealt by the ent.",
+        "zh": { "name": "Elder's 分支", "description": "提高造成的伤害树人。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1429,6 +1516,7 @@
         "positionIndex": 4,
         "name": "Aging Branch",
         "description": "Increases the maximum life of the ent.",
+        "zh": { "name": "Aging 分支", "description": "提高 the ent 的最大生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_life": 0 },
@@ -1440,6 +1528,7 @@
         "positionIndex": 5,
         "name": "Blood Hungering Bark",
         "description": "Increases damage dealt by the ent but also decreases its maximum life.",
+        "zh": { "name": "鲜血 Hungering 树皮", "description": "提高 the ent but also decreases its maximum life 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "summon_life": 0 },
@@ -1451,6 +1540,7 @@
         "positionIndex": 6,
         "name": "Quicker Roots",
         "description": "Increases the movement speed of the ent.",
+        "zh": { "name": "Quicker 藤根", "description": "提高 the ent 的移动速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_movement_speed": 0 },
@@ -1462,6 +1552,7 @@
         "positionIndex": 7,
         "name": "Poisoning Bark Smash",
         "description": "Chance on hit to inflict poisoned and dealing increased damage.",
+        "zh": { "name": "Poisoning 树皮猛击", "description": "命中时有概率施加中毒与造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1484,6 +1575,7 @@
         "positionIndex": 8,
         "name": "Canopy Growth",
         "description": "Increases the size and life of the ent.",
+        "zh": { "name": "Canopy 生长", "description": "提高 the ent 的size 与生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0, "summon_life": 0 },
@@ -1495,6 +1587,7 @@
         "positionIndex": 9,
         "name": "Penetrating Branches",
         "description": "Ents execute targets below a threshold.",
+        "zh": { "name": "穿透分支", "description": "树人处决目标低于阈值。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1506,6 +1599,7 @@
         "positionIndex": 10,
         "name": "Throwing Branches",
         "description": "Chance on attack for ents to cast Thorned Branch (Prophet Skill).",
+        "zh": { "name": "投掷分支", "description": "概率攻击时树人至施法荆棘枝 (先知技能)。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 1 } }
       },
@@ -1514,6 +1608,7 @@
         "positionIndex": 11,
         "name": "Saplings",
         "description": "Summon increased amount of smaller ent saplings that gain increased attack speed and movement speed. Summon Ent now has a cooldown.",
+        "zh": { "name": "Saplings", "description": "召唤物提高数量之更小树人 saplings 获得提高攻击速度与移动速度。召唤树人有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1533,6 +1628,7 @@
         "positionIndex": 12,
         "name": "Charging Forest",
         "description": "Ents charge towards nearest monsters if far away from target unleashing a strong area of effect pulse on hit dealing additional damage.",
+        "zh": { "name": "冲锋 Forest", "description": "树人冲锋朝向最近的怪物 if 远处远离从目标释放 strong 范围脉冲命中时造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1552,6 +1648,7 @@
         "positionIndex": 13,
         "name": "Link of Nature",
         "description": "Ents are tethered to each other by a chain which inflicts poisoned and deals damage to monsters on hit.",
+        "zh": { "name": "Link 之自然", "description": "树人 tethered 至每个其他连锁从而施加中毒与造成伤害至怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "increased_poisoned_damage": 0 },
@@ -1573,6 +1670,7 @@
         "positionIndex": 14,
         "name": "Flaming Branch",
         "description": "Ents have a chance on attack to unleash a fiery pulse knocking monsters back dealing damage and inflicting burning on hit.",
+        "zh": { "name": "燃烧分支", "description": "树人有概率攻击时至释放炽焰脉冲击退怪物造成伤害与施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1598,6 +1696,7 @@
     "name": "Summon Spirit of The Forest",
     "kind": "active",
     "description": "Summons a spirit of the forest increasing life and mana for you and your party.",
+    "zh": { "name": "召唤森林之灵", "description": "召唤一位森林之灵，为你和队友提高生命和法力。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -1671,6 +1770,7 @@
         "positionIndex": 0,
         "name": "Summon Spirit of The Forest",
         "description": "Core of the Summon Spirit of The Forest subtree.",
+        "zh": { "name": "召唤森林之灵", "description": "召唤森林之灵 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1678,6 +1778,7 @@
         "positionIndex": 1,
         "name": "Vitality of Wilderness",
         "description": "Adds maximum life to you and your party members (Flat)",
+        "zh": { "name": "耐力之 Wilderness", "description": "附加最大生命至你与你的队友 (Flat)。" },
         "maxRank": 5,
         "effects": { "base": { "life": 0 }, "perRank": { "life": 150 } }
       },
@@ -1686,6 +1787,7 @@
         "positionIndex": 2,
         "name": "Longer Lasting Harmony",
         "description": "Increases the duration of spirit of the forest",
+        "zh": { "name": "更久持续 Harmony", "description": "提高 spirit of the forest 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1697,6 +1799,7 @@
         "positionIndex": 3,
         "name": "Defense of Wilderness",
         "description": "Increases the defense of you and your party members",
+        "zh": { "name": "防御之 Wilderness", "description": "提高 you and your party members 的防御。" },
         "maxRank": 5,
         "effects": {
           "base": { "enhanced_defense": 0 },
@@ -1708,6 +1811,7 @@
         "positionIndex": 4,
         "name": "Recuperating Mantra",
         "description": "Increases the life and mana replenish for you and your party members.",
+        "zh": { "name": "Recuperating Mantra", "description": "提高生命与法力恢复你与你的队友。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0, "mana_replenish_pct": 0 },
@@ -1719,6 +1823,7 @@
         "positionIndex": 5,
         "name": "Prayer of Nature",
         "description": "Increases all skills for you and your party members.",
+        "zh": { "name": "祈祷之自然", "description": "提高全部技能你与你的队友。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_skills": 0 },
@@ -1730,6 +1835,7 @@
         "positionIndex": 6,
         "name": "Manawell of Wilderness",
         "description": "Adds maximum mana to you and your party members (Flat)",
+        "zh": { "name": "法力源泉之 Wilderness", "description": "附加最大法力至你与你的队友 (Flat)。" },
         "maxRank": 5,
         "effects": { "base": { "mana": 0 }, "perRank": { "mana": 150 } }
       },
@@ -1738,6 +1844,7 @@
         "positionIndex": 7,
         "name": "Essence of Danger",
         "description": "Increases attack speed and faster cast rate for you and your party members.",
+        "zh": { "name": "精华之 Danger", "description": "提高攻击速度与施法速度你与你的队友。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0, "faster_cast_rate": 0 },
@@ -1749,6 +1856,7 @@
         "positionIndex": 8,
         "name": "Blessing of Wilderness",
         "description": "Increases magic skill damage and attack damage for you and your party.",
+        "zh": { "name": "Blessing 之 Wilderness", "description": "提高魔法技能伤害与攻击伤害你与你的队伍。" },
         "maxRank": 5,
         "effects": {
           "base": { "magic_skill_damage": 0, "attack_damage": 0 },
@@ -1760,6 +1868,7 @@
         "positionIndex": 9,
         "name": "Purified Terrain",
         "description": "Increases the movement speed for you and your party members.",
+        "zh": { "name": "Purified 地形", "description": "提高移动速度你与你的队友。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1771,6 +1880,7 @@
         "positionIndex": 10,
         "name": "Oak´s Heart",
         "description": "Increases damage return for you and your party members.",
+        "zh": { "name": "橡木的核心", "description": "提高伤害反伤你与你的队友。" },
         "maxRank": 5,
         "effects": {
           "base": { "damage_return": 0 },
@@ -1782,6 +1892,7 @@
         "positionIndex": 11,
         "name": "Cursed Spirit",
         "description": "Increases ailment damage for you and your party members.",
+        "zh": { "name": "被诅咒灵体", "description": "提高异常状态伤害你与你的队友。" },
         "maxRank": 3,
         "effects": {
           "base": { "ailment_damage_all": 0 },
@@ -1793,6 +1904,7 @@
         "positionIndex": 12,
         "name": "Forest´s Blessing",
         "description": "Increases the amount of life spirit of the forest provides to you and your party.",
+        "zh": { "name": "Forest's Blessing", "description": "提高 life spirit of the forest provides to you and your party 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_life": 0 },
@@ -1804,6 +1916,7 @@
         "positionIndex": 13,
         "name": "Mystic Voodoo",
         "description": "Spirit of the Forest fires thorns at nearby monsters when you or your party member takes damage.",
+        "zh": { "name": "Mystic Voodoo", "description": "灵体之 Forest 发射荆棘附近怪物当你你的队伍 member 承受伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1815,6 +1928,7 @@
         "positionIndex": 14,
         "name": "Malevolent Spirit",
         "description": "Increases attack damage and attack rating for you and your party.",
+        "zh": { "name": "Malevolent 灵体", "description": "提高攻击伤害与攻击命中你与你的队伍。" },
         "maxRank": 3,
         "effects": {
           "base": { "attack_damage": 0, "attack_rating_pct": 0 },
@@ -1829,6 +1943,7 @@
     "name": "Skinwalker",
     "kind": "passive",
     "description": "A portion of your life is added as physical damage.",
+    "zh": { "name": "皮行者", "description": "你的一部分生命转化为物理伤害。" },
     "damageType": "physical",
     "tags": [
       "Passive"
@@ -1862,6 +1977,7 @@
     "name": "Wounding Paw",
     "kind": "active",
     "description": "Strike monsters with increased damage with a chance to unleash a ripple of blood.",
+    "zh": { "name": "创伤之爪", "description": "以提高的伤害打击怪物，并有概率释放一道血之涟漪。" },
     "damageType": "physical",
     "tags": [
       "Attack",
@@ -1932,6 +2048,7 @@
         "positionIndex": 0,
         "name": "Wounding Paw",
         "description": "Core of the Wounding Paw subtree.",
+        "zh": { "name": "创伤之爪", "description": "创伤之爪 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1939,6 +2056,7 @@
         "positionIndex": 1,
         "name": "Sharper Claws",
         "description": "Increases damage when using wounding paw.",
+        "zh": { "name": "Sharper Claws", "description": "提高伤害使用创伤之爪。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1950,6 +2068,7 @@
         "positionIndex": 2,
         "name": "Accurate Slash",
         "description": "Increases attack rating when using wounding paw.",
+        "zh": { "name": "精准斩击", "description": "提高攻击命中使用创伤之爪。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1961,6 +2080,7 @@
         "positionIndex": 3,
         "name": "Shredding Claws",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Shredding Claws", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1979,6 +2099,7 @@
         "positionIndex": 4,
         "name": "Disorienting Crush",
         "description": "Chance to stun monsters on hit dealing increased damage.",
+        "zh": { "name": "Disorienting Crush", "description": "概率眩晕怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1995,6 +2116,7 @@
         "positionIndex": 5,
         "name": "Pummeling The Disoriented",
         "description": "Gain increased damage to stunned targets.",
+        "zh": { "name": "Pummeling Disoriented", "description": "获得提高伤害至眩晕目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2006,6 +2128,7 @@
         "positionIndex": 6,
         "name": "Amplified Rabies",
         "description": "Increased attack speed when using wounding paw.",
+        "zh": { "name": "强化狂犬病", "description": "提高攻击速度使用创伤之爪。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -2017,6 +2140,7 @@
         "positionIndex": 7,
         "name": "Slick Movement",
         "description": "Decreased movement diminish and mana cost when using wounding paw.",
+        "zh": { "name": "Slick Movement", "description": "降低移动衰减与法力消耗使用创伤之爪。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0, "mana_cost_reduction": 0 },
@@ -2031,6 +2155,7 @@
         "positionIndex": 8,
         "name": "Critical Slashing",
         "description": "Increased critical strike chance when using wounding paw.",
+        "zh": { "name": "暴击斩击", "description": "提高暴击概率使用创伤之爪。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -2042,6 +2167,7 @@
         "positionIndex": 9,
         "name": "Slashing with Accuracy",
         "description": "Increases critical strike damage when using wounding paw.",
+        "zh": { "name": "斩击使用 Accuracy", "description": "提高暴击伤害使用创伤之爪。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -2053,6 +2179,7 @@
         "positionIndex": 10,
         "name": "Vital Siphoning",
         "description": "Increases life steal and mana steal when using wounding paw.",
+        "zh": { "name": "生命虹吸", "description": "提高生命偷取与法力偷取使用创伤之爪。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_steal": 0, "mana_steal": 0 },
@@ -2064,6 +2191,7 @@
         "positionIndex": 11,
         "name": "Accelerated Slash",
         "description": "Every fourth attack is empowered dealing increased damage on a larger radius.",
+        "zh": { "name": "Accelerated 斩击", "description": "每 fourth 攻击强化造成提高伤害更大半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 75 },
@@ -2075,6 +2203,7 @@
         "positionIndex": 12,
         "name": "Brutalizing Decomposition",
         "description": "Chance on monster kill to unleash a ripple of blood dealing damage on a large radius.",
+        "zh": { "name": "暴虐 Decomposition", "description": "概率在怪物击杀至释放涟漪之鲜血造成伤害大型半径。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2090,6 +2219,7 @@
         "positionIndex": 13,
         "name": "Slashing Momentum",
         "description": "Gain a stack of slashing momentum on hit increasing your attack speed and damage.",
+        "zh": { "name": "斩击 Momentum", "description": "获得层之斩击 momentum 命中时提高你的攻击速度与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -2109,6 +2239,7 @@
         "positionIndex": 14,
         "name": "Animal Siphoning",
         "description": "Gain increased life steal, critical strike damage and movement speed on kill.",
+        "zh": { "name": "Animal 虹吸", "description": "获得提高生命偷取，暴击伤害与移动速度击杀时。" },
         "maxRank": 3,
         "effects": {
           "base": { "life_steal": 0, "crit_damage": 0, "movement_speed": 0 },
@@ -2127,6 +2258,7 @@
     "name": "Leaping Charge",
     "kind": "active",
     "description": "Perform a charging leap forward inflicting physical damage to monsters on hit.",
+    "zh": { "name": "跃冲", "description": "向前发起冲锋跃击，命中时对怪物造成物理伤害。" },
     "damageType": "physical",
     "tags": [
       "Cast",
@@ -2186,6 +2318,7 @@
         "positionIndex": 0,
         "name": "Leaping Charge",
         "description": "Core of the Leaping Charge subtree.",
+        "zh": { "name": "跃冲", "description": "跃冲 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2193,6 +2326,7 @@
         "positionIndex": 1,
         "name": "Deadly Slashes",
         "description": "Increases damage dealt by charging leap.",
+        "zh": { "name": "致命 Slashes", "description": "提高 charging leap 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2204,6 +2338,7 @@
         "positionIndex": 2,
         "name": "Wide Slashing",
         "description": "Increases the area of effect radius of the slashes.",
+        "zh": { "name": "Wide 斩击", "description": "提高 effect radius of the slashes 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2215,6 +2350,7 @@
         "positionIndex": 3,
         "name": "Rupturing Charge",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "破裂冲锋", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -2233,6 +2369,7 @@
         "positionIndex": 4,
         "name": "Nurturing Slashes",
         "description": "Increases life stolen per hit when using charging leap.",
+        "zh": { "name": "Nurturing Slashes", "description": "提高生命偷取每命中使用冲锋跃击。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_steal": 0 },
@@ -2244,6 +2381,7 @@
         "positionIndex": 5,
         "name": "Long Reaching Claws",
         "description": "Increases the maximum range of charging leap.",
+        "zh": { "name": "长距延伸 Claws", "description": "提高 charging leap 的最大范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2255,6 +2393,7 @@
         "positionIndex": 6,
         "name": "Punctured Skin",
         "description": "Increases damage dealt to targets inflicted with bleeding.",
+        "zh": { "name": "Punctured Skin", "description": "提高对 目标施加使用流血 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -2266,6 +2405,7 @@
         "positionIndex": 7,
         "name": "Fatal Slashing",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "Fatal 斩击", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -2277,6 +2417,7 @@
         "positionIndex": 8,
         "name": "Deadly Slash",
         "description": "Chance to deal a deadly blow with increased effectiveness.",
+        "zh": { "name": "致命斩击", "description": "概率造成致命一击使用提高效果。" },
         "maxRank": 5,
         "effects": {
           "base": { "deadly_blow": 0, "deadly_blow_effectiveness": 0 },
@@ -2288,6 +2429,7 @@
         "positionIndex": 9,
         "name": "Raging Slash",
         "description": "Chance on hit to gain a stack of rage when using charging leap, increasing your attack speed.",
+        "zh": { "name": "狂怒斩击", "description": "命中时有概率获得层之怒气使用冲锋跃击，提高你的攻击速度。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2303,6 +2445,7 @@
         "positionIndex": 10,
         "name": "Elusive Leap",
         "description": "Reduces charging leaps damage but ignores terrain.",
+        "zh": { "name": "Elusive 跃击", "description": "降低冲锋跃击伤害 ignores 地形。" },
         "maxRank": 1,
         "effects": {
           "base": { "physical_skill_damage": -40, "terrain_ignored": 100 },
@@ -2314,6 +2457,7 @@
         "positionIndex": 11,
         "name": "Skipping Claws",
         "description": "Unleash multiple flying claws that deal damage and bounce off terrain while using charging leap.",
+        "zh": { "name": "Skipping Claws", "description": "释放多个飞散 claws 造成伤害与弹射关闭地形使用冲锋跃击。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 1 },
@@ -2325,6 +2469,7 @@
         "positionIndex": 12,
         "name": "Trail of Agony",
         "description": "Leave behind a trail of blood dealing area of effect damage on your path.",
+        "zh": { "name": "轨迹之 Agony", "description": "留下身后轨迹之鲜血造成范围伤害你的路径。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -2336,6 +2481,7 @@
         "positionIndex": 13,
         "name": "Shuriken of Claws",
         "description": "Throw a shuriken of claws dealing damage to monsters on hit and forcing you to charge towards it after a short delay.",
+        "zh": { "name": "Shuriken 之 Claws", "description": "投掷 shuriken 之 claws 造成伤害至怪物命中时与 forcing 你至冲锋朝向短暂延迟后。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_size": 0 },
@@ -2347,6 +2493,7 @@
         "positionIndex": 14,
         "name": "Herald of Bones",
         "description": "Chance on monster kill to unleash multiple sharp bones bouncing off terrain and dealing damage on hit.",
+        "zh": { "name": "Herald 之骸骨", "description": "概率在怪物击杀至释放多个尖锐骸骨弹跳关闭地形与造成伤害命中时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2365,6 +2512,7 @@
     "name": "Storm Hawk",
     "kind": "active",
     "description": "Morph into a storm hawk gaining flying and convert a portion of your physical damage into lightning damage. Your attacks now unleash a chain lightning.",
+    "zh": { "name": "风暴鹰", "description": "化作获得飞行能力的风暴鹰，将你的一部分物理伤害转化为闪电伤害。你的攻击现在会释放连锁闪电。" },
     "damageType": "lightning",
     "tags": [
       "Cast",
@@ -2410,6 +2558,7 @@
         "positionIndex": 0,
         "name": "Storm Hawk",
         "description": "Core of the Storm Hawk subtree.",
+        "zh": { "name": "风暴鹰", "description": "风暴鹰 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2417,6 +2566,7 @@
         "positionIndex": 1,
         "name": "Hawk´s Eye",
         "description": "Increases attack range while in hawk form.",
+        "zh": { "name": "雄鹰的之眼", "description": "提高攻击范围当雄鹰形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2428,6 +2578,7 @@
         "positionIndex": 2,
         "name": "Hawk´s Surge",
         "description": "Increases damage dealt while in hawk form.",
+        "zh": { "name": "雄鹰的涌动", "description": "提高造成的伤害当雄鹰形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2439,6 +2590,7 @@
         "positionIndex": 3,
         "name": "Hawk´s Storm",
         "description": "Increases lightning bounces while in hawk form.",
+        "zh": { "name": "雄鹰的风暴", "description": "提高闪电弹射当雄鹰形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -2450,6 +2602,7 @@
         "positionIndex": 4,
         "name": "Hawk´s Focus",
         "description": "Chance on hit to strike the target with a lightning bolt while in hawk form.",
+        "zh": { "name": "雄鹰的 Focus", "description": "命中时有概率strike 目标使用闪电电矢当雄鹰形态。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2465,6 +2618,7 @@
         "positionIndex": 5,
         "name": "Hawk´s Flight",
         "description": "Increases movement speed while in hawk form.",
+        "zh": { "name": "雄鹰的 Flight", "description": "提高移动速度当雄鹰形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -2476,6 +2630,7 @@
         "positionIndex": 6,
         "name": "Hawk´s Agility",
         "description": "Increases attack speed while in hawk form.",
+        "zh": { "name": "雄鹰的敏捷身手", "description": "提高攻击速度当雄鹰形态。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -2487,6 +2642,7 @@
         "positionIndex": 7,
         "name": "Hawk´s Stasis",
         "description": "Chance to inflict stasis on hit while in hawk form.",
+        "zh": { "name": "雄鹰的停滞", "description": "概率施加停滞命中时当雄鹰形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -2505,6 +2661,7 @@
         "positionIndex": 8,
         "name": "Hawk´s Hunger",
         "description": "Chance to critical hit dealing increased critical damage while in hawk form.",
+        "zh": { "name": "雄鹰的饥渴", "description": "概率暴击命中造成提高暴击伤害当雄鹰形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -2516,6 +2673,7 @@
         "positionIndex": 9,
         "name": "Hawk´s Mind",
         "description": "Chance to inflict lightning break on hit while in hawk form.",
+        "zh": { "name": "雄鹰的心智", "description": "概率施加闪电击破命中时当雄鹰形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -2537,6 +2695,7 @@
         "positionIndex": 10,
         "name": "Hawk´s Shadow",
         "description": "Gain the ability to fly over terrain, but decreases your total movement speed while in hawk form.",
+        "zh": { "name": "雄鹰的暗影", "description": "获得 ability 至 fly 持续地形，降低你的总移动速度当雄鹰形态。" },
         "maxRank": 1,
         "effects": {
           "base": { "movement_speed": -25 },
@@ -2548,6 +2707,7 @@
         "positionIndex": 11,
         "name": "Stormbolts",
         "description": "When attacking fire multiple stormbolts in an arc while in hawk form.",
+        "zh": { "name": "Stormbolts", "description": "当攻击时火焰多个 stormbolts 呈弧线当雄鹰形态。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_count": 2 },
@@ -2559,6 +2719,7 @@
         "positionIndex": 12,
         "name": "Bird of Thunder",
         "description": "Increases stasis inflicted while in hawk form with increased stacks.",
+        "zh": { "name": "Bird 之雷霆", "description": "提高停滞施加当雄鹰形态使用提高层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_stasis_damage": 0, "max_skill_stacks": 0 },
@@ -2577,6 +2738,7 @@
         "positionIndex": 13,
         "name": "Thundering Bolt",
         "description": "Storm bolts call down bolts of lightning while traveling dealing damage on a large radius while in hawk form. Projectiles are now piercing.",
+        "zh": { "name": "Thundering 电矢", "description": "风暴电矢召唤倒地电矢之闪电当飞行造成伤害大型半径当雄鹰形态。投射物穿透。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "area_of_effect": 0 },
@@ -2588,6 +2750,7 @@
         "positionIndex": 14,
         "name": "Electric Screech",
         "description": "Chance when attacking in hawk form to unleash an electric screech causing monsters to be struck by lightning bolts on hit.",
+        "zh": { "name": "电气 Screech", "description": "概率当攻击时雄鹰形态至释放电气 screech 使怪物至受击闪电电矢命中时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2606,6 +2769,7 @@
     "name": "Spirit of the Ent",
     "kind": "active",
     "description": "Morph into an Ent with a chance to knock monsters back on hit stunning and dealing additional damage when colliding with terrain.",
+    "zh": { "name": "树人之灵", "description": "化作树人，命中时有概率击退怪物，与地形碰撞时眩晕并造成额外伤害。" },
     "damageType": "physical",
     "tags": [
       "Cast",
@@ -2657,6 +2821,7 @@
         "positionIndex": 0,
         "name": "Spirit of the Ent",
         "description": "Core of the Spirit of the Ent subtree.",
+        "zh": { "name": "树人之灵", "description": "树人之灵 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2664,6 +2829,7 @@
         "positionIndex": 1,
         "name": "Ent´s Rage",
         "description": "Increases damage while in ent form.",
+        "zh": { "name": "树人的怒气", "description": "提高伤害当树人形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2675,6 +2841,7 @@
         "positionIndex": 2,
         "name": "Ent´s Bark",
         "description": "Increases damage reduction from all sources while in ent form.",
+        "zh": { "name": "树人的树皮", "description": "提高伤害减免从全部来源当树人形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -2686,6 +2853,7 @@
         "positionIndex": 3,
         "name": "Ent´s Vitality",
         "description": "Increases maximum life while in ent form.",
+        "zh": { "name": "树人的耐力", "description": "提高最大生命当树人形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_life": 0 },
@@ -2697,6 +2865,7 @@
         "positionIndex": 4,
         "name": "Ent´s Weight",
         "description": "Chance to deal double damage on hit while in ent form.",
+        "zh": { "name": "树人的重量", "description": "概率造成双重伤害命中时当树人形态。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -2705,6 +2874,7 @@
         "positionIndex": 5,
         "name": "Ent´s Thorns",
         "description": "Increases damage return while in ent form.",
+        "zh": { "name": "树人的荆棘", "description": "提高伤害反伤当树人形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "damage_return": 0 },
@@ -2716,6 +2886,7 @@
         "positionIndex": 6,
         "name": "Ent´s Wisdom",
         "description": "Increases all resistances while in ent form.",
+        "zh": { "name": "树人的 Wisdom", "description": "提高全抗性当树人形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_resistances": 0 },
@@ -2727,6 +2898,7 @@
         "positionIndex": 7,
         "name": "Ent´s Roots",
         "description": "Chance on hit to root monsters in place dealing damage over time while in ent form..",
+        "zh": { "name": "树人的藤根", "description": "命中时有概率起始怪物 place 造成伤害随时间当树人形态。。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2743,6 +2915,7 @@
         "positionIndex": 8,
         "name": "Ent´s Trunk",
         "description": "Chance to block all incoming damage while in ent form.",
+        "zh": { "name": "树人的 Trunk", "description": "概率格挡全部受到的伤害当树人形态。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -2751,6 +2924,7 @@
         "positionIndex": 9,
         "name": "Ent´s Heart",
         "description": "Chance to replenish a portion of your maximum life when struck while in ent form.",
+        "zh": { "name": "树人的核心", "description": "概率恢复一部分你的最大生命受到攻击时当树人形态。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2766,6 +2940,7 @@
         "positionIndex": 10,
         "name": "Ent´s Intellect",
         "description": "Increases magic skill damage while in ent form.",
+        "zh": { "name": "树人的智慧", "description": "提高魔法技能伤害当树人形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "magic_skill_damage": 0 },
@@ -2777,6 +2952,7 @@
         "positionIndex": 11,
         "name": "Reflecting Branches",
         "description": "Chance to throw a huge branch towards monsters when struck while in ent form.",
+        "zh": { "name": "Reflecting 分支", "description": "概率投掷巨大分支朝向怪物受到攻击时当树人形态。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2792,6 +2968,7 @@
         "positionIndex": 12,
         "name": "Grizzly",
         "description": "Morph into a grizzly bear and gain increased damage based on your maximum life while in ent form.",
+        "zh": { "name": "Grizzly", "description": "化身进入 grizzly bear 与获得提高伤害基于你的最大生命当树人形态。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_max_life_per500": 0 },
@@ -2803,6 +2980,7 @@
         "positionIndex": 13,
         "name": "Dominos of Trunks",
         "description": "Chance when struck to summon a sequence of falling tree trunks towards the target while in ent form.",
+        "zh": { "name": "Dominos 之 Trunks", "description": "概率受到攻击时至召唤物 sequence 之坠落 tree trunks 朝向目标当树人形态。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2818,6 +2996,7 @@
         "positionIndex": 14,
         "name": "Crushing Trunksmash",
         "description": "Knock monsters back on hit while in ent form causing them to take increased damage when colliding with terrain.",
+        "zh": { "name": "粉碎 Trunksmash", "description": "击退怪物命中时当树人形态使其承受提高伤害当碰撞使用地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2832,6 +3011,7 @@
     "name": "Maelstrom of Frost",
     "kind": "active",
     "description": "Summon a maelstrom of frost around you inflicting cold and physical damage on hit.",
+    "zh": { "name": "霜之漩涡", "description": "在你周围召唤一场霜之漩涡，命中时造成冰冷和物理伤害。" },
     "damageType": "cold",
     "tags": [
       "Cast",
@@ -2916,6 +3096,7 @@
         "positionIndex": 0,
         "name": "Maelstrom of Frost",
         "description": "Core of the Maelstrom of Frost subtree.",
+        "zh": { "name": "霜之漩涡", "description": "霜之漩涡 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2923,6 +3104,7 @@
         "positionIndex": 1,
         "name": "Freezing Wind",
         "description": "Chance to freeze target on hit dealing increased damage.",
+        "zh": { "name": "冰冻 Wind", "description": "概率冻结目标命中时造成提高伤害。" },
         "maxRank": 4,
         "proc": {
           "trigger": "on_hit",
@@ -2939,6 +3121,7 @@
         "positionIndex": 2,
         "name": "Maelstroms Magnitude",
         "description": "Increases the area of effect radius of maelstrom of frost.",
+        "zh": { "name": "Maelstroms Magnitude", "description": "提高 effect radius of 霜之漩涡 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2950,6 +3133,7 @@
         "positionIndex": 3,
         "name": "Frostburning Temperature",
         "description": "Increases the damage dealt by maelstrom of frost.",
+        "zh": { "name": "Frostburning Temperature", "description": "提高 frost 的造成的伤害 maelstrom。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -2961,6 +3145,7 @@
         "positionIndex": 4,
         "name": "Coldsnapping Breeze",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "Coldsnapping Breeze", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -2979,6 +3164,7 @@
         "positionIndex": 5,
         "name": "Hypothermic Snap",
         "description": "Chance to deal double damage on hit.",
+        "zh": { "name": "Hypothermic Snap", "description": "命中时有概率造成双重伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -2987,6 +3173,7 @@
         "positionIndex": 6,
         "name": "Intense Temperature",
         "description": "Increases the tick frequency of maelstrom of frost.",
+        "zh": { "name": "Intense Temperature", "description": "提高 霜之漩涡 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -2998,6 +3185,7 @@
         "positionIndex": 7,
         "name": "Frosted Bones",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "Frosted 骸骨", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -3009,6 +3197,7 @@
         "positionIndex": 8,
         "name": "Leeching from Frost",
         "description": "Chance to replenish a portion of your maximum life on hit.",
+        "zh": { "name": "吸取从寒霜", "description": "命中时有概率恢复一部分最大生命。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -3024,6 +3213,7 @@
         "positionIndex": 9,
         "name": "Shattering Permafrost",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "粉碎永久冻土", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -3042,6 +3232,7 @@
         "positionIndex": 10,
         "name": "Chaotic Growth",
         "description": "Chance on monster kill to increase the area of effect radius of maelstrom of frost for a short duration.",
+        "zh": { "name": "Chaotic 生长", "description": "概率在怪物击杀至提高范围半径之霜之漩涡短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -3057,6 +3248,7 @@
         "positionIndex": 11,
         "name": "Endless Blizzard",
         "description": "Maelstrom of frost no longer expires draining your mana over time.",
+        "zh": { "name": "Endless 暴风雪", "description": "霜之漩涡更久到期汲取你的法力随时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "mana_cost_reduction": 8 },
@@ -3068,6 +3260,7 @@
         "positionIndex": 12,
         "name": "Meteor of Ice",
         "description": "Chance on hit to drop a meteor of ice on its location dealing increased damage on a large radius.",
+        "zh": { "name": "陨石术之寒冰", "description": "命中时有概率投下陨石术之寒冰位置造成提高伤害大型半径。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -3083,6 +3276,7 @@
         "positionIndex": 13,
         "name": "The Frozen Layer of Hell",
         "description": "Increases the area of effect radius of maelstrom of frost and executing monsters below a threshold.",
+        "zh": { "name": "冰冻 Layer 之地狱", "description": "提高 effect radius of 霜之漩涡 and executing monsters below a threshold 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "execute_below": 0 },
@@ -3094,6 +3288,7 @@
         "positionIndex": 14,
         "name": "Storm of Frost",
         "description": "The maelstrom drops chunks of ice on a radius around you dealing area of effect damage.",
+        "zh": { "name": "风暴之寒霜", "description": "maelstrom 落下 chunks 之寒冰半径周围你造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -3116,6 +3311,7 @@
     "name": "Swamp's Essence",
     "kind": "passive",
     "description": "Increases your maximum life.",
+    "zh": { "name": "沼泽精粹", "description": "提高你的最大生命。" },
     "tags": [
       "Passive"
     ],
@@ -3146,6 +3342,7 @@
     "name": "Manadwelling",
     "kind": "passive",
     "description": "Adds a portion of your mana as physical damage.",
+    "zh": { "name": "法力栖居", "description": "将你的一部分法力转化为物理伤害。" },
     "damageType": "physical",
     "tags": [
       "Passive"
@@ -3179,6 +3376,7 @@
     "name": "Spirit of The Wendigo",
     "kind": "active",
     "description": "Morph into a wendigo gaining increased combat stats.",
+    "zh": { "name": "温迪戈之灵", "description": "化作温迪戈，获得提高的战斗属性。" },
     "damageType": "physical",
     "tags": [
       "Cast",
@@ -3232,6 +3430,7 @@
         "positionIndex": 0,
         "name": "Spirit of The Wendigo",
         "description": "Core of the Spirit of The Wendigo subtree.",
+        "zh": { "name": "温迪戈之灵", "description": "温迪戈之灵 子树核心。" },
         "maxRank": 1
       },
       {
@@ -3239,6 +3438,7 @@
         "positionIndex": 1,
         "name": "Wendigo´s Rage",
         "description": "Increases physical damage while in wendigo form.",
+        "zh": { "name": "温迪戈的怒气", "description": "提高物理伤害当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -3250,6 +3450,7 @@
         "positionIndex": 2,
         "name": "Wendigo´s Hunger",
         "description": "Increases attack speed while in wendigo form.",
+        "zh": { "name": "温迪戈的饥渴", "description": "提高攻击速度当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -3261,6 +3462,7 @@
         "positionIndex": 3,
         "name": "Wendigo´s Agility",
         "description": "Increases movement speed while in wendigo form.",
+        "zh": { "name": "温迪戈的敏捷身手", "description": "提高移动速度当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -3272,6 +3474,7 @@
         "positionIndex": 4,
         "name": "Wendigo´s Skin",
         "description": "Increases resistances while in wendigo form.",
+        "zh": { "name": "温迪戈的 Skin", "description": "提高抗性当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_resistances": 0 },
@@ -3283,6 +3486,7 @@
         "positionIndex": 5,
         "name": "Wendigo´s Focus",
         "description": "Increases critical strike damage while in wendigo form.",
+        "zh": { "name": "温迪戈的 Focus", "description": "提高暴击伤害当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -3294,6 +3498,7 @@
         "positionIndex": 6,
         "name": "Wendigo´s Claws",
         "description": "Increases bleed damage inflicted while in wendigo form.",
+        "zh": { "name": "温迪戈的 Claws", "description": "提高流血伤害施加当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -3312,6 +3517,7 @@
         "positionIndex": 7,
         "name": "Wendigo´s Paw",
         "description": "Increases the attack radius while in wendigo form.",
+        "zh": { "name": "温迪戈的 Paw", "description": "提高攻击半径当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -3323,6 +3529,7 @@
         "positionIndex": 8,
         "name": "Wendigo´s Recuperation",
         "description": "Increases life replenish while in wendigo form.",
+        "zh": { "name": "温迪戈的 Recuperation", "description": "提高生命恢复当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -3334,6 +3541,7 @@
         "positionIndex": 9,
         "name": "Wendigo´s Bloodlust",
         "description": "Gain a stack of bloodlust after monster kill increasing your damage dealt while in wendigo form.",
+        "zh": { "name": "温迪戈的 Bloodlust", "description": "获得层之 bloodlust 之后怪物击杀提高你的造成的伤害当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "max_skill_stacks": 0 },
@@ -3345,6 +3553,7 @@
         "positionIndex": 10,
         "name": "Wendigo´s Endurance",
         "description": "Increases your defense while in wendigo form.",
+        "zh": { "name": "温迪戈的 Endurance", "description": "提高你的防御当温迪戈形态。" },
         "maxRank": 5,
         "effects": {
           "base": { "enhanced_defense": 0 },
@@ -3356,6 +3565,7 @@
         "positionIndex": 11,
         "name": "Blood Thirsty Skinwalker",
         "description": "Increases life steal, life steal frequency and damage while in wendigo form.",
+        "zh": { "name": "鲜血 Thirsty 皮行者", "description": "提高生命偷取，生命偷取 frequency 与伤害当温迪戈形态。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -3375,6 +3585,7 @@
         "positionIndex": 12,
         "name": "Clawarang",
         "description": "Throw a boomerang of claws when attacking while in vendigo form. Catching the boomerang increases your damage for a short duration.",
+        "zh": { "name": "Clawarang", "description": "投掷 boomerang 之 claws 当攻击时当 vendigo 形态。Catching boomerang 提高你的伤害短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_size": 0 },
@@ -3386,6 +3597,7 @@
         "positionIndex": 13,
         "name": "Flesh Ripping Beast",
         "description": "Chance to inflict bleeding on hit with increased stacks of bleeding while in wendigo form.",
+        "zh": { "name": "Flesh Ripping Beast", "description": "概率施加流血命中时使用提高层数之流血当温迪戈形态。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -3408,6 +3620,7 @@
         "positionIndex": 14,
         "name": "Blood Carnage",
         "description": "Every attack adds a stack of blood carnage, at maximum stacks become empowered unleashing ripples of blood on hit.",
+        "zh": { "name": "鲜血杀戮", "description": "每攻击 adds 层之鲜血杀戮，最大层数 become 强化释放涟漪之鲜血命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "max_skill_stacks": 4 },

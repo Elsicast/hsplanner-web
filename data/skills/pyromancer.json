@@ -5,6 +5,7 @@
     "name": "Blazing Trail",
     "kind": "active",
     "description": "Leave behind a trail of fire dealing fire damage to monsters.",
+    "zh": { "name": "炽焰足迹", "description": "在身后留下一道火焰轨迹，对怪物造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Area of Effect", "Spell"],
     "movementDuringUse": 85,
@@ -28,6 +29,7 @@
         "positionIndex": 0,
         "name": "Blazing Trail",
         "description": "Core of the Blazing Trail subtree.",
+        "zh": { "name": "炽焰足迹", "description": "炽焰足迹 子树核心。" },
         "maxRank": 1
       },
       {
@@ -35,6 +37,7 @@
         "positionIndex": 1,
         "name": "Timed Fire",
         "description": "Increases the duration of blazing trail.",
+        "zh": { "name": "Timed 火焰", "description": "提高 炽焰足迹 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -46,6 +49,7 @@
         "positionIndex": 2,
         "name": "Scorch",
         "description": "Increased the damage dealt by blazing trail.",
+        "zh": { "name": "Scorch", "description": "提高造成的伤害炽焰足迹。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -57,6 +61,7 @@
         "positionIndex": 3,
         "name": "Expanded Flames",
         "description": "Increases the area of effect radius of blazing trail.",
+        "zh": { "name": "Expanded 烈焰", "description": "提高 effect radius of 炽焰足迹 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -68,6 +73,7 @@
         "positionIndex": 4,
         "name": "Flaming Steps",
         "description": "Increases your movement speed while blazing trail is active.",
+        "zh": { "name": "燃烧踏入", "description": "提高你的移动速度当炽焰足迹激活。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -79,6 +85,7 @@
         "positionIndex": 5,
         "name": "Agonizing Heat",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "痛苦灼热", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -90,6 +97,7 @@
         "positionIndex": 6,
         "name": "Combusting Flames",
         "description": "Trails inflict burning on hit.",
+        "zh": { "name": "燃烧烈焰", "description": "轨迹施加燃烧命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -108,6 +116,7 @@
         "positionIndex": 7,
         "name": "Burning Veins",
         "description": "Trails inflict fire break on hit.",
+        "zh": { "name": "燃烧血脉", "description": "轨迹施加火焰击破命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -126,6 +135,7 @@
         "positionIndex": 8,
         "name": "Paralyzing Fire",
         "description": "Trails inflict slow on hit.",
+        "zh": { "name": "Paralyzing 火焰", "description": "轨迹施加缓慢命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "slow_duration": 0, "slow_target": 0 },
@@ -137,6 +147,7 @@
         "positionIndex": 9,
         "name": "Crackling Heat",
         "description": "Chance of trails to pulsate every second.",
+        "zh": { "name": "Crackling 灼热", "description": "概率之轨迹至 pulsate 每第二。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 7 } }
       },
@@ -145,6 +156,7 @@
         "positionIndex": 10,
         "name": "Fueled Flames",
         "description": "Increases the tick rate of blazing trail.",
+        "zh": { "name": "驱动烈焰", "description": "提高 炽焰足迹 的每跳速率。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -156,6 +168,7 @@
         "positionIndex": 11,
         "name": "Forking Flames",
         "description": "Trails have a chance to fork.",
+        "zh": { "name": "分叉烈焰", "description": "Trails 有概率分叉。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -171,6 +184,7 @@
         "positionIndex": 12,
         "name": "Circle of Fire",
         "description": "You now send trails of fire outwards to all directions.",
+        "zh": { "name": "圆环之火焰", "description": "你发出轨迹之火焰向外至全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "trail_count": 0 },
@@ -182,6 +196,7 @@
         "positionIndex": 13,
         "name": "Trail of Comets",
         "description": "Now drops comets that explode into flames.",
+        "zh": { "name": "轨迹之彗星", "description": "落下彗星爆炸进入烈焰。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -193,6 +208,7 @@
         "positionIndex": 14,
         "name": "Detonation Field",
         "description": "Instead of flames now leaves behind fiery mines exploding into flaming fissures.",
+        "zh": { "name": "引爆野域", "description": "改为之烈焰留下身后炽焰 mines exploding 进入燃烧地裂。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -207,6 +223,7 @@
     "name": "Fire Enchant",
     "kind": "buff",
     "description": "Enchant your attacks with additive fire damage inflicting burning on monsters. Your spells also apply a stack of Ignite.",
+    "zh": { "name": "火焰附魔", "description": "以附加火焰伤害附魔你的攻击，点燃怪物。你的法术还会施加一层点燃。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
@@ -236,6 +253,7 @@
     "name": "Phoenix Flight",
     "kind": "active",
     "description": "Charge forward through the air dealing area of effect fire damage when landing.",
+    "zh": { "name": "凤凰飞翔", "description": "向前腾空冲锋，落地时造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Area of Effect", "Movement", "Charge"],
     "movementDuringUse": 85,
@@ -259,6 +277,7 @@
         "positionIndex": 0,
         "name": "Phoenix Flight",
         "description": "Core of the Phoenix Flight subtree.",
+        "zh": { "name": "凤凰飞翔", "description": "凤凰飞翔 子树核心。" },
         "maxRank": 1
       },
       {
@@ -266,6 +285,7 @@
         "positionIndex": 1,
         "name": "Flaming Pecker",
         "description": "Increases the damage dealt by phoenix flight.",
+        "zh": { "name": "燃烧 Pecker", "description": "提高造成的伤害凤凰飞翔。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -277,6 +297,7 @@
         "positionIndex": 2,
         "name": "Swift Flight",
         "description": "Increases flight speed of phoenix flight.",
+        "zh": { "name": "迅捷 Flight", "description": "提高 凤凰飞翔 的flight 速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -288,6 +309,7 @@
         "positionIndex": 3,
         "name": "Scorching Fury",
         "description": "Unleash fireballs in a circle around you when landing.",
+        "zh": { "name": "灼热狂怒", "description": "释放 fireballs 圆环周围你落地时。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -299,6 +321,7 @@
         "positionIndex": 4,
         "name": "Infused Flames",
         "description": "Gain increased fire skill damage for a short period when crashing into monsters.",
+        "zh": { "name": "灌注烈焰", "description": "获得提高火焰技能伤害短距期间当 crashing 进入怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -310,6 +333,7 @@
         "positionIndex": 5,
         "name": "Searing Touch",
         "description": "Chance to unleash searing chains when flying through monsters.",
+        "zh": { "name": "灼烧之触", "description": "概率释放灼烧锁链当飞散穿过怪物。" },
         "maxRank": 2,
         "proc": {
           "trigger": "on_hit",
@@ -325,6 +349,7 @@
         "positionIndex": 6,
         "name": "Burning Screech",
         "description": "Increases landing nova area of effect.",
+        "zh": { "name": "燃烧 Screech", "description": "提高 effect 的着陆新星范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -336,6 +361,7 @@
         "positionIndex": 7,
         "name": "Collateral Burning",
         "description": "Deal additional fire damage to nearby monsters while phoenix flight is active.",
+        "zh": { "name": "波及燃烧", "description": "造成额外火焰伤害至附近怪物当凤凰飞翔激活。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -347,6 +373,7 @@
         "positionIndex": 8,
         "name": "Afterburn",
         "description": "Chance on landing to unleash an additional nova.",
+        "zh": { "name": "Afterburn", "description": "概率在着陆至释放额外新星。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -362,6 +389,7 @@
         "positionIndex": 9,
         "name": "Molten Feathers",
         "description": "Increases damage reduction while phoenix flight is active.",
+        "zh": { "name": "熔火 Feathers", "description": "提高伤害减免当凤凰飞翔激活。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -373,6 +401,7 @@
         "positionIndex": 10,
         "name": "Mental Heat",
         "description": "Taunt enemies you fly through.",
+        "zh": { "name": "Mental 灼热", "description": "嘲讽敌人你 fly 穿过。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -384,6 +413,7 @@
         "positionIndex": 11,
         "name": "Rise from the Ashes",
         "description": "At the end of your flight you launch into the air unleashing multiple fire novas beneath you and then land and smash the ground stunning and dealing additional damage to nearby monsters.",
+        "zh": { "name": "Rise 从 Ashes", "description": "end 你的 flight 你发射进入空中释放多个火焰新星 beneath 你与 then 落地与猛击地面眩晕与造成额外伤害至附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -395,6 +425,7 @@
         "positionIndex": 12,
         "name": "Seed of Fulmination",
         "description": "Plant a seed of fulmination on monsters you fly through that explodes after a short delay.",
+        "zh": { "name": "Seed 之 Fulmination", "description": "Plant seed 之 fulmination 怪物你 fly 穿过爆炸短暂延迟后。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -406,6 +437,7 @@
         "positionIndex": 13,
         "name": "Wings of the Phoenix",
         "description": "When flying you rapidly shoot searing bolts behind you in a cone.",
+        "zh": { "name": "Wings 之 Phoenix", "description": "当飞散你迅速射出灼烧电矢身后你锥形。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -417,6 +449,7 @@
         "positionIndex": 14,
         "name": "Burning Wings",
         "description": "Flight distance is now short. Upon landing you knock back all monsters around scorching the land below them dealing fire damage and stunning them.",
+        "zh": { "name": "燃烧 Wings", "description": "Flight 距离短距。落地时你击退回全部怪物周围灼热落地低于它们造成火焰伤害与眩晕它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -431,6 +464,7 @@
     "name": "Inferno Slash",
     "kind": "active",
     "description": "Send forward a fire enchanted cleave attack dealing increased damage and additional fire damage.",
+    "zh": { "name": "炼狱斩", "description": "发出一次火焰附魔的劈砍攻击，造成提高的伤害和额外火焰伤害。" },
     "damageType": "fire",
     "tags": ["Attack", "Active", "Melee", "Projectile", "Strike"],
     "movementDuringUse": 65,
@@ -460,6 +494,7 @@
         "positionIndex": 0,
         "name": "Inferno Slash",
         "description": "Core of the Inferno Slash subtree.",
+        "zh": { "name": "炼狱斩", "description": "炼狱斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -467,6 +502,7 @@
         "positionIndex": 1,
         "name": "Infernal Reach",
         "description": "Increases the attack range of inferno slash.",
+        "zh": { "name": "Infernal 延伸", "description": "提高 炼狱斩 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -478,6 +514,7 @@
         "positionIndex": 2,
         "name": "Scattering Flame",
         "description": "Increases attack rating when using inferno slash.",
+        "zh": { "name": "散射 Flame", "description": "提高攻击命中使用炼狱斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -489,6 +526,7 @@
         "positionIndex": 3,
         "name": "Molten Ground",
         "description": "Chance on striking to set the ground on fire.",
+        "zh": { "name": "熔火地面", "description": "概率在打击至 set 地面火焰。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -504,6 +542,7 @@
         "positionIndex": 4,
         "name": "Piercing Flame",
         "description": "Inflicts fire break on hit.",
+        "zh": { "name": "穿透 Flame", "description": "命中时施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -522,6 +561,7 @@
         "positionIndex": 5,
         "name": "Stacked Burn",
         "description": "Chance on hit to gain a stacking fire skill damage buff.",
+        "zh": { "name": "叠加燃烧", "description": "命中时有概率获得叠加火焰技能伤害增益。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -537,6 +577,7 @@
         "positionIndex": 6,
         "name": "Scorching Slash",
         "description": "Increases the damage dealt by inferno slash.",
+        "zh": { "name": "灼热斩击", "description": "提高造成的伤害炼狱斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -548,6 +589,7 @@
         "positionIndex": 7,
         "name": "Nerve Damage",
         "description": "Chance to stun on hit.",
+        "zh": { "name": "Nerve 伤害", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -564,6 +606,7 @@
         "positionIndex": 8,
         "name": "Accelerated Fumes",
         "description": "Chance on attack to gain increased attack speed.",
+        "zh": { "name": "Accelerated Fumes", "description": "攻击时有概率获得提高攻击速度。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -579,6 +622,7 @@
         "positionIndex": 9,
         "name": "Igniting Wind",
         "description": "Chance on attack to perform an additional attack.",
+        "zh": { "name": "Igniting Wind", "description": "攻击时有概率执行额外攻击。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -594,6 +638,7 @@
         "positionIndex": 10,
         "name": "Third Degree Burns",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "第三次 Degree 燃烧", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -605,6 +650,7 @@
         "positionIndex": 11,
         "name": "Infernal Cleave",
         "description": "Inferno slash is now a 360 degree area of effect attack.",
+        "zh": { "name": "Infernal Cleave", "description": "炼狱斩 360 degree 范围攻击。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -616,6 +662,7 @@
         "positionIndex": 12,
         "name": "Searing Fork",
         "description": "Inferno slash sends multiple smaller waves that split on the first hit.",
+        "zh": { "name": "灼烧分叉", "description": "炼狱斩发出多个更小波分裂第一命中。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -627,6 +674,7 @@
         "positionIndex": 13,
         "name": "Fearful Flames",
         "description": "Inferno slash now knocks back monsters inflicting Burning and dealing increased Damage.",
+        "zh": { "name": "Fearful 烈焰", "description": "炼狱斩击退回怪物施加燃烧与造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "increased_burning_damage": 0 },
@@ -648,6 +696,7 @@
         "positionIndex": 14,
         "name": "Flies of Agony",
         "description": "Inferno slash now sends burning fireflies towards monsters on hit.",
+        "zh": { "name": "飞行之 Agony", "description": "炼狱斩发出燃烧 fireflies 朝向怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -662,6 +711,7 @@
     "name": "Searing Chains",
     "kind": "active",
     "description": "When striking a monster unleash a powerful chain attack dealing increased damage, additional fire damage and stunning monsters struck.",
+    "zh": { "name": "灼烧锁链", "description": "击中怪物时释放强力的连锁攻击，造成提高的伤害和额外火焰伤害，并眩晕被击中的怪物。" },
     "damageType": "fire",
     "tags": ["Attack", "Active", "Melee", "Chain Lightning", "Strike"],
     "movementDuringUse": 65,
@@ -693,6 +743,7 @@
     "name": "Ignite",
     "kind": "passive",
     "description": "All fire enchanted attacks add a stack of ignite on the monster, causing them to combust at 10 stacks dealing area of effect fire damage.",
+    "zh": { "name": "点燃", "description": "所有火焰附魔的攻击都会在怪物身上叠加一层点燃，达到 10 层时爆燃，造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Passive", "Explosion"],
     "maxRank": 20,
@@ -714,6 +765,7 @@
     "name": "Fire Shield",
     "kind": "buff",
     "description": "Cast a shield of fire that increases your Physical damage reduction and deals fire damage to monsters around you.",
+    "zh": { "name": "火焰之盾", "description": "施放一面提高你物理伤害减免的火焰之盾，并对周围怪物造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
@@ -743,6 +795,7 @@
     "name": "Fiery Presence",
     "kind": "passive",
     "description": "Increases your fire skill damage.",
+    "zh": { "name": "炽焰之息", "description": "提高你的火焰技能伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -760,6 +813,7 @@
     "name": "Avatar of Fire",
     "kind": "buff",
     "description": "Temporarily turns you into an avatar of fire. Increasing your attack speed, fire damage, spell critical damage and spell critical chance.",
+    "zh": { "name": "烈焰化身", "description": "暂时化为烈焰化身，提高你的攻击速度、火焰伤害、法术暴击伤害和法术暴击概率。" },
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
     "baseCastRate": 1,
@@ -782,6 +836,7 @@
     "name": "Breath of Fire",
     "kind": "active",
     "description": "Breathe burning flames dealing fire damage and inflicting burning on hit.",
+    "zh": { "name": "烈焰吐息", "description": "喷吐燃烧的火焰，造成火焰伤害并命中时施加燃烧。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -810,6 +865,7 @@
         "positionIndex": 0,
         "name": "Breath of Fire",
         "description": "Core of the Breath of Fire subtree.",
+        "zh": { "name": "烈焰吐息", "description": "烈焰吐息 子树核心。" },
         "maxRank": 1
       },
       {
@@ -817,6 +873,7 @@
         "positionIndex": 1,
         "name": "Expanding Heat",
         "description": "Increases the size of breath of fire.",
+        "zh": { "name": "Expanding 灼热", "description": "提高 烈焰吐息 的size。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -828,6 +885,7 @@
         "positionIndex": 2,
         "name": "Burning Haze",
         "description": "Increases the damage dealt by breath of fire.",
+        "zh": { "name": "燃烧 Haze", "description": "提高 fire 的造成的伤害吐息。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -839,6 +897,7 @@
         "positionIndex": 3,
         "name": "Heat Combustion",
         "description": "Chance on hit to unleash burning fragments from the target dealing damage to other nearby targets.",
+        "zh": { "name": "灼热 Combustion", "description": "命中时有概率释放燃烧碎片从目标造成伤害至其他附近目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -855,6 +914,7 @@
         "positionIndex": 4,
         "name": "Double Breeze",
         "description": "Chance on cast to unleash an additional breath of fire.",
+        "zh": { "name": "双重 Breeze", "description": "施法时有概率释放额外烈焰吐息。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -870,6 +930,7 @@
         "positionIndex": 5,
         "name": "Scorching Exhale",
         "description": "Increased the length of breath of fire.",
+        "zh": { "name": "灼热 Exhale", "description": "提高length 之烈焰吐息。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -881,6 +942,7 @@
         "positionIndex": 6,
         "name": "Burning Lungs",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "燃烧 Lungs", "description": "命中时施加燃烧。" },
         "maxRank": 8,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -899,6 +961,7 @@
         "positionIndex": 7,
         "name": "Collateral Ignition",
         "description": "Chance on hit to spread burning to monsters around the target.",
+        "zh": { "name": "波及点燃", "description": "命中时有概率spread 燃烧至怪物周围目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -917,6 +980,7 @@
         "positionIndex": 8,
         "name": "Burst of Heat",
         "description": "Chance on hit to unleash a small fire nova if target is burning.",
+        "zh": { "name": "迸发之灼热", "description": "命中时有概率释放小型火焰新星 if 目标燃烧。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -933,6 +997,7 @@
         "positionIndex": 9,
         "name": "Breaking Point",
         "description": "Chance to inflict fire break on burning targets.",
+        "zh": { "name": "击破点", "description": "概率施加火焰击破燃烧目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -952,6 +1017,7 @@
         "positionIndex": 10,
         "name": "Reverse Hypothermia",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Reverse Hypothermia", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -963,6 +1029,7 @@
         "positionIndex": 11,
         "name": "Hydra´s Breeze",
         "description": "Unleash additional breaths in an arc.",
+        "zh": { "name": "九头蛇's Breeze", "description": "释放额外吐息呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -974,6 +1041,7 @@
         "positionIndex": 12,
         "name": "Chain of Fire",
         "description": "Breath of fire now chains multiple times.",
+        "zh": { "name": "连锁之火焰", "description": "概率释放连锁之火焰命中时造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "chain_count": 0 },
@@ -985,6 +1053,7 @@
         "positionIndex": 13,
         "name": "Scorching Hellflame",
         "description": "Breath of fire now applies stacks of Hellflame which will unleash a fiery pulse of area of effect damage when reaching max stacks.",
+        "zh": { "name": "灼热 Hellflame", "description": "烈焰吐息 applies 层数之 Hellflame 从而 will 释放炽焰脉冲之范围伤害当延伸 max 层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -996,6 +1065,7 @@
         "positionIndex": 14,
         "name": "Molten Orb",
         "description": "Breath of fire now summons a molten orb traveling forwards breathing fire towards the closest target.",
+        "zh": { "name": "熔火宝珠", "description": "烈焰吐息召唤物熔火宝珠飞行前方 breathing 火焰朝向最近的目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "faster_cast_rate": 0 },
@@ -1010,6 +1080,7 @@
     "name": "Fireball",
     "kind": "active",
     "description": "Cast a fireball dealing fire damage to monsters.",
+    "zh": { "name": "火球术", "description": "施放一颗火球，对怪物造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Projectile", "Spell", "Explosion"],
     "movementDuringUse": 85,
@@ -1034,6 +1105,7 @@
         "positionIndex": 0,
         "name": "Fireball",
         "description": "Core of the Fireball subtree.",
+        "zh": { "name": "火球术", "description": "火球术 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1041,6 +1113,7 @@
         "positionIndex": 1,
         "name": "Multicast",
         "description": "Chance on cast to unleash an additional fireball.",
+        "zh": { "name": "Multicast", "description": "施法时有概率释放额外火球术。" },
         "maxRank": 5,
         "effects": {
           "base": { "multicast_chance": 0 },
@@ -1052,6 +1125,7 @@
         "positionIndex": 2,
         "name": "Ignition Radius",
         "description": "Increases the area of effect radius of fireball.",
+        "zh": { "name": "点燃半径", "description": "提高 effect radius of 火球术 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1063,6 +1137,7 @@
         "positionIndex": 3,
         "name": "Inferno Ball",
         "description": "Increases the damage dealt by fireball.",
+        "zh": { "name": "Inferno 球", "description": "提高造成的伤害火球术。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1074,6 +1149,7 @@
         "positionIndex": 4,
         "name": "Gas Fumes",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "毒气 Fumes", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1092,6 +1168,7 @@
         "positionIndex": 5,
         "name": "Searing Speed",
         "description": "Increases the projectile speed and cast rate of fireball.",
+        "zh": { "name": "灼烧速度", "description": "提高 火球术 的投射物速度与施法速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0, "faster_cast_rate": 0 },
@@ -1103,6 +1180,7 @@
         "positionIndex": 6,
         "name": "Paralyzing Impact",
         "description": "Chance on hit to knockback monsters dealing increased damage.",
+        "zh": { "name": "Paralyzing 冲击", "description": "命中时有概率击退怪物造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1118,6 +1196,7 @@
         "positionIndex": 7,
         "name": "Soulburn",
         "description": "Inflicts fire break on hit.",
+        "zh": { "name": "灵魂灼烧", "description": "提高 黑暗誓约 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -1136,6 +1215,7 @@
         "positionIndex": 8,
         "name": "Critical Burn",
         "description": "Chance on hit to deal double damage.",
+        "zh": { "name": "暴击燃烧", "description": "命中时有概率造成双重伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 6 } }
       },
@@ -1144,6 +1224,7 @@
         "positionIndex": 9,
         "name": "Mark of Doom",
         "description": "Chance on hit to rain down flaming meteors from the sky.",
+        "zh": { "name": "印记之 Doom", "description": "命中时有概率骤雨倒地燃烧陨石从天空。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1159,6 +1240,7 @@
         "positionIndex": 10,
         "name": "Burn baby burn!",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "燃烧 baby 燃烧!", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1170,6 +1252,7 @@
         "positionIndex": 11,
         "name": "Splitfire",
         "description": "Fireball now splits to multiple smaller fireballs on hit.",
+        "zh": { "name": "Splitfire", "description": "火球术分裂至多个更小 fireballs 命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "fire_skill_damage": 0 },
@@ -1181,6 +1264,7 @@
         "positionIndex": 12,
         "name": "Path of Destruction",
         "description": "Fireball now has piercing and leaves a trail of fire on its’ path.",
+        "zh": { "name": "路径之毁灭", "description": "火球术有穿透与留下轨迹之火焰 ' 路径。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -1192,6 +1276,7 @@
         "positionIndex": 13,
         "name": "Orbital Fire",
         "description": "Fireball casts now orbit around you for a short period.",
+        "zh": { "name": "环绕火焰", "description": "火球术次施法轨道周围你短距期间。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1211,6 +1296,7 @@
         "positionIndex": 14,
         "name": "Fireflies!",
         "description": "Chance on spellhit to spawn a firefly around you that seek out nearby targets exploding into a fireball.",
+        "zh": { "name": "Fireflies!", "description": "概率在法术命中至生成 firefly 周围你搜寻 out 附近目标 exploding 进入火球术。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1229,6 +1315,7 @@
     "name": "Scorching Aura",
     "kind": "aura",
     "description": "Scorch monsters around you dealing fire damage.",
+    "zh": { "name": "灼烧光环", "description": "灼烧你周围的怪物，造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Aura"],
     "maxRank": 20,
@@ -1249,6 +1336,7 @@
         "positionIndex": 0,
         "name": "Scorching Aura",
         "description": "Core of the Scorching Aura subtree.",
+        "zh": { "name": "灼烧光环", "description": "灼烧光环 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1256,6 +1344,7 @@
         "positionIndex": 1,
         "name": "Scorched Lands",
         "description": "Increases the area of effect radius of scorching aura.",
+        "zh": { "name": "Scorched 落地", "description": "提高 effect radius of 灼烧光环 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1267,6 +1356,7 @@
         "positionIndex": 2,
         "name": "Sixt Degree Burns",
         "description": "Increases the damage dealt by scorching aura.",
+        "zh": { "name": "Sixt Degree 燃烧", "description": "提高造成的伤害灼烧光环。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1278,6 +1368,7 @@
         "positionIndex": 3,
         "name": "Burning Necrosis",
         "description": "Inflicts fire break on hit.",
+        "zh": { "name": "燃烧 Necrosis", "description": "命中时施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -1296,6 +1387,7 @@
         "positionIndex": 4,
         "name": "Flaming Fissure",
         "description": "Chance on hit to release a flaming fissure beneath monsters knocking them into the air dealing additional damage.",
+        "zh": { "name": "燃烧 Fissure", "description": "命中时有概率release 燃烧 fissure beneath 怪物击退它们进入空中造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1311,6 +1403,7 @@
         "positionIndex": 5,
         "name": "Rapid Burning",
         "description": "Increases the tick rate of scorching aura.",
+        "zh": { "name": "迅捷燃烧", "description": "提高 灼烧光环 的每跳速率。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1322,6 +1415,7 @@
         "positionIndex": 6,
         "name": "Burnt Feet",
         "description": "Increases your movement speed while scorching aura is active.",
+        "zh": { "name": "Burnt Feet", "description": "提高你的移动速度当灼烧光环激活。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1333,6 +1427,7 @@
         "positionIndex": 7,
         "name": "IGNITE THE FLAMES!",
         "description": "Damaging monsters now builds up flaming ignition stacks unleashing a fiery pulse at max stacks.",
+        "zh": { "name": "点燃烈焰!", "description": "伤害型怪物 builds 上燃烧点燃层数释放炽焰脉冲 max 层数。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1344,6 +1439,7 @@
         "positionIndex": 8,
         "name": "Ground Blaze",
         "description": "Chance on hit to slow monsters and light a blaze at their feet.",
+        "zh": { "name": "地面 Blaze", "description": "命中时有概率缓慢怪物与光明 blaze their feet。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1360,6 +1456,7 @@
         "positionIndex": 9,
         "name": "Scorching Agony",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "灼热 Agony", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1371,6 +1468,7 @@
         "positionIndex": 10,
         "name": "Burn Them All!",
         "description": "Inflicts burning for a portion of scorching auras damage on hit.",
+        "zh": { "name": "燃烧它们全部!", "description": "命中时施加燃烧一部分灼热光环伤害。" },
         "maxRank": 5,
         "effects": {
           "base": {
@@ -1395,6 +1493,7 @@
         "positionIndex": 11,
         "name": "Searing Burst",
         "description": "Frequently unleash small bursts of fire dealing additional damage stunning monsters on hit.",
+        "zh": { "name": "灼烧迸发", "description": "频繁释放小型迸发之火焰造成额外伤害眩晕怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1406,6 +1505,7 @@
         "positionIndex": 12,
         "name": "Burning Soul",
         "description": "Increases the damage of scorching aura based on your maximum life.",
+        "zh": { "name": "燃烧灵魂", "description": "提高 灼烧光环 based on your maximum life 的伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_max_life": 0 },
@@ -1417,6 +1517,7 @@
         "positionIndex": 13,
         "name": "Scorching Harvester",
         "description": "Frequently send out fiery souls dealing damage replenishing a portion of your maximum life.",
+        "zh": { "name": "灼热 Harvester", "description": "频繁发出 out 炽焰灵魂造成伤害恢复一部分你的最大生命。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "life_steal": 0 },
@@ -1428,6 +1529,7 @@
         "positionIndex": 14,
         "name": "RELEASE THE CHAOS!",
         "description": "Ignite the flames now additionally unleashes piercing fireballs spiraling outwards dealing additional damage.",
+        "zh": { "name": "RELEASE 混沌!", "description": "点燃烈焰另外释放穿透 fireballs 螺旋向外造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1442,6 +1544,7 @@
     "name": "Hydra",
     "kind": "active",
     "description": "Spawn a fiery hydra that shoots fireballs with area of effect fire damage towards the closest monster.",
+    "zh": { "name": "九头蛇", "description": "召唤一只喷火的多头蛇怪，朝最近的怪物发射造成范围火焰伤害的火球。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Sentry", "Projectile", "Explosion"],
     "movementDuringUse": 85,
@@ -1466,6 +1569,7 @@
         "positionIndex": 0,
         "name": "Hydra",
         "description": "Core of the Hydra subtree.",
+        "zh": { "name": "九头蛇", "description": "九头蛇 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1473,6 +1577,7 @@
         "positionIndex": 1,
         "name": "Lasting Fire",
         "description": "Increases the duration of hydra.",
+        "zh": { "name": "持续火焰", "description": "提高 九头蛇 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1484,6 +1589,7 @@
         "positionIndex": 2,
         "name": "Fiery Snakebite",
         "description": "Increases the damage dealt by hydra.",
+        "zh": { "name": "炽焰 Snakebite", "description": "提高造成的伤害九头蛇。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1495,6 +1601,7 @@
         "positionIndex": 3,
         "name": "Flaming Reach",
         "description": "Increases the range of hydra attacks.",
+        "zh": { "name": "燃烧延伸", "description": "提高 九头蛇 attacks 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1506,6 +1613,7 @@
         "positionIndex": 4,
         "name": "Scorching Blast",
         "description": "Hydras have a chance to cast a small fire nova at the target on hit.",
+        "zh": { "name": "灼热爆破", "description": "Hydras 有概率施法小型火焰新星目标命中时。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1514,6 +1622,7 @@
         "positionIndex": 5,
         "name": "More Heads More Fire!",
         "description": "Increases the amount of hydras you can spawn.",
+        "zh": { "name": "更多 Heads 更多火焰!", "description": "提高 hydras you can spawn 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "sentry_max_amount": 0 },
@@ -1525,6 +1634,7 @@
         "positionIndex": 6,
         "name": "Flaming Reflexes",
         "description": "Increases the attack speed of summoned hydra.",
+        "zh": { "name": "燃烧 Reflexes", "description": "提高 summoned 九头蛇 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "sentry_attack_speed": 0 },
@@ -1536,6 +1646,7 @@
         "positionIndex": 7,
         "name": "Cloning Combustion",
         "description": "Chance on attack for hydra to create a temporary clone of itself for a short period of time.",
+        "zh": { "name": "Cloning Combustion", "description": "概率攻击时九头蛇至 create temporary clone 之自身短距期间之时间。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 2 } }
       },
@@ -1544,6 +1655,7 @@
         "positionIndex": 8,
         "name": "Burstfire",
         "description": "Hydras have a chance on attack to fire an additional projectile.",
+        "zh": { "name": "Burstfire", "description": "Hydras 有概率攻击时至发射一个额外投射物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1559,6 +1671,7 @@
         "positionIndex": 9,
         "name": "Burning Essence",
         "description": "Hydras deal damage in a small radius around them.",
+        "zh": { "name": "燃烧精华", "description": "Hydras 造成伤害小型半径周围它们。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -1570,6 +1683,7 @@
         "positionIndex": 10,
         "name": "Slitherin Army",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Slitherin Army", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1581,6 +1695,7 @@
         "positionIndex": 11,
         "name": "Chaotic Calamity",
         "description": "Hydras now unleash small comets with every attack.",
+        "zh": { "name": "Chaotic Calamity", "description": "Hydras 释放小型彗星使用每攻击。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1592,6 +1707,7 @@
         "positionIndex": 12,
         "name": "Hydra Herder",
         "description": "Hydras now follow the player but the amount of hydras are capped.",
+        "zh": { "name": "九头蛇 Herder", "description": "Hydras 跟随 player 数量之 hydras capped。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "summon_movement_speed": 0 },
@@ -1603,6 +1719,7 @@
         "positionIndex": 13,
         "name": "Scorching Kraken",
         "description": "Now summon one massive hydra that breathes fire to nearby monsters with increased damage and range. Additionally scales the damage based on maximum amount of hydras.",
+        "zh": { "name": "灼热 Kraken", "description": "召唤物一次巨大九头蛇 breathes 火焰至附近怪物使用提高伤害与范围。另外 scales 伤害基于最大数量之 hydras。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1622,6 +1739,7 @@
         "positionIndex": 14,
         "name": "Searing Snakes",
         "description": "Now summon all hydras with one cast dealing increased damage and inflicting burning on hit.",
+        "zh": { "name": "灼烧 Snakes", "description": "召唤物全部 hydras 使用一次施法造成提高伤害与施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "increased_burning_damage": 0 },
@@ -1643,6 +1761,7 @@
     "name": "Volcano",
     "kind": "active",
     "description": "Spawn a molten volcano that deals fire damage around it and spews out burning rocks that explode on hit.",
+    "zh": { "name": "火山", "description": "生成一座熔火火山，对其周围造成火焰伤害，并喷出命中时爆炸的燃烧岩石。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 85,
@@ -1667,6 +1786,7 @@
         "positionIndex": 0,
         "name": "Volcano",
         "description": "Core of the Volcano subtree.",
+        "zh": { "name": "火山", "description": "火山 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1674,6 +1794,7 @@
         "positionIndex": 1,
         "name": "Eruption",
         "description": "Increases the amount of volcano fragments.",
+        "zh": { "name": "Eruption", "description": "提高 火山 fragments 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1685,6 +1806,7 @@
         "positionIndex": 2,
         "name": "Extended Lava",
         "description": "Increases the duration of volcano.",
+        "zh": { "name": "延长 Lava", "description": "提高 火山 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1696,6 +1818,7 @@
         "positionIndex": 3,
         "name": "Danger Zone",
         "description": "Increases the range of volcano.",
+        "zh": { "name": "Danger Zone", "description": "提高 火山 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1707,6 +1830,7 @@
         "positionIndex": 4,
         "name": "Searing Mountain",
         "description": "Increases the size of volcano.",
+        "zh": { "name": "灼烧 Mountain", "description": "提高 火山 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1718,6 +1842,7 @@
         "positionIndex": 5,
         "name": "Colossal Fragment",
         "description": "Chance to shoot out a colossal fragment instead knocking monsters into the air and inflicting burning on hit.",
+        "zh": { "name": "巨型碎片", "description": "命中时有概率射出 out 巨型碎片改为击退怪物进入空中与施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1736,6 +1861,7 @@
         "positionIndex": 6,
         "name": "Crackling Earth",
         "description": "Release flaming fissures around the volcano.",
+        "zh": { "name": "Crackling 大地", "description": "Release 燃烧地裂周围火山。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1747,6 +1873,7 @@
         "positionIndex": 7,
         "name": "Scorching Lava",
         "description": "Increases the damage dealt by volcano.",
+        "zh": { "name": "灼热 Lava", "description": "提高造成的伤害火山。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1758,6 +1885,7 @@
         "positionIndex": 8,
         "name": "Crushing Fragment",
         "description": "Fragments have a chance to bounce and deal area of effect damage when hitting the ground.",
+        "zh": { "name": "粉碎碎片", "description": "Fragments 有概率弹射与造成范围伤害当命中地面。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -1766,6 +1894,7 @@
         "positionIndex": 9,
         "name": "Too Hot to Touch",
         "description": "Monsters touching the volcano get knocked back and stunned taking additional damage.",
+        "zh": { "name": "Too Hot 至之触", "description": "怪物 touching 火山被被击退与眩晕承受额外伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1777,6 +1906,7 @@
         "positionIndex": 10,
         "name": "Lava Dipping",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Lava Dipping", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1788,6 +1918,7 @@
         "positionIndex": 11,
         "name": "Yellowstone",
         "description": "Now spawns a massive volcano shooting out fragments that spawn smaller volcanoes around it.",
+        "zh": { "name": "Yellowstone", "description": "生成巨大火山射出 out 碎片生成更小 volcanoes 周围。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1799,6 +1930,7 @@
         "positionIndex": 12,
         "name": "Lava Trail",
         "description": "Volcano now sends out trails of molten lava inflicting a portion of its damage as burning.",
+        "zh": { "name": "Lava 轨迹", "description": "火山发出 out 轨迹之熔火 lava 施加一部分伤害燃烧。" },
         "maxRank": 3,
         "effects": {
           "base": { "trail_count": 0, "conversion_skill_damage": 0 },
@@ -1810,6 +1942,7 @@
         "positionIndex": 13,
         "name": "I Am The Volcano Now!",
         "description": "The volcano is now stuck on you with increased damage.",
+        "zh": { "name": "I Am 火山 !", "description": "火山卡住你使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1821,6 +1954,7 @@
         "positionIndex": 14,
         "name": "Trail of Volcanoes",
         "description": "Spawn multiple volcanoes trailing into a random direction.",
+        "zh": { "name": "轨迹之 Volcanoes", "description": "生成多个 volcanoes trailing 进入随机 direction。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1835,6 +1969,7 @@
     "name": "Meteor",
     "kind": "active",
     "description": "Cast a powerful meteor forwards dealing area of effect fire damage on impact.",
+    "zh": { "name": "陨石术", "description": "向前施放一颗威力巨大的陨石，命中时造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Projectile", "Explosion"],
     "movementDuringUse": 85,
@@ -1860,6 +1995,7 @@
     "name": "Fire Nova",
     "kind": "active",
     "description": "Cast a nova of fire around you dealing fire damage.",
+    "zh": { "name": "火焰新星", "description": "在你周围施放一阵火焰新星，造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -1884,6 +2020,7 @@
         "positionIndex": 0,
         "name": "Fire Nova",
         "description": "Core of the Fire Nova subtree.",
+        "zh": { "name": "火焰新星", "description": "火焰新星 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1891,6 +2028,7 @@
         "positionIndex": 1,
         "name": "Extended Flames",
         "description": "Increases the area of effect radius of fire nova.",
+        "zh": { "name": "延长烈焰", "description": "提高 effect radius of 火焰新星 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1902,6 +2040,7 @@
         "positionIndex": 2,
         "name": "Boiling Point",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "Boiling 点", "description": "命中时施加燃烧。" },
         "maxRank": 8,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1920,6 +2059,7 @@
         "positionIndex": 3,
         "name": "Heat Haze",
         "description": "Increases the damage dealt by fire nova.",
+        "zh": { "name": "灼热 Haze", "description": "提高造成的伤害火焰新星。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1931,6 +2071,7 @@
         "positionIndex": 4,
         "name": "Burning Agony",
         "description": "Inflicts fire break on hit.",
+        "zh": { "name": "燃烧 Agony", "description": "命中时施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -1949,6 +2090,7 @@
         "positionIndex": 5,
         "name": "Crushing Flames",
         "description": "Fire nova knocks monsters back dealing increased damage.",
+        "zh": { "name": "粉碎烈焰", "description": "火焰新星击退怪物造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1960,6 +2102,7 @@
         "positionIndex": 6,
         "name": "Rapid Flames",
         "description": "Increases your cast rate when casting fire nova.",
+        "zh": { "name": "迅捷烈焰", "description": "提高你的施法速度当施法火焰新星。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1971,6 +2114,7 @@
         "positionIndex": 7,
         "name": "Mirror Flames",
         "description": "Chance on cast to unleash an additional fire nova.",
+        "zh": { "name": "镜像烈焰", "description": "施法时有概率释放额外火焰新星。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1986,6 +2130,7 @@
         "positionIndex": 8,
         "name": "Armageddon Bolts",
         "description": "Chance on hit to drop armageddon bolts down from the sky.",
+        "zh": { "name": "末日审判电矢", "description": "命中时有概率投下末日审判电矢倒地从天空。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 1 } }
       },
@@ -1994,6 +2139,7 @@
         "positionIndex": 9,
         "name": "Agonizing Flames",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "痛苦烈焰", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -2005,6 +2151,7 @@
         "positionIndex": 10,
         "name": "Molten Trail",
         "description": "Chance on cast to send a trail of molten lava forward.",
+        "zh": { "name": "熔火轨迹", "description": "施法时有概率发出轨迹之熔火 lava 前方。" },
         "maxRank": 2,
         "proc": { "trigger": "on_cast", "chance": { "base": 0, "perRank": 30 } }
       },
@@ -2013,6 +2160,7 @@
         "positionIndex": 11,
         "name": "Scorching Bolts",
         "description": "Now unleash piercing fireballs in all directions instead of a nova.",
+        "zh": { "name": "灼热电矢", "description": "释放穿透 fireballs 全部方向改为之新星。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -2032,6 +2180,7 @@
         "positionIndex": 12,
         "name": "Searing Tornado",
         "description": "Summon piercing fireballs orbiting you. Fire nova now has a cooldown.",
+        "zh": { "name": "灼烧龙卷风", "description": "召唤物穿透 fireballs 环绕你。火焰新星有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0, "projectile_count": 0 },
@@ -2043,6 +2192,7 @@
         "positionIndex": 13,
         "name": "Traveling Flames",
         "description": "Send a traveling nova forward unleashing additional novas with increased damage and area of effect radius.",
+        "zh": { "name": "飞行烈焰", "description": "发出飞行新星前方释放额外新星使用提高伤害与范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -2062,6 +2212,7 @@
         "positionIndex": 14,
         "name": "Vacuum Flames",
         "description": "Fire nova now vacuums monsters inside stunning and dealing additional damage.",
+        "zh": { "name": "Vacuum 烈焰", "description": "火焰新星 vacuums 怪物 inside 眩晕与造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -2076,6 +2227,7 @@
     "name": "Comet",
     "kind": "active",
     "description": "Call down a huge comet exploding on impact dealing area of effect fire damage.",
+    "zh": { "name": "彗星", "description": "从天而降召唤一颗巨大的彗星，命中时爆炸，造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 85,
@@ -2100,6 +2252,7 @@
         "positionIndex": 0,
         "name": "Comet",
         "description": "Core of the Comet subtree.",
+        "zh": { "name": "彗星", "description": "彗星 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2107,6 +2260,7 @@
         "positionIndex": 1,
         "name": "Blast Radius",
         "description": "Increases the area of effect radius of comet.",
+        "zh": { "name": "爆破半径", "description": "提高 effect radius of 彗星 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2118,6 +2272,7 @@
         "positionIndex": 2,
         "name": "Molten Rock",
         "description": "Increases the damage dealt by comet.",
+        "zh": { "name": "熔火 Rock", "description": "提高造成的伤害彗星。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -2129,6 +2284,7 @@
         "positionIndex": 3,
         "name": "Skycaller",
         "description": "Increases your cast rate when using comet.",
+        "zh": { "name": "Skycaller", "description": "提高你的施法速度使用彗星。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -2140,6 +2296,7 @@
         "positionIndex": 4,
         "name": "Comet Fragments",
         "description": "Chance when comet hits the ground to rain down smaller comets.",
+        "zh": { "name": "彗星碎片", "description": "概率当彗星命中地面至骤雨倒地更小彗星。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -2148,6 +2305,7 @@
         "positionIndex": 5,
         "name": "Molten Aftershock",
         "description": "Chance when hitting the ground to unleash a fiery pulse dealing additional damage knocking monsters back.",
+        "zh": { "name": "熔火余震", "description": "概率当命中地面至释放炽焰脉冲造成额外伤害击退怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2163,6 +2321,7 @@
         "positionIndex": 6,
         "name": "Shattering Impact",
         "description": "Inflicts fire break on hit.",
+        "zh": { "name": "粉碎冲击", "description": "命中时施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -2181,6 +2340,7 @@
         "positionIndex": 7,
         "name": "Stunning Hit",
         "description": "Chance on hit to stun monsters.",
+        "zh": { "name": "眩晕命中", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2193,6 +2353,7 @@
         "positionIndex": 8,
         "name": "Cracked Terrain",
         "description": "Increased damage dealt to stunned targets.",
+        "zh": { "name": "Cracked 地形", "description": "提高造成的伤害至眩晕目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2204,6 +2365,7 @@
         "positionIndex": 9,
         "name": "Searing Shrapnel",
         "description": "Comet shrapnel flies farther dealing a portion of comets damage.",
+        "zh": { "name": "灼烧弹片", "description": "彗星弹片飞行 farther 造成一部分彗星伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2219,6 +2381,7 @@
         "positionIndex": 10,
         "name": "Flaming Terrain",
         "description": "Chance when hitting the ground to create flames dealing a portion of comets damage over time.",
+        "zh": { "name": "燃烧地形", "description": "概率当命中地面至 create 烈焰造成一部分彗星伤害随时间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2234,6 +2397,7 @@
         "positionIndex": 11,
         "name": "Fiery Shower",
         "description": "Drop additional comets dealing increased damage.",
+        "zh": { "name": "炽焰 Shower", "description": "投下额外彗星造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -2245,6 +2409,7 @@
         "positionIndex": 12,
         "name": "Molten Starfall",
         "description": "Drop multiple comets simultaneously. Comet now has a cooldown.",
+        "zh": { "name": "熔火 Starfall", "description": "投下多个彗星 simultaneously。彗星有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2256,6 +2421,7 @@
         "positionIndex": 13,
         "name": "Bouncing Comets",
         "description": "Drop multiple small comets bouncing forwards when landing.",
+        "zh": { "name": "弹跳彗星", "description": "投下多个小型彗星弹跳前方落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "fire_skill_damage": 0 },
@@ -2267,6 +2433,7 @@
         "positionIndex": 14,
         "name": "Crushing Comet",
         "description": "Comet now smashes the ground with force sending monsters airborne with increased damage.",
+        "zh": { "name": "粉碎彗星", "description": "彗星粉碎地面使用力量发出怪物腾空使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_size": 0 },
@@ -2281,6 +2448,7 @@
     "name": "Armageddon",
     "kind": "active",
     "description": "Call down a rain of meteors from the sky dealing area of effect fire damage to monsters struck.",
+    "zh": { "name": "末日审判", "description": "从天而降召唤一场陨石之雨，对被击中的怪物造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 85,
@@ -2305,6 +2473,7 @@
         "positionIndex": 0,
         "name": "Armageddon",
         "description": "Core of the Armageddon subtree.",
+        "zh": { "name": "末日审判", "description": "末日审判 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2312,6 +2481,7 @@
         "positionIndex": 1,
         "name": "Falling Wrath",
         "description": "Increases the amount of armageddon projectiles.",
+        "zh": { "name": "坠落愤怒", "description": "提高 末日审判 projectiles 的数量。" },
         "maxRank": 8,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2323,6 +2493,7 @@
         "positionIndex": 2,
         "name": "Storm of Fire",
         "description": "Increases the area of effect radius of armageddon.",
+        "zh": { "name": "风暴之火焰", "description": "提高 effect radius of 末日审判 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2334,6 +2505,7 @@
         "positionIndex": 3,
         "name": "Colossal Chunks",
         "description": "Increases projectile size and explosion radius.",
+        "zh": { "name": "巨型 Chunks", "description": "提高投射物尺寸与爆炸半径。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -2345,6 +2517,7 @@
         "positionIndex": 4,
         "name": "Searing Meteor",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "灼烧陨石术", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -2363,6 +2536,7 @@
         "positionIndex": 5,
         "name": "Pyrokinetic Madness",
         "description": "Chance on cast to unleash an additional armageddon.",
+        "zh": { "name": "Pyrokinetic Madness", "description": "施法时有概率释放额外末日审判。" },
         "maxRank": 2,
         "proc": {
           "trigger": "on_cast",
@@ -2378,6 +2552,7 @@
         "positionIndex": 6,
         "name": "Doomsday Clock",
         "description": "Decreases the cooldown of armageddon.",
+        "zh": { "name": "Doomsday Clock", "description": "提高 混沌图腾 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -2389,6 +2564,7 @@
         "positionIndex": 7,
         "name": "Blisters",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Blisters", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -2400,6 +2576,7 @@
         "positionIndex": 8,
         "name": "Ball of Fire",
         "description": "Chance for a meteor to turn into a ball of fire with increased size and damage.",
+        "zh": { "name": "球之火焰", "description": "概率使陨石术至 turn 进入球之火焰使用提高 size 与伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2415,6 +2592,7 @@
         "positionIndex": 9,
         "name": "Doom Fire",
         "description": "Increased the damage dealt by armageddon.",
+        "zh": { "name": "Doom 火焰", "description": "提高造成的伤害末日审判。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -2426,6 +2604,7 @@
         "positionIndex": 10,
         "name": "Blazing Pulse",
         "description": "Chance on hit to unleash a fiery pulse dealing additional damage.",
+        "zh": { "name": "Blazing 脉冲", "description": "命中时有概率释放炽焰脉冲造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2441,6 +2620,7 @@
         "positionIndex": 11,
         "name": "Searing Concentration",
         "description": "Armageddon area of effect is now drastically smaller for more concentrated damage output.",
+        "zh": { "name": "灼烧专注", "description": "末日审判范围之效果 drastically 更小更多集中伤害 output。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2452,6 +2632,7 @@
         "positionIndex": 12,
         "name": "Warm Shower",
         "description": "Armageddon now follows the player dealing increased damage.",
+        "zh": { "name": "Warm Shower", "description": "末日审判跟随 player 造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -2463,6 +2644,7 @@
         "positionIndex": 13,
         "name": "Blistering Bolt",
         "description": "Armageddon now drops a meteor on every monster around you on a large radius. Armageddon no longer has a cooldown.",
+        "zh": { "name": "Blistering 电矢", "description": "末日审判落下陨石术每怪物周围你大型半径。末日审判更久有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "fire_skill_damage": 0 },
@@ -2474,6 +2656,7 @@
         "positionIndex": 14,
         "name": "Warped Doom",
         "description": "Armageddon projectiles now fly horizontally through terrain exploding on hit.",
+        "zh": { "name": "扭曲 Doom", "description": "末日审判投射物 fly horizontally 穿过地形 exploding 命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_speed": 0 },

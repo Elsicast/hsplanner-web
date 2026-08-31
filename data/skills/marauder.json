@@ -5,6 +5,7 @@
     "name": "Bouncing Grenade",
     "kind": "active",
     "description": "Throw a grenade that bounces exploding into shrapnel on impact, dealing area of effect fire damage.",
+    "zh": { "name": "弹跳手雷", "description": "掷出一颗弹跳手雷，命中时爆裂成弹片，造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 65,
@@ -29,6 +30,7 @@
         "positionIndex": 0,
         "name": "Bouncing Grenade",
         "description": "Core of the Bouncing Grenade subtree.",
+        "zh": { "name": "弹跳手雷", "description": "弹跳手雷 子树核心。" },
         "maxRank": 1
       },
       {
@@ -36,6 +38,7 @@
         "positionIndex": 1,
         "name": "Pressurized Bombs",
         "description": "Increases area of effect radius of bouncing grenade.",
+        "zh": { "name": "Pressurized 炸弹", "description": "提高 effect radius of 弹跳手雷 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -47,6 +50,7 @@
         "positionIndex": 2,
         "name": "Strong Lats",
         "description": "Increased the projecile speed of bouncing grenade.",
+        "zh": { "name": "Strong Lats", "description": "提高projecile 速度之弹跳手雷。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -58,6 +62,7 @@
         "positionIndex": 3,
         "name": "Nitroglycerine Solution",
         "description": "Increases the damage dealt by bouncing grenade.",
+        "zh": { "name": "Nitroglycerine Solution", "description": "提高造成的伤害弹跳手雷。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -69,6 +74,7 @@
         "positionIndex": 4,
         "name": "Elastic Cover",
         "description": "Increases the amount of bounces for bouncing grenade.",
+        "zh": { "name": "Elastic 覆盖", "description": "提高 bounces for 弹跳手雷 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -80,6 +86,7 @@
         "positionIndex": 5,
         "name": "Ace Up Your Sleeve",
         "description": "Chance on cast to unleash an additional bouncing grenade.",
+        "zh": { "name": "Ace 上你的 Sleeve", "description": "施法时有概率释放额外弹跳手雷。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -95,6 +102,7 @@
         "positionIndex": 6,
         "name": "Big Boy Bombs",
         "description": "Increases the size of bouncing grenade.",
+        "zh": { "name": "核心 Boy 炸弹", "description": "提高 弹跳手雷 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -106,6 +114,7 @@
         "positionIndex": 7,
         "name": "Heavy Weight",
         "description": "Decreases the distance between bounces.",
+        "zh": { "name": "重型重量", "description": "降低距离 between 弹射。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -117,6 +126,7 @@
         "positionIndex": 8,
         "name": "Rubber Coated Shell",
         "description": "Chance for bouncing grenades to bounce off of terrain.",
+        "zh": { "name": "Rubber Coated 护壳", "description": "概率使弹跳手雷至弹射关闭之地形。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -125,6 +135,7 @@
         "positionIndex": 9,
         "name": "Sharp Shrapnels",
         "description": "Chance to inflict fire break on hit.",
+        "zh": { "name": "尖锐弹片", "description": "命中时有概率施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -143,6 +154,7 @@
         "positionIndex": 10,
         "name": "Flammable Charge",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "Flammable 冲锋", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -161,6 +173,7 @@
         "positionIndex": 11,
         "name": "Resetting Fuse",
         "description": "Bouncing from terrain resets the duration of bouncing grenade.",
+        "zh": { "name": "重置 Fuse", "description": "弹跳从地形重置持续时间之弹跳手雷。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "duration_resets": 0 },
@@ -172,6 +185,7 @@
         "positionIndex": 12,
         "name": "Blazing Rebound",
         "description": "Hitting a monster causes bouncing grenade to bounce towards another nearby monster increasing its damage.",
+        "zh": { "name": "Blazing 弹射", "description": "命中怪物使弹跳手雷至弹射朝向另一个附近怪物提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_bounces": 0 },
@@ -183,6 +197,7 @@
         "positionIndex": 13,
         "name": "Fiery Charge",
         "description": "Each bounce increases the size of the molten trail. Unleash flames on a large radius inflicting burning after exploding.",
+        "zh": { "name": "炽焰冲锋", "description": "每个弹射提高 size 之熔火轨迹。释放烈焰大型半径施加燃烧之后 exploding。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "increased_burning_damage": 0 },
@@ -201,6 +216,7 @@
         "positionIndex": 14,
         "name": "Coast to Coast",
         "description": "Throw multiple bouncing grenades in an arc.",
+        "zh": { "name": "Coast 至 Coast", "description": "投掷多个弹跳手雷呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "fire_skill_damage": 0 },
@@ -215,6 +231,7 @@
     "name": "Heavy Ball",
     "kind": "active",
     "description": "Flail a big chained spike ball dealing physical damage to monsters on its path.",
+    "zh": { "name": "重型链锤", "description": "挥舞巨大的锁链尖锤，对路径上的怪物造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 80,
@@ -243,6 +260,7 @@
         "positionIndex": 0,
         "name": "Heavy Ball",
         "description": "Core of the Heavy Ball subtree.",
+        "zh": { "name": "重型链锤", "description": "重型链锤 子树核心。" },
         "maxRank": 1
       },
       {
@@ -250,6 +268,7 @@
         "positionIndex": 1,
         "name": "The Bigger the Better",
         "description": "Increases the size of heavy ball.",
+        "zh": { "name": "更大 Better", "description": "提高 重型链锤 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -261,6 +280,7 @@
         "positionIndex": 2,
         "name": "Log Sized Arms",
         "description": "Increased projectile speed for heavy ball.",
+        "zh": { "name": "Log Sized Arms", "description": "提高投射物速度重型链锤。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -272,6 +292,7 @@
         "positionIndex": 3,
         "name": "Surprise Bombing",
         "description": "Chance to unleash a big bo-om on hit.",
+        "zh": { "name": "Surprise Bombing", "description": "命中时有概率释放核心炸弹-奥姆。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -280,6 +301,7 @@
         "positionIndex": 4,
         "name": "Fire Frenzy",
         "description": "Chance to unleash burning flames below the target on hit.",
+        "zh": { "name": "火焰狂乱", "description": "命中时有概率释放燃烧烈焰低于目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -296,6 +318,7 @@
         "positionIndex": 5,
         "name": "Multi Wield",
         "description": "Increases the amount of heavy balls.",
+        "zh": { "name": "Multi 装备", "description": "提高 heavy balls 的数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -307,6 +330,7 @@
         "positionIndex": 6,
         "name": "Machine Drilled Spikes",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Machine Drilled 尖刺", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -325,6 +349,7 @@
         "positionIndex": 7,
         "name": "Gladiator's Strength",
         "description": "Increases the range of heavy ball.",
+        "zh": { "name": "Gladiator's 力量", "description": "提高 重型链锤 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -336,6 +361,7 @@
         "positionIndex": 8,
         "name": "Precision and Power",
         "description": "Increases the attack rating and damage dealt by heavy ball.",
+        "zh": { "name": "精准与力量", "description": "提高攻击命中与造成的伤害重型链锤。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0, "physical_skill_damage": 0 },
@@ -347,6 +373,7 @@
         "positionIndex": 9,
         "name": "Full Body Training",
         "description": "Decreased movement diminish when using heavy ball.",
+        "zh": { "name": "Full Body Training", "description": "降低移动衰减使用重型链锤。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -358,6 +385,7 @@
         "positionIndex": 10,
         "name": "Critical Mass",
         "description": "Increases the critical strike chance of heavy ball.",
+        "zh": { "name": "暴击巨躯", "description": "提高 重型链锤 的暴击概率。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -369,6 +397,7 @@
         "positionIndex": 11,
         "name": "Heavy Swing",
         "description": "Swing the heavy ball around you dealing increased damage and critical strike damage.",
+        "zh": { "name": "重型挥击", "description": "挥击重型链锤周围你造成提高伤害与暴击伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "crit_damage": 0 },
@@ -380,6 +409,7 @@
         "positionIndex": 12,
         "name": "Sharpened Spikes",
         "description": "Unleash multiple smaller heavy balls dealing a portion of the damage dealing increased damage to bleeding targets.",
+        "zh": { "name": "锋利尖刺", "description": "释放多个更小重型球造成一部分伤害造成提高伤害至流血目标。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -406,6 +436,7 @@
         "positionIndex": 13,
         "name": "Warlord Lee's Apprentice",
         "description": "Summon multiple heavy balls permanently dragging them behind you. When attacking or casting unleash the heavy balls towards a nearby enemy. Using this skill again will destroy the heavy balls.",
+        "zh": { "name": "Warlord Lee's Apprentice", "description": "召唤物多个重型球 permanently 拖拽它们身后你。当攻击时施法释放重型球朝向附近敌人。Using this 技能 again will 摧毁重型球。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -417,6 +448,7 @@
         "positionIndex": 14,
         "name": "Terrain Collision",
         "description": "Hitting terrain or monsters with heavy ball unleashes fiery shockwaves into all directions inflicting burning on hit.",
+        "zh": { "name": "地形天体冲撞", "description": "命中地形怪物使用重型链锤释放炽焰冲击波进入全部方向施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0, "trail_count": 1 },
@@ -438,6 +470,7 @@
     "name": "The Big Bo-oM",
     "kind": "active",
     "description": "Throw a huge bo-omb scattering into shrapnel on impact dealing area of effect fire damage.",
+    "zh": { "name": "超级大爆炸", "description": "掷出一颗巨大的炸弹，命中时迸裂成弹片，造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 65,
@@ -462,6 +495,7 @@
         "positionIndex": 0,
         "name": "The Big Bo-oM",
         "description": "Core of the The Big Bo-oM subtree.",
+        "zh": { "name": "超级大爆炸", "description": "超级大爆炸 子树核心。" },
         "maxRank": 1
       },
       {
@@ -469,6 +503,7 @@
         "positionIndex": 1,
         "name": "Boomage",
         "description": "Increases the damage dealt by big bo-om.",
+        "zh": { "name": "Boomage", "description": "提高造成的伤害核心炸弹-奥姆。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -480,6 +515,7 @@
         "positionIndex": 2,
         "name": "Even Bigger Bo-oM!",
         "description": "Increases the area of effect radius of big bo-om.",
+        "zh": { "name": "Even 更大炸弹-奥姆!", "description": "提高 effect radius of big bo-om 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -491,6 +527,7 @@
         "positionIndex": 3,
         "name": "Leg Day",
         "description": "Decreases movement diminish when using big bo-om.",
+        "zh": { "name": "Leg Day", "description": "使用核心炸弹-奥姆时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -502,6 +539,7 @@
         "positionIndex": 4,
         "name": "Wider Armory",
         "description": "Decreases the mana cost of big bo-om.",
+        "zh": { "name": "更宽军械库", "description": "降低法力消耗之核心炸弹-奥姆。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -513,6 +551,7 @@
         "positionIndex": 5,
         "name": "Double Charges!",
         "description": "Big bo-om bounces once when hitting the ground dealing increased damage.",
+        "zh": { "name": "双重冲锋!", "description": "核心炸弹-奥姆弹射 once 当命中地面造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -524,6 +563,7 @@
         "positionIndex": 6,
         "name": "Pyro Enthusiast",
         "description": "Chance to inflict fire break on hit.",
+        "zh": { "name": "Pyro Enthusiast", "description": "命中时有概率施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -542,6 +582,7 @@
         "positionIndex": 7,
         "name": "Swift Bo-ombing",
         "description": "Increased projectile speed for the big bo-om.",
+        "zh": { "name": "迅捷炸弹-ombing", "description": "提高投射物速度超级大爆炸。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -553,6 +594,7 @@
         "positionIndex": 8,
         "name": "Burn the Arena",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "燃烧 Arena", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -571,6 +613,7 @@
         "positionIndex": 9,
         "name": "More Heat!",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "更多灼热!", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -582,6 +625,7 @@
         "positionIndex": 10,
         "name": "Rollin' Rollin' Rollin'",
         "description": "Big bo-om rolls on the ground leaving behind a trail of burning flames.",
+        "zh": { "name": "Rollin' Rollin' Rollin'", "description": "核心炸弹-奥姆投掷地面 leaving 身后轨迹之燃烧烈焰。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -593,6 +637,7 @@
         "positionIndex": 11,
         "name": "Bouncing Boom",
         "description": "Unleash additional bombs traveling forward in an arc after exploding.",
+        "zh": { "name": "弹跳爆轰", "description": "释放额外炸弹飞行前方呈弧线之后 exploding。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 2 },
@@ -604,6 +649,7 @@
         "positionIndex": 12,
         "name": "Crashboom",
         "description": "Throw big bo-om high into the air scattering additional bombs into all directions.",
+        "zh": { "name": "Crashboom", "description": "投掷核心炸弹-奥姆高进入空中散射额外炸弹进入全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -615,6 +661,7 @@
         "positionIndex": 13,
         "name": "Scattering Boom",
         "description": "Hitting a monster with big bo-om unleashes an explosion and causes it to ricochet towards another nearby monster with increased damage and area of effect radius. Big bo-om now has a cooldown.",
+        "zh": { "name": "散射爆轰", "description": "命中怪物使用核心炸弹-奥姆释放爆炸与使至 ricochet 朝向另一个附近怪物使用提高伤害与范围半径。核心炸弹-奥姆有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -626,6 +673,7 @@
         "positionIndex": 14,
         "name": "Molten Boom",
         "description": "Unleashes multiple burning trails of fire in random directions after exploding.",
+        "zh": { "name": "熔火爆轰", "description": "释放多个燃烧轨迹之火焰随机方向之后 exploding。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0, "trail_count": 0 },
@@ -647,6 +695,7 @@
     "name": "Crazy Grapple",
     "kind": "active",
     "description": "Throw a massive spike ball into target location dealing area of effect fire damage and dragging yourself towards it through the air.",
+    "zh": { "name": "疯狂抓钩", "description": "向目标位置投掷巨大的尖锤，造成范围火焰伤害，并将你在空中拖拽过去。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Movement"],
     "movementDuringUse": 0,
@@ -670,6 +719,7 @@
         "positionIndex": 0,
         "name": "Crazy Grapple",
         "description": "Core of the Crazy Grapple subtree.",
+        "zh": { "name": "疯狂抓钩", "description": "疯狂抓钩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -677,6 +727,7 @@
         "positionIndex": 1,
         "name": "High RPM Reel",
         "description": "Increases the projectile speed of crazy grapple.",
+        "zh": { "name": "高 RPM Reel", "description": "提高 疯狂抓钩 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -688,6 +739,7 @@
         "positionIndex": 2,
         "name": "Thornspikes",
         "description": "Increases the damage dealt by crazy grapple.",
+        "zh": { "name": "Thornspikes", "description": "提高造成的伤害疯狂抓钩。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -699,6 +751,7 @@
         "positionIndex": 3,
         "name": "Efficient Grappling",
         "description": "Decreases the mana cost of crazy grapple.",
+        "zh": { "name": "高效 Grappling", "description": "降低法力消耗之疯狂抓钩。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -710,6 +763,7 @@
         "positionIndex": 4,
         "name": "The Most the Best",
         "description": "Increases the area of effect radius of crazy grapple.",
+        "zh": { "name": "Most Best", "description": "提高 effect radius of 疯狂抓钩 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -721,6 +775,7 @@
         "positionIndex": 5,
         "name": "Heatdash",
         "description": "Increases the damage dealt by crazy grapple decreasing the maximum range.",
+        "zh": { "name": "Heatdash", "description": "提高造成的伤害疯狂抓钩 decreasing 最大范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0, "skill_range": 0 },
@@ -732,6 +787,7 @@
         "positionIndex": 6,
         "name": "In Flames",
         "description": "Scorch the ground around the point of impact dealing damage over time.",
+        "zh": { "name": "烈焰", "description": "Scorch 地面周围点之冲击造成伤害随时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -743,6 +799,7 @@
         "positionIndex": 7,
         "name": "Burning Spikeball",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "燃烧 Spikeball", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -761,6 +818,7 @@
         "positionIndex": 8,
         "name": "Spikey Grappler",
         "description": "Increases the maximum range of crazy grapple.",
+        "zh": { "name": "Spikey Grappler", "description": "提高 疯狂抓钩 的最大范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -772,6 +830,7 @@
         "positionIndex": 9,
         "name": "Blue Flames",
         "description": "Chance to inflict fire break on hit.",
+        "zh": { "name": "Blue 烈焰", "description": "命中时有概率施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -790,6 +849,7 @@
         "positionIndex": 10,
         "name": "Slingshot",
         "description": "Fly over the point of impact with increased range.",
+        "zh": { "name": "Slingshot", "description": "Fly 持续点之冲击使用提高范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -801,6 +861,7 @@
         "positionIndex": 11,
         "name": "Thorns of Sorrow",
         "description": "Leave a trail of metal thorns on your path inflicting slow and bleeding for a portion of the damage.",
+        "zh": { "name": "荆棘之 Sorrow", "description": "留下轨迹之 metal 荆棘你的路径施加缓慢与流血一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -819,6 +880,7 @@
         "positionIndex": 12,
         "name": "Cannonade Grapple",
         "description": "Throw bombs around you while flying towards the ball.",
+        "zh": { "name": "Cannonade Grapple", "description": "投掷炸弹周围你当飞散朝向球。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -830,6 +892,7 @@
         "positionIndex": 13,
         "name": "Arena Master",
         "description": "Sweep your surroundings with the spike ball gathering monsters on hit and bringing them back in front of you stunning them.",
+        "zh": { "name": "Arena 大师", "description": "Sweep 你的 surroundings 使用 spike 球 gathering 怪物命中时与 bringing 它们回 front 之你眩晕它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_range": 0 },
@@ -841,6 +904,7 @@
         "positionIndex": 14,
         "name": "Explosive Grapple",
         "description": "Crazy grapple inflicts fire break on hit and a fiery explosion once you reach it dealing increased damage on an increased area of effect radius.",
+        "zh": { "name": "爆炸 Grapple", "description": "疯狂抓钩施加火焰击破命中时与炽焰爆炸 once 你延伸造成提高伤害提高范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_break": 0, "area_of_effect": 0 },
@@ -862,6 +926,7 @@
     "name": "Unstable Bomb",
     "kind": "passive",
     "description": "All bombs scatter small bombs around when exploding dealing fire damage.",
+    "zh": { "name": "不稳定炸弹", "description": "所有炸弹爆炸时会向四周迸射小炸弹，造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Passive", "Explosion"],
     "maxRank": 20,
@@ -887,6 +952,7 @@
     "name": "Wrecking Ball",
     "kind": "passive",
     "description": "Increases the damage and range of Heavy Ball.",
+    "zh": { "name": "破碎铁球", "description": "提高重型链锤的伤害和范围。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -904,6 +970,7 @@
     "name": "Force Overwhelming",
     "kind": "buff",
     "description": "Temporarily increase your attack damage, attack rating and attack speed.",
+    "zh": { "name": "势不可挡", "description": "临时提高你的攻击伤害、攻击命中和攻击速度。" },
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
     "baseCastRate": 1,
@@ -926,6 +993,7 @@
     "name": "Flail Mastery",
     "kind": "passive",
     "description": "Increase attack speed, attack damage and cast rate when using mace weapons.",
+    "zh": { "name": "链锤精通", "description": "使用钉锤类武器时，提高攻击速度、攻击伤害和施法速度。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -943,6 +1011,7 @@
     "name": "Bombardment",
     "kind": "active",
     "description": "Rapidly throw a barrage of small bombs in target direction dealing area of effect fire damage.",
+    "zh": { "name": "狂轰滥炸", "description": "朝目标方向快速投掷一连串小炸弹，造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 65,
@@ -968,6 +1037,7 @@
         "positionIndex": 0,
         "name": "Bombardment",
         "description": "Core of the Bombardment subtree.",
+        "zh": { "name": "狂轰滥炸", "description": "狂轰滥炸 子树核心。" },
         "maxRank": 1
       },
       {
@@ -975,6 +1045,7 @@
         "positionIndex": 1,
         "name": "Double the Fuel",
         "description": "Increases the damage dealt by bombardment.",
+        "zh": { "name": "双重 Fuel", "description": "提高造成的伤害狂轰滥炸。" },
         "maxRank": 4,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -986,6 +1057,7 @@
         "positionIndex": 2,
         "name": "Spikeballrdment",
         "description": "Chance for bombs to turn into spike balls dealing increased physical damage.",
+        "zh": { "name": "Spikeballrdment", "description": "概率使炸弹至 turn 进入 spike 球造成提高物理伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1001,6 +1073,7 @@
         "positionIndex": 3,
         "name": "Efficient Reload",
         "description": "Decreases the cooldown of bombardment.",
+        "zh": { "name": "高效 Reload", "description": "降低cooldown 之狂轰滥炸。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1012,6 +1085,7 @@
         "positionIndex": 4,
         "name": "Full Body Workout",
         "description": "Increases the projectile speed of bombardment.",
+        "zh": { "name": "Full Body Workout", "description": "提高 狂轰滥炸 的投射物速度。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1023,6 +1097,7 @@
         "positionIndex": 5,
         "name": "Massive Strike",
         "description": "Increases the damage dealt by bombardment also increasing the cooldown.",
+        "zh": { "name": "巨大 Strike", "description": "提高造成的伤害狂轰滥炸同时提高 cooldown。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0, "skill_haste": 0 },
@@ -1034,6 +1109,7 @@
         "positionIndex": 6,
         "name": "Fire Charges",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "火焰冲锋", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1052,6 +1128,7 @@
         "positionIndex": 7,
         "name": "Factory Upgrade",
         "description": "Increases the projectile size of bombardment.",
+        "zh": { "name": "Factory Upgrade", "description": "提高 狂轰滥炸 的投射物尺寸。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1063,6 +1140,7 @@
         "positionIndex": 8,
         "name": "Efficient Production",
         "description": "Increases the projectile amount of bombardment.",
+        "zh": { "name": "高效 Production", "description": "提高 狂轰滥炸 的投射物数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1074,6 +1152,7 @@
         "positionIndex": 9,
         "name": "Solid Explosive Fuel",
         "description": "Increases the area of effect radius of bombardment explosions.",
+        "zh": { "name": "Solid 爆炸 Fuel", "description": "提高 effect radius of 狂轰滥炸 explosions 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1085,6 +1164,7 @@
         "positionIndex": 10,
         "name": "Casual Bombing",
         "description": "Throw a single wave of bombs removing the cooldown from bombardment.",
+        "zh": { "name": "Casual Bombing", "description": "投掷单次波之炸弹 removing cooldown 从狂轰滥炸。" },
         "maxRank": 2,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1096,6 +1176,7 @@
         "positionIndex": 11,
         "name": "All Around Annihilation",
         "description": "Unleash bombardment in a circle around you increasing bomb damage over time.",
+        "zh": { "name": "全部周围湮灭", "description": "释放狂轰滥炸圆环周围你提高炸弹伤害随时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1107,6 +1188,7 @@
         "positionIndex": 12,
         "name": "Clusterbombing",
         "description": "Call down raining bombs on multiple nearby monsters. The raining bombs have a chance to unleash smaller bombs after exploding.",
+        "zh": { "name": "Clusterbombing", "description": "Call down raining bombs on multiple nearby monsters. The raining bombs 有概率释放更小炸弹之后 exploding。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1122,6 +1204,7 @@
         "positionIndex": 13,
         "name": "Big Bo-Ombing",
         "description": "Unleash a single trail of big bo-oms with increased damage and area of effect radius.",
+        "zh": { "name": "核心炸弹-Ombing", "description": "释放单次轨迹之核心炸弹-oms 使用提高伤害与范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1141,6 +1224,7 @@
         "positionIndex": 14,
         "name": "ICBM",
         "description": "Launch an intercontinental ballistic missile towards target location dealing damage on a large radius leaving the ground blazing with flames dealing a portion of the damage over time.",
+        "zh": { "name": "ICBM", "description": "发射 intercontinental ballistic 飞弹朝向目标位置造成伤害大型半径 leaving 地面 blazing 使用烈焰造成一部分伤害随时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -1155,6 +1239,7 @@
     "name": "Serrated Chains",
     "kind": "active",
     "description": "Perform an area of effect attack with increased attack rating and damage attaching serrated chains to monsters.",
+    "zh": { "name": "锯齿锁链", "description": "以更高的攻击命中和伤害进行范围攻击，将锯齿锁链挂在怪物身上。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 85,
@@ -1182,6 +1267,7 @@
         "positionIndex": 0,
         "name": "Serrated Chains",
         "description": "Core of the Serrated Chains subtree.",
+        "zh": { "name": "锯齿锁链", "description": "锯齿锁链 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1189,6 +1275,7 @@
         "positionIndex": 1,
         "name": "More Reach",
         "description": "Increases the area of effect radius of serrated chains.",
+        "zh": { "name": "更多延伸", "description": "提高 effect radius of 锯齿锁链 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1200,6 +1287,7 @@
         "positionIndex": 2,
         "name": "Effective Steel",
         "description": "Increases the damage dealt by serrated chains.",
+        "zh": { "name": "有效 Steel", "description": "提高造成的伤害锯齿锁链。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1211,6 +1299,7 @@
         "positionIndex": 3,
         "name": "Open Their Wounds",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Open Their 创伤", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1222,6 +1311,7 @@
         "positionIndex": 4,
         "name": "Rust Poisoning",
         "description": "Chance to increase the tick frequency of serrated chains.",
+        "zh": { "name": "Rust Poisoning", "description": "概率提高每跳 frequency 之锯齿锁链。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1238,6 +1328,7 @@
         "positionIndex": 5,
         "name": "Power over Precision",
         "description": "Increases the damage dealt by serrated chains decreasing attack rating.",
+        "zh": { "name": "力量持续精准", "description": "提高造成的伤害锯齿锁链 decreasing 攻击命中。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "attack_rating_pct": 0 },
@@ -1249,6 +1340,7 @@
         "positionIndex": 6,
         "name": "Experienced Gladiator",
         "description": "Increases attack rating when using serrated chains.",
+        "zh": { "name": "Experienced Gladiator", "description": "提高攻击命中使用锯齿锁链。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1260,6 +1352,7 @@
         "positionIndex": 7,
         "name": "Precision over Power",
         "description": "Ignore a portion of target defense when using serrated chains.",
+        "zh": { "name": "精准持续力量", "description": "Ignore 一部分目标防御使用锯齿锁链。" },
         "maxRank": 5,
         "effects": {
           "base": { "defense_ignored": 0 },
@@ -1271,6 +1364,7 @@
         "positionIndex": 8,
         "name": "Sweeping Slash",
         "description": "Increases the area of effect width decreasing the length of serrated chains.",
+        "zh": { "name": "横扫斩击", "description": "提高 effect width decreasing the length of 锯齿锁链 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1282,6 +1376,7 @@
         "positionIndex": 9,
         "name": "Pierce the Plating",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "穿透 Plating", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1300,6 +1395,7 @@
         "positionIndex": 10,
         "name": "Bouncing Chains",
         "description": "Chance to unleash chains bouncing between multiple monsters on hit inflicting serrated chains.",
+        "zh": { "name": "弹跳锁链", "description": "概率释放锁链弹跳 between 多个怪物命中时施加锯齿锁链。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1316,6 +1412,7 @@
         "positionIndex": 11,
         "name": "Thousand Wounds",
         "description": "Serrated chains now stack ripping them off violently when reaching maximum stacks inflicting bleeding on the target.",
+        "zh": { "name": "Thousand 创伤", "description": "锯齿锁链层 ripping 它们关闭 violently 当延伸最大层数施加流血目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "max_skill_stacks": 0, "increased_bleeding_damage": 0 },
@@ -1334,6 +1431,7 @@
         "positionIndex": 12,
         "name": "Rawest Power",
         "description": "Perform a whirling attack hitting monsters around you with increased area of effect radius.",
+        "zh": { "name": "Rawest 力量", "description": "执行 whirling 攻击命中怪物周围你使用提高范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "physical_skill_damage": 0 },
@@ -1345,6 +1443,7 @@
         "positionIndex": 13,
         "name": "Gladiator's Dash",
         "description": "Dash forward a short distance before performing an area of effect attack dealing increased damagee.",
+        "zh": { "name": "Gladiator's 突进", "description": "突进前方短距距离 before 进行范围攻击造成提高 damagee。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -1356,6 +1455,7 @@
         "positionIndex": 14,
         "name": "Rusted Throns",
         "description": "Increases the tick frequency of serrated chains.",
+        "zh": { "name": "Rusted Throns", "description": "提高 锯齿锁链 的每跳 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0, "physical_skill_damage": 0 },
@@ -1370,6 +1470,7 @@
     "name": "Rend Flesh",
     "kind": "passive",
     "description": "Attacks have a chance to inflict bleeding on monsters in a small area around the target.",
+    "zh": { "name": "撕裂血肉", "description": "攻击有概率使目标周围小范围内的怪物流血。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 1,
@@ -1387,6 +1488,7 @@
     "name": "Titanium Chains",
     "kind": "passive",
     "description": "Monsters affected by Serrated Chains explode upon death dealing physical damage.",
+    "zh": { "name": "钛金锁链", "description": "受锯齿锁链影响的怪物死亡时会爆炸，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Passive", "Explosion"],
     "maxRank": 20,
@@ -1411,6 +1513,7 @@
     "name": "Retiarius Net",
     "kind": "active",
     "description": "Throw a retiarius net dealing area of effect arcane damage and stunning monsters hit.",
+    "zh": { "name": "网斗士之网", "description": "掷出网斗士的渔网，造成范围奥术伤害并眩晕被网住的怪物。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 65,
@@ -1435,6 +1538,7 @@
         "positionIndex": 0,
         "name": "Retiarius Net",
         "description": "Core of the Retiarius Net subtree.",
+        "zh": { "name": "网斗士之网", "description": "网斗士之网 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1442,6 +1546,7 @@
         "positionIndex": 1,
         "name": "Bigger Web",
         "description": "Increases the area of effect radius of retiarius net.",
+        "zh": { "name": "更大 Web", "description": "提高 effect radius of 网斗士之网 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1453,6 +1558,7 @@
         "positionIndex": 2,
         "name": "Well Knitted Net",
         "description": "Increases the damage dealt by retiarius net.",
+        "zh": { "name": "源泉 Knitted Net", "description": "提高造成的伤害网斗士之网。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1464,6 +1570,7 @@
         "positionIndex": 3,
         "name": "Gladiators Resilience",
         "description": "Decreases movement diminish when using retiarius net.",
+        "zh": { "name": "Gladiators 韧性", "description": "使用网斗士之网时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1475,6 +1582,7 @@
         "positionIndex": 4,
         "name": "Throwing Technique",
         "description": "Increases the projectile speed of retiarius net.",
+        "zh": { "name": "投掷 Technique", "description": "提高 网斗士之网 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1486,6 +1594,7 @@
         "positionIndex": 5,
         "name": "Bouncing Net",
         "description": "Chance to bounce towards a nearby monster when landing.",
+        "zh": { "name": "弹跳 Net", "description": "概率弹射朝向附近怪物落地时。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1494,6 +1603,7 @@
         "positionIndex": 6,
         "name": "Target for Destruction",
         "description": "Chance to rain down a spike ball on hit dealing additional damage.",
+        "zh": { "name": "目标毁灭", "description": "概率骤雨倒地 spike 球命中时造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1509,6 +1619,7 @@
         "positionIndex": 7,
         "name": "Sharp String Net",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "尖锐 String Net", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1527,6 +1638,7 @@
         "positionIndex": 8,
         "name": "Multinet Throw",
         "description": "Chance on cast to unleash an additional retiarius net.",
+        "zh": { "name": "Multinet 投掷", "description": "施法时有概率释放额外网斗士之网。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1542,6 +1654,7 @@
         "positionIndex": 9,
         "name": "Devastating Net",
         "description": "Increases damage to targets inflicted with serrated chains.",
+        "zh": { "name": "Devastating Net", "description": "提高伤害至目标施加使用锯齿锁链。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_serrated_chains": 0 },
@@ -1553,6 +1666,7 @@
         "positionIndex": 10,
         "name": "Elastic Strings",
         "description": "Chance to pull nearby monsters towards the point of impact when landing.",
+        "zh": { "name": "Elastic Strings", "description": "概率牵引附近怪物朝向点之冲击落地时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1568,6 +1682,7 @@
         "positionIndex": 11,
         "name": "Rocket Boosted Net",
         "description": "Throw retiarius net towards the nearest monsters with increased speed dealing increased damage.",
+        "zh": { "name": "火箭提升 Net", "description": "投掷网斗士之网朝向最近的怪物使用提高速度造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_speed": 0 },
@@ -1579,6 +1694,7 @@
         "positionIndex": 12,
         "name": "Metal Net",
         "description": "Increases the area of effect radius and damage slowing monsters on hit instead of rooting them.",
+        "zh": { "name": "Metal Net", "description": "提高 effect radius and damage slowing monsters on hit instead of rooting them 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -1590,6 +1706,7 @@
         "positionIndex": 13,
         "name": "Ricocheting Net",
         "description": "Retiarius net bounces between multiple monsters increasing its damage dealt with every bounce.",
+        "zh": { "name": "Ricocheting Net", "description": "网斗士之网弹射 between 多个怪物提高造成的伤害使用每弹射。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_bounces": 0 },
@@ -1601,6 +1718,7 @@
         "positionIndex": 14,
         "name": "Arena Dominator",
         "description": "Pull nearby monsters towards you rooting them in place. Retiarius net now has a cooldown.",
+        "zh": { "name": "Arena Dominator", "description": "牵引附近怪物朝向你 rooting 它们 place。网斗士之网有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1615,6 +1733,7 @@
     "name": "Resilient Gladiator",
     "kind": "passive",
     "description": "Increases your physical damage reduction and life.",
+    "zh": { "name": "坚韧角斗士", "description": "提高你的物理伤害减免和生命。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -1632,6 +1751,7 @@
     "name": "Chain Trap",
     "kind": "active",
     "description": "Throw a chain trap into the target location dealing arcane damage and hooking nearby monsters with chains.",
+    "zh": { "name": "锁链陷阱", "description": "向目标位置投掷锁链陷阱，造成奥术伤害，并用锁链钩住附近怪物。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell"],
     "movementDuringUse": 65,
@@ -1655,6 +1775,7 @@
         "positionIndex": 0,
         "name": "Chain Trap",
         "description": "Core of the Chain Trap subtree.",
+        "zh": { "name": "锁链陷阱", "description": "锁链陷阱 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1662,6 +1783,7 @@
         "positionIndex": 1,
         "name": "Absolute Unit",
         "description": "Increases the cast range of chain trap.",
+        "zh": { "name": "绝对 Unit", "description": "提高 锁链陷阱 的施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1673,6 +1795,7 @@
         "positionIndex": 2,
         "name": "Rusty Chaintip",
         "description": "Chance to inflict serrated chains on hit.",
+        "zh": { "name": "Rusty Chaintip", "description": "命中时有概率施加锯齿锁链。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1690,6 +1813,7 @@
         "positionIndex": 3,
         "name": "Arcane Shattering Force",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "奥术粉碎力量", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1708,6 +1832,7 @@
         "positionIndex": 4,
         "name": "Target Hungry",
         "description": "Increases the amount of targets for chain trap.",
+        "zh": { "name": "目标 Hungry", "description": "提高 targets for 锁链陷阱 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "max_targets": 0 },
@@ -1719,6 +1844,7 @@
         "positionIndex": 5,
         "name": "Double Trouble",
         "description": "Chance on cast to unleash an additional chain trap.",
+        "zh": { "name": "双重 Trouble", "description": "施法时有概率释放额外锁链陷阱。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1734,6 +1860,7 @@
         "positionIndex": 6,
         "name": "Serrated Chaintrap",
         "description": "Increases damage dealt to targets inflicted with serrated chains.",
+        "zh": { "name": "锯齿 Chaintrap", "description": "提高对 目标施加使用锯齿锁链 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_serrated_chains": 0 },
@@ -1745,6 +1872,7 @@
         "positionIndex": 7,
         "name": "Sharpened Chaintip",
         "description": "Increases the damage dealt by chain trap.",
+        "zh": { "name": "锋利 Chaintip", "description": "提高造成的伤害锁链陷阱。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1756,6 +1884,7 @@
         "positionIndex": 8,
         "name": "Efficient Reel",
         "description": "Increases the hooking speed of chain trap.",
+        "zh": { "name": "高效 Reel", "description": "提高 锁链陷阱 的hooking 速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1767,6 +1896,7 @@
         "positionIndex": 9,
         "name": "Longer Chains",
         "description": "Increases the hooking ranged of chain trap.",
+        "zh": { "name": "更久锁链", "description": "提高 锁链陷阱 的hooking 远程。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1778,6 +1908,7 @@
         "positionIndex": 10,
         "name": "C4 Charged Trap",
         "description": "After hooking monsters cause chain trap to explode dealing area of effect damage.",
+        "zh": { "name": "C4 充能陷阱", "description": "之后 hooking 怪物使锁链陷阱至爆炸造成范围伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1789,6 +1920,7 @@
         "positionIndex": 11,
         "name": "Sharpened Tip",
         "description": "Increases damage dealt inflicting bleeding and stunning targets on hit.",
+        "zh": { "name": "锋利 Tip", "description": "提高造成的伤害施加流血与眩晕目标命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "increased_bleeding_damage": 0 },
@@ -1810,6 +1942,7 @@
         "positionIndex": 12,
         "name": "Spinning Trap",
         "description": "Chain trap spins its chains dealing increased damage in a large radius. No longer hooks monsters.",
+        "zh": { "name": "旋转陷阱", "description": "锁链陷阱旋转锁链造成提高伤害大型半径。更久钩住怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_range": 0 },
@@ -1821,6 +1954,7 @@
         "positionIndex": 13,
         "name": "Betrayal",
         "description": "Chain trap now attaches to a monster on hit causing the monster to explode dealing increased damage after hooking nearby monsters in.",
+        "zh": { "name": "Betrayal", "description": "锁链陷阱 attaches 至怪物命中时使怪物爆炸造成提高伤害之后 hooking 附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1832,6 +1966,7 @@
         "positionIndex": 14,
         "name": "Wait for the Prey",
         "description": "Throw multiple deactivated chain traps. Casting chain trap again will cause the traps to activate.",
+        "zh": { "name": "Wait Prey", "description": "投掷多个 deactivated 连锁陷阱。施法锁链陷阱 again will 使陷阱至 activate。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1846,6 +1981,7 @@
     "name": "Annihilation",
     "kind": "active",
     "description": "Violently rip all serrated chains out of monsters dealing area of effect damage. Targets affected by retiarius net take increased damage.",
+    "zh": { "name": "湮灭", "description": "将所有锯齿锁链从怪物身上猛烈扯出，造成范围伤害。受网斗士之网影响的目标会受到提高的伤害。" },
     "damageType": "physical",
     "tags": ["Cast", "Active", "Spell", "Explosion", "Strike"],
     "movementDuringUse": 85,
@@ -1877,6 +2013,7 @@
         "positionIndex": 0,
         "name": "Annihilation",
         "description": "Core of the Annihilation subtree.",
+        "zh": { "name": "湮灭", "description": "湮灭 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1884,6 +2021,7 @@
         "positionIndex": 1,
         "name": "Forceful Rip",
         "description": "Increases the area of effect radius of annihilation.",
+        "zh": { "name": "Forceful 撕扯", "description": "提高 effect radius of 湮灭 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1895,6 +2033,7 @@
         "positionIndex": 2,
         "name": "Attack Force by Force",
         "description": "Increases the damage dealt by annihilation.",
+        "zh": { "name": "攻击力量力量", "description": "提高造成的伤害湮灭。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1906,6 +2045,7 @@
         "positionIndex": 3,
         "name": "More Violence!",
         "description": "Decreases the cooldown of annihilation.",
+        "zh": { "name": "更多 Violence!", "description": "降低cooldown 之湮灭。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1917,6 +2057,7 @@
         "positionIndex": 4,
         "name": "Serrated Annihilation",
         "description": "Increases damage dealt to targets inflicted with serrated chains.",
+        "zh": { "name": "锯齿湮灭", "description": "提高对 目标施加使用锯齿锁链 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_serrated_chains": 0 },
@@ -1928,6 +2069,7 @@
         "positionIndex": 5,
         "name": "Arena Controller",
         "description": "Annihilation pulls monsters towards you with increased force.",
+        "zh": { "name": "Arena Controller", "description": "湮灭牵引怪物朝向你使用提高力量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1939,6 +2081,7 @@
         "positionIndex": 6,
         "name": "Brutal Reach",
         "description": "Increases the critical strike damage dealt by annihilation.",
+        "zh": { "name": "Brutal 延伸", "description": "提高暴击伤害 dealt 湮灭。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_damage": 0 },
@@ -1950,6 +2093,7 @@
         "positionIndex": 7,
         "name": "Everyone Gets it!",
         "description": "Increases the amount of annihilated targets.",
+        "zh": { "name": "Everyone 被 !", "description": "提高 annihilated targets 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "max_targets": 0 },
@@ -1961,6 +2105,7 @@
         "positionIndex": 8,
         "name": "Rip the Wounds",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "撕扯创伤", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1972,6 +2117,7 @@
         "positionIndex": 9,
         "name": "Deep Cuts",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Deep 切割", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1990,6 +2136,7 @@
         "positionIndex": 10,
         "name": "Explosive Delivery",
         "description": "Chance to unleash a bloody explosion on hit.",
+        "zh": { "name": "爆炸 Delivery", "description": "命中时有概率释放 bloody 爆炸。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1998,6 +2145,7 @@
         "positionIndex": 11,
         "name": "Rusted Chains",
         "description": "Increases damage based on targets current life and executes monsters below a life threshold.",
+        "zh": { "name": "Rusted 锁链", "description": "提高伤害基于目标当前生命与处决怪物低于生命阈值。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_life": 0, "execute_below": 0 },
@@ -2009,6 +2157,7 @@
         "positionIndex": 12,
         "name": "Symphony of Chains",
         "description": "Unleash multiple spinning chains around you inflicting bleeding on hit.",
+        "zh": { "name": "交响曲之锁链", "description": "释放多个旋转锁链周围你施加流血命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "increased_bleeding_damage": 0 },
@@ -2027,6 +2176,7 @@
         "positionIndex": 13,
         "name": "Megadeath",
         "description": "Rain down large bombs at monsters on hit.",
+        "zh": { "name": "Megadeath", "description": "骤雨倒地大型炸弹怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -2038,6 +2188,7 @@
         "positionIndex": 14,
         "name": "Total Annihilation",
         "description": "Spin a large chain around you for a short duration dealing increased damage and stunning monsters on hit. The outer edge of the chain always critically hits.",
+        "zh": { "name": "总湮灭", "description": "旋转大型连锁周围你短时间内造成提高伤害与眩晕怪物命中时。outer 锋刃之连锁 always 暴击命中。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "spell_crit_damage": 0 },
@@ -2052,6 +2203,7 @@
     "name": "Master Trap Maker",
     "kind": "passive",
     "description": "Passively increases the arcane damage dealt by chain traps and provides a chance for critical hits as well as a proc chance for traps to activate rapidly causing the trap and its hooks to travel faster.",
+    "zh": { "name": "陷阱大师", "description": "被动提高锁链陷阱造成的奥术伤害，并提供暴击概率，以及陷阱快速触发的概率，使陷阱和挂钩飞行更快。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -2069,6 +2221,7 @@
     "name": "Madness Control",
     "kind": "active",
     "description": "Hook nearby monsters towards you stunning them and dealing arcane damage. Additionally summon a bomb from the sky onto your location creating an explosion that deals arcane damage.",
+    "zh": { "name": "疯狂掌控", "description": "将附近怪物钩到你面前，眩晕它们并造成奥术伤害。同时从天而降一颗炸弹落在你的位置，引发造成奥术伤害的爆炸。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 85,
@@ -2093,6 +2246,7 @@
         "positionIndex": 0,
         "name": "Madness Control",
         "description": "Core of the Madness Control subtree.",
+        "zh": { "name": "疯狂掌控", "description": "疯狂掌控 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2100,6 +2254,7 @@
         "positionIndex": 1,
         "name": "Mad Rampage",
         "description": "Increases the damage dealt by madness control.",
+        "zh": { "name": "Mad 暴走", "description": "提高造成的伤害疯狂掌控。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2111,6 +2266,7 @@
         "positionIndex": 2,
         "name": "Ground Zero",
         "description": "Increases the area of effect radius of madness control.",
+        "zh": { "name": "地面 Zero", "description": "提高 effect radius of 疯狂掌控 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2122,6 +2278,7 @@
         "positionIndex": 3,
         "name": "Powerful Chainstrike",
         "description": "Inflicts stun with increased duration on hit.",
+        "zh": { "name": "Powerful Chainstrike", "description": "命中时施加眩晕使用提高持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2133,6 +2290,7 @@
         "positionIndex": 4,
         "name": "Arena Police",
         "description": "Decreases the cooldown of madness control.",
+        "zh": { "name": "Arena Police", "description": "降低cooldown 之疯狂掌控。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -2144,6 +2302,7 @@
         "positionIndex": 5,
         "name": "We Are All Mad Here",
         "description": "Increases the amount of hooked targets with madness control.",
+        "zh": { "name": "We 全部 Mad Here", "description": "提高 hooked targets with 疯狂掌控 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "max_targets": 0 },
@@ -2155,6 +2314,7 @@
         "positionIndex": 6,
         "name": "Napalm Charge",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "Napalm 冲锋", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -2173,6 +2333,7 @@
         "positionIndex": 7,
         "name": "Boom Boom BOOM",
         "description": "Chance to rain down additional bombs at targets on hit.",
+        "zh": { "name": "爆轰爆轰爆轰", "description": "命中时有概率骤雨倒地额外炸弹目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2188,6 +2349,7 @@
         "positionIndex": 8,
         "name": "Capture and Punish",
         "description": "Chance to deal increased damage inflicting slow on hit.",
+        "zh": { "name": "Capture 与 Punish", "description": "命中时有概率造成提高伤害施加缓慢。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2204,6 +2366,7 @@
         "positionIndex": 9,
         "name": "Effective Control",
         "description": "Increases the hooking speed of madness control.",
+        "zh": { "name": "有效控制", "description": "提高 疯狂掌控 的hooking 速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -2215,6 +2378,7 @@
         "positionIndex": 10,
         "name": "Keep Sane among Mad",
         "description": "Decreases movement diminish when using madness control.",
+        "zh": { "name": "Keep Sane among Mad", "description": "使用疯狂掌控时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -2226,6 +2390,7 @@
         "positionIndex": 11,
         "name": "Surging Madness",
         "description": "After hooking monsters in knock them back with intense force dealing increased damage stunning them.",
+        "zh": { "name": "奔涌 Madness", "description": "之后 hooking 怪物击退它们回使用 intense 力量造成提高伤害眩晕它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2237,6 +2402,7 @@
         "positionIndex": 12,
         "name": "Area Control",
         "description": "Madness control can be casted at target location with increased area of effect radius.",
+        "zh": { "name": "范围控制", "description": "疯狂掌控可以 casted 目标位置使用提高范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2248,6 +2414,7 @@
         "positionIndex": 13,
         "name": "Evasive Move",
         "description": "Become immortal for a short duration.",
+        "zh": { "name": "Evasive Move", "description": "Become 不朽短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2259,6 +2426,7 @@
         "positionIndex": 14,
         "name": "Blink and you are dead",
         "description": "Teleport a short distance unleashing madness control at the initial location.",
+        "zh": { "name": "Blink 与你 dead", "description": "Teleport 短距距离释放疯狂掌控 initial 位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_range": 0 },

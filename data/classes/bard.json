@@ -1,6 +1,7 @@
 {
   "id": "bard",
   "name": "Bard",
+  "zh": { "name": "吟游诗人" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

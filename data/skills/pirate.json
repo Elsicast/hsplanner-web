@@ -5,6 +5,7 @@
     "name": "Buckshot",
     "kind": "active",
     "description": "Quick draw your musket and release a ranged buckshot with increased damage and additional fire damage.",
+    "zh": { "name": "霰弹射击", "description": "快速拔出火枪，释放一记远程霰弹，造成提高的伤害和额外火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -86,6 +87,7 @@
         "positionIndex": 0,
         "name": "Buckshot",
         "description": "Core of the Buckshot subtree.",
+        "zh": { "name": "霰弹射击", "description": "霰弹射击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -93,6 +95,7 @@
         "positionIndex": 1,
         "name": "Black Powder",
         "description": "Increases damage dealt by buckshot.",
+        "zh": { "name": "黑色火药", "description": "提高 霰弹射击 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -104,6 +107,7 @@
         "positionIndex": 2,
         "name": "Stack of Slugs",
         "description": "Increases the amount of buckshot trails.",
+        "zh": { "name": "层之铅弹", "description": "提高 霰弹射击 trails 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "trail_count": 0 },
@@ -115,6 +119,7 @@
         "positionIndex": 3,
         "name": "Spiced Up",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "Spiced 上", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -133,6 +138,7 @@
         "positionIndex": 4,
         "name": "Eye Patch",
         "description": "Chance to stun on hit.",
+        "zh": { "name": "之眼 Patch", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -145,6 +151,7 @@
         "positionIndex": 5,
         "name": "Scorched Slugshot",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Scorched Slugshot", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -156,6 +163,7 @@
         "positionIndex": 6,
         "name": "Longshot",
         "description": "Increases the range of buckshot.",
+        "zh": { "name": "Longshot", "description": "提高 霰弹射击 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -167,6 +175,7 @@
         "positionIndex": 7,
         "name": "Colossus Slugs",
         "description": "Buckshot projectile size increased.",
+        "zh": { "name": "巨像铅弹", "description": "霰弹射击投射物尺寸提高。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -178,6 +187,7 @@
         "positionIndex": 8,
         "name": "Targeted Slugs",
         "description": "Increases the attack rating when using buckshot.",
+        "zh": { "name": "Targeted 铅弹", "description": "提高攻击命中使用霰弹射击。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -189,6 +199,7 @@
         "positionIndex": 9,
         "name": "Firearm Expert",
         "description": "Increases the attack speed of buckshot while wielding a gun.",
+        "zh": { "name": "Firearm Expert", "description": "装备枪械时提高攻击速度之霰弹射击。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -200,6 +211,7 @@
         "positionIndex": 10,
         "name": "Sluglust",
         "description": "Killing an enemy with buckshot increases your fire damage for a short period of time.",
+        "zh": { "name": "Sluglust", "description": "击杀敌人使用霰弹射击提高你的火焰伤害短距期间之时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -211,6 +223,7 @@
         "positionIndex": 11,
         "name": "Big Slugs",
         "description": "Projectiles are now bigger and travel farther also knocking monsters back.",
+        "zh": { "name": "核心铅弹", "description": "投射物更大与飞行 farther 同时击退怪物。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -230,6 +243,7 @@
         "positionIndex": 12,
         "name": "One Slug to End Them All",
         "description": "Fire a single slug scaling a portion of its damage from the amount of total projectiles.",
+        "zh": { "name": "一次重弹至 End 它们全部", "description": "火焰单次重弹加成一部分伤害从数量之总投射物。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_size": 0 },
@@ -241,6 +255,7 @@
         "positionIndex": 13,
         "name": "Circle of Slugs",
         "description": "Fire multiple waves of slugs in every direction. Buckshot now has a cooldown.",
+        "zh": { "name": "圆环之铅弹", "description": "火焰多个波之铅弹每 direction。霰弹射击有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -260,6 +275,7 @@
         "positionIndex": 14,
         "name": "Slick Slugs",
         "description": "Projectiles now chain off of the target with decreased damage.",
+        "zh": { "name": "Slick 铅弹", "description": "投射物连锁关闭之目标使用降低伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "splash_of_total_damage": 0, "projectile_bounces": 0 },
@@ -274,6 +290,7 @@
     "name": "Grenade Jump",
     "kind": "active",
     "description": "Blast yourself into the air leaving a cluster of grenades behind dealing fire damage.",
+    "zh": { "name": "榴弹跳跃", "description": "将自己炸上天空，在身后留下一串手雷，造成火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -338,6 +355,7 @@
     "name": "Explosive Barrel",
     "kind": "passive",
     "description": "Spawn a barrel of explosives which detonates after some time or when shot with a projectile dealing fire damage.",
+    "zh": { "name": "爆炸桶", "description": "生成一桶炸药，会在一段时间后或被投射物击中时爆炸，造成火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -407,6 +425,7 @@
         "positionIndex": 0,
         "name": "Explosive Barrel",
         "description": "Core of the Explosive Barrel subtree.",
+        "zh": { "name": "爆炸桶", "description": "爆炸桶 子树核心。" },
         "maxRank": 1
       },
       {
@@ -414,6 +433,7 @@
         "positionIndex": 1,
         "name": "Explosive Containers",
         "description": "Increases the amount of spawned barrels.",
+        "zh": { "name": "爆炸 Containers", "description": "提高 spawned barrels 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -425,6 +445,7 @@
         "positionIndex": 2,
         "name": "Barrel Blast Radius",
         "description": "Increases explosion area of effect radius of explosive barrel.",
+        "zh": { "name": "桶爆破半径", "description": "提高 effect radius of 爆炸桶 的爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -436,6 +457,7 @@
         "positionIndex": 3,
         "name": "Inflammable Liquid",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Inflammable 液体", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -447,6 +469,7 @@
         "positionIndex": 4,
         "name": "Scatter Barrel",
         "description": "Chance on cast to unleash an additional barrel.",
+        "zh": { "name": "散射桶", "description": "施法时有概率释放额外桶。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -462,6 +485,7 @@
         "positionIndex": 5,
         "name": "Sudden Dynamite",
         "description": "Chance on exploding to launch shrapnel around dealing additional damage.",
+        "zh": { "name": "骤然 Dynamite", "description": "概率在 exploding 至发射弹片周围造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -477,6 +501,7 @@
         "positionIndex": 6,
         "name": "Stack of Explosives",
         "description": "Increases the damage dealt by barrels.",
+        "zh": { "name": "层之爆炸", "description": "提高造成的伤害炸药桶。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -488,6 +513,7 @@
         "positionIndex": 7,
         "name": "MORE BARRELS!",
         "description": "Increases proc rate of explosive barrel.",
+        "zh": { "name": "更多炸药桶!", "description": "提高 爆炸桶 的触发速率。" },
         "maxRank": 3,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -496,6 +522,7 @@
         "positionIndex": 8,
         "name": "Incendiary Explosives",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "Incendiary 爆炸", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -514,6 +541,7 @@
         "positionIndex": 9,
         "name": "Deepfrozen Barrel",
         "description": "Dealing cold damage with explosive barrel freezes enemies and inflicts permafrost.",
+        "zh": { "name": "Deepfrozen 桶", "description": "造成冰冷伤害使用爆炸桶冻结敌人与施加永久冻土。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_permafrost_damage": 0 },
@@ -532,6 +560,7 @@
         "positionIndex": 10,
         "name": "Barrels of the Freljord",
         "description": "Barrels now explode in a frigid blast converting damage dealt to cold inflicting cold break.",
+        "zh": { "name": "炸药桶之 Freljord", "description": "炸药桶爆炸 frigid 爆破转化造成的伤害至冰冷施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -550,6 +579,7 @@
         "positionIndex": 11,
         "name": "Bring the Grog!",
         "description": "Barrels are now big and leave the ground burning with increased blast radius.",
+        "zh": { "name": "Bring Grog!", "description": "炸药桶核心与留下地面燃烧使用提高爆破半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -561,6 +591,7 @@
         "positionIndex": 12,
         "name": "Field of Explosives",
         "description": "Create multiple trails of smaller barrels.",
+        "zh": { "name": "野域之爆炸", "description": "Create 多个轨迹之更小炸药桶。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "trail_count": 0 },
@@ -572,6 +603,7 @@
         "positionIndex": 13,
         "name": "Explosive Collision",
         "description": "Now throw a barrel bouncing and exploding multiple times.",
+        "zh": { "name": "爆炸天体冲撞", "description": "投掷桶弹跳与 exploding 多个次。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_bounces": 0 },
@@ -583,6 +615,7 @@
         "positionIndex": 14,
         "name": "Circle of TNT",
         "description": "Now creates a circle of barrels around the target.",
+        "zh": { "name": "圆环之炸药", "description": "产生圆环之炸药桶周围目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -597,6 +630,7 @@
     "name": "Cannonball",
     "kind": "active",
     "description": "Shoot a cannonball that launches in the air on hit and deals area of effect damage when landing.",
+    "zh": { "name": "炮弹", "description": "发射一枚命中后会弹上空中、落地时造成范围伤害的炮弹。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -679,6 +713,7 @@
         "positionIndex": 0,
         "name": "Cannonball",
         "description": "Core of the Cannonball subtree.",
+        "zh": { "name": "炮弹", "description": "炮弹 子树核心。" },
         "maxRank": 1
       },
       {
@@ -686,6 +721,7 @@
         "positionIndex": 1,
         "name": "Cannon Scatter",
         "description": "Increases the amount of chain bounces.",
+        "zh": { "name": "加农炮散射", "description": "提高 chain bounces 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -697,6 +733,7 @@
         "positionIndex": 2,
         "name": "Shrapnel Count",
         "description": "Increases the amount of shrapnel from cannonball explosion.",
+        "zh": { "name": "弹片数量", "description": "提高 shrapnel from 炮弹 explosion 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -708,6 +745,7 @@
         "positionIndex": 3,
         "name": "Cannon Accuracy",
         "description": "Increases the attack rating when using cannonball.",
+        "zh": { "name": "加农炮 Accuracy", "description": "提高攻击命中使用炮弹。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -719,6 +757,7 @@
         "positionIndex": 4,
         "name": "Steel Balls",
         "description": "Increases the damage dealt by cannonball.",
+        "zh": { "name": "Steel 球", "description": "提高造成的伤害炮弹。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -730,6 +769,7 @@
         "positionIndex": 5,
         "name": "Slowmode",
         "description": "Increases the damage dealt by cannonball shrapnel.",
+        "zh": { "name": "Slowmode", "description": "提高造成的伤害炮弹弹片。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -741,6 +781,7 @@
         "positionIndex": 6,
         "name": "Artillery Farshot",
         "description": "Increases the range of cannonball.",
+        "zh": { "name": "炮击 Farshot", "description": "提高 炮弹 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -752,6 +793,7 @@
         "positionIndex": 7,
         "name": "Empowered Blasting Powder",
         "description": "Increases the projectile speed of cannonball shrapnel.",
+        "zh": { "name": "强化爆破火药", "description": "提高 炮弹 shrapnel 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -763,6 +805,7 @@
         "positionIndex": 8,
         "name": "Mayday",
         "description": "Increases the size and explosion area of effect radius of cannonball.",
+        "zh": { "name": "Mayday", "description": "提高 effect radius of 炮弹 的size 与爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -774,6 +817,7 @@
         "positionIndex": 9,
         "name": "Slay the Weak!",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Slay 弱者!", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -785,6 +829,7 @@
         "positionIndex": 10,
         "name": "Blasting Balls",
         "description": "Cannonball no longer explodes on hit but instead knocks monsters back with increased damage according to the amount of shrapnel.",
+        "zh": { "name": "爆破球", "description": "炮弹更久爆炸命中时改为击退怪物使用提高伤害依照至数量之弹片。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -796,6 +841,7 @@
         "positionIndex": 11,
         "name": "Bomb Trail",
         "description": "Cannonball no longer chains but is now piercing and unleashes bombs on every monster hit.",
+        "zh": { "name": "炸弹轨迹", "description": "炮弹更久锁链穿透与释放炸弹每怪物命中。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -807,6 +853,7 @@
         "positionIndex": 12,
         "name": "Blast the Horizon",
         "description": "Fire multiple cannonballs in an arc with decreased damage and bounces.",
+        "zh": { "name": "爆破 Horizon", "description": "火焰多个炮弹呈弧线使用降低伤害与弹射。" },
         "maxRank": 3,
         "effects": {
           "base": { "splash_of_total_damage": 0, "projectile_count": 0 },
@@ -818,6 +865,7 @@
         "positionIndex": 13,
         "name": "Mega Shot",
         "description": "Fire a mega cannon ball with increased damage unleashing additional cannonballs around the impact location.",
+        "zh": { "name": "Mega 射击", "description": "火焰 mega 加农炮球使用提高伤害释放额外炮弹周围冲击位置。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -837,6 +885,7 @@
         "positionIndex": 14,
         "name": "Rolling Balls",
         "description": "Fire rolling cannon balls traveling forward on the ground exploding with increased radius and inflicting burning on hit.",
+        "zh": { "name": "Rolling 球", "description": "火焰 rolling 加农炮球飞行前方地面 exploding 使用提高半径与施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -866,6 +915,7 @@
     "name": "Explosive Bullets",
     "kind": "active",
     "description": "Striking a monster leaves a charge in them that detonates after a short delay dealing area of effect fire damage and stunning them. If you have Explosive Barrel skilled, attacking has a chance to spawn barrels in a line around the target exploding shortly after.",
+    "zh": { "name": "爆炸弹头", "description": "击中怪物会在其体内留下一份装药，短暂延迟后爆炸，造成范围火焰伤害并眩晕怪物。如果你已学习爆炸桶，攻击有概率在目标周围呈直线生成爆炸桶并很快爆炸。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -948,6 +998,7 @@
         "positionIndex": 0,
         "name": "Explosive Bullets",
         "description": "Core of the Explosive Bullets subtree.",
+        "zh": { "name": "爆炸弹头", "description": "爆炸弹头 子树核心。" },
         "maxRank": 1
       },
       {
@@ -955,6 +1006,7 @@
         "positionIndex": 1,
         "name": "Grouping Up",
         "description": "Chance to attach an additional explosive to a nearby target on hit.",
+        "zh": { "name": "Grouping 上", "description": "命中时有概率attach 额外爆炸至附近目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -970,6 +1022,7 @@
         "positionIndex": 2,
         "name": "Gunner's Glory",
         "description": "Increases the damage dealt by explosive bullets when wielding a gun.",
+        "zh": { "name": "Gunner's 荣耀", "description": "提高造成的伤害爆炸弹头装备枪械。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -981,6 +1034,7 @@
         "positionIndex": 3,
         "name": "Shattering Blast",
         "description": "Inflicts armor break on hit.",
+        "zh": { "name": "粉碎爆破", "description": "命中时施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -999,6 +1053,7 @@
         "positionIndex": 4,
         "name": "Sudden Scatter",
         "description": "Chance on attack to fire an additional explosive bullet.",
+        "zh": { "name": "骤然散射", "description": "攻击时有概率火焰额外爆炸子弹。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1014,6 +1069,7 @@
         "positionIndex": 5,
         "name": "Boss Killer",
         "description": "Increases the damage dealt by explosive bullets against bosses.",
+        "zh": { "name": "首领 Killer", "description": "提高造成的伤害爆炸弹头对抗首领。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1025,6 +1081,7 @@
         "positionIndex": 6,
         "name": "Multiplosion",
         "description": "Chance on hit to unleash additional explosions.",
+        "zh": { "name": "Multiplosion", "description": "命中时有概率释放额外爆炸。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1040,6 +1097,7 @@
         "positionIndex": 7,
         "name": "Explosion Site",
         "description": "Increases the explosion area of effect radius for explosive bullet.",
+        "zh": { "name": "爆炸 Site", "description": "提高 effect radius for explosive bullet 的爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1051,6 +1109,7 @@
         "positionIndex": 8,
         "name": "Target Locked",
         "description": "Increases attack rating when using explosive bullets.",
+        "zh": { "name": "目标 Locked", "description": "提高攻击命中使用爆炸弹头。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1062,6 +1121,7 @@
         "positionIndex": 9,
         "name": "Napalm Infusion",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "Napalm 灌注", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1080,6 +1140,7 @@
         "positionIndex": 10,
         "name": "Gasoline",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Gasoline", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1091,6 +1152,7 @@
         "positionIndex": 11,
         "name": "Chain Reaction",
         "description": "Explosive bullet now explodes multiple times.",
+        "zh": { "name": "连锁 Reaction", "description": "爆炸子弹爆炸多个次。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1110,6 +1172,7 @@
         "positionIndex": 12,
         "name": "Shotwave",
         "description": "On hit create a shockwave of explosions towards the target dealing increased damage.",
+        "zh": { "name": "Shotwave", "description": "命中时 create 震荡波之爆炸朝向目标造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1121,6 +1184,7 @@
         "positionIndex": 13,
         "name": "Blast Pulse",
         "description": "Explosive bullet now deals increased damage and knocks nearby monsters back with massive force.",
+        "zh": { "name": "爆破脉冲", "description": "爆炸子弹造成提高伤害与击退附近怪物回使用巨大力量。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1132,6 +1196,7 @@
         "positionIndex": 14,
         "name": "Penetrating Trail",
         "description": "Explosive bullet now pierces and sticks explosives to all monsters hit.",
+        "zh": { "name": "穿透轨迹", "description": "爆炸子弹穿透与附着爆炸至全部怪物命中。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_size": 0 },
@@ -1146,6 +1211,7 @@
     "name": "Powder Trail",
     "kind": "active",
     "description": "Throw a keg of gunpowder causing a chain of explosions dealing fire damage.",
+    "zh": { "name": "火药轨迹", "description": "投掷一桶火药，引发连锁爆炸，造成火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -1209,6 +1275,7 @@
         "positionIndex": 0,
         "name": "Powder Trail",
         "description": "Core of the Powder Trail subtree.",
+        "zh": { "name": "火药轨迹", "description": "火药轨迹 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1216,6 +1283,7 @@
         "positionIndex": 1,
         "name": "Napalm Powder",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "Napalm 火药", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1234,6 +1302,7 @@
         "positionIndex": 2,
         "name": "Spinning Barrel",
         "description": "Increases the projectile speed of powder trail.",
+        "zh": { "name": "旋转桶", "description": "提高 火药轨迹 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1245,6 +1314,7 @@
         "positionIndex": 3,
         "name": "Blowing Up",
         "description": "Increases the damage dealt by barrel explosions.",
+        "zh": { "name": "Blowing 上", "description": "提高造成的伤害桶爆炸。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1256,6 +1326,7 @@
         "positionIndex": 4,
         "name": "Colliding Barrel",
         "description": "Increases the damage dealt by powder trail barrels.",
+        "zh": { "name": "碰撞桶", "description": "提高造成的伤害火药轨迹炸药桶。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1267,6 +1338,7 @@
         "positionIndex": 5,
         "name": "Heated Powder",
         "description": "Increases damage to burning targets.",
+        "zh": { "name": "Heated 火药", "description": "提高伤害至燃烧目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1278,6 +1350,7 @@
         "positionIndex": 6,
         "name": "Stacked Fumes",
         "description": "Every time the barrel hits an enemy it gives you a stacking buff increasing fire skill damage.",
+        "zh": { "name": "叠加 Fumes", "description": "每时间桶命中敌人 gives 你叠加增益提高火焰技能伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1289,6 +1362,7 @@
         "positionIndex": 7,
         "name": "Powder Detonation",
         "description": "Chance to unleash a fiery pulse dealing additional damage on hit.",
+        "zh": { "name": "火药引爆", "description": "命中时有概率释放炽焰脉冲造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1304,6 +1378,7 @@
         "positionIndex": 8,
         "name": "Dual Barrel",
         "description": "Chance on cast to unleash an additional barrel.",
+        "zh": { "name": "双持桶", "description": "施法时有概率释放额外桶。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1319,6 +1394,7 @@
         "positionIndex": 9,
         "name": "Mage of the Trails",
         "description": "Increases cast rate when using powder trail.",
+        "zh": { "name": "法师之轨迹", "description": "提高施法速度使用火药轨迹。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1330,6 +1406,7 @@
         "positionIndex": 10,
         "name": "Shortened Fuse",
         "description": "Increases explosion area of effect but decreases traveling time.",
+        "zh": { "name": "Shortened Fuse", "description": "提高 effect but decreases traveling time 的爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1341,6 +1418,7 @@
         "positionIndex": 11,
         "name": "Barrel of Barrels",
         "description": "Send forward a big barrel exploding on hit dealing damage and sending smaller barrels to all directions.",
+        "zh": { "name": "桶之炸药桶", "description": "发出前方核心桶 exploding 命中时造成伤害与发出更小炸药桶至全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1360,6 +1438,7 @@
         "positionIndex": 12,
         "name": "Fragmenting Barrel",
         "description": "The barrel stops into terrain or on monster hit releasing flying bombs in an arc forward after exploding.",
+        "zh": { "name": "Fragmenting 桶", "description": "桶 stops 进入地形怪物命中释放飞散炸弹呈弧线前方之后 exploding。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1371,6 +1450,7 @@
         "positionIndex": 13,
         "name": "Heavy Barrel",
         "description": "Send forward a slowly rolling barrel that knocks monsters back dealing increased damage and stunning them.",
+        "zh": { "name": "重型桶", "description": "发出前方缓慢 rolling 桶击退怪物造成提高伤害与眩晕它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_size": 0 },
@@ -1382,6 +1462,7 @@
         "positionIndex": 14,
         "name": "Flaming Barrels",
         "description": "Send forward multiple barrels. Explosions now sets the ground on fire slowing and dealing damage.",
+        "zh": { "name": "燃烧炸药桶", "description": "发出前方多个炸药桶。爆炸 sets 地面火焰减速与造成伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -1396,6 +1477,7 @@
     "name": "Bomb Barrage",
     "kind": "active",
     "description": "Start rapidly firing cannonballs dealing area of effect fire damage.",
+    "zh": { "name": "炸弹弹幕", "description": "开始快速发射炮弹，造成范围火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -1460,6 +1542,7 @@
         "positionIndex": 0,
         "name": "Bomb Barrage",
         "description": "Core of the Bomb Barrage subtree.",
+        "zh": { "name": "炸弹弹幕", "description": "炸弹弹幕 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1467,6 +1550,7 @@
         "positionIndex": 1,
         "name": "Bombardation",
         "description": "Increases the amount of bombs thrown.",
+        "zh": { "name": "Bombardation", "description": "提高 bombs thrown 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1478,6 +1562,7 @@
         "positionIndex": 2,
         "name": "Barrage Blasting Radius",
         "description": "Increases explosion area of effect of bomb barrage.",
+        "zh": { "name": "齐射爆破半径", "description": "提高 effect of 炸弹弹幕 的爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1489,6 +1574,7 @@
         "positionIndex": 3,
         "name": "Bombination",
         "description": "Increases the frequency of bombs.",
+        "zh": { "name": "Bombination", "description": "提高 bombs 的frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1500,6 +1586,7 @@
         "positionIndex": 4,
         "name": "Explosive Barrage",
         "description": "Increases the damage dealt by bomb barrage.",
+        "zh": { "name": "爆炸齐射", "description": "提高造成的伤害炸弹弹幕。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1511,6 +1598,7 @@
         "positionIndex": 5,
         "name": "Piercing Blastwave",
         "description": "Inflicts fire break on hit.",
+        "zh": { "name": "穿透爆裂冲击波", "description": "命中时施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -1529,6 +1617,7 @@
         "positionIndex": 6,
         "name": "Scaled Blastradius",
         "description": "Increases damage dealt based on your explosion area of effect stat.",
+        "zh": { "name": "Scaled Blastradius", "description": "提高 effect stat 的造成的伤害基于你的爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_explosion_aoe": 0 },
@@ -1540,6 +1629,7 @@
         "positionIndex": 7,
         "name": "Molten Heat Bombs",
         "description": "Bombs have a chance to scorch the ground dealing additional damage.",
+        "zh": { "name": "熔火灼热炸弹", "description": "Bombs 有概率scorch 地面造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1555,6 +1645,7 @@
         "positionIndex": 8,
         "name": "Sharp Scatter",
         "description": "Chance for bombs to shatter into fragments inflicting bleeding when exploding.",
+        "zh": { "name": "尖锐散射", "description": "概率使炸弹至 shatter 进入碎片施加流血当 exploding。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1573,6 +1664,7 @@
         "positionIndex": 9,
         "name": "Quick Barrage",
         "description": "Increases the projectile speed of bomb barrage.",
+        "zh": { "name": "Quick 齐射", "description": "提高 炸弹弹幕 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1584,6 +1676,7 @@
         "positionIndex": 10,
         "name": "Critical Explosion",
         "description": "Chance to critically hit with increased critical strike damage.",
+        "zh": { "name": "暴击爆炸", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1595,6 +1688,7 @@
         "positionIndex": 11,
         "name": "Crossed Spot",
         "description": "Mark a location where to fire all bombs.",
+        "zh": { "name": "Crossed Spot", "description": "印记位置 where 至火焰全部炸弹。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1606,6 +1700,7 @@
         "positionIndex": 12,
         "name": "Bomb Shower",
         "description": "Fire multiple bombs in all directions from you.",
+        "zh": { "name": "炸弹 Shower", "description": "火焰多个炸弹全部方向从你。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1617,6 +1712,7 @@
         "positionIndex": 13,
         "name": "Rapid Barrage",
         "description": "Rapidly fire bombs with increased speed dealing area of effect damage and knocking monsters back on hit.",
+        "zh": { "name": "迅捷齐射", "description": "迅速火焰炸弹使用提高速度造成范围伤害与击退怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0, "area_of_effect": 0 },
@@ -1628,6 +1724,7 @@
         "positionIndex": 14,
         "name": "Rain of Bombs",
         "description": "Now throw a single bomb marking the target location and dropping multiple bombs from the sky.",
+        "zh": { "name": "骤雨之炸弹", "description": "投掷单次炸弹 marking 目标位置与落下多个炸弹从天空。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1642,6 +1739,7 @@
     "name": "Kneecap",
     "kind": "passive",
     "description": "Increases your attack rating and chance for critical strike.",
+    "zh": { "name": "碎膝", "description": "提高你的攻击命中和暴击概率。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -1674,6 +1772,7 @@
     "name": "Rapid Fire",
     "kind": "buff",
     "description": "Temporarily increase your attack speed and physical damage.",
+    "zh": { "name": "极速射击", "description": "临时提高你的攻击速度和物理伤害。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -1717,6 +1816,7 @@
     "name": "Torrent",
     "kind": "active",
     "description": "Summon a pool of corrupted water on target location bursting into a massive torrent that knocks up monsters struck dealing cold damage.",
+    "zh": { "name": "激流", "description": "在目标位置召唤一池被污染的水，迸发成巨大激流，击飞被冲出的怪物，造成冰冷伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1780,6 +1880,7 @@
         "positionIndex": 0,
         "name": "Torrent",
         "description": "Core of the Torrent subtree.",
+        "zh": { "name": "激流", "description": "激流 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1787,6 +1888,7 @@
         "positionIndex": 1,
         "name": "Splash Impact",
         "description": "Chance when casting to summon an additional torrent at the closest monster.",
+        "zh": { "name": "溅射冲击", "description": "概率当施法至召唤物额外激流最近的怪物。" },
         "maxRank": 5,
         "proc": { "trigger": "on_cast", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1795,6 +1897,7 @@
         "positionIndex": 2,
         "name": "Watery Fissure",
         "description": "Chance on hit to knock enemies into the air dealing area of effect damage upon landing.",
+        "zh": { "name": "Watery Fissure", "description": "命中时有概率击退敌人进入空中造成范围伤害落地时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1810,6 +1913,7 @@
         "positionIndex": 3,
         "name": "Subzero Liquid",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "Subzero 液体", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -1828,6 +1932,7 @@
         "positionIndex": 4,
         "name": "Torrenting Current",
         "description": "Torrents now burst additional times.",
+        "zh": { "name": "Torrenting 当前", "description": "Torrents 迸发额外次。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1839,6 +1944,7 @@
         "positionIndex": 5,
         "name": "Waterwalk",
         "description": "Decreases the movement diminish when using torrent.",
+        "zh": { "name": "Waterwalk", "description": "使用激流时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1850,6 +1956,7 @@
         "positionIndex": 6,
         "name": "Collateral Splash",
         "description": "Torrents have a chance on hit to chain their damage dealt to multiple nearby monsters.",
+        "zh": { "name": "波及溅射", "description": "Torrents 有概率命中时至连锁 their 造成的伤害至多个附近怪物。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1858,6 +1965,7 @@
         "positionIndex": 7,
         "name": "Water Mass",
         "description": "Increases the damage dealt by torrent.",
+        "zh": { "name": "Water 巨躯", "description": "提高造成的伤害激流。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1869,6 +1977,7 @@
         "positionIndex": 8,
         "name": "Pillar of Water",
         "description": "Chance on cast to replace torrent with a watery tornado dealing damage, freezing and lasting for an increased duration.",
+        "zh": { "name": "Pillar 之 Water", "description": "施法时有概率replace 激流使用 watery 龙卷风造成伤害，冰冻与持续提高持续时间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1884,6 +1993,7 @@
         "positionIndex": 9,
         "name": "Ocean´s Might",
         "description": "Increases the size and area of effect of torrent.",
+        "zh": { "name": "Ocean's Might", "description": "提高 effect of 激流 的size 与范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1895,6 +2005,7 @@
         "positionIndex": 10,
         "name": "Hypothermic Liquid",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "Hypothermic 液体", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -1906,6 +2017,7 @@
         "positionIndex": 11,
         "name": "Ocean Storm",
         "description": "Unleash multiple torrents around target location.",
+        "zh": { "name": "Ocean 风暴", "description": "释放多个 torrents 周围目标位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1917,6 +2029,7 @@
         "positionIndex": 12,
         "name": "Chaotic Wave",
         "description": "Send forward a tsunami unleashing torrents on hit. Torrent now has a cooldown.",
+        "zh": { "name": "Chaotic 波", "description": "发出前方海啸释放 torrents 命中时。激流有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -1928,6 +2041,7 @@
         "positionIndex": 13,
         "name": "Whirlpool",
         "description": "Create a whirlpool sucking in monsters on a large radius eventually collapsing into torrents. Torrent now has a cooldown.",
+        "zh": { "name": "Whirlpool", "description": "Create whirlpool sucking 怪物大型半径 eventually collapsing 进入 torrents。激流有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -1939,6 +2053,7 @@
         "positionIndex": 14,
         "name": "Storm Pillar",
         "description": "Unleash a big torrent knocking monsters back and airborne with force causing them to take increased damage when hitting the ground.",
+        "zh": { "name": "风暴 Pillar", "description": "释放核心激流击退怪物与腾空使用力量使其承受提高伤害当命中地面。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1953,6 +2068,7 @@
     "name": "Freezing Chain Shot",
     "kind": "active",
     "description": "Shoot a piercing chain shot that freezes and deals cold damage to monsters struck.",
+    "zh": { "name": "冰冻链弹", "description": "射出一枚穿透性的链弹，冻结被击中的怪物并造成冰冷伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -2034,6 +2150,7 @@
         "positionIndex": 0,
         "name": "Freezing Chain Shot",
         "description": "Core of the Freezing Chain Shot subtree.",
+        "zh": { "name": "冰冻链弹", "description": "冰冻链弹 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2041,6 +2158,7 @@
         "positionIndex": 1,
         "name": "Poseidon's Fist",
         "description": "Breaks cold resistances on striking.",
+        "zh": { "name": "Poseidon's 重拳", "description": "击破冰冷抗性打击。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -2059,6 +2177,7 @@
         "positionIndex": 2,
         "name": "Precision Chain",
         "description": "Increased hit rating.",
+        "zh": { "name": "精准连锁", "description": "提高命中命中。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -2070,6 +2189,7 @@
         "positionIndex": 3,
         "name": "Good Ol' Ways",
         "description": "Gain additional attacks per second while wielding a bow.",
+        "zh": { "name": "Good Ol' Ways", "description": "获得额外攻击每秒装备弓。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -2081,6 +2201,7 @@
         "positionIndex": 4,
         "name": "Pack a Punch",
         "description": "Increases the projectile speed of freezing chain shot.",
+        "zh": { "name": "Pack Punch", "description": "提高 冰冻链弹 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -2092,6 +2213,7 @@
         "positionIndex": 5,
         "name": "Shatter",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "Shatter", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -2103,6 +2225,7 @@
         "positionIndex": 6,
         "name": "Ice Age",
         "description": "Freezes enemies with a chance on striking to deepfreeze them.",
+        "zh": { "name": "寒冰岁月", "description": "冻结敌人使用概率在打击至 deepfreeze 它们。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_permafrost_damage": 0 },
@@ -2121,6 +2244,7 @@
         "positionIndex": 7,
         "name": "Ice Healing",
         "description": "Restores a flat amount of health and mana on hit.",
+        "zh": { "name": "寒冰治疗", "description": "恢复 flat 数量之 health 与法力命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0, "mana_replenish_pct": 0 },
@@ -2132,6 +2256,7 @@
         "positionIndex": 8,
         "name": "Gulf Stream",
         "description": "Chance on hit to increase your attackspeed for a short duration.",
+        "zh": { "name": "Gulf Stream", "description": "命中时有概率提高你的 attackspeed 短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2147,6 +2272,7 @@
         "positionIndex": 9,
         "name": "Grip Boots",
         "description": "Decreases the movement diminish when using freezing chain shot.",
+        "zh": { "name": "之握 Boots", "description": "使用冰冻链弹时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -2158,6 +2284,7 @@
         "positionIndex": 10,
         "name": "Coldspot",
         "description": "Freezing chain shot deals damage in a small area around the targets hit.",
+        "zh": { "name": "Coldspot", "description": "冰冻链弹造成伤害小型范围周围目标命中。" },
         "maxRank": 5,
         "effects": {
           "base": { "splash_of_total_damage": 0, "area_of_effect": 0 },
@@ -2169,6 +2296,7 @@
         "positionIndex": 11,
         "name": "Frozen Chain Rip",
         "description": "Freezing chain shot now chains and pulls chained monsters towards the first target.",
+        "zh": { "name": "冰冻锁链撕裂", "description": "冰冻链弹锁链与牵引 chained 怪物朝向第一目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -2180,6 +2308,7 @@
         "positionIndex": 12,
         "name": "Coldsnap Vacuum",
         "description": "Fire a huge chainshot catching monsters on its way and dealing increased damage and stunning caught monsters when hitting terrain.",
+        "zh": { "name": "Coldsnap Vacuum", "description": "火焰巨大 chainshot catching 怪物 way 与造成提高伤害与眩晕 caught 怪物当命中地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -2191,6 +2320,7 @@
         "positionIndex": 13,
         "name": "Catch of the Day",
         "description": "On hit release additional chain shots in all directions.",
+        "zh": { "name": "Catch 之 Day", "description": "命中时 release 额外连锁射击全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2202,6 +2332,7 @@
         "positionIndex": 14,
         "name": "Freezing Whiplash",
         "description": "When hitting terrain the chainshot spins and grows in size rapidly sending monsters into the air dealing increased damage and stunning them.",
+        "zh": { "name": "冰冻鞭梢反卷", "description": "当命中地形 chainshot 旋转与 grows size 迅速发出怪物进入空中造成提高伤害与眩晕它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -2216,6 +2347,7 @@
     "name": "Frozen Lead",
     "kind": "passive",
     "description": "Use specially hand crafted frozen lead to increase your cold skill damage.",
+    "zh": { "name": "冰冻弹丸", "description": "使用特制的冰冻弹丸，提高你的冰冷技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -2246,6 +2378,7 @@
     "name": "Parrot",
     "kind": "active",
     "description": "Summon a parrot to peck your monsters dealing cold damage.",
+    "zh": { "name": "鹦鹉", "description": "召唤一只鹦鹉啄击你的敌人，造成冰冷伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -2308,6 +2441,7 @@
         "positionIndex": 0,
         "name": "Parrot",
         "description": "Core of the Parrot subtree.",
+        "zh": { "name": "鹦鹉", "description": "鹦鹉 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2315,6 +2449,7 @@
         "positionIndex": 1,
         "name": "Peck Peck",
         "description": "Increases parrot attack speed.",
+        "zh": { "name": "Peck Peck", "description": "提高鹦鹉攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -2326,6 +2461,7 @@
         "positionIndex": 2,
         "name": "Birdstrike",
         "description": "Increases parrot movement speed.",
+        "zh": { "name": "Birdstrike", "description": "提高鹦鹉移动速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -2337,6 +2473,7 @@
         "positionIndex": 3,
         "name": "Flock Gathering",
         "description": "Increases the maximum amount of parrots.",
+        "zh": { "name": "Flock Gathering", "description": "提高 parrots 的最大数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "summon_max_amount": 0 },
@@ -2348,6 +2485,7 @@
         "positionIndex": 4,
         "name": "GM Crops",
         "description": "Increases the life and damage dealt by parrots.",
+        "zh": { "name": "GM Crops", "description": "提高生命与造成的伤害鹦鹉。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0, "summon_life": 0 },
@@ -2359,6 +2497,7 @@
         "positionIndex": 5,
         "name": "Birdflu Vax",
         "description": "Increases the resistances of parrots.",
+        "zh": { "name": "Birdflu Vax", "description": "提高 parrots 的抗性。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_all_resist": 0 },
@@ -2370,6 +2509,7 @@
         "positionIndex": 6,
         "name": "Target Practise",
         "description": "Increases the damage dealt by parrots against bosses.",
+        "zh": { "name": "目标 Practise", "description": "提高造成的伤害鹦鹉对抗首领。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -2381,6 +2521,7 @@
         "positionIndex": 7,
         "name": "Pirate's Best Friend",
         "description": "Chance on hit to reduce target's damage dealt.",
+        "zh": { "name": "Pirate's Best Friend", "description": "命中时有概率reduce 目标的造成的伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2396,6 +2537,7 @@
         "positionIndex": 8,
         "name": "Upper Wing",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Upper Wing", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2407,6 +2549,7 @@
         "positionIndex": 9,
         "name": "Beak of Steel",
         "description": "Increases the damage dealt by parrot.",
+        "zh": { "name": "Beak 之 Steel", "description": "提高造成的伤害鹦鹉。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -2418,6 +2561,7 @@
         "positionIndex": 10,
         "name": "Killing Command",
         "description": "Parrots have a chance on hit to enrage, significantly increasing their attack speed and damage for a short duration before dying.",
+        "zh": { "name": "击杀 Command", "description": "鹦鹉有概率命中时至 enrage，显著提高 their 攻击速度与伤害短时间内 before 死亡。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 1 } }
       },
@@ -2426,6 +2570,7 @@
         "positionIndex": 11,
         "name": "Screech",
         "description": "Parrots now send a traveling screeching wave on attack knocking monsters back dealing increased damage.",
+        "zh": { "name": "Screech", "description": "鹦鹉发出飞行 screeching 波攻击时击退怪物造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "skill_range": 0 },
@@ -2437,6 +2582,7 @@
         "positionIndex": 12,
         "name": "Pecking Pack",
         "description": "Summon all parrots with one cast empowering the parrots with increased attack speed. Parrot now has a cooldown.",
+        "zh": { "name": "Pecking Pack", "description": "召唤物全部鹦鹉使用一次施法强化鹦鹉使用提高攻击速度。鹦鹉有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -2448,6 +2594,7 @@
         "positionIndex": 13,
         "name": "Captain's Parrot",
         "description": "Now only summon one big parrot scaling with the amount of total parrots attacking with increased radius and damage.",
+        "zh": { "name": "Captain's 鹦鹉", "description": "仅召唤物一次核心鹦鹉加成使用数量之总鹦鹉攻击时使用提高半径与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -2459,6 +2606,7 @@
         "positionIndex": 14,
         "name": "Pecking Order",
         "description": "Parrots now unleash a frozen nova every five attacks with increased radius and damage.",
+        "zh": { "name": "Pecking Order", "description": "鹦鹉释放冰冻新星每 five 攻击使用提高半径与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -2473,6 +2621,7 @@
     "name": "Set Sail",
     "kind": "buff",
     "description": "Temporarily increases your cold skill damage and mana replenish.",
+    "zh": { "name": "扬帆起航", "description": "临时提高你的冰冷技能伤害和法力恢复。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -2516,6 +2665,7 @@
     "name": "Remiges",
     "kind": "passive",
     "description": "Increases your parrots cold damage and attack speed.",
+    "zh": { "name": "飞羽", "description": "提高你鹦鹉的冰冷伤害和攻击速度。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -2548,6 +2698,7 @@
     "name": "Anchor Swing",
     "kind": "active",
     "description": "Unleash a massive anchor swinging around you dealing cold damage.",
+    "zh": { "name": "船锚横扫", "description": "挥舞巨大的船锚环绕你，造成冰冷伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2612,6 +2763,7 @@
         "positionIndex": 0,
         "name": "Anchor Swing",
         "description": "Core of the Anchor Swing subtree.",
+        "zh": { "name": "船锚横扫", "description": "船锚横扫 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2619,6 +2771,7 @@
         "positionIndex": 1,
         "name": "On The Deck",
         "description": "Decreases movement diminish when using anchor swing.",
+        "zh": { "name": "Deck", "description": "使用船锚横扫时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -2630,6 +2783,7 @@
         "positionIndex": 2,
         "name": "Rusted Chain",
         "description": "Inflicts cold break on hit.",
+        "zh": { "name": "Rusted 连锁", "description": "命中时施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -2648,6 +2802,7 @@
         "positionIndex": 3,
         "name": "Spin to Win",
         "description": "Increases the duration of anchor swing.",
+        "zh": { "name": "旋转至 Win", "description": "提高 船锚横扫 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2659,6 +2814,7 @@
         "positionIndex": 4,
         "name": "Sharpened Bill",
         "description": "Increases damage dealt by anchor.",
+        "zh": { "name": "锋利 Bill", "description": "提高 anchor 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -2670,6 +2826,7 @@
         "positionIndex": 5,
         "name": "Baby Anchor",
         "description": "Chance on cast to summon a small anchor spinning close to the pirate.",
+        "zh": { "name": "Baby 船锚", "description": "施法时有概率召唤物小型船锚旋转近身至 pirate。" },
         "maxRank": 5,
         "proc": { "trigger": "on_cast", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -2678,6 +2835,7 @@
         "positionIndex": 6,
         "name": "iAnchor",
         "description": "Chance on cast to unleash an additional anchor.",
+        "zh": { "name": "iAnchor", "description": "施法时有概率释放额外船锚。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -2693,6 +2851,7 @@
         "positionIndex": 7,
         "name": "Frozen Tip",
         "description": "Increases damage dealt by anchor and freezes monsters on hit.",
+        "zh": { "name": "冰冻 Tip", "description": "提高 anchor and freezes monsters on hit 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0, "freeze_duration": 0 },
@@ -2704,6 +2863,7 @@
         "positionIndex": 8,
         "name": "Cold Smash",
         "description": "Increases damage to frozen targets.",
+        "zh": { "name": "冰冷猛击", "description": "提高伤害至冰冻目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -2715,6 +2875,7 @@
         "positionIndex": 9,
         "name": "Man of War",
         "description": "Increases anchor size and area of effect radius.",
+        "zh": { "name": "Man 之 War", "description": "提高 effect radius 的船锚 size 与范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -2726,6 +2887,7 @@
         "positionIndex": 10,
         "name": "Aerodynamic Chain",
         "description": "Increases the spinning speed.",
+        "zh": { "name": "Aerodynamic 连锁", "description": "提高旋转速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -2737,6 +2899,7 @@
         "positionIndex": 11,
         "name": "Anchoring the Anchor",
         "description": "Throw the anchor on target location unleashing another anchor swinging around that one with increased radius.",
+        "zh": { "name": "Anchoring 船锚", "description": "投掷船锚目标位置释放另一个船锚旋转周围一次使用提高半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "skill_range": 0 },
@@ -2748,6 +2911,7 @@
         "positionIndex": 12,
         "name": "Extended Weight",
         "description": "Anchor now has an additional spinning anchor attached to it.",
+        "zh": { "name": "延长重量", "description": "船锚有额外旋转船锚 attached 至。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_count": 0 },
@@ -2759,6 +2923,7 @@
         "positionIndex": 13,
         "name": "Colossal Anchor",
         "description": "Unleash a massive anchor covering a wide radius with increased damage. Anchor swing now has a cooldown.",
+        "zh": { "name": "巨型船锚", "description": "释放巨大船锚覆盖 wide 半径使用提高伤害。船锚横扫有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "skill_range": 0 },
@@ -2770,6 +2935,7 @@
         "positionIndex": 14,
         "name": "Trembling Smash",
         "description": "Send the anchor forward unleashing a shockwave of torrents to all directions when hitting terrain.",
+        "zh": { "name": "震荡猛击", "description": "发出船锚前方释放震荡波之 torrents 至全部方向当命中地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_count": 0 },
@@ -2784,6 +2950,7 @@
     "name": "Treasure Hunter",
     "kind": "active",
     "description": "Search for a treasure from the corpses of dead monsters with additional magic find.",
+    "zh": { "name": "寻宝猎人", "description": "从怪物尸体中搜寻宝藏，附带额外的魔法发现。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2823,6 +2990,7 @@
     "name": "Land Ahoy!",
     "kind": "active",
     "description": "Call for the main ship to bombard the targeted area dealing area of effect cold damage.",
+    "zh": { "name": "陆地就在前方！", "description": "召唤主舰轰击目标区域，造成范围冰冷伤害。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -2886,6 +3054,7 @@
         "positionIndex": 0,
         "name": "Land Ahoy!",
         "description": "Core of the Land Ahoy! subtree.",
+        "zh": { "name": "陆地就在前方！", "description": "Land Ahoy! 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2893,6 +3062,7 @@
         "positionIndex": 1,
         "name": "Armada",
         "description": "Increases the amount of bombs fired.",
+        "zh": { "name": "Armada", "description": "提高 bombs fired 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2904,6 +3074,7 @@
         "positionIndex": 2,
         "name": "Fire All!",
         "description": "Decreases the cooldown of land ahoy.",
+        "zh": { "name": "火焰全部!", "description": "降低cooldown 之落地 ahoy。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -2915,6 +3086,7 @@
         "positionIndex": 3,
         "name": "Rum Infused Ammo",
         "description": "Bombs have a chance to explode an additional time.",
+        "zh": { "name": "Rum 灌注 Ammo", "description": "Bombs 有概率爆炸额外一次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2930,6 +3102,7 @@
         "positionIndex": 4,
         "name": "Blunder Bombs",
         "description": "Increases explosion area of effect radius of land ahoy.",
+        "zh": { "name": "Blunder 炸弹", "description": "提高 effect radius of land ahoy 的爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2941,6 +3114,7 @@
         "positionIndex": 5,
         "name": "Warheads",
         "description": "Increases the damage dealt by land ahoy.",
+        "zh": { "name": "Warheads", "description": "提高造成的伤害落地 ahoy。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -2952,6 +3126,7 @@
         "positionIndex": 6,
         "name": "Strategic Airstrikes",
         "description": "Chance on cast to fire additional bombs towards nearby monsters.",
+        "zh": { "name": "Strategic Airstrikes", "description": "施法时有概率火焰额外炸弹朝向附近怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -2967,6 +3142,7 @@
         "positionIndex": 7,
         "name": "Food for Cannon",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Food 加农炮", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2978,6 +3154,7 @@
         "positionIndex": 8,
         "name": "Sonic Impact",
         "description": "Chance on hit to stun.",
+        "zh": { "name": "Sonic 冲击", "description": "命中时有概率眩晕。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2990,6 +3167,7 @@
         "positionIndex": 9,
         "name": "MOAB",
         "description": "Chance on cast to fire larger bombs knocking monsters airborne on hit dealing increased damage.",
+        "zh": { "name": "MOAB", "description": "施法时有概率火焰更大炸弹击退怪物腾空命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_cast", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -2998,6 +3176,7 @@
         "positionIndex": 10,
         "name": "Fuel to the Fire",
         "description": "Increases bomb damage based on explosion area of effect stat.",
+        "zh": { "name": "Fuel 至火焰", "description": "提高 effect stat 的炸弹伤害基于爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_explosion_aoe": 0 },
@@ -3009,6 +3188,7 @@
         "positionIndex": 11,
         "name": "Concentrated Blast Radius",
         "description": "Significantly decreases the area of effect radius of land ahoy! and increasing the amount of cannon balls.",
+        "zh": { "name": "集中爆破半径", "description": "显著降低范围半径之落地 ahoy! 与提高数量之加农炮球。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -3020,6 +3200,7 @@
         "positionIndex": 12,
         "name": "Land Annihilation",
         "description": "Drop a reduced amount of big bombs on a significantly larger radius. Land Ahoy! now has a cooldown.",
+        "zh": { "name": "落地湮灭", "description": "投下降低数量之核心炸弹显著更大半径。落地 Ahoy! 有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -3031,6 +3212,7 @@
         "positionIndex": 13,
         "name": "Traveling Bombardment",
         "description": "Mark a location and fire bombs landing from your location to target location in a narrow line.",
+        "zh": { "name": "飞行狂轰滥炸", "description": "印记位置与火焰炸弹着陆从你的位置至目标位置 narrow line。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "of_total_damage": 0 },
@@ -3042,6 +3224,7 @@
         "positionIndex": 14,
         "name": "Reign of Fire",
         "description": "Damage type is changed to Fire. Explosive Barrels rain from the sky inflicting burning on hit",
+        "zh": { "name": "Reign 之火焰", "description": "伤害类型 changed 至火焰。爆炸炸药桶骤雨从天空施加燃烧命中时" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0 },

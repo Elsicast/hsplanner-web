@@ -1,6 +1,7 @@
 {
   "id": "prophet",
   "name": "Prophet",
+  "zh": { "name": "先知" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

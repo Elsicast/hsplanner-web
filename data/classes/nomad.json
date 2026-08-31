@@ -1,6 +1,7 @@
 {
   "id": "nomad",
   "name": "Nomad",
+  "zh": { "name": "游牧者" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

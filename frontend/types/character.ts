@@ -1,8 +1,10 @@
 import type { AttributeKey, StatMap } from './game'
+import type { NameZh } from './zh'
 
 export interface CharacterClass {
   id: string
   name: string
+  zh?: NameZh
   description?: string
   role?: 'melee' | 'ranged' | 'caster' | 'hybrid'
   primaryAttribute?: AttributeKey

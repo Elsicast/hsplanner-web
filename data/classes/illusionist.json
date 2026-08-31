@@ -1,6 +1,7 @@
 {
   "id": "illusionist",
   "name": "Illusionist",
+  "zh": { "name": "幻术师" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

@@ -5,6 +5,7 @@
     "name": "Martyr",
     "kind": "passive",
     "description": "Sacrifice your own blood when taking damage from any source temporarily increasing your life and mana replenish.",
+    "zh": { "name": "殉道", "description": "受到任何来源的伤害时献祭自己的鲜血，临时提高你的生命和法力恢复。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -39,6 +40,7 @@
     "name": "Shadow Bolt",
     "kind": "active",
     "description": "Gather your inner darkness and unleash a powerful piercing shadow bolt that deals arcane damage to monsters on its path. The shadow bolt slows down after hitting a target.",
+    "zh": { "name": "暗影之箭", "description": "汇聚内心的黑暗，释放一支强力的穿透暗影箭，对路径上的怪物造成奥术伤害。暗影箭命中目标后会减速。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -101,6 +103,7 @@
         "positionIndex": 0,
         "name": "Shadow Bolt",
         "description": "Core of the Shadow Bolt subtree.",
+        "zh": { "name": "暗影之箭", "description": "暗影之箭 子树核心。" },
         "maxRank": 1
       },
       {
@@ -108,6 +111,7 @@
         "positionIndex": 1,
         "name": "Consuming Flames",
         "description": "Chance to inflict shadow burn on hit.",
+        "zh": { "name": "消耗烈焰", "description": "命中时有概率施加暗影燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_shadow_burning_damage": 0 },
@@ -126,6 +130,7 @@
         "positionIndex": 2,
         "name": "Arcane Surge",
         "description": "Increases damage dealt by shadow bolt.",
+        "zh": { "name": "奥术涌动", "description": "提高 暗影之箭 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -137,6 +142,7 @@
         "positionIndex": 3,
         "name": "Power of the Dark Side",
         "description": "Decreases mana cost of shadow bolt.",
+        "zh": { "name": "力量之黑暗 Side", "description": "降低法力消耗之暗影之箭。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -148,6 +154,7 @@
         "positionIndex": 4,
         "name": "Dark Conjurer",
         "description": "Chance on cast to unleash an additional shadow bolt.",
+        "zh": { "name": "黑暗 Conjurer", "description": "施法时有概率释放额外暗影之箭。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -163,6 +170,7 @@
         "positionIndex": 5,
         "name": "Taunting Shadows",
         "description": "Chance to taunt monsters on hit.",
+        "zh": { "name": "嘲讽暗影", "description": "命中时有概率嘲讽怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -175,6 +183,7 @@
         "positionIndex": 6,
         "name": "Inner Corruption",
         "description": "Increases the size of shadow bolts.",
+        "zh": { "name": "Inner Corruption", "description": "提高 shadow bolts 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -186,6 +195,7 @@
         "positionIndex": 7,
         "name": "Shadows Dispair",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "暗影 Dispair", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -204,6 +214,7 @@
         "positionIndex": 8,
         "name": "Flames of Corruption",
         "description": "Increases damage dealt to shadow burning targets.",
+        "zh": { "name": "烈焰之 Corruption", "description": "提高对 暗影燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_shadow_burning": 0 },
@@ -215,6 +226,7 @@
         "positionIndex": 9,
         "name": "Warlock from the Shadows",
         "description": "Chance on hit to critically hit with increased critical damage.",
+        "zh": { "name": "术士从暗影", "description": "命中时有概率打出暴击使用提高暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -226,6 +238,7 @@
         "positionIndex": 10,
         "name": "Warlocks Might",
         "description": "Increases the projectile speed of shadow bolt.",
+        "zh": { "name": "术士 Might", "description": "提高 暗影之箭 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -237,6 +250,7 @@
         "positionIndex": 11,
         "name": "Shadow Flame",
         "description": "Shadow bolt bursts into a shadow nova on hit with increased damage and area of effect radius.",
+        "zh": { "name": "暗影 Flame", "description": "暗影之箭迸发进入暗影新星命中时使用提高伤害与范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -248,6 +262,7 @@
         "positionIndex": 12,
         "name": "Shadow Beams",
         "description": "Unleash beams of shadows towards monsters on hit.",
+        "zh": { "name": "暗影光束", "description": "释放光束之暗影朝向怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -259,6 +274,7 @@
         "positionIndex": 13,
         "name": "Shadows Grasp",
         "description": "Unleash a grasping shadow hand pulling monsters towards you inflicting arcane break on hit.",
+        "zh": { "name": "暗影 Grasp", "description": "释放 grasping 暗影 hand 牵引怪物朝向你施加奥术击破命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -277,6 +293,7 @@
         "positionIndex": 14,
         "name": "Shadow Cascade",
         "description": "Shadow bolt has a chance to burst into smaller shadow bolts on hit. This effect can occur infinitely.",
+        "zh": { "name": "暗影 Cascade", "description": "暗影之箭有概率迸发进入更小暗影电矢命中时。This 效果可以 occur infinitely。" },
         "maxRank": 3,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       }
@@ -288,6 +305,7 @@
     "name": "Digest Souls",
     "kind": "passive",
     "description": "By sacrificing your victims to the devil temporarily gain increased movement speed and arcane skill damage after killing a monster.",
+    "zh": { "name": "噬魂", "description": "将受害者献祭给魔鬼，击杀怪物后临时获得提高的移动速度和奥术技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -320,6 +338,7 @@
     "name": "Soul Spurn",
     "kind": "active",
     "description": "Rip the souls from nearest monsters dealing arcane damage and restoring your life and mana.",
+    "zh": { "name": "逐魂", "description": "从最近的怪物身上扯出灵魂，造成奥术伤害并恢复你的生命和法力。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -392,6 +411,7 @@
         "positionIndex": 0,
         "name": "Soul Spurn",
         "description": "Core of the Soul Spurn subtree.",
+        "zh": { "name": "逐魂", "description": "逐魂 子树核心。" },
         "maxRank": 1
       },
       {
@@ -399,6 +419,7 @@
         "positionIndex": 1,
         "name": "Last Mortal Act",
         "description": "Ripped souls deal a portion of the damage.",
+        "zh": { "name": "最后 Mortal Act", "description": "Ripped 灵魂造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -410,6 +431,7 @@
         "positionIndex": 2,
         "name": "Solidify",
         "description": "Increases the damage dealt by soul spurn.",
+        "zh": { "name": "Solidify", "description": "提高造成的伤害逐魂。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -421,6 +443,7 @@
         "positionIndex": 3,
         "name": "Repeating Reaping",
         "description": "Chance on cast to deal increased damage.",
+        "zh": { "name": "Repeating Reaping", "description": "施法时有概率造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -436,6 +459,7 @@
         "positionIndex": 4,
         "name": "Consume",
         "description": "Chance on cast to unleash an additional soul spurn.",
+        "zh": { "name": "消耗", "description": "施法时有概率释放额外逐魂。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -451,6 +475,7 @@
         "positionIndex": 5,
         "name": "Highway to Purgatory",
         "description": "Increases the speed of ripped souls.",
+        "zh": { "name": "Highway 至 Purgatory", "description": "提高 ripped souls 的速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -462,6 +487,7 @@
         "positionIndex": 6,
         "name": "Restore",
         "description": "Soul spurn recovers a portion of your maximum mana on hit.",
+        "zh": { "name": "Restore", "description": "逐魂恢复一部分你的最大法力命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_replenish_pct": 0 },
@@ -473,6 +499,7 @@
         "positionIndex": 7,
         "name": "Revitalise",
         "description": "Soul spurn recovers a portion of your maximum life on hit.",
+        "zh": { "name": "Revitalise", "description": "逐魂恢复一部分你的最大生命命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -484,6 +511,7 @@
         "positionIndex": 8,
         "name": "Floating Cultist",
         "description": "Reduces movement diminish when using soul spurn.",
+        "zh": { "name": "漂浮 Cultist", "description": "降低移动衰减使用逐魂。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -495,6 +523,7 @@
         "positionIndex": 9,
         "name": "Shattering Destruction",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "粉碎毁灭", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -513,6 +542,7 @@
         "positionIndex": 10,
         "name": "Corrupted Rapture",
         "description": "Increases the area of effect radius of soul spurn.",
+        "zh": { "name": "Corrupted Rapture", "description": "提高 effect radius of 逐魂 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -524,6 +554,7 @@
         "positionIndex": 11,
         "name": "Soulfilled Tradeoff",
         "description": "Increases the damage dealt by soul spurn but decreases the area of effect radius.",
+        "zh": { "name": "Soulfilled Tradeoff", "description": "提高 effect radius 的造成的伤害逐魂降低范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -535,6 +566,7 @@
         "positionIndex": 12,
         "name": "Purgatory",
         "description": "Soul spurn becomes a toggle skill ripping souls from monsters around you draining a portion of your maximum life frequently.",
+        "zh": { "name": "Purgatory", "description": "逐魂变为 toggle 技能 ripping 灵魂从怪物周围你汲取一部分你的最大生命频繁。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -554,6 +586,7 @@
         "positionIndex": 13,
         "name": "Lifeline Tether",
         "description": "Rip souls for all nearby allies restoring their mana and life.",
+        "zh": { "name": "Lifeline Tether", "description": "撕扯灵魂全部附近 allies 恢复 their 法力与生命。" },
         "maxRank": 3,
         "effects": {
           "base": { "life_replenish_pct": 0, "mana_replenish_pct": 0 },
@@ -565,6 +598,7 @@
         "positionIndex": 14,
         "name": "Harvest the Damned",
         "description": "Monsters killed by soul spurn inflicts you with a buff increasing your arcane damage, life replenish and mana replenish for a short duration.",
+        "zh": { "name": "Harvest 被诅咒", "description": "怪物被击杀逐魂施加你使用增益提高你的奥术伤害，生命恢复与法力恢复短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -587,6 +621,7 @@
     "name": "Restless Spirits",
     "kind": "active",
     "description": "Unleash restless spirits from an unholy dimension to seek new hosts inflicting arcane damage to the target.",
+    "zh": { "name": "不安之灵", "description": "从邪秽维度释放不安之灵，寻找新的宿主，对目标造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -649,6 +684,7 @@
         "positionIndex": 0,
         "name": "Restless Spirits",
         "description": "Core of the Restless Spirits subtree.",
+        "zh": { "name": "不安之灵", "description": "不安之灵 子树核心。" },
         "maxRank": 1
       },
       {
@@ -656,6 +692,7 @@
         "positionIndex": 1,
         "name": "Arcane Echoes",
         "description": "Increases damage dealt by restless spirits.",
+        "zh": { "name": "奥术 Echoes", "description": "提高 不安之灵 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -667,6 +704,7 @@
         "positionIndex": 2,
         "name": "Shadowflame Affliction",
         "description": "Chance to inflict shadow burn on hit.",
+        "zh": { "name": "Shadowflame Affliction", "description": "命中时有概率施加暗影燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_shadow_burning_damage": 0 },
@@ -685,6 +723,7 @@
         "positionIndex": 3,
         "name": "Spiritual Expansion",
         "description": "Increases the size of restless spirits.",
+        "zh": { "name": "灵性 Expansion", "description": "提高 不安之灵 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -696,6 +735,7 @@
         "positionIndex": 4,
         "name": "Wraiths Call",
         "description": "Increases the amount of restless spirits.",
+        "zh": { "name": "Wraiths 召唤", "description": "提高 不安之灵 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -707,6 +747,7 @@
         "positionIndex": 5,
         "name": "Spectral Efficiency",
         "description": "Decreases the mana cost of restless spirits.",
+        "zh": { "name": "Spectral Efficiency", "description": "降低法力消耗之不安之灵。" },
         "maxRank": 2,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -718,6 +759,7 @@
         "positionIndex": 6,
         "name": "Phantom Step",
         "description": "Decreases movement diminish when using restless spirits.",
+        "zh": { "name": "幻影 Step", "description": "使用不安之灵时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -729,6 +771,7 @@
         "positionIndex": 7,
         "name": "Hexbound Spirits",
         "description": "Chance to summon orbiting souls at target location on hit dealing damage for a short duration.",
+        "zh": { "name": "Hexbound 灵魂", "description": "概率召唤物环绕灵魂目标位置命中时造成伤害短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -744,6 +787,7 @@
         "positionIndex": 8,
         "name": "Wraiths Fury",
         "description": "Increases the damage dealt by restless spirits over time.",
+        "zh": { "name": "Wraiths 狂怒", "description": "提高造成的伤害不安之灵随时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -755,6 +799,7 @@
         "positionIndex": 9,
         "name": "Shattering Spirits",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "粉碎灵魂", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -773,6 +818,7 @@
         "positionIndex": 10,
         "name": "Spectral Velocity",
         "description": "Increases the projectile speed of restless spirits.",
+        "zh": { "name": "Spectral Velocity", "description": "提高 不安之灵 的投射物速度。" },
         "maxRank": 2,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -784,6 +830,7 @@
         "positionIndex": 11,
         "name": "Spirit Circle",
         "description": "Restless spirits now orbit you for a short duration.",
+        "zh": { "name": "灵体圆环", "description": "不安之灵轨道你短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0, "projectile_count": 0 },
@@ -795,6 +842,7 @@
         "positionIndex": 12,
         "name": "Master of Spirits",
         "description": "Summon multiple spirit servants following you and unleashing shadow bolts towards nearby monsters. Restless Spirits now has a cooldown.",
+        "zh": { "name": "大师之灵魂", "description": "召唤物多个灵体 servants following 你与释放暗影电矢朝向附近怪物。不安之灵有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -812,6 +860,7 @@
         "positionIndex": 13,
         "name": "Soul Termination",
         "description": "Restless spirits explode on hit dealing a portion of their damage as area of effect damage.",
+        "zh": { "name": "灵魂 Termination", "description": "不安之灵爆炸命中时造成一部分 their 伤害范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -823,6 +872,7 @@
         "positionIndex": 14,
         "name": "Feast on the Harvest",
         "description": "Increases the amount of restless spirits according to the stack amount of harvest the damned consuming the buff.",
+        "zh": { "name": "盛宴 Harvest", "description": "提高 不安之灵 according to the stack amount of harvest the damned consuming the buff 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -837,6 +887,7 @@
     "name": "Dark Oath",
     "kind": "aura",
     "description": "Conjure an aura that unleashes waves of unholy energy around you inflicting arcane damage to nearby monsters.",
+    "zh": { "name": "黑暗誓约", "description": "召唤一面在你周围释放邪秽能量之波的光环，对附近怪物造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -889,6 +940,7 @@
         "positionIndex": 0,
         "name": "Dark Oath",
         "description": "Core of the Dark Oath subtree.",
+        "zh": { "name": "黑暗誓约", "description": "黑暗誓约 子树核心。" },
         "maxRank": 1
       },
       {
@@ -896,6 +948,7 @@
         "positionIndex": 1,
         "name": "Soulburn",
         "description": "Increases the tick frequency of dark oath.",
+        "zh": { "name": "灵魂灼烧", "description": "提高 黑暗誓约 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -907,6 +960,7 @@
         "positionIndex": 2,
         "name": "Oath Amplifier",
         "description": "Increases the damage dealt by dark oath.",
+        "zh": { "name": "Oath Amplifier", "description": "提高造成的伤害黑暗誓约。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -918,6 +972,7 @@
         "positionIndex": 3,
         "name": "Healing Corruption",
         "description": "Chance to recover a portion of your maximum life on hit.",
+        "zh": { "name": "治疗 Corruption", "description": "命中时有概率恢复一部分你的最大生命。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -933,6 +988,7 @@
         "positionIndex": 4,
         "name": "Shadows Reach",
         "description": "Increases the area of effect radius of dark oath.",
+        "zh": { "name": "暗影延伸", "description": "提高 effect radius of 黑暗誓约 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -944,6 +1000,7 @@
         "positionIndex": 5,
         "name": "Covens Oath",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Covens Oath", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -955,6 +1012,7 @@
         "positionIndex": 6,
         "name": "Pulse of Vitality",
         "description": "Chance to increase your life and mana replenish on hit for a short duration.",
+        "zh": { "name": "脉冲之耐力", "description": "概率提高你的生命与法力恢复命中时短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -970,6 +1028,7 @@
         "positionIndex": 7,
         "name": "Lust for Power",
         "description": "Chance to critically hit with increased critical strike damage.",
+        "zh": { "name": "Lust 力量", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -981,6 +1040,7 @@
         "positionIndex": 8,
         "name": "Shadowsteps",
         "description": "Chance to increase your movement speed on hit for a short duration.",
+        "zh": { "name": "Shadowsteps", "description": "概率提高你的移动速度命中时短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -996,6 +1056,7 @@
         "positionIndex": 9,
         "name": "Intrusive Corruption",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Intrusive Corruption", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1014,6 +1075,7 @@
         "positionIndex": 10,
         "name": "Devastating Pulse",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "Devastating 脉冲", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1026,6 +1088,7 @@
         "positionIndex": 11,
         "name": "Sacrificial Oath",
         "description": "Each pulse unleashes multiple restless spirits.",
+        "zh": { "name": "Sacrificial Oath", "description": "每个脉冲释放多个不安之灵。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1037,6 +1100,7 @@
         "positionIndex": 12,
         "name": "Soul Collector",
         "description": "Dark oath pulses collect souls from monsters. After reaching the maximum stack of souls the next pulse will deal increased damage with increased area of effect radius.",
+        "zh": { "name": "灵魂 Collector", "description": "黑暗誓约脉冲 collect 灵魂从怪物。之后延伸最大层之灵魂 next 脉冲 will 造成提高伤害使用提高范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -1048,6 +1112,7 @@
         "positionIndex": 13,
         "name": "Corrupting Pulse",
         "description": "Chance to unleash additional pulses of dark oath from monsters on hit.",
+        "zh": { "name": "Corrupting 脉冲", "description": "命中时有概率释放额外脉冲之黑暗誓约从怪物。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1063,6 +1128,7 @@
         "positionIndex": 14,
         "name": "Burning Darkness",
         "description": "Inflicts shadow burn and slow on hit.",
+        "zh": { "name": "燃烧黑暗", "description": "命中时施加暗影燃烧与缓慢。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_shadow_burning_damage": 0 },
@@ -1084,6 +1150,7 @@
     "name": "Satans Mark",
     "kind": "active",
     "description": "Mark the monsters on target area for satan causing them to unleash pulses of arcane damage when struck by other abilities and attacks.",
+    "zh": { "name": "撒旦之印", "description": "为目标区域的怪物标记撒旦之印，它们被其他技能和攻击命中时会释放奥术伤害脉冲。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -1147,6 +1214,7 @@
         "positionIndex": 0,
         "name": "Satans Mark",
         "description": "Core of the Satans Mark subtree.",
+        "zh": { "name": "撒旦之印", "description": "撒旦之印 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1154,6 +1222,7 @@
         "positionIndex": 1,
         "name": "Heil Satan",
         "description": "Increases the damage dealt by satan´s mark.",
+        "zh": { "name": "Heil Satan", "description": "提高造成的伤害 satan's 印记。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1165,6 +1234,7 @@
         "positionIndex": 2,
         "name": "Long Lasting Darkness",
         "description": "Increases the duration of satan´s mark.",
+        "zh": { "name": "长距持续黑暗", "description": "提高 satan´s mark 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1176,6 +1246,7 @@
         "positionIndex": 3,
         "name": "Mark of the Beast",
         "description": "Chance on cast to spawn crows circling around the target location for a short duration dealing additional damage.",
+        "zh": { "name": "印记之 Beast", "description": "施法时有概率生成 crows 环绕周围目标位置短时间内造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1197,6 +1268,7 @@
         "positionIndex": 4,
         "name": "Grasp of Lucifer",
         "description": "Increases the area of effect radius of satan´s mark.",
+        "zh": { "name": "Grasp 之 Lucifer", "description": "提高 effect radius of satan´s mark 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1208,6 +1280,7 @@
         "positionIndex": 5,
         "name": "Satanic Transe",
         "description": "Increases the amount of stacks applied to targets.",
+        "zh": { "name": "Satanic Transe", "description": "提高 stacks applied to targets 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "max_skill_stacks": 0 },
@@ -1219,6 +1292,7 @@
         "positionIndex": 6,
         "name": "Blood Ritual",
         "description": "Increases the blood ripple area of effect radius of satan´s mark.",
+        "zh": { "name": "鲜血 Ritual", "description": "提高 effect radius of satan´s mark 的鲜血涟漪范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1230,6 +1304,7 @@
         "positionIndex": 7,
         "name": "The Black Bible",
         "description": "Chance to apply satan´s mark to nearby monsters on hit.",
+        "zh": { "name": "黑色 Bible", "description": "命中时有概率apply satan's 印记至附近怪物。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -1238,6 +1313,7 @@
         "positionIndex": 8,
         "name": "Messenger of Satan",
         "description": "Decreases the cooldown of satan´s mark.",
+        "zh": { "name": "Messenger 之 Satan", "description": "降低cooldown 之 satan's 印记。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1249,6 +1325,7 @@
         "positionIndex": 9,
         "name": "Reach of Darkness",
         "description": "Increases the maximum cast range of satan´s mark.",
+        "zh": { "name": "延伸之黑暗", "description": "提高 satan´s mark 的最大施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1260,6 +1337,7 @@
         "positionIndex": 10,
         "name": "False Prophecy",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "False Prophecy", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1278,6 +1356,7 @@
         "positionIndex": 11,
         "name": "The Black Mass",
         "description": "Satan´s mark unleashes chains of unholy lightning when struck by black mass executing low life monsters on hit.",
+        "zh": { "name": "黑弥撒", "description": "Satan's 印记释放锁链之邪秽闪电受到攻击时黑弥撒 executing 低生命怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1297,6 +1376,7 @@
         "positionIndex": 12,
         "name": "The Rapture",
         "description": "Satan´s mark is applied to monsters around you on a large radius with increased stacks. Satan´s mark now has an increased cooldown.",
+        "zh": { "name": "Rapture", "description": "Satan's 印记 applied 至怪物周围你大型半径使用提高层数。Satan's 印记有提高 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "max_skill_stacks": 0 },
@@ -1308,6 +1388,7 @@
         "positionIndex": 13,
         "name": "The Devil In I",
         "description": "Stuns monsters affected by satan´s mark inflicting arcane break.",
+        "zh": { "name": "Devil I", "description": "眩晕怪物 affected satan's 印记施加奥术击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "stun_duration_pct": 0, "arcane_break": 0 },
@@ -1326,6 +1407,7 @@
         "positionIndex": 14,
         "name": "Soul Combustion",
         "description": "Satan´s mark causes target souls to explode after a short delay dealing increased damage.",
+        "zh": { "name": "灵魂 Combustion", "description": "Satan's 印记使目标灵魂至爆炸短暂延迟后造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1340,6 +1422,7 @@
     "name": "Malediction",
     "kind": "passive",
     "description": "Your unholy essence drives birds into insanity, casts have a chance to send crows towards random nearby monsters exploding into arcane damage on impact.",
+    "zh": { "name": "诅咒", "description": "你邪秽的本质使飞鸟陷入疯狂，施法有概率放出乌鸦扑向随机附近怪物，命中时爆裂成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -1394,6 +1477,7 @@
     "name": "Black Mass",
     "kind": "active",
     "description": "Summon all the coven's cultists to march in the name of satan inflicting arcane damage to monsters on their path.",
+    "zh": { "name": "黑弥撒", "description": "召集所有异教徒以撒旦之名进军，对路径上的怪物造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -1457,6 +1541,7 @@
         "positionIndex": 0,
         "name": "Black Mass",
         "description": "Core of the Black Mass subtree.",
+        "zh": { "name": "黑弥撒", "description": "黑弥撒 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1464,6 +1549,7 @@
         "positionIndex": 1,
         "name": "Dark Gathering",
         "description": "Increases the amount of cultists.",
+        "zh": { "name": "黑暗 Gathering", "description": "提高 cultists 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_max_amount": 0 },
@@ -1475,6 +1561,7 @@
         "positionIndex": 2,
         "name": "Cult's Migration",
         "description": "Increases the movement speed of cultists.",
+        "zh": { "name": "Cult's Migration", "description": "提高 cultists 的移动速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1486,6 +1573,7 @@
         "positionIndex": 3,
         "name": "Loyal Followers",
         "description": "Decreases the cooldown of black mass.",
+        "zh": { "name": "Loyal Followers", "description": "降低cooldown 之黑弥撒。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1497,6 +1585,7 @@
         "positionIndex": 4,
         "name": "Raise Morale",
         "description": "Decreases the mana costs of black mass.",
+        "zh": { "name": "Raise Morale", "description": "降低法力消耗之黑弥撒。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1508,6 +1597,7 @@
         "positionIndex": 5,
         "name": "The Devil Within",
         "description": "Chance to unleash a ripple of blood on hit dealing additional damage.",
+        "zh": { "name": "Devil 之内", "description": "概率释放涟漪之鲜血命中时造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1523,6 +1613,7 @@
         "positionIndex": 6,
         "name": "Darkness Infused",
         "description": "Increases the damage dealt by black mass.",
+        "zh": { "name": "黑暗灌注", "description": "提高造成的伤害黑弥撒。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1534,6 +1625,7 @@
         "positionIndex": 7,
         "name": "Bloated Followers",
         "description": "Increases the size of cultists.",
+        "zh": { "name": "Bloated Followers", "description": "提高 cultists 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1545,6 +1637,7 @@
         "positionIndex": 8,
         "name": "Crowd Stomp",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "群体践踏", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1557,6 +1650,7 @@
         "positionIndex": 9,
         "name": "Eternal Corruption",
         "description": "Chance on cast to summon an additional black mass.",
+        "zh": { "name": "Eternal Corruption", "description": "施法时有概率召唤物额外黑弥撒。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1572,6 +1666,7 @@
         "positionIndex": 10,
         "name": "Murder Frenzy",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Murder 狂乱", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1583,6 +1678,7 @@
         "positionIndex": 11,
         "name": "Shadow Puppets",
         "description": "Summon a static cultist. The cultist emmits a portion of all damage taken to nearby monsters as area of effect damage.",
+        "zh": { "name": "暗影 Puppets", "description": "召唤物静电 cultist。cultist emmits 一部分全部所受伤害至附近怪物范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "damage_return": 0 },
@@ -1594,6 +1690,7 @@
         "positionIndex": 12,
         "name": "Protective Circle",
         "description": "Increased amount of cultists are now summoned in a circle around target location.",
+        "zh": { "name": "Protective 圆环", "description": "提高数量之 cultists 召唤圆环周围目标位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1605,6 +1702,7 @@
         "positionIndex": 13,
         "name": "Loyal Followers",
         "description": "Summon a horde of static cultists at target location for a short duration dealing increased damage.",
+        "zh": { "name": "Loyal Followers", "description": "召唤物 horde 之静电 cultists 目标位置短时间内造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1616,6 +1714,7 @@
         "positionIndex": 14,
         "name": "Cult Bishops",
         "description": "Send forward a cult bishop inflicting burning, dealing increased damage according to your energy and stunning monsters on hit.",
+        "zh": { "name": "Cult Bishops", "description": "发出前方 cult bishop 施加燃烧，造成提高伤害依照至你的能量与眩晕怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0, "conversion_energy": 0 },
@@ -1637,6 +1736,7 @@
     "name": "Heavenly Fire",
     "kind": "active",
     "description": "Light the target location into holy fire dealing arcane damage.",
+    "zh": { "name": "天火", "description": "将目标位置点燃成神圣之火，造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1699,6 +1799,7 @@
         "positionIndex": 0,
         "name": "Heavenly Fire",
         "description": "Core of the Heavenly Fire subtree.",
+        "zh": { "name": "天火", "description": "天火 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1706,6 +1807,7 @@
         "positionIndex": 1,
         "name": "Lamb of God",
         "description": "Chance on hit to set monsters on fire causing them to spread flames while moving.",
+        "zh": { "name": "Lamb 之神明", "description": "命中时有概率set 怪物火焰使其 spread 烈焰当 moving。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1721,6 +1823,7 @@
         "positionIndex": 2,
         "name": "Flame of the Heavens",
         "description": "Increases the tick frequency of heavenly fire.",
+        "zh": { "name": "Flame 之天堂", "description": "提高 天火 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1732,6 +1835,7 @@
         "positionIndex": 3,
         "name": "Heaven's Burn",
         "description": "Increases the damage dealt by heavenly fire.",
+        "zh": { "name": "Heaven's 燃烧", "description": "提高造成的伤害天火。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1743,6 +1847,7 @@
         "positionIndex": 4,
         "name": "Scorched Retribution",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "Scorched Retribution", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1761,6 +1866,7 @@
         "positionIndex": 5,
         "name": "Heaven's Blessing",
         "description": "Decreases the mana cost of heavenly fire.",
+        "zh": { "name": "Heaven's Blessing", "description": "降低法力消耗之天火。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1772,6 +1878,7 @@
         "positionIndex": 6,
         "name": "Heavenly Smite",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "神圣 Smite", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1783,6 +1890,7 @@
         "positionIndex": 7,
         "name": "Inner Ignition",
         "description": "Chance to increase your arcane damage on hit for a short duration.",
+        "zh": { "name": "Inner 点燃", "description": "概率提高你的奥术伤害命中时短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1798,6 +1906,7 @@
         "positionIndex": 8,
         "name": "Shattering Flames",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "粉碎烈焰", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1816,6 +1925,7 @@
         "positionIndex": 9,
         "name": "Ethereal Burn",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "Ethereal 燃烧", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1827,6 +1937,7 @@
         "positionIndex": 10,
         "name": "Word of God",
         "description": "Increases the area of effect radius of heavenly fire.",
+        "zh": { "name": "Word 之神明", "description": "提高 effect radius of 天火 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1838,6 +1949,7 @@
         "positionIndex": 11,
         "name": "Essence of Heavens",
         "description": "Unleash a heavenly orb scorching the ground below leaving behind a trail of burning flames.",
+        "zh": { "name": "精华之天堂", "description": "释放神圣宝珠灼热地面低于 leaving 身后轨迹之燃烧烈焰。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -1849,6 +1961,7 @@
         "positionIndex": 12,
         "name": "Chain of Fire",
         "description": "Chance to unleash a chain of fire on hit dealing increased damage.",
+        "zh": { "name": "连锁之火焰", "description": "概率释放连锁之火焰命中时造成提高伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1864,6 +1977,7 @@
         "positionIndex": 13,
         "name": "Righteous Path",
         "description": "Leave behind a trail of heavenly fire for a short duration inflicting elemental break on hit. Heavenly Fire now has a cooldown.",
+        "zh": { "name": "Righteous 路径", "description": "留下身后轨迹之天火短时间内施加元素击破命中时。天火有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "elemental_break": 0, "skill_duration": 0 },
@@ -1885,6 +1999,7 @@
         "positionIndex": 14,
         "name": "Ascendant Flame",
         "description": "Increases the size and tick frequency of heavenly fire over time.",
+        "zh": { "name": "Ascendant Flame", "description": "提高 天火 over time 的size 与每跳 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_size": 0, "faster_cast_rate": 0 },
@@ -1899,6 +2014,7 @@
     "name": "Flash Heal",
     "kind": "active",
     "description": "Heal yourself and any nearby allies.",
+    "zh": { "name": "快速治疗", "description": "治疗你自己和附近的所有盟友。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1937,6 +2053,7 @@
     "name": "Burst of Light",
     "kind": "active",
     "description": "Cast a ray of divine light dealing arcane damage and lights monsters on heavenly fire.",
+    "zh": { "name": "圣光迸发", "description": "施放一道神圣光束，造成奥术伤害并点燃怪物天火。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -1997,6 +2114,7 @@
         "positionIndex": 0,
         "name": "Burst of Light",
         "description": "Core of the Burst of Light subtree.",
+        "zh": { "name": "圣光迸发", "description": "圣光迸发 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2004,6 +2122,7 @@
         "positionIndex": 1,
         "name": "Manabinded Cast",
         "description": "Chance to smite monsters with a pillar of searing light on hit dealing additional damage according to your energy.",
+        "zh": { "name": "Manabinded 施法", "description": "概率 smite 怪物使用 pillar 之灼烧光明命中时造成额外伤害依照至你的能量。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2019,6 +2138,7 @@
         "positionIndex": 2,
         "name": "Solar Infusion",
         "description": "Increases damage dealt by burst of light and a chance to inflict burning on hit.",
+        "zh": { "name": "太阳灌注", "description": "提高 圣光迸发 and a chance to inflict burning on hit 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0, "increased_burning_damage": 0 },
@@ -2040,6 +2160,7 @@
         "positionIndex": 3,
         "name": "Piercing Ray",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "穿透 Ray", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -2058,6 +2179,7 @@
         "positionIndex": 4,
         "name": "Heaven's Brightness",
         "description": "Chance to replenish a portion of your maximum mana on hit.",
+        "zh": { "name": "Heaven's Brightness", "description": "命中时有概率恢复一部分最大法力。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2073,6 +2195,7 @@
         "positionIndex": 5,
         "name": "Total Illumination",
         "description": "Chance on cast to unleash additional bursts in an arc.",
+        "zh": { "name": "总 Illumination", "description": "施法时有概率释放额外迸发呈弧线。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -2088,6 +2211,7 @@
         "positionIndex": 6,
         "name": "Forking Glare",
         "description": "Chance to unleash an additional burst of light from a nearby monster on hit.",
+        "zh": { "name": "分叉 Glare", "description": "命中时有概率释放额外圣光迸发从附近怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2103,6 +2227,7 @@
         "positionIndex": 7,
         "name": "Lens Flare",
         "description": "Increases the range of burst of light.",
+        "zh": { "name": "Lens 耀斑", "description": "提高 圣光迸发 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2114,6 +2239,7 @@
         "positionIndex": 8,
         "name": "Light Orb",
         "description": "Chance on cast to unleash an orb of light briefly bursting into a burst of light.",
+        "zh": { "name": "光明宝珠", "description": "施法时有概率释放宝珠之光明 briefly bursting 进入圣光迸发。" },
         "maxRank": 5,
         "proc": { "trigger": "on_cast", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -2122,6 +2248,7 @@
         "positionIndex": 9,
         "name": "Blazing Light",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Blazing 光明", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -2133,6 +2260,7 @@
         "positionIndex": 10,
         "name": "Blinding Light",
         "description": "Chance to inflict stun and deal increased damage on hit.",
+        "zh": { "name": "炫目之光", "description": "你散发炫目光芒，获得闪避怪物攻击的概率。太阳形态下施法速度还会提高。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2149,6 +2277,7 @@
         "positionIndex": 11,
         "name": "Holy Beam",
         "description": "Unleash multiple bursts of light in an arc on hit.",
+        "zh": { "name": "神圣光束", "description": "释放多个迸发之光明呈弧线命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2160,6 +2289,7 @@
         "positionIndex": 12,
         "name": "Burning Smite",
         "description": "Unleash burst of light with increased size leaving the ground burning and inflicting slow on hit.",
+        "zh": { "name": "燃烧 Smite", "description": "释放圣光迸发使用提高 size leaving 地面燃烧与施加缓慢命中时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2176,6 +2306,7 @@
         "positionIndex": 13,
         "name": "Purification",
         "description": "Inflict monsters with a stack of purification on hit increasing the damage dealt by burst of light.",
+        "zh": { "name": "Purification", "description": "施加怪物使用层之 purification 命中时提高造成的伤害圣光迸发。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2187,6 +2318,7 @@
         "positionIndex": 14,
         "name": "Light Within",
         "description": "Burst of light unleashes as a nova of light around you with increased area of effect radius and dealing increased damage.",
+        "zh": { "name": "光明之内", "description": "圣光迸发释放新星之光明周围你使用提高范围半径与造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -2201,6 +2333,7 @@
     "name": "Divine Healing",
     "kind": "passive",
     "description": "Using flash heal temporarily increases your life replenish.",
+    "zh": { "name": "神圣治疗", "description": "使用快速治疗后会临时提高你的生命恢复。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -2232,6 +2365,7 @@
     "name": "Chain of Holy Lightning",
     "kind": "active",
     "description": "Cast a holy lightning jumping from monster to monster dealing arcane damage.",
+    "zh": { "name": "神圣闪电链", "description": "施放在怪物间跳跃的神圣闪电，造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -2294,6 +2428,7 @@
         "positionIndex": 0,
         "name": "Chain of Holy Lightning",
         "description": "Core of the Chain of Holy Lightning subtree.",
+        "zh": { "name": "神圣闪电链", "description": "神圣闪电链 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2301,6 +2436,7 @@
         "positionIndex": 1,
         "name": "Holy Velocity",
         "description": "Increases the projectile speed of chain of holy light.",
+        "zh": { "name": "神圣 Velocity", "description": "提高 chain of holy light 的投射物速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -2312,6 +2448,7 @@
         "positionIndex": 2,
         "name": "Plasma Burst",
         "description": "Increases the damage dealt by chain of holy light.",
+        "zh": { "name": "Plasma 迸发", "description": "提高 holy light 的造成的伤害连锁。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2323,6 +2460,7 @@
         "positionIndex": 3,
         "name": "Holy Discharge",
         "description": "Chance to smite monsters with holy lightning on hit dealing additional damage.",
+        "zh": { "name": "神圣 Discharge", "description": "概率 smite 怪物使用神圣闪电命中时造成额外伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2338,6 +2476,7 @@
         "positionIndex": 4,
         "name": "Divine Divergence",
         "description": "Chance to unleash an additional chain of holy light on hit.",
+        "zh": { "name": "神圣 Divergence", "description": "命中时有概率释放额外连锁之神圣光明。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2353,6 +2492,7 @@
         "positionIndex": 5,
         "name": "Amplifying Prayer",
         "description": "Increases the damage dealt by chain of holy light with each bounce.",
+        "zh": { "name": "放大祈祷", "description": "提高 holy light with each bounce 的造成的伤害连锁。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2364,6 +2504,7 @@
         "positionIndex": 6,
         "name": "Spellbreak Prayer",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Spellbreak 祈祷", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -2382,6 +2523,7 @@
         "positionIndex": 7,
         "name": "Celestial Light",
         "description": "Increases the amount of bounces.",
+        "zh": { "name": "Celestial 光明", "description": "提高 bounces 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -2393,6 +2535,7 @@
         "positionIndex": 8,
         "name": "Sacred Steps",
         "description": "Decreases movement diminish when using chain of holy light.",
+        "zh": { "name": "Sacred 踏入", "description": "使用连锁之神圣光明时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -2404,6 +2547,7 @@
         "positionIndex": 9,
         "name": "Lightened Path",
         "description": "Decreases the mana cost of chain of holy light.",
+        "zh": { "name": "Lightened 路径", "description": "降低法力消耗之连锁之神圣光明。" },
         "maxRank": 3,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -2415,6 +2559,7 @@
         "positionIndex": 10,
         "name": "Light's Embrace",
         "description": "Chain of holy light heals you for a portion of your maximum life when hitting its last target.",
+        "zh": { "name": "圣光拥抱", "description": "提高你的施法速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -2426,6 +2571,7 @@
         "positionIndex": 11,
         "name": "God´s Altar",
         "description": "Summon an altar of light unleashing chain of holy light on nearby monsters. Chain of holy light now has a cooldown.",
+        "zh": { "name": "神明的 Altar", "description": "召唤物 altar 之光明释放连锁之神圣光明附近怪物。连锁之神圣光明有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -2437,6 +2583,7 @@
         "positionIndex": 12,
         "name": "Recursive Light",
         "description": "Chain of holy light strikes the same target multiple times if there are no monsters nearby dealing a portion of its damage.",
+        "zh": { "name": "Recursive 光明", "description": "连锁之神圣光明打击相同目标多个次 if there 怪物附近造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2448,6 +2595,7 @@
         "positionIndex": 13,
         "name": "Echo of Heavens",
         "description": "Unleash holy bolts towards targets on hit with a chance to proc heavenly fire on hit.",
+        "zh": { "name": "回响之天堂", "description": "释放神圣电矢朝向目标命中时使用概率触发天火命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2459,6 +2607,7 @@
         "positionIndex": 14,
         "name": "God's Grasp",
         "description": "Pull monsters towards the first target on hit unleashing a divine explosion dealing increased damage with increased area of effect radius.",
+        "zh": { "name": "神明的 Grasp", "description": "牵引怪物朝向第一目标命中时释放神圣爆炸造成提高伤害使用提高范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -2473,6 +2622,7 @@
     "name": "Holy Shield",
     "kind": "buff",
     "description": "By the power of god bless yourself and any nearby allies with immortality for a short period.",
+    "zh": { "name": "神圣之盾", "description": "以上帝之力，在短时间内祝福你和附近盟友获得不朽。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -2513,6 +2663,7 @@
     "name": "Benediction",
     "kind": "passive",
     "description": "When healed by your abilities, smite monsters around you with holy lightning.",
+    "zh": { "name": "祝福", "description": "你的技能治疗到目标时，以神圣闪电轰击你周围的怪物。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2574,6 +2725,7 @@
     "name": "Healing Zone",
     "kind": "active",
     "description": "Bless the area around you with divine energy healing yourself and nearby allies.",
+    "zh": { "name": "治疗领域", "description": "以神圣能量祝福你周围的区域，治疗你和附近的盟友。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2615,6 +2767,7 @@
     "name": "Mana Orb",
     "kind": "active",
     "description": "Summon a pulsating orb of mana that replenishes mana for players and deals arcane damage to monsters.",
+    "zh": { "name": "法力宝珠", "description": "召唤一颗搏动的法力宝珠，为玩家恢复法力并对怪物造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -2685,6 +2838,7 @@
         "positionIndex": 0,
         "name": "Mana Orb",
         "description": "Core of the Mana Orb subtree.",
+        "zh": { "name": "法力宝珠", "description": "法力宝珠 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2692,6 +2846,7 @@
         "positionIndex": 1,
         "name": "Conduit",
         "description": "Increases the mana replenish from mana orb.",
+        "zh": { "name": "Conduit", "description": "提高法力恢复从法力宝珠。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_replenish_pct": 0 },
@@ -2703,6 +2858,7 @@
         "positionIndex": 2,
         "name": "Mana Incursion",
         "description": "Increases the damage dealt by mana orb.",
+        "zh": { "name": "法力 Incursion", "description": "提高造成的伤害法力宝珠。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2714,6 +2870,7 @@
         "positionIndex": 3,
         "name": "Burst of Energy",
         "description": "Chance to critically hit dealing increased critical strike damage according to your energy.",
+        "zh": { "name": "迸发之能量", "description": "概率打出暴击造成提高暴击伤害依照至你的能量。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "conversion_energy": 0 },
@@ -2725,6 +2882,7 @@
         "positionIndex": 4,
         "name": "Energy Charges",
         "description": "Increases the duration of mana orb.",
+        "zh": { "name": "能量冲锋", "description": "提高 法力宝珠 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2736,6 +2894,7 @@
         "positionIndex": 5,
         "name": "Corrupting Manapulse",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Corrupting Manapulse", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -2754,6 +2913,7 @@
         "positionIndex": 6,
         "name": "Meditation",
         "description": "Reduces the cooldown of mana orb.",
+        "zh": { "name": "Meditation", "description": "降低 cooldown 之法力宝珠。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -2765,6 +2925,7 @@
         "positionIndex": 7,
         "name": "Mage's Might",
         "description": "Increases the area of effect radius of mana orb.",
+        "zh": { "name": "法师的 Might", "description": "提高 effect radius of 法力宝珠 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2776,6 +2937,7 @@
         "positionIndex": 8,
         "name": "Amplified Magic",
         "description": "Increases the tick frequency of mana orb.",
+        "zh": { "name": "强化魔法", "description": "提高 法力宝珠 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -2787,6 +2949,7 @@
         "positionIndex": 9,
         "name": "Heaven's Aid",
         "description": "Chance to summon an additional mana orb at target location on hit.",
+        "zh": { "name": "Heaven's 援助", "description": "命中时有概率召唤物额外法力宝珠目标位置。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2802,6 +2965,7 @@
         "positionIndex": 10,
         "name": "Energy Fountain",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "能量 Fountain", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2813,6 +2977,7 @@
         "positionIndex": 11,
         "name": "Energy Orbit",
         "description": "Summon multiple mana orbs orbitting you and dealing damage based on your energy. Consumes all of your mana on cast.",
+        "zh": { "name": "能量轨道", "description": "召唤物多个法力宝珠 orbitting 你与造成伤害基于你的能量。消耗全部你的法力施法时。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_energy": 0, "projectile_count": 0 },
@@ -2824,6 +2989,7 @@
         "positionIndex": 12,
         "name": "Chosen One",
         "description": "Summon a mana orb within you gaining increased life replenish, mana replenish and arcane damage for the duration of mana orb.",
+        "zh": { "name": "Chosen 一次", "description": "召唤物法力宝珠之内你获得提高生命恢复，法力恢复与奥术伤害持续时间之法力宝珠。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -2843,6 +3009,7 @@
         "positionIndex": 13,
         "name": "Hauling Manawell",
         "description": "Conjure a flying mana orb pulling monsters into its core on hit.",
+        "zh": { "name": "Hauling 法力源泉", "description": "召唤飞散法力宝珠牵引怪物进入核心命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_size": 0 },
@@ -2854,6 +3021,7 @@
         "positionIndex": 14,
         "name": "Compacting Power",
         "description": "Summon a mana orb with increased duration and size. Each mana pulse now increases its damage but shrinks it in size.",
+        "zh": { "name": "Compacting 力量", "description": "召唤物法力宝珠使用提高持续时间与 size。每个法力脉冲提高伤害 shrinks size。" },
         "maxRank": 3,
         "effects": {
           "base": {

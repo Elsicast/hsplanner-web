@@ -5,6 +5,7 @@
     "name": "Weapon Master",
     "kind": "passive",
     "description": "Increases your attack damage and attack rating when you are using weapons without a shield.",
+    "zh": { "name": "武器大师", "description": "在不持盾使用武器时，提高你的攻击伤害和攻击命中。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -37,6 +38,7 @@
     "name": "Charge",
     "kind": "active",
     "description": "Charge forward dealing arcane damage and stunning monsters on impact.",
+    "zh": { "name": "冲锋", "description": "向前冲锋，造成奥术伤害并在命中时眩晕怪物。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -97,6 +99,7 @@
         "positionIndex": 0,
         "name": "Charge",
         "description": "Core of the Charge subtree.",
+        "zh": { "name": "冲锋", "description": "冲锋 子树核心。" },
         "maxRank": 1
       },
       {
@@ -104,6 +107,7 @@
         "positionIndex": 1,
         "name": "Power Charge",
         "description": "Increases the damage dealt by charge.",
+        "zh": { "name": "力量冲锋", "description": "提高造成的伤害冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -115,6 +119,7 @@
         "positionIndex": 2,
         "name": "Hyperfocus",
         "description": "Increases the duration of charge.",
+        "zh": { "name": "Hyperfocus", "description": "提高 冲锋 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -126,6 +131,7 @@
         "positionIndex": 3,
         "name": "Bodyslam",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Bodyslam", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -137,6 +143,7 @@
         "positionIndex": 4,
         "name": "Resilience",
         "description": "Take reduced damage while charging and shortly after.",
+        "zh": { "name": "韧性", "description": "承受降低伤害当冲锋与 shortly 之后。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -148,6 +155,7 @@
         "positionIndex": 5,
         "name": "Overconfidence",
         "description": "Increases the area of effect radius of charge.",
+        "zh": { "name": "Overconfidence", "description": "提高 effect radius of 冲锋 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -159,6 +167,7 @@
         "positionIndex": 6,
         "name": "Spirit Breaker",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "灵体 Breaker", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -177,6 +186,7 @@
         "positionIndex": 7,
         "name": "Violent Momentum",
         "description": "Increases the impact damage dealt by charge for each second spent charging.",
+        "zh": { "name": "Violent Momentum", "description": "提高冲击造成的伤害冲锋每个第二 spent 冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -188,6 +198,7 @@
         "positionIndex": 8,
         "name": "Berserking Ram",
         "description": "Increases the speed of your charge.",
+        "zh": { "name": "Berserking Ram", "description": "提高 your 冲锋 的速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -199,6 +210,7 @@
         "positionIndex": 9,
         "name": "Crushing Impact",
         "description": "Chance to critically hit with increased critical strike damage.",
+        "zh": { "name": "粉碎冲击", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -210,6 +222,7 @@
         "positionIndex": 10,
         "name": "Frenzied Mind",
         "description": "Stack a buff increasing your arcane skill damage when hitting monsters with charge.",
+        "zh": { "name": "Frenzied 心智", "description": "层增益提高你的奥术技能伤害当命中怪物使用冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -221,6 +234,7 @@
         "positionIndex": 11,
         "name": "Forceful Grab",
         "description": "Grab monsters on your path dealing damage and stunning them when you crash into terrain.",
+        "zh": { "name": "Forceful Grab", "description": "Grab 怪物你的路径造成伤害与眩晕它们当你 crash 进入地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "arcane_skill_damage": 0 },
@@ -232,6 +246,7 @@
         "positionIndex": 12,
         "name": "Crashquake",
         "description": "Unleash powerful shockwaves when crashing into monsters or terrain.",
+        "zh": { "name": "Crashquake", "description": "释放 powerful 冲击波当 crashing 进入怪物地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "arcane_skill_damage": 0 },
@@ -243,6 +258,7 @@
         "positionIndex": 13,
         "name": "Whirling Charge",
         "description": "Charge forward in a straight line unleashing a massive whirlwind around you.",
+        "zh": { "name": "Whirling 冲锋", "description": "冲锋前方 straight line 释放巨大旋风斩周围你。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "arcane_skill_damage": 0 },
@@ -254,6 +270,7 @@
         "positionIndex": 14,
         "name": "Mountain Fall",
         "description": "The mountain breaks and huge boulders fall down on monsters around you when crashing into monsters or terrain.",
+        "zh": { "name": "Mountain Fall", "description": "mountain 击破与巨大巨石 fall 倒地怪物周围你当 crashing 进入怪物地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "arcane_skill_damage": 0 },
@@ -268,6 +285,7 @@
     "name": "Stoneskin",
     "kind": "passive",
     "description": "Increases your defense rating.",
+    "zh": { "name": "石肤", "description": "提高你的防御。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -298,6 +316,7 @@
     "name": "Devastating Charge",
     "kind": "passive",
     "description": "When hitting monsters with Charge release a pulse dealing additional arcane damage and decreasing monster attack rating.",
+    "zh": { "name": "毁灭冲锋", "description": "以冲锋撞到怪物时释放一道脉冲，造成额外奥术伤害并降低怪物攻击命中。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -331,6 +350,7 @@
     "name": "Norse Resistance",
     "kind": "passive",
     "description": "Increases all of your resistances.",
+    "zh": { "name": "北境抗性", "description": "提高你的所有抗性。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -361,6 +381,7 @@
     "name": "Defensive Shout",
     "kind": "buff",
     "description": "Powerful warcry which buffs your and your party members defense rating.",
+    "zh": { "name": "防御怒吼", "description": "强力的战吼，增益你和队友的防御。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -399,6 +420,7 @@
     "name": "Odin's Fury",
     "kind": "active",
     "description": "Powerful warcry which deals arcane damage and stuns monsters around you.",
+    "zh": { "name": "奥丁之怒", "description": "强力的战吼，造成奥术伤害并眩晕你周围的怪物。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -460,6 +482,7 @@
         "positionIndex": 0,
         "name": "Odin's Fury",
         "description": "Core of the Odin's Fury subtree.",
+        "zh": { "name": "奥丁之怒", "description": "奥丁之怒 子树核心。" },
         "maxRank": 1
       },
       {
@@ -467,6 +490,7 @@
         "positionIndex": 1,
         "name": "Crippling Shout",
         "description": "Increases the damage dealt by odin´s fury.",
+        "zh": { "name": "致残 Shout", "description": "提高造成的伤害奥丁的狂怒。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -478,6 +502,7 @@
         "positionIndex": 2,
         "name": "Howling Cry",
         "description": "Increases the stun duration of odin's fury.",
+        "zh": { "name": "Howling Cry", "description": "提高 奥丁之怒 的眩晕持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "stun_duration_pct": 0 },
@@ -489,6 +514,7 @@
         "positionIndex": 3,
         "name": "Mind Tactics",
         "description": "Decreases the mana cost of odin´s fury.",
+        "zh": { "name": "心智战术", "description": "降低法力消耗之奥丁的狂怒。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -500,6 +526,7 @@
         "positionIndex": 4,
         "name": "Flaming Fury",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "燃烧狂怒", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -518,6 +545,7 @@
         "positionIndex": 5,
         "name": "Echoing Roar",
         "description": "Increases the area of effect radius of odin´s fury.",
+        "zh": { "name": "回响 Roar", "description": "提高 effect radius of odin´s fury 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -529,6 +557,7 @@
         "positionIndex": 6,
         "name": "Tormenting Shout",
         "description": "Increases the damage of odin's fury based on your maximum life.",
+        "zh": { "name": "Tormenting Shout", "description": "提高 奥丁之怒 based on your maximum life 的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_max_life": 0 },
@@ -540,6 +569,7 @@
         "positionIndex": 7,
         "name": "Emotional Damage",
         "description": "Inflicts bleeding on hit.",
+        "zh": { "name": "Emotional 伤害", "description": "命中时施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -558,6 +588,7 @@
         "positionIndex": 8,
         "name": "Echo of Duality",
         "description": "Chance on cast to unleash an additional shout.",
+        "zh": { "name": "回响之双重性", "description": "施法时有概率释放额外 shout。" },
         "maxRank": 2,
         "effects": {
           "base": { "multicast_chance": 0 },
@@ -569,6 +600,7 @@
         "positionIndex": 9,
         "name": "Shout of the Hunt",
         "description": "Increases your movement speed for a short period of time after using odin's fury.",
+        "zh": { "name": "Shout 之 Hunt", "description": "提高 time after using 奥丁之怒 的你的移动速度短距期间。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -580,6 +612,7 @@
         "positionIndex": 10,
         "name": "Dominating Howl",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "Dominating Howl", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -598,6 +631,7 @@
         "positionIndex": 11,
         "name": "Warcry",
         "description": "Odin’s fury now knocks back monsters and if they hit a wall or an object they take extra damage, get stunned and are pulled back to the player.",
+        "zh": { "name": "Warcry", "description": "奥丁的狂怒击退回怪物与 if 它们命中墙之物它们承受额外伤害，被眩晕与牵引回至 player。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -609,6 +643,7 @@
         "positionIndex": 12,
         "name": "Pulsing Echo",
         "description": "Now performs an echoing shout pulsating multiple times dealing increased damage with each pulse.",
+        "zh": { "name": "Pulsing 回响", "description": "执行回响 shout pulsating 多个次造成提高伤害使用每个脉冲。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -620,6 +655,7 @@
         "positionIndex": 13,
         "name": "Trembling Roar",
         "description": "Gain a buff dealing extra damage to burning and bleeding monsters.",
+        "zh": { "name": "震荡 Roar", "description": "获得增益造成额外伤害至燃烧与流血怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "extra_damage_burning": 0, "extra_damage_bleeding": 0 },
@@ -631,6 +667,7 @@
         "positionIndex": 14,
         "name": "Roaring Carnage",
         "description": "Knock up monsters causing them to take damage when they land.",
+        "zh": { "name": "Roaring 杀戮", "description": "击退上怪物使其承受伤害当它们落地。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -645,6 +682,7 @@
     "name": "Battle Agility",
     "kind": "passive",
     "description": "Increases your movement speed.",
+    "zh": { "name": "战斗敏捷", "description": "提高你的移动速度。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -675,6 +713,7 @@
     "name": "Combat Orders",
     "kind": "buff",
     "description": "Powerful warcry which buffs your and your party members maximum life and mana.",
+    "zh": { "name": "战斗号令", "description": "强力的战吼，增益你和队友的最大生命和法力。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -715,6 +754,7 @@
     "name": "Seismic Slam",
     "kind": "active",
     "description": "Smash monsters in front of you dealing damage and knocking them up and stunning them.",
+    "zh": { "name": "震地猛击", "description": "猛击你前方的怪物，造成伤害，击飞并眩晕它们。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -783,6 +823,7 @@
         "positionIndex": 0,
         "name": "Seismic Slam",
         "description": "Core of the Seismic Slam subtree.",
+        "zh": { "name": "震地猛击", "description": "震地猛击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -790,6 +831,7 @@
         "positionIndex": 1,
         "name": "Colossal Smash",
         "description": "Increases the area of effect radius of seismic slam.",
+        "zh": { "name": "巨型猛击", "description": "提高 effect radius of 震地猛击 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -801,6 +843,7 @@
         "positionIndex": 2,
         "name": "Seismic Energy",
         "description": "Increases the damage dealt by seismic slam.",
+        "zh": { "name": "Seismic 能量", "description": "提高造成的伤害震地猛击。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -812,6 +855,7 @@
         "positionIndex": 3,
         "name": "Lethal Crush",
         "description": "Increases critical strike damage dealt by seismic slam.",
+        "zh": { "name": "致命 Crush", "description": "提高暴击伤害 dealt 震地猛击。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -823,6 +867,7 @@
         "positionIndex": 4,
         "name": "Cheap Slam",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Cheap 猛击", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -834,6 +879,7 @@
         "positionIndex": 5,
         "name": "Seismic Aftershock",
         "description": "Targets have a chance to slam the ground on death dealing area of effect damage.",
+        "zh": { "name": "Seismic 余震", "description": "Targets 有概率猛击地面死亡造成范围伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_kill", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -842,6 +888,7 @@
         "positionIndex": 6,
         "name": "Power Slam",
         "description": "Knocks targets back dealing increased damage.",
+        "zh": { "name": "力量猛击", "description": "击退目标回造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -853,6 +900,7 @@
         "positionIndex": 7,
         "name": "Earth Root",
         "description": "Chance to root targets in place on hit dealing additional damage over time.",
+        "zh": { "name": "大地起始", "description": "概率起始目标 place 命中时造成额外伤害随时间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -869,6 +917,7 @@
         "positionIndex": 8,
         "name": "Slamming Flurry",
         "description": "Chance on hit to increase your attack speed for a short duration.",
+        "zh": { "name": "猛击 Flurry", "description": "命中时有概率提高你的攻击速度短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -884,6 +933,7 @@
         "positionIndex": 9,
         "name": "Defiling Carcass",
         "description": "Hitting a corpse with seismic slam causes it to explode dealing increased area of effect damage to nearby targets.",
+        "zh": { "name": "Defiling 躯体", "description": "命中尸体使用震地猛击使至爆炸造成提高范围伤害至附近目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -895,6 +945,7 @@
         "positionIndex": 10,
         "name": "Shattered Earth",
         "description": "Chance to strike target with an earth pillar on hit knocking them airborne dealing additional damage.",
+        "zh": { "name": "击破大地", "description": "概率 strike 目标使用大地 pillar 命中时击退它们腾空造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -910,6 +961,7 @@
         "positionIndex": 11,
         "name": "Polar Shift",
         "description": "Leap a short distance to smash the ground with massive force dealing increased damage with huge aoe.",
+        "zh": { "name": "Polar Shift", "description": "跃击短距距离至猛击地面使用巨大力量造成提高伤害使用巨大 aoe。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -921,6 +973,7 @@
         "positionIndex": 12,
         "name": "Echoing Slam",
         "description": "Slam multiple waves on a short distance increasing damage with each wave.",
+        "zh": { "name": "回响猛击", "description": "猛击多个波短距距离提高伤害使用每个波。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -932,6 +985,7 @@
         "positionIndex": 13,
         "name": "Seismic Crack",
         "description": "Now smash in front of you in a long narrow line knocking monsters in air causing them to unleash an aoe pulse upon landing.",
+        "zh": { "name": "Seismic Crack", "description": "猛击 front 之你长距 narrow line 击退怪物空中使其释放 aoe 脉冲落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -943,6 +997,7 @@
         "positionIndex": 14,
         "name": "Younger Dryas",
         "description": "Smashing the ground now drops a massive asteroid from the sky sending a huge tsunami dealing increased damage. Seismic Slam now has a cooldown.",
+        "zh": { "name": "Younger Dryas", "description": "粉碎地面落下巨大陨星从天空发出巨大海啸造成提高伤害。震地猛击有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -957,6 +1012,7 @@
     "name": "Brute Force",
     "kind": "passive",
     "description": "Increases your chance of critical strike and critical strike damage.",
+    "zh": { "name": "蛮力", "description": "提高你的暴击概率和暴击伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -989,6 +1045,7 @@
     "name": "Throw!",
     "kind": "active",
     "description": "Pick up and throw a monster which deals area of effect arcane damage and stuns monsters upon landing.",
+    "zh": { "name": "投掷！", "description": "抓起并投掷一只怪物，造成范围奥术伤害，落地时眩晕怪物。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -1049,6 +1106,7 @@
         "positionIndex": 0,
         "name": "Throw!",
         "description": "Core of the Throw! subtree.",
+        "zh": { "name": "投掷！", "description": "Throw! 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1056,6 +1114,7 @@
         "positionIndex": 1,
         "name": "Home Run",
         "description": "Increases the range of throw.",
+        "zh": { "name": "Home Run", "description": "提高 throw 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1067,6 +1126,7 @@
         "positionIndex": 2,
         "name": "Raging Power",
         "description": "Increases the damage dealt by throw.",
+        "zh": { "name": "狂怒力量", "description": "提高造成的伤害投掷。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1078,6 +1138,7 @@
         "positionIndex": 3,
         "name": "Power Throw",
         "description": "Increases the projectile speed of throw.",
+        "zh": { "name": "力量投掷", "description": "提高 throw 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1089,6 +1150,7 @@
         "positionIndex": 4,
         "name": "Colossal Liftoff",
         "description": "Increases throw's damage by a portion of your maximum life.",
+        "zh": { "name": "巨型 Liftoff", "description": "提高 your maximum life 的投掷的伤害一部分。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_max_life": 0 },
@@ -1100,6 +1162,7 @@
         "positionIndex": 5,
         "name": "Flipper",
         "description": "Thrown monsters bounce off of walls increasing damage dealt with every bounce.",
+        "zh": { "name": "Flipper", "description": "掷出怪物弹射关闭之墙提高造成的伤害使用每弹射。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1111,6 +1174,7 @@
         "positionIndex": 6,
         "name": "Power Fall",
         "description": "Thrown monsters smash into the ground with force causing ground fragments to fly around dealing damage.",
+        "zh": { "name": "力量 Fall", "description": "掷出怪物猛击进入地面使用力量使地面碎片至 fly 周围造成伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1122,6 +1186,7 @@
         "positionIndex": 7,
         "name": "Breaking Fall",
         "description": "Thrown monsters inflict arcane break on hit.",
+        "zh": { "name": "击破 Fall", "description": "掷出怪物施加奥术击破命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1140,6 +1205,7 @@
         "positionIndex": 8,
         "name": "Bouncing Around",
         "description": "Thrown monster bounce off the ground dealing increased damage with every bounce.",
+        "zh": { "name": "弹跳周围", "description": "掷出怪物弹射关闭地面造成提高伤害使用每弹射。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_bounces": 0 },
@@ -1151,6 +1217,7 @@
         "positionIndex": 9,
         "name": "Bulls Eye",
         "description": "When directly hitting another monster, cause the monster to be knocked up dealing area of effect damage when landing.",
+        "zh": { "name": "公牛之眼", "description": "当 directly 命中另一个怪物，使怪物至被击飞造成范围伤害落地时。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1162,6 +1229,7 @@
         "positionIndex": 10,
         "name": "Dive Bomb",
         "description": "Increases landing area of effect radius of throw.",
+        "zh": { "name": "Dive 炸弹", "description": "提高 effect radius of throw 的着陆范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1173,6 +1241,7 @@
         "positionIndex": 11,
         "name": "Ragesling",
         "description": "Throws the monster faster, dealing massively increased damage to it and causing it to explode into meat chunks that deal damage to nearby monsters if it dies from the throw.",
+        "zh": { "name": "Ragesling", "description": "投掷怪物更快，造成 massively 提高伤害至与使其爆炸进入血肉 chunks 造成伤害至附近怪物 if 死亡从投掷。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -1184,6 +1253,7 @@
         "positionIndex": 12,
         "name": "Vacuum Pitch",
         "description": "When thrown monster lands it pulls nearby monsters towards it.",
+        "zh": { "name": "Vacuum Pitch", "description": "当掷出怪物落地牵引附近怪物朝向。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_range": 0, "arcane_skill_damage": 0 },
@@ -1195,6 +1265,7 @@
         "positionIndex": 13,
         "name": "Dimensional Pitch",
         "description": "Additionally throw shadow copies of the monster with increased damage.",
+        "zh": { "name": "Dimensional Pitch", "description": "另外投掷暗影 copies 之怪物使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -1206,6 +1277,7 @@
         "positionIndex": 14,
         "name": "Echoing Throw",
         "description": "When thrown monster lands it shocks the ground multiple times with increased damage.",
+        "zh": { "name": "回响投掷", "description": "当掷出怪物落地电击地面多个次使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -1220,6 +1292,7 @@
     "name": "Zeal",
     "kind": "active",
     "description": "Strike three fast and powerful attacks with increased attack rating.",
+    "zh": { "name": "狂热", "description": "以更高的攻击命中快速打出三次强力攻击。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -1287,6 +1360,7 @@
         "positionIndex": 0,
         "name": "Zeal",
         "description": "Core of the Zeal subtree.",
+        "zh": { "name": "狂热", "description": "狂热 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1294,6 +1368,7 @@
         "positionIndex": 1,
         "name": "Rapid Striking",
         "description": "Increases the amount of attacks done by zeal.",
+        "zh": { "name": "迅捷打击", "description": "提高 attacks done by 狂热 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1305,6 +1380,7 @@
         "positionIndex": 2,
         "name": "Fatal Blows",
         "description": "Increases the damage dealt by zeal.",
+        "zh": { "name": "Fatal Blows", "description": "提高造成的伤害狂热。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1316,6 +1392,7 @@
         "positionIndex": 3,
         "name": "Weapon Marksman",
         "description": "Zeal now works with throwing weapons gaining increased attack range and damage.",
+        "zh": { "name": "武器射手", "description": "狂热生效使用投掷武器获得提高攻击范围与伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -1327,6 +1404,7 @@
         "positionIndex": 4,
         "name": "Brutal Slashes",
         "description": "Increases critical strike damage dealt by zeal.",
+        "zh": { "name": "Brutal Slashes", "description": "提高暴击伤害 dealt 狂热。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1338,6 +1416,7 @@
         "positionIndex": 5,
         "name": "Axes, More Axes!",
         "description": "Chance to summon an orbiting axe around the target on hit.",
+        "zh": { "name": "斧刃，更多斧刃!", "description": "命中时有概率召唤物环绕斧周围目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1353,6 +1432,7 @@
         "positionIndex": 6,
         "name": "Slicing Perfection",
         "description": "Increases attack rating when using zeal.",
+        "zh": { "name": "斩切 Perfection", "description": "提高攻击命中使用狂热。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1364,6 +1444,7 @@
         "positionIndex": 7,
         "name": "Hemorrhaging Blows",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Hemorrhaging Blows", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1382,6 +1463,7 @@
         "positionIndex": 8,
         "name": "Bleeding Out",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "流血 Out", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1393,6 +1475,7 @@
         "positionIndex": 9,
         "name": "Finish Them!",
         "description": "Zeal now executes targets below a certain percentage of life.",
+        "zh": { "name": "Finish 它们!", "description": "狂热处决目标低于特定 percentage 之生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1404,6 +1487,7 @@
         "positionIndex": 10,
         "name": "Cleaving Zeal",
         "description": "Zeal now always hits multiple targets with increased attack area of effect.",
+        "zh": { "name": "劈裂狂热", "description": "狂热 always 命中多个目标使用提高攻击范围之效果。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1415,6 +1499,7 @@
         "positionIndex": 11,
         "name": "Throwing Fury",
         "description": "Zeal now throws multiple projectiles with increased damage when using throwing weapons.",
+        "zh": { "name": "投掷狂怒", "description": "狂热投掷多个投射物使用提高伤害使用投掷武器。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -1426,6 +1511,7 @@
         "positionIndex": 12,
         "name": "Blood Ripple",
         "description": "Each strike has a chance to unleash a ripple of blood dealing area of effect damage.",
+        "zh": { "name": "鲜血涟漪", "description": "每个 strike 有概率释放涟漪之鲜血造成范围伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1441,6 +1527,7 @@
         "positionIndex": 13,
         "name": "Sundering Strikes",
         "description": "Zeal inflicts stacking armor break on the target increasing with each strike.",
+        "zh": { "name": "Sundering 打击", "description": "狂热施加叠加护甲击破目标提高使用每个 strike。" },
         "maxRank": 3,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1459,6 +1546,7 @@
         "positionIndex": 14,
         "name": "Zealing Blow",
         "description": "Your last zeal strike deals increased damage stunning the target taunting nearby monsters.",
+        "zh": { "name": "Zealing Blow", "description": "你的最后狂热 strike 造成提高伤害眩晕目标嘲讽附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1481,6 +1569,7 @@
     "name": "Ymir's Champion",
     "kind": "active",
     "description": "Perform a cold enhanced strike with additive cold damage, increased attack damage and attack rating. Attacks also freeze monsters and summons a spinning axe that deals additional damage.",
+    "zh": { "name": "伊米尔的斗士", "description": "进行一次冰冷强化的打击，附带附加冰冷伤害、提高的攻击伤害和攻击命中。攻击还会冻结怪物，并召唤一把造成额外伤害的旋转巨斧。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -1559,6 +1648,7 @@
         "positionIndex": 0,
         "name": "Ymir's Champion",
         "description": "Core of the Ymir's Champion subtree.",
+        "zh": { "name": "伊米尔的斗士", "description": "伊米尔的斗士 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1566,6 +1656,7 @@
         "positionIndex": 1,
         "name": "Viking´s Carnage",
         "description": "Increases the damage dealt by ymir's champion.",
+        "zh": { "name": "维京的杀戮", "description": "提高造成的伤害伊米尔的斗士。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1577,6 +1668,7 @@
         "positionIndex": 2,
         "name": "Raging Sustain",
         "description": "Increases the duration of axes.",
+        "zh": { "name": "狂怒 Sustain", "description": "提高 axes 的持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1588,6 +1680,7 @@
         "positionIndex": 3,
         "name": "Slashing Cleavers",
         "description": "Increases the size of axes.",
+        "zh": { "name": "斩击劈砍者", "description": "提高 axes 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1599,6 +1692,7 @@
         "positionIndex": 4,
         "name": "Rimeforged Hatchet",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "Rimeforged Hatchet", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -1610,6 +1704,7 @@
         "positionIndex": 5,
         "name": "Ymir´s Focus",
         "description": "Increases attack rating when using ymir's champion.",
+        "zh": { "name": "Ymir's Focus", "description": "提高攻击命中使用伊米尔的斗士。" },
         "maxRank": 6,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1621,6 +1716,7 @@
         "positionIndex": 6,
         "name": "Expanding Territory",
         "description": "Increases the orbit radius of axes.",
+        "zh": { "name": "Expanding Territory", "description": "提高 axes 的轨道半径。" },
         "maxRank": 8,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1632,6 +1728,7 @@
         "positionIndex": 7,
         "name": "Rapid Spinning",
         "description": "Increases the projectile speed of axes.",
+        "zh": { "name": "迅捷旋转", "description": "提高 axes 的投射物速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1643,6 +1740,7 @@
         "positionIndex": 8,
         "name": "Frosted Blow",
         "description": "Chance to unleash an ice nova on hit.",
+        "zh": { "name": "Frosted Blow", "description": "命中时有概率释放寒冰新星。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1658,6 +1756,7 @@
         "positionIndex": 9,
         "name": "Rending Hatchet",
         "description": "Increases critical strike damage dealt by ymir's champion.",
+        "zh": { "name": "Rending Hatchet", "description": "提高暴击伤害 dealt 伊米尔的斗士。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1669,6 +1768,7 @@
         "positionIndex": 10,
         "name": "Power of Multitude",
         "description": "Increases axes amount but damage dealt is split between axes summoned.",
+        "zh": { "name": "力量之 Multitude", "description": "提高斧刃数量造成的伤害分裂 between 斧刃召唤。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1680,6 +1780,7 @@
         "positionIndex": 11,
         "name": "Collateral Damage",
         "description": "Whenever the axes hit a target they send another piercing axe outwards in a straight line towards the target.",
+        "zh": { "name": "波及伤害", "description": "每当斧刃命中目标它们发出另一个穿透斧向外 straight line 朝向目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1691,6 +1792,7 @@
         "positionIndex": 12,
         "name": "Chainslicing Tomahawk",
         "description": "Axes now chain through monsters and then return back to you dealing damage to monsters in its path.",
+        "zh": { "name": "Chainslicing Tomahawk", "description": "斧刃连锁穿过怪物与 then 反伤回至你造成伤害至怪物路径上的。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_bounces": 0 },
@@ -1702,6 +1804,7 @@
         "positionIndex": 13,
         "name": "Scattering Battlegear",
         "description": "Axes now fly into a random spot in a cone in front of you and start spinning on the ground dealing increased damage.",
+        "zh": { "name": "散射 Battlegear", "description": "斧刃 fly 进入随机 spot 锥形 front 之你与 start 旋转地面造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1713,6 +1816,7 @@
         "positionIndex": 14,
         "name": "Shattering Axes",
         "description": "At the end of their duration the axes shatter into weapon shards dealing additional damage.",
+        "zh": { "name": "粉碎斧刃", "description": "end 之 their 持续时间斧刃 shatter 进入武器 shards 造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1727,6 +1831,7 @@
     "name": "Whirlwind",
     "kind": "active",
     "description": "Spin your weapons around you dealing damage to monsters struck.",
+    "zh": { "name": "旋风斩", "description": "在你周围旋转武器，对被切到的怪物造成伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -1794,6 +1899,7 @@
         "positionIndex": 0,
         "name": "Whirlwind",
         "description": "Core of the Whirlwind subtree.",
+        "zh": { "name": "旋风斩", "description": "旋风斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1801,6 +1907,7 @@
         "positionIndex": 1,
         "name": "Sharp Winds",
         "description": "Increases attack rating when using whirlwind.",
+        "zh": { "name": "尖锐狂风", "description": "提高攻击命中使用旋风斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1812,6 +1919,7 @@
         "positionIndex": 2,
         "name": "Wounding Spin",
         "description": "Increases the damage dealt by whirlwind.",
+        "zh": { "name": "致伤旋转", "description": "提高造成的伤害旋风斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1823,6 +1931,7 @@
         "positionIndex": 3,
         "name": "Deadly Blow",
         "description": "Increases critical strike damage when using whirlwind.",
+        "zh": { "name": "致命一击", "description": "提高暴击伤害使用旋风斩。" },
         "maxRank": 6,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1834,6 +1943,7 @@
         "positionIndex": 4,
         "name": "Typhoon",
         "description": "Increases the area of effect radius of whirlwind.",
+        "zh": { "name": "Typhoon", "description": "提高 effect radius of 旋风斩 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1845,6 +1955,7 @@
         "positionIndex": 5,
         "name": "Airborne Debris",
         "description": "Increases the critical strike chance when using whirlwind.",
+        "zh": { "name": "腾空碎片", "description": "提高暴击概率使用旋风斩。" },
         "maxRank": 2,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -1856,6 +1967,7 @@
         "positionIndex": 6,
         "name": "Cycloning Step",
         "description": "Increases your movement speed while using whirlwind.",
+        "zh": { "name": "Cycloning Step", "description": "提高你的移动速度使用旋风斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1867,6 +1979,7 @@
         "positionIndex": 7,
         "name": "Second Wind",
         "description": "Chance on hit to unleash a twister.",
+        "zh": { "name": "第二 Wind", "description": "命中时有概率释放 twister。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1882,6 +1995,7 @@
         "positionIndex": 8,
         "name": "Burning Air",
         "description": "Chance on hit to inflict burning dealing damage based on your total attack speed.",
+        "zh": { "name": "燃烧空中", "description": "命中时有概率施加燃烧造成伤害基于你的总攻击速度。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1898,6 +2012,7 @@
         "positionIndex": 9,
         "name": "Trail of Fire",
         "description": "Leave a trail of fire behind you inflicting monsters with burning.",
+        "zh": { "name": "轨迹之火焰", "description": "留下轨迹之火焰身后你施加怪物使用燃烧。" },
         "maxRank": 6,
         "effects": {
           "base": { "increased_burning_damage": 0, "area_of_effect": 0 },
@@ -1916,6 +2031,7 @@
         "positionIndex": 10,
         "name": "Scorching Heat",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "灼热灼热", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1927,6 +2043,7 @@
         "positionIndex": 11,
         "name": "Sharpened Blades",
         "description": "Greatly increases area of effect radius dealing increased damage at the outer edge.",
+        "zh": { "name": "锋利刀刃", "description": "Greatly 提高范围半径造成提高伤害 outer 锋刃。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -1938,6 +2055,7 @@
         "positionIndex": 12,
         "name": "Detonation",
         "description": "Store damage dealt to monsters unleashing it when whirlwind ends dealing damage on a large radius around you.",
+        "zh": { "name": "引爆", "description": "Store 造成的伤害至怪物释放当旋风斩 ends 造成伤害大型半径周围你。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1949,6 +2067,7 @@
         "positionIndex": 13,
         "name": "Negative Pressure",
         "description": "monsters at the edge of the whirlwind radius are sucked within the whirlwind.",
+        "zh": { "name": "负值压迫", "description": "怪物锋刃之旋风斩半径 sucked 之内旋风斩。" },
         "maxRank": 3,
         "effects": {
           "base": { "armor_break": 0, "area_of_effect": 0 },
@@ -1967,6 +2086,7 @@
         "positionIndex": 14,
         "name": "Airborne",
         "description": "Knock monsters high into air causing them to take increased damage upon landing.",
+        "zh": { "name": "腾空", "description": "击退怪物高进入空中使其承受提高伤害落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1981,6 +2101,7 @@
     "name": "Shockwave",
     "kind": "active",
     "description": "Smash the ground causing a shockwave that deals area of effect damage and stuns monsters.",
+    "zh": { "name": "震荡波", "description": "猛击地面引发震荡波，造成范围伤害并眩晕怪物。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2049,6 +2170,7 @@
         "positionIndex": 0,
         "name": "Shockwave",
         "description": "Core of the Shockwave subtree.",
+        "zh": { "name": "震荡波", "description": "震荡波 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2056,6 +2178,7 @@
         "positionIndex": 1,
         "name": "Richter Scale",
         "description": "Increases shockwave travel distance.",
+        "zh": { "name": "Richter Scale", "description": "提高震荡波飞行距离。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2067,6 +2190,7 @@
         "positionIndex": 2,
         "name": "Earth Shaker",
         "description": "Increases the damage dealt by shockwave.",
+        "zh": { "name": "大地 Shaker", "description": "提高造成的伤害震荡波。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2078,6 +2202,7 @@
         "positionIndex": 3,
         "name": "Ground Fissure",
         "description": "Chance on hit to knockup monsters dealing additional damage.",
+        "zh": { "name": "地面 Fissure", "description": "命中时有概率击飞怪物造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2093,6 +2218,7 @@
         "positionIndex": 4,
         "name": "Shocking Crust",
         "description": "Increases critical strike damage dealt by shockwave.",
+        "zh": { "name": "电击 Crust", "description": "提高暴击伤害 dealt 震荡波。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -2104,6 +2230,7 @@
         "positionIndex": 5,
         "name": "Multi Trail",
         "description": "Adds an additional trail but decreases damage dealt by each shockwave.",
+        "zh": { "name": "Multi 轨迹", "description": "附加额外轨迹降低造成的伤害每个震荡波。" },
         "maxRank": 2,
         "effects": {
           "base": { "trail_count": 0, "of_total_damage": 0 },
@@ -2115,6 +2242,7 @@
         "positionIndex": 6,
         "name": "Cracked Earth",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "Cracked 大地", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -2133,6 +2261,7 @@
         "positionIndex": 7,
         "name": "Meteorology",
         "description": "Chance on hit to drop a meteor on the target dealing additional damage.",
+        "zh": { "name": "Meteorology", "description": "命中时有概率投下陨石术目标造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2148,6 +2277,7 @@
         "positionIndex": 8,
         "name": "Duck and Cover",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Duck 与覆盖", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2159,6 +2289,7 @@
         "positionIndex": 9,
         "name": "Afterquake",
         "description": "Chance on cast to unleash an additional shockwave.",
+        "zh": { "name": "Afterquake", "description": "施法时有概率释放额外震荡波。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -2174,6 +2305,7 @@
         "positionIndex": 10,
         "name": "Land Mass",
         "description": "Increases the area of effect radius of shockwave.",
+        "zh": { "name": "落地巨躯", "description": "提高 effect radius of 震荡波 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2185,6 +2317,7 @@
         "positionIndex": 11,
         "name": "Trembling Trail",
         "description": "Smash the ground in front of you creating a shockwave that travels a short distance and then splits into all directions.",
+        "zh": { "name": "震荡轨迹", "description": "猛击地面 front 之你产生震荡波飞行短距距离与 then 分裂进入全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2196,6 +2329,7 @@
         "positionIndex": 12,
         "name": "Cataclysmic Smash",
         "description": "Smashing the ground now creates shockwaves in every direction. Shockwave now has a cooldown.",
+        "zh": { "name": "Cataclysmic 猛击", "description": "粉碎地面产生冲击波每 direction。震荡波有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "trail_count": 0 },
@@ -2207,6 +2341,7 @@
         "positionIndex": 13,
         "name": "Forking Crust",
         "description": "Each wave has a chance to fork into a smaller trail.",
+        "zh": { "name": "分叉 Crust", "description": "每个波有概率分叉进入更小轨迹。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2222,6 +2357,7 @@
         "positionIndex": 14,
         "name": "Earthen Maelstrom",
         "description": "Shockwaves twirl outwards around you dealing increased damage.",
+        "zh": { "name": "Earthen Maelstrom", "description": "冲击波 twirl 向外周围你造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -2244,6 +2380,7 @@
     "name": "Berserk",
     "kind": "active",
     "description": "Every successful hit with berserk increases your attack damage, attack speed and movement speed for berserk stacking up to 8 times.",
+    "zh": { "name": "狂暴", "description": "狂暴下每次成功命中都会提高你的攻击伤害、攻击速度和移动速度，最多叠加 8 层。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2321,6 +2458,7 @@
         "positionIndex": 0,
         "name": "Berserk",
         "description": "Core of the Berserk subtree.",
+        "zh": { "name": "狂暴", "description": "狂暴 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2328,6 +2466,7 @@
         "positionIndex": 1,
         "name": "Insanity",
         "description": "Increases the damage dealt by berserk.",
+        "zh": { "name": "Insanity", "description": "提高造成的伤害狂暴。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2339,6 +2478,7 @@
         "positionIndex": 2,
         "name": "Restless Feet",
         "description": "Increases the movement speed bonus from berserk.",
+        "zh": { "name": "不安 Feet", "description": "提高移动速度 bonus 从狂暴。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -2350,6 +2490,7 @@
         "positionIndex": 3,
         "name": "Dual Swing",
         "description": "Chance on attack to perform an additional attack.",
+        "zh": { "name": "双持挥击", "description": "攻击时有概率执行额外攻击。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2365,6 +2506,7 @@
         "positionIndex": 4,
         "name": "Fearless Focus",
         "description": "Increases attack rating when using berserk.",
+        "zh": { "name": "Fearless Focus", "description": "提高攻击命中使用狂暴。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -2376,6 +2518,7 @@
         "positionIndex": 5,
         "name": "Brutalize",
         "description": "Chance to strike the monster with force causing pieces of it to scatter around and damage nearby targets.",
+        "zh": { "name": "Brutalize", "description": "概率 strike 怪物使用力量使 pieces 之至散射周围与伤害附近目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2391,6 +2534,7 @@
         "positionIndex": 6,
         "name": "Axe Throw",
         "description": "Chance on hit to throw a piercing axe towards your target inflicting armor break to all monsters hit.",
+        "zh": { "name": "斧投掷", "description": "命中时有概率投掷穿透斧朝向你的目标施加护甲击破至全部怪物命中。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -2409,6 +2553,7 @@
         "positionIndex": 7,
         "name": "Bursting Madness",
         "description": "Every strike now stacks to an additional buff unleashing a powerful area of effect pulse when reaching max stacks.",
+        "zh": { "name": "Bursting Madness", "description": "每 strike 层数至额外增益释放 powerful 范围脉冲当延伸 max 层数。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2420,6 +2565,7 @@
         "positionIndex": 8,
         "name": "Berserker´s Reach",
         "description": "Chance on berserk attack to increase its area of effect.",
+        "zh": { "name": "狂战士的延伸", "description": "概率在狂暴攻击至提高范围之效果。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2435,6 +2581,7 @@
         "positionIndex": 9,
         "name": "Heavy Hitter",
         "description": "Increases critical strike damage dealt when using berserk.",
+        "zh": { "name": "重型 Hitter", "description": "提高暴击伤害 dealt 使用狂暴。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -2446,6 +2593,7 @@
         "positionIndex": 10,
         "name": "Bring Me Another One!",
         "description": "Pull nearby monsters to the targets corpse on kill.",
+        "zh": { "name": "Bring Me 另一个一次!", "description": "牵引附近怪物至目标尸体击杀时。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2457,6 +2605,7 @@
         "positionIndex": 11,
         "name": "Berserker´s Insanity",
         "description": "Increases berserk stat bonuses and max stacks.",
+        "zh": { "name": "狂战士的 Insanity", "description": "提高狂暴 stat bonuses 与 max 层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_all_attributes": 0, "max_skill_stacks": 0 },
@@ -2468,6 +2617,7 @@
         "positionIndex": 12,
         "name": "Deadly Advantage",
         "description": "Berserk no longer requires a melee weapon dealing increased damage.",
+        "zh": { "name": "致命优势", "description": "狂暴更久 requires 近战武器造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2479,6 +2629,7 @@
         "positionIndex": 13,
         "name": "GRAAAAAGH!",
         "description": "Every time you reach full stacks unleash a trembling pulse dealing increased damage scaling with full stat scaling consuming all stacks.",
+        "zh": { "name": "GRAAAAAGH!", "description": "每时间你延伸 full 层数释放震荡脉冲造成提高伤害加成使用 full stat 加成消耗全部层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2490,6 +2641,7 @@
         "positionIndex": 14,
         "name": "Giant´s Grasp",
         "description": "Increases the power of attack damage from berserk stacks lowering attack speed scaling.",
+        "zh": { "name": "巨人的 Grasp", "description": "提高 attack damage from 狂暴 stacks lowering attack speed scaling 的力量。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2504,6 +2656,7 @@
     "name": "Demolishing Winds",
     "kind": "passive",
     "description": "Whirlwind now unleashes tornadoes dealing portion of the Whirlwinds damage to monsters struck.",
+    "zh": { "name": "毁灭之风", "description": "旋风斩现在会释放龙卷风，对被卷中的怪物造成旋风斩的一部分伤害。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [

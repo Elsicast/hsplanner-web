@@ -1,6 +1,7 @@
 {
   "id": "necromancer",
   "name": "Necromancer",
+  "zh": { "name": "死灵法师" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

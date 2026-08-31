@@ -1,6 +1,7 @@
 {
   "id": "white_mage",
   "name": "White Mage",
+  "zh": { "name": "白魔导师" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

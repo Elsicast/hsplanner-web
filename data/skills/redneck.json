@@ -5,6 +5,7 @@
     "name": "Moonshine Molotov",
     "kind": "active",
     "description": "Throw a bottle of moonshine that ignites the impacted area on fire and sends out burning oil.",
+    "zh": { "name": "私烧酒燃烧瓶", "description": "掷出一瓶私烧酒，点燃落点区域并溅出燃烧的油。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -67,6 +68,7 @@
         "positionIndex": 0,
         "name": "Moonshine Molotov",
         "description": "Core of the Moonshine Molotov subtree.",
+        "zh": { "name": "私烧酒燃烧瓶", "description": "私烧酒燃烧瓶 子树核心。" },
         "maxRank": 1
       },
       {
@@ -74,6 +76,7 @@
         "positionIndex": 1,
         "name": "Extra Gasoline",
         "description": "Increased damage.",
+        "zh": { "name": "额外 Gasoline", "description": "提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -85,6 +88,7 @@
         "positionIndex": 2,
         "name": "Double Bourbon",
         "description": "Chance to throw an additional molotov.",
+        "zh": { "name": "双重 Bourbon", "description": "概率投掷额外 molotov。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -100,6 +104,7 @@
         "positionIndex": 3,
         "name": "Wider Flames",
         "description": "Increases flame radius.",
+        "zh": { "name": "更宽烈焰", "description": "提高flame 半径。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -111,6 +116,7 @@
         "positionIndex": 4,
         "name": "Scorching Collision",
         "description": "Direct hits with the molotov breaks monsters fire resistances.",
+        "zh": { "name": "灼热天体冲撞", "description": "Direct 命中使用 molotov 击破怪物火焰抗性。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -129,6 +135,7 @@
         "positionIndex": 5,
         "name": "Gas Leak",
         "description": "Molotovs leave a small trail of fire as they travel.",
+        "zh": { "name": "毒气 Leak", "description": "Molotovs 留下小型轨迹之火焰它们飞行。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -140,6 +147,7 @@
         "positionIndex": 6,
         "name": "Oil Spilled Flask",
         "description": "Chance for molotovs to spill oil around them.",
+        "zh": { "name": "Oil Spilled 药剂", "description": "概率使 molotovs 至 spill oil 周围它们。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 10 } }
       },
@@ -148,6 +156,7 @@
         "positionIndex": 7,
         "name": "Burn The Demons",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "燃烧恶魔", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -166,6 +175,7 @@
         "positionIndex": 8,
         "name": "Redeeming Flames",
         "description": "Increases the amount of spills from moonshine molotov.",
+        "zh": { "name": "Redeeming 烈焰", "description": "提高 spills from 私烧酒燃烧瓶 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -177,6 +187,7 @@
         "positionIndex": 9,
         "name": "Bottle Flip",
         "description": "Molotovs now bounce once when they hit the ground redirecting them towards the closest enemy.",
+        "zh": { "name": "Bottle Flip", "description": "Molotovs 弹射 once 当它们命中地面 redirecting 它们朝向最近的敌人。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -188,6 +199,7 @@
         "positionIndex": 10,
         "name": "Resilient Liquid",
         "description": "Increases the duration of flames.",
+        "zh": { "name": "Resilient 液体", "description": "提高 flames 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -199,6 +211,7 @@
         "positionIndex": 11,
         "name": "Heated Melting Point",
         "description": "Moonshine molotovs now ignite into blue flames increasing its damage significantly.",
+        "zh": { "name": "Heated Melting 点", "description": "Moonshine molotovs 点燃进入 blue 烈焰提高伤害显著。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -210,6 +223,7 @@
         "positionIndex": 12,
         "name": "Set The World On Fire!",
         "description": "Throw multiple molotovs around you for a short period setting the world ablaze. Moonshine molotov now has a cooldown.",
+        "zh": { "name": "Set World 火焰!", "description": "投掷多个 molotovs 周围你短距期间 setting world ablaze。私烧酒燃烧瓶有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -221,6 +235,7 @@
         "positionIndex": 13,
         "name": "Flaming Tar",
         "description": "Direct hits cause enemies to leave a trail of fire wherever they go damaging other nearby enemies dealing increased damage and inflicting burning.",
+        "zh": { "name": "燃烧 Tar", "description": "Direct 命中使敌人至留下轨迹之火焰 wherever 它们 go 伤害型其他附近敌人造成提高伤害与施加燃烧。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "increased_burning_damage": 0 },
@@ -239,6 +254,7 @@
         "positionIndex": 14,
         "name": "Blazing Trail of Flames",
         "description": "Molotov now bounces additional times from the ground spilling small flames around.",
+        "zh": { "name": "炽焰足迹之烈焰", "description": "Molotov 弹射额外次从地面 spilling 小型烈焰周围。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_bounces": 0, "fire_skill_damage": 0 },
@@ -253,6 +269,7 @@
     "name": "Pipe Bombs",
     "kind": "active",
     "description": "Throw a barrage of handcrafted pipe bombs dealing area of effect fire damage.",
+    "zh": { "name": "钢管炸弹", "description": "投掷一连串手工钢管炸弹，造成范围火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -315,6 +332,7 @@
         "positionIndex": 0,
         "name": "Pipe Bombs",
         "description": "Core of the Pipe Bombs subtree.",
+        "zh": { "name": "钢管炸弹", "description": "钢管炸弹 子树核心。" },
         "maxRank": 1
       },
       {
@@ -322,6 +340,7 @@
         "positionIndex": 1,
         "name": "Stacked Bag",
         "description": "Throw additional bombs.",
+        "zh": { "name": "叠加 Bag", "description": "投掷额外炸弹。" },
         "maxRank": 2,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -333,6 +352,7 @@
         "positionIndex": 2,
         "name": "Lowered Weight",
         "description": "Increases the projectile speed of pipe bombs.",
+        "zh": { "name": "降低重量", "description": "提高 钢管炸弹 的投射物速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -344,6 +364,7 @@
         "positionIndex": 3,
         "name": "TNT Mass",
         "description": "Increases the size and explosion area of effect radius of pipe bombs.",
+        "zh": { "name": "炸药巨躯", "description": "提高 effect radius of 钢管炸弹 的size 与爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -355,6 +376,7 @@
         "positionIndex": 4,
         "name": "Bomberman",
         "description": "Increases faster cast rate when using pipe bombs.",
+        "zh": { "name": "Bomberman", "description": "提高施法速度使用钢管炸弹。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -366,6 +388,7 @@
         "positionIndex": 5,
         "name": "Splitting Explosive",
         "description": "Chance on hit to split into multiple pipe bombs.",
+        "zh": { "name": "分裂爆炸", "description": "命中时有概率分裂进入多个钢管炸弹。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -381,6 +404,7 @@
         "positionIndex": 6,
         "name": "Wounding Blast",
         "description": "Inflicts bleeding on hit.",
+        "zh": { "name": "致伤爆破", "description": "命中时施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -399,6 +423,7 @@
         "positionIndex": 7,
         "name": "Salt Covering",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Salt 覆盖", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -410,6 +435,7 @@
         "positionIndex": 8,
         "name": "Blasting Powder",
         "description": "Increases the damage dealt by pipe bombs.",
+        "zh": { "name": "爆破火药", "description": "提高造成的伤害钢管炸弹。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -421,6 +447,7 @@
         "positionIndex": 9,
         "name": "Anti Fatigue",
         "description": "Decreases the mana cost of pipe bombs.",
+        "zh": { "name": "反 Fatigue", "description": "降低法力消耗之钢管炸弹。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -432,6 +459,7 @@
         "positionIndex": 10,
         "name": "Upwards Pressure",
         "description": "Chance on hit to knock up monsters dealing additional damage.",
+        "zh": { "name": "向上压迫", "description": "命中时有概率击退上怪物造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -447,6 +475,7 @@
         "positionIndex": 11,
         "name": "Fiery Infusion",
         "description": "Pipe bombs now leave burning flames on the ground with increased damage and area of effect radius.",
+        "zh": { "name": "炽焰灌注", "description": "钢管炸弹留下燃烧烈焰地面使用提高伤害与范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -458,6 +487,7 @@
         "positionIndex": 12,
         "name": "Disorienting Blast",
         "description": "Knock monsters back with massive power causing them to take additional damage and be stunned when hitting terrain.",
+        "zh": { "name": "Disorienting 爆破", "description": "击退怪物使用巨大力量使其承受额外伤害与眩晕当命中地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -469,6 +499,7 @@
         "positionIndex": 13,
         "name": "Eat This!",
         "description": "Throw a single pipe bomb with force unleashing multiple pipe bombs in a circle around the impact point.",
+        "zh": { "name": "Eat This!", "description": "投掷单次 pipe 炸弹使用力量释放多个钢管炸弹圆环周围冲击点。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -480,6 +511,7 @@
         "positionIndex": 14,
         "name": "Colossal Explosive",
         "description": "Throw a giant pipe bomb that bounces multiple times dealing increased damage. Each bounce it shrinks in size and deals less damage until it vanishes.",
+        "zh": { "name": "巨型爆炸", "description": "投掷巨人 pipe 炸弹弹射多个次造成提高伤害。每个弹射 shrinks size 与造成较少伤害 until 消散。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_size": 0 },
@@ -494,6 +526,7 @@
     "name": "Tire Fire",
     "kind": "active",
     "description": "Throw a truck tire that deals fire damage on hit.",
+    "zh": { "name": "轮胎火", "description": "投掷一个卡车轮胎，命中时造成火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -557,6 +590,7 @@
         "positionIndex": 0,
         "name": "Tire Fire",
         "description": "Core of the Tire Fire subtree.",
+        "zh": { "name": "轮胎火", "description": "轮胎火 子树核心。" },
         "maxRank": 1
       },
       {
@@ -564,6 +598,7 @@
         "positionIndex": 1,
         "name": "Tire Density",
         "description": "Increases the damage dealt by tire fire.",
+        "zh": { "name": "轮胎 Density", "description": "提高造成的伤害轮胎火。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -575,6 +610,7 @@
         "positionIndex": 2,
         "name": "Increased Stock",
         "description": "Increases the projectile speed of tire fire.",
+        "zh": { "name": "提高 Stock", "description": "提高 轮胎火 的投射物速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -586,6 +622,7 @@
         "positionIndex": 3,
         "name": "Scaling Up",
         "description": "Increases the size of tires.",
+        "zh": { "name": "加成上", "description": "提高 tires 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -597,6 +634,7 @@
         "positionIndex": 4,
         "name": "Hard Hitter",
         "description": "Knocks monsters back with increased damage.",
+        "zh": { "name": "Hard Hitter", "description": "击退怪物使用提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -608,6 +646,7 @@
         "positionIndex": 5,
         "name": "Bouncy Tire",
         "description": "Tires now bounce over gaps and short terrain dealing a damaging area of effect pulse when landing.",
+        "zh": { "name": "Bouncy 轮胎", "description": "轮胎弹射持续 gaps 与短距地形造成伤害型范围脉冲落地时。" },
         "maxRank": 2,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -619,6 +658,7 @@
         "positionIndex": 6,
         "name": "Flaming Tire",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "燃烧轮胎", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -637,6 +677,7 @@
         "positionIndex": 7,
         "name": "Overheated",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Overheated", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -648,6 +689,7 @@
         "positionIndex": 8,
         "name": "The Machinist",
         "description": "Increases faster cast rate when casting tire fire.",
+        "zh": { "name": "Machinist", "description": "提高施法速度当施法轮胎火。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -659,6 +701,7 @@
         "positionIndex": 9,
         "name": "Oily Tire",
         "description": "Tire now leaves a trail of oil behind with increased radius.",
+        "zh": { "name": "Oily 轮胎", "description": "轮胎留下轨迹之 oil 身后使用提高半径。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -670,6 +713,7 @@
         "positionIndex": 10,
         "name": "Impact Angle",
         "description": "Tires now bounce off of high terrain and environment increasing its damage per impact.",
+        "zh": { "name": "冲击 Angle", "description": "轮胎弹射关闭之高地形与 environment 提高伤害每冲击。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -681,6 +725,7 @@
         "positionIndex": 11,
         "name": "Monster Truck Tire",
         "description": "Now sends out a big monster truck tire stunning and knocking monsters up on hit dealing increased damage. Tire fire now has a cooldown.",
+        "zh": { "name": "怪物 Truck 轮胎", "description": "发出 out 核心怪物 truck 轮胎眩晕与击飞怪物命中时造成提高伤害。轮胎火有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_size": 0 },
@@ -692,6 +737,7 @@
         "positionIndex": 12,
         "name": "Mini Tires",
         "description": "Now send out multiple smaller tires in an arc.",
+        "zh": { "name": "Mini 轮胎", "description": "发出 out 多个更小轮胎呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "fire_skill_damage": 0 },
@@ -703,6 +749,7 @@
         "positionIndex": 13,
         "name": "Donuts",
         "description": "Tires now spiral outwards inflicting fire break on hit.",
+        "zh": { "name": "Donuts", "description": "轮胎 spiral 向外施加火焰击破命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "fire_break": 0 },
@@ -721,6 +768,7 @@
         "positionIndex": 14,
         "name": "Loose Tire",
         "description": "Send out a bouncing tire dealing increased area of effect damage every time it lands.",
+        "zh": { "name": "Loose 轮胎", "description": "发出 out 弹跳轮胎造成提高范围伤害每时间落地。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -735,6 +783,7 @@
     "name": "Oil Spill",
     "kind": "active",
     "description": "Spill oil on the ground slowing and lowering monster attack rating. Oil also ignites into flames when coming in contact with Moonshine Molotov dealing additional burning damage.",
+    "zh": { "name": "漏油", "description": "在地上洒油，减速并降低怪物攻击命中。油接触到私烧酒燃烧瓶时会燃起火焰，造成额外燃烧伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -777,6 +826,7 @@
     "name": "Combustible Oil",
     "kind": "passive",
     "description": "Increases your fire skill damage.",
+    "zh": { "name": "易燃油脂", "description": "提高你的火焰技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -807,6 +857,7 @@
     "name": "Hillbilly Rage",
     "kind": "buff",
     "description": "Temporarily increases your fire skill damage.",
+    "zh": { "name": "红脖暴怒", "description": "临时提高你的火焰技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -846,6 +897,7 @@
     "name": "Spontaneous Combustion",
     "kind": "passive",
     "description": "When igniting oil in flames, also make the monsters combust dealing area of effect fire damage around them.",
+    "zh": { "name": "自燃", "description": "点燃油脂时，还会使怪物爆燃，在它们周围造成范围火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -908,6 +960,7 @@
     "name": "Moonshine Madness",
     "kind": "passive",
     "description": "Increases your attack rating and movement speed.",
+    "zh": { "name": "私烧酒狂热", "description": "提高你的攻击命中和移动速度。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -940,6 +993,7 @@
     "name": "Pickup Raid",
     "kind": "active",
     "description": "Call your hillbilly friends to siege your opponents in a pickup truck dealing fire damage.",
+    "zh": { "name": "皮卡突袭", "description": "召唤你的红脖伙伴开着皮卡冲撞敌人，造成火焰伤害。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -1002,6 +1056,7 @@
         "positionIndex": 0,
         "name": "Pickup Raid",
         "description": "Core of the Pickup Raid subtree.",
+        "zh": { "name": "皮卡突袭", "description": "皮卡突袭 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1009,6 +1064,7 @@
         "positionIndex": 1,
         "name": "Ignition",
         "description": "Increases the damage dealt by pickup raid.",
+        "zh": { "name": "点燃", "description": "提高造成的伤害皮卡突袭。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1020,6 +1076,7 @@
         "positionIndex": 2,
         "name": "Oil Leak",
         "description": "All raid participants leak oil on the ground.",
+        "zh": { "name": "Oil Leak", "description": "全部突袭 participants leak oil 地面。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1031,6 +1088,7 @@
         "positionIndex": 3,
         "name": "Napalm Filling",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Napalm Filling", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1042,6 +1100,7 @@
         "positionIndex": 4,
         "name": "V12 Engine",
         "description": "Increases travel speed of all raid members.",
+        "zh": { "name": "V12 Engine", "description": "提高 all raid members 的飞行速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1053,6 +1112,7 @@
         "positionIndex": 5,
         "name": "Shattering Shells",
         "description": "Buckshots from the motorcycle rider now inflict fire break on hit.",
+        "zh": { "name": "粉碎护壳", "description": "霰弹从 motorcycle rider 施加火焰击破命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -1071,6 +1131,7 @@
         "positionIndex": 6,
         "name": "Speed Dial",
         "description": "Decreases the cooldown of pickup raid.",
+        "zh": { "name": "速度 Dial", "description": "降低cooldown 之皮卡突袭。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1082,6 +1143,7 @@
         "positionIndex": 7,
         "name": "Billy & Little Bob",
         "description": "Adds a motorcycle rider to the pickup raid firing buckshots.",
+        "zh": { "name": "Billy & Little Bob", "description": "附加motorcycle rider 至皮卡突袭 firing 霰弹。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1093,6 +1155,7 @@
         "positionIndex": 8,
         "name": "Double Barrel",
         "description": "Pickup truck now fires additional projectiles.",
+        "zh": { "name": "双重桶", "description": "Pickup truck 发射额外投射物。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1104,6 +1167,7 @@
         "positionIndex": 9,
         "name": "Moonshine Miles",
         "description": "Adds a wooden airplane to the pickup raid dropping bombs dealing area of effect damage.",
+        "zh": { "name": "Moonshine Miles", "description": "附加wooden airplane 至皮卡突袭落下炸弹造成范围伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1115,6 +1179,7 @@
         "positionIndex": 10,
         "name": "Crackling Fire",
         "description": "Bombs dropped by the wooden airplane now inflict burning on hit.",
+        "zh": { "name": "Crackling 火焰", "description": "炸弹落下 wooden airplane 施加燃烧命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1133,6 +1198,7 @@
         "positionIndex": 11,
         "name": "Suicide Squad",
         "description": "The raid now moves towards target location exploding into multiple big explosions and truck tires rolling into all directions.",
+        "zh": { "name": "Suicide Squad", "description": "突袭 moves 朝向目标位置 exploding 进入多个核心爆炸与 truck 轮胎 rolling 进入全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1144,6 +1210,7 @@
         "positionIndex": 12,
         "name": "Freedom Convoy",
         "description": "Now send multiple pickup trucks.",
+        "zh": { "name": "Freedom Convoy", "description": "发出多个 pickup trucks。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "fire_skill_damage": 0 },
@@ -1155,6 +1222,7 @@
         "positionIndex": 13,
         "name": "Drunken Air Raid",
         "description": "Now only send a raid of planes that fire projectiles and drop bombs.",
+        "zh": { "name": "Drunken 空中突袭", "description": "仅发出突袭之 planes 火焰投射物与投下炸弹。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "fire_skill_damage": 0 },
@@ -1166,6 +1234,7 @@
         "positionIndex": 14,
         "name": "Tarethiel MC",
         "description": "Now only send motorcycle riders firing buckshot inflicting burning on hit.",
+        "zh": { "name": "塔瑞希尔 MC", "description": "仅发出 motorcycle riders firing 霰弹射击施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "fire_skill_damage": 0 },
@@ -1180,6 +1249,7 @@
     "name": "Durable Wear",
     "kind": "passive",
     "description": "Increases your defense.",
+    "zh": { "name": "耐磨护身", "description": "提高你的防御。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1210,6 +1280,7 @@
     "name": "Chainsaw Slash",
     "kind": "active",
     "description": "Perform an area of effect attack attaching a spinning chainsaw on monsters for a short period of time.",
+    "zh": { "name": "链锯斩", "description": "进行一次范围攻击，将一把旋转的链锯挂在怪物身上，持续一段时间。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1279,6 +1350,7 @@
         "positionIndex": 0,
         "name": "Chainsaw Slash",
         "description": "Core of the Chainsaw Slash subtree.",
+        "zh": { "name": "链锯斩", "description": "链锯斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1286,6 +1358,7 @@
         "positionIndex": 1,
         "name": "Wider Chain",
         "description": "Increases the attack area of effect radius of chainslaw slash.",
+        "zh": { "name": "更宽连锁", "description": "提高 effect radius of chainslaw slash 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1297,6 +1370,7 @@
         "positionIndex": 2,
         "name": "Accelerated Chain",
         "description": "Increases the damage dealt by chainsaw slash.",
+        "zh": { "name": "Accelerated 连锁", "description": "提高造成的伤害链锯斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1308,6 +1382,7 @@
         "positionIndex": 3,
         "name": "Double The Logging",
         "description": "Chance to attach an additional chainsaw on hit.",
+        "zh": { "name": "双重 Logging", "description": "命中时有概率attach 额外链锯。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1323,6 +1398,7 @@
         "positionIndex": 4,
         "name": "Rupturing Slash",
         "description": "Chance on inflict bleeding on hit.",
+        "zh": { "name": "破裂斩击", "description": "概率在施加流血命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1341,6 +1417,7 @@
         "positionIndex": 5,
         "name": "Chaining Uppercut",
         "description": "Chance on hit to send monsters airborne dealing increased area of effect damage when landing.",
+        "zh": { "name": "连锁 Uppercut", "description": "命中时有概率发出怪物腾空造成提高范围伤害落地时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1356,6 +1433,7 @@
         "positionIndex": 6,
         "name": "The Motor Goes BRRRRR!",
         "description": "Increases chainsaw slash attack speed while wielding a chainsaw.",
+        "zh": { "name": "Motor Goes BRRRRR!", "description": "装备链锯时提高链锯斩攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -1367,6 +1445,7 @@
         "positionIndex": 7,
         "name": "Bigger Saw",
         "description": "Increases the area of effect radius and size of rotating chainsaws.",
+        "zh": { "name": "更大 Saw", "description": "提高 effect radius and size of rotating chainsaws 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1378,6 +1457,7 @@
         "positionIndex": 8,
         "name": "Strengthened Bloodlust",
         "description": "Increases rotating chainsaw damage and size based on your total strength.",
+        "zh": { "name": "Strengthened Bloodlust", "description": "提高旋转链锯伤害与 size 基于你的总力量。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_size": 0 },
@@ -1389,6 +1469,7 @@
         "positionIndex": 9,
         "name": "Malfunctioning Chainsaw",
         "description": "Chainsaws explode after expiring dealing additional damage and stunning nearby enemies.",
+        "zh": { "name": "Malfunctioning 链锯", "description": "链锯爆炸之后到期造成额外伤害与眩晕附近敌人。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1400,6 +1481,7 @@
         "positionIndex": 10,
         "name": "Bloody Carnage",
         "description": "Increases damage dealt to bleeding enemies.",
+        "zh": { "name": "Bloody 杀戮", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1411,6 +1493,7 @@
         "positionIndex": 11,
         "name": "Giant Slash",
         "description": "Every 4th attack unleashes a giant slash dealing increased damage and inflicting armor break.",
+        "zh": { "name": "巨人斩击", "description": "每 4th 攻击释放巨人斩击造成提高伤害与施加护甲击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "armor_break": 0 },
@@ -1429,6 +1512,7 @@
         "positionIndex": 12,
         "name": "Woodcutter´s Madness",
         "description": "Every 3rd hit unleashes a spinning attack with increased radius and dealing increased damage.",
+        "zh": { "name": "Woodcutter's Madness", "description": "每 3阶命中释放旋转攻击使用提高半径与造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1448,6 +1532,7 @@
         "positionIndex": 13,
         "name": "Gas To The Chainsaws",
         "description": "Each target can only have one chainsaw attached to them but striking them again causes it to reset its duration, growing in size and dealing additional damage up to 10 times.",
+        "zh": { "name": "毒气至链锯", "description": "每个目标可以仅有一次链锯 attached 至它们打击它们 again 使至重置持续时间，growing size 与造成额外伤害上至 10 次。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_size": 0 },
@@ -1459,6 +1544,7 @@
         "positionIndex": 14,
         "name": "Sawing Momentum",
         "description": "Enemies killed while a chainsaw is attached to them release the chainsaws outwards. If they hit a new target, they attach themselves to them instead.",
+        "zh": { "name": "Sawing Momentum", "description": "敌人被击杀当链锯 attached 至它们 release 链锯向外。If 它们命中 new 目标，它们 attach themselves 至它们改为。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "faster_cast_rate": 0 },
@@ -1473,6 +1559,7 @@
     "name": "Loggers Endurance",
     "kind": "passive",
     "description": "Increases your life and life replenish.",
+    "zh": { "name": "伐木工的坚忍", "description": "提高你的生命和生命恢复。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -1505,6 +1592,7 @@
     "name": "Chainsaw Massacre",
     "kind": "active",
     "description": "Violently spin your chainsaw dealing damage to monsters around you. Going the full distance unleashes a whirl attack with increased damage and area of effect.",
+    "zh": { "name": "链锯屠戮", "description": "猛烈转动链锯，对你周围的怪物造成伤害。转满全程会释放一次旋风攻击，造成提高的伤害和更大的范围。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -1575,6 +1663,7 @@
         "positionIndex": 0,
         "name": "Chainsaw Massacre",
         "description": "Core of the Chainsaw Massacre subtree.",
+        "zh": { "name": "链锯屠戮", "description": "链锯屠戮 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1582,6 +1671,7 @@
         "positionIndex": 1,
         "name": "Wielding The Saw",
         "description": "Increases the damage dealt by chainsaw massacre while you are wielding a chainsaw.",
+        "zh": { "name": "Wielding Saw", "description": "提高造成的伤害链锯屠戮当你 wielding 链锯。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1593,6 +1683,7 @@
         "positionIndex": 2,
         "name": "Saw Through The Woods",
         "description": "Increases the area of effect radius of chainsaw massacre.",
+        "zh": { "name": "Saw 穿过伐木", "description": "提高 effect radius of 链锯屠戮 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1604,6 +1695,7 @@
         "positionIndex": 3,
         "name": "Sawing Execution",
         "description": "Chainsaw massacre now executes targets below a certain percentage of life.",
+        "zh": { "name": "Sawing Execution", "description": "链锯屠戮处决目标低于特定 percentage 之生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1615,6 +1707,7 @@
         "positionIndex": 4,
         "name": "Final Stand",
         "description": "Increases damage dealt by chainsaw massacre's ending whirl.",
+        "zh": { "name": "Final 坚守", "description": "提高 链锯屠戮's ending whirl 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1626,6 +1719,7 @@
         "positionIndex": 5,
         "name": "Optimal Working Hours",
         "description": "Decreases duration but increases damage dealt each second spent spinning.",
+        "zh": { "name": "Optimal Working 时", "description": "降低持续时间提高造成的伤害每个第二 spent 旋转。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1637,6 +1731,7 @@
         "positionIndex": 6,
         "name": "Overtime",
         "description": "Increases the duration of chainsaw massacre.",
+        "zh": { "name": "Overtime", "description": "提高 链锯屠戮 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1648,6 +1743,7 @@
         "positionIndex": 7,
         "name": "Critical Wounding",
         "description": "Inflicts bleeding on hit.",
+        "zh": { "name": "暴击致伤", "description": "命中时施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1666,6 +1762,7 @@
         "positionIndex": 8,
         "name": "Resilient Sustain",
         "description": "Increases your life steal and mana steal when using chainsaw massacre.",
+        "zh": { "name": "Resilient Sustain", "description": "提高你的生命偷取与法力偷取使用链锯屠戮。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_steal": 0, "mana_steal": 0 },
@@ -1677,6 +1774,7 @@
         "positionIndex": 9,
         "name": "Logging Machine",
         "description": "Increases spinning speed of chainsaw massacre.",
+        "zh": { "name": "Logging Machine", "description": "提高 链锯屠戮 的旋转速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "spin_speed": 0, "movement_speed": 0 },
@@ -1688,6 +1786,7 @@
         "positionIndex": 10,
         "name": "Calling in Sick",
         "description": "Decreases the duration of chainsaw massacre.",
+        "zh": { "name": "Calling Sick", "description": "降低持续时间之链锯屠戮。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1699,6 +1798,7 @@
         "positionIndex": 11,
         "name": "Logger´s Lil Helpers",
         "description": "Additionally summons multiple chainsaws that spin around you at different speeds while chainsaw massacre is active.",
+        "zh": { "name": "Logger's Lil Helpers", "description": "另外召唤物多个链锯旋转周围你 different 加速当链锯屠戮激活。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1710,6 +1810,7 @@
         "positionIndex": 12,
         "name": "Raging Sawblades",
         "description": "Perform the ending whirl frequently while spinning.",
+        "zh": { "name": "狂怒 Sawblades", "description": "执行 ending whirl 频繁当旋转。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1721,6 +1822,7 @@
         "positionIndex": 13,
         "name": "Standstill Focus",
         "description": "Spin in place dealing increased damage. Each kill increases the area of effect radius of chainsaw massacre.",
+        "zh": { "name": "Standstill Focus", "description": "旋转 place 造成提高伤害。每个击杀提高范围半径之链锯屠戮。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1736,6 +1838,7 @@
         "positionIndex": 14,
         "name": "Woodcutter´s Expertise",
         "description": "Gain absolute control of the spinning dealing increased damage and inflict bleeding on hit.",
+        "zh": { "name": "Woodcutter's 专精", "description": "获得绝对控制之旋转造成提高伤害与施加流血命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "crit_damage": 0 },
@@ -1750,6 +1853,7 @@
     "name": "Experienced Logger",
     "kind": "passive",
     "description": "Increases your chance for critical strike and critical strike damage.",
+    "zh": { "name": "老练伐木工", "description": "提高你的暴击概率和暴击伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -1782,6 +1886,7 @@
     "name": "Revved Up",
     "kind": "buff",
     "description": "Temporarily increases your attack speed and damage.",
+    "zh": { "name": "油门轰满", "description": "临时提高你的攻击速度和伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -1823,6 +1928,7 @@
     "name": "Rogue Chainsaw",
     "kind": "active",
     "description": "Throw a chainsaw on the ground spinning and dealing increased damage and additional arcane damage to monsters struck.",
+    "zh": { "name": "脱手链锯", "description": "向地面掷出一台旋转的链锯，对被切到的怪物造成提高的伤害和额外奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -1902,6 +2008,7 @@
         "positionIndex": 0,
         "name": "Rogue Chainsaw",
         "description": "Core of the Rogue Chainsaw subtree.",
+        "zh": { "name": "脱手链锯", "description": "脱手链锯 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1909,6 +2016,7 @@
         "positionIndex": 1,
         "name": "Overheating Engine",
         "description": "Increases the spinning speed of rogue chainsaws.",
+        "zh": { "name": "Overheating Engine", "description": "提高 rogue chainsaws 的旋转速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "spin_speed": 0 },
@@ -1920,6 +2028,7 @@
         "positionIndex": 2,
         "name": "Ripping Impact",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Ripping 冲击", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1938,6 +2047,7 @@
         "positionIndex": 3,
         "name": "Handling Skills",
         "description": "Increases the cast rate of rogue chainsaw while wielding a chainsaw.",
+        "zh": { "name": "Handling 技能", "description": "装备链锯时提高施法速度之脱手链锯。" },
         "maxRank": 4,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1949,6 +2059,7 @@
         "positionIndex": 4,
         "name": "Rough Chains",
         "description": "Increases the damage dealt by rogue chainsaw.",
+        "zh": { "name": "Rough 锁链", "description": "提高造成的伤害脱手链锯。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1960,6 +2071,7 @@
         "positionIndex": 5,
         "name": "Engine Gone Wild",
         "description": "When expiring, the chainsaws launch into the direction they are facing, dealing additional damage and bouncing off of terrain.",
+        "zh": { "name": "Engine Gone Wild", "description": "当到期，链锯发射进入 direction 它们 facing，造成额外伤害与弹跳关闭之地形。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1971,6 +2083,7 @@
         "positionIndex": 6,
         "name": "Chaining Chainsaws",
         "description": "Launched chainsaws have a chance to chain when they first hit an enemy.",
+        "zh": { "name": "连锁链锯", "description": "Launched chainsaws 有概率连锁当它们第一命中敌人。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 7 } }
       },
@@ -1979,6 +2092,7 @@
         "positionIndex": 7,
         "name": "Empty The Workbag",
         "description": "Chance on cast to throw additional rogue chainsaw.",
+        "zh": { "name": "Empty Workbag", "description": "施法时有概率投掷额外脱手链锯。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_cast",
@@ -1994,6 +2108,7 @@
         "positionIndex": 8,
         "name": "Ruthless Chainsaws",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Ruthless 链锯", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -2005,6 +2120,7 @@
         "positionIndex": 9,
         "name": "Consumed Rupture",
         "description": "When hitting a bleeding monster, consume the bleeding debuff and unleash an explosion of blood scaling with the bleeding damage.",
+        "zh": { "name": "消耗破裂", "description": "当命中流血怪物，消耗流血 debuff 与释放爆炸之鲜血加成使用流血伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2016,6 +2132,7 @@
         "positionIndex": 10,
         "name": "Full Gas Tank",
         "description": "Increases the duration of rogue chainsaws.",
+        "zh": { "name": "Full 毒气壁垒", "description": "提高 rogue chainsaws 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2027,6 +2144,7 @@
         "positionIndex": 11,
         "name": "Slice Em Up!",
         "description": "Chainsaws now slowly travel forward with increased size and damage.",
+        "zh": { "name": "斩切 Em 上!", "description": "链锯缓慢飞行前方使用提高 size 与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_size": 0 },
@@ -2038,6 +2156,7 @@
         "positionIndex": 12,
         "name": "Shredding Squad",
         "description": "Launch multiple rogue chainsaws in an arc instead of throwing them on the ground.",
+        "zh": { "name": "Shredding Squad", "description": "发射多个 rogue 链锯呈弧线改为之投掷它们地面。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "arcane_skill_damage": 0 },
@@ -2049,6 +2168,7 @@
         "positionIndex": 13,
         "name": "Homing Chainsaws",
         "description": "Rogue chainsaws now home towards the closest monster.",
+        "zh": { "name": "追踪链锯", "description": "Rogue 链锯 home 朝向最近的怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_range": 0 },
@@ -2060,6 +2180,7 @@
         "positionIndex": 14,
         "name": "Circle of Cutting",
         "description": "Throw multiple rogue chainsaws in a circle around you, traveling back to you upon landing.",
+        "zh": { "name": "圆环之切割", "description": "投掷多个 rogue 链锯圆环周围你，飞行回至你落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -2074,6 +2195,7 @@
     "name": "Chainsaw Mastery",
     "kind": "passive",
     "description": "Increases your damage and attack rating when using a chainsaw.",
+    "zh": { "name": "链锯精通", "description": "使用链锯时，提高你的伤害和攻击命中。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2106,6 +2228,7 @@
     "name": "Tree Trunk Triumph",
     "kind": "active",
     "description": "Summon a massive tree and cut it down on nearby monsters dealing increased damage and additional arcane damage.",
+    "zh": { "name": "巨木凯旋", "description": "召唤一棵巨树并将其砍倒在附近怪物身上，造成提高的伤害和额外奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -2185,6 +2308,7 @@
         "positionIndex": 0,
         "name": "Tree Trunk Triumph",
         "description": "Core of the Tree Trunk Triumph subtree.",
+        "zh": { "name": "巨木凯旋", "description": "巨木凯旋 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2192,6 +2316,7 @@
         "positionIndex": 1,
         "name": "Splinters",
         "description": "Trunks have a chance to explode into multiple splinters inflicting monsters hit with bleeding for a portion of the damage.",
+        "zh": { "name": "Splinters", "description": "Trunks 有概率爆炸进入多个 splinters 施加怪物命中使用流血一部分伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -2210,6 +2335,7 @@
         "positionIndex": 2,
         "name": "Treefall",
         "description": "Chance to stun on hit.",
+        "zh": { "name": "Treefall", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2222,6 +2348,7 @@
         "positionIndex": 3,
         "name": "Heavy Trunk",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "重型 Trunk", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2233,6 +2360,7 @@
         "positionIndex": 4,
         "name": "Sequoia",
         "description": "Increases the size of tree trunks.",
+        "zh": { "name": "Sequoia", "description": "提高 tree trunks 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -2244,6 +2372,7 @@
         "positionIndex": 5,
         "name": "Sticking Splinters",
         "description": "Splinters stick to monsters on hit dealing damage over time.",
+        "zh": { "name": "Sticking Splinters", "description": "Splinters 附着至怪物命中时造成伤害随时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2255,6 +2384,7 @@
         "positionIndex": 6,
         "name": "Skillfull Fall",
         "description": "Increases the damage dealt by tree trunk triumph.",
+        "zh": { "name": "Skillfull Fall", "description": "提高造成的伤害巨木凯旋。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2266,6 +2396,7 @@
         "positionIndex": 7,
         "name": "Sudden Treefall",
         "description": "Trunks have a chance to cut down another tree at a nearby enemy.",
+        "zh": { "name": "骤然 Treefall", "description": "Trunks 有概率cut 倒地另一个 tree 附近敌人。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -2274,6 +2405,7 @@
         "positionIndex": 8,
         "name": "Maiming Collision",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "Maiming 天体冲撞", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -2292,6 +2424,7 @@
         "positionIndex": 9,
         "name": "Heavy Fall",
         "description": "Chance on hit to unleash a shockwave in the falling direction, dealing additional damage.",
+        "zh": { "name": "重型 Fall", "description": "命中时有概率释放震荡波坠落 direction，造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2307,6 +2440,7 @@
         "positionIndex": 10,
         "name": "Clear The Way",
         "description": "Decreases movement diminish when using tree trunk triumph.",
+        "zh": { "name": "Clear Way", "description": "使用巨木凯旋时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -2318,6 +2452,7 @@
         "positionIndex": 11,
         "name": "Stack of Trunks",
         "description": "Cut down multiple trees in an arc.",
+        "zh": { "name": "层之 Trunks", "description": "Cut 倒地多个天赋树呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "arcane_skill_damage": 0 },
@@ -2329,6 +2464,7 @@
         "positionIndex": 12,
         "name": "Giant Red Tree",
         "description": "Every third attack summons a gigantic trunk dealing increased damage and inflicting armor break on hit.",
+        "zh": { "name": "巨人 Red Tree", "description": "每第三次攻击召唤物 gigantic trunk 造成提高伤害与施加护甲击破命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "armor_break": 0 },
@@ -2347,6 +2483,7 @@
         "positionIndex": 13,
         "name": "Splitting Fall",
         "description": "Trunks split into multiple wooden discs upon falling that chain from monsters on hit.",
+        "zh": { "name": "分裂 Fall", "description": "Trunks 分裂进入多个 wooden discs upon 坠落连锁从怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_bounces": 0 },
@@ -2358,6 +2495,7 @@
         "positionIndex": 14,
         "name": "Falling Forest",
         "description": "Multiple trunks fall from the sky on target location, falling towards the nearest monster. Tree trunk triumph now has a cooldown.",
+        "zh": { "name": "坠落 Forest", "description": "多个 trunks fall 从天空目标位置，坠落朝向最近的怪物。巨木凯旋有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },

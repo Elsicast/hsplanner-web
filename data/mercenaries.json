@@ -14,6 +14,7 @@
       "name": "Knight",
       "role": "Melee",
       "location": "Act 1 · Town of Inoya",
+      "zh": { "name": "骑士", "role": "近战", "location": "第 1 幕 · 伊诺亚镇" },
       "skills": [
         {
           "id": "warriors_might",
@@ -21,7 +22,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Strength"
+          "description": "Increases the Mercenary's Strength",
+          "zh": { "name": "战士之威", "description": "提高佣兵的力量" }
         },
         {
           "id": "defenses",
@@ -29,7 +31,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Armor"
+          "description": "Increases the Mercenary's Armor",
+          "zh": { "name": "防御姿态", "description": "提高佣兵的护甲" }
         },
         {
           "id": "charge_strike",
@@ -37,7 +40,8 @@
           "kind": "active",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary charges into the closest enemy stunning and damaging all enemies around"
+          "description": "The Mercenary charges into the closest enemy stunning and damaging all enemies around",
+          "zh": { "name": "冲锋打击", "description": "佣兵冲向最近的敌人，眩晕并伤害周围所有敌人" }
         },
         {
           "id": "fatal_strike",
@@ -45,7 +49,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's critical attack damage"
+          "description": "Increases the Mercenary's critical attack damage",
+          "zh": { "name": "致命打击", "description": "提高佣兵的暴击攻击伤害" }
         },
         {
           "id": "spiked_armor",
@@ -53,7 +58,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases damage return from enemy attacks"
+          "description": "Increases damage return from enemy attacks",
+          "zh": { "name": "尖刺护甲", "description": "提高来自敌人攻击的反伤" }
         },
         {
           "id": "taunt",
@@ -61,7 +67,8 @@
           "kind": "active",
           "damageType": null,
           "shared": false,
-          "description": "The Mercenary taunts nearby enemies"
+          "description": "The Mercenary taunts nearby enemies",
+          "zh": { "name": "嘲讽", "description": "佣兵嘲讽附近的敌人" }
         },
         {
           "id": "stacked_rage",
@@ -69,7 +76,8 @@
           "kind": "passive",
           "damageType": "physical",
           "shared": false,
-          "description": "Each attack on an enemy generates a stack of rage. When fully stacked the Mercenary releases a powerful AOE attack that deals damage and breaks enemy armor"
+          "description": "Each attack on an enemy generates a stack of rage. When fully stacked the Mercenary releases a powerful AOE attack that deals damage and breaks enemy armor",
+          "zh": { "name": "怒气积攒", "description": "每次攻击敌人都会积攒一层怒气。攒满后佣兵释放强力的范围攻击，造成伤害并击破敌人护甲" }
         },
         {
           "id": "sword_grip",
@@ -77,7 +85,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases damage done by melee attacks"
+          "description": "Increases damage done by melee attacks",
+          "zh": { "name": "握剑之法", "description": "提高近战攻击造成的伤害" }
         },
         {
           "id": "plated_armor",
@@ -85,7 +94,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases damage reduction from all sources"
+          "description": "Increases damage reduction from all sources",
+          "zh": { "name": "板甲", "description": "提高来自所有来源的伤害减免" }
         },
         {
           "id": "stacked_pain",
@@ -93,7 +103,8 @@
           "kind": "passive",
           "damageType": "physical",
           "shared": false,
-          "description": "Incoming attacks generate stacks of pain. Once fully stacked, release a powerful AOE pulse that damages, knocks back and slows enemies"
+          "description": "Incoming attacks generate stacks of pain. Once fully stacked, release a powerful AOE pulse that damages, knocks back and slows enemies",
+          "zh": { "name": "痛楚积攒", "description": "袭来的攻击会积攒痛楚层数。攒满后释放强力的范围脉冲，伤害、击退并减速敌人" }
         },
         {
           "id": "hulking_rage",
@@ -101,7 +112,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases life per hit from melee attacks"
+          "description": "Increases life per hit from melee attacks",
+          "zh": { "name": "魁梧之怒", "description": "提高近战攻击的每次命中偷取生命" }
         },
         {
           "id": "aura_expert",
@@ -109,7 +121,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "Increases the value of the Mercenary's aura"
+          "description": "Increases the value of the Mercenary's aura",
+          "zh": { "name": "光环专家", "description": "提高佣兵光环的数值" }
         },
         {
           "id": "evasive_tactics",
@@ -117,7 +130,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Dodge chance"
+          "description": "Increases the Mercenary's Dodge chance",
+          "zh": { "name": "闪避战术", "description": "提高佣兵的闪避概率" }
         },
         {
           "id": "commanders_heart",
@@ -125,7 +139,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases health regeneration the less health the Mercenary has"
+          "description": "Increases health regeneration the less health the Mercenary has",
+          "zh": { "name": "统帅之心", "description": "佣兵生命越低，生命回复越高" }
         },
         {
           "id": "blessed_strike",
@@ -133,7 +148,8 @@
           "kind": "active",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary unleashes a powerful long ranged attack"
+          "description": "The Mercenary unleashes a powerful long ranged attack",
+          "zh": { "name": "祝福打击", "description": "佣兵释放一次强力的长距攻击" }
         },
         {
           "id": "brutal_bash",
@@ -141,7 +157,8 @@
           "kind": "passive",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary has a chance on attack to deal additional damage, knock back enemies and slow them"
+          "description": "The Mercenary has a chance on attack to deal additional damage, knock back enemies and slow them",
+          "zh": { "name": "野蛮重击", "description": "佣兵攻击时有概率造成额外伤害，击退并减速敌人" }
         },
         {
           "id": "backlash",
@@ -149,7 +166,8 @@
           "kind": "passive",
           "damageType": "physical",
           "shared": false,
-          "description": "Enemies have a chance to get stunned when attacking the Mercenary"
+          "description": "Enemies have a chance to get stunned when attacking the Mercenary",
+          "zh": { "name": "反震", "description": "敌人攻击佣兵时有概率被眩晕" }
         },
         {
           "id": "protecting_charge",
@@ -157,7 +175,8 @@
           "kind": "active",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary detects enemies who attack the player, charging into them and taunting all enemies nearby"
+          "description": "The Mercenary detects enemies who attack the player, charging into them and taunting all enemies nearby",
+          "zh": { "name": "护主冲锋", "description": "佣兵侦测攻击玩家的敌人，冲向它们并嘲讽附近所有敌人" }
         }
       ]
     },
@@ -166,6 +185,7 @@
       "name": "Archer",
       "role": "Ranged",
       "location": "Act 3 · Village of Mos'Arathim",
+      "zh": { "name": "弓箭手", "role": "远程", "location": "第 3 幕 · 莫斯阿拉辛村" },
       "skills": [
         {
           "id": "trigger_power",
@@ -173,7 +193,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Strength"
+          "description": "Increases the Mercenary's Strength",
+          "zh": { "name": "扳机之力", "description": "提高佣兵的力量" }
         },
         {
           "id": "rapidfire",
@@ -181,7 +202,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Attack Speed"
+          "description": "Increases the Mercenary's Attack Speed",
+          "zh": { "name": "速射", "description": "提高佣兵的攻击速度" }
         },
         {
           "id": "powershot",
@@ -189,7 +211,8 @@
           "kind": "active",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary shoots a powerful piercing shot that stuns enemies on impact"
+          "description": "The Mercenary shoots a powerful piercing shot that stuns enemies on impact",
+          "zh": { "name": "强力射击", "description": "佣兵射出强力的穿透射击，命中时眩晕敌人" }
         },
         {
           "id": "ravens_claw",
@@ -197,7 +220,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Critical Attack Damage and Critical Rate"
+          "description": "Increases the Mercenary's Critical Attack Damage and Critical Rate",
+          "zh": { "name": "渡鸦之爪", "description": "提高佣兵的暴击攻击伤害和暴击概率" }
         },
         {
           "id": "spreadshot",
@@ -205,7 +229,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "The Mercenary has a chance on attack to shoot multiple projectiles with increased damage"
+          "description": "The Mercenary has a chance on attack to shoot multiple projectiles with increased damage",
+          "zh": { "name": "散射", "description": "佣兵攻击时有概率射出多发投射物，造成提高的伤害" }
         },
         {
           "id": "heatseeking_missile",
@@ -213,7 +238,8 @@
           "kind": "active",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary launches a barrage of Heat Seeking Missiles"
+          "description": "The Mercenary launches a barrage of Heat Seeking Missiles",
+          "zh": { "name": "热追踪飞弹", "description": "佣兵发射一连串热追踪飞弹" }
         },
         {
           "id": "explosive_shot",
@@ -221,7 +247,8 @@
           "kind": "passive",
           "damageType": "physical",
           "shared": false,
-          "description": "Each attack on an enemy stacks up. When fully stacked the Mercenary shoots a projectile that explodes on collision"
+          "description": "Each attack on an enemy stacks up. When fully stacked the Mercenary shoots a projectile that explodes on collision",
+          "zh": { "name": "爆炸射击", "description": "每次攻击敌人都会积攒层数。攒满后佣兵射出一枚碰撞时爆炸的投射物" }
         },
         {
           "id": "hawk_eye",
@@ -229,7 +256,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Attack Power"
+          "description": "Increases the Mercenary's Attack Power",
+          "zh": { "name": "鹰眼", "description": "提高佣兵的攻击威力" }
         },
         {
           "id": "piercingshot",
@@ -237,7 +265,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "The Mercenary has a chance on attack to shoot a piercing projectile with increased damage"
+          "description": "The Mercenary has a chance on attack to shoot a piercing projectile with increased damage",
+          "zh": { "name": "穿透射击", "description": "佣兵攻击时有概率射出造成提高伤害的穿透投射物" }
         },
         {
           "id": "ability_expert",
@@ -245,7 +274,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Ability Power"
+          "description": "Increases the Mercenary's Ability Power",
+          "zh": { "name": "技能专家", "description": "提高佣兵的技能威力" }
         },
         {
           "id": "soul_funnel",
@@ -253,7 +283,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "Increases the Mercenary's and Player's life per hit"
+          "description": "Increases the Mercenary's and Player's life per hit",
+          "zh": { "name": "灵魂漏斗", "description": "提高佣兵和玩家的每次命中偷取生命" }
         },
         {
           "id": "aura_expert",
@@ -261,7 +292,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "Increases the value of the Mercenary's aura"
+          "description": "Increases the value of the Mercenary's aura",
+          "zh": { "name": "光环专家", "description": "提高佣兵光环的数值" }
         },
         {
           "id": "shatter_armor",
@@ -269,7 +301,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "The Mercenary has a chance on attack to break enemy resistances"
+          "description": "The Mercenary has a chance on attack to break enemy resistances",
+          "zh": { "name": "碎甲", "description": "佣兵攻击时有概率击破敌人的抗性" }
         },
         {
           "id": "quickslugs",
@@ -277,7 +310,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "The Mercenary has a chance on attack to perform a burstshot"
+          "description": "The Mercenary has a chance on attack to perform a burstshot",
+          "zh": { "name": "快速铅弹", "description": "佣兵攻击时有概率进行爆发射击" }
         },
         {
           "id": "artillery_command",
@@ -285,7 +319,8 @@
           "kind": "active",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary drops a huge bomb onto the nearest enemy which scatters arrows around when hitting the ground"
+          "description": "The Mercenary drops a huge bomb onto the nearest enemy which scatters arrows around when hitting the ground",
+          "zh": { "name": "炮击指挥", "description": "佣兵向最近的敌人投下巨型炸弹，落地时向四周迸射箭矢" }
         },
         {
           "id": "brainfreeze",
@@ -293,7 +328,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "The Mercenary has a chance on attack to deal AOE damage and confuse all enemies impacted"
+          "description": "The Mercenary has a chance on attack to deal AOE damage and confuse all enemies impacted",
+          "zh": { "name": "脑冻结", "description": "佣兵攻击时有概率造成范围伤害并混乱所有被波及的敌人" }
         },
         {
           "id": "burst_of_agility",
@@ -301,7 +337,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "The Mercenary has a chance on attack to give the Player and Mercenary an Attack Speed boost"
+          "description": "The Mercenary has a chance on attack to give the Player and Mercenary an Attack Speed boost",
+          "zh": { "name": "敏捷迸发", "description": "佣兵攻击时有概率为玩家和佣兵提供攻击速度加成" }
         },
         {
           "id": "hunters_trap",
@@ -309,7 +346,8 @@
           "kind": "active",
           "damageType": "physical",
           "shared": false,
-          "description": "The Mercenary throws a trap that hooks nearby enemies in, damaging and stunning them"
+          "description": "The Mercenary throws a trap that hooks nearby enemies in, damaging and stunning them",
+          "zh": { "name": "猎人陷阱", "description": "佣兵投出陷阱，将附近敌人钩入，造成伤害并眩晕" }
         }
       ]
     },
@@ -318,6 +356,7 @@
       "name": "Magister",
       "role": "Mage",
       "location": "Act 6 · Dawn's Chapel",
+      "zh": { "name": "魔导师", "role": "法师", "location": "第 6 幕 · 黎明礼拜堂" },
       "skills": [
         {
           "id": "elemental_intellect",
@@ -325,7 +364,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Elemental Damage"
+          "description": "Increases the Mercenary's Elemental Damage",
+          "zh": { "name": "元素才智", "description": "提高佣兵的元素伤害" }
         },
         {
           "id": "tome_of_power",
@@ -333,7 +373,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": false,
-          "description": "Increases the Mercenary's Ability Power"
+          "description": "Increases the Mercenary's Ability Power",
+          "zh": { "name": "力量法典", "description": "提高佣兵的技能威力" }
         },
         {
           "id": "arcane_blast",
@@ -341,7 +382,8 @@
           "kind": "active",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary blasts the nearest enemy with a powerful Arcane Blast"
+          "description": "The Mercenary blasts the nearest enemy with a powerful Arcane Blast",
+          "zh": { "name": "奥术轰击", "description": "佣兵以强力的奥术轰击轰炸最近的敌人" }
         },
         {
           "id": "arcane_fire",
@@ -349,7 +391,8 @@
           "kind": "passive",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary has a chance on attack to scorch the ground beneath the target"
+          "description": "The Mercenary has a chance on attack to scorch the ground beneath the target",
+          "zh": { "name": "奥术之火", "description": "佣兵攻击时有概率灼烧目标脚下的地面" }
         },
         {
           "id": "replenishing_touch",
@@ -357,7 +400,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "The Mercenary has a chance on attack to regenerate mana for the Player"
+          "description": "The Mercenary has a chance on attack to regenerate mana for the Player",
+          "zh": { "name": "回补之触", "description": "佣兵攻击时有概率为玩家恢复法力" }
         },
         {
           "id": "magic_claw",
@@ -365,7 +409,8 @@
           "kind": "active",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary casts a chain of Arcane that bounces from enemy to enemy dealing damage and lowering their magic resistance"
+          "description": "The Mercenary casts a chain of Arcane that bounces from enemy to enemy dealing damage and lowering their magic resistance",
+          "zh": { "name": "魔法之爪", "description": "佣兵施放一串在敌人间弹跳的奥术魔法，造成伤害并降低其魔法抗性" }
         },
         {
           "id": "arcanes_blessing",
@@ -373,7 +418,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "The Mercenary has a chance on attack to buff Player and Mercenary Ability Power"
+          "description": "The Mercenary has a chance on attack to buff Player and Mercenary Ability Power",
+          "zh": { "name": "奥术祝福", "description": "佣兵攻击时有概率增益玩家和佣兵的技能威力" }
         },
         {
           "id": "cosmic_bolt",
@@ -381,7 +427,8 @@
           "kind": "passive",
           "damageType": "magic",
           "shared": false,
-          "description": "Taking damage stacks up. Once fully stacked the Mercenary casts a Cosmic Bolt towards the nearest enemy"
+          "description": "Taking damage stacks up. Once fully stacked the Mercenary casts a Cosmic Bolt towards the nearest enemy",
+          "zh": { "name": "星辰之矢", "description": "受到伤害会积攒层数。攒满后佣兵朝最近的敌人施放星辰之矢" }
         },
         {
           "id": "arcane_meteor",
@@ -389,7 +436,8 @@
           "kind": "passive",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary has a chance on attack to cast an Arcane Meteor down from the sky damaging enemies it impacts"
+          "description": "The Mercenary has a chance on attack to cast an Arcane Meteor down from the sky damaging enemies it impacts",
+          "zh": { "name": "奥术陨星", "description": "佣兵攻击时有概率从天而降召唤奥术陨星，砸伤被击中的敌人" }
         },
         {
           "id": "manaflux",
@@ -397,7 +445,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "Increases Player maximum mana"
+          "description": "Increases Player maximum mana",
+          "zh": { "name": "法力涌流", "description": "提高玩家最大法力" }
         },
         {
           "id": "spellburn",
@@ -405,7 +454,8 @@
           "kind": "passive",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary has a chance on attack to burn and slow enemies"
+          "description": "The Mercenary has a chance on attack to burn and slow enemies",
+          "zh": { "name": "法术灼烧", "description": "佣兵攻击时有概率灼烧并减速敌人" }
         },
         {
           "id": "aura_expert",
@@ -413,7 +463,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "Increases the value of the Mercenary's aura"
+          "description": "Increases the value of the Mercenary's aura",
+          "zh": { "name": "光环专家", "description": "提高佣兵光环的数值" }
         },
         {
           "id": "reptillian_brain",
@@ -421,7 +472,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "The Mercenary has a chance on attack to reset Mercenary and Player cooldowns and buff their Ability Power"
+          "description": "The Mercenary has a chance on attack to reset Mercenary and Player cooldowns and buff their Ability Power",
+          "zh": { "name": "爬虫脑", "description": "佣兵攻击时有概率重置佣兵和玩家的冷却时间，并增益其技能威力" }
         },
         {
           "id": "arcane_nova",
@@ -429,7 +481,8 @@
           "kind": "passive",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary has a chance on attack to unleash an Arcane Nova dealing damage to enemies"
+          "description": "The Mercenary has a chance on attack to unleash an Arcane Nova dealing damage to enemies",
+          "zh": { "name": "奥术新星", "description": "佣兵攻击时有概率释放奥术新星，对敌人造成伤害" }
         },
         {
           "id": "arcane_link",
@@ -437,7 +490,8 @@
           "kind": "active",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary creates an Arcane Link between the Mercenary and the Player dealing damage to enemies it collides with"
+          "description": "The Mercenary creates an Arcane Link between the Mercenary and the Player dealing damage to enemies it collides with",
+          "zh": { "name": "奥术联结", "description": "佣兵在自身与玩家之间创造奥术联结，对碰撞到的敌人造成伤害" }
         },
         {
           "id": "arcane_barrage",
@@ -445,7 +499,8 @@
           "kind": "passive",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary has a chance on attack to unleash a barrage of arcane bolts"
+          "description": "The Mercenary has a chance on attack to unleash a barrage of arcane bolts",
+          "zh": { "name": "奥术弹幕", "description": "佣兵攻击时有概率释放一阵奥术箭雨" }
         },
         {
           "id": "word_of_protection",
@@ -453,7 +508,8 @@
           "kind": "passive",
           "damageType": null,
           "shared": true,
-          "description": "The Mercenary has a chance on attack to shield the player for a portion of maximum health"
+          "description": "The Mercenary has a chance on attack to shield the player for a portion of maximum health",
+          "zh": { "name": "守护之言", "description": "佣兵攻击时有概率为玩家套上相当于一部分最大生命值的护盾" }
         },
         {
           "id": "arcane_apocalypse",
@@ -461,7 +517,8 @@
           "kind": "active",
           "damageType": "magic",
           "shared": false,
-          "description": "The Mercenary blasts all nearby enemies with arcane explosions dealing damage and slowing them"
+          "description": "The Mercenary blasts all nearby enemies with arcane explosions dealing damage and slowing them",
+          "zh": { "name": "奥术天启", "description": "佣兵以奥术爆炸轰击所有附近敌人，造成伤害并减速" }
         }
       ]
     }

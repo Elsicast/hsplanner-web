@@ -1,4 +1,5 @@
 import type { StatMap } from './game'
+import type { SkillZh } from './zh'
 
 export type SkillKind = 'active' | 'passive' | 'aura' | 'buff'
 
@@ -73,6 +74,7 @@ export interface Skill {
   id: string
   classId: string
   name: string
+  zh?: SkillZh
   kind: SkillKind
   description?: string
   maxRank: number
@@ -126,6 +128,7 @@ export interface SubskillNode {
   id: string
   positionIndex: number
   name: string
+  zh?: SkillZh
   description?: string
   icon?: string
   maxRank: number

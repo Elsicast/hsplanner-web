@@ -5,6 +5,7 @@
     "name": "Slaying Riffs",
     "kind": "active",
     "description": "Drop an amplifier from the sky smashing the ground and send notes towards enemies dealing lightning damage. Dropping an amplifier on another one causes the first one to explode.",
+    "zh": { "name": "杀戮连复段", "description": "从天而降一台音箱砸向地面，并朝敌人弹出音符造成闪电伤害。将音箱投放到另一台音箱上会使先前的音箱爆炸。" },
     "damageType": "lightning",
     "tags": [
       "Cast",
@@ -69,6 +70,7 @@
         "positionIndex": 0,
         "name": "Slaying Riffs",
         "description": "Core of the Slaying Riffs subtree.",
+        "zh": { "name": "杀戮连复段", "description": "杀戮连复段 子树核心。" },
         "maxRank": 1
       },
       {
@@ -76,6 +78,7 @@
         "positionIndex": 1,
         "name": "Multipicking",
         "description": "Increases the projectile amount of slaying riffs.",
+        "zh": { "name": "Multipicking", "description": "提高 杀戮连复段 的投射物数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -87,6 +90,7 @@
         "positionIndex": 2,
         "name": "Heavy Notes",
         "description": "Increases the damage dealt by slaying riffs.",
+        "zh": { "name": "重型 Notes", "description": "提高造成的伤害杀戮连复段。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -98,6 +102,7 @@
         "positionIndex": 3,
         "name": "Breaking The Soundbarrier",
         "description": "Increases the projectile speed of slaying riffs.",
+        "zh": { "name": "击破 Soundbarrier", "description": "提高 杀戮连复段 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -109,6 +114,7 @@
         "positionIndex": 4,
         "name": "Picking Skills",
         "description": "Increases cast rate when using slaying riffs.",
+        "zh": { "name": "Picking 技能", "description": "提高施法速度使用杀戮连复段。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -120,6 +126,7 @@
         "positionIndex": 5,
         "name": "Widened Amplifiers",
         "description": "Increases the size of slaying riffs.",
+        "zh": { "name": "拓宽 Amplifiers", "description": "提高 杀戮连复段 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -131,6 +138,7 @@
         "positionIndex": 6,
         "name": "Stage Agility",
         "description": "Decreases movement diminish when using slaying riffs.",
+        "zh": { "name": "Stage 敏捷身手", "description": "使用杀戮连复段时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -142,6 +150,7 @@
         "positionIndex": 7,
         "name": "Ear Penetration",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "Ear Penetration", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -163,6 +172,7 @@
         "positionIndex": 8,
         "name": "Splitting Sound",
         "description": "Chance for notes to split in two on hit.",
+        "zh": { "name": "分裂音波", "description": "概率使 notes 至分裂双命中时。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -171,6 +181,7 @@
         "positionIndex": 9,
         "name": "Burning Acoustics",
         "description": "Chance to inflict stasis on hit.",
+        "zh": { "name": "燃烧 Acoustics", "description": "命中时有概率施加停滞。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -189,6 +200,7 @@
         "positionIndex": 10,
         "name": "Paralyzing Volume",
         "description": "Increases damage dealt to monsters inflicted with stasis.",
+        "zh": { "name": "Paralyzing Volume", "description": "提高对 怪物施加使用停滞 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stasis": 0 },
@@ -200,6 +212,7 @@
         "positionIndex": 11,
         "name": "Bursting Sound",
         "description": "Unleash a single note exploding into multiple notes on hit dealing increased damage.",
+        "zh": { "name": "Bursting 音波", "description": "释放单次 note exploding 进入多个 notes 命中时造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_count": 0 },
@@ -211,6 +224,7 @@
         "positionIndex": 12,
         "name": "Echoing Sound Wall",
         "description": "Unleash the notes in an arc bouncing off terrain dealing increased damage.",
+        "zh": { "name": "回响音波墙", "description": "释放 notes 呈弧线弹跳关闭地形造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_count": 0 },
@@ -222,6 +236,7 @@
         "positionIndex": 13,
         "name": "Satanic Notes",
         "description": "Pull nearby monsters towards target on hit unleashing a sonar pulse.",
+        "zh": { "name": "Satanic Notes", "description": "牵引附近怪物朝向目标命中时释放 sonar 脉冲。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -241,6 +256,7 @@
         "positionIndex": 14,
         "name": "Symphony of Destruction",
         "description": "Increases the projectile amount and cast radius of slaying riffs.",
+        "zh": { "name": "交响曲之毁灭", "description": "释放巨大震荡波击飞怪物使其造成范围伤害落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_count": 2 },
@@ -255,6 +271,7 @@
     "name": "Insane Riff",
     "kind": "passive",
     "description": "Every fifth spell cast is empowered with increased lightning damage.",
+    "zh": { "name": "疯狂连复段", "description": "每第五次施法会被强化，造成更高的闪电伤害。" },
     "tags": [
       "Passive"
     ],
@@ -285,6 +302,7 @@
     "name": "Visceral Growl",
     "kind": "active",
     "description": "Unleash a visceral growl in a frontal cone dealing lightning damage.",
+    "zh": { "name": "撕裂咆哮", "description": "朝正面锥形范围发出撕裂咆哮，造成闪电伤害。" },
     "damageType": "lightning",
     "tags": [
       "Cast",
@@ -348,6 +366,7 @@
         "positionIndex": 0,
         "name": "Visceral Growl",
         "description": "Core of the Visceral Growl subtree.",
+        "zh": { "name": "撕裂咆哮", "description": "撕裂咆哮 子树核心。" },
         "maxRank": 1
       },
       {
@@ -355,6 +374,7 @@
         "positionIndex": 1,
         "name": "Amplified Sound",
         "description": "Increases the damage dealt by visceral growl.",
+        "zh": { "name": "强化音波", "description": "提高造成的伤害撕裂咆哮。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -366,6 +386,7 @@
         "positionIndex": 2,
         "name": "Vocal Echo",
         "description": "Increases the area of effect radius of visceral growl.",
+        "zh": { "name": "Vocal 回响", "description": "提高 effect radius of 撕裂咆哮 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -377,6 +398,7 @@
         "positionIndex": 3,
         "name": "Octavism",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "Octavism", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -388,6 +410,7 @@
         "positionIndex": 4,
         "name": "Acoustic Piercing",
         "description": "Chance to unleash a chain lightning from target on hit.",
+        "zh": { "name": "Acoustic 穿透", "description": "命中时有概率释放连锁闪电从目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -403,6 +426,7 @@
         "positionIndex": 5,
         "name": "Sound Weight",
         "description": "Chance on hit to knock monsters back dealing increased damage.",
+        "zh": { "name": "音波重量", "description": "命中时有概率击退怪物造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -418,6 +442,7 @@
         "positionIndex": 6,
         "name": "After Growl",
         "description": "Chance on cast to unleash an additional fast and powerful growl.",
+        "zh": { "name": "之后 Growl", "description": "施法时有概率释放额外 fast 与 powerful growl。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -433,6 +458,7 @@
         "positionIndex": 7,
         "name": "Reaching Roar",
         "description": "Increases the range of visceral growl.",
+        "zh": { "name": "延伸 Roar", "description": "提高 撕裂咆哮 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -444,6 +470,7 @@
         "positionIndex": 8,
         "name": "Vocal Therapy",
         "description": "Increases damage dealt to targets inflicted by stasis.",
+        "zh": { "name": "Vocal Therapy", "description": "提高对 目标施加停滞 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stasis": 0 },
@@ -455,6 +482,7 @@
         "positionIndex": 9,
         "name": "Trembling Growl",
         "description": "Chance to unleash piercing notes towards target on hit.",
+        "zh": { "name": "震荡 Growl", "description": "命中时有概率释放穿透 notes 朝向目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -470,6 +498,7 @@
         "positionIndex": 10,
         "name": "Stuttering Frequency",
         "description": "Chance to inflict stasis on hit.",
+        "zh": { "name": "Stuttering Frequency", "description": "命中时有概率施加停滞。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -488,6 +517,7 @@
         "positionIndex": 11,
         "name": "Echo in the Darkness",
         "description": "Unleash a shockwave of visceral growls towards target location.",
+        "zh": { "name": "回响黑暗", "description": "释放震荡波之 visceral growls 朝向目标位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_count": 0 },
@@ -499,6 +529,7 @@
         "positionIndex": 12,
         "name": "Vocal Concentration",
         "description": "Unleash a narrow growl with increased length dealing increased damage and stunning targets on hit.",
+        "zh": { "name": "Vocal 专注", "description": "释放 narrow growl 使用提高 length 造成提高伤害与眩晕目标命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "skill_range": 0 },
@@ -510,6 +541,7 @@
         "positionIndex": 13,
         "name": "Tinnitus",
         "description": "Increases the proc chance of stuttering frequency increasing the damage and tick frequency of stasis.",
+        "zh": { "name": "Tinnitus", "description": "提高 stuttering frequency increasing the damage and tick frequency of stasis 的触发概率。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -534,6 +566,7 @@
         "positionIndex": 14,
         "name": "Unleash The Metal",
         "description": "Increases the area of effect radius of visceral growl knocking monsters back with force dealing increased damage.",
+        "zh": { "name": "释放 Metal", "description": "提高 effect radius of 撕裂咆哮 knocking monsters back with force dealing increased damage 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "area_of_effect": 0 },
@@ -548,6 +581,7 @@
     "name": "Amping Up",
     "kind": "passive",
     "description": "Chance on spellhit or strike to gain a stack of amping up increasing your cast rate for a short duration.",
+    "zh": { "name": "逐渐升温", "description": "法术命中或打击时有概率获得一层升温，短时间内提高你的施法速度。" },
     "tags": [
       "Passive"
     ],
@@ -579,6 +613,7 @@
     "name": "Sacrilegious Symphony",
     "kind": "active",
     "description": "Channel for a brief moment before unleashing a massive area of effect pulse around you dealing lightning damage.",
+    "zh": { "name": "亵渎交响曲", "description": "短暂引导后，在你周围释放大范围的冲击脉冲，造成闪电伤害。" },
     "damageType": "lightning",
     "tags": [
       "Cast",
@@ -643,6 +678,7 @@
         "positionIndex": 0,
         "name": "Sacrilegious Symphony",
         "description": "Core of the Sacrilegious Symphony subtree.",
+        "zh": { "name": "亵渎交响曲", "description": "亵渎交响曲 子树核心。" },
         "maxRank": 1
       },
       {
@@ -650,6 +686,7 @@
         "positionIndex": 1,
         "name": "Marked By The Devil",
         "description": "Increases the damage dealt by sacrilegious symphony.",
+        "zh": { "name": "Marked Devil", "description": "提高造成的伤害亵渎交响曲。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -661,6 +698,7 @@
         "positionIndex": 2,
         "name": "Echoing Riffs",
         "description": "Increases the area of effect radius of sacrilegious symphony.",
+        "zh": { "name": "回响 Riffs", "description": "提高 effect radius of 亵渎交响曲 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -672,6 +710,7 @@
         "positionIndex": 3,
         "name": "Scorching Riffs",
         "description": "Chance to inflict stasis on hit.",
+        "zh": { "name": "灼热 Riffs", "description": "命中时有概率施加停滞。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -690,6 +729,7 @@
         "positionIndex": 4,
         "name": "Blasting Soundwave",
         "description": "Chance to critically hit with increased critical strike damage.",
+        "zh": { "name": "爆破 Soundwave", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -701,6 +741,7 @@
         "positionIndex": 5,
         "name": "Free Will",
         "description": "Increases your movement speed for a short duration when casting sacrilegious symphony.",
+        "zh": { "name": "Free Will", "description": "提高你的移动速度短时间内当施法亵渎交响曲。" },
         "maxRank": 2,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -712,6 +753,7 @@
         "positionIndex": 6,
         "name": "Trembling Symphony",
         "description": "Chance to stun monsters on hit dealing increased damage.",
+        "zh": { "name": "震荡交响曲", "description": "概率眩晕怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -728,6 +770,7 @@
         "positionIndex": 7,
         "name": "Increased Tempo",
         "description": "Decreases the cooldown of sacrilegious Symphony",
+        "zh": { "name": "提高 Tempo", "description": "降低cooldown 之亵渎交响曲。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -739,6 +782,7 @@
         "positionIndex": 8,
         "name": "Symphony of Anxiety",
         "description": "Increases the activation time of sacrilegious symphony.",
+        "zh": { "name": "交响曲之 Anxiety", "description": "提高 亵渎交响曲 的activation 时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "rapid_activation_chance": 0 },
@@ -750,6 +794,7 @@
         "positionIndex": 9,
         "name": "Double the Satisfaction",
         "description": "Chance on cast to deal double damage",
+        "zh": { "name": "双重 Satisfaction", "description": "施法时有概率造成双重伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_cast", "chance": { "base": 0, "perRank": 7 } }
       },
@@ -758,6 +803,7 @@
         "positionIndex": 10,
         "name": "Static Symphony",
         "description": "Increases damage dealt to targets inflicted by stasis",
+        "zh": { "name": "静电交响曲", "description": "提高对 目标施加停滞 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stasis": 0 },
@@ -769,6 +815,7 @@
         "positionIndex": 11,
         "name": "Sacrilegious Encore",
         "description": "Sacrilegious symphony now echoes additional times with increased area of effect radius.",
+        "zh": { "name": "Sacrilegious Encore", "description": "亵渎交响曲 echoes 额外次使用提高范围半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "area_of_effect": 0 },
@@ -780,6 +827,7 @@
         "positionIndex": 12,
         "name": "Symphony of Destruction",
         "description": "Unleash a massive shockwave knocking monsters up causing them to deal area of effect damage when landing.",
+        "zh": { "name": "交响曲之毁灭", "description": "释放巨大震荡波击飞怪物使其造成范围伤害落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -791,6 +839,7 @@
         "positionIndex": 13,
         "name": "Pulling the Crowd",
         "description": "Pull nearby monsters towards you when casting and stunning them for a short while.",
+        "zh": { "name": "牵引群体", "description": "牵引附近怪物朝向你当施法与眩晕它们短距当。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "area_of_effect": 0 },
@@ -802,6 +851,7 @@
         "positionIndex": 14,
         "name": "Spiraling to Insanity",
         "description": "Unleash multiple piercing notes orbitting around you dealing increased damage.",
+        "zh": { "name": "螺旋至 Insanity", "description": "释放多个穿透 notes orbitting 周围你造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_count": 10 },
@@ -816,6 +866,7 @@
     "name": "Satan's Melody",
     "kind": "buff",
     "description": "Gain increased lightning skill damage for a short duration and a chance to unleash guitar picks in an arc on hit.",
+    "zh": { "name": "撒旦的旋律", "description": "短时间内获得提高的闪电技能伤害，并命中时有概率呈弧线弹射吉他拨片。" },
     "tags": [
       "Cast",
       "Active",
@@ -859,6 +910,7 @@
     "name": "Sounds of Silence",
     "kind": "passive",
     "description": "Converts a portion of your intelligence into lightning skill damage.",
+    "zh": { "name": "寂静之声", "description": "将你的一部分智力转化为闪电技能伤害。" },
     "tags": [
       "Passive"
     ],
@@ -889,6 +941,7 @@
     "name": "High dB",
     "kind": "passive",
     "description": "Notes have a chance to unleash a sonar pulse on hit dealing increased lightning damage.",
+    "zh": { "name": "高分贝", "description": "音符命中时有概率释放声呐脉冲，造成提高后的闪电伤害。" },
     "tags": [
       "Passive"
     ],
@@ -920,6 +973,7 @@
     "name": "Progenies of the Great Cataclysm",
     "kind": "active",
     "description": "Summon a massive amplifier playing black metal at high volume sending piercing notes towards nearby monsters bouncing from terrain dealing lightning damage. If you are too far from the amplifier it is pulled back to your position.",
+    "zh": { "name": "大灾变之子", "description": "召唤一台以高音量播放黑金属的巨型音箱，向附近怪物发射穿透音符，音符在地形间反弹并造成闪电伤害。如果你离音箱太远，它会被拉回到你的位置。" },
     "damageType": "lightning",
     "tags": [
       "Cast",
@@ -985,6 +1039,7 @@
         "positionIndex": 0,
         "name": "Progenies of the Great Cataclysm",
         "description": "Core of the Progenies of the Great Cataclysm subtree.",
+        "zh": { "name": "大灾变之子", "description": "大灾变之子 子树核心。" },
         "maxRank": 1
       },
       {
@@ -992,6 +1047,7 @@
         "positionIndex": 1,
         "name": "Black Metals Reach",
         "description": "Increases maximum targets.",
+        "zh": { "name": "黑色 Metals 延伸", "description": "提高最大目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "max_targets": 0 },
@@ -1003,6 +1059,7 @@
         "positionIndex": 2,
         "name": "Stage OSHA Violation",
         "description": "Chance on hit to drop an exploding amplifier from the sky dealing area of effect damage upon landing.",
+        "zh": { "name": "Stage OSHA Violation", "description": "命中时有概率投下 exploding amplifier 从天空造成范围伤害落地时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1018,6 +1075,7 @@
         "positionIndex": 3,
         "name": "Longer Cord",
         "description": "Increases the range of the amplifier.",
+        "zh": { "name": "更久 Cord", "description": "提高 the amplifier 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1029,6 +1087,7 @@
         "positionIndex": 4,
         "name": "The Sound of Darkness",
         "description": "Increases the damage dealt by the amplifier.",
+        "zh": { "name": "音波之黑暗", "description": "提高造成的伤害 amplifier。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1040,6 +1099,7 @@
         "positionIndex": 5,
         "name": "Amping Up The Metal",
         "description": "Decreases the cooldown of progenies of the great cataclysm.",
+        "zh": { "name": "逐渐升温 Metal", "description": "降低cooldown 之大灾变之子。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1051,6 +1111,7 @@
         "positionIndex": 6,
         "name": "Penetrating Soundwaves",
         "description": "Gain a chance to critically hit with increased critical strike damage.",
+        "zh": { "name": "穿透 Soundwaves", "description": "获得概率打出暴击使用提高暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1062,6 +1123,7 @@
         "positionIndex": 7,
         "name": "Broken Electric Cord",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "Broken 电气 Cord", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -1083,6 +1145,7 @@
         "positionIndex": 8,
         "name": "Electric Soundwaves",
         "description": "Chance on hit to unleash a chain lightning dealing additional damage.",
+        "zh": { "name": "电气 Soundwaves", "description": "命中时有概率释放连锁闪电造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1098,6 +1161,7 @@
         "positionIndex": 9,
         "name": "Overheated Amplifier",
         "description": "Chance on amplifier cast to send trails of flames towards random directions.",
+        "zh": { "name": "Overheated Amplifier", "description": "概率在 amplifier 施法至发出轨迹之烈焰朝向随机方向。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1113,6 +1177,7 @@
         "positionIndex": 10,
         "name": "Electrocuting Soundblast",
         "description": "Chance to inflict stasis on hit.",
+        "zh": { "name": "Electrocuting Soundblast", "description": "命中时有概率施加停滞。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -1131,6 +1196,7 @@
         "positionIndex": 11,
         "name": "Increasing Sound Levels",
         "description": "The main amplifier now creates additional smaller amplifiers pulsating and dealing area of effect lightning damage.",
+        "zh": { "name": "提高音波等级", "description": "main amplifier 产生额外更小 amplifiers pulsating 与造成范围之效果闪电伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1148,6 +1214,7 @@
         "positionIndex": 12,
         "name": "Crushing Sound Levels",
         "description": "The amplifier now sends shockwaves instead of notes with a lowered projectile count.",
+        "zh": { "name": "粉碎音波等级", "description": "amplifier 发出冲击波改为之 notes 使用降低投射物数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1159,6 +1226,7 @@
         "positionIndex": 13,
         "name": "Orbital Soundwaves",
         "description": "The amplifier now orbits you with increased cast speed.",
+        "zh": { "name": "环绕 Soundwaves", "description": "amplifier 环绕你使用提高施法速度。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1178,6 +1246,7 @@
         "positionIndex": 14,
         "name": "Tripping Electric Cord",
         "description": "The amplifier cord now deals increased damage to monsters with increased frequency.",
+        "zh": { "name": "Tripping 电气 Cord", "description": "amplifier cord 造成提高伤害至怪物使用提高 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "faster_cast_rate": 0 },
@@ -1192,6 +1261,7 @@
     "name": "Crowd Dive",
     "kind": "active",
     "description": "Charge towards target location knocking monsters up on hit dealing physical damage.",
+    "zh": { "name": "跳台冲撞", "description": "朝目标位置冲锋，命中时击飞怪物，造成物理伤害。" },
     "damageType": "physical",
     "tags": [
       "Attack",
@@ -1261,6 +1331,7 @@
         "positionIndex": 0,
         "name": "Crowd Dive",
         "description": "Core of the Crowd Dive subtree.",
+        "zh": { "name": "跳台冲撞", "description": "跳台冲撞 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1268,6 +1339,7 @@
         "positionIndex": 1,
         "name": "Uppercuts.. So Many Uppercuts",
         "description": "Chance to knock monsters airborne on hit dealing area of effect damage when landing.",
+        "zh": { "name": "Uppercuts。。So Many Uppercuts", "description": "概率击退怪物腾空命中时造成范围伤害落地时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1283,6 +1355,7 @@
         "positionIndex": 2,
         "name": "Headbutt",
         "description": "Increases damage dealt by crowd diver.",
+        "zh": { "name": "Headbutt", "description": "提高 crowd diver 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1294,6 +1367,7 @@
         "positionIndex": 3,
         "name": "Colliding Masses",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "碰撞 Masses", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1312,6 +1386,7 @@
         "positionIndex": 4,
         "name": "Diving Stamina",
         "description": "Decreases cooldown of crowd diver",
+        "zh": { "name": "俯冲 Stamina", "description": "降低cooldown 之群体 diver。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1323,6 +1398,7 @@
         "positionIndex": 5,
         "name": "Get Out The Way",
         "description": "Chance on cast to knock monsters back causing them to take increased damage from terrain.",
+        "zh": { "name": "被 Out Way", "description": "施法时有概率击退怪物使其承受提高伤害从地形。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1338,6 +1414,7 @@
         "positionIndex": 6,
         "name": "Crowd Violation",
         "description": "Stun targets on hit.",
+        "zh": { "name": "群体 Violation", "description": "眩晕目标命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "stun_duration_pct": 0 },
@@ -1349,6 +1426,7 @@
         "positionIndex": 7,
         "name": "Dirty Diver",
         "description": "Chance to deal increased critical strike damage on hit.",
+        "zh": { "name": "Dirty Diver", "description": "命中时有概率造成提高暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1360,6 +1438,7 @@
         "positionIndex": 8,
         "name": "Hammer Dive",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Hammer Dive", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1371,6 +1450,7 @@
         "positionIndex": 9,
         "name": "Quick Dive",
         "description": "Increases the dash speed of crowd diver.",
+        "zh": { "name": "Quick Dive", "description": "提高 crowd diver 的突进速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1382,6 +1462,7 @@
         "positionIndex": 10,
         "name": "Lengthy Dive",
         "description": "Increases the maximum length of crowd diver.",
+        "zh": { "name": "Lengthy Dive", "description": "提高 crowd diver 的最大 length。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1393,6 +1474,7 @@
         "positionIndex": 11,
         "name": "Pit Fighters",
         "description": "Spawn pit fighters to fight by your side for a short duration after impact.",
+        "zh": { "name": "擂台斗士", "description": "生成擂台斗士至 fight 你的 side 短时间内之后冲击。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1410,6 +1492,7 @@
         "positionIndex": 12,
         "name": "Flying Fists",
         "description": "Unleash pummeling fists towards nearby monsters dealing damage with increased critical strike damage.",
+        "zh": { "name": "飞散重拳", "description": "释放 pummeling 重拳朝向附近怪物造成伤害使用提高暴击伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "spell_crit_damage": 0 },
@@ -1421,6 +1504,7 @@
         "positionIndex": 13,
         "name": "iFist",
         "description": "Turn into a fist unleashing an area of effect pulse dealing increased damage on a large radius when hitting terrain.",
+        "zh": { "name": "iFist", "description": "Turn 进入重拳释放范围脉冲造成提高伤害大型半径当命中地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -1432,6 +1516,7 @@
         "positionIndex": 14,
         "name": "Blinkfist Strike",
         "description": "Teleport a short distance falling down from the sky with a massive fist dealing area of effect damage inflicting burning and stunning on hit.",
+        "zh": { "name": "Blinkfist Strike", "description": "Teleport 短距距离坠落倒地从天空使用巨大重拳造成范围伤害施加燃烧与眩晕命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "increased_burning_damage": 0 },
@@ -1456,6 +1541,7 @@
     "name": "Crowd Pummeler",
     "kind": "passive",
     "description": "Chance to unleash notes from monsters on hit dealing physical damage.",
+    "zh": { "name": "人群殴击者", "description": "命中时有概率从怪物身上弹出音符，造成物理伤害。" },
     "damageType": "physical",
     "tags": [
       "Passive"
@@ -1487,6 +1573,7 @@
     "name": "Pyro Technician",
     "kind": "active",
     "description": "Blink into the closest monster to target location unleashing an area of effect attack dealing physical and fire damage.",
+    "zh": { "name": "烟火技师", "description": "闪现至目标位置最近的怪物处，释放范围攻击，造成物理伤害和火焰伤害。" },
     "damageType": "fire",
     "tags": [
       "Attack",
@@ -1570,6 +1657,7 @@
         "positionIndex": 0,
         "name": "Pyro Technician",
         "description": "Core of the Pyro Technician subtree.",
+        "zh": { "name": "烟火技师", "description": "烟火技师 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1577,6 +1665,7 @@
         "positionIndex": 1,
         "name": "Heat To The Flames",
         "description": "Increases physical damage and fire damage dealt by pyro technician",
+        "zh": { "name": "灼热至烈焰", "description": "提高物理伤害与火焰造成的伤害烟火技师。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -1588,6 +1677,7 @@
         "positionIndex": 2,
         "name": "Amping Up The Heat",
         "description": "Gain maximum heat stacks increasing your attack speed per stack.",
+        "zh": { "name": "逐渐升温灼热", "description": "获得最大灼热层数提高你的攻击速度每层。" },
         "maxRank": 5,
         "effects": {
           "base": { "max_skill_stacks": 0, "increased_attack_speed": 0 },
@@ -1599,6 +1689,7 @@
         "positionIndex": 3,
         "name": "Lit On Flames",
         "description": "Chance on hit to inflict burning for a portion of your physical and fire damage.",
+        "zh": { "name": "Lit 烈焰", "description": "命中时有概率施加燃烧一部分你的物理与火焰伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1617,6 +1708,7 @@
         "positionIndex": 4,
         "name": "Fueling The Engine",
         "description": "Increases attack speed when using pyro technician.",
+        "zh": { "name": "Fueling Engine", "description": "提高攻击速度使用烟火技师。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -1628,6 +1720,7 @@
         "positionIndex": 5,
         "name": "Afterflame",
         "description": "Chance on kill to unleash a flaming pulse dealing damage on a large radius around the target.",
+        "zh": { "name": "Afterflame", "description": "击杀时有概率释放燃烧脉冲造成伤害大型半径周围目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_kill",
@@ -1643,6 +1736,7 @@
         "positionIndex": 6,
         "name": "Melting Bones",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Melting 骸骨", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1654,6 +1748,7 @@
         "positionIndex": 7,
         "name": "Wounding Fire",
         "description": "Increases damage dealt to bosses.",
+        "zh": { "name": "致伤火焰", "description": "提高对 首领 造成的伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1665,6 +1760,7 @@
         "positionIndex": 8,
         "name": "Covering The Stage",
         "description": "Increases the area of effect radius of pyro technician.",
+        "zh": { "name": "覆盖 Stage", "description": "提高 effect radius of 烟火技师 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1676,6 +1772,7 @@
         "positionIndex": 9,
         "name": "Pulsating Pyrokinesis",
         "description": "Execute low life monsters below a treshold.",
+        "zh": { "name": "Pulsating Pyrokinesis", "description": "处决低生命怪物低于 treshold。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1687,6 +1784,7 @@
         "positionIndex": 10,
         "name": "Concentrated Scorching",
         "description": "Chance for both physical and fire damage to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "集中灼热", "description": "概率使两者物理与火焰伤害至打出暴击造成提高暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0, "crit_chance": 0 },
@@ -1698,6 +1796,7 @@
         "positionIndex": 11,
         "name": "Rapid Burns",
         "description": "Increases the frequency and damage of inflicted burning.",
+        "zh": { "name": "迅捷燃烧", "description": "提高 inflicted burning 的frequency 与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1722,6 +1821,7 @@
         "positionIndex": 12,
         "name": "Traveling Pyre",
         "description": "Unleash multiple burning tornados on hit dealing additional damage.",
+        "zh": { "name": "飞行 Pyre", "description": "释放多个燃烧龙卷风命中时造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -1733,6 +1833,7 @@
         "positionIndex": 13,
         "name": "Circle of Burning",
         "description": "Chance on attack to hit multiple targets dealing increased damage.",
+        "zh": { "name": "圆环之燃烧", "description": "攻击时有概率命中多个目标造成提高伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1748,6 +1849,7 @@
         "positionIndex": 14,
         "name": "Burning Surface",
         "description": "Scorch the ground below your targets dealing a portion of your damage for a short duration. Effect stacks infinitely.",
+        "zh": { "name": "燃烧 Surface", "description": "Scorch 地面低于你的目标造成一部分你的伤害短时间内。效果层数 infinitely。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "skill_duration": 0 },
@@ -1762,6 +1864,7 @@
     "name": "Adrenaline Momentum",
     "kind": "passive",
     "description": "Chance to gain a stack of adrenaline momentum on hit increasing your movement speed and attack speed.",
+    "zh": { "name": "肾上腺之势", "description": "命中时有概率获得一层肾上腺之势，提高你的移动速度和攻击速度。" },
     "tags": [
       "Passive"
     ],
@@ -1795,6 +1898,7 @@
     "name": "Antisocial Pit Fighter",
     "kind": "passive",
     "description": "Chance to apply increased magic find on kill.",
+    "zh": { "name": "孤僻斗兽士", "description": "击杀时有概率施加提高的魔法发现。" },
     "tags": [
       "Passive"
     ],
@@ -1827,6 +1931,7 @@
     "name": "Headbanger",
     "kind": "active",
     "description": "Every third attack unleashes a headbang dealing area of effect damage.",
+    "zh": { "name": "甩头党", "description": "每第三次攻击会甩头一次，造成范围伤害。" },
     "damageType": "physical",
     "tags": [
       "Attack",
@@ -1898,6 +2003,7 @@
         "positionIndex": 0,
         "name": "Headbanger",
         "description": "Core of the Headbanger subtree.",
+        "zh": { "name": "甩头党", "description": "甩头党 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1905,6 +2011,7 @@
         "positionIndex": 1,
         "name": "Banging Hard",
         "description": "Increases damage dealt by headbanger.",
+        "zh": { "name": "Banging Hard", "description": "提高 甩头党 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1916,6 +2023,7 @@
         "positionIndex": 2,
         "name": "Hair Length",
         "description": "Increases the area of effect radius of headbanger.",
+        "zh": { "name": "Hair Length", "description": "提高 effect radius of 甩头党 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1927,6 +2035,7 @@
         "positionIndex": 3,
         "name": "Whipping Faster",
         "description": "Increases attack speed when using headbanger.",
+        "zh": { "name": "Whipping 更快", "description": "提高攻击速度使用甩头党。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -1938,6 +2047,7 @@
         "positionIndex": 4,
         "name": "Hair Clipping",
         "description": "Chance on hit to deal increased damage and stun the target.",
+        "zh": { "name": "Hair Clipping", "description": "命中时有概率造成提高伤害与眩晕目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1954,6 +2064,7 @@
         "positionIndex": 5,
         "name": "Taking Advantage",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "承受优势", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1965,6 +2076,7 @@
         "positionIndex": 6,
         "name": "Crushing Hair Sweep",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "粉碎 Hair Sweep", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1983,6 +2095,7 @@
         "positionIndex": 7,
         "name": "Ripping Hair",
         "description": "Chance to inflict bleed on hit.",
+        "zh": { "name": "Ripping Hair", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -2001,6 +2114,7 @@
         "positionIndex": 8,
         "name": "Vile Slash",
         "description": "Chance to deal increased critical strike damage on hit.",
+        "zh": { "name": "邪恶斩击", "description": "命中时有概率造成提高暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0, "crit_chance": 0 },
@@ -2012,6 +2126,7 @@
         "positionIndex": 9,
         "name": "Smacking Whip",
         "description": "Chance on hit to deal double damage.",
+        "zh": { "name": "Smacking Whip", "description": "命中时有概率造成双重伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -2020,6 +2135,7 @@
         "positionIndex": 10,
         "name": "Rupturing Headbang",
         "description": "Chance on hit to deal increased damage to bleeding targets and increase the frequency of bleeding.",
+        "zh": { "name": "破裂 Headbang", "description": "命中时有概率造成提高伤害至流血目标与提高 frequency 之流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_frequency": 0 },
@@ -2040,6 +2156,7 @@
         "positionIndex": 11,
         "name": "Hair Whipper",
         "description": "Headbang with every attack dealing a portion of the damage.",
+        "zh": { "name": "Hair Whipper", "description": "Headbang 使用每攻击造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -2051,6 +2168,7 @@
         "positionIndex": 12,
         "name": "Hair Tornado",
         "description": "Unleash a tornado of hair dealing increased damage.",
+        "zh": { "name": "Hair 龙卷风", "description": "释放龙卷风之 hair 造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -2062,6 +2180,7 @@
         "positionIndex": 13,
         "name": "Slapping Around",
         "description": "Knock monsters back when headbanging causing them to take increased damage when hitting terrain.",
+        "zh": { "name": "Slapping 周围", "description": "击退怪物当 headbanging 使其承受提高伤害当命中地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "increased_attack_speed": 0 },
@@ -2076,6 +2195,7 @@
         "positionIndex": 14,
         "name": "Hemorrhaging Hairbang",
         "description": "Headbang now stacks bleeding with increased damage.",
+        "zh": { "name": "Hemorrhaging Hairbang", "description": "Headbang 层数流血使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -2105,6 +2225,7 @@
     "name": "Craving For Another Killing",
     "kind": "buff",
     "description": "Increases your attack damage, life per hit and attack speed for a short duration.",
+    "zh": { "name": "渴求再杀", "description": "短时间内提高你的攻击伤害、每次命中偷取的生命和攻击速度。" },
     "tags": [
       "Cast",
       "Active",
@@ -2150,6 +2271,7 @@
     "name": "Craving For Attention",
     "kind": "passive",
     "description": "Gain fire skill damage for a portion of your total enhanced damage.",
+    "zh": { "name": "渴求关注", "description": "根据你总强化伤害的一部分获得火焰技能伤害。" },
     "tags": [
       "Passive"
     ],
@@ -2180,6 +2302,7 @@
     "name": "Moshpit Massacre",
     "kind": "active",
     "description": "Summon a death metal crowd to fight monsters within the area radius draining a portion of your maximum mana over time dealing physical damage.",
+    "zh": { "name": "舞池屠杀", "description": "召唤一支死亡金属人群，攻击区域内怪物并造成物理伤害，持续消耗你的一部分最大法力。" },
     "damageType": "physical",
     "tags": [
       "Cast",
@@ -2258,6 +2381,7 @@
         "positionIndex": 0,
         "name": "Moshpit Massacre",
         "description": "Core of the Moshpit Massacre subtree.",
+        "zh": { "name": "舞池屠杀", "description": "舞池屠杀 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2265,6 +2389,7 @@
         "positionIndex": 1,
         "name": "Pit Crowd",
         "description": "Increases the amount of fighters in the pit",
+        "zh": { "name": "擂台群体", "description": "提高 fighters in the pit 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_max_amount": 0 },
@@ -2276,6 +2401,7 @@
         "positionIndex": 2,
         "name": "Moshpit Mania",
         "description": "Increases the damage dealt by pit fighters",
+        "zh": { "name": "Moshpit Mania", "description": "提高造成的伤害擂台斗士。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2287,6 +2413,7 @@
         "positionIndex": 3,
         "name": "Amping Up The Crowd",
         "description": "Increases the attack speed of pit fighters.",
+        "zh": { "name": "逐渐升温群体", "description": "提高 pit fighters 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0 },
@@ -2298,6 +2425,7 @@
         "positionIndex": 4,
         "name": "Pit Fatality",
         "description": "Pit fighters execute low life targets",
+        "zh": { "name": "擂台 Fatality", "description": "擂台斗士处决低生命目标" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -2309,6 +2437,7 @@
         "positionIndex": 5,
         "name": "MAKE IT BIGGER!!",
         "description": "Increases the area of effect radius of the pit.",
+        "zh": { "name": "MAKE 更大!!", "description": "提高 effect radius of the pit 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2320,6 +2449,7 @@
         "positionIndex": 6,
         "name": "Broken Noses",
         "description": "Pit fighters have a chance to inflict bleed on hit.",
+        "zh": { "name": "Broken Noses", "description": "Pit fighters 有概率施加流血命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -2338,6 +2468,7 @@
         "positionIndex": 7,
         "name": "Pit Full Of Injuries",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "擂台 Full 之 Injuries", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -2349,6 +2480,7 @@
         "positionIndex": 8,
         "name": "Going Crazy",
         "description": "Increases the movement speed of the pit fighters",
+        "zh": { "name": "Going Crazy", "description": "提高 the pit fighters 的移动速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_movement_speed": 0 },
@@ -2360,6 +2492,7 @@
         "positionIndex": 9,
         "name": "Slamming Around",
         "description": "Increases the critical strike chance and damage of the pit fighters.",
+        "zh": { "name": "猛击周围", "description": "提高 the pit fighters 的暴击概率与伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -2371,6 +2504,7 @@
         "positionIndex": 10,
         "name": "Brutal Intimacy",
         "description": "Decreases the area of effect radius of the pit.",
+        "zh": { "name": "Brutal Intimacy", "description": "降低范围半径之擂台。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2382,6 +2516,7 @@
         "positionIndex": 11,
         "name": "Follow The Lead",
         "description": "The pit provides increased attack speed, movement speed and damage to the pit fighters.",
+        "zh": { "name": "跟随 Lead", "description": "擂台提供提高攻击速度，移动速度与伤害至擂台斗士。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -2401,6 +2536,7 @@
         "positionIndex": 12,
         "name": "Pitfighting Colossus",
         "description": "Only spawn one pit fighter with increased stats scaling off of the total amount of pit fighters.",
+        "zh": { "name": "Pitfighting 巨像", "description": "仅生成一次擂台斗士使用提高 stats 加成关闭之总数量之擂台斗士。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_summon_count": 100 },
@@ -2412,6 +2548,7 @@
         "positionIndex": 13,
         "name": "Beach Balls",
         "description": "Add multiple flying beach balls into the pit bouncing off of its edges dealing additional damage.",
+        "zh": { "name": "Beach 球", "description": "附加多个飞散 beach 球进入擂台弹跳关闭之锋刃造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -2423,6 +2560,7 @@
         "positionIndex": 14,
         "name": "Total Anarchy",
         "description": "Spawn pit fighters without the pits limitations following you around with a portion of their stats.",
+        "zh": { "name": "总 Anarchy", "description": "生成擂台斗士 without 擂台 limitations following 你周围使用一部分 their stats。" },
         "maxRank": 3,
         "effects": {
           "base": { "summon_stats_pct": 0 },

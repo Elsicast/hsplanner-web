@@ -1,6 +1,7 @@
 {
   "id": "plague_doctor",
   "name": "Plague Doctor",
+  "zh": { "name": "瘟疫医生" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

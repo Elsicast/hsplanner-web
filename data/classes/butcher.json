@@ -1,6 +1,7 @@
 {
   "id": "butcher",
   "name": "Butcher",
+  "zh": { "name": "屠夫" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

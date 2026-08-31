@@ -1,6 +1,7 @@
 {
   "id": "jotunn",
   "name": "Jotunn",
+  "zh": { "name": "约顿巨人" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

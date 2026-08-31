@@ -5,6 +5,7 @@
     "name": "Eagle Eye",
     "kind": "passive",
     "description": "Increases your attack damage, additional physical damage and critical strike damage when using ranged weapons.",
+    "zh": { "name": "鹰眼", "description": "使用远程武器时，提高你的攻击伤害、额外物理伤害和暴击伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [{ "rank": 1 }],
@@ -22,6 +23,7 @@
     "name": "Trigger Finger",
     "kind": "active",
     "description": "Fire a burst shot dealing physical damage.",
+    "zh": { "name": "扣响扳机", "description": "射出一记爆发射击，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Ranged", "Projectile", "Strike", "Physical"],
     "movementDuringUse": 65,
@@ -47,6 +49,7 @@
         "positionIndex": 0,
         "name": "Trigger Finger",
         "description": "Core of the Trigger Finger subtree.",
+        "zh": { "name": "扣响扳机", "description": "扣响扳机 子树核心。" },
         "maxRank": 1
       },
       {
@@ -54,6 +57,7 @@
         "positionIndex": 1,
         "name": "Slick Fingers",
         "description": "Increases attack rating when using trigger finger.",
+        "zh": { "name": "Slick Fingers", "description": "提高攻击命中使用扣响扳机。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -65,6 +69,7 @@
         "positionIndex": 2,
         "name": "Triggerheavy",
         "description": "Increases damage dealt by trigger finger.",
+        "zh": { "name": "Triggerheavy", "description": "提高 扣响扳机 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -76,6 +81,7 @@
         "positionIndex": 3,
         "name": "Gunslinging Slayer",
         "description": "Increases the amount of projectiles fired by trigger finger.",
+        "zh": { "name": "Gunslinging 杀手", "description": "提高 projectiles fired by 扣响扳机 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -87,6 +93,7 @@
         "positionIndex": 4,
         "name": "Rapid Gunslinger",
         "description": "Increases projectile speed.",
+        "zh": { "name": "迅捷 Gunslinger", "description": "提高投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -98,6 +105,7 @@
         "positionIndex": 5,
         "name": "Burning Bullethole",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "燃烧 Bullethole", "description": "命中时有概率施加燃烧。" },
         "maxRank": 2,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -116,6 +124,7 @@
         "positionIndex": 6,
         "name": "Executing Gunshot",
         "description": "Execute low life monsters.",
+        "zh": { "name": "Executing Gunshot", "description": "处决低生命的怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -127,6 +136,7 @@
         "positionIndex": 7,
         "name": "Bullet Fragmentation",
         "description": "Chance to fragment bullets on hit causing pieces to ricochet around the target.",
+        "zh": { "name": "子弹 Fragmentation", "description": "概率碎片子弹命中时使 pieces 至 ricochet 周围目标。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -135,6 +145,7 @@
         "positionIndex": 8,
         "name": "Brand New Cavity",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "Brand New Cavity", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -153,6 +164,7 @@
         "positionIndex": 9,
         "name": "Supersonic Bullets",
         "description": "Increases critical strike damage when using trigger finger.",
+        "zh": { "name": "Supersonic 子弹", "description": "提高暴击伤害使用扣响扳机。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -164,6 +176,7 @@
         "positionIndex": 10,
         "name": "Gasoline Covered Ammunition",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Gasoline Covered Ammunition", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -175,6 +188,7 @@
         "positionIndex": 11,
         "name": "Piercing Mayhem",
         "description": "Projectiles now pierce and bounce off of terrain dealing increased damage.",
+        "zh": { "name": "穿透 Mayhem", "description": "投射物穿透与弹射关闭之地形造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -186,6 +200,7 @@
         "positionIndex": 12,
         "name": "Fingertapped Killshot",
         "description": "Fire a single projectile with significantly increased range and power dealing multiplied damage. Trigger Finger now has a small cooldown.",
+        "zh": { "name": "Fingertapped Killshot", "description": "火焰单次投射物使用显著提高范围与力量造成 multiplied 伤害。扣响扳机有小型 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -205,6 +220,7 @@
         "positionIndex": 13,
         "name": "It's Raining Bullets",
         "description": "Fire a burst of projectiles traveling through air and landing on the target location dealing area of effect damage.",
+        "zh": { "name": "的洒落子弹", "description": "火焰迸发之投射物飞行穿过空中与着陆目标位置造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -224,6 +240,7 @@
         "positionIndex": 14,
         "name": "Shredder Slugs",
         "description": "Fire small shredders dealing damage over time and inflicting bleeding. The shredders projectile speed slows down on impact.",
+        "zh": { "name": "绞碎机铅弹", "description": "火焰小型绞碎机造成伤害随时间与施加流血。绞碎机投射物速度减速倒地命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "increased_bleeding_damage": 0 },
@@ -248,6 +265,7 @@
     "name": "Execute",
     "kind": "passive",
     "description": "Deal extra attack damage to monsters below 30% Life.",
+    "zh": { "name": "处决", "description": "对生命低于 30% 的怪物造成额外攻击伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [{ "rank": 1 }],
@@ -265,6 +283,7 @@
     "name": "Bullet Hell",
     "kind": "active",
     "description": "Fire a barrage of bullets towards the aimed direction dealing physical damage.",
+    "zh": { "name": "弹幕地狱", "description": "朝瞄准方向倾泻弹雨，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Ranged", "Projectile", "Strike", "Physical"],
     "movementDuringUse": 65,
@@ -290,6 +309,7 @@
         "positionIndex": 0,
         "name": "Bullet Hell",
         "description": "Core of the Bullet Hell subtree.",
+        "zh": { "name": "弹幕地狱", "description": "弹幕地狱 子树核心。" },
         "maxRank": 1
       },
       {
@@ -297,6 +317,7 @@
         "positionIndex": 1,
         "name": "Hellflame Bullets",
         "description": "Increases damage dealt by bullet hell.",
+        "zh": { "name": "Hellflame 子弹", "description": "提高 弹幕地狱 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -308,6 +329,7 @@
         "positionIndex": 2,
         "name": "More Bullets!",
         "description": "Increases the amount of projectiles fired by bullet hell.",
+        "zh": { "name": "更多子弹!", "description": "提高 projectiles fired by 弹幕地狱 的数量。" },
         "maxRank": 8,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -319,6 +341,7 @@
         "positionIndex": 3,
         "name": "Slipping Triggerfinger",
         "description": "Chance on attack to fire an additional wave of bullets.",
+        "zh": { "name": "Slipping Triggerfinger", "description": "攻击时有概率火焰额外波之子弹。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -334,6 +357,7 @@
         "positionIndex": 4,
         "name": "Steady Gunhold",
         "description": "Increases attack rating when using bullet hell.",
+        "zh": { "name": "Steady Gunhold", "description": "提高攻击命中使用弹幕地狱。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -345,6 +369,7 @@
         "positionIndex": 5,
         "name": "Heavy Bullet Impact",
         "description": "Chance to knock monsters back on hit stunning them.",
+        "zh": { "name": "重型子弹冲击", "description": "概率击退怪物命中时眩晕它们。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -357,6 +382,7 @@
         "positionIndex": 6,
         "name": "Barrel Maintenance",
         "description": "Increases projectile speed.",
+        "zh": { "name": "桶 Maintenance", "description": "提高投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -368,6 +394,7 @@
         "positionIndex": 7,
         "name": "Higher Caliber",
         "description": "Increases the size of bullet hell projectiles.",
+        "zh": { "name": "Higher Caliber", "description": "提高 弹幕地狱 projectiles 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -379,6 +406,7 @@
         "positionIndex": 8,
         "name": "Blasting Gunshot",
         "description": "Increases critical strike damage when using bullet hell.",
+        "zh": { "name": "爆破 Gunshot", "description": "提高暴击伤害使用弹幕地狱。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -390,6 +418,7 @@
         "positionIndex": 9,
         "name": "Swift Rounds",
         "description": "Decreased movement diminish when using bullet hell.",
+        "zh": { "name": "迅捷 Rounds", "description": "降低移动衰减使用弹幕地狱。" },
         "maxRank": 3,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -401,6 +430,7 @@
         "positionIndex": 10,
         "name": "Abusive Tactics",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Abusive 战术", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -412,6 +442,7 @@
         "positionIndex": 11,
         "name": "Bullet Storm",
         "description": "Fire a circle of orbitting bullets traveling forward.",
+        "zh": { "name": "子弹风暴", "description": "火焰圆环之 orbitting 子弹飞行前方。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -423,6 +454,7 @@
         "positionIndex": 12,
         "name": "Nowhere to Hide",
         "description": "Fire additional projectiles in a wider radius.",
+        "zh": { "name": "无处至藏身", "description": "发射额外投射物更宽半径。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -442,6 +474,7 @@
         "positionIndex": 13,
         "name": "Demon´s Hurricane",
         "description": "Spin around firing trails of bullets into random directions.",
+        "zh": { "name": "恶魔的飓风", "description": "旋转周围 firing 轨迹之子弹进入随机方向。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -461,6 +494,7 @@
         "positionIndex": 14,
         "name": "Gunpowder",
         "description": "Bullets knock monsters back with increased power dealing increased damage and stunning monsters when they collide with terrain.",
+        "zh": { "name": "Gunpowder", "description": "子弹击退怪物使用提高力量造成提高伤害与眩晕怪物当它们 collide 使用地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -475,6 +509,7 @@
     "name": "Concentration Aura",
     "kind": "aura",
     "description": "When active, increases your and your party members attack rating.",
+    "zh": { "name": "专注光环", "description": "激活时，提高你和队友的攻击命中。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [{ "rank": 1 }],
@@ -492,6 +527,7 @@
     "name": "Possessed Bullet",
     "kind": "active",
     "description": "Fire a satanic bullet possessed by darkness which explodes into multiple bullets on impact dealing physical damage.",
+    "zh": { "name": "附魔弹", "description": "射出一枚被黑暗附体的撒旦子弹，命中时分裂成多发子弹，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Ranged", "Projectile", "Strike", "Physical"],
     "movementDuringUse": 65,
@@ -517,6 +553,7 @@
         "positionIndex": 0,
         "name": "Possessed Bullet",
         "description": "Core of the Possessed Bullet subtree.",
+        "zh": { "name": "附魔弹", "description": "附魔弹 子树核心。" },
         "maxRank": 1
       },
       {
@@ -524,6 +561,7 @@
         "positionIndex": 1,
         "name": "Secondary Haunting",
         "description": "Chance on attack to fire an additional bullet.",
+        "zh": { "name": "Secondary Haunting", "description": "攻击时有概率火焰额外子弹。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -539,6 +577,7 @@
         "positionIndex": 2,
         "name": "Spirits Within Rounds",
         "description": "Increases the amount of projectiles released by the initial hit.",
+        "zh": { "name": "灵魂之内 Rounds", "description": "提高 projectiles released by the initial hit 的数量。" },
         "maxRank": 8,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -550,6 +589,7 @@
         "positionIndex": 3,
         "name": "Exorcism",
         "description": "Increases damage dealt by possessed bullet.",
+        "zh": { "name": "Exorcism", "description": "提高 附魔弹 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -561,6 +601,7 @@
         "positionIndex": 4,
         "name": "Hemorrhaging Possession",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Hemorrhaging Possession", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -579,6 +620,7 @@
         "positionIndex": 5,
         "name": "Blood Ripples",
         "description": "Chance to unleash blood ripples on hit dealing area of effect damage.",
+        "zh": { "name": "鲜血涟漪", "description": "概率释放鲜血涟漪命中时造成范围伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -587,6 +629,7 @@
         "positionIndex": 6,
         "name": "Bloodlusted Bullet",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Bloodlusted 子弹", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -598,6 +641,7 @@
         "positionIndex": 7,
         "name": "Longlasting Barrel",
         "description": "Increases projectile speed.",
+        "zh": { "name": "Longlasting 桶", "description": "提高投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -609,6 +653,7 @@
         "positionIndex": 8,
         "name": "The Demon Within",
         "description": "Chance to unleash additional bullets after initial hit.",
+        "zh": { "name": "恶魔之内", "description": "概率释放额外子弹之后 initial 命中。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -624,6 +669,7 @@
         "positionIndex": 9,
         "name": "Stop Resisting",
         "description": "Inflicts armor break on hit.",
+        "zh": { "name": "Stop Resisting", "description": "命中时施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -642,6 +688,7 @@
         "positionIndex": 10,
         "name": "Leeching Demon",
         "description": "Increases possessed bullet damage to bosses.",
+        "zh": { "name": "吸取恶魔", "description": "提高附魔弹伤害至首领。" },
         "maxRank": 2,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -653,6 +700,7 @@
         "positionIndex": 11,
         "name": "Ghostwhirl",
         "description": "Projectiles now swirl around the target on a small radius.",
+        "zh": { "name": "Ghostwhirl", "description": "投射物 swirl 周围目标小型半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -664,6 +712,7 @@
         "positionIndex": 12,
         "name": "Seeking Host",
         "description": "Possessed bullets now return to the target after a short duration.",
+        "zh": { "name": "搜寻 Host", "description": "Possessed 子弹反伤至目标之后短距持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -675,6 +724,7 @@
         "positionIndex": 13,
         "name": "Haunting",
         "description": "Bullets now haunt monsters, slowing them and exploding after a short duration, dealing area of effect damage.",
+        "zh": { "name": "Haunting", "description": "子弹 haunt 怪物，减速它们与 exploding 之后短距持续时间，造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -686,6 +736,7 @@
         "positionIndex": 14,
         "name": "Malignance",
         "description": "Send multiple homing ghosts towards the target dealing damage to monsters on their path.",
+        "zh": { "name": "恶意", "description": "发出多个追踪 ghosts 朝向目标造成伤害至怪物路径上的。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -700,6 +751,7 @@
     "name": "Shredder Trap",
     "kind": "active",
     "description": "Throw a shredder on the ground spinning with deadly speed dealing physical damage.",
+    "zh": { "name": "绞碎陷阱", "description": "向地面投掷一台高速旋转的绞碎机，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Ranged", "Projectile", "Physical"],
     "movementDuringUse": 85,
@@ -727,6 +779,7 @@
         "positionIndex": 0,
         "name": "Shredder Trap",
         "description": "Core of the Shredder Trap subtree.",
+        "zh": { "name": "绞碎陷阱", "description": "绞碎陷阱 子树核心。" },
         "maxRank": 1
       },
       {
@@ -734,6 +787,7 @@
         "positionIndex": 1,
         "name": "Sharp Edged Shredders",
         "description": "Increases the damage dealt by shredder trap.",
+        "zh": { "name": "尖锐 Edged 绞碎机", "description": "提高造成的伤害绞碎陷阱。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -745,6 +799,7 @@
         "positionIndex": 2,
         "name": "Blood Hungry Blades",
         "description": "Chance for shredder trap to grow larger on hit.",
+        "zh": { "name": "鲜血 Hungry 刀刃", "description": "概率使绞碎陷阱至 grow 更大命中时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -760,6 +815,7 @@
         "positionIndex": 3,
         "name": "Bits and Pieces",
         "description": "Chance to unleash smaller flying shredders on hit dealing additional damage.",
+        "zh": { "name": "Bits 与 Pieces", "description": "概率释放更小飞散绞碎机命中时造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -775,6 +831,7 @@
         "positionIndex": 4,
         "name": "Ripping Shredderblade",
         "description": "Inflicts bleeding on hit.",
+        "zh": { "name": "Ripping Shredderblade", "description": "命中时施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -793,6 +850,7 @@
         "positionIndex": 5,
         "name": "Slayer´s Adrenaline",
         "description": "Decreases movement diminish when using shredder trap.",
+        "zh": { "name": "杀手的 Adrenaline", "description": "使用绞碎陷阱时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -804,6 +862,7 @@
         "positionIndex": 6,
         "name": "Less is More",
         "description": "Decreases mana cost when using shredder trap.",
+        "zh": { "name": "较少更多", "description": "使用绞碎陷阱时降低法力消耗。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -815,6 +874,7 @@
         "positionIndex": 7,
         "name": "Forging Hands",
         "description": "Gain increased critical strike chance and critical chance damage.",
+        "zh": { "name": "Forging Hands", "description": "获得提高暴击概率与暴击概率伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -826,6 +886,7 @@
         "positionIndex": 8,
         "name": "Cutting Power",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "切割力量", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -844,6 +905,7 @@
         "positionIndex": 9,
         "name": "Slay the Wounded",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Slay Wounded", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -855,6 +917,7 @@
         "positionIndex": 10,
         "name": "Bigger and Sharper Blades",
         "description": "Increases the size of shredders.",
+        "zh": { "name": "更大与 Sharper 刀刃", "description": "提高 shredders 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -866,6 +929,7 @@
         "positionIndex": 11,
         "name": "Comeback with a Cut",
         "description": "Shredders now home back to you after a short period dealing damage on the way.",
+        "zh": { "name": "Comeback 使用 Cut", "description": "绞碎机 home 回至你之后短距期间造成伤害 way。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -877,6 +941,7 @@
         "positionIndex": 12,
         "name": "Woodshop",
         "description": "Throw multiple smaller shredders at once. Shredder trap now has a cooldown.",
+        "zh": { "name": "Woodshop", "description": "投掷多个更小绞碎机 once。绞碎陷阱有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -888,6 +953,7 @@
         "positionIndex": 13,
         "name": "Circular Cutting",
         "description": "Unleash multiple orbiting shredders around you.",
+        "zh": { "name": "Circular 切割", "description": "释放多个环绕绞碎机周围你。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 1, "physical_skill_damage": 0 },
@@ -899,6 +965,7 @@
         "positionIndex": 14,
         "name": "Gigashredder",
         "description": "Unleash a big shredder that slowly homes towards the closest monster on range. You can now only spawn one shredder.",
+        "zh": { "name": "Gigashredder", "description": "释放核心绞碎机缓慢 homes 朝向最近的怪物范围。你可以仅生成一次绞碎机。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -913,6 +980,7 @@
     "name": "Demon's Presence",
     "kind": "buff",
     "description": "Temporarily increase your attack speed and attack damage.",
+    "zh": { "name": "恶魔之息", "description": "临时提高你的攻击速度和攻击伤害。" },
     "tags": ["Cast", "Active", "Buff"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -935,6 +1003,7 @@
     "name": "Absolute Mayhem",
     "kind": "active",
     "description": "Harness the power of your inner demon and fire multiple massive bullets in a line dealing physical damage.",
+    "zh": { "name": "彻底疯狂", "description": "唤起你内心恶魔的力量，直线射出多发巨型子弹，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Ranged", "Projectile", "Strike", "Physical"],
     "movementDuringUse": 65,
@@ -961,6 +1030,7 @@
         "positionIndex": 0,
         "name": "Absolute Mayhem",
         "description": "Core of the Absolute Mayhem subtree.",
+        "zh": { "name": "彻底疯狂", "description": "彻底疯狂 子树核心。" },
         "maxRank": 1
       },
       {
@@ -968,6 +1038,7 @@
         "positionIndex": 1,
         "name": "Mayhem Up!",
         "description": "Increases the amount of bullets fired with absolute mayhem.",
+        "zh": { "name": "Mayhem 上!", "description": "提高 bullets fired with 彻底疯狂 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -979,6 +1050,7 @@
         "positionIndex": 2,
         "name": "Absolute Carnage",
         "description": "Increases damage dealt by absolute mayhem.",
+        "zh": { "name": "绝对杀戮", "description": "提高 彻底疯狂 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -990,6 +1062,7 @@
         "positionIndex": 3,
         "name": "Colossal Barrel",
         "description": "Increases the projectile speed of absolute mayhem bullets.",
+        "zh": { "name": "巨型桶", "description": "提高 彻底疯狂 bullets 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1001,6 +1074,7 @@
         "positionIndex": 4,
         "name": "Stocked Capacity",
         "description": "Decreases the cooldown of absolute mayhem.",
+        "zh": { "name": "Stocked Capacity", "description": "降低cooldown 之彻底疯狂。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1012,6 +1086,7 @@
         "positionIndex": 5,
         "name": "Hypothermic Rounds",
         "description": "Chance to inflict freeze on hit.",
+        "zh": { "name": "Hypothermic Rounds", "description": "命中时有概率施加冻结。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1024,6 +1099,7 @@
         "positionIndex": 6,
         "name": "Bonehit",
         "description": "Chance to knock monsters back dealing increased damage.",
+        "zh": { "name": "Bonehit", "description": "概率击退怪物造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1039,6 +1115,7 @@
         "positionIndex": 7,
         "name": "Explosive Empowered Rounds",
         "description": "Chance for bullets to explode and fragment on hit unleashing shrapnel around the target.",
+        "zh": { "name": "爆炸强化 Rounds", "description": "概率使子弹至爆炸与碎片命中时释放弹片周围目标。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -1047,6 +1124,7 @@
         "positionIndex": 8,
         "name": "Fear the Gun",
         "description": "Increases critical strike damage dealt by absolute mayhem.",
+        "zh": { "name": "Fear 枪械", "description": "提高暴击伤害 dealt 彻底疯狂。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1058,6 +1136,7 @@
         "positionIndex": 9,
         "name": "Bicep Curls",
         "description": "Decreases movement diminish when using absolute mayhem.",
+        "zh": { "name": "Bicep Curls", "description": "使用彻底疯狂时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1069,6 +1148,7 @@
         "positionIndex": 10,
         "name": "Frostbiting Bullets",
         "description": "Increases damage to freezing targets.",
+        "zh": { "name": "Frostbiting 子弹", "description": "提高伤害至冰冻目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -1080,6 +1160,7 @@
         "positionIndex": 11,
         "name": "Impact Shrapnel",
         "description": "Bullets now break into fragments traveling in an arc behind the target dealing area of effect damage.",
+        "zh": { "name": "冲击弹片", "description": "子弹击破进入碎片飞行呈弧线身后目标造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "physical_skill_damage": 0 },
@@ -1091,6 +1172,7 @@
         "positionIndex": 12,
         "name": "Line of Fire",
         "description": "Fire additional trail of bullets in an arc.",
+        "zh": { "name": "Line 之火焰", "description": "火焰额外轨迹之子弹呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "trail_count": 0, "physical_skill_damage": 0 },
@@ -1102,6 +1184,7 @@
         "positionIndex": 13,
         "name": "Explosion Vacuum",
         "description": "Fire a single bullet which vacuums all nearby monsters and unleashes a big explosion.",
+        "zh": { "name": "爆炸 Vacuum", "description": "火焰单次子弹从而 vacuums 附近所有怪物与释放核心爆炸。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1121,6 +1204,7 @@
         "positionIndex": 14,
         "name": "Maniac Mayhem",
         "description": "The Demonslayer changes his weapon into a demonic minigun which uncontrollably fires bullets for a short duration before breaking.",
+        "zh": { "name": "狂人 Mayhem", "description": "Demonslayer changes his 武器进入 demonic minigun 从而 uncontrollably 发射子弹短时间内 before 击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "physical_skill_damage": 0 },
@@ -1135,6 +1219,7 @@
     "name": "Fast Slices",
     "kind": "active",
     "description": "Perform a series of dashing attacks, dealing area of effect physical damage on second attack and stunning monsters around you on the final attack.",
+    "zh": { "name": "疾风连斩", "description": "进行一连串突进攻击，第二击造成范围物理伤害，最后一击眩晕周围怪物。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Area of Effect", "Strike", "Physical"],
     "movementDuringUse": 85,
@@ -1160,6 +1245,7 @@
         "positionIndex": 0,
         "name": "Fast Slices",
         "description": "Core of the Fast Slices subtree.",
+        "zh": { "name": "疾风连斩", "description": "疾风连斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1167,6 +1253,7 @@
         "positionIndex": 1,
         "name": "Wide Slice",
         "description": "Increases the area of effect radius of fast slices.",
+        "zh": { "name": "Wide 斩切", "description": "提高 effect radius of 疾风连斩 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1178,6 +1265,7 @@
         "positionIndex": 2,
         "name": "Slashing Strike",
         "description": "Increases damage dealt by fast slices.",
+        "zh": { "name": "斩击 Strike", "description": "提高 疾风连斩 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1189,6 +1277,7 @@
         "positionIndex": 3,
         "name": "Expert Slayer",
         "description": "Increases attack rating when using fast slices.",
+        "zh": { "name": "Expert 杀手", "description": "提高攻击命中使用疾风连斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0, "crit_chance": 0 },
@@ -1200,6 +1289,7 @@
         "positionIndex": 4,
         "name": "Demon's Heart",
         "description": "Chance to heat target souls causing them to explode after a brief moment dealing area of effect damage.",
+        "zh": { "name": "恶魔的核心", "description": "概率灼热目标灵魂使其爆炸之后 brief moment 造成范围伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1215,6 +1305,7 @@
         "positionIndex": 5,
         "name": "Ferocious Slice",
         "description": "Chance to knock monsters airborne causing them to deal area of effect damage upon landing on the third hit.",
+        "zh": { "name": "Ferocious 斩切", "description": "概率击退怪物腾空使其造成范围伤害落地时第三次命中。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1230,6 +1321,7 @@
         "positionIndex": 6,
         "name": "Burning Blade",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "燃烧利刃", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1248,6 +1340,7 @@
         "positionIndex": 7,
         "name": "Molten Steel",
         "description": "Increases damage to burning targets.",
+        "zh": { "name": "熔火 Steel", "description": "提高伤害至燃烧目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1259,6 +1352,7 @@
         "positionIndex": 8,
         "name": "Slayer's Intellect",
         "description": "Decreases mana cost when using fast slices.",
+        "zh": { "name": "杀手的智慧", "description": "使用疾风连斩时降低法力消耗。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1270,6 +1364,7 @@
         "positionIndex": 9,
         "name": "Swift Deadstrike",
         "description": "Increases critical strike damage when using fast slices.",
+        "zh": { "name": "迅捷 Deadstrike", "description": "提高暴击伤害使用疾风连斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1281,6 +1376,7 @@
         "positionIndex": 10,
         "name": "Demon Slaying",
         "description": "Execute low life monsters.",
+        "zh": { "name": "恶魔 Slaying", "description": "处决低生命的怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1292,6 +1388,7 @@
         "positionIndex": 11,
         "name": "Flaming Blades",
         "description": "Every slice additionally unleashes a wave of fire inflicting burning for a portion of the damage.",
+        "zh": { "name": "燃烧刀刃", "description": "每斩切另外释放波之火焰施加燃烧一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0, "of_total_damage": 0 },
@@ -1310,6 +1407,7 @@
         "positionIndex": 12,
         "name": "Detonation Slice",
         "description": "Your third attack now causes monsters to unleash an explosion dealing area of effect damage.",
+        "zh": { "name": "引爆斩切", "description": "你的第三次攻击使怪物至释放爆炸造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -1321,6 +1419,7 @@
         "positionIndex": 13,
         "name": "Shadow Daggers",
         "description": "Throw multiple piercing daggers with each slash.",
+        "zh": { "name": "暗影匕首", "description": "投掷多个穿透匕首使用每个斩击。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 3 },
@@ -1332,6 +1431,7 @@
         "positionIndex": 14,
         "name": "High Strike",
         "description": "Your third attack sends enemies high in the air causing them to deal area of effect damage upon landing.",
+        "zh": { "name": "高 Strike", "description": "你的第三次攻击发出敌人高空中使其造成范围伤害落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1346,6 +1446,7 @@
     "name": "Heart Attack",
     "kind": "passive",
     "description": "Increases your chance for critical strikes and critical strike damage when using a melee weapon.",
+    "zh": { "name": "夺心一击", "description": "使用近战武器时，提高你的暴击概率和暴击伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [{ "rank": 1 }],
@@ -1363,6 +1464,7 @@
     "name": "Demon's Calling",
     "kind": "active",
     "description": "Become airborne and smash the ground dealing area of effect arcane damage and stunning monsters around you.",
+    "zh": { "name": "恶魔召唤", "description": "腾空跃起并猛击地面，造成范围奥术伤害并眩晕周围怪物。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect", "Arcane"],
     "movementDuringUse": 85,
@@ -1388,6 +1490,7 @@
         "positionIndex": 0,
         "name": "Demon's Calling",
         "description": "Core of the Demon's Calling subtree.",
+        "zh": { "name": "恶魔召唤", "description": "恶魔召唤 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1395,6 +1498,7 @@
         "positionIndex": 1,
         "name": "Pentagram Radius",
         "description": "Increases the area of effect radius of demon's calling.",
+        "zh": { "name": "Pentagram 半径", "description": "提高 effect radius of 恶魔召唤 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1406,6 +1510,7 @@
         "positionIndex": 2,
         "name": "Demon's Embrace",
         "description": "Increases damage dealt by demon's calling.",
+        "zh": { "name": "恶魔的拥抱", "description": "提高 恶魔召唤 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1417,6 +1522,7 @@
         "positionIndex": 3,
         "name": "Hellflame Burst",
         "description": "Chance to send monsters airborne on hit causing them to deal area of effect damage when landing.",
+        "zh": { "name": "Hellflame 迸发", "description": "概率发出怪物腾空命中时使其造成范围伤害落地时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1432,6 +1538,7 @@
         "positionIndex": 4,
         "name": "Dark Essence",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "黑暗精华", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1450,6 +1557,7 @@
         "positionIndex": 5,
         "name": "Dark Meteors",
         "description": "Chance to drop chaos meteors on hit dealing increased damage.",
+        "zh": { "name": "黑暗陨石", "description": "概率投下混沌陨石命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1465,6 +1573,7 @@
         "positionIndex": 6,
         "name": "The Fiery Layer of Hell",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "炽焰 Layer 之地狱", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1483,6 +1592,7 @@
         "positionIndex": 7,
         "name": "Hellish Scorching",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "Hellish 灼热", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1494,6 +1604,7 @@
         "positionIndex": 8,
         "name": "Demon's Mind",
         "description": "Chance on cast to jump higher and smash the ground dealing increased damage with increased area of effect radius.",
+        "zh": { "name": "恶魔的心智", "description": "施法时有概率跳跃 higher 与猛击地面造成提高伤害使用提高范围半径。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1509,6 +1620,7 @@
         "positionIndex": 9,
         "name": "Devil in the Detail",
         "description": "Decreases mana cost when using demon's calling.",
+        "zh": { "name": "Devil Detail", "description": "使用恶魔召唤时降低法力消耗。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1520,6 +1632,7 @@
         "positionIndex": 10,
         "name": "Hell Infused Aftershock",
         "description": "Chance to shock the ground an additional time.",
+        "zh": { "name": "地狱灌注余震", "description": "概率冲击地面额外一次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1535,6 +1648,7 @@
         "positionIndex": 11,
         "name": "Unholy Aftershock",
         "description": "Demon's Calling now echoes additional times increasing its size.",
+        "zh": { "name": "邪秽余震", "description": "恶魔召唤 echoes 额外次提高 size。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "area_of_effect": 0 },
@@ -1546,6 +1660,7 @@
         "positionIndex": 12,
         "name": "Shadow Flames",
         "description": "Dark meteors now unleash a trail of shadow flames outwards dealing additional damage.",
+        "zh": { "name": "暗影烈焰", "description": "黑暗陨石释放轨迹之暗影烈焰向外造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1557,6 +1672,7 @@
         "positionIndex": 13,
         "name": "Appearing from Shadows",
         "description": "Blink towards target location before unleashing demons calling with increased damage.",
+        "zh": { "name": "Appearing 从暗影", "description": "Blink 朝向目标位置 before 释放恶魔 calling 使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1568,6 +1684,7 @@
         "positionIndex": 14,
         "name": "Pentagram Shockwave",
         "description": "Unleash a shockwave of pentagrams dealing additional damage.",
+        "zh": { "name": "Pentagram 震荡波", "description": "释放震荡波之 pentagrams 造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1582,6 +1699,7 @@
     "name": "Sword Handler",
     "kind": "passive",
     "description": "Increases your life stolen per hit, attack rating and damage when using swords.",
+    "zh": { "name": "驭剑者", "description": "使用剑类武器时，提高你每次命中偷取的生命、攻击命中和伤害。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [{ "rank": 1 }],
@@ -1599,6 +1717,7 @@
     "name": "Slice of Shadows",
     "kind": "active",
     "description": "Perform an attack that releases a wave of shadow dealing physical damage.",
+    "zh": { "name": "暗影之斩", "description": "进行一次攻击，释放一道暗影之波，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Projectile", "Strike", "Physical"],
     "movementDuringUse": 85,
@@ -1624,6 +1743,7 @@
         "positionIndex": 0,
         "name": "Slice of Shadows",
         "description": "Core of the Slice of Shadows subtree.",
+        "zh": { "name": "暗影之斩", "description": "暗影之斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1631,6 +1751,7 @@
         "positionIndex": 1,
         "name": "Floating Shadow",
         "description": "Increases projectile speed.",
+        "zh": { "name": "漂浮暗影", "description": "提高投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1642,6 +1763,7 @@
         "positionIndex": 2,
         "name": "Strenghtened Veil",
         "description": "Increases damage dealt by slice of shadows based on your strength.",
+        "zh": { "name": "Strenghtened Veil", "description": "提高 暗影之斩 based on your strength 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_strength": 0 },
@@ -1653,6 +1775,7 @@
         "positionIndex": 3,
         "name": "Shadow Duality",
         "description": "Chance to unleash an additional slice of shadows on attack.",
+        "zh": { "name": "暗影双重性", "description": "概率释放额外暗影之斩攻击时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1668,6 +1791,7 @@
         "positionIndex": 4,
         "name": "Mist of Darkness",
         "description": "Increases attack rating when using slice of shadows.",
+        "zh": { "name": "Mist 之黑暗", "description": "提高 shadows 的攻击命中使用斩切。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1679,6 +1803,7 @@
         "positionIndex": 5,
         "name": "Stacking Shadow",
         "description": "Gain a stacking damage buff for a short period on hit.",
+        "zh": { "name": "叠加暗影", "description": "获得叠加伤害增益短距期间命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1690,6 +1815,7 @@
         "positionIndex": 6,
         "name": "Crushing Veil",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "粉碎 Veil", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1708,6 +1834,7 @@
         "positionIndex": 7,
         "name": "Cold Shadow",
         "description": "Chance on hit to freeze enemies.",
+        "zh": { "name": "冰冷暗影", "description": "命中时有概率冻结敌人。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1720,6 +1847,7 @@
         "positionIndex": 8,
         "name": "Frostbitten Mist",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "Frostbitten Mist", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -1731,6 +1859,7 @@
         "positionIndex": 9,
         "name": "Bitter Smoke",
         "description": "Increases critical strike damage when using slice of shadows.",
+        "zh": { "name": "Bitter 烟雾", "description": "提高 shadows 的暴击伤害使用斩切。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1742,6 +1871,7 @@
         "positionIndex": 10,
         "name": "Looming Mist",
         "description": "Increases the size of slice of shadows.",
+        "zh": { "name": "Looming Mist", "description": "提高 暗影之斩 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1753,6 +1883,7 @@
         "positionIndex": 11,
         "name": "Shadow Extraction",
         "description": "Perform an empowered attack unleashing small shadows from the target on hit. Slice of shadows now has a cooldown.",
+        "zh": { "name": "暗影 Extraction", "description": "执行强化攻击释放小型暗影从目标命中时。暗影之斩有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -1764,6 +1895,7 @@
         "positionIndex": 12,
         "name": "Shadow's Arc",
         "description": "Unleash additional shadows in an arc.",
+        "zh": { "name": "暗影的弧线", "description": "释放额外暗影呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1775,6 +1907,7 @@
         "positionIndex": 13,
         "name": "Lingering Shadows",
         "description": "Gain stacks of lingering shadows on hit. At maximum stacks your next slice of shadows deals increased damage with increased size.",
+        "zh": { "name": "延续暗影", "description": "获得层数之延续暗影命中时。最大层数你的 next 暗影之斩造成提高伤害使用提高 size。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_size": 0 },
@@ -1786,6 +1919,7 @@
         "positionIndex": 14,
         "name": "Scorching Shadow",
         "description": "Unleash a shadow ball of fire bouncing from terrain and inflicting burning on hit.",
+        "zh": { "name": "灼热暗影", "description": "释放暗影球之火焰弹跳从地形与施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0, "projectile_count": 1 },
@@ -1807,6 +1941,7 @@
     "name": "Shadow Anomalies",
     "kind": "passive",
     "description": "Casting Demon's Calling now spawns five shadow anomalies that perform Demon's Calling with increased arcane damage.",
+    "zh": { "name": "暗影异象", "description": "施放恶魔召唤时，现在会生成五个暗影异象，以更高的奥术伤害施放恶魔召唤。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [{ "rank": 1 }],
@@ -1824,6 +1959,7 @@
     "name": "Soul Leech",
     "kind": "active",
     "description": "Leech life out of monsters in target area dealing arcane damage and healing you.",
+    "zh": { "name": "灵魂虹吸", "description": "从目标区域的怪物身上虹吸生命，造成奥术伤害并治疗你。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect", "Arcane"],
     "movementDuringUse": 65,
@@ -1848,6 +1984,7 @@
     "name": "Demon's Shield",
     "kind": "passive",
     "description": "Increases all resistances and movement speed.",
+    "zh": { "name": "恶魔之盾", "description": "提高全抗性和移动速度。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [{ "rank": 1 }],
@@ -1865,6 +2002,7 @@
     "name": "Demon Form",
     "kind": "buff",
     "description": "Temporarily turn into a demon gaining increased attack damage and attack speed.",
+    "zh": { "name": "恶魔形态", "description": "暂时化为恶魔，获得提高的攻击伤害和攻击速度。" },
     "tags": ["Cast", "Active", "Shape Shift"],
     "maxRank": 20,
     "requiresLevel": 30,

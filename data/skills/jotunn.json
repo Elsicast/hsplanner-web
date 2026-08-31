@@ -5,6 +5,7 @@
     "name": "Frozen Boulder",
     "kind": "active",
     "description": "Throw a frozen boulder dealing cold damage to monsters on its path.",
+    "zh": { "name": "冰封巨岩", "description": "掷出一块冰封巨岩，对路径上的怪物造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "movementDuringUse": 85,
@@ -29,6 +30,7 @@
         "positionIndex": 0,
         "name": "Frozen Boulder",
         "description": "Core of the Frozen Boulder subtree.",
+        "zh": { "name": "冰封巨岩", "description": "冰封巨岩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -36,6 +38,7 @@
         "positionIndex": 1,
         "name": "Boulder Lob",
         "description": "Increases the projectile speed of frozen boulder.",
+        "zh": { "name": "巨岩抛投", "description": "提高 冰封巨岩 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -47,6 +50,7 @@
         "positionIndex": 2,
         "name": "Petrifying Frost",
         "description": "Increases the damage dealt by frozen boulder.",
+        "zh": { "name": "Petrifying 寒霜", "description": "提高造成的伤害冰封巨岩。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -58,6 +62,7 @@
         "positionIndex": 3,
         "name": "Bouncing Slab",
         "description": "Increases the amount of frozen boulder bounces.",
+        "zh": { "name": "弹跳 Slab", "description": "提高 冰封巨岩 bounces 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -69,6 +74,7 @@
         "positionIndex": 4,
         "name": "Shattering Frost",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "粉碎寒霜", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -87,6 +93,7 @@
         "positionIndex": 5,
         "name": "Expanding Stonefrost",
         "description": "Increases the size of frozen boulder.",
+        "zh": { "name": "Expanding Stonefrost", "description": "提高 冰封巨岩 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -98,6 +105,7 @@
         "positionIndex": 6,
         "name": "Subzero Temp",
         "description": "Chance to inflict freeze on hit.",
+        "zh": { "name": "Subzero Temp", "description": "命中时有概率施加冻结。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -110,6 +118,7 @@
         "positionIndex": 7,
         "name": "Frozen Throbbing",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "冰冻 Throbbing", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -121,6 +130,7 @@
         "positionIndex": 8,
         "name": "Pulsing Monolith",
         "description": "Frozen boulder unleashes a frozen nova with each bounce dealing a portion of its damage.",
+        "zh": { "name": "Pulsing Monolith", "description": "冰封巨岩释放冰冻新星使用每个弹射造成一部分伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -132,6 +142,7 @@
         "positionIndex": 9,
         "name": "Stonecold Master",
         "description": "Decreases the mana cost of frozen boulder.",
+        "zh": { "name": "Stonecold 大师", "description": "降低法力消耗之冰封巨岩。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -143,6 +154,7 @@
         "positionIndex": 10,
         "name": "Demolishing Frostone",
         "description": "Chance to knock monsters back on hit dealing increased damage.",
+        "zh": { "name": "Demolishing Frostone", "description": "概率击退怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -158,6 +170,7 @@
         "positionIndex": 11,
         "name": "Rolling Winterstone",
         "description": "Frozen boulder rolls on the ground gathering monsters on its path exploding when hitting terrain and dealing increased damage per monster gathered.",
+        "zh": { "name": "Rolling Winterstone", "description": "冰封巨岩投掷地面 gathering 怪物路径上的 exploding 当命中地形与造成提高伤害每怪物 gathered。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -169,6 +182,7 @@
         "positionIndex": 12,
         "name": "Overgrowing Boulder",
         "description": "Frozen boulder grows in size gaining increased damage with each bounce also bouncing off of terrain.",
+        "zh": { "name": "Overgrowing 巨岩", "description": "冰封巨岩 grows size 获得提高伤害使用每个弹射同时弹跳关闭之地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_size": 0 },
@@ -180,6 +194,7 @@
         "positionIndex": 13,
         "name": "Splinter Stones",
         "description": "Frozen boulder explodes into chunks of ice on hit dealing increased damage.",
+        "zh": { "name": "Splinter 岩石", "description": "冰封巨岩爆炸进入 chunks 之寒冰命中时造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -191,6 +206,7 @@
         "positionIndex": 14,
         "name": "Boulder Barrage",
         "description": "Unleash a barrage of smaller frozen boulders in an arc. Frozen boulder has a cooldown.",
+        "zh": { "name": "巨岩齐射", "description": "释放齐射之更小冰冻巨石呈弧线。冰封巨岩有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 2, "cold_skill_damage": 0 },
@@ -205,6 +221,7 @@
     "name": "Breath of Ice",
     "kind": "active",
     "description": "Breathe glacial air freezing and dealing cold damage to monsters.",
+    "zh": { "name": "寒冰吐息", "description": "呼出冰川之气，冻结怪物并造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -229,6 +246,7 @@
         "positionIndex": 0,
         "name": "Breath of Ice",
         "description": "Core of the Breath of Ice subtree.",
+        "zh": { "name": "寒冰吐息", "description": "寒冰吐息 子树核心。" },
         "maxRank": 1
       },
       {
@@ -236,6 +254,7 @@
         "positionIndex": 1,
         "name": "Fresh Mint",
         "description": "Increases the damage dealt by breath of ice.",
+        "zh": { "name": "Fresh Mint", "description": "提高 ice 的造成的伤害吐息。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -247,6 +266,7 @@
         "positionIndex": 2,
         "name": "Crumbling Winds",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "Crumbling 狂风", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -265,6 +285,7 @@
         "positionIndex": 3,
         "name": "Expansive Gasp",
         "description": "Increases the area of effect of breath of ice.",
+        "zh": { "name": "Expansive Gasp", "description": "提高 effect of 寒冰吐息 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -276,6 +297,7 @@
         "positionIndex": 4,
         "name": "Ironfrost Lungs",
         "description": "Increases the duration of breath of ice.",
+        "zh": { "name": "Ironfrost Lungs", "description": "提高 寒冰吐息 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -287,6 +309,7 @@
         "positionIndex": 5,
         "name": "Frozen Exhale",
         "description": "Knock monsters back slowly dealing increased damage.",
+        "zh": { "name": "冰冻 Exhale", "description": "击退怪物缓慢造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -298,6 +321,7 @@
         "positionIndex": 6,
         "name": "Freezing Point",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "冰冻点", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -309,6 +333,7 @@
         "positionIndex": 7,
         "name": "Ice Skating",
         "description": "Chance on cast to conjure a trail of ice dealing damage over time and slowing monsters on hit.",
+        "zh": { "name": "寒冰 Skating", "description": "施法时有概率召唤轨迹之寒冰造成伤害随时间与减速怪物命中时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -325,6 +350,7 @@
         "positionIndex": 8,
         "name": "Frostbourne Winds",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "Frostbourne 狂风", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -343,6 +369,7 @@
         "positionIndex": 9,
         "name": "Cascading Exhale",
         "description": "Chance to unleash additional breath of ice from target location on hit.",
+        "zh": { "name": "Cascading Exhale", "description": "命中时有概率释放额外寒冰吐息从目标位置。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -358,6 +385,7 @@
         "positionIndex": 10,
         "name": "Vacuuming Inhale",
         "description": "Chance to pull monsters towards you on hit.",
+        "zh": { "name": "Vacuuming Inhale", "description": "命中时有概率牵引怪物朝向你。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -366,6 +394,7 @@
         "positionIndex": 11,
         "name": "Frostbitten Lungs",
         "description": "Increases breath of ice duration dealing damage over time.",
+        "zh": { "name": "Frostbitten Lungs", "description": "提高 ice duration dealing damage over time 的吐息。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0, "skill_duration": 0 },
@@ -377,6 +406,7 @@
         "positionIndex": 12,
         "name": "Frost Charged Breath",
         "description": "Inflict targets with a stack of frost charged on hit unleashing an avalance at maximum stacks dealing area of effect damage.",
+        "zh": { "name": "寒霜充能吐息", "description": "施加目标使用层之寒霜充能命中时释放 avalance 最大层数造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "max_skill_stacks": 0 },
@@ -388,6 +418,7 @@
         "positionIndex": 13,
         "name": "Absolute Control",
         "description": "Increases the length of breath of ice significantly inflicting strong slow and freeze on hit.",
+        "zh": { "name": "绝对控制", "description": "提高 寒冰吐息 significantly inflicting strong slow and freeze on hit 的length。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_range": 0, "cold_skill_damage": 0 },
@@ -399,6 +430,7 @@
         "positionIndex": 14,
         "name": "Frosted Throat",
         "description": "Unleash multiple breaths of ice with chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "Frosted Throat", "description": "释放多个吐息之寒冰使用概率打出暴击造成提高暴击伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -421,6 +453,7 @@
     "name": "Icicles",
     "kind": "passive",
     "description": "Every 5th time you cast a spell also release Icicles dealing cold damage.",
+    "zh": { "name": "冰锥", "description": "每第 5 次施放法术时会额外释放冰锥，造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Passive", "Projectile"],
     "maxRank": 20,
@@ -442,6 +475,7 @@
     "name": "Frozen Hide",
     "kind": "buff",
     "description": "Cast a frost enhanced shield on yourself reducing incoming physical damage, freezing and dealing cold damage to monsters that attack you.",
+    "zh": { "name": "冰霜皮甲", "description": "在自身施加冰霜强化的护盾，降低所受物理伤害，冻结并冰冻攻击你的怪物，造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
@@ -471,6 +505,7 @@
     "name": "Orb of Frost",
     "kind": "active",
     "description": "Cast a frozen orb traveling in target direction releasing icicles, freezing and dealing cold damage to monsters on its path.",
+    "zh": { "name": "寒霜宝珠", "description": "施放一颗朝目标方向飞行的冰封宝珠，沿途释放冰锥，冻结怪物并造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "movementDuringUse": 85,
@@ -497,6 +532,7 @@
         "positionIndex": 0,
         "name": "Orb of Frost",
         "description": "Core of the Orb of Frost subtree.",
+        "zh": { "name": "寒霜宝珠", "description": "寒霜宝珠 子树核心。" },
         "maxRank": 1
       },
       {
@@ -504,6 +540,7 @@
         "positionIndex": 1,
         "name": "Festering Cold",
         "description": "Increases the damage dealt by orb of frost.",
+        "zh": { "name": "溃烂冰冷", "description": "提高 frost 的造成的伤害宝珠。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -515,6 +552,7 @@
         "positionIndex": 2,
         "name": "Frost Icicles",
         "description": "Increases the amount of orb of frost icicles.",
+        "zh": { "name": "寒霜冰锥", "description": "提高 寒霜宝珠 冰锥 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -526,6 +564,7 @@
         "positionIndex": 3,
         "name": "Frozen Mass",
         "description": "Increases the size of orb of frost.",
+        "zh": { "name": "冰冻巨躯", "description": "提高 寒霜宝珠 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -537,6 +576,7 @@
         "positionIndex": 4,
         "name": "Icy Winds",
         "description": "Increases the projectile speed of icicles.",
+        "zh": { "name": "Icy 狂风", "description": "提高 冰锥 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -548,6 +588,7 @@
         "positionIndex": 5,
         "name": "Cold Singularity",
         "description": "Decreases the orbiting radius of icicles.",
+        "zh": { "name": "冰冷 Singularity", "description": "降低环绕半径之冰锥。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -559,6 +600,7 @@
         "positionIndex": 6,
         "name": "Coldsnap",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "Coldsnap", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -577,6 +619,7 @@
         "positionIndex": 7,
         "name": "Hypothermia",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "Hypothermia", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -588,6 +631,7 @@
         "positionIndex": 8,
         "name": "Timeless Tundra",
         "description": "Decreases the cooldown of orb of frost.",
+        "zh": { "name": "Timeless Tundra", "description": "降低cooldown 之寒霜宝珠。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -599,6 +643,7 @@
         "positionIndex": 9,
         "name": "Multicicles",
         "description": "Chance on pulse to unleash additional icicles.",
+        "zh": { "name": "Multicicles", "description": "概率在脉冲至释放额外冰锥。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -614,6 +659,7 @@
         "positionIndex": 10,
         "name": "Howling Ricochet",
         "description": "Orb of frost bounces off of terrain dealing increased damage.",
+        "zh": { "name": "Howling Ricochet", "description": "寒霜宝珠弹射关闭之地形造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -625,6 +671,7 @@
         "positionIndex": 11,
         "name": "Glacial Shredder",
         "description": "Unleash a glacial shredder with increased size and damage. Icicles are now attached around the orb.",
+        "zh": { "name": "Glacial 绞碎机", "description": "释放 glacial 绞碎机使用提高 size 与伤害。冰锥 attached 周围宝珠。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_size": 0 },
@@ -636,6 +683,7 @@
         "positionIndex": 12,
         "name": "Enlargening Frost Orb",
         "description": "Orb of frost increases its size and damage over time while traveling.",
+        "zh": { "name": "Enlargening 寒霜宝珠", "description": "寒霜宝珠提高 size 与伤害随时间当飞行。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_size": 0 },
@@ -647,6 +695,7 @@
         "positionIndex": 13,
         "name": "Chaining Frost",
         "description": "Icicles from orb of frost chain from targets unleashing frozen pulses on hit dealing a portion of the damage.",
+        "zh": { "name": "连锁寒霜", "description": "冰锥从寒霜宝珠连锁从目标释放冰冻脉冲命中时造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "max_targets": 0 },
@@ -658,6 +707,7 @@
         "positionIndex": 14,
         "name": "Orb of Duality",
         "description": "Unleash multiple smaller orbs of frost in an arc.",
+        "zh": { "name": "宝珠之双重性", "description": "释放多个更小宝珠之寒霜呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_count": 0 },
@@ -672,6 +722,7 @@
     "name": "Power of the Ancients",
     "kind": "passive",
     "description": "Gain additional cold skill damage based on your mana.",
+    "zh": { "name": "先祖之力", "description": "根据你的法力获得额外冰冷技能伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -689,6 +740,7 @@
     "name": "Avatar of Frost",
     "kind": "passive",
     "description": "Increases your cold skill damage.",
+    "zh": { "name": "寒霜化身", "description": "提高你的冰冷技能伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -706,6 +758,7 @@
     "name": "Portal of Ice",
     "kind": "active",
     "description": "Teleport to the target location and release a frost nova dealing cold damage.",
+    "zh": { "name": "寒冰传送门", "description": "传送到目标位置并释放一道霜爆新星，造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Movement", "Blink"],
     "movementDuringUse": 85,
@@ -730,6 +783,7 @@
         "positionIndex": 0,
         "name": "Portal of Ice",
         "description": "Core of the Portal of Ice subtree.",
+        "zh": { "name": "寒冰传送门", "description": "寒冰传送门 子树核心。" },
         "maxRank": 1
       },
       {
@@ -737,6 +791,7 @@
         "positionIndex": 1,
         "name": "Ice Travel",
         "description": "Increases the range of portal of ice.",
+        "zh": { "name": "寒冰飞行", "description": "提高 寒冰传送门 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -748,6 +803,7 @@
         "positionIndex": 2,
         "name": "Cold-enhanced Warp",
         "description": "Increases the damage dealt by portal of ice.",
+        "zh": { "name": "冰冷-强化传送门", "description": "提高 ice 的造成的伤害 portal。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -759,6 +815,7 @@
         "positionIndex": 3,
         "name": "Spiky Approach",
         "description": "Chance on cast to conjure multiple orbiting icicles dealing a portion of the damage.",
+        "zh": { "name": "Spiky Approach", "description": "施法时有概率召唤多个环绕冰锥造成一部分伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -774,6 +831,7 @@
         "positionIndex": 4,
         "name": "Engulfing Nova",
         "description": "Increases the area of effect radius of portal of ice.",
+        "zh": { "name": "Engulfing 新星", "description": "提高 effect radius of 寒冰传送门 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -785,6 +843,7 @@
         "positionIndex": 5,
         "name": "Blink Faster",
         "description": "Increases cast rate when using portal of ice.",
+        "zh": { "name": "Blink 更快", "description": "提高 ice 的施法速度使用 portal。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -796,6 +855,7 @@
         "positionIndex": 6,
         "name": "Corrosive Frostbite",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "腐蚀冻伤", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -814,6 +874,7 @@
         "positionIndex": 7,
         "name": "Shredding Chillstep",
         "description": "Gain a stack of shredding chillstep on cast increasing your cold skill damage for a short duration.",
+        "zh": { "name": "Shredding Chillstep", "description": "获得层之 shredding chillstep 施法时提高你的冰冷技能伤害短时间内。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0, "max_skill_stacks": 0 },
@@ -825,6 +886,7 @@
         "positionIndex": 8,
         "name": "Efficient Iceblink",
         "description": "Reduces the mana cost of portal of ice.",
+        "zh": { "name": "高效 Iceblink", "description": "降低法力消耗之寒冰传送门。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -836,6 +898,7 @@
         "positionIndex": 9,
         "name": "Cryo Armor",
         "description": "Increases your all resistances on cast for a short duration.",
+        "zh": { "name": "Cryo 护甲", "description": "提高你的全抗性施法时短时间内。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_resistances": 0 },
@@ -847,6 +910,7 @@
         "positionIndex": 10,
         "name": "Icecold Bloodthirst",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "Icecold Bloodthirst", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -858,6 +922,7 @@
         "positionIndex": 11,
         "name": "Hailstorm Orb",
         "description": "Conjure a static orb of frost at target location for a short duration.",
+        "zh": { "name": "Hailstorm 宝珠", "description": "召唤静电寒霜宝珠目标位置短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "skill_duration": 0 },
@@ -869,6 +934,7 @@
         "positionIndex": 12,
         "name": "Winter Aparition",
         "description": "Chance to summon a small blizzard on hit for a short duration.",
+        "zh": { "name": "Winter Aparition", "description": "概率召唤物小型暴风雪命中时短时间内。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -884,6 +950,7 @@
         "positionIndex": 13,
         "name": "Permafrost Voidpull",
         "description": "Increases damage and area of effect radius pulling monsters towards you on hit.",
+        "zh": { "name": "永久冻土 Voidpull", "description": "提高 effect radius pulling monsters towards you on hit 的伤害与范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -895,6 +962,7 @@
         "positionIndex": 14,
         "name": "Crystallized Pinnacles",
         "description": "Chance to unleash small frost novas on hit inflicting frostbite.",
+        "zh": { "name": "Crystallized Pinnacles", "description": "概率释放小型寒霜新星命中时施加冻伤。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -920,6 +988,7 @@
     "name": "Blizzard",
     "kind": "active",
     "description": "Cast a freezing blizzard dealing area of effect cold damage and freezing monsters in the target area.",
+    "zh": { "name": "暴风雪", "description": "召唤一场冰冻暴风雪，造成范围冰冷伤害并冻结目标区域内的怪物。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Area of Effect", "Explosion"],
     "movementDuringUse": 85,
@@ -945,6 +1014,7 @@
         "positionIndex": 0,
         "name": "Blizzard",
         "description": "Core of the Blizzard subtree.",
+        "zh": { "name": "暴风雪", "description": "暴风雪 子树核心。" },
         "maxRank": 1
       },
       {
@@ -952,6 +1022,7 @@
         "positionIndex": 1,
         "name": "Intensified Snowfall",
         "description": "Increases the damage dealt by blizzard.",
+        "zh": { "name": "Intensified Snowfall", "description": "提高造成的伤害暴风雪。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -963,6 +1034,7 @@
         "positionIndex": 2,
         "name": "Eternal Winter",
         "description": "Increases the duration of blizzard.",
+        "zh": { "name": "Eternal Winter", "description": "提高 暴风雪 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -974,6 +1046,7 @@
         "positionIndex": 3,
         "name": "Frost Domain",
         "description": "Increases the area of effect radius of blizzard.",
+        "zh": { "name": "寒霜 Domain", "description": "提高 effect radius of 暴风雪 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -985,6 +1058,7 @@
         "positionIndex": 4,
         "name": "Crackling Ice",
         "description": "Chance to stun targets on hit dealing increased damage.",
+        "zh": { "name": "Crackling 寒冰", "description": "概率眩晕目标命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1001,6 +1075,7 @@
         "positionIndex": 5,
         "name": "Tracking Snowinds",
         "description": "Blizzard slowly moves towards the nearest monster.",
+        "zh": { "name": "Tracking Snowinds", "description": "暴风雪缓慢 moves 朝向最近的怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1012,6 +1087,7 @@
         "positionIndex": 6,
         "name": "Corrosive Ice",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "腐蚀寒冰", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -1030,6 +1106,7 @@
         "positionIndex": 7,
         "name": "Hypothermic Temperature",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "Hypothermic Temperature", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -1048,6 +1125,7 @@
         "positionIndex": 8,
         "name": "Winter Echoes",
         "description": "Chance on cast to summon an additional blizzard.",
+        "zh": { "name": "Winter Echoes", "description": "施法时有概率召唤物额外暴风雪。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1063,6 +1141,7 @@
         "positionIndex": 9,
         "name": "Cold Necrosis",
         "description": "Increases damage dealt to frostbitten targets.",
+        "zh": { "name": "冰冷 Necrosis", "description": "提高对 frostbitten目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frost_bitten": 0 },
@@ -1074,6 +1153,7 @@
         "positionIndex": 10,
         "name": "Chilling Coldsnap",
         "description": "Monsters killed by blizzard explode into icicles dealing additional damage to nearby monsters.",
+        "zh": { "name": "Chilling Coldsnap", "description": "怪物被击杀暴风雪爆炸进入冰锥造成额外伤害至附近怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "splash_of_total_damage": 0 },
@@ -1085,6 +1165,7 @@
         "positionIndex": 11,
         "name": "Snowstorm Maelstrom",
         "description": "Increases the area of effect radius of blizzard inflicting frostbite and a strong slow on hit.",
+        "zh": { "name": "Snowstorm Maelstrom", "description": "提高 effect radius of 暴风雪 inflicting frostbite and a strong slow on hit 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_frost_bite_damage": 0, "area_of_effect": 0 },
@@ -1103,6 +1184,7 @@
         "positionIndex": 12,
         "name": "Frost Flurries",
         "description": "Ice chunks explode into frozen novas when hitting the ground dealing area of effect damage.",
+        "zh": { "name": "寒霜 Flurries", "description": "寒冰 chunks 爆炸进入冰冻新星当命中地面造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1114,6 +1196,7 @@
         "positionIndex": 13,
         "name": "Frigid Eruption",
         "description": "Unleash a shockwave of blizzards towards target location. Blizzard no longer has a cooldown.",
+        "zh": { "name": "Frigid Eruption", "description": "释放震荡波之暴风雪朝向目标位置。暴风雪更久有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "skill_duration": 0 },
@@ -1125,6 +1208,7 @@
         "positionIndex": 14,
         "name": "Snowmageddon",
         "description": "Blizzard gains increased size and projectile frequency over time dropping a huge boulder when expiring..",
+        "zh": { "name": "Snowmageddon", "description": "暴风雪获得提高 size 与投射物 frequency 随时间落下巨大巨岩当到期。。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_size": 0, "faster_cast_rate": 0 },
@@ -1139,6 +1223,7 @@
     "name": "Flash Freeze",
     "kind": "active",
     "description": "Perform an attack enhanced with ice that unleashes a chaining orb of ice, exploding into icicles at the end dealing additional cold damage.",
+    "zh": { "name": "瞬冻", "description": "进行一次冰晶强化的攻击，释放连锁冰球，最终爆裂成冰锥，造成额外冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Attack", "Active", "Melee", "Chaining", "Strike"],
     "movementDuringUse": 65,
@@ -1169,6 +1254,7 @@
         "positionIndex": 0,
         "name": "Flash Freeze",
         "description": "Core of the Flash Freeze subtree.",
+        "zh": { "name": "瞬冻", "description": "瞬冻 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1176,6 +1262,7 @@
         "positionIndex": 1,
         "name": "Hail Force",
         "description": "Increases the damage dealt by flash freeze.",
+        "zh": { "name": "Hail 力量", "description": "提高造成的伤害瞬冻。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1187,6 +1274,7 @@
         "positionIndex": 2,
         "name": "Excess Cold",
         "description": "Increases the amount of icicles unleashed by frost orb.",
+        "zh": { "name": "Excess 冰冷", "description": "提高 冰锥 unleashed by frost orb 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1198,6 +1286,7 @@
         "positionIndex": 3,
         "name": "Precise Tundra",
         "description": "Increases attack rating when using flash freeze.",
+        "zh": { "name": "精准 Tundra", "description": "提高攻击命中使用瞬冻。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1209,6 +1298,7 @@
         "positionIndex": 4,
         "name": "Fractured Ice",
         "description": "Chance for icicles to fork on hit.",
+        "zh": { "name": "Fractured 寒冰", "description": "概率使冰锥至分叉命中时。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1217,6 +1307,7 @@
         "positionIndex": 5,
         "name": "Nordic Frenzy",
         "description": "Increases damage dealt to frozen targets.",
+        "zh": { "name": "Nordic 狂乱", "description": "提高对 冰冻目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frozen": 0 },
@@ -1228,6 +1319,7 @@
         "positionIndex": 6,
         "name": "Boreal Reach",
         "description": "Increases the area of effect radius of flash freeze.",
+        "zh": { "name": "Boreal 延伸", "description": "提高 effect radius of 瞬冻 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1239,6 +1331,7 @@
         "positionIndex": 7,
         "name": "Freezing Rage",
         "description": "Gain a stack of freezing rage on hit increasing your damage and attack speed.",
+        "zh": { "name": "冰冻怒气", "description": "获得层之冰冻怒气命中时提高你的伤害与攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0, "increased_attack_speed": 0 },
@@ -1250,6 +1343,7 @@
         "positionIndex": 8,
         "name": "Gelid Sequence",
         "description": "Increases the amount of bounces for flash freeze.",
+        "zh": { "name": "Gelid Sequence", "description": "提高 bounces for 瞬冻 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -1261,6 +1355,7 @@
         "positionIndex": 9,
         "name": "Eternal Cascade",
         "description": "Chance to unleash another frost orb when it expires.",
+        "zh": { "name": "Eternal Cascade", "description": "概率释放另一个寒霜宝珠当到期。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1269,6 +1364,7 @@
         "positionIndex": 10,
         "name": "Froststep",
         "description": "Decreases movement diminish when using flash freeze.",
+        "zh": { "name": "Froststep", "description": "使用瞬冻时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1280,6 +1376,7 @@
         "positionIndex": 11,
         "name": "Icicle Bombardment",
         "description": "Frost orb now unleashes icicles with every hit.",
+        "zh": { "name": "Icicle 狂轰滥炸", "description": "寒霜宝珠释放冰锥使用每命中。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1291,6 +1388,7 @@
         "positionIndex": 12,
         "name": "Recurving Stalactites",
         "description": "Icicles from frost orb return to target location after a short duration dealing additional damage.",
+        "zh": { "name": "Recurving Stalactites", "description": "冰锥从寒霜宝珠反伤至目标位置之后短距持续时间造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1302,6 +1400,7 @@
         "positionIndex": 13,
         "name": "Swirling Wintershard",
         "description": "Frost orb now orbits you for a short duration frequently unleashing icicles.",
+        "zh": { "name": "回旋 Wintershard", "description": "寒霜宝珠环绕你短时间内频繁释放冰锥。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1313,6 +1412,7 @@
         "positionIndex": 14,
         "name": "Coldflash Volley",
         "description": "Unleash multiple icicles in an arc dealing increased damage and inflicting cold break. Does not require hitting a monster.",
+        "zh": { "name": "Coldflash Volley", "description": "释放多个冰锥呈弧线造成提高伤害与施加冰冷击破。会 require 命中怪物。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1342,6 +1442,7 @@
     "name": "Glacial Tremors",
     "kind": "passive",
     "description": "Every 4th attack unleashes an area of effect blast dealing cold damage.",
+    "zh": { "name": "冰川震颤", "description": "每第 4 次攻击会释放一次范围爆发，造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Passive", "Area of Effect"],
     "maxRank": 20,
@@ -1363,6 +1464,7 @@
     "name": "Freezing Leap",
     "kind": "active",
     "description": "Leap through the air into target location freezing and dealing cold damage to monsters when landing.",
+    "zh": { "name": "冰冻跃击", "description": "跃向空中落到目标位置，落地时冻结怪物并造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Movement", "Area of Effect"],
     "movementDuringUse": 85,
@@ -1386,6 +1488,7 @@
         "positionIndex": 0,
         "name": "Freezing Leap",
         "description": "Core of the Freezing Leap subtree.",
+        "zh": { "name": "冰冻跃击", "description": "冰冻跃击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1393,6 +1496,7 @@
         "positionIndex": 1,
         "name": "Leap Force",
         "description": "Increases the damage dealt by freezing leap.",
+        "zh": { "name": "跃击力量", "description": "提高造成的伤害冰冻跃击。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1404,6 +1508,7 @@
         "positionIndex": 2,
         "name": "Extended Field",
         "description": "Increases the maximum range of freezing leap.",
+        "zh": { "name": "延长野域", "description": "提高 冰冻跃击 的最大范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1415,6 +1520,7 @@
         "positionIndex": 3,
         "name": "Dazing Impact",
         "description": "Chance to stun targets on hit.",
+        "zh": { "name": "Dazing 冲击", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1427,6 +1533,7 @@
         "positionIndex": 4,
         "name": "Grand Impact",
         "description": "Increases the area of effect radius of freezing leap.",
+        "zh": { "name": "Grand 冲击", "description": "提高 effect radius of 冰冻跃击 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1438,6 +1545,7 @@
         "positionIndex": 5,
         "name": "Concentrated Detonation",
         "description": "Increases the damage dealt of freezing leap decreasing its area of effect radius.",
+        "zh": { "name": "集中引爆", "description": "提高 冰冻跃击 decreasing its area of effect radius 的造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -1449,6 +1557,7 @@
         "positionIndex": 6,
         "name": "Echoing Frostquake",
         "description": "Chance to unleash an additional shockwave when landing.",
+        "zh": { "name": "回响 Frostquake", "description": "概率释放额外震荡波落地时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1464,6 +1573,7 @@
         "positionIndex": 7,
         "name": "Hare Spirit",
         "description": "Increases landing recovery when using freezing leap.",
+        "zh": { "name": "Hare 灵体", "description": "提高着陆 recovery 使用冰冻跃击。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1475,6 +1585,7 @@
         "positionIndex": 8,
         "name": "Arctic Vulnerability",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "Arctic Vulnerability", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -1493,6 +1604,7 @@
         "positionIndex": 9,
         "name": "Overwhelming Impacts",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Overwhelming 冲击", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1504,6 +1616,7 @@
         "positionIndex": 10,
         "name": "Frosted Territory",
         "description": "Ground below landing location is left frosted dealing damage over time and slowing monsters.",
+        "zh": { "name": "Frosted Territory", "description": "地面低于着陆位置 left frosted 造成伤害随时间与减速怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1515,6 +1628,7 @@
         "positionIndex": 11,
         "name": "Superhero Landing",
         "description": "Unleash an arc of shockwaves towards target location when landing.",
+        "zh": { "name": "Superhero 着陆", "description": "释放弧线之冲击波朝向目标位置落地时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1534,6 +1648,7 @@
         "positionIndex": 12,
         "name": "Seismic Icequake",
         "description": "Leave the ground trembling after landing causing additional echos.",
+        "zh": { "name": "Seismic Icequake", "description": "留下地面震荡之后着陆使额外回响。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_count": 0 },
@@ -1545,6 +1660,7 @@
         "positionIndex": 13,
         "name": "Tectonic Stampede",
         "description": "Charge towards target location followed by a shockwave of ice.",
+        "zh": { "name": "Tectonic 践踏", "description": "冲锋朝向目标位置 followed 震荡波之寒冰。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -1556,6 +1672,7 @@
         "positionIndex": 14,
         "name": "Frostbending Leap",
         "description": "Pull nearby monsters towards you when landing with increased area of effect radius inflicting elemental break.",
+        "zh": { "name": "Frostbending 跃击", "description": "牵引附近怪物朝向你落地时使用提高范围半径施加元素击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "elemental_break": 0, "area_of_effect": 0 },
@@ -1580,6 +1697,7 @@
     "name": "Permafrost",
     "kind": "passive",
     "description": "Frozen monsters have a chance explode into an area of effect pulse when shattered.",
+    "zh": { "name": "永久冻土", "description": "被冻结的怪物被击碎时有概率爆炸成一道范围脉冲。" },
     "tags": ["Passive", "Area of Effect"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -1598,6 +1716,7 @@
     "name": "Avalanche",
     "kind": "active",
     "description": "Release a bellowing shout dealing cold damage to all monsters around you and freezing them.",
+    "zh": { "name": "雪崩", "description": "发出一声震天怒吼，对所有周围怪物造成冰冷伤害并将其冻结。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -1623,6 +1742,7 @@
         "positionIndex": 0,
         "name": "Avalanche",
         "description": "Core of the Avalanche subtree.",
+        "zh": { "name": "雪崩", "description": "雪崩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1630,6 +1750,7 @@
         "positionIndex": 1,
         "name": "Devastating Snowslide",
         "description": "Increases the damage dealt by avalanche.",
+        "zh": { "name": "Devastating Snowslide", "description": "提高造成的伤害雪崩。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1641,6 +1762,7 @@
         "positionIndex": 2,
         "name": "Devouring Snowpour",
         "description": "Increases the area of effect radius of avalanche.",
+        "zh": { "name": "吞噬 Snowpour", "description": "提高 effect radius of 雪崩 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1652,6 +1774,7 @@
         "positionIndex": 3,
         "name": "Timeless Cold",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "Timeless 冰冷", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -1670,6 +1793,7 @@
         "positionIndex": 4,
         "name": "Colossus of Yggdrasil",
         "description": "Increases the damage dealt by avalanche based on your vitality.",
+        "zh": { "name": "巨像之 Yggdrasil", "description": "提高造成的伤害雪崩基于你的耐力。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_vitality": 0 },
@@ -1681,6 +1805,7 @@
         "positionIndex": 5,
         "name": "Acute Hoarfrost",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "Acute Hoarfrost", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -1699,6 +1824,7 @@
         "positionIndex": 6,
         "name": "Frigid Safeguard",
         "description": "Increases your damage reduction and armor on cast for a short duration.",
+        "zh": { "name": "Frigid Safeguard", "description": "提高你的伤害减免与护甲施法时短时间内。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0, "increased_armor": 0 },
@@ -1710,6 +1836,7 @@
         "positionIndex": 7,
         "name": "Snow Cataclysm",
         "description": "Inflicts monsters with a stack of cataclysm on hit increasing the damage dealt by avalanche.",
+        "zh": { "name": "Snow Cataclysm", "description": "施加怪物使用层之 cataclysm 命中时提高造成的伤害雪崩。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1721,6 +1848,7 @@
         "positionIndex": 8,
         "name": "Ephemeral Flurry",
         "description": "Reduces the cooldown of avalanche.",
+        "zh": { "name": "Ephemeral Flurry", "description": "降低 cooldown 之雪崩。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1732,6 +1860,7 @@
         "positionIndex": 9,
         "name": "Further Collapse",
         "description": "Chance on cast for the avalanche to echo an additional time.",
+        "zh": { "name": "Further Collapse", "description": "概率施法时雪崩至回响额外一次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1747,6 +1876,7 @@
         "positionIndex": 10,
         "name": "Mending Winter",
         "description": "Restore a portion of your maximum life on hit.",
+        "zh": { "name": "修复 Winter", "description": "命中时恢复一部分最大生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -1758,6 +1888,7 @@
         "positionIndex": 11,
         "name": "Neverending Winter",
         "description": "Conjure a snow storm dealing damage over time on a large radius around you for a short duration.",
+        "zh": { "name": "Neverending Winter", "description": "召唤 snow 风暴造成伤害随时间大型半径周围你短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -1769,6 +1900,7 @@
         "positionIndex": 12,
         "name": "Glacial Radiance",
         "description": "Unleash a pattern of tectonic energy on the ground dealing damage over time for an extended duration.",
+        "zh": { "name": "Glacial Radiance", "description": "释放 pattern 之 tectonic 能量地面造成伤害随时间延长持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "skill_duration": 0 },
@@ -1780,6 +1912,7 @@
         "positionIndex": 13,
         "name": "Snowshade Bait",
         "description": "Casting Avalanche leaves an ice clone on the target area that taunts enemies and casts shouts for a set duration.",
+        "zh": { "name": "Snowshade Bait", "description": "施法雪崩留下寒冰 clone 目标区域嘲讽敌人与次施法 shouts set 持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0, "faster_cast_rate": 0 },
@@ -1791,6 +1924,7 @@
         "positionIndex": 14,
         "name": "Nordic Stigma",
         "description": "Mark monsters with nordic stigma on hit causing them to be hit with lightning after a short delay.",
+        "zh": { "name": "Nordic Stigma", "description": "印记怪物使用 nordic stigma 命中时使其命中使用闪电短暂延迟后。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1805,6 +1939,7 @@
     "name": "Absolute Zero",
     "kind": "passive",
     "description": "Applies Cold Break on Attack.",
+    "zh": { "name": "绝对零度", "description": "攻击时施加冰冷击破。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -1822,6 +1957,7 @@
     "name": "Frost Sunder",
     "kind": "active",
     "description": "Unleash a barrage of piercing icicles dealing cold and physical damage freezing on hit.",
+    "zh": { "name": "冰霜破斩", "description": "释放一连串穿透冰锥，造成冰冷和物理伤害，命中时冻结。" },
     "damageType": "cold",
     "tags": ["Attack", "Active", "Melee", "Projectile"],
     "movementDuringUse": 65,
@@ -1851,6 +1987,7 @@
         "positionIndex": 0,
         "name": "Frost Sunder",
         "description": "Core of the Frost Sunder subtree.",
+        "zh": { "name": "冰霜破斩", "description": "冰霜破斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1858,6 +1995,7 @@
         "positionIndex": 1,
         "name": "Arctic Breeze",
         "description": "Increases the damage dealt by frost sunder.",
+        "zh": { "name": "Arctic Breeze", "description": "提高造成的伤害冰霜破斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1869,6 +2007,7 @@
         "positionIndex": 2,
         "name": "Weakening Precision",
         "description": "A portion of the cold damage can critically hit.",
+        "zh": { "name": "虚弱精准", "description": "一部分冰冷伤害可以打出暴击。" },
         "maxRank": 3,
         "effects": {
           "base": { "crit_damage_portion": 0 },
@@ -1880,6 +2019,7 @@
         "positionIndex": 3,
         "name": "Ice Trolls Lineage",
         "description": "Chance on attack to gain increased movement speed for a short period.",
+        "zh": { "name": "寒冰 Trolls Lineage", "description": "攻击时有概率获得提高移动速度短距期间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1895,6 +2035,7 @@
         "positionIndex": 4,
         "name": "Ice Trolls Agility",
         "description": "Increases attack speed when using frost sunder.",
+        "zh": { "name": "寒冰 Trolls 敏捷身手", "description": "提高攻击速度使用冰霜破斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -1906,6 +2047,7 @@
         "positionIndex": 5,
         "name": "Frozen to the Core",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "冰冻至核心", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -1924,6 +2066,7 @@
         "positionIndex": 6,
         "name": "Shattering Coldstrike",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "粉碎 Coldstrike", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -1942,6 +2085,7 @@
         "positionIndex": 7,
         "name": "Lingering Fissure",
         "description": "Decreases movement diminish when using frost sunder.",
+        "zh": { "name": "延续 Fissure", "description": "使用冰霜破斩时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1953,6 +2097,7 @@
         "positionIndex": 8,
         "name": "Frost Shrapnel",
         "description": "Increases the amount of icicles unleashed by frost sunder.",
+        "zh": { "name": "寒霜弹片", "description": "提高 冰锥 unleashed by 冰霜破斩 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1964,6 +2109,7 @@
         "positionIndex": 9,
         "name": "Frozen Death",
         "description": "Increases the critical strike damage dealt by frost sunder.",
+        "zh": { "name": "冰冻死亡", "description": "提高暴击伤害 dealt 冰霜破斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1975,6 +2121,7 @@
         "positionIndex": 10,
         "name": "Death´s Touch",
         "description": "Increases the critical strike chance of frost sunder.",
+        "zh": { "name": "死亡的之触", "description": "提高 冰霜破斩 的暴击概率。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -1986,6 +2133,7 @@
         "positionIndex": 11,
         "name": "Frost Sunder Onslaught",
         "description": "Icicles explode on contact unleashing an explosion dealing damage on a large radius.",
+        "zh": { "name": "冰霜破斩 Onslaught", "description": "冰锥爆炸 contact 释放爆炸造成伤害大型半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -1997,6 +2145,7 @@
         "positionIndex": 12,
         "name": "Dissecting Vortex",
         "description": "Icicles seek targets when proccing frost bite dealing increased damage to frostbitten monsters.",
+        "zh": { "name": "Dissecting 漩涡", "description": "冰锥搜寻目标当 proccing 寒霜 bite 造成提高伤害至 frostbitten 怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "extra_damage_frost_bitten": 0 },
@@ -2011,6 +2160,7 @@
         "positionIndex": 13,
         "name": "Gelid Riptide",
         "description": "Chance to unleash multiple waves of icicles.",
+        "zh": { "name": "Gelid Riptide", "description": "概率释放多个波之冰锥。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2026,6 +2176,7 @@
         "positionIndex": 14,
         "name": "Unstoppable Assault",
         "description": "Summon a vortex of orbiting icicles piercing monsters on hit.",
+        "zh": { "name": "Unstoppable Assault", "description": "召唤物漩涡之环绕冰锥穿透怪物命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_count": 0 },
@@ -2040,6 +2191,7 @@
     "name": "Glacial Armor",
     "kind": "passive",
     "description": "Increases your all resistances.",
+    "zh": { "name": "冰川护甲", "description": "提高你的全抗性。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -2057,6 +2209,7 @@
     "name": "The Embodiment of Aurgelmir",
     "kind": "buff",
     "description": "Summon the power of Aurgelmir and temporarily turn into a war machine of the frozen tundra increasing your attack damage, attack speed and life replenish.",
+    "zh": { "name": "奥尔盖尔米尔化身", "description": "召唤奥尔盖尔米尔之力，暂时化为冰封苔原的战争机器，提高你的攻击伤害、攻击速度和生命恢复。" },
     "tags": ["Cast", "Active", "Buff", "Shape Shift"],
     "movementDuringUse": 85,
     "baseCastRate": 1,

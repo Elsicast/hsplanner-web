@@ -1,6 +1,7 @@
 {
   "id": "marksman",
   "name": "Marksman",
+  "zh": { "name": "神射手" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

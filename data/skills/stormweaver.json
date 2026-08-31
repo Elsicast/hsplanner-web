@@ -5,6 +5,7 @@
     "name": "Charged Bolts",
     "kind": "active",
     "description": "Unleash multiple sparking bolts of electricity dealing lightning damage on hit.",
+    "zh": { "name": "充能电矢", "description": "释放多道迸射的电矢，命中时造成闪电伤害。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "movementDuringUse": 65,
@@ -51,6 +52,7 @@
         "positionIndex": 0,
         "name": "Charged Bolts",
         "description": "Core of the Charged Bolts subtree.",
+        "zh": { "name": "充能电矢", "description": "充能电矢 子树核心。" },
         "maxRank": 1
       },
       {
@@ -58,6 +60,7 @@
         "positionIndex": 1,
         "name": "Bigger Outlet",
         "description": "Increases the amount of charged bolts.",
+        "zh": { "name": "更大 Outlet", "description": "提高 充能电矢 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -69,6 +72,7 @@
         "positionIndex": 2,
         "name": "Electric Vains",
         "description": "Increases the damage dealt by charged bolts.",
+        "zh": { "name": "电气 Vains", "description": "提高造成的伤害充能电矢。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -80,6 +84,7 @@
         "positionIndex": 3,
         "name": "Flash Bolt",
         "description": "Increases the projectile speed of charged bolts.",
+        "zh": { "name": "Flash 电矢", "description": "提高 充能电矢 的投射物速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -91,6 +96,7 @@
         "positionIndex": 4,
         "name": "Halting Storm",
         "description": "Chance to deal increased damage slowing targets on hit.",
+        "zh": { "name": "Halting 风暴", "description": "命中时有概率造成提高伤害减速目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_lightning_dmg_slow": 0 },
@@ -107,6 +113,7 @@
         "positionIndex": 5,
         "name": "Weakening Charge",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "虚弱冲锋", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -128,6 +135,7 @@
         "positionIndex": 6,
         "name": "Efficient Wiring",
         "description": "Decreases the mana cost of charged bolts.",
+        "zh": { "name": "高效 Wiring", "description": "降低法力消耗之充能电矢。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -139,6 +147,7 @@
         "positionIndex": 7,
         "name": "Non-conductive Boots",
         "description": "Decreases movement diminish when using charged bolts.",
+        "zh": { "name": "非-conductive Boots", "description": "使用充能电矢时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -150,6 +159,7 @@
         "positionIndex": 8,
         "name": "Static Buildup",
         "description": "Increases the size of charged bolts.",
+        "zh": { "name": "静电 Buildup", "description": "提高 充能电矢 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -161,6 +171,7 @@
         "positionIndex": 9,
         "name": "Additive Voltage",
         "description": "Chance on cast to increase the amount of charged bolts.",
+        "zh": { "name": "Additive 电压", "description": "施法时有概率提高数量之充能电矢。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -176,6 +187,7 @@
         "positionIndex": 10,
         "name": "Electrocharged Therapy",
         "description": "Chance to inflict stasis on hit.",
+        "zh": { "name": "Electrocharged Therapy", "description": "命中时有概率施加停滞。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -194,6 +206,7 @@
         "positionIndex": 11,
         "name": "Electric Field",
         "description": "Unleash charged bolts in a circle around you causing them to return after a short duration.",
+        "zh": { "name": "电气野域", "description": "释放充能电矢圆环周围你使其反伤之后短距持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "lightning_skill_damage": 0 },
@@ -205,6 +218,7 @@
         "positionIndex": 12,
         "name": "World Ender",
         "description": "Conjure a single large charged bolt scaling from projectile amount and unleashing charged bolts into all directions after exploding.",
+        "zh": { "name": "World Ender", "description": "召唤单次大型充能电矢加成从投射物数量与释放充能电矢进入全部方向之后 exploding。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_size": 0 },
@@ -216,6 +230,7 @@
         "positionIndex": 13,
         "name": "Loaded Thunder",
         "description": "Chance to unleash a large pulsating thunder bolt on hit dealing increased damage.",
+        "zh": { "name": "Loaded 雷霆", "description": "概率释放大型 pulsating 雷霆电矢命中时造成提高伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -231,6 +246,7 @@
         "positionIndex": 14,
         "name": "Railgun",
         "description": "Unleash charged bolts as a barrage dealing increased damage. Charged bolts now has a cooldown.",
+        "zh": { "name": "Railgun", "description": "释放充能电矢齐射造成提高伤害。充能电矢有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_speed": 0 },
@@ -245,6 +261,7 @@
     "name": "Pulsing Charge",
     "kind": "passive",
     "description": "Amplifies the power of your lightning spells through resonating discharge.",
+    "zh": { "name": "脉动充能", "description": "通过共振放电放大你闪电法术的威力。" },
     "tags": ["Passive", "Area of Effect"],
     "maxRank": 20,
     "tree": "Storm Conjurer",
@@ -260,6 +277,7 @@
     "name": "Lightning Surge",
     "kind": "active",
     "description": "Unleash a surge of lightning dealing lightning damage.",
+    "zh": { "name": "闪电奔流", "description": "释放一道闪电奔流，造成闪电伤害。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "movementDuringUse": 65,
@@ -307,6 +325,7 @@
         "positionIndex": 0,
         "name": "Lightning Surge",
         "description": "Core of the Lightning Surge subtree.",
+        "zh": { "name": "闪电奔流", "description": "闪电奔流 子树核心。" },
         "maxRank": 1
       },
       {
@@ -314,6 +333,7 @@
         "positionIndex": 1,
         "name": "Amplified Storm",
         "description": "Increases the damage dealt by lightning surge.",
+        "zh": { "name": "强化风暴", "description": "提高造成的伤害闪电奔流。" },
         "maxRank": 7,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -325,6 +345,7 @@
         "positionIndex": 2,
         "name": "Storm´s Prophet",
         "description": "Decreases the mana cost of lightning surge.",
+        "zh": { "name": "风暴的先知", "description": "降低法力消耗之闪电奔流。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -336,6 +357,7 @@
         "positionIndex": 3,
         "name": "Shocked to the Core",
         "description": "Chance to lower target attack rating on hit.",
+        "zh": { "name": "电击至核心", "description": "命中时有概率降低目标攻击命中。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -354,6 +376,7 @@
         "positionIndex": 4,
         "name": "Heated Lightning",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "Heated 闪电", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -372,6 +395,7 @@
         "positionIndex": 5,
         "name": "Piercing Bolt",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "穿透电矢", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -393,6 +417,7 @@
         "positionIndex": 6,
         "name": "Restoring Surge",
         "description": "Chance to restore portion of your maximum mana on hit.",
+        "zh": { "name": "恢复涌动", "description": "命中时有概率restore 一部分你的最大法力。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -408,6 +433,7 @@
         "positionIndex": 7,
         "name": "Voltaic Pressure",
         "description": "Increases cast rate when using lightning surge.",
+        "zh": { "name": "Voltaic 压迫", "description": "提高施法速度使用闪电奔流。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -419,6 +445,7 @@
         "positionIndex": 8,
         "name": "Storm Summoner",
         "description": "Chance to summon a small storm cloud on hit.",
+        "zh": { "name": "风暴 Summoner", "description": "命中时有概率召唤物小型风暴云。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -435,6 +462,7 @@
         "positionIndex": 9,
         "name": "Lightning Strikes Twice!",
         "description": "Chance on cast to unleash an additional lightning surge.",
+        "zh": { "name": "闪电打击 Twice!", "description": "施法时有概率释放额外闪电奔流。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -447,6 +475,7 @@
         "positionIndex": 10,
         "name": "Grounding Surge",
         "description": "Chance for lightning surge to explode into multiple smaller surges on hit.",
+        "zh": { "name": "Grounding 涌动", "description": "概率使闪电奔流至爆炸进入多个更小涌动命中时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -462,6 +491,7 @@
         "positionIndex": 11,
         "name": "Surging Comeback",
         "description": "Lightning surge returns after a short duration dealing increased damage.",
+        "zh": { "name": "奔涌 Comeback", "description": "闪电奔流反伤之后短距持续时间造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -473,6 +503,7 @@
         "positionIndex": 12,
         "name": "Supercharged",
         "description": "Unleash multiple narrower surges in an arc dealing a portion of the damage.",
+        "zh": { "name": "Supercharged", "description": "释放多个 narrower 涌动呈弧线造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 2 },
@@ -484,6 +515,7 @@
         "positionIndex": 13,
         "name": "Concurrent Current",
         "description": "Lightning surge attaches a tether to multiple targets dealing damage over time.",
+        "zh": { "name": "Concurrent 当前", "description": "闪电奔流 attaches tether 至多个目标造成伤害随时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "chain_lightning_targets": 0 },
@@ -495,6 +527,7 @@
         "positionIndex": 14,
         "name": "Surging Tornado",
         "description": "Unleash a tornado of surging lightning dealing increased damage.",
+        "zh": { "name": "奔涌龙卷风", "description": "释放龙卷风之奔涌闪电造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -509,6 +542,7 @@
     "name": "Chain Lightning",
     "kind": "passive",
     "description": "Lightning Surge now unleashes chain lightning when colliding with a monster.",
+    "zh": { "name": "连锁闪电", "description": "闪电奔流现在与怪物碰撞时会释放连锁闪电。" },
     "tags": ["Passive", "Chain Lightning"],
     "maxRank": 20,
     "tree": "Storm Conjurer",
@@ -528,6 +562,7 @@
     "name": "Gateway",
     "kind": "active",
     "description": "Instantly teleport to target spot. Each rank increases teleport range by +2%.",
+    "zh": { "name": "传送门", "description": "立即传送到目标位置。每级提高 2% 传送距离。" },
     "tags": ["Cast", "Active", "Movement", "Blink"],
     "movementDuringUse": 0,
     "baseCastRate": 1,
@@ -546,6 +581,7 @@
     "name": "Static Shock",
     "kind": "active",
     "description": "Shock target location with static electricity inflicting monsters with static shock dealing lightning damage over time.",
+    "zh": { "name": "静电冲击", "description": "以静电电击目标位置，使怪物带电，持续造成闪电伤害。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Spell"],
     "movementDuringUse": 65,
@@ -578,6 +614,7 @@
         "positionIndex": 0,
         "name": "Static Shock",
         "description": "Core of the Static Shock subtree.",
+        "zh": { "name": "静电冲击", "description": "静电冲击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -585,6 +622,7 @@
         "positionIndex": 1,
         "name": "High Voltage Shock",
         "description": "Increases the damage dealt by static shock.",
+        "zh": { "name": "高电压冲击", "description": "提高造成的伤害静电冲击。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -596,6 +634,7 @@
         "positionIndex": 2,
         "name": "Uprising Charge",
         "description": "Decreases the cooldown of static shock.",
+        "zh": { "name": "Uprising 冲锋", "description": "降低cooldown 之静电冲击。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -607,6 +646,7 @@
         "positionIndex": 3,
         "name": "Field of Shock",
         "description": "Increases the area of effect radius of static shock.",
+        "zh": { "name": "野域之冲击", "description": "提高 effect radius of 静电冲击 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -618,6 +658,7 @@
         "positionIndex": 4,
         "name": "Initial Zap",
         "description": "Static shock shocks monsters with an initial hit dealing increased damage.",
+        "zh": { "name": "Initial 电击", "description": "静电冲击电击怪物使用 initial 命中造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -629,6 +670,7 @@
         "positionIndex": 5,
         "name": "Multishock",
         "description": "Chance on cast to unleash an additional static shock.",
+        "zh": { "name": "Multishock", "description": "施法时有概率释放额外静电冲击。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -644,6 +686,7 @@
         "positionIndex": 6,
         "name": "Storms Reach",
         "description": "Increases the maximum cast range of static shock.",
+        "zh": { "name": "风暴延伸", "description": "提高 静电冲击 的最大施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -655,6 +698,7 @@
         "positionIndex": 7,
         "name": "Storm Infused Vains",
         "description": "Increases the tick frequency of static shock.",
+        "zh": { "name": "风暴灌注 Vains", "description": "提高 静电冲击 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -666,6 +710,7 @@
         "positionIndex": 8,
         "name": "Lingering Electricity",
         "description": "Increases the duration of static shock.",
+        "zh": { "name": "延续 Electricity", "description": "提高 静电冲击 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -677,6 +722,7 @@
         "positionIndex": 9,
         "name": "Charged Shock",
         "description": "Chance on cast to increase the damage dealt by static shock.",
+        "zh": { "name": "充能冲击", "description": "施法时有概率提高造成的伤害静电冲击。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -692,6 +738,7 @@
         "positionIndex": 10,
         "name": "Weakening Strike",
         "description": "Inflicts lightning break on hit.",
+        "zh": { "name": "虚弱 Strike", "description": "命中时施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -713,6 +760,7 @@
         "positionIndex": 11,
         "name": "Self Ionization",
         "description": "Static shock follows you with increased duration inflicting statick shock to nearby monsters.",
+        "zh": { "name": "自我 Ionization", "description": "静电冲击跟随你使用提高持续时间施加 statick 冲击至附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "skill_duration": 0 },
@@ -724,6 +772,7 @@
         "positionIndex": 12,
         "name": "Leeching Shock",
         "description": "Chance on tick to restore a portion of your maximum mana dealing increased damage and stunning the target.",
+        "zh": { "name": "吸取冲击", "description": "概率在每跳至 restore 一部分你的最大法力造成提高伤害与眩晕目标。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -743,6 +792,7 @@
         "positionIndex": 13,
         "name": "Thunders Embrace",
         "description": "Increases the area of effect radius inflicting stasis on hit.",
+        "zh": { "name": "雷霆拥抱", "description": "提高 effect radius inflicting stasis on hit 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "increased_stasis_damage": 0 },
@@ -761,6 +811,7 @@
         "positionIndex": 14,
         "name": "Ultimate Static Current",
         "description": "Chance on tick to unleash a lightning surge towards the target.",
+        "zh": { "name": "Ultimate 静电当前", "description": "概率在每跳至释放闪电奔流朝向目标。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -779,6 +830,7 @@
     "name": "Storm Cloud",
     "kind": "active",
     "description": "Conjure a storm cloud at target location striking monsters with surges of lightning dealing lightning damage.",
+    "zh": { "name": "风暴云", "description": "在目标位置召唤一团风暴云，以闪电奔流轰击怪物，造成闪电伤害。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 65,
@@ -811,6 +863,7 @@
         "positionIndex": 0,
         "name": "Storm Cloud",
         "description": "Core of the Storm Cloud subtree.",
+        "zh": { "name": "风暴云", "description": "风暴云 子树核心。" },
         "maxRank": 1
       },
       {
@@ -818,6 +871,7 @@
         "positionIndex": 1,
         "name": "Rapid and Intense Glaciation",
         "description": "Increases the tick frequency of storm cloud.",
+        "zh": { "name": "迅捷与 Intense Glaciation", "description": "提高 风暴云 的每跳 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -829,6 +883,7 @@
         "positionIndex": 2,
         "name": "Demolishing Discharge",
         "description": "Increases the damage dealt by storm cloud.",
+        "zh": { "name": "Demolishing Discharge", "description": "提高造成的伤害风暴云。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -840,6 +895,7 @@
         "positionIndex": 3,
         "name": "Storm Conjurer",
         "description": "Decreases the mana cost of storm cloud.",
+        "zh": { "name": "风暴 Conjurer", "description": "降低法力消耗之风暴云。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -851,6 +907,7 @@
         "positionIndex": 4,
         "name": "Shocking Thunder",
         "description": "Chance to inflict stasis on hit.",
+        "zh": { "name": "电击雷霆", "description": "命中时有概率施加停滞。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -869,6 +926,7 @@
         "positionIndex": 5,
         "name": "Destructive Cloudburst",
         "description": "Chance to unleash multiple charged bolts on hit.",
+        "zh": { "name": "Destructive Cloudburst", "description": "命中时有概率释放多个充能电矢。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -884,6 +942,7 @@
         "positionIndex": 6,
         "name": "Maelstorm",
         "description": "Increases the area of effect radius of storm cloud.",
+        "zh": { "name": "Maelstorm", "description": "提高 effect radius of 风暴云 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -895,6 +954,7 @@
         "positionIndex": 7,
         "name": "Supercell Storm",
         "description": "Increases the duration of storm cloud.",
+        "zh": { "name": "Supercell 风暴", "description": "提高 风暴云 的持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -906,6 +966,7 @@
         "positionIndex": 8,
         "name": "Heatcharged Lightning",
         "description": "Chance to leave the ground on flames on hit dealing damage over time.",
+        "zh": { "name": "Heatcharged 闪电", "description": "概率留下地面烈焰命中时造成伤害随时间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -921,6 +982,7 @@
         "positionIndex": 9,
         "name": "Thunder´s Roar",
         "description": "Chance on cast to unleash an additional storm cloud.",
+        "zh": { "name": "雷霆的 Roar", "description": "施法时有概率释放额外风暴云。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -936,6 +998,7 @@
         "positionIndex": 10,
         "name": "Homing Tempest",
         "description": "Storm cloud now slowly moves towards the closest nearby monster.",
+        "zh": { "name": "追踪 Tempest", "description": "风暴云缓慢 moves 朝向最近的附近怪物。" },
         "maxRank": 2,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -947,6 +1010,7 @@
         "positionIndex": 11,
         "name": "Orbiting Tempest",
         "description": "Conjure multiple storm clouds orbitting around you.",
+        "zh": { "name": "环绕 Tempest", "description": "召唤多个风暴云雾 orbitting 周围你。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -958,6 +1022,7 @@
         "positionIndex": 12,
         "name": "Storm Front",
         "description": "Unleash a large storm cloud with a chance of striking monsters with lightning bolts dealing heavy damage.",
+        "zh": { "name": "风暴 Front", "description": "释放大型风暴云使用概率之打击怪物使用闪电电矢造成重型伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -973,6 +1038,7 @@
         "positionIndex": 13,
         "name": "Aftershock",
         "description": "Increases the area of effect radius of storm cloud leaving the ground below charged with electricity dealing damage over time and slowing monsters on hit.",
+        "zh": { "name": "余震", "description": "击杀时有概率以提高的闪电伤害对最近的怪物施放天启惊雷。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "of_total_damage": 0 },
@@ -984,6 +1050,7 @@
         "positionIndex": 14,
         "name": "Apocalyptic Event",
         "description": "Chance to unleash apocalyptic thunder on hit dealing additional damage executing targets with life below a threshold.",
+        "zh": { "name": "天启 Event", "description": "概率释放天启惊雷命中时造成额外伤害 executing 目标使用生命低于阈值。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1002,6 +1069,7 @@
     "name": "Symphony of Thunder",
     "kind": "active",
     "description": "Gain increased lightning damage for a short period of time also zapping all monsters with thunderbolts when hit by a lightning skill.",
+    "zh": { "name": "雷霆交响曲", "description": "短时间内获得提高的闪电伤害，并且被闪电技能命中时，所有怪物都会遭到雷霆电击。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 85,
@@ -1027,6 +1095,7 @@
     "name": "Manafiend",
     "kind": "passive",
     "description": "Sharpens your focus, reducing the mana cost of every cast.",
+    "zh": { "name": "法力嗜者", "description": "锐化你的专注，降低每次施法的法力消耗。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "tree": "Storm Conjurer",
@@ -1046,6 +1115,7 @@
     "name": "Wave Length",
     "kind": "passive",
     "description": "Increases the projectile speed of all skills.",
+    "zh": { "name": "波长", "description": "提高所有技能的投射物速度。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "tree": "Essence of Storm",
@@ -1065,6 +1135,7 @@
     "name": "Electric Cells",
     "kind": "passive",
     "description": "Charges the body with electrical capacitors, boosting mana regeneration and raw energy.",
+    "zh": { "name": "电容之躯", "description": "为身体充入电容器，提升法力回复和原始能量。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "tree": "Essence of Storm",
@@ -1084,6 +1155,7 @@
     "name": "The Battery Within",
     "kind": "passive",
     "description": "Gain increased life, mana and all resistances.",
+    "zh": { "name": "体内电池", "description": "获得提高的生命、法力和全抗性。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "tree": "Essence of Storm",
@@ -1111,6 +1183,7 @@
     "name": "Hyper Charged",
     "kind": "passive",
     "description": "Chance on Cast to gain increased faster cast rate for a short period of time.",
+    "zh": { "name": "超频充能", "description": "施法时有概率在短时间内获得提高的施法速度。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "tree": "Essence of Storm",
@@ -1130,6 +1203,7 @@
     "name": "Apocalyptic Thunder",
     "kind": "active",
     "description": "Cast a high voltage thunder bolt on target spot stunning and dealing massive area of effect damage.",
+    "zh": { "name": "天启惊雷", "description": "在目标位置施放一道高压雷霆，眩晕并造成巨额范围伤害。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 65,
@@ -1155,6 +1229,7 @@
         "positionIndex": 0,
         "name": "Apocalyptic Thunder",
         "description": "Core of the Apocalyptic Thunder subtree.",
+        "zh": { "name": "天启惊雷", "description": "天启惊雷 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1162,6 +1237,7 @@
         "positionIndex": 1,
         "name": "Voltage Amplification",
         "description": "Increases the damage dealt by apocalyptic thunder.",
+        "zh": { "name": "电压 Amplification", "description": "提高造成的伤害天启惊雷。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1173,6 +1249,7 @@
         "positionIndex": 2,
         "name": "Center of the Storm",
         "description": "Decreases the mana cost of apocalyptic thunder.",
+        "zh": { "name": "Center 之风暴", "description": "降低法力消耗之天启惊雷。" },
         "maxRank": 3,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1184,6 +1261,7 @@
         "positionIndex": 3,
         "name": "Immobilizing Thunderstrike",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "Immobilizing Thunderstrike", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1200,6 +1278,7 @@
         "positionIndex": 4,
         "name": "Speed of Sound",
         "description": "Increases the area of effect radius of apocalyptic thunder.",
+        "zh": { "name": "速度之音波", "description": "提高 effect radius of 天启惊雷 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1211,6 +1290,7 @@
         "positionIndex": 5,
         "name": "Spontanious Rupture",
         "description": "Chance to unleash an additional apocalyptic thunder on hit.",
+        "zh": { "name": "Spontanious 破裂", "description": "命中时有概率释放额外天启惊雷。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1226,6 +1306,7 @@
         "positionIndex": 6,
         "name": "Conjurers Skill",
         "description": "Decreases movement diminish when using apocalyptic thunder.",
+        "zh": { "name": "Conjurers 技能", "description": "使用天启惊雷时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1237,6 +1318,7 @@
         "positionIndex": 7,
         "name": "Horizontal Travel",
         "description": "Increases the maximum cast range of apocalyptic thunder.",
+        "zh": { "name": "Horizontal 飞行", "description": "提高 天启惊雷 的最大施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1248,6 +1330,7 @@
         "positionIndex": 8,
         "name": "Shocking Lightningstrike",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "电击 Lightningstrike", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -1269,6 +1352,7 @@
         "positionIndex": 9,
         "name": "30000 Degrees",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "30000 Degrees", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1287,6 +1371,7 @@
         "positionIndex": 10,
         "name": "Fracturing Thunder",
         "description": "Increases damage dealt to stunned and burning targets.",
+        "zh": { "name": "Fracturing 雷霆", "description": "提高对 眩晕与燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0, "extra_damage_burning": 0 },
@@ -1298,6 +1383,7 @@
         "positionIndex": 11,
         "name": "Lightning Rod",
         "description": "Chance on cast to unleash a chain of shrinking apocalyptic thunders on hit.",
+        "zh": { "name": "闪电 Rod", "description": "施法时有概率释放连锁之 shrinking 天启雷霆命中时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_cast",
@@ -1313,6 +1399,7 @@
         "positionIndex": 12,
         "name": "Symphony of the Storm",
         "description": "Apocalyptic thunder strikes multiple times dealing less damage with every strike. Apocalyptic thunder now has a cooldown.",
+        "zh": { "name": "交响曲之风暴", "description": "天启惊雷打击多个次造成较少伤害使用每 strike。天启惊雷有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_count": 0 },
@@ -1324,6 +1411,7 @@
         "positionIndex": 13,
         "name": "Lethal Voltage",
         "description": "Inflicts stasis and lightning break on hit.",
+        "zh": { "name": "致命电压", "description": "命中时施加停滞与闪电击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_break": 0, "increased_stasis_damage": 0 },
@@ -1346,6 +1434,7 @@
         "positionIndex": 14,
         "name": "Superstorm",
         "description": "Unleash a nova of lightning knocking enemies back with increased damage.",
+        "zh": { "name": "Superstorm", "description": "释放新星之闪电击退敌人回使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1360,6 +1449,7 @@
     "name": "Aftershock",
     "kind": "passive",
     "description": "Chance on kill to cast Apocalyptic Thunder on the closest monster with increased lightning damage.",
+    "zh": { "name": "余震", "description": "击杀时有概率以提高的闪电伤害对最近的怪物施放天启惊雷。" },
     "tags": ["Passive", "Area of Effect"],
     "maxRank": 20,
     "tree": "Essence of Storm",
@@ -1384,6 +1474,7 @@
     "name": "Loaded Pulse",
     "kind": "passive",
     "description": "Storm Bolt now creates an additional static pulse dealing increased area of effect lightning damage.",
+    "zh": { "name": "蓄能脉冲", "description": "风暴之矢现在会生成额外的静电脉冲，造成提高的范围闪电伤害。" },
     "tags": ["Passive", "Area of Effect"],
     "maxRank": 20,
     "tree": "Essence of Storm",
@@ -1403,6 +1494,7 @@
     "name": "Storm Bolt",
     "kind": "active",
     "description": "Unleash a bolt of lightning dealing area of effect lightning damage.",
+    "zh": { "name": "风暴之矢", "description": "释放一道闪电箭矢，造成范围闪电伤害。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Spell", "Projectile", "Explosion"],
     "movementDuringUse": 65,
@@ -1429,6 +1521,7 @@
         "positionIndex": 0,
         "name": "Storm Bolt",
         "description": "Core of the Storm Bolt subtree.",
+        "zh": { "name": "风暴之矢", "description": "风暴之矢 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1436,6 +1529,7 @@
         "positionIndex": 1,
         "name": "Bolts of Devastation",
         "description": "Increases the damage dealt by storm bolt.",
+        "zh": { "name": "电矢之 Devastation", "description": "提高造成的伤害风暴之矢。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1447,6 +1541,7 @@
         "positionIndex": 2,
         "name": "Beaming Cast",
         "description": "Increases the projectile speed of storm bolt.",
+        "zh": { "name": "Beaming 施法", "description": "提高 风暴之矢 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1458,6 +1553,7 @@
         "positionIndex": 3,
         "name": "Expanding Storm",
         "description": "Increases the projectile size of storm bolt.",
+        "zh": { "name": "Expanding 风暴", "description": "提高 风暴之矢 的投射物尺寸。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1469,6 +1565,7 @@
         "positionIndex": 4,
         "name": "Static Explosion",
         "description": "Increases the area of effect radius of storm bolt.",
+        "zh": { "name": "静电爆炸", "description": "提高 effect radius of 风暴之矢 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1480,6 +1577,7 @@
         "positionIndex": 5,
         "name": "Tiny Storms",
         "description": "Chance on cast to unleash multiple smaller storm bolts in a barrage.",
+        "zh": { "name": "Tiny 风暴", "description": "施法时有概率释放多个更小风暴电矢齐射。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1495,6 +1593,7 @@
         "positionIndex": 6,
         "name": "Surging Colossus",
         "description": "Increases damage dealt to bosses.",
+        "zh": { "name": "奔涌巨像", "description": "提高对 首领 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1506,6 +1605,7 @@
         "positionIndex": 7,
         "name": "Quantity of Power",
         "description": "Chance on cast to fire an additional storm bolt.",
+        "zh": { "name": "Quantity 之力量", "description": "施法时有概率火焰额外风暴之矢。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1521,6 +1621,7 @@
         "positionIndex": 8,
         "name": "Unleash Discharge",
         "description": "Chance to pull nearby monsters towards the target on hit dealing increased damage inflicting the target with lightning break.",
+        "zh": { "name": "释放 Discharge", "description": "概率牵引附近怪物朝向目标命中时造成提高伤害施加目标使用闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -1546,6 +1647,7 @@
         "positionIndex": 9,
         "name": "Storm Breeds Storm",
         "description": "Chance to summon a small storm cloud for a short duration at target location on hit.",
+        "zh": { "name": "风暴 Breeds 风暴", "description": "命中时有概率召唤物小型风暴云短时间内目标位置。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1561,6 +1663,7 @@
         "positionIndex": 10,
         "name": "Bouncing Bolts",
         "description": "Storm bolts can bounce off of terrain multiple times refreshing its lifetime.",
+        "zh": { "name": "弹跳电矢", "description": "风暴电矢可以弹射关闭之地形多个次刷新 lifetime。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -1572,6 +1675,7 @@
         "positionIndex": 11,
         "name": "Pulsating Bolt",
         "description": "Unleash a piercing and pulsating storm bolt with increased area of effect radius and damage.",
+        "zh": { "name": "Pulsating 电矢", "description": "释放穿透与 pulsating 风暴之矢使用提高范围半径与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "area_of_effect": 0 },
@@ -1583,6 +1687,7 @@
         "positionIndex": 12,
         "name": "Bouncing Charge",
         "description": "Unleash a piercing storm bolt bouncing between nearby monsters on hit increasing the damage dealt with each bounce.",
+        "zh": { "name": "弹跳冲锋", "description": "释放穿透风暴之矢弹跳 between 附近怪物命中时提高造成的伤害使用每个弹射。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_bounces": 0 },
@@ -1594,6 +1699,7 @@
         "positionIndex": 13,
         "name": "Storm Claw",
         "description": "Chance to unleash multiple surges of lightning in an arc towards target on hit.",
+        "zh": { "name": "风暴 Claw", "description": "命中时有概率释放多个涌动之闪电呈弧线朝向目标。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1609,6 +1715,7 @@
         "positionIndex": 14,
         "name": "Magnetize",
         "description": "Pull all nearby monsters towards the target on hit causing a large electromagnetic explosion slowing and dealing increased damage.",
+        "zh": { "name": "Magnetize", "description": "牵引附近所有怪物朝向目标命中时使大型 electromagnetic 爆炸减速与造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1631,6 +1738,7 @@
     "name": "High Voltage Aura",
     "kind": "aura",
     "description": "Surround yourself with crackling high-voltage currents that amplify the damage of nearby allies.",
+    "zh": { "name": "高压光环", "description": "以噼啪作响的高压电流环绕自身，放大附近盟友的伤害。" },
     "damageType": "lightning",
     "tags": ["Cast", "Active", "Aura"],
     "maxRank": 20,

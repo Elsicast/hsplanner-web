@@ -5,6 +5,7 @@
     "name": "Scorching Whip",
     "kind": "active",
     "description": "Cast a scorching solar flare that whips forward dealing fire damage to monsters hit.",
+    "zh": { "name": "灼日之鞭", "description": "挥出灼热耀斑之鞭抽向前方，对命中的怪物造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Melee"],
     "movementDuringUse": 85,
@@ -29,6 +30,7 @@
         "positionIndex": 0,
         "name": "Scorching Whip",
         "description": "Core of the Scorching Whip subtree.",
+        "zh": { "name": "灼日之鞭", "description": "灼日之鞭 子树核心。" },
         "maxRank": 1
       },
       {
@@ -36,6 +38,7 @@
         "positionIndex": 1,
         "name": "Double Whip",
         "description": "Chance on attack to unleash an additional scorching whip.",
+        "zh": { "name": "双重 Whip", "description": "攻击时有概率释放额外灼日之鞭。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -51,6 +54,7 @@
         "positionIndex": 2,
         "name": "Celestial Burn",
         "description": "Increases the damage dealt by scorching whip.",
+        "zh": { "name": "Celestial 燃烧", "description": "提高造成的伤害灼日之鞭。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -62,6 +66,7 @@
         "positionIndex": 3,
         "name": "Overheating",
         "description": "Decreases the mana cost of scorching whip.",
+        "zh": { "name": "Overheating", "description": "降低法力消耗之灼日之鞭。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -73,6 +78,7 @@
         "positionIndex": 4,
         "name": "Punishing Flames",
         "description": "Chance to unleash burning fissures on hit dealing additional damage.",
+        "zh": { "name": "Punishing 烈焰", "description": "概率释放燃烧地裂命中时造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -89,6 +95,7 @@
         "positionIndex": 5,
         "name": "Sun Gods Chosen",
         "description": "Increases attack speed when using scorching whip with a sword, cane or staff.",
+        "zh": { "name": "Sun 神明 Chosen", "description": "提高攻击速度使用灼日之鞭使用 sword，手杖法杖。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -100,6 +107,7 @@
         "positionIndex": 6,
         "name": "Solar Arch",
         "description": "Increases the area of effect radius of scorching whip.",
+        "zh": { "name": "太阳 Arch", "description": "提高 effect radius of 灼日之鞭 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -111,6 +119,7 @@
         "positionIndex": 7,
         "name": "Critical Temperature",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "暴击 Temperature", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -122,6 +131,7 @@
         "positionIndex": 8,
         "name": "Fire Starter",
         "description": "Chance on attack to unleash multiple fire balls in an arc towards target location.",
+        "zh": { "name": "火焰 Starter", "description": "攻击时有概率释放多个火焰球呈弧线朝向目标位置。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -137,6 +147,7 @@
         "positionIndex": 9,
         "name": "Scorching Snap",
         "description": "Chance to knock monsters back on hit dealing increased damage.",
+        "zh": { "name": "灼热 Snap", "description": "概率击退怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -152,6 +163,7 @@
         "positionIndex": 10,
         "name": "Celestial Aid",
         "description": "Chance to summon an additional whip at targets location on hit targeting a nearby monster.",
+        "zh": { "name": "Celestial 援助", "description": "概率召唤物额外 whip 目标位置命中时 targeting 附近怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -167,6 +179,7 @@
         "positionIndex": 11,
         "name": "Solar Harvester",
         "description": "Slash with multiple whips in an arc dealing a portion of the damage.",
+        "zh": { "name": "太阳 Harvester", "description": "斩击使用多个 whips 呈弧线造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -178,6 +191,7 @@
         "positionIndex": 12,
         "name": "Blasting Whiplash",
         "description": "Unleash a fiery explosion on hit dealing area of effect damage.",
+        "zh": { "name": "爆破鞭梢反卷", "description": "释放炽焰爆炸命中时造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "area_of_effect": 0 },
@@ -189,6 +203,7 @@
         "positionIndex": 13,
         "name": "Flaming Whip",
         "description": "Chance to unleash flames at target location on hit dealing damage over time and slowing monsters.",
+        "zh": { "name": "燃烧 Whip", "description": "概率释放烈焰目标位置命中时造成伤害随时间与减速怪物。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -205,6 +220,7 @@
         "positionIndex": 14,
         "name": "Whirlwhipper",
         "description": "Perform a spinning attack with multiple whips.",
+        "zh": { "name": "Whirlwhipper", "description": "执行旋转攻击使用多个 whips。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 1, "of_total_damage": 0 },
@@ -219,6 +235,7 @@
     "name": "Solar Flare",
     "kind": "active",
     "description": "Unleash solar flare projectiles that homes towards monsters.",
+    "zh": { "name": "太阳耀斑", "description": "释放追踪怪物的太阳耀斑投射物。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Projectile", "Explosion"],
     "movementDuringUse": 65,
@@ -243,6 +260,7 @@
         "positionIndex": 0,
         "name": "Solar Flare",
         "description": "Core of the Solar Flare subtree.",
+        "zh": { "name": "太阳耀斑", "description": "太阳耀斑 子树核心。" },
         "maxRank": 1
       },
       {
@@ -250,6 +268,7 @@
         "positionIndex": 1,
         "name": "Solar Fireworks",
         "description": "Increases the projectile amount of solar flare.",
+        "zh": { "name": "太阳 Fireworks", "description": "提高 太阳耀斑 的投射物数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -261,6 +280,7 @@
         "positionIndex": 2,
         "name": "Blue Flame Fire",
         "description": "Increases the damage dealt by solar flare.",
+        "zh": { "name": "Blue Flame 火焰", "description": "提高造成的伤害太阳耀斑。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -272,6 +292,7 @@
         "positionIndex": 3,
         "name": "Rapidfire Cannoneer",
         "description": "Increases cast rate when using solar flare.",
+        "zh": { "name": "Rapidfire Cannoneer", "description": "提高施法速度使用太阳耀斑。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -283,6 +304,7 @@
         "positionIndex": 4,
         "name": "God Slayer",
         "description": "Increases damage dealt to bosses for solar flare.",
+        "zh": { "name": "神明杀手", "description": "提高对 首领太阳耀斑 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -294,6 +316,7 @@
         "positionIndex": 5,
         "name": "Explosive Flares",
         "description": "Chance to unleash fiery explosions on hit if target is burning.",
+        "zh": { "name": "爆炸耀斑", "description": "概率释放炽焰爆炸命中时 if 目标燃烧。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -310,6 +333,7 @@
         "positionIndex": 6,
         "name": "Solar's Edge",
         "description": "Monster kills grant you a stack of solar´s edge increasing the damage and projectile amount of solar flare.",
+        "zh": { "name": "太阳的锋刃", "description": "怪物击杀赋予你层之太阳的锋刃提高伤害与投射物数量之太阳耀斑。" },
         "maxRank": 4,
         "effects": {
           "base": {
@@ -329,6 +353,7 @@
         "positionIndex": 7,
         "name": "Everburning Fire",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "Everburning 火焰", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -347,6 +372,7 @@
         "positionIndex": 8,
         "name": "Flaming Hands",
         "description": "Decreases the mana cost of solare flare.",
+        "zh": { "name": "燃烧 Hands", "description": "降低法力消耗之 solare 耀斑。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -358,6 +384,7 @@
         "positionIndex": 9,
         "name": "Celestial Step",
         "description": "Decreases movement diminish when using solar flare.",
+        "zh": { "name": "Celestial Step", "description": "使用太阳耀斑时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -369,6 +396,7 @@
         "positionIndex": 10,
         "name": "Burst of Power",
         "description": "Chance on cast to increase damage dealt and unleash additional solar flares.",
+        "zh": { "name": "迸发之力量", "description": "施法时有概率提高造成的伤害与释放额外太阳耀斑。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -384,6 +412,7 @@
         "positionIndex": 11,
         "name": "Grand Flare",
         "description": "Unleash a grand flare frequently spawning smaller flares. Solar flare has a cooldown.",
+        "zh": { "name": "Grand 耀斑", "description": "释放 grand 耀斑频繁生成更小耀斑。太阳耀斑有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "faster_cast_rate": 0 },
@@ -395,6 +424,7 @@
         "positionIndex": 12,
         "name": "Sun´s Orbit",
         "description": "Summon solar flares orbiting you for a short duration.",
+        "zh": { "name": "Sun's 轨道", "description": "召唤物太阳耀斑环绕你短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -406,6 +436,7 @@
         "positionIndex": 13,
         "name": "Searing Flares",
         "description": "Increases the amount of projectiles inflicting fire break on hit.",
+        "zh": { "name": "灼烧耀斑", "description": "提高 projectiles inflicting fire break on hit 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_break": 0, "projectile_count": 0 },
@@ -424,6 +455,7 @@
         "positionIndex": 14,
         "name": "Solar Orbs",
         "description": "Summon multiple small suns frequently unleashing solar flares. solar flare now has a cooldown.",
+        "zh": { "name": "太阳宝珠", "description": "召唤物多个小型 suns 频繁释放太阳耀斑。太阳耀斑有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "skill_duration": 0 },
@@ -438,6 +470,7 @@
     "name": "Whiplash",
     "kind": "passive",
     "description": "Scorching Whip now creates a chaining fire ball that bounces between monsters. Fire balls can hit the same target multiple times.",
+    "zh": { "name": "鞭梢反卷", "description": "灼日之鞭现在会生成在怪物间弹跳的连锁火球。火球可以多次命中同一目标。" },
     "tags": ["Passive", "Chaining"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -455,6 +488,7 @@
     "name": "Solar Dash",
     "kind": "active",
     "description": "Turn into a burning ball of fire traveling towards target location dealing fire damage leaving a trail of flames behind you.",
+    "zh": { "name": "烈日疾冲", "description": "化为一团燃烧的火球冲向目标位置，造成火焰伤害，并在身后留下烈焰轨迹。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Movement", "Charge"],
     "movementDuringUse": 0,
@@ -478,6 +512,7 @@
         "positionIndex": 0,
         "name": "Solar Dash",
         "description": "Core of the Solar Dash subtree.",
+        "zh": { "name": "烈日疾冲", "description": "烈日疾冲 子树核心。" },
         "maxRank": 1
       },
       {
@@ -485,6 +520,7 @@
         "positionIndex": 1,
         "name": "Interstellar Traveller",
         "description": "Increases the speed of solar dash.",
+        "zh": { "name": "Interstellar Traveller", "description": "提高 烈日疾冲 的速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -496,6 +532,7 @@
         "positionIndex": 2,
         "name": "Burn Burn BURN",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "燃烧燃烧燃烧", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -514,6 +551,7 @@
         "positionIndex": 3,
         "name": "Solar Burst",
         "description": "Unleash a fiery explosion at the end dealing increased damage and inflicting burning on hit.",
+        "zh": { "name": "太阳迸发", "description": "击杀怪物时，在怪物尸体下方召唤一阵燃烧的太阳之火，造成范围火焰伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0, "increased_burning_damage": 0 },
@@ -532,6 +570,7 @@
         "positionIndex": 4,
         "name": "Restoring Flames",
         "description": "Gain increased life and mana replenish on cast for a short duration when solar form is active.",
+        "zh": { "name": "恢复烈焰", "description": "获得提高生命与法力恢复施法时短时间内当太阳形态激活。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0, "mana_replenish_pct": 0 },
@@ -543,6 +582,7 @@
         "positionIndex": 5,
         "name": "Cooldown Lap",
         "description": "Decreases the speed of solar dash.",
+        "zh": { "name": "Cooldown Lap", "description": "降低速度之烈日疾冲。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -554,6 +594,7 @@
         "positionIndex": 6,
         "name": "Plasma Dash",
         "description": "Chance to stun targets on hit.",
+        "zh": { "name": "Plasma 突进", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -566,6 +607,7 @@
         "positionIndex": 7,
         "name": "To Ashes",
         "description": "Increases the damage dealt by solar dash.",
+        "zh": { "name": "至 Ashes", "description": "提高造成的伤害烈日疾冲。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -577,6 +619,7 @@
         "positionIndex": 8,
         "name": "Protective Cover",
         "description": "Gain increased damage reduction for a short duration when using solar dash.",
+        "zh": { "name": "Protective 覆盖", "description": "获得提高伤害减免短时间内使用烈日疾冲。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -588,6 +631,7 @@
         "positionIndex": 9,
         "name": "Intense Flames",
         "description": "Increases the tick frequency of solar dash flames.",
+        "zh": { "name": "Intense 烈焰", "description": "提高 烈日疾冲 flames 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -599,6 +643,7 @@
         "positionIndex": 10,
         "name": "Shooting Star",
         "description": "Increases the speed of solar dash unleashing fireballs around you at the end dealing a portion of the damage.",
+        "zh": { "name": "射出 Star", "description": "提高 烈日疾冲 unleashing fireballs around you at the end dealing a portion of the damage 的速度。" },
         "maxRank": 5,
         "effects": {
           "base": {
@@ -618,6 +663,7 @@
         "positionIndex": 11,
         "name": "Bursting Flames",
         "description": "Flames now have a chance to explode into multiple fire balls into all directions when expiring.",
+        "zh": { "name": "Bursting 烈焰", "description": "Flames now 有概率爆炸进入多个火焰球进入全部方向当到期。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -633,6 +679,7 @@
         "positionIndex": 12,
         "name": "Solar Carnage",
         "description": "Rapidly unleash fire balls arcing on your sides while dashing.",
+        "zh": { "name": "太阳杀戮", "description": "迅速释放火焰球 arcing 你的 sides 当突进。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -644,6 +691,7 @@
         "positionIndex": 13,
         "name": "The Sun Goddess",
         "description": "Summon multiple orbiting solar orbs dealing increased damage but decreasing your dashing speed.",
+        "zh": { "name": "Sun Goddess", "description": "召唤物多个环绕太阳宝珠造成提高伤害 decreasing 你的突进速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0, "projectile_count": 0 },
@@ -655,6 +703,7 @@
         "positionIndex": 14,
         "name": "Photon Dash",
         "description": "Dash with the speed of light unleashing burning flames below target on collision dealing increased damage over time.",
+        "zh": { "name": "Photon 突进", "description": "突进使用速度之光明释放燃烧烈焰低于目标天体冲撞造成提高伤害随时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -669,6 +718,7 @@
     "name": "Shine Bright",
     "kind": "passive",
     "description": "Gain increased movement speed and attack speed.",
+    "zh": { "name": "璀璨夺目", "description": "获得提高的移动速度和攻击速度。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -686,6 +736,7 @@
     "name": "Solar Form",
     "kind": "buff",
     "description": "Turn into a living sun and gain additional fire damage. Every time you cast an active ability in solar form you unleash a fiery pulse around you.",
+    "zh": { "name": "太阳形态", "description": "化作一轮烈日，获得额外火焰伤害。在太阳形态下每次施放主动技能，都会在你周围释放一道炽热脉冲。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Buff", "Area of Effect", "Shape Shift"],
     "movementDuringUse": 85,
@@ -716,6 +767,7 @@
     "name": "Blinding Light",
     "kind": "passive",
     "description": "You emit a blinding light that gives you chance to evade monster attacks. You also have increased cast rate while in Solar Form.",
+    "zh": { "name": "炫目之光", "description": "你散发炫目光芒，获得闪避怪物攻击的概率。太阳形态下施法速度还会提高。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -733,6 +785,7 @@
     "name": "Solar Burst",
     "kind": "passive",
     "description": "When you kill a monster, summon a burning burst of solar fire beneath the dead monster that deals area of effect fire damage.",
+    "zh": { "name": "太阳迸发", "description": "击杀怪物时，在怪物尸体下方召唤一阵燃烧的太阳之火，造成范围火焰伤害。" },
     "damageType": "fire",
     "tags": ["Active", "Spell", "Area of Effect"],
     "maxRank": 20,
@@ -755,6 +808,7 @@
     "name": "Supernova",
     "kind": "active",
     "description": "Explode into a supernova dealing fire damage on a large radius.",
+    "zh": { "name": "超新星", "description": "爆炸成超新星，在大半径内造成火焰伤害。" },
     "damageType": "fire",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -779,6 +833,7 @@
         "positionIndex": 0,
         "name": "Supernova",
         "description": "Core of the Supernova subtree.",
+        "zh": { "name": "超新星", "description": "超新星 子树核心。" },
         "maxRank": 1
       },
       {
@@ -786,6 +841,7 @@
         "positionIndex": 1,
         "name": "White Dwarf Star",
         "description": "Increases the damage dealt by supernova.",
+        "zh": { "name": "White Dwarf Star", "description": "提高造成的伤害超新星。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -797,6 +853,7 @@
         "positionIndex": 2,
         "name": "Renewing Flare",
         "description": "Decreases the cooldown of supernova.",
+        "zh": { "name": "Renewing 耀斑", "description": "降低cooldown 之超新星。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -808,6 +865,7 @@
         "positionIndex": 3,
         "name": "Penetrating Blast",
         "description": "Chance to inflict elemental break on hit.",
+        "zh": { "name": "穿透爆破", "description": "命中时有概率施加元素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "elemental_break": 0 },
@@ -829,6 +887,7 @@
         "positionIndex": 4,
         "name": "Chained Explosions",
         "description": "Chance on cast to unleash an additional supernova.",
+        "zh": { "name": "Chained 爆炸", "description": "施法时有概率释放额外超新星。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -844,6 +903,7 @@
         "positionIndex": 5,
         "name": "Fight the Gravity",
         "description": "Increases the area of effect radius of supernova.",
+        "zh": { "name": "Fight Gravity", "description": "提高 effect radius of 超新星 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -855,6 +915,7 @@
         "positionIndex": 6,
         "name": "Weakening Nova",
         "description": "Inflicts fire break on hit.",
+        "zh": { "name": "虚弱新星", "description": "命中时施加火焰击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_break": 0 },
@@ -873,6 +934,7 @@
         "positionIndex": 7,
         "name": "Chain Reactions",
         "description": "Chance to unleash a fiery blast on hit dealing a portion of the damage.",
+        "zh": { "name": "连锁 Reactions", "description": "概率释放炽焰爆破命中时造成一部分伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -888,6 +950,7 @@
         "positionIndex": 8,
         "name": "Fiery Frenzy",
         "description": "Gain increased fire skill damage for a short duration when using supernova.",
+        "zh": { "name": "炽焰狂乱", "description": "获得提高火焰技能伤害短时间内使用超新星。" },
         "maxRank": 5,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -899,6 +962,7 @@
         "positionIndex": 9,
         "name": "Blast Right Trough",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "爆破 Right Trough", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -910,6 +974,7 @@
         "positionIndex": 10,
         "name": "Targeted Cosmic Event",
         "description": "Supernova can be casted on target location with increased cast range.",
+        "zh": { "name": "Targeted Cosmic Event", "description": "超新星可以 casted 目标位置使用提高施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -921,6 +986,7 @@
         "positionIndex": 11,
         "name": "Particle Outflux",
         "description": "Unleash multiple fire balls bouncing between targets on hit inflicting burning.",
+        "zh": { "name": "Particle Outflux", "description": "释放多个火焰球弹跳 between 目标命中时施加燃烧。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0, "projectile_bounces": 0 },
@@ -939,6 +1005,7 @@
         "positionIndex": 12,
         "name": "Solar Shockwave",
         "description": "Supernova knocks monsters back with force dealing increased damage and slowing them.",
+        "zh": { "name": "太阳震荡波", "description": "超新星击退怪物使用力量造成提高伤害与减速它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "fire_skill_damage": 0 },
@@ -950,6 +1017,7 @@
         "positionIndex": 13,
         "name": "Connected by Sun",
         "description": "Unleash trails of flaming fire towards monsters on hit dealing a portion of the damage.",
+        "zh": { "name": "Connected Sun", "description": "释放轨迹之燃烧火焰朝向怪物命中时造成一部分伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -965,6 +1033,7 @@
         "positionIndex": 14,
         "name": "Planetary Collision",
         "description": "Chance to rain scorching comets from the sky at monsters on hit dealing increased damage.",
+        "zh": { "name": "Planetary 天体冲撞", "description": "概率骤雨灼热彗星从天空怪物命中时造成提高伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -983,6 +1052,7 @@
     "name": "Collision",
     "kind": "active",
     "description": "Leap forward from your orbit and smash the ground dealing cold damage in an area. Then dash forward on the surface of earth for short period of time and deal cold damage.",
+    "zh": { "name": "天体冲撞", "description": "从轨道跃下猛击地面，造成范围冰冷伤害，随后沿地表向前短距冲刺并造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 0,
@@ -1007,6 +1077,7 @@
     "name": "Tsunami",
     "kind": "active",
     "description": "Direct your lunar mass to cast a wave of tsunami forward dealing cold damage.",
+    "zh": { "name": "海啸", "description": "牵引你的月球质量，向前掀起一道海啸之浪，造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Projectile", "Area of Effect"],
     "movementDuringUse": 65,
@@ -1031,6 +1102,7 @@
         "positionIndex": 0,
         "name": "Tsunami",
         "description": "Core of the Tsunami subtree.",
+        "zh": { "name": "海啸", "description": "海啸 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1038,6 +1110,7 @@
         "positionIndex": 1,
         "name": "Heavy Water",
         "description": "Increases the damage dealt by tsunami.",
+        "zh": { "name": "重型 Water", "description": "提高造成的伤害海啸。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1049,6 +1122,7 @@
         "positionIndex": 2,
         "name": "Arctic Aqua",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "Arctic Aqua", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -1067,6 +1141,7 @@
         "positionIndex": 3,
         "name": "Water Walker",
         "description": "Gain increased movement speed for a short duration when using tsunami.",
+        "zh": { "name": "Water Walker", "description": "获得提高移动速度短时间内使用海啸。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1078,6 +1153,7 @@
         "positionIndex": 4,
         "name": "Ramping Waves",
         "description": "Increases the damage dealt by tsunami over time.",
+        "zh": { "name": "叠升波", "description": "提高造成的伤害海啸随时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1089,6 +1165,7 @@
         "positionIndex": 5,
         "name": "Waterspout",
         "description": "Chance to unleash a burst of water on hit dealing a portion of the damage.",
+        "zh": { "name": "Waterspout", "description": "概率释放迸发之 water 命中时造成一部分伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1104,6 +1181,7 @@
         "positionIndex": 6,
         "name": "Chaining Waves",
         "description": "Increases cast rate and projectile speed when using tsunami.",
+        "zh": { "name": "连锁波", "description": "提高施法速度与投射物速度使用海啸。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0, "projectile_speed": 0 },
@@ -1115,6 +1193,7 @@
         "positionIndex": 7,
         "name": "Salt Balance",
         "description": "Increases damage dealt to frostbitten targets.",
+        "zh": { "name": "Salt Balance", "description": "提高对 frostbitten目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frost_bitten": 0 },
@@ -1126,6 +1205,7 @@
         "positionIndex": 8,
         "name": "Giant Waves",
         "description": "Increases the size of tsunami.",
+        "zh": { "name": "巨人波", "description": "提高 海啸 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1137,6 +1217,7 @@
         "positionIndex": 9,
         "name": "Asphyxiating Depths",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "窒息 Depths", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1148,6 +1229,7 @@
         "positionIndex": 10,
         "name": "Beyond the Horizon",
         "description": "Increases the duration of tsunami decreasing its projectile speed.",
+        "zh": { "name": "Beyond Horizon", "description": "提高 海啸 decreasing its projectile speed 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0, "projectile_speed": 0 },
@@ -1159,6 +1241,7 @@
         "positionIndex": 11,
         "name": "Trembling Tidalwave",
         "description": "Increases the width of tsunami knocking monsters up dealing increased damage.",
+        "zh": { "name": "震荡 Tidalwave", "description": "提高 海啸 knocking monsters up dealing increased damage 的width。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1170,6 +1253,7 @@
         "positionIndex": 12,
         "name": "Watery Turbulence",
         "description": "Unleash multiple smaller tsunamis.",
+        "zh": { "name": "Watery 湍流", "description": "释放多个更小海啸。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "cold_skill_damage": 0 },
@@ -1181,6 +1265,7 @@
         "positionIndex": 13,
         "name": "Ocean Pullback",
         "description": "Tsunami waves return back to you with increased damage and size.",
+        "zh": { "name": "Ocean Pullback", "description": "海啸波反伤回至你使用提高伤害与 size。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_size": 0 },
@@ -1192,6 +1277,7 @@
         "positionIndex": 14,
         "name": "The Last Water Bender",
         "description": "Increases the projectile speed of tsunami inflicting cold break on hit.",
+        "zh": { "name": "最后 Water Bender", "description": "提高 海啸 inflicting cold break on hit 的投射物速度。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1221,6 +1307,7 @@
     "name": "Dark Side of the Moon",
     "kind": "aura",
     "description": "While active, slow monsters around you. Also increases your mana replenish and energy.",
+    "zh": { "name": "月球暗面", "description": "激活时减速周围怪物，同时提高你的法力恢复和能量。" },
     "tags": ["Cast", "Active", "Aura"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -1238,6 +1325,7 @@
     "name": "Asteroid",
     "kind": "active",
     "description": "Cast down an asteroid from the sky dealing cold damage when landing.",
+    "zh": { "name": "陨星", "description": "从天而降召唤一颗陨星，落地时造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Explosion"],
     "movementDuringUse": 65,
@@ -1262,6 +1350,7 @@
         "positionIndex": 0,
         "name": "Asteroid",
         "description": "Core of the Asteroid subtree.",
+        "zh": { "name": "陨星", "description": "陨星 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1269,6 +1358,7 @@
         "positionIndex": 1,
         "name": "Astral Crush",
         "description": "Increases the damage dealt by asteroid.",
+        "zh": { "name": "星界 Crush", "description": "提高造成的伤害陨星。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1280,6 +1370,7 @@
         "positionIndex": 2,
         "name": "Asteroid Aftershock",
         "description": "Chance on cast to unleash an additional asteroid.",
+        "zh": { "name": "陨星余震", "description": "施法时有概率释放额外陨星。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1295,6 +1386,7 @@
         "positionIndex": 3,
         "name": "Impact Speed",
         "description": "Increases the falling speed and maximum cast range of asteroid.",
+        "zh": { "name": "冲击速度", "description": "提高 陨星 的坠落速度与最大施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0, "skill_range": 0 },
@@ -1306,6 +1398,7 @@
         "positionIndex": 4,
         "name": "World Ending Impact",
         "description": "Increases the area of effect radius of asteroid.",
+        "zh": { "name": "World Ending 冲击", "description": "提高 effect radius of 陨星 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1317,6 +1410,7 @@
         "positionIndex": 5,
         "name": "A Gift From Space",
         "description": "Chance to critically hit dealing increased critical strike damage.",
+        "zh": { "name": "Gift 从 Space", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1328,6 +1422,7 @@
         "positionIndex": 6,
         "name": "Clairvoyant Prophet",
         "description": "Reduces the mana cost of asteroid.",
+        "zh": { "name": "Clairvoyant 先知", "description": "降低法力消耗之陨星。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1339,6 +1434,7 @@
         "positionIndex": 7,
         "name": "Sharp Asteroids",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "尖锐陨星", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -1357,6 +1453,7 @@
         "positionIndex": 8,
         "name": "Frozen Core",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "冰冻核心", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -1375,6 +1472,7 @@
         "positionIndex": 9,
         "name": "Coldshatter Impact",
         "description": "Increases damage dealt to frostbitten targets.",
+        "zh": { "name": "Coldshatter 冲击", "description": "提高对 frostbitten目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frost_bitten": 0 },
@@ -1386,6 +1484,7 @@
         "positionIndex": 10,
         "name": "Perseids",
         "description": "Chance to drop smaller asteroids at target location on hit.",
+        "zh": { "name": "Perseids", "description": "命中时有概率投下更小陨星目标位置。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1401,6 +1500,7 @@
         "positionIndex": 11,
         "name": "Wave of Asteroids",
         "description": "Unleash multiple asteroids in a shockwave from the point of impact.",
+        "zh": { "name": "波之陨星", "description": "释放多个陨星震荡波从点之冲击。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "cold_skill_damage": 0 },
@@ -1412,6 +1512,7 @@
         "positionIndex": 12,
         "name": "Geomagnetic Reversal",
         "description": "Asteroid unleashes multiple tsunami waves in an arc towards target direction.",
+        "zh": { "name": "Geomagnetic Reversal", "description": "陨星释放多个海啸波呈弧线朝向目标方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "cold_skill_damage": 0 },
@@ -1423,6 +1524,7 @@
         "positionIndex": 13,
         "name": "Galactic Cataclysm",
         "description": "Summon a continous rain of asteroids around you for a short period. Asteroid now has a cooldown.",
+        "zh": { "name": "Galactic Cataclysm", "description": "召唤物 continous 骤雨之陨星周围你短距期间。陨星有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1442,6 +1544,7 @@
         "positionIndex": 14,
         "name": "Planetary Collapse",
         "description": "Unleash a colossal asteroid causing a massive explosion unleashing a massive tsunami dealing increased damage with increased area of effect radius. Asteroid now has a cooldown.",
+        "zh": { "name": "Planetary Collapse", "description": "释放巨型陨星使巨大爆炸释放巨大海啸造成提高伤害使用提高范围半径。陨星有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },
@@ -1456,6 +1559,7 @@
     "name": "Lunar Form",
     "kind": "buff",
     "description": "Turn into a living moon and gain additional cold damage. Every time you jump, cast Collision instead.",
+    "zh": { "name": "月亮形态", "description": "化作一轮明月，获得额外冰冷伤害。每次跳跃时会改为施放天体冲撞。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Buff", "Shape Shift"],
     "movementDuringUse": 85,
@@ -1479,6 +1583,7 @@
     "name": "Lunar Orbit",
     "kind": "active",
     "description": "Unleash small moons in your orbit dealing cold damage on hit.",
+    "zh": { "name": "月之轨道", "description": "在轨道上释放小卫星，命中时造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Orbital"],
     "movementDuringUse": 65,
@@ -1502,6 +1607,7 @@
         "positionIndex": 0,
         "name": "Lunar Orbit",
         "description": "Core of the Lunar Orbit subtree.",
+        "zh": { "name": "月之轨道", "description": "月之轨道 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1509,6 +1615,7 @@
         "positionIndex": 1,
         "name": "Tidal Collision",
         "description": "Increases the damage dealt by lunar orbit.",
+        "zh": { "name": "Tidal 天体冲撞", "description": "提高造成的伤害月之轨道。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1520,6 +1627,7 @@
         "positionIndex": 2,
         "name": "Full Moon",
         "description": "Increases the duration of lunar orbit.",
+        "zh": { "name": "Full Moon", "description": "提高 月之轨道 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1531,6 +1639,7 @@
         "positionIndex": 3,
         "name": "Extrasolar Moons",
         "description": "Increases the amount of moons in lunar orbit.",
+        "zh": { "name": "Extrasolar Moons", "description": "提高 moons in 月之轨道 的数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1542,6 +1651,7 @@
         "positionIndex": 4,
         "name": "Magnetic Pull",
         "description": "Increases the orbital speed of lunar orbit.",
+        "zh": { "name": "Magnetic 牵引", "description": "提高 月之轨道 的环绕速度。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1553,6 +1663,7 @@
         "positionIndex": 5,
         "name": "Loss of Orbit",
         "description": "Chance to ricochet towards another nearby monster on hit before returning back to orbit.",
+        "zh": { "name": "流失之轨道", "description": "概率 ricochet 朝向另一个附近怪物命中时 before 返回回至轨道。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -1561,6 +1672,7 @@
         "positionIndex": 6,
         "name": "Celestial Collapse",
         "description": "Chance for moons to explode into shrapnel when expiring dealing a portion of their damage.",
+        "zh": { "name": "Celestial Collapse", "description": "概率使 moons 至爆炸进入弹片当到期造成一部分 their 伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1576,6 +1688,7 @@
         "positionIndex": 7,
         "name": "Lunar Cycle",
         "description": "Chance to inflict cold break on hit.",
+        "zh": { "name": "Lunar Cycle", "description": "命中时有概率施加冰冷击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_break": 0 },
@@ -1594,6 +1707,7 @@
         "positionIndex": 8,
         "name": "Tidalwaves",
         "description": "Chance to unleash a tsunami towards target location on hit.",
+        "zh": { "name": "Tidalwaves", "description": "命中时有概率释放海啸朝向目标位置。" },
         "maxRank": 8,
         "proc": {
           "trigger": "on_hit",
@@ -1609,6 +1723,7 @@
         "positionIndex": 9,
         "name": "Mass Meets Mass",
         "description": "Increases damage dealt to bosses.",
+        "zh": { "name": "巨躯 Meets 巨躯", "description": "提高对 首领 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1620,6 +1735,7 @@
         "positionIndex": 10,
         "name": "Heavy Core",
         "description": "Knock monsters back on hit dealing increased damage.",
+        "zh": { "name": "重型核心", "description": "击退怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1631,6 +1747,7 @@
         "positionIndex": 11,
         "name": "Crescent Moon",
         "description": "Lunar orbit is now a toggle that drains a portion of your mana to passively summon moons with increased damage while active. Recasting or running out of mana will deactivate lunar orbit.",
+        "zh": { "name": "Crescent Moon", "description": "月之轨道 toggle 汲取一部分你的法力至 passively 召唤物 moons 使用提高伤害当激活。Recasting running out 之法力 will deactivate 月之轨道。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1650,6 +1767,7 @@
         "positionIndex": 12,
         "name": "Lunar Architect",
         "description": "Increases the amount of moons in lunar orbit summoning all moons at once.",
+        "zh": { "name": "Lunar Architect", "description": "提高 moons in 月之轨道 summoning all moons at once 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "cold_skill_damage": 0 },
@@ -1661,6 +1779,7 @@
         "positionIndex": 13,
         "name": "Orbit Breakout",
         "description": "When moons expire they are sent outwards bouncing on walls and terrain.",
+        "zh": { "name": "轨道 Breakout", "description": "当 moons expire 它们 sent 向外弹跳墙与地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "projectile_speed": 0 },
@@ -1672,6 +1791,7 @@
         "positionIndex": 14,
         "name": "Devastating Nebula",
         "description": "Chance to conjure cosmic fog at target location on hit dealing a portion of the damage over time inflicting slow.",
+        "zh": { "name": "Devastating Nebula", "description": "概率召唤 cosmic fog 目标位置命中时造成一部分伤害随时间施加缓慢。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1691,6 +1811,7 @@
     "name": "Moonlight",
     "kind": "passive",
     "description": "Increases your movement speed and cold damage dealt.",
+    "zh": { "name": "月光", "description": "提高你的移动速度和造成的冰冷伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -1708,6 +1829,7 @@
     "name": "Blood Moon",
     "kind": "buff",
     "description": "Turn the orbiting moons into blood moons increasing their cold damage and causing them to inflict bleeding on hit.",
+    "zh": { "name": "血月", "description": "将环绕的卫星化为血月，提高其冰冷伤害，并使命中时施加流血。" },
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 0,
     "baseCastRate": 1,
@@ -1730,6 +1852,7 @@
     "name": "Black Hole",
     "kind": "active",
     "description": "Cast a black hole on target location that slows and pulls monsters towards it dealing cold damage.",
+    "zh": { "name": "黑洞", "description": "在目标位置施放一个黑洞，减速并牵引怪物，造成冰冷伤害。" },
     "damageType": "cold",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -1755,6 +1878,7 @@
         "positionIndex": 0,
         "name": "Black Hole",
         "description": "Core of the Black Hole subtree.",
+        "zh": { "name": "黑洞", "description": "黑洞 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1762,6 +1886,7 @@
         "positionIndex": 1,
         "name": "Event Horizon",
         "description": "Increases the damage dealt by black hole.",
+        "zh": { "name": "Event Horizon", "description": "提高造成的伤害黑洞。" },
         "maxRank": 5,
         "effects": {
           "base": { "cold_skill_damage": 0 },
@@ -1773,6 +1898,7 @@
         "positionIndex": 2,
         "name": "Super Massive",
         "description": "Increases the area of effect radius of black hole.",
+        "zh": { "name": "Super 巨大", "description": "提高 effect radius of 黑洞 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1784,6 +1910,7 @@
         "positionIndex": 3,
         "name": "Time != Space",
         "description": "Increases the tick frequency of black hole.",
+        "zh": { "name": "时间 != Space", "description": "提高 黑洞 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1795,6 +1922,7 @@
         "positionIndex": 4,
         "name": "Mass Density",
         "description": "Increases the duration of black hole.",
+        "zh": { "name": "巨躯 Density", "description": "提高 黑洞 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1806,6 +1934,7 @@
         "positionIndex": 5,
         "name": "Interstellar Radiation",
         "description": "Chance to unleash cosmic flares from the center of the black hole towards targets on hit dealing a portion of its damage.",
+        "zh": { "name": "Interstellar Radiation", "description": "概率释放 cosmic 耀斑从 center 之黑洞朝向目标命中时造成一部分伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1821,6 +1950,7 @@
         "positionIndex": 6,
         "name": "Watermelting Cold",
         "description": "Chance to inflict frostbite on hit.",
+        "zh": { "name": "Watermelting 冰冷", "description": "命中时有概率施加冻伤。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_frost_bite_damage": 0 },
@@ -1839,6 +1969,7 @@
         "positionIndex": 7,
         "name": "Time Bender",
         "description": "Reduces the cooldown of black hole.",
+        "zh": { "name": "时间 Bender", "description": "降低 cooldown 之黑洞。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1850,6 +1981,7 @@
         "positionIndex": 8,
         "name": "Time Traveler",
         "description": "Gain increased movement speed and phasing for a short duration when inside the black hole.",
+        "zh": { "name": "时间 Traveler", "description": "获得提高移动速度与穿行短时间内当 inside 黑洞。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1861,6 +1993,7 @@
         "positionIndex": 9,
         "name": "Subzero Frequency",
         "description": "Increases damage dealt to frostbitten targets.",
+        "zh": { "name": "Subzero Frequency", "description": "提高对 frostbitten目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_frost_bitten": 0 },
@@ -1872,6 +2005,7 @@
         "positionIndex": 10,
         "name": "Singularity",
         "description": "Chance to rapidly pull monsters towards the singularity on hit dealing additional damage.",
+        "zh": { "name": "Singularity", "description": "概率迅速牵引怪物朝向 singularity 命中时造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1887,6 +2021,7 @@
         "positionIndex": 11,
         "name": "Galaxy Devouring Growth",
         "description": "Chance to frequently grow larger over time gaining increased damage. Black hole duration is decreased.",
+        "zh": { "name": "Galaxy 吞噬生长", "description": "概率频繁 grow 更大随时间获得提高伤害。黑洞持续时间降低。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1902,6 +2037,7 @@
         "positionIndex": 12,
         "name": "Hidden in Plain Sight",
         "description": "Summon multiple smaller orbiting black holes dealing a portion of the damage.",
+        "zh": { "name": "Hidden Plain Sight", "description": "召唤物多个更小环绕黑色洞造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -1913,6 +2049,7 @@
         "positionIndex": 13,
         "name": "Supermassive Black Hole",
         "description": "Summon a supermassive black hole dealing a portion of the damage frequently draining a portion of your maximum mana. Running out of mana causes the black hole to expire.",
+        "zh": { "name": "Supermassive 黑洞", "description": "召唤物 supermassive 黑洞造成一部分伤害频繁汲取一部分你的最大法力。Running out 之法力使黑洞至 expire。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "mana_drain_pct": 0 },
@@ -1924,6 +2061,7 @@
         "positionIndex": 14,
         "name": "Empowered Singularity",
         "description": "Black hole rapidly pulls monsters towards its singularity on hit before expiring. Black hole no longer has a cooldown.",
+        "zh": { "name": "强化 Singularity", "description": "黑洞迅速牵引怪物朝向 singularity 命中时 before 到期。黑洞更久有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "cold_skill_damage": 0, "area_of_effect": 0 },

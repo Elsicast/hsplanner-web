@@ -1,6 +1,7 @@
 {
   "id": "demonspawn",
   "name": "Demonspawn",
+  "zh": { "name": "恶魔后裔" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

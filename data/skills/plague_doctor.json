@@ -5,6 +5,7 @@
     "name": "Miasma",
     "kind": "active",
     "description": "Empower your attack with a mixture of chemicals causing the monster to release a toxic cloud dealing physical damage.",
+    "zh": { "name": "瘴气", "description": "以化学混合物强化你的攻击，使怪物释放毒云，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Area of Effect", "Strike"],
     "maxRank": 20,
@@ -31,6 +32,7 @@
         "positionIndex": 0,
         "name": "Miasma",
         "description": "Core of the Miasma subtree.",
+        "zh": { "name": "瘴气", "description": "瘴气 子树核心。" },
         "maxRank": 1
       },
       {
@@ -38,6 +40,7 @@
         "positionIndex": 1,
         "name": "Dense Haze",
         "description": "Increases the tick frequency of miasma.",
+        "zh": { "name": "Dense Haze", "description": "提高 瘴气 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -49,6 +52,7 @@
         "positionIndex": 2,
         "name": "Contagious Mist",
         "description": "Chance to inflict poisoned on hit.",
+        "zh": { "name": "Contagious Mist", "description": "命中时有概率施加中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -67,6 +71,7 @@
         "positionIndex": 3,
         "name": "Harmful Poluents",
         "description": "Increases the damage dealt by miasma.",
+        "zh": { "name": "Harmful Poluents", "description": "提高造成的伤害瘴气。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -78,6 +83,7 @@
         "positionIndex": 4,
         "name": "Eroding Haze",
         "description": "Increases damage dealt to poisoned targets.",
+        "zh": { "name": "Eroding Haze", "description": "提高对 中毒目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -89,6 +95,7 @@
         "positionIndex": 5,
         "name": "Hasty Vapors",
         "description": "Increases the size of miasma.",
+        "zh": { "name": "Hasty Vapors", "description": "提高 瘴气 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -100,6 +107,7 @@
         "positionIndex": 6,
         "name": "Hemoglobin Nova",
         "description": "Chance to unleash additional miasma clouds from poisoned targets on hit.",
+        "zh": { "name": "Hemoglobin 新星", "description": "命中时有概率释放额外瘴气云雾从中毒目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -116,6 +124,7 @@
         "positionIndex": 7,
         "name": "Incendiary Fumes",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "Incendiary Fumes", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -134,6 +143,7 @@
         "positionIndex": 8,
         "name": "Intense Malodor",
         "description": "Chance to critically hit with increased critical strike damage.",
+        "zh": { "name": "Intense Malodor", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -145,6 +155,7 @@
         "positionIndex": 9,
         "name": "Sweep Scourge",
         "description": "Increases attack rating when using miasma.",
+        "zh": { "name": "Sweep Scourge", "description": "提高攻击命中使用瘴气。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -156,6 +167,7 @@
         "positionIndex": 10,
         "name": "Meteoric Haze",
         "description": "Chance to drop a burning meteor at burning targets on hit unleashing multiple fire balls to all directions when exploding.",
+        "zh": { "name": "Meteoric Haze", "description": "概率投下燃烧陨石术燃烧目标命中时释放多个火焰球至全部方向当 exploding。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -172,6 +184,7 @@
         "positionIndex": 11,
         "name": "Tenacious Stench",
         "description": "Miasma sticks to the target with increased size and damage.",
+        "zh": { "name": "Tenacious Stench", "description": "瘴气附着至目标使用提高 size 与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_size": 0 },
@@ -183,6 +196,7 @@
         "positionIndex": 12,
         "name": "Shoulder Fling",
         "description": "Fling targets behind you on hit inflicting elemental break and stunning them. Miasma clouds now spawn behind you.",
+        "zh": { "name": "Shoulder Fling", "description": "Fling 目标身后你命中时施加元素击破与眩晕它们。瘴气云雾生成身后你。" },
         "maxRank": 3,
         "effects": {
           "base": { "elemental_break": 0 },
@@ -204,6 +218,7 @@
         "positionIndex": 13,
         "name": "Epidemic Dissemination",
         "description": "Unleash multiple miasma clouds in an arc when attacking. Miasma no longer requires you to strike a target.",
+        "zh": { "name": "Epidemic Dissemination", "description": "释放多个瘴气云雾呈弧线当攻击时。瘴气更久 requires 你至 strike 目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -215,6 +230,7 @@
         "positionIndex": 14,
         "name": "Epinephrine Addict",
         "description": "Striking monsters gives you a stack of epinephrine addict increasing your attack speed, movement speed and attack range. At maximum stacks gain phasing movement.",
+        "zh": { "name": "Epinephrine Addict", "description": "打击怪物 gives 你层之 epinephrine addict 提高你的攻击速度，移动速度与攻击范围。最大层数获得穿行 movement。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -237,6 +253,7 @@
     "name": "Surgical Blood Letting",
     "kind": "active",
     "description": "Throw a surgical knife with razor sharp accuracy that bounces from monster to monster dealing physical damage.",
+    "zh": { "name": "手术放血", "description": "以剃刀般的精度掷出一把手术刀，在怪物间弹射，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Ranged", "Projectile", "Chaining", "Strike"],
     "maxRank": 20,
@@ -263,6 +280,7 @@
         "positionIndex": 0,
         "name": "Surgical Blood Letting",
         "description": "Core of the Surgical Blood Letting subtree.",
+        "zh": { "name": "手术放血", "description": "手术放血 子树核心。" },
         "maxRank": 1
       },
       {
@@ -270,6 +288,7 @@
         "positionIndex": 1,
         "name": "Incisive Cuts",
         "description": "Increases the damage dealt by surgical blood letting.",
+        "zh": { "name": "Incisive 切割", "description": "提高造成的伤害手术放血。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -281,6 +300,7 @@
         "positionIndex": 2,
         "name": "Cutting Edge",
         "description": "Inflict bleeding to targets on hit.",
+        "zh": { "name": "切割锋刃", "description": "命中时施加流血至目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -299,6 +319,7 @@
         "positionIndex": 3,
         "name": "Bolting Scalpels",
         "description": "Increases the projectile speed of surgical blood letting.",
+        "zh": { "name": "Bolting Scalpels", "description": "提高 手术放血 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -310,6 +331,7 @@
         "positionIndex": 4,
         "name": "Expert Surgeon",
         "description": "Increases attack rating when using surgical blood letting.",
+        "zh": { "name": "Expert Surgeon", "description": "提高攻击命中使用手术放血。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -321,6 +343,7 @@
         "positionIndex": 5,
         "name": "Vitality Devourer",
         "description": "Chance to restore life on hit for a portion of your additive physical damage.",
+        "zh": { "name": "耐力 Devourer", "description": "概率 restore 生命命中时一部分你的 additive 物理伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -336,6 +359,7 @@
         "positionIndex": 6,
         "name": "Exsanguination",
         "description": "Chance on attack to inflict increased bleed damage.",
+        "zh": { "name": "Exsanguination", "description": "攻击时有概率施加提高流血伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -354,6 +378,7 @@
         "positionIndex": 7,
         "name": "Plhebotomist",
         "description": "Increases damage dealt to bleeding enemies.",
+        "zh": { "name": "Plhebotomist", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -365,6 +390,7 @@
         "positionIndex": 8,
         "name": "Sanguine Eruption",
         "description": "Chance to unleash a ripple of blood on hit dealing area of effect damage.",
+        "zh": { "name": "Sanguine Eruption", "description": "概率释放涟漪之鲜血命中时造成范围伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -380,6 +406,7 @@
         "positionIndex": 9,
         "name": "Swift Precision",
         "description": "Decreases movement diminish when using surgical blood letting.",
+        "zh": { "name": "迅捷精准", "description": "使用手术放血时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -391,6 +418,7 @@
         "positionIndex": 10,
         "name": "Lifeblood Harvest",
         "description": "Chance on attack to increase damage dealt according to your vitality.",
+        "zh": { "name": "Lifeblood Harvest", "description": "攻击时有概率提高造成的伤害依照至你的耐力。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -406,6 +434,7 @@
         "positionIndex": 11,
         "name": "Surgeon´s Vortex",
         "description": "Knives now orbit around you slowly going outwards.",
+        "zh": { "name": "Surgeon's 漩涡", "description": "飞刀轨道周围你缓慢 going 向外。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -425,6 +454,7 @@
         "positionIndex": 12,
         "name": "Blood Thaumaturgist",
         "description": "Throw multiple knives in an arc. The knives stick to the targets for a short duration before pulling back to you dealing increased damage according to your vitality.",
+        "zh": { "name": "鲜血 Thaumaturgist", "description": "投掷多个飞刀呈弧线。飞刀附着至目标短时间内 before 牵引回至你造成提高伤害依照至你的耐力。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "conversion_vitality": 0 },
@@ -436,6 +466,7 @@
         "positionIndex": 13,
         "name": "Fracturing Knifestack",
         "description": "Throw a knife with increased projectile speed exploding into multiple piercing knives to all directions on hit.",
+        "zh": { "name": "Fracturing Knifestack", "description": "投掷 knife 使用提高投射物速度 exploding 进入多个穿透飞刀至全部方向命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0, "projectile_count": 0 },
@@ -447,6 +478,7 @@
         "positionIndex": 14,
         "name": "Cutting Storm",
         "description": "Knives have a chance to conjure a spinning knife tornado on hit dealing increased damage over time.",
+        "zh": { "name": "切割风暴", "description": "Knives 有概率召唤旋转 knife 龙卷风命中时造成提高伤害随时间。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -465,6 +497,7 @@
     "name": "Booster Shot",
     "kind": "buff",
     "description": "When attacking have a chance to inject yourself with a mRNA gene altering shot temporarily increasing your attack damage and movement speed.",
+    "zh": { "name": "加强针", "description": "攻击时有概率给自己注射一支改变基因的 mRNA 针剂，临时提高你的攻击伤害和移动速度。" },
     "tags": ["Buff"],
     "effectDuration": 8,
     "maxRank": 20,
@@ -483,6 +516,7 @@
     "name": "Malpractice",
     "kind": "passive",
     "description": "Increases the force of surgical blood letting causing targets to bleed.",
+    "zh": { "name": "医疗事故", "description": "提高手术放血的力量，使目标流血。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -500,6 +534,7 @@
     "name": "Blood Sustenance",
     "kind": "passive",
     "description": "Gain increased attack damage and life stolen per hit from bleeding targets.",
+    "zh": { "name": "鲜血滋养", "description": "从流血目标身上获得提高的攻击伤害和每次命中偷取的生命。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -517,6 +552,7 @@
     "name": "Lifeblood Aura",
     "kind": "aura",
     "description": "When active, increases your and your party members Life and life replenish.",
+    "zh": { "name": "血脉光环", "description": "激活时，提高你和队友的生命和生命恢复。" },
     "tags": ["Cast", "Active", "Aura"],
     "baseCastRate": 1,
     "maxRank": 20,
@@ -535,6 +571,7 @@
     "name": "Crow Mask's Presence",
     "kind": "passive",
     "description": "Increases your life and all resistances.",
+    "zh": { "name": "鸦羽面具之息", "description": "提高你的生命和全抗性。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -552,6 +589,7 @@
     "name": "Devout Doctor",
     "kind": "passive",
     "description": "Gain physical damage based on your maximum life.",
+    "zh": { "name": "虔诚医生", "description": "根据你的最大生命获得物理伤害。" },
     "damageType": "physical",
     "tags": ["Passive"],
     "maxRank": 20,
@@ -570,6 +608,7 @@
     "name": "Defunct Surgeon",
     "kind": "buff",
     "description": "Temporarily increase your attack speed and life stolen per hit. When active lose a portion of your maximum life per second (Non-fatal).",
+    "zh": { "name": "失职外科医生", "description": "临时提高你的攻击速度和每次命中偷取的生命。激活时每秒失去一部分最大生命（不会致命）。" },
     "tags": ["Cast", "Active", "Buff"],
     "baseCastRate": 1,
     "baseCooldown": 44.67,
@@ -591,6 +630,7 @@
     "name": "Toxic Flask",
     "kind": "active",
     "description": "Throw a bouncing toxic flask towards target location dealing poison damage.",
+    "zh": { "name": "剧毒瓶", "description": "朝目标位置掷出一只弹跳的剧毒瓶，造成毒素伤害。" },
     "damageType": "poison",
     "tags": ["Cast", "Active", "Spell", "Projectile", "Explosion"],
     "range": 240,
@@ -614,6 +654,7 @@
         "positionIndex": 0,
         "name": "Toxic Flask",
         "description": "Core of the Toxic Flask subtree.",
+        "zh": { "name": "剧毒瓶", "description": "剧毒瓶 子树核心。" },
         "maxRank": 1
       },
       {
@@ -621,6 +662,7 @@
         "positionIndex": 1,
         "name": "One with the Poison",
         "description": "Increases the maximum cast range and area of effect radius of toxic flask.",
+        "zh": { "name": "一次使用毒素", "description": "提高 effect radius of 剧毒瓶 的最大施法范围与范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0, "area_of_effect": 0 },
@@ -632,6 +674,7 @@
         "positionIndex": 2,
         "name": "Harmful Vial",
         "description": "Increases the damage dealt by toxic flask.",
+        "zh": { "name": "Harmful Vial", "description": "提高造成的伤害剧毒瓶。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -643,6 +686,7 @@
         "positionIndex": 3,
         "name": "Modest Poison",
         "description": "Decreases the mana cost of toxic flask.",
+        "zh": { "name": "Modest 毒素", "description": "降低法力消耗之剧毒瓶。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -654,6 +698,7 @@
         "positionIndex": 4,
         "name": "Decomposing Materia",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "Decomposing Materia", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -673,6 +718,7 @@
         "positionIndex": 5,
         "name": "Heatseeking Flask",
         "description": "Toxic flasks home into the nearest monster with increased projectile speed after reaching the highest altitude.",
+        "zh": { "name": "Heatseeking 药剂", "description": "剧毒药剂 home 进入最近的怪物使用提高投射物速度之后延伸 highest altitude。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -684,6 +730,7 @@
         "positionIndex": 6,
         "name": "Resistant Crystal",
         "description": "Increases the amount of ground bounces for toxic flask.",
+        "zh": { "name": "Resistant Crystal", "description": "提高 ground bounces for 剧毒瓶 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -695,6 +742,7 @@
         "positionIndex": 7,
         "name": "Apothecary",
         "description": "Chance on cast to unleash an additional toxic flask.",
+        "zh": { "name": "药剂师", "description": "施法时有概率释放额外剧毒瓶。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -710,6 +758,7 @@
         "positionIndex": 8,
         "name": "Fake Throw",
         "description": "Chance on cast to throw an additional toxic flask high in the air falling straight down with increased area of effect radius.",
+        "zh": { "name": "Fake 投掷", "description": "施法时有概率投掷额外剧毒瓶高空中坠落 straight 倒地使用提高范围半径。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -725,6 +774,7 @@
         "positionIndex": 9,
         "name": "Agile Tosser",
         "description": "Decreases movement diminish when using toxic flask.",
+        "zh": { "name": "敏捷 Tosser", "description": "使用剧毒瓶时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -736,6 +786,7 @@
         "positionIndex": 10,
         "name": "Flask Flip",
         "description": "Teleport into target location when toxic flask hits the ground.",
+        "zh": { "name": "药剂 Flip", "description": "Teleport 进入目标位置当剧毒瓶命中地面。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -747,6 +798,7 @@
         "positionIndex": 11,
         "name": "Plague Radiator",
         "description": "Toxic flask emmits toxic clouds towards nearby monsters inflicting poisoned when hitting the ground.",
+        "zh": { "name": "瘟疫 Radiator", "description": "剧毒瓶 emmits 剧毒云雾朝向附近怪物施加中毒当命中地面。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "increased_poisoned_damage": 0 },
@@ -765,6 +817,7 @@
         "positionIndex": 12,
         "name": "Toxin Vials",
         "description": "Throw multiple small toxic flasks in an arc.",
+        "zh": { "name": "Toxin Vials", "description": "投掷多个小型剧毒药剂呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -776,6 +829,7 @@
         "positionIndex": 13,
         "name": "Glassblowing Technician",
         "description": "Toxic flask breaks into glass shards dealing its damage as physical and ignoring all target defense.",
+        "zh": { "name": "Glassblowing Technician", "description": "剧毒瓶击破进入沙漏 shards 造成伤害物理与无视全部目标防御。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -787,6 +841,7 @@
         "positionIndex": 14,
         "name": "Vial of Alchemy",
         "description": "Throwing toxic flask at yourself or an ally empowers them with toxins granting increased damage, life and damage reduction.",
+        "zh": { "name": "Vial 之 Alchemy", "description": "投掷剧毒瓶自己 ally 强化它们使用毒素 granting 提高伤害，生命与伤害减免。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -809,6 +864,7 @@
     "name": "Crematus",
     "kind": "active",
     "description": "Unleash a breath of toxic flames dealing poison damage.",
+    "zh": { "name": "焚烬吐息", "description": "吐出剧毒火焰，造成毒素伤害。" },
     "damageType": "poison",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "baseCooldown": 3.44,
@@ -833,6 +889,7 @@
         "positionIndex": 0,
         "name": "Crematus",
         "description": "Core of the Crematus subtree.",
+        "zh": { "name": "焚烬吐息", "description": "焚烬吐息 子树核心。" },
         "maxRank": 1
       },
       {
@@ -840,6 +897,7 @@
         "positionIndex": 1,
         "name": "Gas Cilynder",
         "description": "Increases the duration of crematus.",
+        "zh": { "name": "毒气 Cilynder", "description": "提高 焚烬吐息 的持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -851,6 +909,7 @@
         "positionIndex": 2,
         "name": "Potent Exhaling",
         "description": "Increases the damage dealt by crematus.",
+        "zh": { "name": "Potent Exhaling", "description": "提高造成的伤害焚烬吐息。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -862,6 +921,7 @@
         "positionIndex": 3,
         "name": "Corrosive Burning",
         "description": "Chance to inflict poisoned on hit.",
+        "zh": { "name": "腐蚀燃烧", "description": "命中时有概率施加中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -880,6 +940,7 @@
         "positionIndex": 4,
         "name": "Corrosive Embers",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "腐蚀 Embers", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -899,6 +960,7 @@
         "positionIndex": 5,
         "name": "Trifurcate Blow",
         "description": "Chance on cast to unleash two additional trails of crematus dealing a portion of the damage.",
+        "zh": { "name": "Trifurcate Blow", "description": "施法时有概率释放双额外轨迹之焚烬吐息造成一部分伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -914,6 +976,7 @@
         "positionIndex": 6,
         "name": "Toxic Dragonflight",
         "description": "Gain increased movement speed when casting crematus.",
+        "zh": { "name": "剧毒 Dragonflight", "description": "获得提高移动速度当施法焚烬吐息。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -925,6 +988,7 @@
         "positionIndex": 7,
         "name": "Toxiamplified Alveoli",
         "description": "Increases the area of effect radius of crematus.",
+        "zh": { "name": "Toxiamplified Alveoli", "description": "提高 effect radius of 焚烬吐息 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -936,6 +1000,7 @@
         "positionIndex": 8,
         "name": "Tachypnea",
         "description": "Decreases movement diminish when using crematus.",
+        "zh": { "name": "Tachypnea", "description": "使用焚烬吐息时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -947,6 +1012,7 @@
         "positionIndex": 9,
         "name": "Engulfing Pyre",
         "description": "Chance to burst the ground on flames at burning targets location on hit dealing a portion of the damage over time.",
+        "zh": { "name": "Engulfing Pyre", "description": "概率迸发地面烈焰燃烧目标位置命中时造成一部分伤害随时间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -963,6 +1029,7 @@
         "positionIndex": 10,
         "name": "Bursting Pustules",
         "description": "Damaging a monster with crematus inflicts a stack of pustules. At full stacks unleash a burst of poison dealing area of effect damage.",
+        "zh": { "name": "Bursting 脓疱", "description": "伤害型怪物使用焚烬吐息施加层之脓疱。full 层数释放迸发之毒素造成范围伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "area_of_effect": 0 },
@@ -974,6 +1041,7 @@
         "positionIndex": 11,
         "name": "Spiraling Cremation",
         "description": "Unleash multiple swirling flames around you dealing increased damage.",
+        "zh": { "name": "螺旋 Cremation", "description": "释放多个回旋烈焰周围你造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_count": 0 },
@@ -985,6 +1053,7 @@
         "positionIndex": 12,
         "name": "Farflames",
         "description": "Increases the projectile speed, size and damage dealt by crematus.",
+        "zh": { "name": "Farflames", "description": "提高投射物速度，size 与造成的伤害焚烬吐息。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1004,6 +1073,7 @@
         "positionIndex": 13,
         "name": "Unstable Contamination",
         "description": "Activate/Deactivate to leave behind a trail of poisonous gas dealing damage over time and slowing targets. Drains mana constantly.",
+        "zh": { "name": "不稳定 Contamination", "description": "Activate/Deactivate 至留下身后轨迹之剧毒毒气造成伤害随时间与减速目标。汲取法力 constantly。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1023,6 +1093,7 @@
         "positionIndex": 14,
         "name": "Toxin Container",
         "description": "Throw a plague container at target location unleashing crematus into all directions for a short duration. The plague container eventually explodes dealing area of effect damage and stunning nearby monsters.",
+        "zh": { "name": "Toxin Container", "description": "投掷瘟疫 container 目标位置释放焚烬吐息进入全部方向短时间内。瘟疫 container eventually 爆炸造成范围伤害与眩晕附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "skill_duration": 0 },
@@ -1037,6 +1108,7 @@
     "name": "Plague of Rats",
     "kind": "active",
     "description": "Send plague rats in target direction dealing poison damage on impact.",
+    "zh": { "name": "鼠疫", "description": "朝目标方向放出瘟疫鼠群，命中时造成毒素伤害。" },
     "damageType": "poison",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "range": 320,
@@ -1060,6 +1132,7 @@
         "positionIndex": 0,
         "name": "Plague of Rats",
         "description": "Core of the Plague of Rats subtree.",
+        "zh": { "name": "鼠疫", "description": "鼠疫 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1067,6 +1140,7 @@
         "positionIndex": 1,
         "name": "Horde of Rats",
         "description": "Increases the projectile amount of plague of rats.",
+        "zh": { "name": "Horde 之鼠群", "description": "提高 鼠疫 的投射物数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1078,6 +1152,7 @@
         "positionIndex": 2,
         "name": "Gnawing Rodents",
         "description": "Increases the damage dealt by plague of rats.",
+        "zh": { "name": "Gnawing Rodents", "description": "提高 rats 的造成的伤害瘟疫。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1089,6 +1164,7 @@
         "positionIndex": 3,
         "name": "Lab Grown Rats",
         "description": "Increases the size of plague of rats.",
+        "zh": { "name": "Lab Grown 鼠群", "description": "提高 鼠疫 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1100,6 +1176,7 @@
         "positionIndex": 4,
         "name": "Bite Tethering",
         "description": "Decreases the mana cost of plague of rats.",
+        "zh": { "name": "Bite Tethering", "description": "降低法力消耗之鼠疫。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1111,6 +1188,7 @@
         "positionIndex": 5,
         "name": "Plague Carriers",
         "description": "Chance for rats to explode into plagued chunks of meat dealing damage and inflicting poisoned on hit.",
+        "zh": { "name": "瘟疫 Carriers", "description": "概率使鼠群至爆炸进入 plagued chunks 之血肉造成伤害与施加中毒命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1129,6 +1207,7 @@
         "positionIndex": 6,
         "name": "Painful Bite",
         "description": "Chance to critically hit with increased critical strike damage.",
+        "zh": { "name": "Painful Bite", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1140,6 +1219,7 @@
         "positionIndex": 7,
         "name": "Rodent Handler",
         "description": "Increases cast rate when using plague of rats.",
+        "zh": { "name": "Rodent 驾驭者", "description": "提高 rats 的施法速度使用瘟疫。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1151,6 +1231,7 @@
         "positionIndex": 8,
         "name": "Leptospirosis",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "Leptospirosis", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -1170,6 +1251,7 @@
         "positionIndex": 9,
         "name": "Nimble Trainer",
         "description": "Decreases movement diminish when using plague of rats.",
+        "zh": { "name": "Nimble Trainer", "description": "使用鼠疫时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1181,6 +1263,7 @@
         "positionIndex": 10,
         "name": "Plaguemausers",
         "description": "Increases the projectile speed of plague of rats.",
+        "zh": { "name": "Plaguemausers", "description": "提高 鼠疫 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1192,6 +1275,7 @@
         "positionIndex": 11,
         "name": "Ratsunami",
         "description": "Summon increased amount of piercing rats bouncing off of high terrain.",
+        "zh": { "name": "Ratsunami", "description": "召唤物提高数量之穿透鼠群弹跳关闭之高地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "poison_skill_damage": 0 },
@@ -1203,6 +1287,7 @@
         "positionIndex": 12,
         "name": "Rat Den",
         "description": "Summon a rat den at target location constantly sending rats towards nearby monsters. Plague of rats now has a cooldown.",
+        "zh": { "name": "鼠 Den", "description": "召唤物鼠 den 目标位置 constantly 发出鼠群朝向附近怪物。鼠疫有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "skill_duration": 0 },
@@ -1214,6 +1299,7 @@
         "positionIndex": 13,
         "name": "Spreading Infestation",
         "description": "Increases the proc chance and poisoned damage of plague carriers. Plague carriers now additionally sends multiple piercing rats towards nearby monsters.",
+        "zh": { "name": "散播 Infestation", "description": "提高 plague carriers. Plague carriers now additionally sends multiple piercing rats towards nearby monsters 的触发概率与中毒伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1236,6 +1322,7 @@
         "positionIndex": 14,
         "name": "Ratpocalypse",
         "description": "Summon increased amount of rats in a circle around target location moving towards the center. Plague of rats now has a cooldown.",
+        "zh": { "name": "Ratpocalypse", "description": "召唤物提高数量之鼠群圆环周围目标位置 moving 朝向 center。鼠疫有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "poison_skill_damage": 0 },
@@ -1250,6 +1337,7 @@
     "name": "Oops",
     "kind": "passive",
     "description": "Toxic flask also leaves a pool of poisonous substance on the ground dealing poison damage, poisoning and slowing monsters. Oops.",
+    "zh": { "name": "哎呀", "description": "剧毒瓶还会在地面留下一滩有毒物质，造成毒素伤害，毒害并减速怪物。哎呀。" },
     "damageType": "poison",
     "tags": ["Passive"],
     "maxRank": 20,
@@ -1268,6 +1356,7 @@
     "name": "Exploding Mice",
     "kind": "passive",
     "description": "Plague of Rats explode on impact causing poison damage.",
+    "zh": { "name": "爆炸小鼠", "description": "鼠疫命中时会爆炸，造成毒素伤害。" },
     "damageType": "poison",
     "tags": ["Passive", "Explosion"],
     "maxRank": 20,
@@ -1286,6 +1375,7 @@
     "name": "Plague Master",
     "kind": "active",
     "description": "Cause all poisoned targets on target location to spread the plague and deal poison damage to monsters around them.",
+    "zh": { "name": "瘟疫之主", "description": "使目标位置所有中毒目标散播瘟疫，对其周围怪物造成毒素伤害。" },
     "damageType": "poison",
     "tags": ["Cast", "Active", "Spell", "Area of Effect", "Chain Lightning"],
     "range": 320,
@@ -1309,6 +1399,7 @@
         "positionIndex": 0,
         "name": "Plague Master",
         "description": "Core of the Plague Master subtree.",
+        "zh": { "name": "瘟疫之主", "description": "瘟疫之主 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1316,6 +1407,7 @@
         "positionIndex": 1,
         "name": "Plague Domain",
         "description": "Increases the area of effect radius of plague master.",
+        "zh": { "name": "瘟疫 Domain", "description": "提高 effect radius of 瘟疫之主 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1327,6 +1419,7 @@
         "positionIndex": 2,
         "name": "Toxology",
         "description": "Increases the damage dealt by plague master.",
+        "zh": { "name": "Toxology", "description": "提高造成的伤害瘟疫之主。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1338,6 +1431,7 @@
         "positionIndex": 3,
         "name": "Flesh Melting",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "Flesh Melting", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -1357,6 +1451,7 @@
         "positionIndex": 4,
         "name": "Neverending Infection",
         "description": "Increases the poisoned duration from plague master.",
+        "zh": { "name": "Neverending Infection", "description": "提高中毒持续时间从瘟疫之主。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1368,6 +1463,7 @@
         "positionIndex": 5,
         "name": "Crippling Poison Vial",
         "description": "Chance on hit to stun enemies.",
+        "zh": { "name": "致残毒素 Vial", "description": "命中时有概率眩晕敌人。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1380,6 +1476,7 @@
         "positionIndex": 6,
         "name": "Escalating Illness",
         "description": "Increases the tick frequency of poisoned from plague master.",
+        "zh": { "name": "Escalating Illness", "description": "提高 poisoned from 瘟疫之主 的每跳 frequency。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_frequency": 0 },
@@ -1391,6 +1488,7 @@
         "positionIndex": 7,
         "name": "Anemic Impact",
         "description": "Inflicts slow on hit.",
+        "zh": { "name": "Anemic 冲击", "description": "命中时施加缓慢。" },
         "maxRank": 5,
         "effects": {
           "base": { "slow_target": 0 },
@@ -1402,6 +1500,7 @@
         "positionIndex": 8,
         "name": "Boundless Agent",
         "description": "Decreases the mana cost of plague master.",
+        "zh": { "name": "Boundless Agent", "description": "降低法力消耗之瘟疫之主。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1413,6 +1512,7 @@
         "positionIndex": 9,
         "name": "Pathogens",
         "description": "Chance to summon a pool of bacteria and viruses on hit dealing damage over time.",
+        "zh": { "name": "Pathogens", "description": "概率召唤物水洼之 bacteria 与 viruses 命中时造成伤害随时间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1428,6 +1528,7 @@
         "positionIndex": 10,
         "name": "Concussive Effect",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Concussive 效果", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1439,6 +1540,7 @@
         "positionIndex": 11,
         "name": "Stacked Bacteria",
         "description": "Poisoned from plague master inflicts additional stacks of poisoned.",
+        "zh": { "name": "叠加 Bacteria", "description": "中毒从瘟疫之主施加额外层数之中毒。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "max_skill_stacks": 0 },
@@ -1450,6 +1552,7 @@
         "positionIndex": 12,
         "name": "Bulbonic Plague",
         "description": "Chance to inflict plague on hit causing targets to become infected inflicting damage to monsters around them.",
+        "zh": { "name": "Bulbonic 瘟疫", "description": "概率施加瘟疫命中时使目标至 become infected 施加伤害至怪物周围它们。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1465,6 +1568,7 @@
         "positionIndex": 13,
         "name": "Containment Breakout",
         "description": "Increases the damage dealt and area of effect radius of plague master significantly. Increases the cooldown of plague master.",
+        "zh": { "name": "Containment Breakout", "description": "提高 effect radius of 瘟疫之主 significantly. Increases the cooldown of 瘟疫之主 的造成的伤害与范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "area_of_effect": 0 },
@@ -1476,6 +1580,7 @@
         "positionIndex": 14,
         "name": "Raise from the Pestilence",
         "description": "Monsters killed by plague master spawn a toxic anomaly. Toxic anomalies seek nearby monsters exploding on hit dealing increased area of effect damage.",
+        "zh": { "name": "Raise 从 Pestilence", "description": "怪物被击杀瘟疫之主生成剧毒 anomaly。剧毒 anomalies 搜寻附近怪物 exploding 命中时造成提高范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "increased_poisoned_damage": 0 },
@@ -1500,6 +1605,7 @@
     "name": "Jar of Leeches",
     "kind": "active",
     "description": "Throw a glass jar towards target location releasing leeches dealing poison damage on impact.",
+    "zh": { "name": "水蛭罐", "description": "朝目标位置掷出一只玻璃罐，释放水蛭，命中时造成毒素伤害。" },
     "damageType": "poison",
     "tags": ["Cast", "Active", "Spell", "Projectile", "Explosion"],
     "range": 240,
@@ -1523,6 +1629,7 @@
         "positionIndex": 0,
         "name": "Jar of Leeches",
         "description": "Core of the Jar of Leeches subtree.",
+        "zh": { "name": "水蛭罐", "description": "水蛭罐 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1530,6 +1637,7 @@
         "positionIndex": 1,
         "name": "Leech Swarm",
         "description": "Increases the amount of leeches spawned.",
+        "zh": { "name": "吸取 Swarm", "description": "提高 leeches spawned 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1541,6 +1649,7 @@
         "positionIndex": 2,
         "name": "Power Sucktion",
         "description": "Increases the damage dealt by jar of leeches.",
+        "zh": { "name": "力量 Sucktion", "description": "提高 leeches 的造成的伤害 jar。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1552,6 +1661,7 @@
         "positionIndex": 3,
         "name": "Nimble Creepers",
         "description": "Increases the projectile speed of jar of leeches.",
+        "zh": { "name": "Nimble Creepers", "description": "提高 水蛭罐 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1563,6 +1673,7 @@
         "positionIndex": 4,
         "name": "Draining the Demons",
         "description": "Increases the damage dealt to bosses.",
+        "zh": { "name": "汲取恶魔", "description": "提高造成的伤害至首领。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1574,6 +1685,7 @@
         "positionIndex": 5,
         "name": "Bloody Surprise",
         "description": "Chance on cast to unleash an additional jar of leeches.",
+        "zh": { "name": "Bloody Surprise", "description": "施法时有概率释放额外水蛭罐。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1589,6 +1701,7 @@
         "positionIndex": 6,
         "name": "Overfed",
         "description": "Increases area of effect radius of jar of leeches.",
+        "zh": { "name": "Overfed", "description": "提高 effect radius of 水蛭罐 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1600,6 +1713,7 @@
         "positionIndex": 7,
         "name": "Jar Handler",
         "description": "Increases the maximum cast range of jar of leeches.",
+        "zh": { "name": "Jar 驾驭者", "description": "提高 水蛭罐 的最大施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1611,6 +1725,7 @@
         "positionIndex": 8,
         "name": "Leaking Dents",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Leaking Dents", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1629,6 +1744,7 @@
         "positionIndex": 9,
         "name": "Call to Ascend",
         "description": "Consume nearby corpses adding additional leeches into the jar.",
+        "zh": { "name": "召唤至 Ascend", "description": "消耗附近尸体 adding 额外水蛭进入 jar。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1640,6 +1756,7 @@
         "positionIndex": 10,
         "name": "Blood Sharing",
         "description": "Restore a portion of your maximum life on hit.",
+        "zh": { "name": "鲜血 Sharing", "description": "命中时恢复一部分最大生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -1651,6 +1768,7 @@
         "positionIndex": 11,
         "name": "Jug Juggler",
         "description": "Throw multiple jars in an arc dealing a portion of the damage.",
+        "zh": { "name": "Jug Juggler", "description": "投掷多个 jars 呈弧线造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -1662,6 +1780,7 @@
         "positionIndex": 12,
         "name": "Blood-infused Leeches",
         "description": "Increases leech damage, size and area of effect radius based on your vitality. Jar of leeches consumes a portion of your maximum life per cast.",
+        "zh": { "name": "鲜血-灌注水蛭", "description": "提高 effect radius based on your vitality. 水蛭罐 consumes a portion of your maximum life per cast 的吸取伤害，size 与范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_vitality": 0, "life_drain_pct": 0 },
@@ -1673,6 +1792,7 @@
         "positionIndex": 13,
         "name": "Toxicophile Bloodsucker",
         "description": "Spawn a static leech at target location. The leech pulsates dealing damage and slowly pulling monsters towards it on hit. Jar of leeches now has a cooldown.",
+        "zh": { "name": "Toxicophile Bloodsucker", "description": "生成静电吸取目标位置。吸取 pulsates 造成伤害与缓慢牵引怪物朝向命中时。水蛭罐有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "area_of_effect": 0 },
@@ -1684,6 +1804,7 @@
         "positionIndex": 14,
         "name": "Lasting Hunger",
         "description": "Leeches now stick on targets for a short duration dealing increased damage over time.",
+        "zh": { "name": "持续饥渴", "description": "水蛭附着目标短时间内造成提高伤害随时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "skill_duration": 0 },
@@ -1698,6 +1819,7 @@
     "name": "Chant of Weakness",
     "kind": "passive",
     "description": "Poisoned targets take increased poison damage.",
+    "zh": { "name": "虚弱祷言", "description": "中毒目标受到的毒素伤害提高。" },
     "damageType": "poison",
     "tags": ["Passive"],
     "maxRank": 20,
@@ -1716,6 +1838,7 @@
     "name": "Randy the Rancid Rat",
     "kind": "active",
     "description": "Summon randy the rancid rat to fight for you dealing poison damage.",
+    "zh": { "name": "腐臭鼠兰迪", "description": "召唤腐臭鼠兰迪为你而战，造成毒素伤害。" },
     "damageType": "poison",
     "tags": ["Cast", "Active", "Spell", "Summon"],
     "baseCooldown": 10.31,
@@ -1738,6 +1861,7 @@
         "positionIndex": 0,
         "name": "Randy the Rancid Rat",
         "description": "Core of the Randy the Rancid Rat subtree.",
+        "zh": { "name": "腐臭鼠兰迪", "description": "腐臭鼠兰迪 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1745,6 +1869,7 @@
         "positionIndex": 1,
         "name": "Vigorous Leader",
         "description": "Increases the life of randy the rancid rat.",
+        "zh": { "name": "Vigorous Leader", "description": "提高 腐臭鼠兰迪 的生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_life": 0 },
@@ -1756,6 +1881,7 @@
         "positionIndex": 2,
         "name": "Enhanced Jaws",
         "description": "Increases the damage of randy the rancid rat.",
+        "zh": { "name": "强化 Jaws", "description": "提高 腐臭鼠兰迪 的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1767,6 +1893,7 @@
         "positionIndex": 3,
         "name": "Rat Invoker",
         "description": "Chance on hit to unleash piercing plague rats towards the target.",
+        "zh": { "name": "鼠 Invoker", "description": "命中时有概率释放穿透瘟疫鼠群朝向目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1782,6 +1909,7 @@
         "positionIndex": 4,
         "name": "Speed Chomps",
         "description": "Increases the movement speed and attack speed of randy the rancid rat.",
+        "zh": { "name": "速度 Chomps", "description": "提高 腐臭鼠兰迪 的移动速度与攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "summon_attack_speed": 0, "movement_speed": 0 },
@@ -1793,6 +1921,7 @@
         "positionIndex": 5,
         "name": "Expansive Plague Mind",
         "description": "Randy the rancid rat gains an aura inflicting monsters with poisoned.",
+        "zh": { "name": "Expansive 瘟疫心智", "description": "腐臭鼠兰迪获得光环施加怪物使用中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0, "area_of_effect": 0 },
@@ -1811,6 +1940,7 @@
         "positionIndex": 6,
         "name": "Disease Hoarder",
         "description": "Increases the poisoned inflicted by randy the rancid rat.",
+        "zh": { "name": "Disease Hoarder", "description": "提高 腐臭鼠兰迪 施加的中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1829,6 +1959,7 @@
         "positionIndex": 7,
         "name": "Blood Transfusion",
         "description": "Randy the rancid rat recovers a portion of its maximum life on hit.",
+        "zh": { "name": "鲜血灌注", "description": "腐臭鼠兰迪恢复一部分最大生命命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -1840,6 +1971,7 @@
         "positionIndex": 8,
         "name": "Armored Fur",
         "description": "Increases all resistances and damage reduction for randy the rancid rat.",
+        "zh": { "name": "Armored Fur", "description": "提高全抗性与伤害减免腐臭鼠兰迪。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_resistances": 0, "all_damage_taken_reduced_pct": 0 },
@@ -1851,6 +1983,7 @@
         "positionIndex": 9,
         "name": "Rage Sequence",
         "description": "Chance to become enraged on hit increasing damage dealt and attack speed.",
+        "zh": { "name": "怒气 Sequence", "description": "概率 become 被激怒命中时提高造成的伤害与攻击速度。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1866,6 +1999,7 @@
         "positionIndex": 10,
         "name": "Vital Division",
         "description": "Redirect a portion of incoming damage to randy the rancid rat.",
+        "zh": { "name": "生命 Division", "description": "Redirect 一部分受到的伤害至腐臭鼠兰迪。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1877,6 +2011,7 @@
         "positionIndex": 11,
         "name": "Randy Rider",
         "description": "Mount randy the rancid rat gaining increased movement speed, jumping power and the ability to jump through high terrain. Taking damage will unmount you. Randy the rancid rat now has a cooldown.",
+        "zh": { "name": "兰迪 Rider", "description": "Mount 腐臭鼠兰迪获得提高移动速度，跳跃力量与 ability 至跳跃穿过高地形。承受伤害 will unmount 你。腐臭鼠兰迪有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1888,6 +2023,7 @@
         "positionIndex": 12,
         "name": "Dragorat",
         "description": "Randy the rancid rat unleashes a breath of fire when attacking.",
+        "zh": { "name": "Dragorat", "description": "腐臭鼠兰迪释放烈焰吐息当攻击时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1903,6 +2039,7 @@
         "positionIndex": 13,
         "name": "QA3-Modified Specimen",
         "description": "Randy the rancid rat summons additional tiny rats armed with blunderbusses dealing a portion of the damage on hit.",
+        "zh": { "name": "QA3-Modified Specimen", "description": "腐臭鼠兰迪召唤物额外 tiny 鼠群 armed 使用 blunderbusses 造成一部分伤害命中时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1920,6 +2057,7 @@
         "positionIndex": 14,
         "name": "Gluttony",
         "description": "Increases the attack area of effect radius of randy the rancid rat whenever striking a monster stacking infinitely. Decreases the duration of randy the rancid rat.",
+        "zh": { "name": "Gluttony", "description": "提高 effect radius of 腐臭鼠兰迪 whenever striking a monster stacking infinitely. Decreases the duration of 腐臭鼠兰迪 的攻击范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "skill_duration": 0 },

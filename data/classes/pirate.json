@@ -1,6 +1,7 @@
 {
   "id": "pirate",
   "name": "Pirate",
+  "zh": { "name": "海盗" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

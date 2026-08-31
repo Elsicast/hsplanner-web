@@ -1,6 +1,7 @@
 {
   "id": "viking",
   "name": "Viking",
+  "zh": { "name": "维京" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

@@ -1,6 +1,7 @@
 {
   "id": "redneck",
   "name": "Redneck",
+  "zh": { "name": "红脖" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

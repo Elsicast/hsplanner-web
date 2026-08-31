@@ -1,6 +1,7 @@
 {
   "id": "demon_slayer",
   "name": "Demon Slayer",
+  "zh": { "name": "恶魔猎人" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

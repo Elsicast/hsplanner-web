@@ -5,6 +5,7 @@
     "name": "Sand Carver",
     "kind": "active",
     "description": "Perform an attack that flings piercing sand at monsters.",
+    "zh": { "name": "刻沙者", "description": "进行一次攻击，向怪物弹出穿透性的沙刃。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Projectile", "Strike"],
     "movementDuringUse": 65,
@@ -32,6 +33,7 @@
         "positionIndex": 0,
         "name": "Sand Carver",
         "description": "Core of the Sand Carver subtree.",
+        "zh": { "name": "刻沙者", "description": "刻沙者 子树核心。" },
         "maxRank": 1
       },
       {
@@ -39,6 +41,7 @@
         "positionIndex": 1,
         "name": "Desert Mix",
         "description": "Increases the amount of sand thrown.",
+        "zh": { "name": "沙漠 Mix", "description": "提高 sand thrown 的数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -50,6 +53,7 @@
         "positionIndex": 2,
         "name": "Concentrated Sand",
         "description": "Increases the damage dealt by sand carver.",
+        "zh": { "name": "集中沙之", "description": "提高造成的伤害刻沙者。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -61,6 +65,7 @@
         "positionIndex": 3,
         "name": "Glass Shards",
         "description": "Thrown sand has a chance to inflict bleeding on hit.",
+        "zh": { "name": "沙漏 Shards", "description": "掷出沙之有概率施加流血命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -79,6 +84,7 @@
         "positionIndex": 4,
         "name": "Special Pouch",
         "description": "Increases the damage dealt to bosses by sand carver.",
+        "zh": { "name": "Special Pouch", "description": "提高造成的伤害至首领刻沙者。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -90,6 +96,7 @@
         "positionIndex": 5,
         "name": "Vortex Master",
         "description": "Chance on kill to spawn a small sand vortex.",
+        "zh": { "name": "漩涡大师", "description": "击杀时有概率生成小型流沙漩涡。" },
         "maxRank": 4,
         "proc": { "trigger": "on_kill", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -98,6 +105,7 @@
         "positionIndex": 6,
         "name": "Combat Skills",
         "description": "Chance on hit to gain increased dodge chance for a short period.",
+        "zh": { "name": "战斗技能", "description": "命中时有概率获得提高闪避概率使短距期间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -113,6 +121,7 @@
         "positionIndex": 7,
         "name": "Swift Strikes",
         "description": "Increases attack speed when using sand carver.",
+        "zh": { "name": "迅捷打击", "description": "提高攻击速度使用刻沙者。" },
         "maxRank": 6,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -124,6 +133,7 @@
         "positionIndex": 8,
         "name": "Raw Power",
         "description": "Increases attack damage dealt by sand carver.",
+        "zh": { "name": "Raw 力量", "description": "提高攻击造成的伤害刻沙者。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -135,6 +145,7 @@
         "positionIndex": 9,
         "name": "Headwind",
         "description": "Increases the projectile speed of sand thrown.",
+        "zh": { "name": "Headwind", "description": "提高 sand thrown 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -146,6 +157,7 @@
         "positionIndex": 10,
         "name": "Sand Infusion",
         "description": "Chance to inflict armor break and arcane break on hit.",
+        "zh": { "name": "沙之灌注", "description": "命中时有概率施加护甲击破与奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0, "armor_break": 0 },
@@ -165,6 +177,7 @@
         "positionIndex": 11,
         "name": "Eviscerate",
         "description": "Critical strikes cause the nomad to throw sand in a circle around him stunning and dealing additional damage.",
+        "zh": { "name": "Eviscerate", "description": "暴击使 nomad 至投掷沙之圆环周围 him 眩晕与造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -176,6 +189,7 @@
         "positionIndex": 12,
         "name": "Parasitical Sand",
         "description": "Thrown sand now sticks to the targets dealing damage over time for a short period.",
+        "zh": { "name": "Parasitical 沙之", "description": "掷出沙之附着至目标造成伤害随时间短距期间。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -187,6 +201,7 @@
         "positionIndex": 13,
         "name": "Piercing Sands",
         "description": "Thrown sand is now piercing and has a chance to fork on hit.",
+        "zh": { "name": "穿透沙之", "description": "掷出沙之穿透与有概率分叉命中时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -202,6 +217,7 @@
         "positionIndex": 14,
         "name": "Desert´s Blade",
         "description": "Chance on attack to summon a big tornado pulling in and dealing additional damage to nearby monsters.",
+        "zh": { "name": "沙漠的利刃", "description": "攻击时有概率召唤物核心龙卷风牵引与造成额外伤害至附近怪物。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -220,6 +236,7 @@
     "name": "Cloud of Sand",
     "kind": "active",
     "description": "Unleash a cloud of sand that travels forwards dealing arcane damage, by casting the skill again Nomad will re-locate on the sand clouds position dealing area of effect arcane damage and stunning nearby monsters.",
+    "zh": { "name": "沙云", "description": "释放一团向前飘行的沙云，造成奥术伤害；再次施放该技能时，游牧者会移动到沙云的位置，造成范围奥术伤害并眩晕附近怪物。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Projectile", "Movement", "Blink"],
     "movementDuringUse": 85,
@@ -243,6 +260,7 @@
         "positionIndex": 0,
         "name": "Cloud of Sand",
         "description": "Core of the Cloud of Sand subtree.",
+        "zh": { "name": "沙云", "description": "沙云 子树核心。" },
         "maxRank": 1
       },
       {
@@ -250,6 +268,7 @@
         "positionIndex": 1,
         "name": "Breeze",
         "description": "Decreases movement diminish when using cloud of sand.",
+        "zh": { "name": "Breeze", "description": "使用沙云时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -261,6 +280,7 @@
         "positionIndex": 2,
         "name": "Desert's Spirit",
         "description": "Increases cast rate when using cloud of sand.",
+        "zh": { "name": "沙漠的灵体", "description": "提高 sand 的施法速度使用云雾。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -272,6 +292,7 @@
         "positionIndex": 3,
         "name": "Sand Twisters",
         "description": "Teleporting into the cloud now unleashes multiple sand tornados around the cloud.",
+        "zh": { "name": "沙之旋风", "description": "传送进入云雾释放多个沙之龙卷风周围云雾。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -283,6 +304,7 @@
         "positionIndex": 4,
         "name": "Desert's Will",
         "description": "Decreases mana cost when using cloud of sand.",
+        "zh": { "name": "沙漠的 Will", "description": "使用沙云时降低法力消耗。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -294,6 +316,7 @@
         "positionIndex": 5,
         "name": "Desert's Endurance",
         "description": "Increases the duration of cloud of sand.",
+        "zh": { "name": "沙漠的 Endurance", "description": "提高 沙云 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -305,6 +328,7 @@
         "positionIndex": 6,
         "name": "Sandbender",
         "description": "Cloud of sand now leaves behind a trail of tornados.",
+        "zh": { "name": "Sandbender", "description": "沙云留下身后轨迹之龙卷风。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -316,6 +340,7 @@
         "positionIndex": 7,
         "name": "Zephyr",
         "description": "Increases the projectile speed of cloud of sand.",
+        "zh": { "name": "Zephyr", "description": "提高 沙云 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -327,6 +352,7 @@
         "positionIndex": 8,
         "name": "Heavy Sand",
         "description": "Increases the damage dealt by cloud of sand.",
+        "zh": { "name": "重型沙之", "description": "提高 sand 的造成的伤害云雾。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -338,6 +364,7 @@
         "positionIndex": 9,
         "name": "Dust Storm",
         "description": "Increases the size of cloud of sand.",
+        "zh": { "name": "Dust 风暴", "description": "提高 沙云 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -349,6 +376,7 @@
         "positionIndex": 10,
         "name": "Hand of the Oasis",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "Hand 之 Oasis", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -367,6 +395,7 @@
         "positionIndex": 11,
         "name": "Cloud Bender",
         "description": "The cloud is now under your control gaining increased size and damage.",
+        "zh": { "name": "云雾 Bender", "description": "云雾 under 你的控制获得提高 size 与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -378,6 +407,7 @@
         "positionIndex": 12,
         "name": "Field of Quicksand",
         "description": "Teleporting to the cloud now summons multiple small sand vortexes around it.",
+        "zh": { "name": "野域之 Quicksand", "description": "传送至云雾召唤物多个小型沙之 vortexes 周围。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -389,6 +419,7 @@
         "positionIndex": 13,
         "name": "Desert´s Echo",
         "description": "Summon multiple clouds dealing increased damage. You are no longer able to teleport into the cloud.",
+        "zh": { "name": "沙漠的回响", "description": "召唤物多个云雾造成提高伤害。你更久 able 至 teleport 进入云雾。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -400,6 +431,7 @@
         "positionIndex": 14,
         "name": "Ascension",
         "description": "Teleporting to the cloud now renders you immortal for a short period. Cloud of sand now has a cooldown.",
+        "zh": { "name": "Ascension", "description": "传送至云雾 renders 你不朽短距期间。沙云有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -414,6 +446,7 @@
     "name": "Sand Tremors",
     "kind": "active",
     "description": "Strike a target causing sand tremors to hit nearby monsters dealing increased damage.",
+    "zh": { "name": "沙震", "description": "打击一个目标，引发沙震袭击附近怪物，造成提高的伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Area of Effect", "Strike"],
     "movementDuringUse": 65,
@@ -441,6 +474,7 @@
         "positionIndex": 0,
         "name": "Sand Tremors",
         "description": "Core of the Sand Tremors subtree.",
+        "zh": { "name": "沙震", "description": "沙震 子树核心。" },
         "maxRank": 1
       },
       {
@@ -448,6 +482,7 @@
         "positionIndex": 1,
         "name": "Amplified Frequency",
         "description": "Chance on attack to spawn additional tremors.",
+        "zh": { "name": "强化 Frequency", "description": "攻击时有概率生成额外震颤。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -463,6 +498,7 @@
         "positionIndex": 2,
         "name": "Light Footwork",
         "description": "Decreases movement diminish when using sand tremors.",
+        "zh": { "name": "光明 Footwork", "description": "使用沙震时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -474,6 +510,7 @@
         "positionIndex": 3,
         "name": "Oasis Impaler",
         "description": "Chance on hit to inflict bleeding for a portion of the damage.",
+        "zh": { "name": "Oasis Impaler", "description": "命中时有概率施加流血一部分伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -492,6 +529,7 @@
         "positionIndex": 4,
         "name": "Internal Bleeding",
         "description": "Increases damage to bleeding targets.",
+        "zh": { "name": "Internal 流血", "description": "提高伤害至流血目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -503,6 +541,7 @@
         "positionIndex": 5,
         "name": "Waves of Despair",
         "description": "Increases the area of effect radius of sand tremors.",
+        "zh": { "name": "波之 Despair", "description": "提高 effect radius of 沙震 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -514,6 +553,7 @@
         "positionIndex": 6,
         "name": "Shock Therapy",
         "description": "Increases the damage dealt by sand tremors.",
+        "zh": { "name": "冲击 Therapy", "description": "提高造成的伤害沙震。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -525,6 +565,7 @@
         "positionIndex": 7,
         "name": "Tremor´s Reach",
         "description": "Increases attack range and area of effect radius when using sand tremors.",
+        "zh": { "name": "Tremor's 延伸", "description": "提高 effect radius when using 沙震 的攻击范围与范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0, "area_of_effect": 0 },
@@ -536,6 +577,7 @@
         "positionIndex": 8,
         "name": "Conjuring Winds",
         "description": "Chance on hit to send a sand tornado towards the target dealing additional damage.",
+        "zh": { "name": "召唤狂风", "description": "命中时有概率发出沙之龙卷风朝向目标造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -551,6 +593,7 @@
         "positionIndex": 9,
         "name": "Exchange of Life",
         "description": "Killing monsters with sand tremors restores your life.",
+        "zh": { "name": "Exchange 之生命", "description": "击杀怪物使用沙震恢复你的生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -562,6 +605,7 @@
         "positionIndex": 10,
         "name": "Area of Impact",
         "description": "Increases critical strike damage dealt by sand tremors.",
+        "zh": { "name": "范围之冲击", "description": "提高暴击伤害 dealt 沙震。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -573,6 +617,7 @@
         "positionIndex": 11,
         "name": "Shrouding Sand",
         "description": "Striking monsters now enshrouds you in a sandstorm which gradually shrinks and disappears. Striking additional enemies causes it to grow larger and last longer.",
+        "zh": { "name": "Shrouding 沙之", "description": "打击怪物 enshrouds 你 sandstorm 从而 gradually shrinks 与消失。打击额外敌人使至 grow 更大与最后更久。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_duration": 0 },
@@ -584,6 +629,7 @@
         "positionIndex": 12,
         "name": "Pulsating Tremors",
         "description": "Tremors now travel a short distance dealing additional damage.",
+        "zh": { "name": "Pulsating 震颤", "description": "震颤飞行短距距离造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 1 },
@@ -595,6 +641,7 @@
         "positionIndex": 13,
         "name": "Night at the Desert",
         "description": "Tremors deal increased damage and inflict permafrost on hit.",
+        "zh": { "name": "Night 沙漠", "description": "震颤造成提高伤害与施加永久冻土命中时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -619,6 +666,7 @@
         "positionIndex": 14,
         "name": "Dune Warrior",
         "description": "Striking monsters adds a stack of dune warrior sending multiple tornados dealing additional damage in an arc upon reaching maximum stacks.",
+        "zh": { "name": "Dune 战士", "description": "打击怪物 adds 层之 dune 战士发出多个龙卷风造成额外伤害呈弧线 upon 延伸最大层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -633,6 +681,7 @@
     "name": "Sand Entombment",
     "kind": "passive",
     "description": "Chance on kill to unleash a pulse of sand dealing arcane area of effect damage.",
+    "zh": { "name": "流沙葬", "description": "击杀时有概率释放一道沙之脉冲，造成范围奥术伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -650,6 +699,7 @@
     "name": "Mystic Sand",
     "kind": "passive",
     "description": "Increases your arcane skill damage and cast rate.",
+    "zh": { "name": "神秘之沙", "description": "提高你的奥术技能伤害和施法速度。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -667,6 +717,7 @@
     "name": "Sand Gush",
     "kind": "active",
     "description": "Unleash a gush of sand that spawns tornadoes dealing arcane damage.",
+    "zh": { "name": "沙泉喷涌", "description": "释放一股会生成龙卷风的沙泉，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -691,6 +742,7 @@
         "positionIndex": 0,
         "name": "Sand Gush",
         "description": "Core of the Sand Gush subtree.",
+        "zh": { "name": "沙泉喷涌", "description": "沙泉喷涌 子树核心。" },
         "maxRank": 1
       },
       {
@@ -698,6 +750,7 @@
         "positionIndex": 1,
         "name": "Desert´s Sand",
         "description": "Increases the area of effect radius of sand gush.",
+        "zh": { "name": "沙漠的沙之", "description": "提高 effect radius of 沙泉喷涌 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -709,6 +762,7 @@
         "positionIndex": 2,
         "name": "Gushing Winds",
         "description": "Chance on cast to increase the size and damage of tornados.",
+        "zh": { "name": "Gushing 狂风", "description": "施法时有概率提高 size 与伤害之龙卷风。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_cast",
@@ -724,6 +778,7 @@
         "positionIndex": 3,
         "name": "Piercing Sand",
         "description": "Increases the damage dealt by sand gush.",
+        "zh": { "name": "蚀沙穿甲", "description": "流沙守卫攻击时会击破怪物的奥术抗性。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -735,6 +790,7 @@
         "positionIndex": 4,
         "name": "Stranded Impact",
         "description": "Increases damage dealt to bosses.",
+        "zh": { "name": "Stranded 冲击", "description": "提高对 首领 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -746,6 +802,7 @@
         "positionIndex": 5,
         "name": "Armor Piercing Flow",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "护甲穿透 Flow", "description": "命中时施加奥术击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -764,6 +821,7 @@
         "positionIndex": 6,
         "name": "Gusting Winds",
         "description": "Increases the speed of sand tornados.",
+        "zh": { "name": "Gusting 狂风", "description": "提高 sand tornados 的速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -775,6 +833,7 @@
         "positionIndex": 7,
         "name": "Desert Storm",
         "description": "Increases the amount of sand tornados.",
+        "zh": { "name": "沙漠风暴", "description": "提高 sand tornados 的数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0, "arcane_skill_damage": 0 },
@@ -786,6 +845,7 @@
         "positionIndex": 8,
         "name": "Overwhelming Sand",
         "description": "Tornados have a chance on hit to inflict bleeding for a portion of the damage.",
+        "zh": { "name": "Overwhelming 沙之", "description": "龙卷风有概率命中时至施加流血一部分伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -804,6 +864,7 @@
         "positionIndex": 9,
         "name": "Tamed Winds",
         "description": "Tornados now spin outwards following the nomad.",
+        "zh": { "name": "Tamed 狂风", "description": "龙卷风旋转向外 following nomad。" },
         "maxRank": 2,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -815,6 +876,7 @@
         "positionIndex": 10,
         "name": "Contaminated Wounds",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Contaminated 创伤", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -826,6 +888,7 @@
         "positionIndex": 11,
         "name": "Desert Cyclones",
         "description": "Tornados spawn multiple small cyclones on hit.",
+        "zh": { "name": "沙漠 Cyclones", "description": "龙卷风生成多个小型 cyclones 命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -837,6 +900,7 @@
         "positionIndex": 12,
         "name": "Sandstorm",
         "description": "Cast continuous gushes around you for a short period with increased radius and damage. Sand Gush now has a cooldown.",
+        "zh": { "name": "Sandstorm", "description": "施法 continuous gushes 周围你短距期间使用提高半径与伤害。沙泉喷涌有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -848,6 +912,7 @@
         "positionIndex": 13,
         "name": "Sand Tornado",
         "description": "Send out a sand tornado casting sand gush continuously.",
+        "zh": { "name": "沙之龙卷风", "description": "发出 out 沙之龙卷风施法沙泉喷涌 continuously。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -859,6 +924,7 @@
         "positionIndex": 14,
         "name": "Dust Devils",
         "description": "Unleash small dust devils bouncing off of walls and unleashing a pulse of sand on hit.",
+        "zh": { "name": "Dust Devils", "description": "释放小型 dust devils 弹跳关闭之墙与释放脉冲之沙之命中时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -881,6 +947,7 @@
     "name": "Dissipating Tornado",
     "kind": "active",
     "description": "Summon a dissipating tornado around you that pulls nearby monsters and causes you to dodge all attacks and unleash sand at monsters when they strike you dealing arcane damage.",
+    "zh": { "name": "消散龙卷", "description": "在你周围召唤一个逐渐消散的龙卷风，牵引附近怪物，并使你闪避所有攻击；怪物击中你时向其弹出流沙，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell"],
     "movementDuringUse": 85,
@@ -907,6 +974,7 @@
     "name": "Oasis Aura",
     "kind": "aura",
     "description": "When active, increases your and your party members attack rating, movement speed and arcane damage.",
+    "zh": { "name": "绿洲光环", "description": "激活时，提高你和队友的攻击命中、移动速度和奥术伤害。" },
     "tags": ["Cast", "Active", "Aura"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -924,6 +992,7 @@
     "name": "Sand Vortex",
     "kind": "active",
     "description": "Summon a massive vortex of quick sand that pulls monsters inside dealing arcane damage.",
+    "zh": { "name": "流沙漩涡", "description": "召唤一个巨大的流沙漩涡，将怪物卷入其中，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 85,
@@ -948,6 +1017,7 @@
         "positionIndex": 0,
         "name": "Sand Vortex",
         "description": "Core of the Sand Vortex subtree.",
+        "zh": { "name": "流沙漩涡", "description": "流沙漩涡 子树核心。" },
         "maxRank": 1
       },
       {
@@ -955,6 +1025,7 @@
         "positionIndex": 1,
         "name": "Desert Mass",
         "description": "Increases the area of effect radius of sand vortex.",
+        "zh": { "name": "沙漠巨躯", "description": "提高 effect radius of 流沙漩涡 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -966,6 +1037,7 @@
         "positionIndex": 2,
         "name": "Quicksand",
         "description": "Increases pulling strength.",
+        "zh": { "name": "Quicksand", "description": "提高牵引力量。" },
         "maxRank": 5,
         "effects": {
           "base": { "pull_strength": 0 },
@@ -977,6 +1049,7 @@
         "positionIndex": 3,
         "name": "Shredding Sand",
         "description": "Increases the damage dealt by sand vortex.",
+        "zh": { "name": "Shredding 沙之", "description": "提高造成的伤害流沙漩涡。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -988,6 +1061,7 @@
         "positionIndex": 4,
         "name": "Locust Whirlpool",
         "description": "Restores mana on hit.",
+        "zh": { "name": "Locust Whirlpool", "description": "恢复法力命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_replenish_pct": 0 },
@@ -999,6 +1073,7 @@
         "positionIndex": 5,
         "name": "Stuttering Pull",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "Stuttering 牵引", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1011,6 +1086,7 @@
         "positionIndex": 6,
         "name": "Desert Control",
         "description": "Reduces the cooldown of sand vortex.",
+        "zh": { "name": "沙漠控制", "description": "降低 cooldown 之流沙漩涡。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1022,6 +1098,7 @@
         "positionIndex": 7,
         "name": "Lasting Whirlpool",
         "description": "Increases the duration of sand vortex.",
+        "zh": { "name": "持续 Whirlpool", "description": "提高 流沙漩涡 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1033,6 +1110,7 @@
         "positionIndex": 8,
         "name": "Veil of Sand",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Veil 之沙之", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1044,6 +1122,7 @@
         "positionIndex": 9,
         "name": "Breaking Sands",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "击破沙之", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1062,6 +1141,7 @@
         "positionIndex": 10,
         "name": "Brain Damaging Whirl",
         "description": "Sand vortex now executes targets below a certain percentage of life.",
+        "zh": { "name": "Brain 伤害型 Whirl", "description": "流沙漩涡处决目标低于特定 percentage 之生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1073,6 +1153,7 @@
         "positionIndex": 11,
         "name": "Sunken Field",
         "description": "Summon multiple small sand vortexes around target location with increased damage.",
+        "zh": { "name": "Sunken 野域", "description": "召唤物多个小型沙之 vortexes 周围目标位置使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -1084,6 +1165,7 @@
         "positionIndex": 12,
         "name": "Accelerated Sand",
         "description": "Sand vortex size and tick rate increases rapidly but lasts for a shorter duration.",
+        "zh": { "name": "Accelerated 沙之", "description": "流沙漩涡 size 与每跳速率提高迅速持续 shorter 持续时间。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0, "area_of_effect": 0 },
@@ -1095,6 +1177,7 @@
         "positionIndex": 13,
         "name": "Cycloning Kraken",
         "description": "Sand vortex now spawns cycling tornados from its center.",
+        "zh": { "name": "Cycloning Kraken", "description": "流沙漩涡生成 cycling 龙卷风从 center。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0, "arcane_skill_damage": 0 },
@@ -1106,6 +1189,7 @@
         "positionIndex": 14,
         "name": "Slow Burn",
         "description": "Sand vortex now doesn’t pull monsters but slows them and inflicts burning for a portion of the damage on hit.",
+        "zh": { "name": "缓慢燃烧", "description": "流沙漩涡 doesn't 牵引怪物减速它们与施加燃烧一部分伤害命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1127,6 +1211,7 @@
     "name": "Blade Strike",
     "kind": "active",
     "description": "Perform a cleave attack with increased chance for critical strike and critical strike damage.",
+    "zh": { "name": "利刃打击", "description": "进行一次劈砍攻击，拥有提高的暴击概率和暴击伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 65,
@@ -1153,6 +1238,7 @@
         "positionIndex": 0,
         "name": "Blade Strike",
         "description": "Core of the Blade Strike subtree.",
+        "zh": { "name": "利刃打击", "description": "利刃打击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1160,6 +1246,7 @@
         "positionIndex": 1,
         "name": "Ferocious Swipe",
         "description": "Increases critical strike chance when using blade strike.",
+        "zh": { "name": "Ferocious Swipe", "description": "提高暴击概率使用利刃打击。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -1171,6 +1258,7 @@
         "positionIndex": 2,
         "name": "Blade´s Edge",
         "description": "Increases critical strike damage when using blade strike.",
+        "zh": { "name": "利刃的锋刃", "description": "提高暴击伤害使用利刃打击。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1182,6 +1270,7 @@
         "positionIndex": 3,
         "name": "Lethal Swing",
         "description": "Increases damage dealt by blade strike.",
+        "zh": { "name": "致命挥击", "description": "提高 利刃打击 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1193,6 +1282,7 @@
         "positionIndex": 4,
         "name": "Blade Master",
         "description": "Increases attack rating when using blade strike.",
+        "zh": { "name": "利刃大师", "description": "提高攻击命中使用利刃打击。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1204,6 +1294,7 @@
         "positionIndex": 5,
         "name": "Gut Slicer",
         "description": "Inflicts armor break on hit.",
+        "zh": { "name": "Gut Slicer", "description": "命中时施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1222,6 +1313,7 @@
         "positionIndex": 6,
         "name": "Catch Up Blade",
         "description": "Chance on attack to throw your weapon with force dealing additional damage and bouncing from terrain.",
+        "zh": { "name": "Catch 上利刃", "description": "攻击时有概率投掷你的武器使用力量造成额外伤害与弹跳从地形。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1237,6 +1329,7 @@
         "positionIndex": 7,
         "name": "Cleaving Slash",
         "description": "Increases the area of effect of blade strike.",
+        "zh": { "name": "劈裂斩击", "description": "提高 effect of 利刃打击 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1248,6 +1341,7 @@
         "positionIndex": 8,
         "name": "Agile Striker",
         "description": "Chance on attack to strike additional times.",
+        "zh": { "name": "敏捷 Striker", "description": "攻击时有概率strike 额外次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1263,6 +1357,7 @@
         "positionIndex": 9,
         "name": "Bounty Hunting",
         "description": "Chance on hit to increase your strength for a short period of time.",
+        "zh": { "name": "赏金狩猎", "description": "命中时有概率提高你的力量短距期间之时间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1278,6 +1373,7 @@
         "positionIndex": 10,
         "name": "Tribal Commander",
         "description": "Gain a portion of your strength as all attributes.",
+        "zh": { "name": "部族指挥官", "description": "获得一部分你的力量全部属性。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1293,6 +1389,7 @@
         "positionIndex": 11,
         "name": "Skewering Blades",
         "description": "Unleash flying blades on monster hit dealing area of effect damage and inflict bleeding.",
+        "zh": { "name": "Skewering 刀刃", "description": "释放飞散刀刃怪物命中造成范围伤害与施加流血。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1304,6 +1401,7 @@
         "positionIndex": 12,
         "name": "Brutalizing Cleave",
         "description": "Gain increased attack range and damage slightly knocking enemies back stunning them.",
+        "zh": { "name": "暴虐 Cleave", "description": "获得提高攻击范围与伤害 slightly 击退敌人回眩晕它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -1315,6 +1413,7 @@
         "positionIndex": 13,
         "name": "Stacked Blade",
         "description": "Striking a monster applies a debuff which when reaching max stacks will unleash multiple blades dealing additional damage and bouncing from terrain.",
+        "zh": { "name": "叠加利刃", "description": "打击怪物 applies debuff 从而当延伸 max 层数 will 释放多个刀刃造成额外伤害与弹跳从地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -1326,6 +1425,7 @@
         "positionIndex": 14,
         "name": "Giant Slayer",
         "description": "Critical strike damage by blade strike is increased based on your vitality.",
+        "zh": { "name": "巨人杀手", "description": "暴击伤害利刃打击提高基于你的耐力。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_vitality": 0 },
@@ -1340,6 +1440,7 @@
     "name": "Eye of Ra",
     "kind": "active",
     "description": "Perform a light enchanted attack bringing rays of sun down to nearby monsters dealing increased damage.",
+    "zh": { "name": "拉神之眼", "description": "进行一次圣光强化的攻击，引下阳光照射附近怪物，造成提高的伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Chaining", "Strike"],
     "movementDuringUse": 65,
@@ -1367,6 +1468,7 @@
         "positionIndex": 0,
         "name": "Eye of Ra",
         "description": "Core of the Eye of Ra subtree.",
+        "zh": { "name": "拉神之眼", "description": "拉神之眼 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1374,6 +1476,7 @@
         "positionIndex": 1,
         "name": "Sunburn",
         "description": "Increases the maximum targets per hit being affected by eye of ra.",
+        "zh": { "name": "Sunburn", "description": "提高 ra 的最大目标每命中 being affected 之眼。" },
         "maxRank": 5,
         "effects": {
           "base": { "max_targets": 0 },
@@ -1385,6 +1488,7 @@
         "positionIndex": 2,
         "name": "Ray´s of Wisdom",
         "description": "Increases damage dealt by sun rays based on your energy.",
+        "zh": { "name": "Ray's 之 Wisdom", "description": "提高 sun rays based on your energy 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_energy": 0 },
@@ -1396,6 +1500,7 @@
         "positionIndex": 3,
         "name": "Solar Flow",
         "description": "Increases the range of the sun rays.",
+        "zh": { "name": "太阳 Flow", "description": "提高 the sun rays 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1407,6 +1512,7 @@
         "positionIndex": 4,
         "name": "Ultra Violet Radiation",
         "description": "Chance on hit to inflict burning for a portion of the damage dealt by eye of ra.",
+        "zh": { "name": "Ultra Violet Radiation", "description": "命中时有概率施加燃烧一部分造成的伤害拉神之眼。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1425,6 +1531,7 @@
         "positionIndex": 5,
         "name": "Scorching Sun",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "灼热 Sun", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1436,6 +1543,7 @@
         "positionIndex": 6,
         "name": "Ra´s Wrath",
         "description": "Increases the amount of sun rays additionally inflicting slow on hit.",
+        "zh": { "name": "Ra's 愤怒", "description": "提高 sun rays additionally inflicting slow on hit 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -1447,6 +1555,7 @@
         "positionIndex": 7,
         "name": "Heat Paralysis",
         "description": "Inflicts elemental break on hit.",
+        "zh": { "name": "灼热 Paralysis", "description": "命中时施加元素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "elemental_break": 0 },
@@ -1468,6 +1577,7 @@
         "positionIndex": 8,
         "name": "Piercing Sunlight",
         "description": "Increases critical strike damage dealt by eye of ra.",
+        "zh": { "name": "穿透 Sunlight", "description": "提高 ra 的暴击伤害 dealt 之眼。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1479,6 +1589,7 @@
         "positionIndex": 9,
         "name": "Armed Light",
         "description": "Increases attack rating when using eye of ra.",
+        "zh": { "name": "Armed 光明", "description": "提高 ra 的攻击命中使用之眼。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1490,6 +1601,7 @@
         "positionIndex": 10,
         "name": "Piercing Radiation",
         "description": "Inflicts armor break on hit.",
+        "zh": { "name": "穿透 Radiation", "description": "命中时施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1508,6 +1620,7 @@
         "positionIndex": 11,
         "name": "God of Gods",
         "description": "Unleash eye of ra on all nearby monsters. Eye of Ra now has a cooldown.",
+        "zh": { "name": "神明之神明", "description": "释放拉神之眼附近所有怪物。拉神之眼有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1519,6 +1632,7 @@
         "positionIndex": 12,
         "name": "Pillar of Light",
         "description": "Unleash pillars of light in a narrow line each dealing damage over time and slowing on hit.",
+        "zh": { "name": "Pillar 之光明", "description": "释放 pillars 之光明 narrow line 每个造成伤害随时间与减速命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -1530,6 +1644,7 @@
         "positionIndex": 13,
         "name": "Orbiting the Sun",
         "description": "Unleash multiple light pillars orbiting you dealing increased damage.",
+        "zh": { "name": "环绕 Sun", "description": "释放多个光明 pillars 环绕你造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1541,6 +1656,7 @@
         "positionIndex": 14,
         "name": "Lightbringer",
         "description": "Eye of Ra unleashes a storm of light pillars at the last target.",
+        "zh": { "name": "Lightbringer", "description": "拉神之眼释放风暴之光明 pillars 最后目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "skill_duration": 0 },
@@ -1555,6 +1671,7 @@
     "name": "Flying Scimitar",
     "kind": "active",
     "description": "Throw a huge piercing scimitar dealing increased damage to monsters in its path which returns back to you after a short delay.",
+    "zh": { "name": "飞旋弯刀", "description": "掷出一把巨大的穿透弯刀，对路径上的怪物造成提高的伤害，短暂延迟后返回你手中。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Projectile", "Strike"],
     "movementDuringUse": 65,
@@ -1583,6 +1700,7 @@
         "positionIndex": 0,
         "name": "Flying Scimitar",
         "description": "Core of the Flying Scimitar subtree.",
+        "zh": { "name": "飞旋弯刀", "description": "飞旋弯刀 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1590,6 +1708,7 @@
         "positionIndex": 1,
         "name": "Afterslice",
         "description": "Chance on attack to cast another scimitar.",
+        "zh": { "name": "Afterslice", "description": "攻击时有概率施法另一个弯刀。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 6 } }
       },
@@ -1598,6 +1717,7 @@
         "positionIndex": 2,
         "name": "Sharpened Blade",
         "description": "Increases the damage dealt by flying scimitar.",
+        "zh": { "name": "锋利利刃", "description": "提高造成的伤害飞旋弯刀。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1609,6 +1729,7 @@
         "positionIndex": 3,
         "name": "Slice and Flight",
         "description": "Increases the projectile speed of flying scimitar.",
+        "zh": { "name": "斩切与 Flight", "description": "提高 飞旋弯刀 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1620,6 +1741,7 @@
         "positionIndex": 4,
         "name": "Widened Blade",
         "description": "Increases the size of the scimitars.",
+        "zh": { "name": "拓宽利刃", "description": "提高 the scimitars 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1631,6 +1753,7 @@
         "positionIndex": 5,
         "name": "Blade´s Vengeance",
         "description": "Returning scimitars pull enemies towards you with a chance to slow them.",
+        "zh": { "name": "利刃的复仇", "description": "返回弯刀牵引敌人朝向你使用概率缓慢它们。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1643,6 +1766,7 @@
         "positionIndex": 6,
         "name": "Rupturing Flyby",
         "description": "Chance on attack for flying scimitar to inflict bleeding on hit.",
+        "zh": { "name": "破裂 Flyby", "description": "概率攻击时飞旋弯刀至施加流血命中时。" },
         "maxRank": 2,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1661,6 +1785,7 @@
         "positionIndex": 7,
         "name": "Scimitar´s Edge",
         "description": "Increases critical strike chance when using flying scimitar.",
+        "zh": { "name": "弯刀的锋刃", "description": "提高暴击概率使用飞旋弯刀。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -1672,6 +1797,7 @@
         "positionIndex": 8,
         "name": "Maiming Scimitar",
         "description": "Increases critical strike damage dealt by flying scimitar.",
+        "zh": { "name": "Maiming 弯刀", "description": "提高暴击伤害 dealt 飞旋弯刀。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1683,6 +1809,7 @@
         "positionIndex": 9,
         "name": "Last Wish",
         "description": "Flying scimitar now executes targets below a certain percentage of life.",
+        "zh": { "name": "最后 Wish", "description": "飞旋弯刀处决目标低于特定 percentage 之生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -1694,6 +1821,7 @@
         "positionIndex": 10,
         "name": "Salted Blade",
         "description": "Increases damage to bleeding targets.",
+        "zh": { "name": "Salted 利刃", "description": "提高伤害至流血目标。" },
         "maxRank": 2,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1705,6 +1833,7 @@
         "positionIndex": 11,
         "name": "Flying Swarm",
         "description": "Throw multiple smaller scimitars with decreased damage.",
+        "zh": { "name": "飞散 Swarm", "description": "投掷多个更小弯刀使用降低伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "splash_of_total_damage": 60, "projectile_count": 0 },
@@ -1716,6 +1845,7 @@
         "positionIndex": 12,
         "name": "Sticking Blade",
         "description": "Scimitars now attach to the first target for a short period dealing damage over time and returning back to the nomad.",
+        "zh": { "name": "Sticking 利刃", "description": "弯刀 attach 至第一目标短距期间造成伤害随时间与返回回至 nomad。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "faster_cast_rate": 0 },
@@ -1727,6 +1857,7 @@
         "positionIndex": 13,
         "name": "League of Nomad",
         "description": "Scimitars now return to their spawning location. Successfully catching the returning scimitars increases your damage for a short period.",
+        "zh": { "name": "League 之 Nomad", "description": "弯刀反伤至 their 生成位置。Successfully catching 返回弯刀提高你的伤害短距期间。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1738,6 +1869,7 @@
         "positionIndex": 14,
         "name": "Orbital Blade Strike",
         "description": "Scimitars are now spawned in a circle around the nomad with increased projectile speed and pulled back dealing increased damage. Scimitar Throw now has a cooldown.",
+        "zh": { "name": "环绕利刃打击", "description": "弯刀生成圆环周围 nomad 使用提高投射物速度与牵引回造成提高伤害。弯刀投掷有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1760,6 +1892,7 @@
     "name": "Healing Sunrays",
     "kind": "passive",
     "description": "Increases your life and mana stolen per hit.",
+    "zh": { "name": "疗愈阳光", "description": "提高你每次命中偷取的生命和法力。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -1777,6 +1910,7 @@
     "name": "Chainslice",
     "kind": "active",
     "description": "Perform an enhanced attack that causes a sharp blade to chain between nearby monsters dealing damage.",
+    "zh": { "name": "连锁利刃", "description": "进行一次强化的攻击，使锋利的刀刃在附近怪物间连锁，造成伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Chaining", "Strike"],
     "movementDuringUse": 65,
@@ -1804,6 +1938,7 @@
         "positionIndex": 0,
         "name": "Chainslice",
         "description": "Core of the Chainslice subtree.",
+        "zh": { "name": "连锁利刃", "description": "连锁利刃 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1811,6 +1946,7 @@
         "positionIndex": 1,
         "name": "Slice and Dice",
         "description": "Increases the amount of bounces for chainslice.",
+        "zh": { "name": "斩切与骰子", "description": "提高 bounces for 连锁利刃 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -1822,6 +1958,7 @@
         "positionIndex": 2,
         "name": "Slicing Accuracy",
         "description": "Increases attack rating when using chainslice.",
+        "zh": { "name": "斩切 Accuracy", "description": "提高攻击命中使用连锁利刃。" },
         "maxRank": 3,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1833,6 +1970,7 @@
         "positionIndex": 3,
         "name": "Penetrating Flesh",
         "description": "Inflict armor break on hit.",
+        "zh": { "name": "穿透 Flesh", "description": "命中时施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1851,6 +1989,7 @@
         "positionIndex": 4,
         "name": "Field Cover",
         "description": "Increases the range of chainslice.",
+        "zh": { "name": "野域覆盖", "description": "提高 连锁利刃 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1862,6 +2001,7 @@
         "positionIndex": 5,
         "name": "Vagabond Quickblades",
         "description": "Increases the projectile speed of chainslice.",
+        "zh": { "name": "Vagabond Quickblades", "description": "提高 连锁利刃 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1873,6 +2013,7 @@
         "positionIndex": 6,
         "name": "Extended Blade",
         "description": "Increases the size of chainslice.",
+        "zh": { "name": "延长利刃", "description": "提高 连锁利刃 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1884,6 +2025,7 @@
         "positionIndex": 7,
         "name": "Poisoned Shiv",
         "description": "Chance on hit to inflict poisoned.",
+        "zh": { "name": "中毒 Shiv", "description": "命中时有概率施加中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1902,6 +2044,7 @@
         "positionIndex": 8,
         "name": "Master Slicer",
         "description": "Increases damage dealt by chainslice.",
+        "zh": { "name": "大师 Slicer", "description": "提高 连锁利刃 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1913,6 +2056,7 @@
         "positionIndex": 9,
         "name": "Agile Footwork",
         "description": "Decreases movement diminish when using chainslice.",
+        "zh": { "name": "敏捷 Footwork", "description": "使用连锁利刃时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1924,6 +2068,7 @@
         "positionIndex": 10,
         "name": "Infected Wounds",
         "description": "Increases damage dealt to poisoned targets.",
+        "zh": { "name": "Infected 创伤", "description": "提高对 中毒目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -1935,6 +2080,7 @@
         "positionIndex": 11,
         "name": "Bloodburn",
         "description": "Unleash small blood novas on hit dealing increased damage.",
+        "zh": { "name": "Bloodburn", "description": "释放小型鲜血新星命中时造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -1946,6 +2092,7 @@
         "positionIndex": 12,
         "name": "Ghost Blade",
         "description": "Each chainslice hit scatters a flying blade spawning a phantom blade when landing.",
+        "zh": { "name": "Ghost 利刃", "description": "每个连锁利刃命中散射飞散利刃生成幻影之刃落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1957,6 +2104,7 @@
         "positionIndex": 13,
         "name": "Critical Shred",
         "description": "When chainslice critically strikes it sends out additional scimitars in all directions.",
+        "zh": { "name": "暴击 Shred", "description": "当连锁利刃暴击打击发出 out 额外弯刀全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -1968,6 +2116,7 @@
         "positionIndex": 14,
         "name": "Chainception",
         "description": "Chance on hit to release an additional chainslice.",
+        "zh": { "name": "Chainception", "description": "命中时有概率release 额外连锁利刃。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1986,6 +2135,7 @@
     "name": "Rupture",
     "kind": "active",
     "description": "Perform a rupturing area of effect attack inflicting bleed to targets on hit.",
+    "zh": { "name": "破裂", "description": "进行一次撕裂性的范围攻击，命中时使目标流血。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 65,
@@ -2014,6 +2164,7 @@
     "name": "Scimitar Charge",
     "kind": "active",
     "description": "Charge a short distance unleashing scimitar strike around you dealing increased damage to monsters struck.",
+    "zh": { "name": "弯刀冲锋", "description": "短距冲锋，在你周围释放弯刀斩击，对被击中的怪物造成提高的伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Movement", "Strike"],
     "movementDuringUse": 65,
@@ -2041,6 +2192,7 @@
         "positionIndex": 0,
         "name": "Scimitar Charge",
         "description": "Core of the Scimitar Charge subtree.",
+        "zh": { "name": "弯刀冲锋", "description": "弯刀冲锋 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2048,6 +2200,7 @@
         "positionIndex": 1,
         "name": "Sharpened Dash",
         "description": "Increases damage dealt by scimitar charge.",
+        "zh": { "name": "锋利突进", "description": "提高 弯刀冲锋 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2059,6 +2212,7 @@
         "positionIndex": 2,
         "name": "Whirling Radius",
         "description": "Increases the area of effect radius of scimitar charge.",
+        "zh": { "name": "Whirling 半径", "description": "提高 effect radius of 弯刀冲锋 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2070,6 +2224,7 @@
         "positionIndex": 3,
         "name": "Lethal Reach",
         "description": "Increases the traveling distance of scimitar charge.",
+        "zh": { "name": "致命延伸", "description": "提高 弯刀冲锋 的飞行距离。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2081,6 +2236,7 @@
         "positionIndex": 4,
         "name": "Dashing Reflexes",
         "description": "Increases attack rating when using scimitar charge.",
+        "zh": { "name": "突进 Reflexes", "description": "提高攻击命中使用弯刀冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -2092,6 +2248,7 @@
         "positionIndex": 5,
         "name": "Keep the Distance",
         "description": "Knock monsters back dealing increased damage on hit.",
+        "zh": { "name": "Keep 距离", "description": "击退怪物造成提高伤害命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2103,6 +2260,7 @@
         "positionIndex": 6,
         "name": "Deadly Rush",
         "description": "Increases travel speed when using scimitar charge.",
+        "zh": { "name": "致命 Rush", "description": "提高飞行速度使用弯刀冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -2114,6 +2272,7 @@
         "positionIndex": 7,
         "name": "Mind Over Matter",
         "description": "Decreases the mana cost of scimitar charge.",
+        "zh": { "name": "心智持续 Matter", "description": "降低法力消耗之弯刀冲锋。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -2125,6 +2284,7 @@
         "positionIndex": 8,
         "name": "Doubleslash",
         "description": "Chance to swirl an additional time on hit.",
+        "zh": { "name": "Doubleslash", "description": "命中时有概率swirl 额外一次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2140,6 +2300,7 @@
         "positionIndex": 9,
         "name": "Debilitating Swirl",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "Debilitating Swirl", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2152,6 +2313,7 @@
         "positionIndex": 10,
         "name": "Unhinged Slash",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Unhinged 斩击", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2163,6 +2325,7 @@
         "positionIndex": 11,
         "name": "Scimitar Storm",
         "description": "Throw multiple scimitars in a circle around you on hit.",
+        "zh": { "name": "弯刀风暴", "description": "投掷多个弯刀圆环周围你命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2174,6 +2337,7 @@
         "positionIndex": 12,
         "name": "Slow Painful Death",
         "description": "Deal a portion of your damage as bleeding with increased effectiveness.",
+        "zh": { "name": "缓慢 Painful 死亡", "description": "造成一部分你的伤害流血使用提高效果。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -2192,6 +2356,7 @@
         "positionIndex": 13,
         "name": "Static Blade Vortex",
         "description": "Scimitar charge now slows enemies on hit leaving behind a pulsating whirl for a short period.",
+        "zh": { "name": "静电利刃漩涡", "description": "弯刀冲锋减速敌人命中时 leaving 身后 pulsating whirl 短距期间。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2203,6 +2368,7 @@
         "positionIndex": 14,
         "name": "Phantom Charge",
         "description": "Mark the point of impact sending phantom nomads from random directions towards the mark casting scimitar charge for a short period.",
+        "zh": { "name": "幻影冲锋", "description": "印记点之冲击发出幻影 nomads 从随机方向朝向印记施法弯刀冲锋短距期间。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0, "faster_cast_rate": 0 },
@@ -2217,6 +2383,7 @@
     "name": "Hemorrhage",
     "kind": "passive",
     "description": "Rupture inflicts armor break on all bleeding targets.",
+    "zh": { "name": "大出血", "description": "破裂会对所有流血目标施加护甲击破。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -2234,6 +2401,7 @@
     "name": "Phantom Blade",
     "kind": "active",
     "description": "Spawn a ghostly blade that attacks nearby monsters dealing physical damage and additional arcane damage.",
+    "zh": { "name": "幻影之刃", "description": "召唤一把攻击附近怪物的幽魂之刃，造成物理伤害和额外奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Sentry", "Strike"],
     "movementDuringUse": 85,
@@ -2265,6 +2433,7 @@
         "positionIndex": 0,
         "name": "Phantom Blade",
         "description": "Core of the Phantom Blade subtree.",
+        "zh": { "name": "幻影之刃", "description": "幻影之刃 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2272,6 +2441,7 @@
         "positionIndex": 1,
         "name": "Paranormal Activity",
         "description": "Increases the maximum amount of phantom blades.",
+        "zh": { "name": "Paranormal Activity", "description": "提高 phantom blades 的最大数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2283,6 +2453,7 @@
         "positionIndex": 2,
         "name": "Phantom Agility",
         "description": "Increases the attack speed of phantom blades.",
+        "zh": { "name": "幻影敏捷身手", "description": "提高 phantom blades 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "sentry_attack_speed": 0 },
@@ -2294,6 +2465,7 @@
         "positionIndex": 3,
         "name": "Dimensional Intellect",
         "description": "Decreases the mana cost of phantom blade.",
+        "zh": { "name": "Dimensional 智慧", "description": "降低法力消耗之幻影之刃。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -2305,6 +2477,7 @@
         "positionIndex": 4,
         "name": "Ghostly Reach",
         "description": "Increases the attack range of phantom blades.",
+        "zh": { "name": "Ghostly 延伸", "description": "提高 phantom blades 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2316,6 +2489,7 @@
         "positionIndex": 5,
         "name": "Malicious Essence",
         "description": "Increases the damage dealt by phantom blades.",
+        "zh": { "name": "恶毒精华", "description": "提高造成的伤害幻影刀刃。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2327,6 +2501,7 @@
         "positionIndex": 6,
         "name": "Essence of Time",
         "description": "Increases the duration of phantom blade.",
+        "zh": { "name": "精华之时间", "description": "提高 幻影之刃 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2338,6 +2513,7 @@
         "positionIndex": 7,
         "name": "Malevolent Pulse",
         "description": "Increases the area of effect radius of phantom blades attacks.",
+        "zh": { "name": "Malevolent 脉冲", "description": "提高 effect radius of phantom blades attacks 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2349,6 +2525,7 @@
         "positionIndex": 8,
         "name": "Twice The Price",
         "description": "Chance for phantomblades to swing an additional time on hit.",
+        "zh": { "name": "Twice Price", "description": "概率使 phantomblades 至挥击额外一次命中时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2364,6 +2541,7 @@
         "positionIndex": 9,
         "name": "Ghost Dimension",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "Ghost Dimension", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -2382,6 +2560,7 @@
         "positionIndex": 10,
         "name": "Psychosis",
         "description": "Inflicts bleeding on hit.",
+        "zh": { "name": "Psychosis", "description": "命中时施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -2400,6 +2579,7 @@
         "positionIndex": 11,
         "name": "Spirit Blades",
         "description": "Phantom blades now orbit you and attack the closest monsters.",
+        "zh": { "name": "灵体刀刃", "description": "幻影刀刃轨道你与攻击最近的怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -2411,6 +2591,7 @@
         "positionIndex": 12,
         "name": "Terrorized Mind",
         "description": "When a phantom blade strikes a bleeding target the bleeding is consumed unleashing a vorpal pulse dealing increased damage based on the bleeding value.",
+        "zh": { "name": "Terrorized 心智", "description": "当幻影之刃打击流血目标流血消耗释放 vorpal 脉冲造成提高伤害基于流血数值。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -2422,6 +2603,7 @@
         "positionIndex": 13,
         "name": "Spectral Ghostblade",
         "description": "Phantom blades deal increased damage based on your energy.",
+        "zh": { "name": "Spectral Ghostblade", "description": "幻影刀刃造成提高伤害基于你的能量。" },
         "maxRank": 3,
         "effects": {
           "base": { "conversion_energy": 0 },
@@ -2433,6 +2615,7 @@
         "positionIndex": 14,
         "name": "Dimensional Ghostblade",
         "description": "Phantom blades no longer attack but throw flying scimitars with increased damage.",
+        "zh": { "name": "Dimensional Ghostblade", "description": "幻影刀刃更久攻击投掷飞散弯刀使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },

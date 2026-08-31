@@ -1,6 +1,7 @@
 {
   "id": "shaman",
   "name": "Shaman",
+  "zh": { "name": "萨满" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

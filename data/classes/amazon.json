@@ -1,6 +1,7 @@
 {
   "id": "amazon",
   "name": "Amazon",
+  "zh": { "name": "亚马逊" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

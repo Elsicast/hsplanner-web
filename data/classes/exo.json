@@ -1,6 +1,7 @@
 {
   "id": "exo",
   "name": "Exo",
+  "zh": { "name": "机甲兵" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

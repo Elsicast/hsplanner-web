@@ -5,6 +5,7 @@
     "name": "Slicing Throw",
     "kind": "active",
     "description": "Throw your weapon like a boomerang returning back to you dealing physical damage to monsters on its path. You can activate Daisy's Call to re-appear where the last thrown slicing throw is at any point in the flight.",
+    "zh": { "name": "裂刃投掷", "description": "像回力镖一样掷出武器，在回旋路径上对怪物造成物理伤害后返回。你可以随时激活黛西的呼唤，传送到最后一次裂刃投掷的飞行位置。" },
     "damageType": "physical",
     "tags": ["Cast", "Active", "Melee", "Projectile", "Strike"],
     "movementDuringUse": 85,
@@ -33,6 +34,7 @@
         "positionIndex": 0,
         "name": "Slicing Throw",
         "description": "Core of the Slicing Throw subtree.",
+        "zh": { "name": "裂刃投掷", "description": "裂刃投掷 子树核心。" },
         "maxRank": 1
       },
       {
@@ -40,6 +42,7 @@
         "positionIndex": 1,
         "name": "Cut In Half",
         "description": "Increases the damage of slicing throw.",
+        "zh": { "name": "Cut 一半", "description": "提高 裂刃投掷 的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -51,6 +54,7 @@
         "positionIndex": 2,
         "name": "Precision Blade",
         "description": "Passively increases your dexterity.",
+        "zh": { "name": "精准利刃", "description": "Passively 提高你的敏捷。" },
         "maxRank": 5,
         "effects": {
           "base": { "to_dexterity": 0, "increased_dexterity": 0 },
@@ -62,6 +66,7 @@
         "positionIndex": 3,
         "name": "One Swift Strike",
         "description": "Increases the critical strike damage and projectile speed of slicing throw.",
+        "zh": { "name": "一次迅捷 Strike", "description": "提高 裂刃投掷 的暴击伤害与投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0, "projectile_speed": 0 },
@@ -73,6 +78,7 @@
         "positionIndex": 4,
         "name": "Cuts and Wounds",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "切割与创伤", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -91,6 +97,7 @@
         "positionIndex": 5,
         "name": "Splitting Chain",
         "description": "Chance to unleash an additional chaining blade on hit.",
+        "zh": { "name": "分裂连锁", "description": "命中时有概率释放额外连锁利刃。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -106,6 +113,7 @@
         "positionIndex": 6,
         "name": "Burn the Corpses!",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "燃烧尸体!", "description": "命中时有概率施加燃烧。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -124,6 +132,7 @@
         "positionIndex": 7,
         "name": "Daisy´s Insight",
         "description": "Reduced the cooldown of slicing throw.",
+        "zh": { "name": "Daisy's Insight", "description": "降低 cooldown 之裂刃投掷。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -135,6 +144,7 @@
         "positionIndex": 8,
         "name": "Executioner's Apprentice",
         "description": "Slicing throw executes monsters below a threshold.",
+        "zh": { "name": "Executioner's Apprentice", "description": "裂刃投掷处决怪物低于阈值。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -146,6 +156,7 @@
         "positionIndex": 9,
         "name": "Bladestorm",
         "description": "Increases the size and spinning speed of slicing throw.",
+        "zh": { "name": "Bladestorm", "description": "提高 裂刃投掷 的size 与旋转速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0, "spin_speed": 0 },
@@ -157,6 +168,7 @@
         "positionIndex": 10,
         "name": "Bloody Combustion",
         "description": "Chance to unleash a ripple of blood from burning monsters on hit dealing additional damage.",
+        "zh": { "name": "Bloody Combustion", "description": "概率释放涟漪之鲜血从燃烧怪物命中时造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -173,6 +185,7 @@
         "positionIndex": 11,
         "name": "Splitting blade",
         "description": "Slicing throw splits into multiple orbiting blades spiraling outwards and returning to the initial location.",
+        "zh": { "name": "分裂利刃", "description": "裂刃投掷分裂进入多个环绕刀刃螺旋向外与返回至 initial 位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 2 },
@@ -184,6 +197,7 @@
         "positionIndex": 12,
         "name": "Slicing Vortex",
         "description": "Slicing throw now orbits you with increased projectile speed and increased damage.",
+        "zh": { "name": "斩切漩涡", "description": "裂刃投掷环绕你使用提高投射物速度与提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_speed": 0 },
@@ -195,6 +209,7 @@
         "positionIndex": 13,
         "name": "Bladesaw Massacre",
         "description": "Throw multiple blades forming a huge chainsaw that can be controlled. Slicing throw cooldown is now increased.",
+        "zh": { "name": "Bladesaw 屠戮", "description": "投掷多个刀刃形成巨大链锯可以 controlled。裂刃投掷 cooldown 提高。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 4 },
@@ -206,6 +221,7 @@
         "positionIndex": 14,
         "name": "Daisy´s Regards",
         "description": "Slicing throw explodes into a fiery pentagram inflicting burning on hit.",
+        "zh": { "name": "Daisy's Regards", "description": "裂刃投掷爆炸进入炽焰 pentagram 施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "increased_burning_damage": 0 },
@@ -230,6 +246,7 @@
     "name": "Furious Strike",
     "kind": "active",
     "description": "Perform a powerful area of effect attack dealing physical damage and infecting monsters struck with a stack of rabies. Each stack of rabies increases attack damage dealt to the monster.",
+    "zh": { "name": "狂怒打击", "description": "进行一次强力的范围攻击，造成物理伤害，并给被击中的怪物叠加一层狂犬病。每层狂犬病提高对该怪物造成的攻击伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 85,
@@ -261,6 +278,7 @@
         "positionIndex": 0,
         "name": "Furious Strike",
         "description": "Core of the Furious Strike subtree.",
+        "zh": { "name": "狂怒打击", "description": "狂怒打击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -268,6 +286,7 @@
         "positionIndex": 1,
         "name": "Wide Spread Epidemic",
         "description": "Increases the power of rabies from furious strike.",
+        "zh": { "name": "Wide Spread Epidemic", "description": "提高 rabies from 狂怒打击 的力量。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_rabies_damage": 0 },
@@ -286,6 +305,7 @@
         "positionIndex": 2,
         "name": "Down with Sickness",
         "description": "Chance to inflict poison on hit.",
+        "zh": { "name": "倒地使用 Sickness", "description": "命中时有概率施加毒素。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -304,6 +324,7 @@
         "positionIndex": 3,
         "name": "Furious Reach",
         "description": "Increases the attack range of furious strike.",
+        "zh": { "name": "狂怒延伸", "description": "提高 狂怒打击 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -315,6 +336,7 @@
         "positionIndex": 4,
         "name": "Strike of Hate",
         "description": "Increases the damage dealt by furious strike.",
+        "zh": { "name": "Strike 之 Hate", "description": "提高造成的伤害狂怒打击。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -326,6 +348,7 @@
         "positionIndex": 5,
         "name": "Blade Uppercut",
         "description": "Chance to slice monsters stunning and knocking them up dealing increased damage.",
+        "zh": { "name": "利刃 Uppercut", "description": "概率斩切怪物眩晕与击退它们上造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -342,6 +365,7 @@
         "positionIndex": 6,
         "name": "Serious Fever",
         "description": "Increases the maximum amount of rabies stacks.",
+        "zh": { "name": "Serious Fever", "description": "提高 rabies stacks 的最大数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "max_skill_stacks": 2 },
@@ -353,6 +377,7 @@
         "positionIndex": 7,
         "name": "Fueled Anger",
         "description": "Increases attack speed when using furious strike.",
+        "zh": { "name": "驱动 Anger", "description": "提高攻击速度使用狂怒打击。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -364,6 +389,7 @@
         "positionIndex": 8,
         "name": "Mediocre Unit",
         "description": "Chance to spawn healing orbs from targets on hit when in holy form. Chance to unleash piercing enraged rats spreading rabies on hit when in unholy form.",
+        "zh": { "name": "Mediocre Unit", "description": "概率生成治疗宝珠从目标命中时当神圣形态。概率释放穿透被激怒鼠群散播狂犬病命中时当邪秽形态。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 8 } }
       },
@@ -372,6 +398,7 @@
         "positionIndex": 9,
         "name": "Stay Still!",
         "description": "Increases damage dealt to stunned target.",
+        "zh": { "name": "Stay Still!", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -383,6 +410,7 @@
         "positionIndex": 10,
         "name": "Spread the Word",
         "description": "Chance to summon enraged flies on hit orbiting you and inflicting rabies.",
+        "zh": { "name": "Spread Word", "description": "概率召唤物被激怒飞行命中时环绕你与施加狂犬病。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -391,6 +419,7 @@
         "positionIndex": 11,
         "name": "Consumed by Hatred",
         "description": "Striking monsters with maximum stacks of rabies consumes them ripping and crushing the monster unleashing its bones in an arc behind it dealing damage according to the rabies stacks.",
+        "zh": { "name": "消耗 Hatred", "description": "打击怪物使用最大层数之狂犬病消耗它们 ripping 与粉碎怪物释放骸骨呈弧线身后造成伤害依照至狂犬病层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -402,6 +431,7 @@
         "positionIndex": 12,
         "name": "Flames of Fury",
         "description": "Striking a monster inflicted with rabies causes flaming cinders to fly around the target lightning the ground on fire. Striking a monster with maximum stacks of rabies additionally consumes the stacks unleashing a scorching nova inflicting burning on hit.",
+        "zh": { "name": "烈焰之狂怒", "description": "打击怪物施加使用狂犬病使燃烧 cinders 至 fly 周围目标闪电地面火焰。打击怪物使用最大层数之狂犬病另外消耗层数释放灼热新星施加燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "increased_burning_damage": 0 },
@@ -420,6 +450,7 @@
         "positionIndex": 13,
         "name": "Sick to the Core",
         "description": "Increases the maximum stacks of rabies and damage dealt by furious strike.",
+        "zh": { "name": "Sick 至核心", "description": "提高 rabies and damage dealt by 狂怒打击 的最大层数。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "max_skill_stacks": 2 },
@@ -431,6 +462,7 @@
         "positionIndex": 14,
         "name": "The Absolute Unit",
         "description": "Striking a monster causes it to emmit fire damage based on your life replenish over time for a short duration on a radius around it when using holy form. Striking a monster unleashes impaling spikes dealing additional damage and a chance to replenish a portion of your maximum life on hit when using unholy form.",
+        "zh": { "name": "绝对 Unit", "description": "打击怪物使至 emmit 火焰伤害基于你的生命恢复随时间短时间内半径周围使用神圣形态。打击怪物释放穿刺尖刺造成额外伤害与概率恢复一部分你的最大生命命中时使用邪秽形态。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -449,6 +481,7 @@
     "name": "Holy Form",
     "kind": "buff",
     "description": "Activate Holy Form gaining increased life replenish and life steal at the cost of damage dealt. Any damage dealt while in this form is decreased.",
+    "zh": { "name": "神圣形态", "description": "激活神圣形态，获得提高的生命恢复和生命偷取，但降低造成的伤害。在此形态下造成的所有伤害都会降低。" },
     "tags": ["Active", "Buff"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -466,6 +499,7 @@
     "name": "Unholy Form",
     "kind": "buff",
     "description": "Activate Unholy Form gaining increased damage at the cost inflicting a portion of your max life as damage to your self every time you cast, attack or proc something. Any life replenish when in this form is lowered.",
+    "zh": { "name": "邪秽形态", "description": "激活邪秽形态，获得提高的伤害，但每次施法、攻击或触发效果时，都会对你自身造成相当于一部分最大生命的伤害。在此形态下生命恢复降低。" },
     "tags": ["Active", "Buff"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -483,6 +517,7 @@
     "name": "Sacrilegious Scorn",
     "kind": "passive",
     "description": "While in Holy Form gain increased attack speed and while in Unholy Form gain increased Critical damage.",
+    "zh": { "name": "亵渎蔑视", "description": "神圣形态下获得提高的攻击速度，邪秽形态下获得提高的暴击伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -500,6 +535,7 @@
     "name": "Ending Fate",
     "kind": "passive",
     "description": "While in Holy Form gain increased base life regen after killing a monster and while in Unholy Form rip the monster apart after killing a monster causing huge area of effect damage.",
+    "zh": { "name": "终结命运", "description": "神圣形态下击杀怪物后获得提高的基础生命回复；邪秽形态下击杀怪物后将怪物撕碎，造成巨额范围伤害。" },
     "tags": ["Passive", "Explosion"],
     "range": 33,
     "maxRank": 20,
@@ -518,6 +554,7 @@
     "name": "Spiritual Duality",
     "kind": "passive",
     "description": "While in Holy Form increases your life Per Hit and while in Unholy Form increases your attack damage.",
+    "zh": { "name": "灵性二元", "description": "神圣形态下提高你每次命中偷取的生命，邪秽形态下提高你的攻击伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -535,6 +572,7 @@
     "name": "Awakening Fury",
     "kind": "passive",
     "description": "On hit gain a chance to increase your attack damage for a short duration.",
+    "zh": { "name": "觉醒狂怒", "description": "命中时有概率在短时间内提高你的攻击伤害。" },
     "tags": ["Passive"],
     "effectDuration": 4,
     "range": 8,
@@ -554,6 +592,7 @@
     "name": "Insatiable Hunger",
     "kind": "buff",
     "description": "Awaken the full potential of both holy and unholy to gain both benefits for a short period of time with increased effectiveness.",
+    "zh": { "name": "永无餍足", "description": "同时唤醒神圣与邪秽的全部潜能，在短时间内以更高的效果同时获得两者的增益。" },
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 100,
     "baseCastRate": 1,
@@ -576,6 +615,7 @@
     "name": "Chain Rip",
     "kind": "active",
     "description": "Perform a powerful attack pulling all nearby monsters infront of you.",
+    "zh": { "name": "锁链撕裂", "description": "进行一次强力攻击，将附近所有怪物拉到你面前。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 85,
@@ -603,6 +643,7 @@
         "positionIndex": 0,
         "name": "Chain Rip",
         "description": "Core of the Chain Rip subtree.",
+        "zh": { "name": "锁链撕裂", "description": "锁链撕裂 子树核心。" },
         "maxRank": 1
       },
       {
@@ -610,6 +651,7 @@
         "positionIndex": 1,
         "name": "Ranged Suffering",
         "description": "Increases the range of chain rip.",
+        "zh": { "name": "远程 Suffering", "description": "提高 锁链撕裂 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -621,6 +663,7 @@
         "positionIndex": 2,
         "name": "Chains of Hatred",
         "description": "Increases the damage dealt by chain rip.",
+        "zh": { "name": "锁链之 Hatred", "description": "提高造成的伤害锁链撕裂。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -632,6 +675,7 @@
         "positionIndex": 3,
         "name": "Torture the Skin",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Torture Skin", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -650,6 +694,7 @@
         "positionIndex": 4,
         "name": "Break the Flesh",
         "description": "Inflicts armor break on hit.",
+        "zh": { "name": "击破 Flesh", "description": "命中时施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -668,6 +713,7 @@
         "positionIndex": 5,
         "name": "The Real Monster",
         "description": "Replenish a portion of your maximum life and maximum mana on hit.",
+        "zh": { "name": "Real 怪物", "description": "恢复一部分你的最大生命与最大法力命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0, "mana_replenish_pct": 0 },
@@ -679,6 +725,7 @@
         "positionIndex": 6,
         "name": "Shift of Power",
         "description": "Decreases monster attack rating inflicting slow on hit.",
+        "zh": { "name": "Shift 之力量", "description": "降低怪物攻击命中施加缓慢命中时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -693,6 +740,7 @@
         "positionIndex": 7,
         "name": "Rocket Propelled Chains",
         "description": "Increases the projectile speed of chain rip.",
+        "zh": { "name": "火箭 Propelled 锁链", "description": "提高 锁链撕裂 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -704,6 +752,7 @@
         "positionIndex": 8,
         "name": "Chains Unchained",
         "description": "Decreases the cooldown of chain rip.",
+        "zh": { "name": "锁链 Unchained", "description": "降低cooldown 之锁链撕裂。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -715,6 +764,7 @@
         "positionIndex": 9,
         "name": "Rage Trance",
         "description": "Gain increased damage reduction for a short duration when using chain rip.",
+        "zh": { "name": "怒气 Trance", "description": "获得提高伤害减免短时间内使用锁链撕裂。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -726,6 +776,7 @@
         "positionIndex": 10,
         "name": "They Never Know What Hit Them",
         "description": "Chance to stun targets on hit dealing increased damage to stunned targets.",
+        "zh": { "name": "它们 Never Know What 命中它们", "description": "概率眩晕目标命中时造成提高伤害至眩晕目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -742,6 +793,7 @@
         "positionIndex": 11,
         "name": "Chains Attached",
         "description": "Increases the range and damage of chain rip greatly. Cooldown is increased.",
+        "zh": { "name": "锁链 Attached", "description": "提高 锁链撕裂 greatly. Cooldown is increased 的范围与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -753,6 +805,7 @@
         "positionIndex": 12,
         "name": "Chainfueled Hunting",
         "description": "Rapidly throw multiple piercing chains in a cone towards target location dealing increased damage. Chain rip no longer pulls enemies.",
+        "zh": { "name": "Chainfueled 狩猎", "description": "迅速投掷多个穿透锁链锥形朝向目标位置造成提高伤害。锁链撕裂更久牵引敌人。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -764,6 +817,7 @@
         "positionIndex": 13,
         "name": "Prey on the Weak",
         "description": "Chain rip stuns targets on hit buffing your and nearby allies damage to stunned targets for a short duration.",
+        "zh": { "name": "Prey 弱者", "description": "锁链撕裂眩晕目标命中时增益你的与附近 allies 伤害至眩晕目标短时间内。" },
         "maxRank": 3,
         "effects": {
           "base": { "extra_damage_stunned": 0, "crit_damage": 0 },
@@ -775,6 +829,7 @@
         "positionIndex": 14,
         "name": "Carcass Rip",
         "description": "Chain rip chains into additional nearby monsters on hit pulling them towards the target.",
+        "zh": { "name": "躯体撕扯", "description": "锁链撕裂锁链进入额外附近怪物命中时牵引它们朝向目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -789,6 +844,7 @@
     "name": "Brutalizing Slash",
     "kind": "active",
     "description": "Attack with brutalizing area of effect attack causing monsters to bleed.",
+    "zh": { "name": "暴虐挥砍", "description": "以暴虐的范围攻击出击，使怪物流血。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Strike"],
     "movementDuringUse": 85,
@@ -820,6 +876,7 @@
         "positionIndex": 0,
         "name": "Brutalizing Slash",
         "description": "Core of the Brutalizing Slash subtree.",
+        "zh": { "name": "暴虐挥砍", "description": "暴虐挥砍 子树核心。" },
         "maxRank": 1
       },
       {
@@ -827,6 +884,7 @@
         "positionIndex": 1,
         "name": "Bucthering Skill",
         "description": "Increases attack rating when using brutalizing slash.",
+        "zh": { "name": "Bucthering 技能", "description": "提高攻击命中使用暴虐挥砍。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0, "crit_chance": 0 },
@@ -838,6 +896,7 @@
         "positionIndex": 2,
         "name": "Bonebreaker",
         "description": "Increases the damage dealt by brutalizing slash.",
+        "zh": { "name": "Bonebreaker", "description": "提高造成的伤害暴虐挥砍。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -849,6 +908,7 @@
         "positionIndex": 3,
         "name": "Unstoppable Rage",
         "description": "Decreases movement diminish when using brutalizing slash.",
+        "zh": { "name": "Unstoppable 怒气", "description": "使用暴虐挥砍时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -860,6 +920,7 @@
         "positionIndex": 4,
         "name": "Descent to Madness",
         "description": "Increases attack speed when using brutalizing slash.",
+        "zh": { "name": "Descent 至 Madness", "description": "提高攻击速度使用暴虐挥砍。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -871,6 +932,7 @@
         "positionIndex": 5,
         "name": "With 2 Hands",
         "description": "Chance on attack to unleash an additional brutalizing slash.",
+        "zh": { "name": "使用 2 Hands", "description": "攻击时有概率释放额外暴虐挥砍。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -886,6 +948,7 @@
         "positionIndex": 6,
         "name": "Skullsplitter",
         "description": "Increases the critical strike damage dealt by brutalizing slash.",
+        "zh": { "name": "Skullsplitter", "description": "提高暴击伤害 dealt 暴虐挥砍。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -897,6 +960,7 @@
         "positionIndex": 7,
         "name": "Afterlife Burner",
         "description": "Chance on kill for the target to explode into a pile of corpses.",
+        "zh": { "name": "Afterlife Burner", "description": "概率在击杀目标至爆炸进入 pile 之尸体。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_kill",
@@ -912,6 +976,7 @@
         "positionIndex": 8,
         "name": "Precision Equals Power",
         "description": "Increases the damage dealt by brutalizing slash based on your dexterity.",
+        "zh": { "name": "精准 Equals 力量", "description": "提高造成的伤害暴虐挥砍基于你的敏捷。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_dexterity": 0 },
@@ -923,6 +988,7 @@
         "positionIndex": 9,
         "name": "For the Weak",
         "description": "Increases the attack range of brutalizing slash based on your strength.",
+        "zh": { "name": "弱者", "description": "提高 暴虐挥砍 based on your strength 的攻击范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -934,6 +1000,7 @@
         "positionIndex": 10,
         "name": "Bleeding the Prey",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "流血 Prey", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -945,6 +1012,7 @@
         "positionIndex": 11,
         "name": "Pummeling Slashwave",
         "description": "Unleash a slash wave on attack inflicting increased bleeding on hit.",
+        "zh": { "name": "Pummeling Slashwave", "description": "释放斩击波攻击时施加提高流血命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "increased_bleeding_damage": 0 },
@@ -966,6 +1034,7 @@
         "positionIndex": 12,
         "name": "Painmongering",
         "description": "Gain a stack of painmongering on hit increasing the tick frequency of bleed.",
+        "zh": { "name": "Painmongering", "description": "获得层之 painmongering 命中时提高每跳 frequency 之流血。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_frequency": 0, "max_skill_stacks": 0 },
@@ -980,6 +1049,7 @@
         "positionIndex": 13,
         "name": "Gutting Frenzy",
         "description": "Chance to unleashes a ripple of blood on hit dealing increased critical damage based on your strength.",
+        "zh": { "name": "Gutting 狂乱", "description": "概率释放涟漪之鲜血命中时造成提高暴击伤害基于你的力量。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -995,6 +1065,7 @@
         "positionIndex": 14,
         "name": "Meet Daisy",
         "description": "Every third attack unleashes daisy with increased damage and critical strike damage. The size of daisy is increased based on your missing life.",
+        "zh": { "name": "Meet Daisy", "description": "每第三次攻击释放 daisy 使用提高伤害与暴击伤害。size 之 daisy 提高基于你的 missing 生命。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1017,6 +1088,7 @@
     "name": "Fuel to Fire",
     "kind": "buff",
     "description": "Increase your damage dealt for a short period of time. Every corpse close to you will be siphoned for additional damage.",
+    "zh": { "name": "火上浇油", "description": "短时间内提高你造成的伤害。你附近的每具尸体都会被虹吸，提供额外伤害。" },
     "tags": ["Cast", "Active", "Buff"],
     "baseCastRate": 1,
     "baseCooldown": 50,
@@ -1039,6 +1111,7 @@
     "name": "Hunger For Blood",
     "kind": "passive",
     "description": "Deal increased damage to bleeding targets.",
+    "zh": { "name": "嗜血饥渴", "description": "对流血目标造成提高的伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -1056,6 +1129,7 @@
     "name": "Butchers Hook",
     "kind": "active",
     "description": "Flail a huge meat hook around you gathering all monsters struck then pulling and stunning them infront of you.",
+    "zh": { "name": "屠夫之钩", "description": "在你周围挥舞巨大的肉钩，收集所有被钩中的怪物，将其拉到你面前并眩晕。" },
     "damageType": "physical",
     "tags": ["Cast", "Active", "Spell", "Orbital"],
     "movementDuringUse": 85,
@@ -1084,6 +1158,7 @@
         "positionIndex": 0,
         "name": "Butchers Hook",
         "description": "Core of the Butchers Hook subtree.",
+        "zh": { "name": "屠夫之钩", "description": "屠夫之钩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1091,6 +1166,7 @@
         "positionIndex": 1,
         "name": "Everlasting Anger",
         "description": "Increases the duration of butchers hook.",
+        "zh": { "name": "Everlasting Anger", "description": "提高 屠夫之钩 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1102,6 +1178,7 @@
         "positionIndex": 2,
         "name": "Backed by Rage",
         "description": "Increases the projectile speed of butchers hook.",
+        "zh": { "name": "Backed 怒气", "description": "提高 屠夫之钩 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1113,6 +1190,7 @@
         "positionIndex": 3,
         "name": "Hook Discharge",
         "description": "Chance on cast to unleash an additional butchers hook.",
+        "zh": { "name": "钩住 Discharge", "description": "施法时有概率释放额外屠夫之钩。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -1128,6 +1206,7 @@
         "positionIndex": 4,
         "name": "Carcass Carrier",
         "description": "Increases the size of butchers hook.",
+        "zh": { "name": "躯体 Carrier", "description": "提高 屠夫之钩 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1139,6 +1218,7 @@
         "positionIndex": 5,
         "name": "Fresh Meat",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Fresh 血肉", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1157,6 +1237,7 @@
         "positionIndex": 6,
         "name": "Pierce the Torso",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "穿透 Torso", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1175,6 +1256,7 @@
         "positionIndex": 7,
         "name": "Spin of Death",
         "description": "Increases the damage dealt by butchers hook.",
+        "zh": { "name": "旋转之死亡", "description": "提高造成的伤害屠夫之钩。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1186,6 +1268,7 @@
         "positionIndex": 8,
         "name": "Hellsent",
         "description": "Gain increased movement speed and phasing when using butchers hook.",
+        "zh": { "name": "Hellsent", "description": "获得提高移动速度与穿行使用屠夫之钩。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -1197,6 +1280,7 @@
         "positionIndex": 9,
         "name": "Immaculate Butcher",
         "description": "Increases the critical strike damage dealt by butchers hook.",
+        "zh": { "name": "Immaculate Butcher", "description": "提高暴击伤害 dealt 屠夫之钩。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_damage": 0 },
@@ -1208,6 +1292,7 @@
         "positionIndex": 10,
         "name": "Bring the Carnage",
         "description": "Decreases the cooldown of butchers hook.",
+        "zh": { "name": "Bring 杀戮", "description": "降低cooldown 之屠夫之钩。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1219,6 +1304,7 @@
         "positionIndex": 11,
         "name": "Concussive Blow",
         "description": "Butchers hook circles onces and slams into target location unleashing a corpse explosion with increased size and damage based on the amount of enemies captured in the hook.",
+        "zh": { "name": "Concussive Blow", "description": "屠夫之钩环绕 onces 与猛击进入目标位置释放尸爆使用提高 size 与伤害基于数量之敌人 captured 钩住。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_size": 0 },
@@ -1230,6 +1316,7 @@
         "positionIndex": 12,
         "name": "Critical Velocity",
         "description": "Increases the velocity of butchers hook over time causing it to deal damage more frequently.",
+        "zh": { "name": "暴击 Velocity", "description": "提高 屠夫之钩 over time causing it to deal damage more frequently 的velocity。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0, "skill_duration": 0 },
@@ -1241,6 +1328,7 @@
         "positionIndex": 13,
         "name": "Master of Meat Hooks",
         "description": "Unleash multiple smaller hooks.",
+        "zh": { "name": "大师之血肉钩住", "description": "释放多个更小钩住。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -1252,6 +1340,7 @@
         "positionIndex": 14,
         "name": "Welcome to Hell",
         "description": "Unleash butchers hook towards target location with increased range and damage returning back after a short duration. Butchers hook no longer has a cooldown.",
+        "zh": { "name": "Welcome 至地狱", "description": "释放屠夫之钩朝向目标位置使用提高范围与伤害返回回之后短距持续时间。屠夫之钩更久有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -1266,6 +1355,7 @@
     "name": "Chain Swing",
     "kind": "active",
     "description": "Throw a meat hook that pulls you into it when connecting with monster or environment. Additionally fires chains to nearby monsters when landing.",
+    "zh": { "name": "锁链挥击", "description": "掷出肉钩，钩中怪物或环境时将你拉过去。落地时还会向附近怪物射出锁链。" },
     "damageType": "physical",
     "tags": ["Cast", "Active", "Spell", "Movement", "Strike"],
     "movementDuringUse": 85,
@@ -1295,6 +1385,7 @@
         "positionIndex": 0,
         "name": "Chain Swing",
         "description": "Core of the Chain Swing subtree.",
+        "zh": { "name": "锁链挥击", "description": "锁链挥击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1302,6 +1393,7 @@
         "positionIndex": 1,
         "name": "The Huntsman",
         "description": "Increases the projectile speed of chain swing.",
+        "zh": { "name": "Huntsman", "description": "提高 锁链挥击 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1313,6 +1405,7 @@
         "positionIndex": 2,
         "name": "Immobilizing Hit",
         "description": "Chance to stun targets on hit.",
+        "zh": { "name": "Immobilizing 命中", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1325,6 +1418,7 @@
         "positionIndex": 3,
         "name": "No Quarter",
         "description": "Reduces the mana cost of chain swing.",
+        "zh": { "name": "Quarter", "description": "降低法力消耗之锁链挥击。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1336,6 +1430,7 @@
         "positionIndex": 4,
         "name": "Demonic Chains",
         "description": "Increases the damage dealt by chain swing.",
+        "zh": { "name": "Demonic 锁链", "description": "提高造成的伤害锁链挥击。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1347,6 +1442,7 @@
         "positionIndex": 5,
         "name": "Introduce Fear",
         "description": "Pull monsters towards you from an increased radius after landing.",
+        "zh": { "name": "Introduce Fear", "description": "牵引怪物朝向你从提高半径之后着陆。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1358,6 +1454,7 @@
         "positionIndex": 6,
         "name": "Physical Torture",
         "description": "Chance to inflict armor break on hit.",
+        "zh": { "name": "物理 Torture", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -1376,6 +1473,7 @@
         "positionIndex": 7,
         "name": "Killing Spree",
         "description": "Grants you a burst of attack speed after landing for a short duration.",
+        "zh": { "name": "击杀 Spree", "description": "获得你迸发之攻击速度之后着陆短时间内。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -1387,6 +1485,7 @@
         "positionIndex": 8,
         "name": "Scent of Prey",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Scent 之 Prey", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1398,6 +1497,7 @@
         "positionIndex": 9,
         "name": "Entry Frenzy",
         "description": "Increases the critical strike damage dealt by chain swing.",
+        "zh": { "name": "Entry 狂乱", "description": "提高暴击伤害 dealt 锁链挥击。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_damage": 0 },
@@ -1409,6 +1509,7 @@
         "positionIndex": 10,
         "name": "Unblessed Path",
         "description": "Increases the maximum cast range. Chain swing now ignores terrain.",
+        "zh": { "name": "Unblessed 路径", "description": "提高最大施法范围。锁链挥击 ignores 地形。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1420,6 +1521,7 @@
         "positionIndex": 11,
         "name": "Warm Welcome",
         "description": "Unleash burning fissures at nearby monsters when landing inflicting burning.",
+        "zh": { "name": "Warm Welcome", "description": "释放燃烧地裂附近怪物落地时施加燃烧。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1438,6 +1540,7 @@
         "positionIndex": 12,
         "name": "Hookstorm",
         "description": "Swing hooks around while travelling dealing increased damage.",
+        "zh": { "name": "Hookstorm", "description": "挥击钩住周围当 travelling 造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -1449,6 +1552,7 @@
         "positionIndex": 13,
         "name": "Prey of the Day",
         "description": "Connecting with a monster causes chain swing to pull all monsters nearby the target towards you.",
+        "zh": { "name": "Prey 之 Day", "description": "Connecting 使用怪物使锁链挥击至牵引全部怪物附近目标朝向你。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -1460,6 +1564,7 @@
         "positionIndex": 14,
         "name": "Centrifugal Force",
         "description": "Chain swing maximum length is significantly shorter but can be targeted. Spin around the target ignoring collision. Monsters hit by the chain take increased damage on hit.",
+        "zh": { "name": "Centrifugal 力量", "description": "锁链挥击最大 length 显著 shorter 可以 targeted。旋转周围目标无视天体冲撞。怪物命中连锁承受提高伤害命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1474,6 +1579,7 @@
     "name": "Submerged Knives",
     "kind": "active",
     "description": "Smash the ground pushing waves of butchers knives out of the ground dealing massive damage and knocking them up. Deals extra damage to bleeding targets.",
+    "zh": { "name": "潜地乱刃", "description": "猛击地面，从地下推出成波的屠刀，造成巨额伤害并击飞怪物。对流血目标造成额外伤害。" },
     "damageType": "physical",
     "tags": ["Attack", "Active", "Melee", "Area of Effect", "Strike"],
     "movementDuringUse": 85,
@@ -1502,6 +1608,7 @@
         "positionIndex": 0,
         "name": "Submerged Knives",
         "description": "Core of the Submerged Knives subtree.",
+        "zh": { "name": "潜地乱刃", "description": "潜地乱刃 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1509,6 +1616,7 @@
         "positionIndex": 1,
         "name": "Impaling Horde",
         "description": "Increases the amount of waves of submerged knives.",
+        "zh": { "name": "穿刺 Horde", "description": "提高 waves of 潜地乱刃 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1520,6 +1628,7 @@
         "positionIndex": 2,
         "name": "Agravating Wounds",
         "description": "Increases the damage dealt by submerged knives.",
+        "zh": { "name": "Agravating 创伤", "description": "提高造成的伤害潜地乱刃。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1531,6 +1640,7 @@
         "positionIndex": 3,
         "name": "Sharp Edges",
         "description": "Increases attack rating when using submerged knives.",
+        "zh": { "name": "尖锐锋刃", "description": "提高攻击命中使用潜地乱刃。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1542,6 +1652,7 @@
         "positionIndex": 4,
         "name": "Encased Cutters",
         "description": "Increases the area of effect radius of submerged knives.",
+        "zh": { "name": "Encased 工", "description": "提高 effect radius of 潜地乱刃 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1553,6 +1664,7 @@
         "positionIndex": 5,
         "name": "Jugular Cut",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Jugular Cut", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1564,6 +1676,7 @@
         "positionIndex": 6,
         "name": "The Bigger They Are",
         "description": "Increases damage dealt to bosses when using submerged knives.",
+        "zh": { "name": "更大它们", "description": "提高对 首领使用潜地乱刃 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1575,6 +1688,7 @@
         "positionIndex": 7,
         "name": "Blunt Cleaver",
         "description": "Chance to stun targets hit.",
+        "zh": { "name": "钝击劈砍者", "description": "概率眩晕目标命中。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1587,6 +1701,7 @@
         "positionIndex": 8,
         "name": "Extended Gutting",
         "description": "Increases the maximum cast range of submerged knives.",
+        "zh": { "name": "延长 Gutting", "description": "提高 潜地乱刃 的最大施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1598,6 +1713,7 @@
         "positionIndex": 9,
         "name": "Nimble Handcraft",
         "description": "Reduces the cooldown of submerged knives.",
+        "zh": { "name": "Nimble Handcraft", "description": "降低 cooldown 之潜地乱刃。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1609,6 +1725,7 @@
         "positionIndex": 10,
         "name": "Meat Skewer",
         "description": "Chance to impale targets on hit dealing damage over time.",
+        "zh": { "name": "血肉 Skewer", "description": "概率穿刺尖刺目标命中时造成伤害随时间。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1617,6 +1734,7 @@
         "positionIndex": 11,
         "name": "Tidal Knives",
         "description": "Unleash a shockwave of submerged knives towards target location.",
+        "zh": { "name": "Tidal 飞刀", "description": "释放震荡波之潜地乱刃朝向目标位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 3 },
@@ -1628,6 +1746,7 @@
         "positionIndex": 12,
         "name": "Sudden Chaining",
         "description": "Chance to unleash chains towards target on hit dealing additional damage.",
+        "zh": { "name": "骤然连锁", "description": "概率释放锁链朝向目标命中时造成额外伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1643,6 +1762,7 @@
         "positionIndex": 13,
         "name": "Knifehoarder",
         "description": "Submerged knives can be activated/deactivated. While active periodically unleash submerged knives at nearby monsters inflicting bleeding. Drains a portion of your maximum mana while active.",
+        "zh": { "name": "Knifehoarder", "description": "潜地乱刃可以 activated/deactivated。当激活 periodically 释放潜地乱刃附近怪物施加流血。汲取一部分你的最大法力当激活。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1669,6 +1789,7 @@
         "positionIndex": 14,
         "name": "Bone Daggers",
         "description": "Consume corpses hit by submerged knives unleashing piercing gutting knives towards nearby monsters.",
+        "zh": { "name": "骸骨匕首", "description": "消耗尸体命中潜地乱刃释放穿透 gutting 飞刀朝向附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1683,6 +1804,7 @@
     "name": "Enraged Mania",
     "kind": "passive",
     "description": "Increase attack area of effect range and attack speed.",
+    "zh": { "name": "狂怒癫狂", "description": "提高攻击范围和攻击速度。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -1700,6 +1822,7 @@
     "name": "Blender",
     "kind": "active",
     "description": "Swing two huge butchers knives around you dealing physical damage.",
+    "zh": { "name": "绞肉机", "description": "在你周围挥舞两把巨大的屠刀，造成物理伤害。" },
     "damageType": "physical",
     "tags": ["Cast", "Active", "Melee", "Orbital", "Strike"],
     "movementDuringUse": 85,
@@ -1728,6 +1851,7 @@
         "positionIndex": 0,
         "name": "Blender",
         "description": "Core of the Blender subtree.",
+        "zh": { "name": "绞肉机", "description": "绞肉机 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1735,6 +1859,7 @@
         "positionIndex": 1,
         "name": "Sharpened Cleavers",
         "description": "Increases the damage dealt by blender.",
+        "zh": { "name": "锋利劈砍者", "description": "提高造成的伤害绞肉机。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1746,6 +1871,7 @@
         "positionIndex": 2,
         "name": "Industrial Sized",
         "description": "Increases the area of effect radius of blender.",
+        "zh": { "name": "Industrial Sized", "description": "提高 effect radius of 绞肉机 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1757,6 +1883,7 @@
         "positionIndex": 3,
         "name": "No Bits Nor Pieces",
         "description": "Increases attack rating when using blender.",
+        "zh": { "name": "Bits Nor Pieces", "description": "提高攻击命中使用绞肉机。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1768,6 +1895,7 @@
         "positionIndex": 4,
         "name": "Ragefueled Energy",
         "description": "Increases the duration of blender.",
+        "zh": { "name": "Ragefueled 能量", "description": "提高 绞肉机 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1779,6 +1907,7 @@
         "positionIndex": 5,
         "name": "Extra Cleaver Addon",
         "description": "Increases the amount of blades on blender.",
+        "zh": { "name": "额外劈砍者 Addon", "description": "提高 blades on 绞肉机 的数量。" },
         "maxRank": 2,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1790,6 +1919,7 @@
         "positionIndex": 6,
         "name": "Obsidian Blades",
         "description": "Increases the critical strike damage dealt by blender.",
+        "zh": { "name": "Obsidian 刀刃", "description": "提高暴击伤害 dealt 绞肉机。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -1801,6 +1931,7 @@
         "positionIndex": 7,
         "name": "Attachment Malfunction",
         "description": "Chance to send blades towards target on hit briefly returning back to you.",
+        "zh": { "name": "Attachment Malfunction", "description": "概率发出刀刃朝向目标命中时 briefly 返回回至你。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 10 } }
       },
@@ -1809,6 +1940,7 @@
         "positionIndex": 8,
         "name": "It Will Blend",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Will Blend", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1820,6 +1952,7 @@
         "positionIndex": 9,
         "name": "Blood Thirsting Killing Machine",
         "description": "Chance to gain a stack of blood thirst on hit increasing your movement speed for a short duration.",
+        "zh": { "name": "鲜血 Thirsting 击杀 Machine", "description": "概率获得层之鲜血 thirst 命中时提高你的移动速度短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1835,6 +1968,7 @@
         "positionIndex": 10,
         "name": "Will it Blend?",
         "description": "Knock monsters back dealing increased damage and slowing them.",
+        "zh": { "name": "Will Blend?", "description": "击退怪物造成提高伤害与减速它们。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -1846,6 +1980,7 @@
         "positionIndex": 11,
         "name": "A.I. Empowered Nanoblenders",
         "description": "Summon multiple small blenders orbiting around you.",
+        "zh": { "name": "。I。强化 Nanoblenders", "description": "召唤物多个小型绞肉机环绕周围你。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 2 },
@@ -1857,6 +1992,7 @@
         "positionIndex": 12,
         "name": "Blenderang",
         "description": "Throw a traveling blender towards target location returning back to you shortly. Blender cooldown is reduced.",
+        "zh": { "name": "Blenderang", "description": "投掷飞行绞肉机朝向目标位置返回回至你 shortly。绞肉机 cooldown 降低。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1876,6 +2012,7 @@
         "positionIndex": 13,
         "name": "Attachable Microblades",
         "description": "Chance to conjure a small blender at target location on hit dealing additional damage for a short duration.",
+        "zh": { "name": "Attachable Microblades", "description": "概率召唤小型绞肉机目标位置命中时造成额外伤害短时间内。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1891,6 +2028,7 @@
         "positionIndex": 14,
         "name": "Blending Blood Pact",
         "description": "Blender gains increased damage but killing monsters drains a portion of your maximum life. This effect is non-lethal and will de-activate blender if you cannot sacrifice your life anymore.",
+        "zh": { "name": "Blending 鲜血 Pact", "description": "绞肉机获得提高伤害击杀怪物汲取一部分你的最大生命。This 效果非-致命与 will de-activate 绞肉机 if 你无法 sacrifice 你的生命 anymore。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "life_drain_pct": 0 },

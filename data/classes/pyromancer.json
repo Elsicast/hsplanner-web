@@ -1,6 +1,7 @@
 {
   "id": "pyromancer",
   "name": "Pyromancer",
+  "zh": { "name": "火焰术士" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

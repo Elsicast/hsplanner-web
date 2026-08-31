@@ -5,6 +5,7 @@
     "name": "Master Poisoner",
     "kind": "passive",
     "description": "Increases your poison skill damage.",
+    "zh": { "name": "施毒大师", "description": "提高你的毒素技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -35,6 +36,7 @@
     "name": "Noxious Strike",
     "kind": "active",
     "description": "Unleash a poisonous strike dealing physical damage and poison damage. Every third strike sends out piercing poisonous projectiles dealing damage and inflicting Poisoned on hit.",
+    "zh": { "name": "剧毒打击", "description": "释放一次带毒打击，造成物理伤害和毒素伤害。每第三次打击会发射穿透性的剧毒投射物，造成伤害并命中时施加中毒。" },
     "damageType": "poison",
     "tags": [
       "Attack",
@@ -111,6 +113,7 @@
         "positionIndex": 0,
         "name": "Noxious Strike",
         "description": "Core of the Noxious Strike subtree.",
+        "zh": { "name": "剧毒打击", "description": "剧毒打击 子树核心。" },
         "maxRank": 1
       },
       {
@@ -118,6 +121,7 @@
         "positionIndex": 1,
         "name": "Corrosive Force",
         "description": "Increases damage dealt by noxious strike.",
+        "zh": { "name": "腐蚀力量", "description": "提高 剧毒打击 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -129,6 +133,7 @@
         "positionIndex": 2,
         "name": "Touch of Noxus",
         "description": "Increases poisoned damage inflicted by noxious strike.",
+        "zh": { "name": "之触之诺克苏斯", "description": "提高 剧毒打击 施加的中毒伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -147,6 +152,7 @@
         "positionIndex": 3,
         "name": "Empowered Toxins",
         "description": "Increases damage dealt to poisoned targets.",
+        "zh": { "name": "强化毒素", "description": "提高对 中毒目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -158,6 +164,7 @@
         "positionIndex": 4,
         "name": "Noxious Bolts",
         "description": "Increases projectile count on your third attack.",
+        "zh": { "name": "剧毒电矢", "description": "提高投射物数量你的第三次攻击。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -169,6 +176,7 @@
         "positionIndex": 5,
         "name": "Noxian Slash",
         "description": "Increases the damage and area of effect of your third attack.",
+        "zh": { "name": "诺克萨斯斩击", "description": "提高 effect of your third attack 的伤害与范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "area_of_effect": 0 },
@@ -180,6 +188,7 @@
         "positionIndex": 6,
         "name": "Corrosive Reach",
         "description": "Increased attack damage and attack range while wielding a polearm.",
+        "zh": { "name": "腐蚀延伸", "description": "提高攻击伤害与攻击范围装备长柄武器。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "skill_range": 0 },
@@ -191,6 +200,7 @@
         "positionIndex": 7,
         "name": "Envenoming Empowerment",
         "description": "Killing a monster with noxious strike grants you a burst of movement speed.",
+        "zh": { "name": "淬毒强化", "description": "击杀怪物时使用剧毒打击赋予你迸发之移动速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -202,6 +212,7 @@
         "positionIndex": 8,
         "name": "Glimmering Venom",
         "description": "Increases poison damage dealt by noxious strike.",
+        "zh": { "name": "Glimmering Venom", "description": "提高毒素造成的伤害剧毒打击。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -213,6 +224,7 @@
         "positionIndex": 9,
         "name": "Crushing Corrosion",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "粉碎腐蚀", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -232,6 +244,7 @@
         "positionIndex": 10,
         "name": "Noxious Duality",
         "description": "Chance on attack to perform an additional noxious strike.",
+        "zh": { "name": "剧毒双重性", "description": "攻击时有概率执行额外剧毒打击。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -247,6 +260,7 @@
         "positionIndex": 11,
         "name": "Spinning Speartips",
         "description": "Throw multiple spears on your third attack in an arc. The spears start spinning when hitting the ground dealing area of effect damage for a short period.",
+        "zh": { "name": "旋转 Speartips", "description": "投掷多个长矛你的第三次攻击呈弧线。长矛 start 旋转当命中地面造成范围伤害短距期间。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -258,6 +272,7 @@
         "positionIndex": 12,
         "name": "Explosive Toxins",
         "description": "Poison projectiles explode on hit, dissolving into an acidic pool inflicting poison break and dealing additional damage. Acidic pool area of effect radius is increased based on your dexterity.",
+        "zh": { "name": "爆炸毒素", "description": "毒素投射物爆炸命中时，溶解进入酸性水洼施加毒素击破与造成额外伤害。酸性水洼范围半径提高基于你的敏捷。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_break": 0, "area_of_effect": 0 },
@@ -276,6 +291,7 @@
         "positionIndex": 13,
         "name": "Elemental Fragmentation",
         "description": "Increases damage dealt by noxious strike and inflicts stacking elemental break on hit.",
+        "zh": { "name": "元素 Fragmentation", "description": "提高 剧毒打击 and inflicts stacking elemental break on hit 造成的伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "elemental_break": 0 },
@@ -297,6 +313,7 @@
         "positionIndex": 14,
         "name": "Noxious Sequence",
         "description": "Perform additional spin attacks after the third one.",
+        "zh": { "name": "剧毒 Sequence", "description": "执行额外旋转攻击之后第三次一次。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -311,6 +328,7 @@
     "name": "Leaping Ambush",
     "kind": "active",
     "description": "Jump towards target location dealing poison damage and knocking up monsters around you upon landing.",
+    "zh": { "name": "跃袭", "description": "跃向目标位置，造成毒素伤害，落地时击飞周围怪物。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -375,6 +393,7 @@
         "positionIndex": 0,
         "name": "Leaping Ambush",
         "description": "Core of the Leaping Ambush subtree.",
+        "zh": { "name": "跃袭", "description": "跃袭 子树核心。" },
         "maxRank": 1
       },
       {
@@ -382,6 +401,7 @@
         "positionIndex": 1,
         "name": "Power Quads",
         "description": "Increases maximum leap distance.",
+        "zh": { "name": "力量四联", "description": "提高最大跃击距离。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -393,6 +413,7 @@
         "positionIndex": 2,
         "name": "Heavyweight Slam",
         "description": "Increases damage dealt by leaping ambush.",
+        "zh": { "name": "重量级猛击", "description": "提高 跃袭 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -404,6 +425,7 @@
         "positionIndex": 3,
         "name": "Tribal Spearnage",
         "description": "Chance to rain down falling spears on hit dealing additional damage.",
+        "zh": { "name": "部族狂掷长矛", "description": "概率骤雨倒地坠落长矛命中时造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -419,6 +441,7 @@
         "positionIndex": 4,
         "name": "Landing Blast",
         "description": "Increases the area of effect radius of leaping ambush.",
+        "zh": { "name": "着陆爆破", "description": "提高 effect radius of 跃袭 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -430,6 +453,7 @@
         "positionIndex": 5,
         "name": "Stunning Smash",
         "description": "Chance on hit to stun the target.",
+        "zh": { "name": "眩晕猛击", "description": "命中时有概率眩晕目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -442,6 +466,7 @@
         "positionIndex": 6,
         "name": "Crippling the Weak",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "致残弱者", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -453,6 +478,7 @@
         "positionIndex": 7,
         "name": "Venomous Blastwave",
         "description": "Chance on hit to inflict poisoned.",
+        "zh": { "name": "剧毒爆裂冲击波", "description": "命中时有概率施加中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -471,6 +497,7 @@
         "positionIndex": 8,
         "name": "Adrenaline Rush",
         "description": "Landing grants you a burst of attack speed and cast rate.",
+        "zh": { "name": "Adrenaline Rush", "description": "着陆赋予你迸发之攻击速度与施法速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0, "faster_cast_rate": 0 },
@@ -482,6 +509,7 @@
         "positionIndex": 9,
         "name": "Anti-Antidote",
         "description": "Inflicts poison break on hit.",
+        "zh": { "name": "反-Antidote", "description": "命中时施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -500,6 +528,7 @@
         "positionIndex": 10,
         "name": "Stoneskinned Warrior",
         "description": "Gain increased damage reduction when leaping.",
+        "zh": { "name": "Stoneskinned 战士", "description": "获得提高伤害减免当跃击。" },
         "maxRank": 5,
         "effects": {
           "base": { "all_damage_taken_reduced_pct": 0 },
@@ -511,6 +540,7 @@
         "positionIndex": 11,
         "name": "Envenomous Groundslam",
         "description": "Unleash a burst of poison from the ground on hit dealing increased damage and inflicting poisoned.",
+        "zh": { "name": "Envenomous Groundslam", "description": "释放迸发之毒素从地面命中时造成提高伤害与施加中毒。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "increased_poisoned_damage": 0 },
@@ -532,6 +562,7 @@
         "positionIndex": 12,
         "name": "Master of Agility",
         "description": "Leaping ambush can now be casted through terrain with decreased damage.",
+        "zh": { "name": "大师之敏捷身手", "description": "跃袭可以 casted 穿过地形使用降低伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -543,6 +574,7 @@
         "positionIndex": 13,
         "name": "Arc of Spears",
         "description": "Throw multiple piercing spears around you upon landing dealing increased damage.",
+        "zh": { "name": "弧线之长矛", "description": "投掷多个穿透长矛周围你落地时造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_count": 0 },
@@ -554,6 +586,7 @@
         "positionIndex": 14,
         "name": "Ground Stomper",
         "description": "When landing, stomp the ground multiple times with increased area of effect radius and dealing increased damage.",
+        "zh": { "name": "地面 Stomper", "description": "落地时，践踏地面多个次使用提高范围半径与造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -576,6 +609,7 @@
     "name": "Caustic Spearhead",
     "kind": "active",
     "description": "Perform a burst attack dealing increased damage, additional poison damage and inflicting Poisoned on hit.",
+    "zh": { "name": "腐蚀锋芒", "description": "进行一次爆发攻击，造成提高后的伤害和额外毒素伤害，并命中时施加中毒。" },
     "damageType": "poison",
     "tags": [
       "Attack",
@@ -652,6 +686,7 @@
         "positionIndex": 0,
         "name": "Caustic Spearhead",
         "description": "Core of the Caustic Spearhead subtree.",
+        "zh": { "name": "腐蚀锋芒", "description": "腐蚀锋芒 子树核心。" },
         "maxRank": 1
       },
       {
@@ -659,6 +694,7 @@
         "positionIndex": 1,
         "name": "Stocked Quiver",
         "description": "Increases projectile amount.",
+        "zh": { "name": "Stocked Quiver", "description": "提高投射物数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -670,6 +706,7 @@
         "positionIndex": 2,
         "name": "Caustic Liquid",
         "description": "Increases poisoned damage inflicted by caustic spearhead.",
+        "zh": { "name": "腐蚀液体", "description": "提高 腐蚀锋芒 施加的中毒伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -688,6 +725,7 @@
         "positionIndex": 3,
         "name": "Fierce Spearheads",
         "description": "Increases damage dealt by caustic spearhead.",
+        "zh": { "name": "Fierce Spearheads", "description": "提高 腐蚀锋芒 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -699,6 +737,7 @@
         "positionIndex": 4,
         "name": "Venomous Touch",
         "description": "Inflicts the target with stacks of venom on hit increasing damage dealt by poisoned.",
+        "zh": { "name": "剧毒之触", "description": "施加目标使用层数之 venom 命中时提高造成的伤害中毒。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -710,6 +749,7 @@
         "positionIndex": 5,
         "name": "Splintering Arrows",
         "description": "Spearheads have a chance to fork on hit with increased damage.",
+        "zh": { "name": "Splintering 箭矢", "description": "Spearheads 有概率分叉命中时使用提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -725,6 +765,7 @@
         "positionIndex": 6,
         "name": "Tribal Hunter's Aim",
         "description": "Increases attack rating when using caustic spearhead.",
+        "zh": { "name": "部族猎人的 Aim", "description": "提高攻击命中使用腐蚀锋芒。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -736,6 +777,7 @@
         "positionIndex": 7,
         "name": "Rapid Arrows",
         "description": "Increases projectile speed.",
+        "zh": { "name": "迅捷箭矢", "description": "提高投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -747,6 +789,7 @@
         "positionIndex": 8,
         "name": "Additional Venom",
         "description": "Chance to inflict poison break on hit.",
+        "zh": { "name": "额外 Venom", "description": "命中时有概率施加毒素击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_break": 0 },
@@ -766,6 +809,7 @@
         "positionIndex": 9,
         "name": "Arrow Wound",
         "description": "Chance for spearheads to get stuck on enemies dealing damage over time for a short period.",
+        "zh": { "name": "箭矢 Wound", "description": "概率使 spearheads 至被卡住敌人造成伤害随时间短距期间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -781,6 +825,7 @@
         "positionIndex": 10,
         "name": "Erupting Spearheads",
         "description": "Chance for spearheads to explode on hit dealing increased damage with increased area of effect radius.",
+        "zh": { "name": "喷发 Spearheads", "description": "概率使 spearheads 至爆炸命中时造成提高伤害使用提高范围半径。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -796,6 +841,7 @@
         "positionIndex": 11,
         "name": "Caustic Arc",
         "description": "Split spearheads into multiple arrows in a circle around the target on hit.",
+        "zh": { "name": "腐蚀弧线", "description": "分裂 spearheads 进入多个箭矢圆环周围目标命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -807,6 +853,7 @@
         "positionIndex": 12,
         "name": "Caustic Rampage",
         "description": "Fire additional smaller spearheads in a tighter spread increasing chance of dealing critical strikes and dealing increased critical strike damage.",
+        "zh": { "name": "腐蚀暴走", "description": "火焰额外更小 spearheads tighter spread 提高概率之造成暴击与造成提高暴击伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "crit_chance": 0, "crit_damage": 0 },
@@ -822,6 +869,7 @@
         "positionIndex": 13,
         "name": "Toxic Spores",
         "description": "Caustic spearhead leaves spores behind seeking nearby monsters and exploding on hit dealing additional damage and inflicting poisoned.",
+        "zh": { "name": "剧毒孢子", "description": "腐蚀锋芒留下孢子身后搜寻附近怪物与 exploding 命中时造成额外伤害与施加中毒。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -846,6 +894,7 @@
         "positionIndex": 14,
         "name": "Venomous Burst",
         "description": "Whenever a monster reaches maximum stacks of venom it unleashes a burst of poison dealing the full damage of venom consuming it.",
+        "zh": { "name": "剧毒迸发", "description": "每当怪物 reaches 最大层数之 venom 释放迸发之毒素造成 full 伤害之 venom 消耗。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -860,6 +909,7 @@
     "name": "Jungle Camouflage",
     "kind": "buff",
     "description": "Temporarily increases your poison skill damage.",
+    "zh": { "name": "丛林伪装", "description": "临时提高你的毒素技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -902,6 +952,7 @@
     "name": "Thrill of the Hunt",
     "kind": "passive",
     "description": "Increases your movement speed.",
+    "zh": { "name": "狩猎之悦", "description": "提高你的移动速度。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -932,6 +983,7 @@
     "name": "Toxic Remains",
     "kind": "passive",
     "description": "Killing a monster causes them to explode into toxic gas inflicting Poisoned on monsters hit.",
+    "zh": { "name": "毒尸余烬", "description": "击杀怪物时使其爆炸成毒气，使命中怪物中毒。" },
     "damageType": "poison",
     "tags": [
       "Passive",
@@ -991,6 +1043,7 @@
     "name": "Death from Above",
     "kind": "active",
     "description": "Call down a rain of falling spears on target location dealing poison damage and slowing monsters struck.",
+    "zh": { "name": "天降死亡", "description": "召唤一场长矛之雨落在目标位置，造成毒素伤害并减速被击中的怪物。" },
     "damageType": "poison",
     "tags": [
       "Cast",
@@ -1056,6 +1109,7 @@
         "positionIndex": 0,
         "name": "Death from Above",
         "description": "Core of the Death from Above subtree.",
+        "zh": { "name": "天降死亡", "description": "天降死亡 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1063,6 +1117,7 @@
         "positionIndex": 1,
         "name": "Rapid Spearhandling",
         "description": "Increases cast rate when using death from above.",
+        "zh": { "name": "迅捷 Spearhandling", "description": "提高施法速度使用天降死亡。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1074,6 +1129,7 @@
         "positionIndex": 2,
         "name": "Heavy Spears",
         "description": "Increases falling speed and damage dealt by death from above.",
+        "zh": { "name": "重型长矛", "description": "提高坠落速度与造成的伤害天降死亡。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "projectile_speed": 0 },
@@ -1085,6 +1141,7 @@
         "positionIndex": 3,
         "name": "Icebreaking Spearshower",
         "description": "Increases damage dealt by death from above to monsters at maximum life.",
+        "zh": { "name": "Icebreaking Spearshower", "description": "提高 天降死亡 to monsters at maximum life 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1096,6 +1153,7 @@
         "positionIndex": 4,
         "name": "Spearhandler's Intellect",
         "description": "Decreases mana cost when using death from above.",
+        "zh": { "name": "Spearhandler's 智慧", "description": "使用天降死亡时降低法力消耗。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1107,6 +1165,7 @@
         "positionIndex": 5,
         "name": "Need for Speed",
         "description": "Death from above deals additional damage based on your bonus movement speed.",
+        "zh": { "name": "Need 速度", "description": "天降死亡造成额外伤害基于你的 bonus 移动速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_movement_speed": 0 },
@@ -1118,6 +1177,7 @@
         "positionIndex": 6,
         "name": "Beast Slayer",
         "description": "Increases damage dealt to bosses.",
+        "zh": { "name": "Beast 杀手", "description": "提高对 首领 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1129,6 +1189,7 @@
         "positionIndex": 7,
         "name": "Safeheaven",
         "description": "If there are no nearby enemies, death from above covers a larger area with increased damage.",
+        "zh": { "name": "Safeheaven", "description": "If there 附近敌人，天降死亡覆盖更大范围使用提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0, "area_of_effect": 0 },
@@ -1140,6 +1201,7 @@
         "positionIndex": 8,
         "name": "Critical Arrowfall",
         "description": "Now has a chance to critically strike dealing increased damage based on your critical strike damage.",
+        "zh": { "name": "暴击 Arrowfall", "description": "现在有概率暴击 strike 造成提高伤害基于你的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0 },
@@ -1151,6 +1213,7 @@
         "positionIndex": 9,
         "name": "Stacking Life",
         "description": "Increase your maximum life and mana on hit for a short period.",
+        "zh": { "name": "叠加生命", "description": "提高你的最大生命与法力命中时短距期间。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_life": 0, "increased_mana": 0 },
@@ -1162,6 +1225,7 @@
         "positionIndex": 10,
         "name": "Dual Spearshower",
         "description": "Chance to fire an additional death from above.",
+        "zh": { "name": "双持 Spearshower", "description": "概率火焰额外天降死亡。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1177,6 +1241,7 @@
         "positionIndex": 11,
         "name": "Spear Delivery",
         "description": "Throw multiple spears in an arc unleashing death from above on hit.",
+        "zh": { "name": "Spear Delivery", "description": "投掷多个长矛呈弧线释放天降死亡命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1188,6 +1253,7 @@
         "positionIndex": 12,
         "name": "Ancient Device",
         "description": "Summon an ancient device periodically firing death from above on nearby targets based on your cooldown recovery.",
+        "zh": { "name": "远古 Device", "description": "召唤物远古 device periodically firing 天降死亡附近目标基于你的 cooldown recovery。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1199,6 +1265,7 @@
         "positionIndex": 13,
         "name": "Detonation Shower",
         "description": "Chance on landing for spears to explode dealing increased damage.",
+        "zh": { "name": "引爆 Shower", "description": "概率在着陆长矛至爆炸造成提高伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1214,6 +1281,7 @@
         "positionIndex": 14,
         "name": "Storm of Spears",
         "description": "Multiple waves of spears rain down over time in a larger area that slowly follows the closest enemy. Death from above now has a small cooldown.",
+        "zh": { "name": "风暴之长矛", "description": "多个波之长矛骤雨倒地随时间更大范围缓慢跟随最近的敌人。天降死亡有小型 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "projectile_count": 0 },
@@ -1228,6 +1296,7 @@
     "name": "Envenom",
     "kind": "passive",
     "description": "Strikes have a chance to explode toxic fissures on all monsters around you dealing poison damage and inflicting Poisoned.",
+    "zh": { "name": "淬毒", "description": "打击有概率在你周围所有怪物身上引爆毒裂缝，造成毒素伤害并施加中毒。" },
     "damageType": "poison",
     "tags": [
       "Passive",
@@ -1292,6 +1361,7 @@
         "positionIndex": 0,
         "name": "Envenom",
         "description": "Core of the Envenom subtree.",
+        "zh": { "name": "淬毒", "description": "淬毒 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1299,6 +1369,7 @@
         "positionIndex": 1,
         "name": "Toxic Fortune",
         "description": "Increases envenom proc chance.",
+        "zh": { "name": "剧毒 Fortune", "description": "提高淬毒触发概率。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1307,6 +1378,7 @@
         "positionIndex": 2,
         "name": "Empowered Toxin",
         "description": "Increases poisoned damage inflicted by envenom.",
+        "zh": { "name": "强化 Toxin", "description": "提高 淬毒 施加的中毒伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1325,6 +1397,7 @@
         "positionIndex": 3,
         "name": "Toxic Afterburst",
         "description": "Chance for a fissure to burst twice on hit.",
+        "zh": { "name": "剧毒 Afterburst", "description": "概率使 fissure 至迸发 twice 命中时。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 3 } }
       },
@@ -1333,6 +1406,7 @@
         "positionIndex": 4,
         "name": "Corrosive Liquid",
         "description": "Increases damage dealt by envenom.",
+        "zh": { "name": "腐蚀液体", "description": "提高 淬毒 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "poison_skill_damage": 0 },
@@ -1344,6 +1418,7 @@
         "positionIndex": 5,
         "name": "Lifesap",
         "description": "Chance to unleash a venomous nova dealing poison damage.",
+        "zh": { "name": "Lifesap", "description": "概率释放剧毒新星造成毒素伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1359,6 +1434,7 @@
         "positionIndex": 6,
         "name": "Toxic Reach",
         "description": "Increases the area of effect radius of envenom.",
+        "zh": { "name": "剧毒延伸", "description": "提高 effect radius of 淬毒 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1370,6 +1446,7 @@
         "positionIndex": 7,
         "name": "Spreading Disease",
         "description": "Chance to unleash an additional envenom on a nearby monster on hit.",
+        "zh": { "name": "散播 Disease", "description": "命中时有概率释放额外淬毒附近怪物。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1378,6 +1455,7 @@
         "positionIndex": 8,
         "name": "Crippling Poison",
         "description": "Inflicts slow on hit.",
+        "zh": { "name": "致残毒素", "description": "命中时施加缓慢。" },
         "maxRank": 5,
         "effects": {
           "base": { "slow_target": 0 },
@@ -1389,6 +1467,7 @@
         "positionIndex": 9,
         "name": "Added Venom",
         "description": "Increases damage to poisoned targets.",
+        "zh": { "name": "附加 Venom", "description": "提高伤害至中毒目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_poisoned": 0 },
@@ -1400,6 +1479,7 @@
         "positionIndex": 10,
         "name": "Venom Overflow",
         "description": "Chance to increase poisoned damage on hit.",
+        "zh": { "name": "Venom Overflow", "description": "命中时有概率提高中毒伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_poisoned_damage": 0 },
@@ -1418,6 +1498,7 @@
         "positionIndex": 11,
         "name": "Stacked Weakness",
         "description": "Inflict stacking poison break on hit.",
+        "zh": { "name": "叠加弱点", "description": "命中时施加叠加毒素击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "poison_break": 0 },
@@ -1436,6 +1517,7 @@
         "positionIndex": 12,
         "name": "Rapid End",
         "description": "Increases poisoned damage and the tick frequency of poisoned.",
+        "zh": { "name": "迅捷 End", "description": "提高 poisoned 的中毒伤害与每跳 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1460,6 +1542,7 @@
         "positionIndex": 13,
         "name": "Envenova",
         "description": "Unleash a poisonous nova instead with increased damage.",
+        "zh": { "name": "Envenova", "description": "释放剧毒新星改为使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -1471,6 +1554,7 @@
         "positionIndex": 14,
         "name": "Venomwave",
         "description": "Unleash waves of fissures from targets dealing additional damage.",
+        "zh": { "name": "Venomwave", "description": "释放波之地裂从目标造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1485,6 +1569,7 @@
     "name": "Astrope's Gift",
     "kind": "active",
     "description": "Perform a lightning enhanced attack dealing physical damage and lightning damage.",
+    "zh": { "name": "阿斯特罗佩的恩赐", "description": "进行一次闪电强化的攻击，造成物理伤害和闪电伤害。" },
     "damageType": "lightning",
     "tags": [
       "Attack",
@@ -1561,6 +1646,7 @@
         "positionIndex": 0,
         "name": "Astrope's Gift",
         "description": "Core of the Astrope's Gift subtree.",
+        "zh": { "name": "阿斯特罗佩的恩赐", "description": "阿斯特罗佩的恩赐 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1568,6 +1654,7 @@
         "positionIndex": 1,
         "name": "Master of Javelin",
         "description": "Fire additional projectiles when using a throwing weapon.",
+        "zh": { "name": "大师之 Javelin", "description": "发射额外投射物使用投掷武器。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1579,6 +1666,7 @@
         "positionIndex": 2,
         "name": "Power Current",
         "description": "Increases damage dealt by astrope’s gift.",
+        "zh": { "name": "力量当前", "description": "提高 astrope’s gift 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1590,6 +1678,7 @@
         "positionIndex": 3,
         "name": "Astrope's Curse",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "Astrope's Curse", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -1611,6 +1700,7 @@
         "positionIndex": 4,
         "name": "Astrope's Revenge",
         "description": "Chance to unleash an additional lightning bolt on hit.",
+        "zh": { "name": "Astrope's Revenge", "description": "命中时有概率释放额外闪电电矢。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1626,6 +1716,7 @@
         "positionIndex": 5,
         "name": "Rapid Momentum",
         "description": "Grants you a stacking attack speed buff on hit. All stacks are lost if you miss.",
+        "zh": { "name": "迅捷 Momentum", "description": "获得你叠加攻击速度增益命中时。全部层数失去 if 你 miss。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -1637,6 +1728,7 @@
         "positionIndex": 6,
         "name": "Powerstasis",
         "description": "Lightning bolts have a chance to deal double damage.",
+        "zh": { "name": "Powerstasis", "description": "Lightning bolts 有概率造成双重伤害。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -1645,6 +1737,7 @@
         "positionIndex": 7,
         "name": "Ending Fate",
         "description": "Increases damage to bosses when using polearms or throwing weapons.",
+        "zh": { "name": "终结命运", "description": "神圣形态下击杀怪物后获得提高的基础生命回复；邪秽形态下击杀怪物后将怪物撕碎，造成巨额范围伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -1656,6 +1749,7 @@
         "positionIndex": 8,
         "name": "Astrope's Agility",
         "description": "Decreases movement diminish when using astrope’s gift.",
+        "zh": { "name": "Astrope's 敏捷身手", "description": "使用astrope's gift时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1667,6 +1761,7 @@
         "positionIndex": 9,
         "name": "Astrope's Dexterity",
         "description": "Increases attack rating when using astrope’s gift.",
+        "zh": { "name": "Astrope's 敏捷", "description": "提高攻击命中使用 astrope's gift。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1678,6 +1773,7 @@
         "positionIndex": 10,
         "name": "Zapping Voltage",
         "description": "Chance to inflict stasis on hit.",
+        "zh": { "name": "Zapping 电压", "description": "命中时有概率施加停滞。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_stasis_damage": 0 },
@@ -1696,6 +1792,7 @@
         "positionIndex": 11,
         "name": "Surging Stormbolt",
         "description": "Lightning strikes now unleash an AoE pulse with increased area of effect radius and damage.",
+        "zh": { "name": "奔涌 Stormbolt", "description": "闪电打击释放 AoE 脉冲使用提高范围半径与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "area_of_effect": 0 },
@@ -1707,6 +1804,7 @@
         "positionIndex": 12,
         "name": "Thundering Storm",
         "description": "Summons a thundering storm dealing area of effect damage for a short period instead of a lightning bolt.",
+        "zh": { "name": "Thundering 风暴", "description": "召唤物 thundering 风暴造成范围伤害短距期间改为之闪电电矢。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1718,6 +1816,7 @@
         "positionIndex": 13,
         "name": "Critical Thunderbolt",
         "description": "Lightning bolts can critically hit dealing increased critical strike damage when using polearms or throwing weapons.",
+        "zh": { "name": "暴击 Thunderbolt", "description": "闪电电矢可以打出暴击造成提高暴击伤害使用长柄武器投掷武器。" },
         "maxRank": 3,
         "effects": {
           "base": { "crit_chance": 0, "crit_damage": 0 },
@@ -1729,6 +1828,7 @@
         "positionIndex": 14,
         "name": "Eye of Storm",
         "description": "Summon a storm following you and rapidly shrinking. Hitting a monster causes the storm to grow in size.",
+        "zh": { "name": "之眼之风暴", "description": "召唤物风暴 following 你与迅速 shrinking。命中怪物使风暴至 grow size。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1743,6 +1843,7 @@
     "name": "Feint",
     "kind": "passive",
     "description": "Gain a chance to evade melee and ranged attacks.",
+    "zh": { "name": "佯攻", "description": "获得闪避近战和远程攻击的概率。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1773,6 +1874,7 @@
     "name": "Chooser of the Slain",
     "kind": "passive",
     "description": "Increases your life and mana after kill.",
+    "zh": { "name": "英灵遴选者", "description": "击杀后提高你的生命和法力。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -1805,6 +1907,7 @@
     "name": "Rebound",
     "kind": "active",
     "description": "Perform an attack dealing physical damage and lightning damage that rebounds to the closest monster.",
+    "zh": { "name": "弹射", "description": "进行一次攻击，造成物理伤害和闪电伤害，并弹射至最近的怪物。" },
     "damageType": "lightning",
     "tags": [
       "Attack",
@@ -1882,6 +1985,7 @@
         "positionIndex": 0,
         "name": "Rebound",
         "description": "Core of the Rebound subtree.",
+        "zh": { "name": "弹射", "description": "弹射 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1889,6 +1993,7 @@
         "positionIndex": 1,
         "name": "Jumping Spear",
         "description": "Increases the amount of rebounds.",
+        "zh": { "name": "跳跃 Spear", "description": "提高 rebounds 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -1900,6 +2005,7 @@
         "positionIndex": 2,
         "name": "Damascus Speartip",
         "description": "Increases the damage dealt by rebound.",
+        "zh": { "name": "Damascus Speartip", "description": "提高造成的伤害弹射。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -1911,6 +2017,7 @@
         "positionIndex": 3,
         "name": "Reaching Ricochet",
         "description": "Increases the maximum range of rebound.",
+        "zh": { "name": "延伸 Ricochet", "description": "提高 弹射 的最大范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -1922,6 +2029,7 @@
         "positionIndex": 4,
         "name": "Splitting Speartip",
         "description": "Chance on hit for the rebound projectile to split into an additional rebound.",
+        "zh": { "name": "分裂 Speartip", "description": "概率命中时弹射投射物至分裂进入额外弹射。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1937,6 +2045,7 @@
         "positionIndex": 5,
         "name": "Multi Rebound",
         "description": "Chance on chain hit to unleash projectiles in an arc dealing decreased damage.",
+        "zh": { "name": "Multi 弹射", "description": "概率在连锁命中至释放投射物呈弧线造成降低伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1952,6 +2061,7 @@
         "positionIndex": 6,
         "name": "Accurate Spearshot",
         "description": "Increases attack rating when using rebound.",
+        "zh": { "name": "精准 Spearshot", "description": "提高攻击命中使用弹射。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -1963,6 +2073,7 @@
         "positionIndex": 7,
         "name": "Increasing Odds",
         "description": "Rebound gains additional crit damage on each bounce.",
+        "zh": { "name": "提高 Odds", "description": "弹射获得额外 crit 伤害每个弹射。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0, "crit_chance": 0 },
@@ -1974,6 +2085,7 @@
         "positionIndex": 8,
         "name": "Penetrating Rebound",
         "description": "Chance to lightning break on hit.",
+        "zh": { "name": "穿透弹射", "description": "命中时有概率闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -1995,6 +2107,7 @@
         "positionIndex": 9,
         "name": "Marksmanship",
         "description": "Increases attack speed when using a bow with rebound.",
+        "zh": { "name": "Marksmanship", "description": "提高攻击速度使用弓使用弹射。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -2006,6 +2119,7 @@
         "positionIndex": 10,
         "name": "Rapidfly",
         "description": "Increases the projectile speed of rebound.",
+        "zh": { "name": "Rapidfly", "description": "提高 弹射 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -2017,6 +2131,7 @@
         "positionIndex": 11,
         "name": "Electrocharged Rebound",
         "description": "Chance to strike targets with bolts of lightning on hit.",
+        "zh": { "name": "Electrocharged 弹射", "description": "命中时有概率strike 目标使用电矢之闪电。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2032,6 +2147,7 @@
         "positionIndex": 12,
         "name": "Rebomb",
         "description": "Rebound now increases its damage and size with every bounce and explodes at the end dealing damage on a large radius.",
+        "zh": { "name": "Rebomb", "description": "弹射提高伤害与 size 使用每弹射与爆炸 end 造成伤害大型半径。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "area_of_effect": 0 },
@@ -2043,6 +2159,7 @@
         "positionIndex": 13,
         "name": "Orbital Rebound",
         "description": "When hitting an enemy spawn the rebound projectile orbiting you until it hits a monster.",
+        "zh": { "name": "环绕弹射", "description": "当命中敌人生成弹射投射物环绕你 until 命中怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2054,6 +2171,7 @@
         "positionIndex": 14,
         "name": "Kickback Projectile",
         "description": "Rebound projectiles now return to you instead of expiring dealing increased damage to monsters on its path.",
+        "zh": { "name": "Kickback 投射物", "description": "弹射投射物反伤至你改为之到期造成提高伤害至怪物路径上的。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2068,6 +2186,7 @@
     "name": "Spearnage",
     "kind": "active",
     "description": "Furiously throw lightning enchanted spears towards target location.",
+    "zh": { "name": "狂掷长矛", "description": "朝目标位置狂怒地掷出闪电附魔的长矛。" },
     "damageType": "lightning",
     "tags": [
       "Attack",
@@ -2145,6 +2264,7 @@
         "positionIndex": 0,
         "name": "Spearnage",
         "description": "Core of the Spearnage subtree.",
+        "zh": { "name": "狂掷长矛", "description": "狂掷长矛 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2152,6 +2272,7 @@
         "positionIndex": 1,
         "name": "Lethal Spearstorm",
         "description": "Increases the physical damage dealt by spearnage.",
+        "zh": { "name": "致命 Spearstorm", "description": "提高物理伤害 dealt 狂掷长矛。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2163,6 +2284,7 @@
         "positionIndex": 2,
         "name": "Spear Storm",
         "description": "Increases the amount of spears thrown.",
+        "zh": { "name": "Spear 风暴", "description": "提高 spears thrown 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2174,6 +2296,7 @@
         "positionIndex": 3,
         "name": "Accurate Spearing",
         "description": "Increases attack rating when using spearnage.",
+        "zh": { "name": "精准 Spearing", "description": "提高攻击命中使用狂掷长矛。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -2185,6 +2308,7 @@
         "positionIndex": 4,
         "name": "Thundertips",
         "description": "Increases lightning damage dealt by spearnage.",
+        "zh": { "name": "Thundertips", "description": "提高闪电造成的伤害狂掷长矛。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2196,6 +2320,7 @@
         "positionIndex": 5,
         "name": "Timefunneling Spears",
         "description": "Spears grow in size and gain increased damage while traveling.",
+        "zh": { "name": "Timefunneling 长矛", "description": "长矛 grow size 与获得提高伤害当飞行。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "projectile_size": 0 },
@@ -2207,6 +2332,7 @@
         "positionIndex": 6,
         "name": "Pointy Ends",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "Pointy Ends", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -2228,6 +2354,7 @@
         "positionIndex": 7,
         "name": "Swift Glaives",
         "description": "Increases spearnage projectile speed.",
+        "zh": { "name": "迅捷 Glaives", "description": "提高狂掷长矛投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -2239,6 +2366,7 @@
         "positionIndex": 8,
         "name": "Swiftstepping",
         "description": "Decreases movement diminish when using spearnage.",
+        "zh": { "name": "Swiftstepping", "description": "使用狂掷长矛时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -2250,6 +2378,7 @@
         "positionIndex": 9,
         "name": "Conqueror of Light",
         "description": "Increases damage dealt to bosses.",
+        "zh": { "name": "Conqueror 之光明", "description": "提高对 首领 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bosses": 0 },
@@ -2261,6 +2390,7 @@
         "positionIndex": 10,
         "name": "Sudden Flank",
         "description": "Spears have a chance to ricochet towards another target on hit.",
+        "zh": { "name": "骤然 Flank", "description": "Spears 有概率ricochet 朝向另一个目标命中时。" },
         "maxRank": 3,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 5 } }
       },
@@ -2269,6 +2399,7 @@
         "positionIndex": 11,
         "name": "Spinning to Win",
         "description": "Rapidly throw spears around you for a short duration dealing increased damage.",
+        "zh": { "name": "旋转至 Win", "description": "迅速投掷长矛周围你短时间内造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2280,6 +2411,7 @@
         "positionIndex": 12,
         "name": "Lightning Ball",
         "description": "Chance on hit to spawn a ball of lightning traveling forward dealing increased lightning damage.",
+        "zh": { "name": "闪电球", "description": "命中时有概率生成球之闪电飞行前方造成提高闪电伤害。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2295,6 +2427,7 @@
         "positionIndex": 13,
         "name": "Boomerang Spears",
         "description": "Spears now return to you dealing increased damage.",
+        "zh": { "name": "Boomerang 长矛", "description": "长矛反伤至你造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2306,6 +2439,7 @@
         "positionIndex": 14,
         "name": "Explosive Speartips",
         "description": "Spears have a chance to explode on hit dealing area of effect damage on an increased radius.",
+        "zh": { "name": "爆炸 Speartips", "description": "Spears 有概率爆炸命中时造成范围伤害提高半径。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -2324,6 +2458,7 @@
     "name": "Storm Dash",
     "kind": "active",
     "description": "Dash towards target location striking nearby monsters with chain lightning.",
+    "zh": { "name": "风暴突进", "description": "向目标位置突进，以连锁闪电打击附近怪物。" },
     "damageType": "lightning",
     "tags": [
       "Cast",
@@ -2389,6 +2524,7 @@
         "positionIndex": 0,
         "name": "Storm Dash",
         "description": "Core of the Storm Dash subtree.",
+        "zh": { "name": "风暴突进", "description": "风暴突进 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2396,6 +2532,7 @@
         "positionIndex": 1,
         "name": "Agile Zapper",
         "description": "Increases the frequency of chain lightnings.",
+        "zh": { "name": "敏捷 Zapper", "description": "提高 chain lightnings 的frequency。" },
         "maxRank": 8,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -2407,6 +2544,7 @@
         "positionIndex": 2,
         "name": "Zapping Force",
         "description": "Increases damage dealt by storm dash.",
+        "zh": { "name": "Zapping 力量", "description": "提高 风暴突进 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2418,6 +2556,7 @@
         "positionIndex": 3,
         "name": "Bouncing Current",
         "description": "Increases the amount of chain lightning bounces.",
+        "zh": { "name": "弹跳当前", "description": "提高 连锁闪电 bounces 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -2429,6 +2568,7 @@
         "positionIndex": 4,
         "name": "Thunderfall",
         "description": "Chain lightning has a chance to call down a thunderbolt on the target dealing additional damage.",
+        "zh": { "name": "Thunderfall", "description": "连锁闪电有概率召唤倒地 thunderbolt 目标造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2444,6 +2584,7 @@
         "positionIndex": 5,
         "name": "Hopping Surge",
         "description": "Increases the maximum range of storm dash.",
+        "zh": { "name": "Hopping 涌动", "description": "提高 风暴突进 的最大范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2455,6 +2596,7 @@
         "positionIndex": 6,
         "name": "Landing Surge",
         "description": "When landing unleash a lightning explosion for additional area of effect damage and stunning on hit.",
+        "zh": { "name": "着陆涌动", "description": "落地时释放闪电爆炸额外范围伤害与眩晕命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2466,6 +2608,7 @@
         "positionIndex": 7,
         "name": "Lightning Strikes",
         "description": "Unleash lightning strikes on nearby monsters when landing.",
+        "zh": { "name": "闪电打击", "description": "释放闪电打击附近怪物落地时。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2477,6 +2620,7 @@
         "positionIndex": 8,
         "name": "Voltage Struck",
         "description": "Chance to stun on hit.",
+        "zh": { "name": "电压受击", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2489,6 +2633,7 @@
         "positionIndex": 9,
         "name": "Electric Current",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "电气当前", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2500,6 +2645,7 @@
         "positionIndex": 10,
         "name": "Agility Over Power",
         "description": "You can now travel through terrain but the damage of storm dash is reduced.",
+        "zh": { "name": "敏捷身手持续力量", "description": "你可以飞行穿过地形伤害之风暴突进降低。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2511,6 +2657,7 @@
         "positionIndex": 11,
         "name": "Lightning Trail",
         "description": "Leave behind a trail of lightning inflicting electrified and lightning break.",
+        "zh": { "name": "闪电轨迹", "description": "留下身后轨迹之闪电施加 electrified 与闪电击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_stasis_damage": 0, "lightning_break": 0 },
@@ -2533,6 +2680,7 @@
         "positionIndex": 12,
         "name": "Storm Orbs",
         "description": "Landing on monsters summons lightning bolts orbiting around you continuously zapping nearby monsters with chain lightning. Storm dash now has a cooldown.",
+        "zh": { "name": "风暴宝珠", "description": "着陆怪物召唤物闪电电矢环绕周围你 continuously zapping 附近怪物使用连锁闪电。风暴突进有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2544,6 +2692,7 @@
         "positionIndex": 13,
         "name": "Storm Gates",
         "description": "Blink to target location summoning a lightning storm unleashing chain lightning on hit.",
+        "zh": { "name": "风暴 Gates", "description": "Blink 至目标位置召唤闪电风暴释放连锁闪电命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2555,6 +2704,7 @@
         "positionIndex": 14,
         "name": "Pillar of Storm",
         "description": "Leave behind a pillar of storm. Pillars of storm are linked with a chain of lightning dealing damage and inflicting stasis on hit.",
+        "zh": { "name": "Pillar 之风暴", "description": "留下身后 pillar 之风暴。Pillars 之风暴 linked 使用连锁之闪电造成伤害与施加停滞命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_stasis_damage": 0, "skill_duration": 0 },
@@ -2576,6 +2726,7 @@
     "name": "Thunder Fury",
     "kind": "active",
     "description": "Perform an attack dealing physical damage that spreads lightning behind the target.",
+    "zh": { "name": "雷霆之怒", "description": "进行一次攻击，造成物理伤害，并在目标身后扩散闪电。" },
     "damageType": "lightning",
     "tags": [
       "Attack",
@@ -2648,6 +2799,7 @@
         "positionIndex": 0,
         "name": "Thunder Fury",
         "description": "Core of the Thunder Fury subtree.",
+        "zh": { "name": "雷霆之怒", "description": "雷霆之怒 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2655,6 +2807,7 @@
         "positionIndex": 1,
         "name": "Roaring Thunder",
         "description": "Increases lightning damage dealt by thunder fury.",
+        "zh": { "name": "Roaring 雷霆", "description": "提高闪电造成的伤害雷霆之怒。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_skill_damage": 0 },
@@ -2666,6 +2819,7 @@
         "positionIndex": 2,
         "name": "Breaking Thunder",
         "description": "Chance to inflict lightning break on hit.",
+        "zh": { "name": "击破雷霆", "description": "命中时有概率施加闪电击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "lightning_break": 0 },
@@ -2687,6 +2841,7 @@
         "positionIndex": 3,
         "name": "Photonic Transfer",
         "description": "Recover a portion of your life on hit.",
+        "zh": { "name": "Photonic Transfer", "description": "恢复一部分你的生命命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_replenish_pct": 0 },
@@ -2698,6 +2853,7 @@
         "positionIndex": 4,
         "name": "Thunderstep",
         "description": "Decreases movement speed diminish when using thunder fury.",
+        "zh": { "name": "Thunderstep", "description": "使用雷霆之怒时降低移动速度衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -2709,6 +2865,7 @@
         "positionIndex": 5,
         "name": "Storm´s Wisdom",
         "description": "Chance to critically hit dealing increased damage based on your intelligence.",
+        "zh": { "name": "风暴的 Wisdom", "description": "概率打出暴击造成提高伤害基于你的智力。" },
         "maxRank": 3,
         "effects": {
           "base": { "crit_chance": 0, "conversion_intelligence": 0 },
@@ -2720,6 +2877,7 @@
         "positionIndex": 6,
         "name": "Tectonic Hit",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "Tectonic 命中", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2732,6 +2890,7 @@
         "positionIndex": 7,
         "name": "Tectonic Tremors",
         "description": "Increases damage to stunned targets.",
+        "zh": { "name": "Tectonic 震颤", "description": "提高伤害至眩晕目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2743,6 +2902,7 @@
         "positionIndex": 8,
         "name": "Executioneer´s Fury",
         "description": "Execute low life monsters.",
+        "zh": { "name": "Executioneer's 狂怒", "description": "处决低生命的怪物。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -2754,6 +2914,7 @@
         "positionIndex": 9,
         "name": "Tectonic Impact",
         "description": "Stunned targets unleash an exploding lightning pulse on hit.",
+        "zh": { "name": "Tectonic 冲击", "description": "眩晕目标释放 exploding 闪电脉冲命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2765,6 +2926,7 @@
         "positionIndex": 10,
         "name": "Thunder´s Reach",
         "description": "Increases the range of thunder fury.",
+        "zh": { "name": "雷霆的延伸", "description": "提高 雷霆之怒 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2776,6 +2938,7 @@
         "positionIndex": 11,
         "name": "Arc Lightning",
         "description": "Thunder bolts unleash an arc of additional bolts behind the target on hit.",
+        "zh": { "name": "弧线闪电", "description": "雷霆电矢释放弧线之额外电矢身后目标命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 2, "lightning_skill_damage": 0 },
@@ -2787,6 +2950,7 @@
         "positionIndex": 12,
         "name": "Leaping Thunder",
         "description": "Release chain lightning on hit with an increased number of bounces.",
+        "zh": { "name": "跃击雷霆", "description": "Release 连锁闪电命中时使用提高 number 之弹射。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_bounces": 0, "lightning_skill_damage": 0 },
@@ -2798,6 +2962,7 @@
         "positionIndex": 13,
         "name": "Vacuuming Thunder",
         "description": "Thunder bolts pull targets to the initial point of impact followed by a surge of lightning dealing area of effect damage.",
+        "zh": { "name": "Vacuuming 雷霆", "description": "雷霆电矢牵引目标至 initial 点之冲击 followed 涌动之闪电造成范围伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "lightning_skill_damage": 0, "skill_range": 0 },
@@ -2809,6 +2974,7 @@
         "positionIndex": 14,
         "name": "Electric Essence",
         "description": "Inflict lightning break and stasis to targets on hit.",
+        "zh": { "name": "电气精华", "description": "命中时施加闪电击破与停滞至目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_stasis_damage": 0, "lightning_break": 0 },
@@ -2834,6 +3000,7 @@
     "name": "Thunder Goddesses Chosen",
     "kind": "passive",
     "description": "Increases lightning skill damage.",
+    "zh": { "name": "雷神眷选", "description": "提高闪电技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2866,6 +3033,7 @@
     "name": "Astrope's Battle Maiden",
     "kind": "buff",
     "description": "Temporarily increases your lightning skill damage and attack speed.",
+    "zh": { "name": "阿斯特罗佩的战姬", "description": "临时提高你的闪电技能伤害和攻击速度。" },
     "tags": [
       "Cast",
       "Active",

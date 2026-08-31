@@ -1,6 +1,7 @@
 {
   "id": "stormweaver",
   "name": "Stormweaver",
+  "zh": { "name": "风暴织者" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

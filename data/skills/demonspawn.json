@@ -5,6 +5,7 @@
     "name": "Bone Fragments",
     "kind": "active",
     "description": "Cast fragments of bone towards target location dealing arcane damage.",
+    "zh": { "name": "白骨碎片", "description": "向目标位置射出骨之碎片，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "movementDuringUse": 65,
@@ -29,6 +30,7 @@
         "positionIndex": 0,
         "name": "Bone Fragments",
         "description": "Core of the Bone Fragments subtree.",
+        "zh": { "name": "白骨碎片", "description": "白骨碎片 子树核心。" },
         "maxRank": 1
       },
       {
@@ -36,6 +38,7 @@
         "positionIndex": 1,
         "name": "Heterotopic Ossification",
         "description": "Increases the amount of fragments.",
+        "zh": { "name": "Heterotopic 骨化", "description": "提高 fragments 的数量。" },
         "maxRank": 2,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -47,6 +50,7 @@
         "positionIndex": 2,
         "name": "High Demon",
         "description": "Lowers the mana cost of bone fragments.",
+        "zh": { "name": "高恶魔", "description": "降低法力消耗之白骨碎片。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -58,6 +62,7 @@
         "positionIndex": 3,
         "name": "Bone Frenzy",
         "description": "Chance on cast to increase the amount of fragments.",
+        "zh": { "name": "骸骨狂乱", "description": "施法时有概率提高数量之碎片。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -73,6 +78,7 @@
         "positionIndex": 4,
         "name": "Bone Cannonade",
         "description": "Chance on cast to unleash additional bone fragments.",
+        "zh": { "name": "骸骨 Cannonade", "description": "施法时有概率释放额外白骨碎片。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -88,6 +94,7 @@
         "positionIndex": 5,
         "name": "Demon's Fury",
         "description": "Increases the projectile speed of fragments.",
+        "zh": { "name": "恶魔的狂怒", "description": "提高 fragments 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -99,6 +106,7 @@
         "positionIndex": 6,
         "name": "Blood Dipped Fragments",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "鲜血 Dipped 碎片", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -117,6 +125,7 @@
         "positionIndex": 7,
         "name": "Exoskeletal",
         "description": "Chance to impale targets on hit sending them airborne dealing increased damage.",
+        "zh": { "name": "Exoskeletal", "description": "概率穿刺尖刺目标命中时发出它们腾空造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -132,6 +141,7 @@
         "positionIndex": 8,
         "name": "Bloodshed",
         "description": "Unleash a nova of blood on hit if the target is bleeding.",
+        "zh": { "name": "Bloodshed", "description": "释放鲜血电矢朝向每个附近怪物汲取你的生命每个目标造成提高伤害。" },
         "maxRank": 7,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -143,6 +153,7 @@
         "positionIndex": 9,
         "name": "Witchcraft Essentials",
         "description": "Increases the damage dealt by bone fragments.",
+        "zh": { "name": "Witchcraft Essentials", "description": "提高造成的伤害白骨碎片。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -154,6 +165,7 @@
         "positionIndex": 10,
         "name": "Carved Fragments",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "Carved 碎片", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -165,6 +177,7 @@
         "positionIndex": 11,
         "name": "Sharp Bonerangs",
         "description": "Bone fragments now bounce additional times on hit.",
+        "zh": { "name": "尖锐 Bonerangs", "description": "白骨碎片弹射额外次命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_bounces": 0 },
@@ -176,6 +189,7 @@
         "positionIndex": 12,
         "name": "Demon's Grip",
         "description": "Bone fragments orbit targets on hit for a short period of time dealing additional damage to nearby monsters.",
+        "zh": { "name": "恶魔的之握", "description": "白骨碎片轨道目标命中时短距期间之时间造成额外伤害至附近怪物。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_duration": 0 },
@@ -187,6 +201,7 @@
         "positionIndex": 13,
         "name": "Bone Altar",
         "description": "Summon a bone altar at target location casting bone fragments for a short period. Bone fragments now has a cooldown.",
+        "zh": { "name": "骸骨 Altar", "description": "召唤物骸骨 altar 目标位置施法白骨碎片短距期间。白骨碎片有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_duration": 0 },
@@ -198,6 +213,7 @@
         "positionIndex": 14,
         "name": "Smart Bone",
         "description": "Fragments seek the nearest monster dealing increased damage.",
+        "zh": { "name": "Smart 骸骨", "description": "碎片搜寻最近的怪物造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -212,6 +228,7 @@
     "name": "Impale",
     "kind": "active",
     "description": "Summon spikes from the ground impaling monsters in a target area dealing arcane damage and knocking them up.",
+    "zh": { "name": "穿刺尖刺", "description": "从地面召唤尖刺，穿刺目标区域内的怪物，造成奥术伤害并击飞。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 65,
@@ -236,6 +253,7 @@
         "positionIndex": 0,
         "name": "Impale",
         "description": "Core of the Impale subtree.",
+        "zh": { "name": "穿刺尖刺", "description": "穿刺尖刺 子树核心。" },
         "maxRank": 1
       },
       {
@@ -243,6 +261,7 @@
         "positionIndex": 1,
         "name": "Demonic Effect",
         "description": "Increases impale area of effect radius.",
+        "zh": { "name": "Demonic 效果", "description": "提高 effect radius 的穿刺尖刺范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -254,6 +273,7 @@
         "positionIndex": 2,
         "name": "Warlock's Power",
         "description": "Increases damage dealt by impale.",
+        "zh": { "name": "术士的力量", "description": "提高 穿刺尖刺 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -265,6 +285,7 @@
         "positionIndex": 3,
         "name": "Sharpened Bones",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "锋利骸骨", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -283,6 +304,7 @@
         "positionIndex": 4,
         "name": "Unseen Strike",
         "description": "Chance to critically hit with increased critical damage.",
+        "zh": { "name": "Unseen Strike", "description": "命中时有概率打出暴击，造成提高的暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -294,6 +316,7 @@
         "positionIndex": 5,
         "name": "Hell's Ascension",
         "description": "Chance to unleash an additional impale on hit.",
+        "zh": { "name": "地狱的 Ascension", "description": "命中时有概率释放额外穿刺尖刺。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -309,6 +332,7 @@
         "positionIndex": 6,
         "name": "Blood Shedding Impale",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "鲜血 Shedding 穿刺尖刺", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -320,6 +344,7 @@
         "positionIndex": 7,
         "name": "Bonemagi",
         "description": "Decreases the mana cost of impale.",
+        "zh": { "name": "Bonemagi", "description": "降低法力消耗之穿刺尖刺。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -331,6 +356,7 @@
         "positionIndex": 8,
         "name": "Impaling Flames",
         "description": "Chance to light the ground on fire on hit.",
+        "zh": { "name": "穿刺烈焰", "description": "命中时有概率光明地面火焰。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -346,6 +372,7 @@
         "positionIndex": 9,
         "name": "Shattering Impale",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "粉碎穿刺尖刺", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -367,6 +394,7 @@
         "positionIndex": 10,
         "name": "Spiked Fields",
         "description": "Chance on cast to increase the area of effect radius of impale.",
+        "zh": { "name": "Spiked 野域", "description": "施法时有概率提高范围半径之穿刺尖刺。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -382,6 +410,7 @@
         "positionIndex": 11,
         "name": "Hunger of the Demon",
         "description": "Unleash multiple smaller impales in an arc.",
+        "zh": { "name": "饥渴之恶魔", "description": "释放多个更小穿刺呈弧线。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "arcane_skill_damage": 0 },
@@ -393,6 +422,7 @@
         "positionIndex": 12,
         "name": "Elemental Bone Magister",
         "description": "Impale inflicts stasis, bleeding and burning on hit.",
+        "zh": { "name": "元素骸骨魔导师", "description": "穿刺尖刺施加停滞，流血与燃烧命中时。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -421,6 +451,7 @@
         "positionIndex": 13,
         "name": "Via Dolorosa",
         "description": "Impale now travels forward in a pathway increasing in size and damage until reaching its end stunning monsters it hits.",
+        "zh": { "name": "Via Dolorosa", "description": "穿刺尖刺飞行前方 pathway 提高 size 与伤害 until 延伸 end 眩晕怪物命中。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -440,6 +471,7 @@
         "positionIndex": 14,
         "name": "Spear of Amaymon",
         "description": "Impale becomes a piercing bone projectile you throw. Each enemy it catches is impaled and travels along with the projectile until it hits terrain stunning attached enemies.",
+        "zh": { "name": "Spear 之 Amaymon", "description": "穿刺尖刺变为穿透骸骨投射物你投掷。每个敌人 catches impaled 与飞行 along 使用投射物 until 命中地形眩晕 attached 敌人。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -454,6 +486,7 @@
     "name": "Bone Storm",
     "kind": "active",
     "description": "Summon a storm of bone and cartilage surrounding you dealing arcane damage.",
+    "zh": { "name": "白骨风暴", "description": "召唤骨与软骨的风暴环绕你，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Orbital"],
     "movementDuringUse": 85,
@@ -479,6 +512,7 @@
         "positionIndex": 0,
         "name": "Bone Storm",
         "description": "Core of the Bone Storm subtree.",
+        "zh": { "name": "白骨风暴", "description": "白骨风暴 子树核心。" },
         "maxRank": 1
       },
       {
@@ -486,6 +520,7 @@
         "positionIndex": 1,
         "name": "Forming Storm",
         "description": "Increases the amount of bone projectiles.",
+        "zh": { "name": "形成风暴", "description": "提高 bone projectiles 的数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0, "area_of_effect": 0 },
@@ -497,6 +532,7 @@
         "positionIndex": 2,
         "name": "Razor Sharp",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Razor 尖锐", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -515,6 +551,7 @@
         "positionIndex": 3,
         "name": "Demonic Winds",
         "description": "Increases the speed of bone projectiles.",
+        "zh": { "name": "Demonic 狂风", "description": "提高 bone projectiles 的速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -526,6 +563,7 @@
         "positionIndex": 4,
         "name": "Sacrificial Lambs",
         "description": "Increases damage to bleeding targets.",
+        "zh": { "name": "Sacrificial Lambs", "description": "提高伤害至流血目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -537,6 +575,7 @@
         "positionIndex": 5,
         "name": "Demon´s Eye of Storm",
         "description": "Increases damage dealt by bone storm.",
+        "zh": { "name": "恶魔的之眼之风暴", "description": "提高 白骨风暴 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -548,6 +587,7 @@
         "positionIndex": 6,
         "name": "Infiltrate their Core",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Infiltrate their 核心", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -566,6 +606,7 @@
         "positionIndex": 7,
         "name": "Devils Favourite",
         "description": "Chance to knock monsters back on hit dealing increased damage.",
+        "zh": { "name": "Devils Favourite", "description": "概率击退怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -581,6 +622,7 @@
         "positionIndex": 8,
         "name": "Spontanious Dislocation",
         "description": "Bone Storm has a chance on hit to summon additional Bone Fragments in random directions.",
+        "zh": { "name": "Spontanious Dislocation", "description": "白骨风暴有概率命中时至召唤物额外白骨碎片随机方向。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -596,6 +638,7 @@
         "positionIndex": 9,
         "name": "Storm Influx",
         "description": "Decreases the cooldown of bone storm.",
+        "zh": { "name": "风暴 Influx", "description": "降低cooldown 之白骨风暴。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -607,6 +650,7 @@
         "positionIndex": 10,
         "name": "Devils Diversion",
         "description": "Gain increased chance to dodge attacks for a short period when casting bone storm.",
+        "zh": { "name": "Devils Diversion", "description": "获得提高概率闪避攻击短距期间当施法白骨风暴。" },
         "maxRank": 5,
         "effects": {
           "base": { "dodge_chance": 0 },
@@ -618,6 +662,7 @@
         "positionIndex": 11,
         "name": "Cycloning Bones",
         "description": "Chance to summon a small cyclone of bones on hit.",
+        "zh": { "name": "Cycloning 骸骨", "description": "命中时有概率召唤物小型 cyclone 之骸骨。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -633,6 +678,7 @@
         "positionIndex": 12,
         "name": "Bone Tornado",
         "description": "Unleash a bone tornado towards target location with increased damage.",
+        "zh": { "name": "骸骨龙卷风", "description": "释放骸骨龙卷风朝向目标位置使用提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -644,6 +690,7 @@
         "positionIndex": 13,
         "name": "Everlasting Storm",
         "description": "Bone storm no longer expires but it only deals a portion of its damage.",
+        "zh": { "name": "Everlasting 风暴", "description": "白骨风暴更久到期仅造成一部分伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -655,6 +702,7 @@
         "positionIndex": 14,
         "name": "Bone Devils",
         "description": "Summons small bone devils at target location.",
+        "zh": { "name": "骸骨 Devils", "description": "召唤物小型骸骨 devils 目标位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -669,6 +717,7 @@
     "name": "Ossification",
     "kind": "passive",
     "description": "Increases your defense and gives you a burst of movement speed after killing a monster.",
+    "zh": { "name": "骨化", "description": "提高你的防御，并在击杀怪物后获得一股移动速度加成。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -686,6 +735,7 @@
     "name": "Cartilage Build Up",
     "kind": "passive",
     "description": "When damaged by cartilage and bone monsters are stacked up and at 10 stacks they explode spreading bone and cartilage around them dealing arcane damage.",
+    "zh": { "name": "软骨堆积", "description": "受到软骨与白骨系怪物伤害时会进行堆积，达到 10 层时爆炸，向四周散播骨与软骨，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Passive", "Explosion"],
     "maxRank": 20,
@@ -708,6 +758,7 @@
     "name": "Single Out",
     "kind": "passive",
     "description": "Monsters that have no other monsters around them take increased arcane damage.",
+    "zh": { "name": "孤立无援", "description": "周围没有其他怪物的怪物会受到提高的奥术伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -725,6 +776,7 @@
     "name": "Spinal Tap",
     "kind": "active",
     "description": "Rip the spine out of monsters at target location dealing arcane damage.",
+    "zh": { "name": "抽脊之刑", "description": "从目标位置的怪物体内扯出脊椎，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Area of Effect"],
     "movementDuringUse": 65,
@@ -749,6 +801,7 @@
         "positionIndex": 0,
         "name": "Spinal Tap",
         "description": "Core of the Spinal Tap subtree.",
+        "zh": { "name": "抽脊之刑", "description": "抽脊之刑 子树核心。" },
         "maxRank": 1
       },
       {
@@ -756,6 +809,7 @@
         "positionIndex": 1,
         "name": "Inevitable Carnage",
         "description": "Increases spinal tap's area of effect radius.",
+        "zh": { "name": "Inevitable 杀戮", "description": "提高 effect radius 的抽脊之刑's 范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -767,6 +821,7 @@
         "positionIndex": 2,
         "name": "Hell's Reach",
         "description": "Increases the maximum cast range of spinal tap.",
+        "zh": { "name": "地狱的延伸", "description": "提高 抽脊之刑 的最大施法范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -778,6 +833,7 @@
         "positionIndex": 3,
         "name": "Vampiric Tendencies",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "吸血 Tendencies", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -789,6 +845,7 @@
         "positionIndex": 4,
         "name": "Bringer of Pain",
         "description": "Chance to unleash an additional spinal tap.",
+        "zh": { "name": "Bringer 之痛苦", "description": "概率释放额外抽脊之刑。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -804,6 +861,7 @@
         "positionIndex": 5,
         "name": "Increase in Suffering",
         "description": "Increases damage dealt by spinal tap.",
+        "zh": { "name": "提高 Suffering", "description": "提高 抽脊之刑 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -815,6 +873,7 @@
         "positionIndex": 6,
         "name": "Restoring Agony",
         "description": "Chance to replenish a portion of your maximum mana on hit.",
+        "zh": { "name": "恢复 Agony", "description": "命中时有概率恢复一部分最大法力。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -830,6 +889,7 @@
         "positionIndex": 7,
         "name": "Additive Curse",
         "description": "Increases the maximum stacks of cartilage build up.",
+        "zh": { "name": "Additive Curse", "description": "提高 软骨堆积 的最大层数。" },
         "maxRank": 6,
         "effects": {
           "base": { "max_skill_stacks": 0 },
@@ -841,6 +901,7 @@
         "positionIndex": 8,
         "name": "Demonic Grip",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Demonic 之握", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -859,6 +920,7 @@
         "positionIndex": 9,
         "name": "Spinal Explosion",
         "description": "Spines ripped from monsters have a chance to explode dealing additional damage.",
+        "zh": { "name": "Spinal 爆炸", "description": "Spines ripped from monsters 有概率爆炸造成额外伤害。" },
         "maxRank": 8,
         "proc": {
           "trigger": "on_hit",
@@ -874,6 +936,7 @@
         "positionIndex": 10,
         "name": "Violent Rip",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Violent 撕扯", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -892,6 +955,7 @@
         "positionIndex": 11,
         "name": "Blood and Gore",
         "description": "Spinal tap executes enemies below a threshold of life causing them to explode with increased area of effect radius dealing increased damage.",
+        "zh": { "name": "鲜血与 Gore", "description": "抽脊之刑处决敌人低于阈值之生命使其爆炸使用提高范围半径造成提高伤害。" },
         "maxRank": 4,
         "effects": {
           "base": { "arcane_skill_damage": 0, "execute_below": 0 },
@@ -903,6 +967,7 @@
         "positionIndex": 12,
         "name": "Internal Bleeding",
         "description": "Spinal tap inflicts increased bleeding on hit. If the target is already bleeding, increase the tick frequency of existing bleed until it consumes the bleeding dealing increased damage.",
+        "zh": { "name": "Internal 流血", "description": "提高伤害至流血目标。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -927,6 +992,7 @@
         "positionIndex": 13,
         "name": "Eternal Suffering",
         "description": "Conjure piercing bone spikes flying towards targets on hit dealing additional damage.",
+        "zh": { "name": "Eternal Suffering", "description": "召唤穿透骸骨尖刺飞散朝向目标命中时造成额外伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -938,6 +1004,7 @@
         "positionIndex": 14,
         "name": "Healing Torture",
         "description": "Increases the area of effect radius of spinal tap healing you for a portion of your maximum life per hit.",
+        "zh": { "name": "治疗 Torture", "description": "提高 effect radius of 抽脊之刑 healing you for a portion of your maximum life per hit 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0, "life_replenish_pct": 0 },
@@ -952,6 +1019,7 @@
     "name": "Ominous Presence",
     "kind": "aura",
     "description": "When active, increases your and your party members arcane skill damage.",
+    "zh": { "name": "凶兆之息", "description": "激活时，提高你和队友的奥术技能伤害。" },
     "tags": ["Cast", "Active", "Aura"],
     "maxRank": 20,
     "requiresLevel": 24,
@@ -969,6 +1037,7 @@
     "name": "Bone Barrage",
     "kind": "active",
     "description": "Unleash a barrage of bones in target direction dealing arcane damage.",
+    "zh": { "name": "白骨弹幕", "description": "朝目标方向释放一阵骨雨，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "movementDuringUse": 65,
@@ -993,6 +1062,7 @@
         "positionIndex": 0,
         "name": "Bone Barrage",
         "description": "Core of the Bone Barrage subtree.",
+        "zh": { "name": "白骨弹幕", "description": "白骨弹幕 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1000,6 +1070,7 @@
         "positionIndex": 1,
         "name": "Bonemarrow",
         "description": "Decreases the cooldown of bone barrage.",
+        "zh": { "name": "Bonemarrow", "description": "降低cooldown 之白骨弹幕。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -1011,6 +1082,7 @@
         "positionIndex": 2,
         "name": "Skeletal Stock",
         "description": "Increases the amount of bone spikes.",
+        "zh": { "name": "Skeletal Stock", "description": "提高 bone spikes 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1022,6 +1094,7 @@
         "positionIndex": 3,
         "name": "Bone Growth",
         "description": "Increases the size of bone spikes.",
+        "zh": { "name": "骸骨生长", "description": "提高 bone spikes 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1033,6 +1106,7 @@
         "positionIndex": 4,
         "name": "Swift Bone",
         "description": "Increases the projectile speed of bone spikes.",
+        "zh": { "name": "迅捷骸骨", "description": "提高 bone spikes 的投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1044,6 +1118,7 @@
         "positionIndex": 5,
         "name": "Hard as Steel",
         "description": "Increases the damage dealt by bone spikes.",
+        "zh": { "name": "Hard Steel", "description": "提高造成的伤害骸骨尖刺。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1055,6 +1130,7 @@
         "positionIndex": 6,
         "name": "Rib Crack",
         "description": "Chance to inflict stun on hit.",
+        "zh": { "name": "Rib Crack", "description": "命中时有概率施加眩晕。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1067,6 +1143,7 @@
         "positionIndex": 7,
         "name": "Explosive Density",
         "description": "Chance on hit to unleash a bloody explosion dealing additional damage.",
+        "zh": { "name": "爆炸 Density", "description": "命中时有概率释放 bloody 爆炸造成额外伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1082,6 +1159,7 @@
         "positionIndex": 8,
         "name": "Flexible Bonestructure",
         "description": "Bone spikes bounce from terrain dealing increased damage.",
+        "zh": { "name": "Flexible Bonestructure", "description": "骸骨尖刺弹射从地形造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1093,6 +1171,7 @@
         "positionIndex": 9,
         "name": "Bone Pong",
         "description": "Chance to chain between multiple monsters on hit dealing increased damage.",
+        "zh": { "name": "骸骨 Pong", "description": "概率连锁 between 多个怪物命中时造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1108,6 +1187,7 @@
         "positionIndex": 10,
         "name": "Skeletal Impact",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Skeletal 冲击", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1119,6 +1199,7 @@
         "positionIndex": 11,
         "name": "Nova of Bones",
         "description": "Unleash all the projectiles around you in a circle. Bone barrage no longer has a cooldown.",
+        "zh": { "name": "新星之骸骨", "description": "释放全部投射物周围你圆环。白骨弹幕更久有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_speed": 0 },
@@ -1130,6 +1211,7 @@
         "positionIndex": 12,
         "name": "Master of Boneology",
         "description": "Bone spikes start homing towards nearest monsters briefly after casting dealing increased damage.",
+        "zh": { "name": "大师之 Boneology", "description": "骸骨尖刺 start 追踪朝向最近的怪物 briefly 之后施法造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1141,6 +1223,7 @@
         "positionIndex": 13,
         "name": "Hell on Earth",
         "description": "Bone spikes now rain from the sky on enemies around you causing the spikes to fragment when hitting the ground launching small fragments around the point of impact.",
+        "zh": { "name": "地狱大地", "description": "骸骨尖刺骤雨从天空敌人周围你使尖刺至碎片当命中地面发射小型碎片周围点之冲击。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1152,6 +1235,7 @@
         "positionIndex": 14,
         "name": "Barraging Boneswirl",
         "description": "Bone spikes now spiral outwards from you with increased speed.",
+        "zh": { "name": "Barraging Boneswirl", "description": "骸骨尖刺 spiral 向外从你使用提高速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0, "projectile_count": 0 },
@@ -1166,6 +1250,7 @@
     "name": "Blood Bolts",
     "kind": "active",
     "description": "Unleash bolts of blood towards target location dealing arcane damage.",
+    "zh": { "name": "鲜血箭矢", "description": "朝目标位置释放鲜血之箭，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell", "Projectile"],
     "movementDuringUse": 65,
@@ -1190,6 +1275,7 @@
         "positionIndex": 0,
         "name": "Blood Bolts",
         "description": "Core of the Blood Bolts subtree.",
+        "zh": { "name": "鲜血箭矢", "description": "鲜血箭矢 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1197,6 +1283,7 @@
         "positionIndex": 1,
         "name": "Adrenaline Secretion",
         "description": "Increases the projectile speed of blood bolts.",
+        "zh": { "name": "Adrenaline Secretion", "description": "提高 鲜血箭矢 的投射物速度。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1208,6 +1295,7 @@
         "positionIndex": 2,
         "name": "Volume Increase",
         "description": "Increases the size of blood bolts.",
+        "zh": { "name": "Volume 提高", "description": "提高 鲜血箭矢 的size。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_size": 0 },
@@ -1219,6 +1307,7 @@
         "positionIndex": 3,
         "name": "Hemophilia",
         "description": "Chance to inflict bleeding on hit.",
+        "zh": { "name": "Hemophilia", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1237,6 +1326,7 @@
         "positionIndex": 4,
         "name": "Demonic Formula",
         "description": "Chance for blood bolts to become piercing and to continue traveling forward after hitting a monster.",
+        "zh": { "name": "Demonic Formula", "description": "概率使鲜血箭矢至 become 穿透与至 continue 飞行前方之后命中怪物。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -1245,6 +1335,7 @@
         "positionIndex": 5,
         "name": "Leukocytes",
         "description": "Increases damage dealt by blood bolts.",
+        "zh": { "name": "Leukocytes", "description": "提高 鲜血箭矢 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1256,6 +1347,7 @@
         "positionIndex": 6,
         "name": "Advanced Metabolism",
         "description": "Blood bolts start homing towards the nearest target briefly after being casted.",
+        "zh": { "name": "Advanced Metabolism", "description": "鲜血箭矢 start 追踪朝向最近的目标 briefly 之后 being casted。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1267,6 +1359,7 @@
         "positionIndex": 7,
         "name": "Demon Master",
         "description": "Increases the damage of blood demons spawned by blood bolts.",
+        "zh": { "name": "恶魔大师", "description": "提高 血魔 spawned by 鲜血箭矢 的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1278,6 +1371,7 @@
         "positionIndex": 8,
         "name": "High Hemoglobin",
         "description": "Increases the amount of blood bolts.",
+        "zh": { "name": "高 Hemoglobin", "description": "提高 鲜血箭矢 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1289,6 +1383,7 @@
         "positionIndex": 9,
         "name": "Arterial Blood",
         "description": "Decreases the mana cost of blood bolts.",
+        "zh": { "name": "Arterial 鲜血", "description": "降低法力消耗之鲜血箭矢。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1300,6 +1395,7 @@
         "positionIndex": 10,
         "name": "Thrombus",
         "description": "Chance on hit to knock enemies back with force dealing increased damage.",
+        "zh": { "name": "Thrombus", "description": "命中时有概率击退敌人回使用力量造成提高伤害。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1315,6 +1411,7 @@
         "positionIndex": 11,
         "name": "Demon Sentry",
         "description": "Summon a following blood demon unleashing blood bolts to nearby monsters with increased blood bolt amount and attack speed.",
+        "zh": { "name": "恶魔哨戒", "description": "召唤物 following 鲜血恶魔释放鲜血箭矢至附近怪物使用提高鲜血电矢数量与攻击速度。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1332,6 +1429,7 @@
         "positionIndex": 12,
         "name": "Bloodshed",
         "description": "Unleash a blood bolt towards each nearby monster draining your life for each target dealing increased damage.",
+        "zh": { "name": "Bloodshed", "description": "释放鲜血电矢朝向每个附近怪物汲取你的生命每个目标造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "life_drain_pct": 0 },
@@ -1343,6 +1441,7 @@
         "positionIndex": 13,
         "name": "Mark of the Demon",
         "description": "Conjure a pool of blood on target location. Unleash blood bolts towards monsters in the blood pool.",
+        "zh": { "name": "印记之恶魔", "description": "召唤水洼之鲜血目标位置。释放鲜血箭矢朝向怪物鲜血水洼。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1354,6 +1453,7 @@
         "positionIndex": 14,
         "name": "Wave of Blood",
         "description": "Unleash a wave of blood leaving a trail of blood behind it. Any player touching the trail gains increased movement speed, faster cast rate and increased arcane skill damage.",
+        "zh": { "name": "波之鲜血", "description": "释放波之鲜血 leaving 轨迹之鲜血身后。任意 player touching 轨迹获得提高移动速度，施法速度与提高奥术技能伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -1376,6 +1476,7 @@
     "name": "Manapool Aura",
     "kind": "aura",
     "description": "When active, increases your and your party members mana replenish.",
+    "zh": { "name": "法力之池光环", "description": "激活时，提高你和队友的法力恢复。" },
     "tags": ["Cast", "Active", "Aura"],
     "maxRank": 20,
     "requiresLevel": 1,
@@ -1393,6 +1494,7 @@
     "name": "Gut Spread",
     "kind": "passive",
     "description": "Every 6th cast causes your intestines to boil and burst lumps of blood around you dealing a portion of blood bolts damage as arcane damage.",
+    "zh": { "name": "肠肚迸裂", "description": "每第 6 次施法会使你的肠肚沸腾爆裂，向你周围迸射血块，以鲜血箭矢的一部分伤害造成奥术伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 8,
@@ -1410,6 +1512,7 @@
     "name": "Mana Shield",
     "kind": "buff",
     "description": "When active, create a mana shield around you that reduces physical damage taken and absorbs a portion of damage taken as mana.",
+    "zh": { "name": "法力护盾", "description": "激活时，在你周围生成一面法力护盾，降低所受物理伤害，并将一部分所受伤害以法力吸收。" },
     "tags": ["Cast", "Active", "Buff"],
     "movementDuringUse": 65,
     "baseCastRate": 1,
@@ -1431,6 +1534,7 @@
     "name": "Demonic Presence",
     "kind": "passive",
     "description": "Increases your arcane skill damage.",
+    "zh": { "name": "魔性之息", "description": "提高你的奥术技能伤害。" },
     "tags": ["Passive"],
     "maxRank": 20,
     "requiresLevel": 16,
@@ -1448,6 +1552,7 @@
     "name": "Mana Devour",
     "kind": "active",
     "description": "Instantly restores a portion of your mana.",
+    "zh": { "name": "吞噬法力", "description": "立即恢复你的一部分法力。" },
     "tags": ["Cast", "Active"],
     "movementDuringUse": 85,
     "baseCastRate": 1,
@@ -1468,6 +1573,7 @@
     "name": "Blood Surge",
     "kind": "active",
     "description": "Channel a massive surge of blood towards target direction dealing arcane damage to enemies in its path.",
+    "zh": { "name": "鲜血奔涌", "description": "朝目标方向引导一股巨大的鲜血洪流，对路径上的敌人造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Cast", "Active", "Spell"],
     "movementDuringUse": 65,
@@ -1492,6 +1598,7 @@
         "positionIndex": 0,
         "name": "Blood Surge",
         "description": "Core of the Blood Surge subtree.",
+        "zh": { "name": "鲜血奔涌", "description": "鲜血奔涌 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1499,6 +1606,7 @@
         "positionIndex": 1,
         "name": "Corrosive Blood",
         "description": "Increases the damage dealt by blood surge.",
+        "zh": { "name": "腐蚀鲜血", "description": "提高造成的伤害鲜血奔涌。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1510,6 +1618,7 @@
         "positionIndex": 2,
         "name": "Wide Veins",
         "description": "Increases the area of effect radius of blood surge.",
+        "zh": { "name": "Wide 血脉", "description": "提高 effect radius of 鲜血奔涌 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1521,6 +1630,7 @@
         "positionIndex": 3,
         "name": "White Blood Cells",
         "description": "Increases the duration of blood surge.",
+        "zh": { "name": "White 鲜血 Cells", "description": "提高 鲜血奔涌 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1532,6 +1642,7 @@
         "positionIndex": 4,
         "name": "Increased Plasma",
         "description": "Decreases the mana cost of blood surge.",
+        "zh": { "name": "提高 Plasma", "description": "降低法力消耗之鲜血奔涌。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1543,6 +1654,7 @@
         "positionIndex": 5,
         "name": "Blood Fervor",
         "description": "Chance to inflict burning on hit.",
+        "zh": { "name": "鲜血 Fervor", "description": "命中时有概率施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1561,6 +1673,7 @@
         "positionIndex": 6,
         "name": "Immune Deficiency",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "免疫 Deficiency", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 8,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -1572,6 +1685,7 @@
         "positionIndex": 7,
         "name": "Asphyxiating Vessels",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "窒息 Vessels", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1590,6 +1704,7 @@
         "positionIndex": 8,
         "name": "Demon Wings",
         "description": "Decreases movement diminish when using blood surge.",
+        "zh": { "name": "恶魔 Wings", "description": "使用鲜血奔涌时降低移动衰减。" },
         "maxRank": 5,
         "effects": {
           "base": { "reduced_movement_diminish": 0 },
@@ -1601,6 +1716,7 @@
         "positionIndex": 9,
         "name": "Vein Pressure",
         "description": "Chance to unleash a critical strike with increased critical strike damage.",
+        "zh": { "name": "Vein 压迫", "description": "概率释放暴击 strike 使用提高暴击伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "spell_crit_chance": 0, "spell_crit_damage": 0 },
@@ -1612,6 +1728,7 @@
         "positionIndex": 10,
         "name": "Rays of Blood",
         "description": "Chance on hit to unleash additional surges of blood to directions around the target on hit.",
+        "zh": { "name": "射线之鲜血", "description": "命中时有概率释放额外涌动之鲜血至方向周围目标命中时。" },
         "maxRank": 2,
         "proc": {
           "trigger": "on_hit",
@@ -1627,6 +1744,7 @@
         "positionIndex": 11,
         "name": "Hematopoiesis",
         "description": "Increases the tick frequency of blood surge.",
+        "zh": { "name": "Hematopoiesis", "description": "提高 鲜血奔涌 的每跳 frequency。" },
         "maxRank": 3,
         "effects": {
           "base": { "faster_cast_rate": 0, "arcane_skill_damage": 0 },
@@ -1638,6 +1756,7 @@
         "positionIndex": 12,
         "name": "Channeling Surge",
         "description": "Blood surge deals increased damage and no longer expires until you run out of mana or cast blood surge again.",
+        "zh": { "name": "Channeling 涌动", "description": "鲜血奔涌造成提高伤害与更久到期 until 你 run out 之法力施法鲜血奔涌 again。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "increased_mana": 0 },
@@ -1649,6 +1768,7 @@
         "positionIndex": 13,
         "name": "Blood Line",
         "description": "Unleash two surges of blood curving to your sides before expiring.",
+        "zh": { "name": "鲜血 Line", "description": "释放双涌动之鲜血 curving 至你的 sides before 到期。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1660,6 +1780,7 @@
         "positionIndex": 14,
         "name": "Unlimited Power",
         "description": "Conjure an orb of blood unleashing surges of blood towards targets on hit. Blood surge now has a cooldown.",
+        "zh": { "name": "Unlimited 力量", "description": "召唤宝珠之鲜血释放涌动之鲜血朝向目标命中时。鲜血奔涌有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "faster_cast_rate": 0 },
@@ -1674,6 +1795,7 @@
     "name": "Blood Demons",
     "kind": "passive",
     "description": "Chance on spellcast to summon a blood demon towards the closest monster dealing arcane damage.",
+    "zh": { "name": "血魔", "description": "施法时有概率朝最近的怪物召唤一只血魔，造成奥术伤害。" },
     "damageType": "arcane",
     "tags": ["Passive"],
     "maxRank": 20,
@@ -1696,6 +1818,7 @@
     "name": "Blood Tendrils",
     "kind": "passive",
     "description": "Blood surge now causes its target to release blood tendrils for a portion of its damage.",
+    "zh": { "name": "鲜血触须", "description": "鲜血奔涌现在会使目标释放鲜血触须，造成其一部分伤害。" },
     "tags": ["Passive", "Chain Lightning"],
     "maxRank": 20,
     "requiresLevel": 30,

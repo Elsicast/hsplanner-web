@@ -1,6 +1,7 @@
 {
   "id": "marauder",
   "name": "Marauder",
+  "zh": { "name": "劫掠者" },
   "baseAttributes": {
     "strength": 0,
     "dexterity": 0,

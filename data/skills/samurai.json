@@ -5,6 +5,7 @@
     "name": "Battle Glance",
     "kind": "active",
     "description": "Perform an area of effect attack with increased damage and attack rating.",
+    "zh": { "name": "战意一瞥", "description": "进行一次具有提高伤害和攻击命中的范围攻击。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -75,6 +76,7 @@
         "positionIndex": 0,
         "name": "Battle Glance",
         "description": "Core of the Battle Glance subtree.",
+        "zh": { "name": "战意一瞥", "description": "战意一瞥 子树核心。" },
         "maxRank": 1
       },
       {
@@ -82,6 +84,7 @@
         "positionIndex": 1,
         "name": "Quick Strike",
         "description": "Increases the amount of attacks performed by battle glance.",
+        "zh": { "name": "Quick Strike", "description": "提高 attacks performed by 战意一瞥 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -93,6 +96,7 @@
         "positionIndex": 2,
         "name": "Honed Blade",
         "description": "Increases the damage dealt by battle glance.",
+        "zh": { "name": "磨砺利刃", "description": "提高造成的伤害战意一瞥。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -104,6 +108,7 @@
         "positionIndex": 3,
         "name": "Refined Technique",
         "description": "Increases the area of effect radius of battle glance.",
+        "zh": { "name": "Refined Technique", "description": "提高 effect radius of 战意一瞥 的范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -115,6 +120,7 @@
         "positionIndex": 4,
         "name": "Intanglible",
         "description": "Chance on hit to gain increased dodge chance for a short period.",
+        "zh": { "name": "Intanglible", "description": "命中时有概率获得提高闪避概率使短距期间。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -130,6 +136,7 @@
         "positionIndex": 5,
         "name": "Execution",
         "description": "Execute monsters with low life.",
+        "zh": { "name": "Execution", "description": "处决怪物使用低生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -141,6 +148,7 @@
         "positionIndex": 6,
         "name": "Restorative Strikes",
         "description": "Leech life and mana on hit.",
+        "zh": { "name": "Restorative 打击", "description": "吸取生命与法力命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_steal": 0, "mana_steal": 0 },
@@ -152,6 +160,7 @@
         "positionIndex": 7,
         "name": "Spinning Katanas",
         "description": "Chance on attack to summon a rotating blade orbiting around you for a short period inflicting bleeding on hit.",
+        "zh": { "name": "旋转 Katanas", "description": "攻击时有概率召唤物旋转利刃环绕周围你短距期间施加流血命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -170,6 +179,7 @@
         "positionIndex": 8,
         "name": "From Behind",
         "description": "Increases damage dealt to bleeding targets.",
+        "zh": { "name": "从身后", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -181,6 +191,7 @@
         "positionIndex": 9,
         "name": "Guided Swing",
         "description": "Increases critical strike damage by battle glance.",
+        "zh": { "name": "Guided 挥击", "description": "提高暴击伤害战意一瞥。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -192,6 +203,7 @@
         "positionIndex": 10,
         "name": "Burst of Speed",
         "description": "Chance on kill to gain increased movement speed for a short period.",
+        "zh": { "name": "极速迸发", "description": "击杀怪物后短时间内获得提高的移动速度。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_kill",
@@ -207,6 +219,7 @@
         "positionIndex": 11,
         "name": "Shadow From Within",
         "description": "Chance on attack to unleash a shadowy ball of energy traveling towards your blade causing monsters to be cloned to harm them selves on hit.",
+        "zh": { "name": "暗影从之内", "description": "攻击时有概率释放 shadowy 球之能量飞行朝向你的利刃使怪物至 cloned 至 harm 它们 selves 命中时。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -222,6 +235,7 @@
         "positionIndex": 12,
         "name": "Blood Harvest",
         "description": "Gain stacks of blood harvest when killing monsters. At maximum stacks gain increased damage and attack speed based on your vitality.",
+        "zh": { "name": "鲜血 Harvest", "description": "获得层数之鲜血 harvest 当击杀怪物。最大层数获得提高伤害与攻击速度基于你的耐力。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "increased_attack_speed": 0 },
@@ -236,6 +250,7 @@
         "positionIndex": 13,
         "name": "Perfection",
         "description": "Battle Glance now deals increased cleave damage to all monsters within your blade’s reach.",
+        "zh": { "name": "Perfection", "description": "战意一瞥造成提高 cleave 伤害至全部怪物之内你的利刃的延伸。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -247,6 +262,7 @@
         "positionIndex": 14,
         "name": "Evasive Prodigy",
         "description": "Dodging or blocking an attack causes your next battle glance to unleash bouncing katanas in an arc infront of you dealing increased damage.",
+        "zh": { "name": "Evasive Prodigy", "description": "闪避格挡攻击使你的 next 战意一瞥至释放弹跳 katanas 呈弧线 infront 之你造成提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -261,6 +277,7 @@
     "name": "Shuriken Throw",
     "kind": "active",
     "description": "Throw three piercing Shurikens at your target dealing increased damage.",
+    "zh": { "name": "手里剑投掷", "description": "向目标投出三枚穿透性的手里剑，造成提高的伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -333,6 +350,7 @@
         "positionIndex": 0,
         "name": "Shuriken Throw",
         "description": "Core of the Shuriken Throw subtree.",
+        "zh": { "name": "手里剑投掷", "description": "手里剑投掷 子树核心。" },
         "maxRank": 1
       },
       {
@@ -340,6 +358,7 @@
         "positionIndex": 1,
         "name": "Pointy Edges",
         "description": "Increases critical strike chance.",
+        "zh": { "name": "Pointy 锋刃", "description": "提高暴击概率。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -351,6 +370,7 @@
         "positionIndex": 2,
         "name": "Quickthrow",
         "description": "Increases projectile speed.",
+        "zh": { "name": "Quickthrow", "description": "提高投射物速度。" },
         "maxRank": 7,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -362,6 +382,7 @@
         "positionIndex": 3,
         "name": "Forceful Flight",
         "description": "Increases damage dealt by shurikens.",
+        "zh": { "name": "Forceful Flight", "description": "提高 shurikens 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -373,6 +394,7 @@
         "positionIndex": 4,
         "name": "Twin Shurikens",
         "description": "Throw additional shurikens with increased mana cost.",
+        "zh": { "name": "Twin 手里剑", "description": "投掷额外手里剑使用提高法力消耗。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -384,6 +406,7 @@
         "positionIndex": 5,
         "name": "Shady Trickster",
         "description": "While standing in smoke bomb thrown shurikens grant you a brief moment of invisibility and increased dodge chance.",
+        "zh": { "name": "Shady Trickster", "description": "当 standing 烟雾弹掷出手里剑赋予你 brief moment 之 invisibility 与提高闪避概率。" },
         "maxRank": 5,
         "effects": {
           "base": { "dodge_chance": 0, "skill_duration": 0 },
@@ -395,6 +418,7 @@
         "positionIndex": 6,
         "name": "Starstruck",
         "description": "Chance on critical strikes to split shurikens into smaller shurikens in a cone behind the target.",
+        "zh": { "name": "Starstruck", "description": "概率在暴击至分裂手里剑进入更小手里剑锥形身后目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -410,6 +434,7 @@
         "positionIndex": 7,
         "name": "Empowering Shurikens",
         "description": "Chance on hit to increase your attack speed and attack damage for a short duration.",
+        "zh": { "name": "强化手里剑", "description": "命中时有概率提高你的攻击速度与攻击伤害短时间内。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -428,6 +453,7 @@
         "positionIndex": 8,
         "name": "Sharp stars",
         "description": "Increases critical strike damage dealt by shurikens.",
+        "zh": { "name": "尖锐 stars", "description": "提高暴击伤害 dealt 手里剑。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -439,6 +465,7 @@
         "positionIndex": 9,
         "name": "Throwing Profiency",
         "description": "Increases attack rating while wielding a throwing weapon.",
+        "zh": { "name": "投掷 Profiency", "description": "装备投掷武器时提高攻击命中。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -450,6 +477,7 @@
         "positionIndex": 10,
         "name": "Manainfused Shurikens",
         "description": "Increases the damage dealt by shurikens according to mana spent.",
+        "zh": { "name": "法力灌注手里剑", "description": "提高造成的伤害手里剑依照至法力 spent。" },
         "maxRank": 5,
         "effects": {
           "base": { "conversion_max_mana": 0 },
@@ -461,6 +489,7 @@
         "positionIndex": 11,
         "name": "Shadow Shuriken",
         "description": "Throw a single big shuriken dealing increased damage, stunning and returning to you. If re-casted while shuriken exists, teleport to the shurikens position throwing smaller shurikens in all directions.",
+        "zh": { "name": "暗影 Shuriken", "description": "投掷单次核心 shuriken 造成提高伤害，眩晕与返回至你。If re-casted 当 shuriken exists，teleport 至手里剑 position 投掷更小手里剑全部方向。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -472,6 +501,7 @@
         "positionIndex": 12,
         "name": "Cutting Field",
         "description": "Shurikens now stop mid air and float for a short period and explode into sharp metal shrapnel around it dealing damage and slowing on hit.",
+        "zh": { "name": "切割野域", "description": "手里剑 stop 半空中与 float 短距期间与爆炸进入尖锐 metal 弹片周围造成伤害与减速命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -483,6 +513,7 @@
         "positionIndex": 13,
         "name": "Ripping Flesh",
         "description": "Shurikens now attach to monsters on hit and are ripped off back to the samurai after a short period or if the samurai moves far away enough. Shuriken throw now has a cooldown.",
+        "zh": { "name": "Ripping Flesh", "description": "手里剑 attach 至怪物命中时与 ripped 关闭回至 samurai 之后短距期间 if samurai moves 远处远离 enough。手里剑投掷有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -494,6 +525,7 @@
         "positionIndex": 14,
         "name": "Slicing Ricochet",
         "description": "Shurikens now ricochet from monster hits and terrain inflicting bleeding on hit.",
+        "zh": { "name": "斩切 Ricochet", "description": "手里剑 ricochet 从怪物命中与地形施加流血命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -515,6 +547,7 @@
     "name": "Quickslash",
     "kind": "active",
     "description": "Perform a quick dash unleashing area of effect slash dealing increased physical damage and knocking up monsters.",
+    "zh": { "name": "疾斩", "description": "进行一次快速突进，释放范围斩击，造成提高的物理伤害并击飞怪物。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -586,6 +619,7 @@
         "positionIndex": 0,
         "name": "Quickslash",
         "description": "Core of the Quickslash subtree.",
+        "zh": { "name": "疾斩", "description": "疾斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -593,6 +627,7 @@
         "positionIndex": 1,
         "name": "Lightspeed",
         "description": "Increases dash speed.",
+        "zh": { "name": "Lightspeed", "description": "提高突进速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "movement_speed": 0 },
@@ -604,6 +639,7 @@
         "positionIndex": 2,
         "name": "Greater Slash",
         "description": "Increases quickslash area of effect radius.",
+        "zh": { "name": "Greater 斩击", "description": "提高 effect radius 的疾斩范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -615,6 +651,7 @@
         "positionIndex": 3,
         "name": "Dual Hit",
         "description": "Increases the amount of performed slashes.",
+        "zh": { "name": "双持命中", "description": "提高 performed slashes 的数量。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -626,6 +663,7 @@
         "positionIndex": 4,
         "name": "Exposed Weakness",
         "description": "Chance on hit to stun the target.",
+        "zh": { "name": "Exposed 弱点", "description": "命中时有概率眩晕目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -638,6 +676,7 @@
         "positionIndex": 5,
         "name": "Top to Bottom",
         "description": "Increases attack rating when using quickslash.",
+        "zh": { "name": "Top 至 Bottom", "description": "提高攻击命中使用疾斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -649,6 +688,7 @@
         "positionIndex": 6,
         "name": "Exploitation",
         "description": "Increases the damage dealt to stunned targets.",
+        "zh": { "name": "Exploitation", "description": "提高造成的伤害至眩晕目标。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -660,6 +700,7 @@
         "positionIndex": 7,
         "name": "Spirit Double",
         "description": "Summon shadow performing quickslash towards a nearby monster dealing a portion of the damage.",
+        "zh": { "name": "灵体双重", "description": "召唤物暗影进行疾斩朝向附近怪物造成一部分伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "splash_of_total_damage": 0 },
@@ -671,6 +712,7 @@
         "positionIndex": 8,
         "name": "Origin Point",
         "description": "Leave a shadow behind slashing monsters around it dealing a portion of the damage.",
+        "zh": { "name": "Origin 点", "description": "留下暗影身后斩击怪物周围造成一部分伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "splash_of_total_damage": 0 },
@@ -682,6 +724,7 @@
         "positionIndex": 9,
         "name": "Lost Teachings",
         "description": "Increases the range of quickslash.",
+        "zh": { "name": "失去 Teachings", "description": "提高 疾斩 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -693,6 +736,7 @@
         "positionIndex": 10,
         "name": "Switch it Up",
         "description": "Quickslash no longer deals damage in a circle and instead deals damage to the closest target and a cone behind them firing multiple piercing kunai.",
+        "zh": { "name": "Switch 上", "description": "疾斩更久造成伤害圆环与改为造成伤害至最近的目标与锥形身后它们 firing 多个穿透苦无。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -704,6 +748,7 @@
         "positionIndex": 11,
         "name": "Plan Ahead",
         "description": "Summon a shadow dashing towards your aim multiple times dealing damage to all monsters hit. After it expires you quickly dash following the same path with massively increased damage.",
+        "zh": { "name": "Plan Ahead", "description": "召唤物暗影突进朝向你的 aim 多个次造成伤害至全部怪物命中。之后到期你 quickly 突进 following 相同路径使用 massively 提高伤害。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -715,6 +760,7 @@
         "positionIndex": 12,
         "name": "Multiplicative Duality",
         "description": "Spirit double now spawns multiple shadows dashing with increased speed and damage.",
+        "zh": { "name": "Multiplicative 双重性", "description": "灵体双重生成多个暗影突进使用提高速度与伤害。" },
         "maxRank": 3,
         "effects": {
           "base": {
@@ -734,6 +780,7 @@
         "positionIndex": 13,
         "name": "Mechanical Advantage",
         "description": "Dash an increased range sending explosive kunai in an aura at your wake.",
+        "zh": { "name": "机械优势", "description": "突进提高范围发出爆裂苦无光环你的 wake。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "skill_range": 0 },
@@ -745,6 +792,7 @@
         "positionIndex": 14,
         "name": "Now You See Me",
         "description": "Slash with increased area of effect radius and damage dropping a smoke bomb at target location.",
+        "zh": { "name": "你 See Me", "description": "斩击使用提高范围半径与伤害落下烟雾弹目标位置。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "area_of_effect": 0 },
@@ -759,6 +807,7 @@
     "name": "Evasion",
     "kind": "passive",
     "description": "Gain a chance to evade melee and ranged attacks.",
+    "zh": { "name": "闪避", "description": "获得闪避近战和远程攻击的概率。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -789,6 +838,7 @@
     "name": "Smoke Bomb",
     "kind": "active",
     "description": "Explode a smoke bomb dealing arcane damage.",
+    "zh": { "name": "烟雾弹", "description": "引燃一颗烟雾弹，造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -852,6 +902,7 @@
         "positionIndex": 0,
         "name": "Smoke Bomb",
         "description": "Core of the Smoke Bomb subtree.",
+        "zh": { "name": "烟雾弹", "description": "烟雾弹 子树核心。" },
         "maxRank": 1
       },
       {
@@ -859,6 +910,7 @@
         "positionIndex": 1,
         "name": "Weakening Powder",
         "description": "Slows and reduces attack rating of targets hit.",
+        "zh": { "name": "虚弱火药", "description": "减速与降低攻击命中之目标命中。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -873,6 +925,7 @@
         "positionIndex": 2,
         "name": "Key to Precision",
         "description": "Increases projectile speed.",
+        "zh": { "name": "Key 至精准", "description": "提高投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -884,6 +937,7 @@
         "positionIndex": 3,
         "name": "Acidic Component",
         "description": "Chance on hit to inflict armor break.",
+        "zh": { "name": "酸性 Component", "description": "命中时有概率施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -902,6 +956,7 @@
         "positionIndex": 4,
         "name": "Thick Clouds",
         "description": "Increases smoke bomb area of effect radius.",
+        "zh": { "name": "Thick 云雾", "description": "提高 effect radius 的烟雾弹范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -913,6 +968,7 @@
         "positionIndex": 5,
         "name": "Mindfulness",
         "description": "Inflict arcane break on hit.",
+        "zh": { "name": "Mindfulness", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -931,6 +987,7 @@
         "positionIndex": 6,
         "name": "Greater Impact",
         "description": "Increases damage dealt by smoke bomb.",
+        "zh": { "name": "Greater 冲击", "description": "提高 烟雾弹 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -942,6 +999,7 @@
         "positionIndex": 7,
         "name": "Preparation",
         "description": "Smoke bomb has a chance to bounce releasing an additional smoke cloud.",
+        "zh": { "name": "Preparation", "description": "烟雾弹有概率弹射释放额外烟雾云雾。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -957,6 +1015,7 @@
         "positionIndex": 8,
         "name": "Swift Deploy",
         "description": "Increases cast rate when using smoke bomb.",
+        "zh": { "name": "迅捷 Deploy", "description": "提高施法速度使用烟雾弹。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -968,6 +1027,7 @@
         "positionIndex": 9,
         "name": "Feel the Heat",
         "description": "Inflicts burning on hit.",
+        "zh": { "name": "Feel 灼热", "description": "命中时施加燃烧。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -986,6 +1046,7 @@
         "positionIndex": 10,
         "name": "Burning Weakness",
         "description": "Increases damage dealt to burning targets.",
+        "zh": { "name": "燃烧弱点", "description": "提高对 燃烧目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_burning": 0 },
@@ -997,6 +1058,7 @@
         "positionIndex": 11,
         "name": "Adjusted Formula",
         "description": "Significantly reduce enemy attack rating and increase monster damage taken when inside smoke bomb.",
+        "zh": { "name": "Adjusted Formula", "description": "显著 reduce 敌人攻击命中与提高怪物所受伤害当 inside 烟雾弹。" },
         "maxRank": 3,
         "effects": {
           "base": { "enemy_damage_taken_increased": 0 },
@@ -1015,6 +1077,7 @@
         "positionIndex": 12,
         "name": "Stealth Zone",
         "description": "Throw out smoke bombs in all directions forming a massive cloud increasing your movement speed inside of it. Smoke bomb now has a cooldown.",
+        "zh": { "name": "Stealth Zone", "description": "投掷 out 烟雾炸弹全部方向形成巨大云雾提高你的移动速度 inside 之。烟雾弹有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "movement_speed": 0 },
@@ -1026,6 +1089,7 @@
         "positionIndex": 13,
         "name": "Monster Cleansing",
         "description": "Smoke bomb consumes damage over time debuffs from monsters inside of it dealing full damage instantly.",
+        "zh": { "name": "怪物 Cleansing", "description": "烟雾弹消耗伤害随时间 debuffs 从怪物 inside 之造成 full 伤害 instantly。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1037,6 +1101,7 @@
         "positionIndex": 14,
         "name": "Smoke Trail",
         "description": "Smoke bomb now leaves a trail of smoke behind you dealing increased damage. Smoke bomb now has a cooldown.",
+        "zh": { "name": "烟雾轨迹", "description": "烟雾弹留下轨迹之烟雾身后你造成提高伤害。烟雾弹有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1051,6 +1116,7 @@
     "name": "Explosive Kunai",
     "kind": "active",
     "description": "Throw an explosive kunai that explodes and splits on impact, causing smaller explosions that deal Arcane damage.",
+    "zh": { "name": "爆裂苦无", "description": "掷出会在命中时爆炸并分裂的爆裂苦无，引发造成奥术伤害的较小爆炸。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -1116,6 +1182,7 @@
         "positionIndex": 0,
         "name": "Explosive Kunai",
         "description": "Core of the Explosive Kunai subtree.",
+        "zh": { "name": "爆裂苦无", "description": "爆裂苦无 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1123,6 +1190,7 @@
         "positionIndex": 1,
         "name": "Stronger Explosives",
         "description": "Increases damage dealt by explosive kunai.",
+        "zh": { "name": "Stronger 爆炸", "description": "提高 爆裂苦无 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1134,6 +1202,7 @@
         "positionIndex": 2,
         "name": "Packed Up Kunai",
         "description": "Increases kunai explosion area of effect radius.",
+        "zh": { "name": "Packed 上苦无", "description": "提高 effect radius 的苦无爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1145,6 +1214,7 @@
         "positionIndex": 3,
         "name": "Satisfaction",
         "description": "Decreases the mana cost of explosive kunai.",
+        "zh": { "name": "Satisfaction", "description": "降低法力消耗之爆裂苦无。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -1156,6 +1226,7 @@
         "positionIndex": 4,
         "name": "Split Up",
         "description": "Chance on hit to split into additional kunais.",
+        "zh": { "name": "分裂上", "description": "命中时有概率分裂进入额外苦无。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_hit",
@@ -1171,6 +1242,7 @@
         "positionIndex": 5,
         "name": "Willful Sacrifice",
         "description": "Now consumes a percentage of your maximum life each cast giving your kunai increased speed and explosion aoe. Maximum life damage is non-lethal.",
+        "zh": { "name": "Willful Sacrifice", "description": "消耗 percentage 你的最大生命每个施法 giving 你的苦无提高速度与爆炸 aoe。最大生命伤害非-致命。" },
         "maxRank": 2,
         "effects": {
           "base": { "projectile_speed": 0, "area_of_effect": 0 },
@@ -1182,6 +1254,7 @@
         "positionIndex": 6,
         "name": "First Is Best",
         "description": "Increases the damage dealt and explosion area of effect radius kunai.",
+        "zh": { "name": "第一 Best", "description": "提高 effect radius kunai 的造成的伤害与爆炸范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -1193,6 +1266,7 @@
         "positionIndex": 7,
         "name": "Ronin's Curse",
         "description": "Chance to inflict arcane break on hit.",
+        "zh": { "name": "Ronin's Curse", "description": "命中时有概率施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1211,6 +1285,7 @@
         "positionIndex": 8,
         "name": "Doubleblast",
         "description": "Chance on hit for the kunai to explode an additional time.",
+        "zh": { "name": "Doubleblast", "description": "概率命中时苦无至爆炸额外一次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1226,6 +1301,7 @@
         "positionIndex": 9,
         "name": "Bouncy Kunai",
         "description": "Kunais have a chance to bounce off of terrain and stun monsters on hit.",
+        "zh": { "name": "Bouncy 苦无", "description": "Kunais 有概率弹射关闭之地形与眩晕怪物命中时。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1238,6 +1314,7 @@
         "positionIndex": 10,
         "name": "Concussive Explosions",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Concussive 爆炸", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1249,6 +1326,7 @@
         "positionIndex": 11,
         "name": "Doubleforking Kunai",
         "description": "Explosive kunai split an additional time dealing increased damage each time they split.",
+        "zh": { "name": "Doubleforking 苦无", "description": "爆裂苦无分裂额外一次造成提高伤害每个时间它们分裂。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1260,6 +1338,7 @@
         "positionIndex": 12,
         "name": "Penetration Volley",
         "description": "Throw a spread of piercing kunai that explode on each enemy hit.",
+        "zh": { "name": "Penetration Volley", "description": "投掷 spread 之穿透苦无爆炸每个敌人命中。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_count": 0, "arcane_skill_damage": 0 },
@@ -1271,6 +1350,7 @@
         "positionIndex": 13,
         "name": "Chainsplosions",
         "description": "Split kunais chain on the first enemy hit exploding on each enemy chained to.",
+        "zh": { "name": "Chainsplosions", "description": "分裂苦无连锁第一敌人命中 exploding 每个敌人 chained 至。" },
         "maxRank": 3,
         "effects": {
           "base": { "projectile_bounces": 0, "arcane_skill_damage": 0 },
@@ -1282,6 +1362,7 @@
         "positionIndex": 14,
         "name": "Little Slicers",
         "description": "Explosive kunai no longer explode but instead pierces with increased projectile speed slicing monsters inflicting bleeding.",
+        "zh": { "name": "Little Slicers", "description": "爆裂苦无更久爆炸改为穿透使用提高投射物速度斩切怪物施加流血。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_bleeding_damage": 0, "projectile_speed": 0 },
@@ -1303,6 +1384,7 @@
     "name": "Warriors Spirit",
     "kind": "passive",
     "description": "Increases your attack speed.",
+    "zh": { "name": "武士之魂", "description": "提高你的攻击速度。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -1335,6 +1417,7 @@
     "name": "Bushido",
     "kind": "buff",
     "description": "Activate to gain a buff that increases your attack damage for every 10% of missing Life.",
+    "zh": { "name": "武士道", "description": "激活后获得增益：每损失 10% 生命都会提高你的攻击伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -1374,6 +1457,7 @@
     "name": "Live by the Sword",
     "kind": "buff",
     "description": "Temporarily increases your attack speed and movement speed.",
+    "zh": { "name": "以剑为生", "description": "临时提高你的攻击速度和移动速度。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -1417,6 +1501,7 @@
     "name": "Blade Barrier",
     "kind": "active",
     "description": "Summon a barrier of rotating blades around you dealing Physical Damage and additional Arcane Damage.",
+    "zh": { "name": "刃壁", "description": "在你周围召唤一面旋转之刃组成的屏障，造成物理伤害和额外奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1497,6 +1582,7 @@
         "positionIndex": 0,
         "name": "Blade Barrier",
         "description": "Core of the Blade Barrier subtree.",
+        "zh": { "name": "刃壁", "description": "刃壁 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1504,6 +1590,7 @@
         "positionIndex": 1,
         "name": "Rotational Force",
         "description": "Increases blade barriers rotation speed.",
+        "zh": { "name": "Rotational 力量", "description": "提高利刃屏障 rotation 速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1515,6 +1602,7 @@
         "positionIndex": 2,
         "name": "Cursed Blades",
         "description": "Blade barrier has a chance to shoot out a blade when hitting a target.",
+        "zh": { "name": "被诅咒刀刃", "description": "刃壁有概率射出 out 利刃当命中目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1530,6 +1618,7 @@
         "positionIndex": 3,
         "name": "Barrier Extension",
         "description": "Increases duration of blade barrier.",
+        "zh": { "name": "屏障 Extension", "description": "提高 刃壁 的持续时间。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -1541,6 +1630,7 @@
         "positionIndex": 4,
         "name": "Damascus Steel Blades",
         "description": "Increases physical damage dealt by blade barrier but reduces arcane damage dealt.",
+        "zh": { "name": "Damascus Steel 刀刃", "description": "提高物理伤害 dealt 刃壁降低奥术造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_damage": 0, "arcane_skill_damage": 0 },
@@ -1552,6 +1642,7 @@
         "positionIndex": 5,
         "name": "Infinite Potential",
         "description": "Increases the amount of blades in the barrier.",
+        "zh": { "name": "Infinite Potential", "description": "提高 blades in the barrier 的数量。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1563,6 +1654,7 @@
         "positionIndex": 6,
         "name": "Battle Wounds",
         "description": "Chance to cause monsters to bleed on hit.",
+        "zh": { "name": "战斗创伤", "description": "命中时有概率使怪物至流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -1581,6 +1673,7 @@
         "positionIndex": 7,
         "name": "Crippling Hits",
         "description": "Slows monsters on hit.",
+        "zh": { "name": "致残命中", "description": "减速怪物命中时。" },
         "maxRank": 5,
         "effects": {
           "base": { "slow_target": 0 },
@@ -1592,6 +1685,7 @@
         "positionIndex": 8,
         "name": "Laceration",
         "description": "Increases damage dealt to bleeding enemies.",
+        "zh": { "name": "Laceration", "description": "提高对 流血目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_bleeding": 0 },
@@ -1603,6 +1697,7 @@
         "positionIndex": 9,
         "name": "Sharp Greeting",
         "description": "Blade barrier deals increased damage to monsters with full life.",
+        "zh": { "name": "尖锐 Greeting", "description": "刃壁造成提高伤害至怪物使用 full 生命。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1614,6 +1709,7 @@
         "positionIndex": 10,
         "name": "Spirit Fire",
         "description": "Physical scaling is converted to burning. Blade barrier now only deals arcane damage.",
+        "zh": { "name": "灵体火焰", "description": "物理加成转化为燃烧。刃壁仅造成奥术伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_burning_damage": 0 },
@@ -1632,6 +1728,7 @@
         "positionIndex": 11,
         "name": "Twin Barriers",
         "description": "Blade barrier now summons an outer and an inner barrier. The inner barrier deals increased damage and the out barrier is guaranteed to proc cursed blades on hit.",
+        "zh": { "name": "Twin 屏障", "description": "刃壁召唤物 outer 与 inner 屏障。inner 屏障造成提高伤害与 out 屏障 guaranteed 至触发被诅咒刀刃命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1643,6 +1740,7 @@
         "positionIndex": 12,
         "name": "Forgotten Arts",
         "description": "Hitting an enemy refreshes blade barrier duration. Gain increased damage for each active blade barrier you have.",
+        "zh": { "name": "Forgotten Arts", "description": "命中敌人刷新刃壁持续时间。获得提高伤害每个激活刃壁你有。" },
         "maxRank": 3,
         "effects": {
           "base": { "skill_duration": 0, "arcane_skill_damage": 0 },
@@ -1654,6 +1752,7 @@
         "positionIndex": 13,
         "name": "Body And Soul",
         "description": "Blades seek out and stick on nearby monsters dealing increased damage. Blades return to the player if the target is too far away or the monster dies.",
+        "zh": { "name": "Body 与灵魂", "description": "刀刃搜寻 out 与附着附近怪物造成提高伤害。刀刃反伤至 player if 目标 too 远处远离怪物死亡。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1665,6 +1764,7 @@
         "positionIndex": 14,
         "name": "Spinning Armory",
         "description": "Adds an additional orbital layer of blades.",
+        "zh": { "name": "旋转军械库", "description": "附加额外环绕 layer 之刀刃。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -1679,6 +1779,7 @@
     "name": "Exploding Bolas",
     "kind": "active",
     "description": "Throw bolas that deal arcane damage on impact and again when they explode after a short delay.",
+    "zh": { "name": "爆裂流星锤", "description": "掷出流星锤，命中时造成奥术伤害，短暂延迟爆炸时再次造成伤害。" },
     "maxRank": 20,
     "requiresLevel": 1,
     "ranks": [
@@ -1745,6 +1846,7 @@
         "positionIndex": 0,
         "name": "Exploding Bolas",
         "description": "Core of the Exploding Bolas subtree.",
+        "zh": { "name": "爆裂流星锤", "description": "爆裂流星锤 子树核心。" },
         "maxRank": 1
       },
       {
@@ -1752,6 +1854,7 @@
         "positionIndex": 1,
         "name": "Explosive Outburst",
         "description": "Increases the explosion area of effect radius of exploding bolas.",
+        "zh": { "name": "爆炸 Outburst", "description": "提高 effect radius of 爆裂流星锤 的爆炸范围。" },
         "maxRank": 3,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -1763,6 +1866,7 @@
         "positionIndex": 2,
         "name": "Improved Design",
         "description": "Increases the damage dealt by exploding bolas.",
+        "zh": { "name": "Improved Design", "description": "提高造成的伤害爆裂流星锤。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0 },
@@ -1774,6 +1878,7 @@
         "positionIndex": 3,
         "name": "Close Impact",
         "description": "Inflicts arcane break on hit.",
+        "zh": { "name": "近身冲击", "description": "命中时施加奥术击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_break": 0 },
@@ -1792,6 +1897,7 @@
         "positionIndex": 4,
         "name": "Fastbol",
         "description": "Increases projectile speed.",
+        "zh": { "name": "Fastbol", "description": "提高投射物速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_speed": 0 },
@@ -1803,6 +1909,7 @@
         "positionIndex": 5,
         "name": "Multibolas",
         "description": "Throw multiple bolas in an arc.",
+        "zh": { "name": "Multibolas", "description": "投掷多个流星锤呈弧线。" },
         "maxRank": 4,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -1814,6 +1921,7 @@
         "positionIndex": 6,
         "name": "Low Blow",
         "description": "Bolas have a chance on hit to stun the enemy.",
+        "zh": { "name": "低 Blow", "description": "流星锤有概率命中时至眩晕敌人。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1826,6 +1934,7 @@
         "positionIndex": 7,
         "name": "Another One",
         "description": "Chance for bolas to explode an additional time.",
+        "zh": { "name": "另一个一次", "description": "概率使流星锤至爆炸额外一次。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -1841,6 +1950,7 @@
         "positionIndex": 8,
         "name": "Tough Fall",
         "description": "Increases damage dealt to stunned targets.",
+        "zh": { "name": "Tough Fall", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -1852,6 +1962,7 @@
         "positionIndex": 9,
         "name": "Speedslinger",
         "description": "Increases cast rate when using exploding bolas.",
+        "zh": { "name": "Speedslinger", "description": "提高施法速度使用爆裂流星锤。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -1863,6 +1974,7 @@
         "positionIndex": 10,
         "name": "Longer Ropes",
         "description": "Bolas now pierce allowing them to attach to multiple targets dealing increased damage.",
+        "zh": { "name": "更久 Ropes", "description": "流星锤穿透 allowing 它们至 attach 至多个目标造成提高伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -1874,6 +1986,7 @@
         "positionIndex": 11,
         "name": "Loaded Charge",
         "description": "Bolas are stuck on enemies for a longer period of time, dealing damage to them during this period causes the explosion to gain increased damage & size up to 5 times.",
+        "zh": { "name": "Loaded 冲锋", "description": "流星锤卡住敌人更久期间之时间，造成伤害至它们 during this 期间使爆炸至获得提高伤害 & size 上至 5 次。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "area_of_effect": 0 },
@@ -1885,6 +1998,7 @@
         "positionIndex": 12,
         "name": "Clusterducks",
         "description": "Throw multiple explosive rubberducks that bounce towards a nearby target before exploding.",
+        "zh": { "name": "Clusterducks", "description": "投掷多个爆炸 rubberducks 弹射朝向附近目标 before exploding。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "projectile_count": 0 },
@@ -1896,6 +2010,7 @@
         "positionIndex": 13,
         "name": "Magnetic String",
         "description": "Monsters caught by bolas are pulled towards the first target.",
+        "zh": { "name": "Magnetic String", "description": "怪物 caught 流星锤牵引朝向第一目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_range": 0 },
@@ -1907,6 +2022,7 @@
         "positionIndex": 14,
         "name": "Bola'd Stasis",
         "description": "Bola now grabs all enemies on its path and pulls nearby enemies towards it when hitting terrain.",
+        "zh": { "name": "Bola'd 停滞", "description": "Bola grabs 全部敌人路径上的与牵引附近敌人朝向当命中地形。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_range": 0 },
@@ -1921,6 +2037,7 @@
     "name": "Fan of Knives",
     "kind": "passive",
     "description": "Attacks have a chance to throw knives around you dealing physical damage to nearby monsters. Additionally the knives have a chance to ricochet to nearby monsters.",
+    "zh": { "name": "刀刃之扇", "description": "攻击有概率向你周围掷出飞刀，对附近怪物造成物理伤害。飞刀还有概率弹射到附近怪物身上。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -1994,6 +2111,7 @@
     "name": "For Honor",
     "kind": "buff",
     "description": "Temporarily increases your attack damage and movement speed.",
+    "zh": { "name": "为了荣耀", "description": "临时提高你的攻击伤害和移动速度。" },
     "maxRank": 20,
     "requiresLevel": 8,
     "ranks": [
@@ -2037,6 +2155,7 @@
     "name": "Omnislash",
     "kind": "active",
     "description": "Become untargetable and rapidly strike monsters multiple times with increased attack rating dealing increased damage.",
+    "zh": { "name": "无双斩", "description": "进入无法被选中的状态，以更高的攻击命中快速多次斩击怪物，造成提高的伤害。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -2110,6 +2229,7 @@
         "positionIndex": 0,
         "name": "Omnislash",
         "description": "Core of the Omnislash subtree.",
+        "zh": { "name": "无双斩", "description": "无双斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2117,6 +2237,7 @@
         "positionIndex": 1,
         "name": "Clean Hits",
         "description": "Increases attack rating when using omnislash.",
+        "zh": { "name": "Clean 命中", "description": "提高攻击命中使用无双斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -2128,6 +2249,7 @@
         "positionIndex": 2,
         "name": "Extra Cut",
         "description": "Increases the amount of slashes.",
+        "zh": { "name": "额外 Cut", "description": "提高 slashes 的数量。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 2 },
@@ -2139,6 +2261,7 @@
         "positionIndex": 3,
         "name": "No Hesitation",
         "description": "Reduces the cooldown of omnislash.",
+        "zh": { "name": "Hesitation", "description": "降低 cooldown 之无双斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_haste": 0 },
@@ -2150,6 +2273,7 @@
         "positionIndex": 4,
         "name": "Powerful Slashes",
         "description": "Increases the damage dealt by omnislash.",
+        "zh": { "name": "Powerful Slashes", "description": "提高造成的伤害无双斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2161,6 +2285,7 @@
         "positionIndex": 5,
         "name": "Looming Cover",
         "description": "When cast inside a smoke bomb invulnerability lasts for a small duration after omnislash ends.",
+        "zh": { "name": "Looming 覆盖", "description": "当施法 inside 烟雾弹 invulnerability 持续小型持续时间之后无双斩 ends。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_duration": 0 },
@@ -2172,6 +2297,7 @@
         "positionIndex": 6,
         "name": "Nail In The Coffin",
         "description": "Throw a piercing kunai at a nearby enemy with reduced damage each strike.",
+        "zh": { "name": "Nail Coffin", "description": "投掷穿透苦无附近敌人使用降低伤害每个 strike。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2183,6 +2309,7 @@
         "positionIndex": 7,
         "name": "Emperor's Orders",
         "description": "Striking monsters with Omnislash has a chance to cast empires slash.",
+        "zh": { "name": "Emperor's Orders", "description": "打击怪物使用无双斩有概率施法帝国斩。" },
         "maxRank": 5,
         "proc": { "trigger": "on_hit", "chance": { "base": 0, "perRank": 4 } }
       },
@@ -2191,6 +2318,7 @@
         "positionIndex": 8,
         "name": "Killstrike",
         "description": "Increases critical chance with omnislash.",
+        "zh": { "name": "Killstrike", "description": "提高暴击概率使用无双斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -2202,6 +2330,7 @@
         "positionIndex": 9,
         "name": "Thirst For Death",
         "description": "Chance to increase the amount of slashes depending on your critical strike chance.",
+        "zh": { "name": "Thirst 死亡", "description": "概率提高数量之 slashes depending 你的暴击概率。" },
         "maxRank": 5,
         "effects": {
           "base": { "projectile_count": 0 },
@@ -2213,6 +2342,7 @@
         "positionIndex": 10,
         "name": "Cutting Machine",
         "description": "Increases critical strike damage dealt by omnislash.",
+        "zh": { "name": "切割 Machine", "description": "提高暴击伤害 dealt 无双斩。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -2224,6 +2354,7 @@
         "positionIndex": 11,
         "name": "Lucky Strikes",
         "description": "Omnislash now always procs all your striking effects on hit with halved amount of slashes and decreased damage. Omnislash cooldown is increased.",
+        "zh": { "name": "Lucky 打击", "description": "无双斩 always 触发全部你的打击效果命中时使用 halved 数量之 slashes 与降低伤害。无双斩 cooldown 提高。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0 },
@@ -2235,6 +2366,7 @@
         "positionIndex": 12,
         "name": "Rain Of Chaos",
         "description": "Each slash now drops a shadow meteor down from the sky dealing area of effect damage when landing.",
+        "zh": { "name": "骤雨之混沌", "description": "每个斩击落下暗影陨石术倒地从天空造成范围伤害落地时。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2246,6 +2378,7 @@
         "positionIndex": 13,
         "name": "Poison Coated Daggers",
         "description": "Throw poison coated daggers around with each slash inflicting poisoned and dealing increased damage to poisoned targets.",
+        "zh": { "name": "毒素 Coated 匕首", "description": "投掷毒素 coated 匕首周围使用每个斩击施加中毒与造成提高伤害至中毒目标。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_poisoned_damage": 0, "extra_damage_poisoned": 0 },
@@ -2267,6 +2400,7 @@
         "positionIndex": 14,
         "name": "Thunder Slashes",
         "description": "Unleash chain lightning with each slash inflicting lightning break on hit.",
+        "zh": { "name": "雷霆 Slashes", "description": "释放连锁闪电使用每个斩击施加闪电击破命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "lightning_break": 0 },
@@ -2291,6 +2425,7 @@
     "name": "Burst of Speed",
     "kind": "passive",
     "description": "Gain increased movement speed for a short period after killing a monster.",
+    "zh": { "name": "极速迸发", "description": "击杀怪物后短时间内获得提高的移动速度。" },
     "maxRank": 20,
     "requiresLevel": 16,
     "ranks": [
@@ -2321,6 +2456,7 @@
     "name": "Shadow Step",
     "kind": "active",
     "description": "Step into the shadows, re-appearing at the target location dealing Arcane Damage to all nearby monsters.",
+    "zh": { "name": "暗影步", "description": "步入暗影，在目标位置重现，对所有附近怪物造成奥术伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2404,6 +2540,7 @@
         "positionIndex": 0,
         "name": "Shadow Step",
         "description": "Core of the Shadow Step subtree.",
+        "zh": { "name": "暗影步", "description": "暗影步 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2411,6 +2548,7 @@
         "positionIndex": 1,
         "name": "Traversal",
         "description": "Increases teleport distance.",
+        "zh": { "name": "Traversal", "description": "提高teleport 距离。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2422,6 +2560,7 @@
         "positionIndex": 2,
         "name": "Calm And Collected",
         "description": "Decreases the mana cost of shadow step.",
+        "zh": { "name": "Calm 与 Collected", "description": "降低法力消耗之暗影步。" },
         "maxRank": 5,
         "effects": {
           "base": { "mana_cost_reduction": 0 },
@@ -2433,6 +2572,7 @@
         "positionIndex": 3,
         "name": "Groundshaker",
         "description": "Chance to stun monsters on hit.",
+        "zh": { "name": "Groundshaker", "description": "命中时有概率眩晕怪物。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_hit",
@@ -2445,6 +2585,7 @@
         "positionIndex": 4,
         "name": "Improved Lethality",
         "description": "Increases damage dealt to stunned enemies.",
+        "zh": { "name": "Improved Lethality", "description": "提高对 眩晕目标 造成的伤害。" },
         "maxRank": 5,
         "effects": {
           "base": { "extra_damage_stunned": 0 },
@@ -2456,6 +2597,7 @@
         "positionIndex": 5,
         "name": "Shadow Ally",
         "description": "Chance on cast to summon shadow clones to mimic your shadow step on a nearby target.",
+        "zh": { "name": "暗影 Ally", "description": "施法时有概率召唤物暗影 clones 至 mimic 你的暗影步附近目标。" },
         "maxRank": 5,
         "proc": {
           "trigger": "on_cast",
@@ -2471,6 +2613,7 @@
         "positionIndex": 6,
         "name": "Stepping Stone",
         "description": "Stunning an enemy with shadow step has a chance to increase your damage & cast rate for a short period stacking up to eight times.",
+        "zh": { "name": "踏入岩石", "description": "眩晕敌人使用暗影步有概率提高你的伤害 & 施法速度短距期间叠加上至 eight 次。" },
         "maxRank": 5,
         "effects": {
           "base": { "arcane_skill_damage": 0, "faster_cast_rate": 0 },
@@ -2482,6 +2625,7 @@
         "positionIndex": 7,
         "name": "Sonic Boom",
         "description": "Chance on cast to deal damage additional times upon arrival.",
+        "zh": { "name": "Sonic 爆轰", "description": "施法时有概率造成伤害额外次 upon arrival。" },
         "maxRank": 3,
         "proc": {
           "trigger": "on_cast",
@@ -2497,6 +2641,7 @@
         "positionIndex": 8,
         "name": "Crushing Step",
         "description": "Inflict armor break on hit.",
+        "zh": { "name": "粉碎 Step", "description": "命中时施加护甲击破。" },
         "maxRank": 5,
         "effects": {
           "base": { "armor_break": 0 },
@@ -2515,6 +2660,7 @@
         "positionIndex": 9,
         "name": "Planned Out",
         "description": "Increases cast rate when using shadow step.",
+        "zh": { "name": "Planned Out", "description": "提高施法速度使用暗影步。" },
         "maxRank": 5,
         "effects": {
           "base": { "faster_cast_rate": 0 },
@@ -2526,6 +2672,7 @@
         "positionIndex": 10,
         "name": "Speed Demon",
         "description": "Increases area of effect radius for a portion of your bonus movement speed.",
+        "zh": { "name": "速度恶魔", "description": "提高 effect radius for a portion of your bonus movement speed 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2537,6 +2684,7 @@
         "positionIndex": 11,
         "name": "Daggerstorms",
         "description": "Additionally summons a storm of daggers from the sky on hit.",
+        "zh": { "name": "Daggerstorms", "description": "另外召唤物风暴之匕首从天空命中时。" },
         "maxRank": 3,
         "effects": {
           "base": { "of_total_damage": 0, "projectile_count": 0 },
@@ -2548,6 +2696,7 @@
         "positionIndex": 12,
         "name": "Bargain With Demons",
         "description": "When landing nearby corpses are consumed to unleash a shadow explosion dealing area of effect damage and inflict burning.",
+        "zh": { "name": "Bargain 使用恶魔", "description": "落地时附近尸体消耗至释放暗影爆炸造成范围伤害与施加燃烧。" },
         "maxRank": 3,
         "effects": {
           "base": { "increased_burning_damage": 0, "corpse_count": 0 },
@@ -2566,6 +2715,7 @@
         "positionIndex": 13,
         "name": "Vortex Step",
         "description": "Pull nearby monsters towards you unleashing bolts of shadow energy into all directions when landing dealing additional damage and stunning them.",
+        "zh": { "name": "漩涡 Step", "description": "牵引附近怪物朝向你释放电矢之暗影能量进入全部方向落地时造成额外伤害与眩晕它们。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_skill_damage": 0, "skill_range": 0 },
@@ -2577,6 +2727,7 @@
         "positionIndex": 14,
         "name": "Pulsating Shadows",
         "description": "Shadow step now pulsates additional times inflicting arcane break.",
+        "zh": { "name": "Pulsating 暗影", "description": "暗影步 pulsates 额外次施加奥术击破。" },
         "maxRank": 3,
         "effects": {
           "base": { "arcane_break": 0, "projectile_count": 0 },
@@ -2598,6 +2749,7 @@
     "name": "Way of the Warrior",
     "kind": "passive",
     "description": "Increases your attack damage and magic skill damage.",
+    "zh": { "name": "战士之道", "description": "提高你的攻击伤害和魔法技能伤害。" },
     "maxRank": 20,
     "requiresLevel": 24,
     "ranks": [
@@ -2630,6 +2782,7 @@
     "name": "Empires Slash",
     "kind": "active",
     "description": "Perform an area of effect attack blinking a short distance and dealing physical damage to monsters in its path. Empire slash lowers Omnislashes cooldown when it strikes a monster.",
+    "zh": { "name": "帝国斩", "description": "进行一次范围攻击，短距闪现并对路径上的怪物造成物理伤害。帝国斩命中怪物时会降低无双斩的冷却。" },
     "maxRank": 20,
     "requiresLevel": 30,
     "ranks": [
@@ -2705,6 +2858,7 @@
         "positionIndex": 0,
         "name": "Empires Slash",
         "description": "Core of the Empires Slash subtree.",
+        "zh": { "name": "帝国斩", "description": "帝国斩 子树核心。" },
         "maxRank": 1
       },
       {
@@ -2712,6 +2866,7 @@
         "positionIndex": 1,
         "name": "Steel Cutter",
         "description": "Increases the damage dealt by empire´s slash.",
+        "zh": { "name": "Steel 工", "description": "提高造成的伤害帝国的斩击。" },
         "maxRank": 5,
         "effects": {
           "base": { "physical_skill_damage": 0 },
@@ -2723,6 +2878,7 @@
         "positionIndex": 2,
         "name": "Destructive Force",
         "description": "Increases the area of effect of empire´s slash.",
+        "zh": { "name": "Destructive 力量", "description": "提高 effect of empire´s slash 的范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "area_of_effect": 0 },
@@ -2734,6 +2890,7 @@
         "positionIndex": 3,
         "name": "Mastering The Sword",
         "description": "Increases the attack speed of empire’s slash when wielding a 2-handed weapon.",
+        "zh": { "name": "Mastering Sword", "description": "提高 empire’s slash when wielding a 2-handed weapon 的攻击速度。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_attack_speed": 0 },
@@ -2745,6 +2902,7 @@
         "positionIndex": 4,
         "name": "On The Mark",
         "description": "Increases the attack rating when using empire´s slash.",
+        "zh": { "name": "印记", "description": "提高攻击命中使用帝国的斩击。" },
         "maxRank": 5,
         "effects": {
           "base": { "attack_rating_pct": 0 },
@@ -2756,6 +2914,7 @@
         "positionIndex": 5,
         "name": "Emperor's Command",
         "description": "Executes monsters after a threshold.",
+        "zh": { "name": "Emperor's Command", "description": "处决怪物之后阈值。" },
         "maxRank": 5,
         "effects": {
           "base": { "execute_below": 0 },
@@ -2767,6 +2926,7 @@
         "positionIndex": 6,
         "name": "Piercing Backslash",
         "description": "Gain additional critical strike damage when using empire’s slash.",
+        "zh": { "name": "穿透 Backslash", "description": "获得额外暴击伤害使用帝国的斩击。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_damage": 0 },
@@ -2778,6 +2938,7 @@
         "positionIndex": 7,
         "name": "Slithering Blade",
         "description": "Gain additional critical strike chance when using empire’s slash.",
+        "zh": { "name": "Slithering 利刃", "description": "获得额外暴击概率使用帝国的斩击。" },
         "maxRank": 5,
         "effects": {
           "base": { "crit_chance": 0 },
@@ -2789,6 +2950,7 @@
         "positionIndex": 8,
         "name": "Absorb Life",
         "description": "Increases life steal when using empire´s slash.",
+        "zh": { "name": "吸收生命", "description": "提高生命偷取使用帝国的斩击。" },
         "maxRank": 5,
         "effects": {
           "base": { "life_steal": 0 },
@@ -2800,6 +2962,7 @@
         "positionIndex": 9,
         "name": "Wounding Slash",
         "description": "Chance to inflict bleed on hit.",
+        "zh": { "name": "致伤斩击", "description": "命中时有概率施加流血。" },
         "maxRank": 5,
         "effects": {
           "base": { "increased_bleeding_damage": 0 },
@@ -2818,6 +2981,7 @@
         "positionIndex": 10,
         "name": "Time To Spare",
         "description": "Increases the blink range.",
+        "zh": { "name": "时间至 Spare", "description": "提高blink 范围。" },
         "maxRank": 5,
         "effects": {
           "base": { "skill_range": 0 },
@@ -2829,6 +2993,7 @@
         "positionIndex": 11,
         "name": "Unbridled Rage",
         "description": "Perform a series of slashes in multiple directions after teleporting.",
+        "zh": { "name": "Unbridled 怒气", "description": "执行 series 之 slashes 多个方向之后传送。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -2840,6 +3005,7 @@
         "positionIndex": 12,
         "name": "Bloodcovered Edge",
         "description": "Monsters hit by empire´s slash rebound an additional empire´s slash towards a nearby monster. Empire´s slash now has a cooldown.",
+        "zh": { "name": "Bloodcovered 锋刃", "description": "怪物命中帝国的斩击弹射额外帝国的斩击朝向附近怪物。帝国的斩击有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "max_targets": 0 },
@@ -2851,6 +3017,7 @@
         "positionIndex": 13,
         "name": "Cone Of Death",
         "description": "Empire slash no longer teleports and attacks with multiple smaller slashes in a cone infront of you.",
+        "zh": { "name": "锥形之死亡", "description": "帝国斩击更久传送与攻击使用多个更小 slashes 锥形 infront 之你。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0, "projectile_count": 0 },
@@ -2862,6 +3029,7 @@
         "positionIndex": 14,
         "name": "Muda Muda Muda Muda Muda",
         "description": "Perform a huge attack covering the whole screen dealing high damage. Empire´s slash no longer teleports you and now has a cooldown.",
+        "zh": { "name": "Muda Muda Muda Muda Muda", "description": "执行巨大攻击覆盖 whole screen 造成高伤害。帝国的斩击更久传送你与有 cooldown。" },
         "maxRank": 3,
         "effects": {
           "base": { "physical_skill_damage": 0 },
