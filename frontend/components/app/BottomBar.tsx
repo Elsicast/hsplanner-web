@@ -3,6 +3,7 @@ import changelogMd from '../../../CHANGELOG.md?raw'
 import { useBuild } from '../../store/build'
 import { useSettings } from '../../store/settings'
 import { openExternalLink } from '../../utils/externalUrl'
+import BugReportButton from './BugReportButton'
 import {
   APP_VERSION,
   BUILD_CHANNEL,
@@ -154,13 +155,17 @@ export default function BottomBar() {
         />
       )}
 
+      <div className="ml-auto flex items-center gap-2.5">
+        <BugReportButton />
+      </div>
+
       <a
         href="https://ko-fi.com/zium1337"
         target="_blank"
         rel="noopener noreferrer"
         title="在 Ko-fi 上支持 HSPlanner"
         onClick={(e) => openExternalLink(e, 'https://ko-fi.com/zium1337')}
-        className="ml-auto inline-flex items-center gap-1.5 rounded-[3px] border border-accent-deep px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-accent-hot transition-colors hover:border-accent-hot hover:text-[#fff0c4]"
+        className="inline-flex items-center gap-1.5 rounded-[3px] border border-accent-deep px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-accent-hot transition-colors hover:border-accent-hot hover:text-[#fff0c4]"
         style={{
           background:
             'linear-gradient(180deg, rgba(58,46,24,0.5), rgba(42,36,24,0.35))',

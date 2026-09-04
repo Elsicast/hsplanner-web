@@ -1,5 +1,6 @@
 import { MAX_STARS } from '../../../store/build'
 import { SectionCard } from '../SectionCard'
+import { SectionIcon } from '../sectionIcons'
 
 export function StarsSection({
   stars,
@@ -12,14 +13,28 @@ export function StarsSection({
   return (
     <SectionCard
       label="星辰"
+      icon={<SectionIcon kind="stars" />}
+      collapsible
+      defaultOpen={stars > 0}
       rightSlot={
-        <span
-          className={`font-mono text-[10px] tabular-nums tracking-[0.04em] ${
-            stars > 0 ? 'text-accent-hot' : 'text-faint'
-          }`}
-        >
-          {stars > 0 ? `词缀 +${bonusPct}%` : '无加成'}
-        </span>
+        stars > 0 ? (
+          <>
+            <span className="font-mono text-[10px] tabular-nums tracking-[0.04em] text-accent-hot">
+              {'★'.repeat(stars)} 词缀 +{bonusPct}%
+            </span>
+            <button
+              type="button"
+              onClick={() => onChange(0)}
+              className="rounded-xs border border-border-2 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint transition-colors hover:border-stat-red hover:text-stat-red"
+            >
+              清空
+            </button>
+          </>
+        ) : (
+          <span className="font-mono text-[10px] tabular-nums tracking-[0.04em] text-faint">
+            无加成
+          </span>
+        )
       }
     >
       <div className="flex items-center gap-1.5">
@@ -51,13 +66,9 @@ export function StarsSection({
           )
         })}
         {stars > 0 && (
-          <button
-            type="button"
-            onClick={() => onChange(0)}
-            className="ml-2 rounded-xs border border-border-2 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint transition-colors hover:border-stat-red hover:text-stat-red"
-          >
-            清空
-          </button>
+          <span className="ml-1.5 font-mono text-[10px] tabular-nums text-faint">
+            {stars}/{MAX_STARS}
+          </span>
         )}
       </div>
       <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.14em] leading-snug text-faint">

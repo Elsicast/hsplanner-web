@@ -6,13 +6,14 @@ import { formatValue } from '../../utils/item/stats'
 import { gameConfig } from '@data'
 import type { BuildStatDiff } from '../../utils/build/buildPerformance'
 import type { Affix } from '../../types'
-import { augmentIconForId, socketableIconForName } from './lib/gearIcons'
 import {
   translateItemEffect,
   translateItemName,
   translateItemType,
 } from '../../utils/item/itemText'
 import { displayStatName } from '../../utils/item/itemStatText'
+import { affixTierLabel } from './lib/affixGroups'
+import { augmentIconForId, socketableIconForName } from './lib/gearIcons'
 
 const PERCENT_STAT_KEYS = new Set(
   gameConfig.stats.filter((s) => s.format === 'percent').map((s) => s.key),
@@ -163,7 +164,7 @@ export function buildAffixTooltip(a: Affix): ReactNode {
     <>
       <TooltipHeader
         title={translateItemEffect(a.description)}
-        subtitle={`词缀 · ${translateItemEffect(a.name)} · 阶级 ${a.tier}`}
+        subtitle={`词缀 · ${translateItemEffect(a.name)} · 阶级 ${affixTierLabel(a.tier)}`}
       />
       {range && (
         <TooltipSection>
@@ -176,6 +177,45 @@ export function buildAffixTooltip(a: Affix): ReactNode {
       {a.kind && (
         <TooltipFooter>
           {a.kind === 'prefix' ? '前缀' : '后缀'} · 词缀组 {a.groupId}
+        </TooltipFooter>
+      )}
+    </>
+  )
+}
+
+export function buildAffixGroupTooltip(tiers: Affix[], label: string): ReactNode {
+  const first = tiers[0]
+  if (!first) return null
+  const suffix = first.format === 'percent' ? '%' : ''
+  return (
+    <>
+      <TooltipHeader
+        title={translateItemEffect(label)}
+        subtitle={`词缀 · ${tiers.length} 个阶级`}
+      />
+      <TooltipSection>
+        {tiers.map((t) => (
+          <TooltipStat
+            key={t.id}
+            label={`${affixTierLabel(t.tier)} · ${translateItemEffect(t.name)}`}
+            value={
+              t.valueMin === null || t.valueMax === null
+                ? '—'
+                : t.valueMin === t.valueMax
+                  ? `${t.sign}${t.valueMin}${suffix}`
+                  : `${t.sign}${t.valueMin}${suffix} – ${t.sign}${t.valueMax}${suffix}`
+            }
+          />
+        ))}
+      </TooltipSection>
+      {first.statKey && (
+        <TooltipSection>
+          <TooltipStat label="属性" value={displayStatName(first.statKey)} />
+        </TooltipSection>
+      )}
+      {first.kind && (
+        <TooltipFooter>
+          {first.kind === 'prefix' ? '前缀' : '后缀'} · 词缀组 {first.groupId}
         </TooltipFooter>
       )}
     </>
@@ -204,8 +244,8 @@ export function buildCrystalModTooltip(
   return (
     <>
       <TooltipHeader
-        title={translateItemEffect(m.name)}
-        subtitle={`${translateItemName('Satanic Crystal')} · 阶级 ${m.tier}`}
+        title={translateItemName('Satanic Crystal')}
+        subtitle={`阶级 ${m.tier}`}
         tone="satanic"
       />
       <TooltipSection>
@@ -261,7 +301,7 @@ export function buildRunewordTooltip(rw: {
       </TooltipFooter>
       {rw.description && (
         <TooltipSection>
-          <TooltipText>{translateItemEffect(rw.description)}</TooltipText>
+          <TooltipText>{rw.description}</TooltipText>
         </TooltipSection>
       )}
     </>

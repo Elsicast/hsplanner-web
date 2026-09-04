@@ -7,7 +7,8 @@ import { buildRunewordTooltip, NetChangeBlock } from '../tooltips'
 import { withRuneword } from '../lib/itemEdits'
 import { useHoverDpsDiff } from '../lib/useHoverDpsDiff'
 import { SectionCard } from '../SectionCard'
-import { translateItemName, translateItemType } from '../../../utils/item/itemText'
+import { SectionIcon } from '../sectionIcons'
+import { translateItemName } from '../../../utils/item/itemText'
 
 function RunewordSelectedPanel({
   state,
@@ -85,18 +86,16 @@ export function RunewordPresets({
         const reqLabel = rw.requiresLevel ? ` · 等级 ${rw.requiresLevel}` : ''
         return {
           id: rw.id,
-          name: translateItemName(rw.name),
+          name: rw.name,
           tier: rw.runes.length,
           kindLabel: '符文之语',
           meta: `${runeSeq}${reqLabel}`,
           iconColor: 'var(--color-accent-hot)',
           searchTerms: [
             rw.name,
-            translateItemName(rw.name),
             runeSeq,
             ...rw.runes,
             ...rw.allowedBaseTypes,
-            ...rw.allowedBaseTypes.map(translateItemType),
           ]
             .join(' ')
             .toLowerCase(),
@@ -130,6 +129,9 @@ export function RunewordPresets({
   return (
     <SectionCard
       label="符文之语预设"
+      icon={<SectionIcon kind="runeword" />}
+      collapsible
+      defaultOpen={!!activeRw}
       rightSlot={
         <span className="font-mono text-[10px] tabular-nums text-faint">
           {compatible.length} 个可用

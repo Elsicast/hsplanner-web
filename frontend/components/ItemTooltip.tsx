@@ -1,7 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { useCalcResult } from '../hooks/useCalcResult'
 import {
-  activeSeasonId,
   detectRuneword,
   effectiveStars,
   getAffix,
@@ -84,7 +83,7 @@ function useItemDisplayValues(
 ): TooltipDisplayValues | null {
   return useCalcResult<TooltipDisplayValues | null>(
     () => {
-      const stars = effectiveStars(base.slot, activeSeasonId, equipped?.stars)
+      const stars = effectiveStars(base.slot, equipped?.stars)
       const toPair = (v: RangedValue): [number, number] => [
         rangedMin(v),
         rangedMax(v),
@@ -103,7 +102,12 @@ function useItemDisplayValues(
       const scaled = [
         ...implicitEntries.map(([k, v]) => ({
           value: toPair(v),
-          statKey: k,
+          // Star scaling keys off the resolved stat (engine rewrites
+          // random_skill_element to {element}_skills before scaling).
+          statKey:
+            k === 'random_skill_element' && equipped?.randomSkillElement
+              ? `${equipped.randomSkillElement}_skills`
+              : k,
           stars,
         })),
         ...skillEntries.map(([, v]) => ({

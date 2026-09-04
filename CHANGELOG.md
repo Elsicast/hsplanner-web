@@ -1,16 +1,23 @@
-## Features
-- Unholy slots: items with "Unholy" special effects list them as their own tooltip section
-- Random Skill rolls: items that roll "+X to Random Skill" get a skill picker in the gear slot, and the ranks land on the picked skill
-- Season 10 is now the default season. Everyone starts there unless they switch
-- Item text editor: "Custom affixes" list — click a stat to insert a `[custom]` implicit line
+## 新功能
+- 反馈按钮：在应用内直接报告 Bug、数据错误或功能建议（可选配置 Discord 通道）
+- 词条数值锁定：装备槽中的随机词条可拖动滑块固定具体数值，未锁定按完整区间计算
+- 随机技能元素：随机到「+X 随机技能元素」的物品可选择实际随到的元素，星级与等级随之生效
+- 邪秽（Unholy）物品的特殊效果在提示框中单独成区展示
+- 物品文本编辑器新增「自定义词缀」列表，点击属性即可插入 `[custom]` 固有词条行
+- 技能详情新增攻击间隔与每次施放命中数展示
 
-## Fixes
-- Celestial Might now actually converts elemental skill damage into arcane instead of being ignored
-- Engineer's Mini Drone: "+[1-2] to All Skills" is Marksman-only, as the item says
-- Class set bonuses: all 43 "+X to All Skills (Class)" 4-set bonuses now only pay out for that class
-- Item text editor: deleting or replacing a base implicit line now removes it instead of re-adding it on save
-- Fix skipping node link #2113 
-- Incarnation tree: Malicious Veins shows "+25% of Maximum life dealt as Arcane Damage"
-- Incarnation tree: Vital Heart, First Aid, Rapid Mending and Vitalizing Charge are notables, as in game
-- Crow's Whisper is 2-handed staff instead 1-handed wand
-- C.Y.C.L.O.P.S. now pins gunner drones to 4 attacks/s
+## 修复
+- 天界威能（Celestial Might）现在正确将元素技能伤害转为奥术，不再被忽略
+- 工程师迷你无人机：「+[1-2] 全技能」仅对神射手生效，与物品描述一致
+- 职业套装：全部 43 条「+X 职业技能」四件套效果只对该职业生效
+- 物品文本编辑器：删除或替换基础固有词条行后保存不再重复添加
+- 修复节点连线 #2113 的跳过问题
+- 化身树：恶毒之脉显示「+25% 最大生命作为奥术伤害」
+- 化身树：生命之心、急救、快速治疗与活力充能改为稀有节点（与游戏一致）
+- Crow's Whisper 由单手法杖改为双手法杖
+- C.Y.C.L.O.P.S. 的炮塔无人机固定为 4 次/秒攻击
+- 赛季 10 成为默认赛季，旧赛季构建与分享码平滑迁移
+
+## Web 版
+- 同步上游 v1.0.6 计算引擎与数据（含 WASM 重新构建）
+- 以上全部界面文案已中文化

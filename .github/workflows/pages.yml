@@ -45,6 +45,9 @@ jobs:
 
       - name: 构建网页
         run: npm run build
+        env:
+          # 可选：配置后启用应用内「反馈问题」直达 Discord 的通道
+          VITE_BUG_REPORT_URL: ${{ secrets.VITE_BUG_REPORT_URL }}
 
       - name: 配置 Pages
         uses: actions/configure-pages@v5

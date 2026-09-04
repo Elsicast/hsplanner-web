@@ -12,6 +12,7 @@ import {
   ADJ,
   findPath,
   reachableFromAny,
+  withToggled,
   START_IDS,
   START_SET,
 } from '../utils/tree/treeGraph'
@@ -247,17 +248,10 @@ export default function TreeView() {
     null,
   )
 
-  const singleNodeAllocation = useMemo<Set<number> | null>(() => {
-    if (hoverId == null) return null
-    if (allocated.has(hoverId)) {
-      const without = new Set(allocated)
-      without.delete(hoverId)
-      return reachableFromAny(START_SET, without)
-    }
-    const next = new Set(allocated)
-    next.add(hoverId)
-    return next
-  }, [hoverId, allocated])
+  const singleNodeAllocation = useMemo<Set<number> | null>(
+    () => (hoverId == null ? null : withToggled(allocated, hoverId)),
+    [hoverId, allocated],
+  )
 
   const singleNodePerformance = useCalcResult<BuildPerformance | null>(
     () =>

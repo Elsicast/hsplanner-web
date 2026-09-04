@@ -1,14 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import etherTreeJson from './ether-tree.json'
 import etherTreeZhCnJson from './ether-tree.zh-CN.json'
-import etherTreeS10PatchJson from './seasons/s10/ether-tree.patch.json'
 
 describe('以太树中文翻译', () => {
-  it('覆盖基础与赛季新增的所有属性', () => {
-    const expectedKeys = new Set([
-      ...Object.keys(etherTreeJson.stats),
-      ...Object.keys(etherTreeS10PatchJson.stats.add),
-    ])
+  it('覆盖基础（含已并入的赛季新增）的所有属性', () => {
+    const expectedKeys = [...Object.keys(etherTreeJson.stats)]
 
     expect(Object.keys(etherTreeZhCnJson).sort()).toEqual(
       [...expectedKeys].sort(),

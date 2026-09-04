@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import incarnationNodesJson from '@data/incarnation-nodes.json'
-import incarnationS10PatchJson from '@data/seasons/s10/incarnation-nodes.patch.json'
 import {
   translateIncarnationTag,
   translateIncarnationText,
@@ -8,10 +7,7 @@ import {
 } from './incarnationText'
 
 const HAN = /[\u3400-\u9fff]/
-const allNodes = [
-  ...Object.values(incarnationNodesJson),
-  ...Object.values(incarnationS10PatchJson.add),
-]
+const allNodes = [...Object.values(incarnationNodesJson)]
 
 describe('化身树中文翻译', () => {
   it('覆盖所有赛季的节点标题、属性、注释和标签', () => {

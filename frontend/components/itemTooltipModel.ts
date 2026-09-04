@@ -1,6 +1,5 @@
 import { RARITY_LABEL } from '../views/gear/lib/rarity'
 import {
-  activeSeasonId,
   canStarForge,
   detectRuneword,
   effectiveStars,
@@ -214,7 +213,7 @@ export function buildItemTooltipModel(
   const socketGroups = equipped ? collectSocketGroups(equipped, base) : []
   const displayName = buildDisplayName(base, equipped, runeword)
   const equippedForgedMods = equipped?.forgedMods ?? []
-  const forgeKind = canStarForge(base.slot, activeSeasonId)
+  const forgeKind = canStarForge(base.slot)
     ? forgeKindFor(base.rarity)
     : null
 
@@ -435,7 +434,7 @@ function buildTypeLine(
   equipped: EquippedItem | undefined,
   runeword: ReturnType<typeof detectRuneword>,
 ): string {
-  const stars = effectiveStars(base.slot, activeSeasonId, equipped?.stars) ?? 0
+  const stars = effectiveStars(base.slot, equipped?.stars) ?? 0
   const starSuffix = stars > 0 ? ` · ${'★'.repeat(stars)}` : ''
   const handSuffix =
     base.slot === 'weapon' ? (base.twoHanded ? ' · 双手' : ' · 单手') : ''

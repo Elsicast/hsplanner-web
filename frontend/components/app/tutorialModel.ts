@@ -1,4 +1,5 @@
 import type { Section } from '../../App'
+import { SEASONS } from '@data/seasons/registry'
 
 export const TUTORIAL_DONE_KEY = 'hsplanner.tutorial.done.v1'
 
@@ -148,11 +149,15 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
     title: '实时属性',
     body: '这个面板始终可见，你每加一个点、换一件装备、拨一个开关，它都会重新计算。',
   },
-  {
-    target: 'season',
-    title: '赛季',
-    body: '切换当前赛季 — 物品、天赋树和计算都会随之变化。每次切换赛季都会重置你的化身/以太树',
-  },
+  ...(SEASONS.length > 1
+    ? [
+        {
+          target: 'season',
+          title: '赛季',
+          body: '切换当前赛季 — 物品、天赋树和计算都会随之变化。每次切换赛季都会重置你的化身/以太树',
+        },
+      ]
+    : []),
   {
     target: 'bottombar',
     title: '状态栏',

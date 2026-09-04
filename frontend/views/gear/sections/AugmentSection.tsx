@@ -8,12 +8,13 @@ import { buildAugmentTooltip, NetChangeBlock } from '../tooltips'
 import { withAugment, withAugmentLevel } from '../lib/itemEdits'
 import { useHoverDpsDiff } from '../lib/useHoverDpsDiff'
 import { augmentIconForId } from '../lib/gearIcons'
-import { SectionCard } from '../SectionCard'
 import {
   translateItemEffect,
   translateItemName,
 } from '../../../utils/item/itemText'
 import { displayStatName } from '../../../utils/item/itemStatText'
+import { SectionCard } from '../SectionCard'
+import { SectionIcon } from '../sectionIcons'
 
 const AUGMENT_PICKER_ROWS: PickerRow[] = augments
   .slice()
@@ -108,15 +109,23 @@ export function AugmentSection({
     <SectionCard
       label="天使增幅"
       tone="angelic"
+      icon={<SectionIcon kind="augment" />}
+      collapsible
+      defaultOpen={aug != null}
       rightSlot={
         aug ? (
-          <button
-            onClick={() => onSetAugment(null)}
-            className="rounded-xs border border-border-2 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint transition-colors hover:border-stat-red hover:text-stat-red"
-            aria-label="移除强化石"
-          >
-            移除
-          </button>
+          <>
+            <span className="max-w-[220px] truncate font-mono text-[10px] uppercase tracking-[0.06em] text-yellow-200/80">
+              {translateItemName(aug.name)} · 等级 {level}
+            </span>
+            <button
+              onClick={() => onSetAugment(null)}
+              className="rounded-xs border border-border-2 px-2 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint transition-colors hover:border-stat-red hover:text-stat-red"
+              aria-label="移除强化石"
+            >
+              移除
+            </button>
+          </>
         ) : undefined
       }
       bodyClassName="p-3 space-y-2.5"

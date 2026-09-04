@@ -2,6 +2,7 @@ import { type CSSProperties, useMemo } from 'react'
 import { useAttackSkillDamage, useSkillDamage } from '../../hooks/useSkillDamage'
 import { DAMAGE_COLORS } from '../../utils/damageColors'
 import { normalizeSkillName, rangedMax, rangedMin } from '../../utils/item/stats'
+import { skillSpeedKey } from '../../utils/build/skillRate'
 import { effectiveSkillCost } from './effectiveSkillCost'
 import {
   effectiveSkillTags,
@@ -86,7 +87,8 @@ export function SkillCard({
     baseManaMin,
     baseManaMax,
     mcrMax,
-    fcrMax,
+    baseRate,
+    speedMax,
     effectiveManaMin,
     effectiveManaMax,
     lifeCostMin,
@@ -96,7 +98,7 @@ export function SkillCard({
   } = effectiveSkillCost(
     skill,
     mcrRange,
-    stats.faster_cast_rate ?? 0,
+    stats[skillSpeedKey(skill)] ?? 0,
     stats.mana_cost_paid_in_life ?? 0,
     Math.max(1, effRankMin),
     Math.max(1, effRankMax),
@@ -363,10 +365,10 @@ export function SkillCard({
                   : skill.usesAttackSpeed
                     ? '次投掷/秒'
                     : '次施放/秒'}
-                {fcrMax > 0 && skill.baseCastRate !== undefined && (
+                {speedMax > 0 && baseRate !== undefined && (
                   <span className="text-faint">
                     {' '}
-                    (基础 {formatDecimal(skill.baseCastRate)})
+                    (基础 {formatDecimal(baseRate)})
                   </span>
                 )}
               </span>
